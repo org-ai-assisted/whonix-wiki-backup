@@ -1,0 +1,12 @@
+==separate keys for different uses==
+
+It appears to me that long-lived signing keys can be a risk.  The longer the key lives and the more signatures it generates, the greater the probability of a duplicate ''m'' occuring (DSA).  Also, the size of the key may have been appropriate at the time of its creation, but may not be considered secure many years later (e.g. the [http://www.chiark.greenend.org.uk/~sgtatham/putty/keys.html signing keys for Putty] are only 1024 bits)  Are these realistic concerns or am I jumping at shadows?
+
+One way to solve this:
+# generate a master signing key -- distribute this key as described in the wiki.
+# generate a short-lived signing key and sign it with the master key, repeat each time the key expires.
+# short-lived encryption keys can be managed the same way, with the limiting case being ephemeral keys.
+
+The master key only signs the short-lived keys, so a duplicate ''m'' is far less likely.
+
+Maybe this is what subkeys are all about.  I'll have to dig into it more.
