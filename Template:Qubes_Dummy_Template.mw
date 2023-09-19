@@ -1,0 +1,18 @@
+Create the <code>dummy</code> Template. <ref>
+* https://www.qubes-os.org/doc/how-to-reinstall-a-template/
+* https://github.com/QubesOS/qubes-issues/issues/4437
+</ref>
+
+{{Box|text=
+{{Qubes_Terminal}}
+
+Execute the following commands.
+
+{{CodeSelect|code=
+qvm-create --class Template --label red dummy
+}}
+
+[[Unspecific]] to {{q_project_name_long}}.
+
+The process of creating the <code>dummy</code> Template is now complete.
+}}
