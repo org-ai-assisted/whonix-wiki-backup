@@ -1,0 +1,19 @@
+{{Header}}
+{{Title|title=
+File Transfer Protocol (FTP)
+}}
+{{#seo:
+|description=FTP over Tor in {{project_name_long}}.
+|image=FTP123213.jpg
+}}
+[[File:FTP123213.jpg|thumb]]
+{{intro|
+FTP over Tor in {{project_name_short}}.
+}}
+{{Stub}}
+
+{{FTP}}
+
+{{Footer}}
+
+[[Category:Documentation]]
