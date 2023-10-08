@@ -1,0 +1,51 @@
+{{Box|text=
+The following instructions permanently deactivate all uwt wrappers and remove stream isolation for [[Stream_Isolation#By_uwt_wrapper|uwt-wrapped applications]] system-wide. Consequently, all uwt-wrapped applications revert to the default system networking configuration.
+
+For more granular control of uwt wrapper deactivation, see: [[Stream_Isolation#Deactivate_uwt_Stream_Isolation_Wrapper|Deactivate uwt Stream Isolation Wrapper]].
+
+{{Box|text=
+'''1.''' Platform specific notice:
+
+* [[{{Non q project name short}}|{{non_q_project_name_long}}]]: No platform specific notice.
+* [[Qubes|{{q_project_name_long}}]]: In Template. (<code>{{project_name_workstation_template}}</code>) <ref name=uwt-in-app-qube>
+{{q_project_name_short}} users note: Or alternatively in App Qube.
+
+{{box|text=
+'''1.''' Create folder <code>/usr/local/etc/uwt.d</code>.
+
+{{CodeSelect|code=
+sudo mkdir -p /usr/local/etc/uwt.d
+}}
+
+'''2.''' Open with root rights:
+{{CodeSelect|code=
+sudoedit /usr/local/etc/uwt.d/50_user.conf
+}}
+}}
+</ref>
+
+'''2.''' {{Open with root rights|
+filename=/etc/uwt.d/50_user.conf
+}}
+
+'''3.''' Add.
+
+{{CodeSelect|code=
+uwtwrapper_global="0"
+}}
+
+'''4.''' Save and exit.
+
+'''5.''' Check that the changes have taken effect. Run in terminal:
+{{CodeSelect|code=
+uwt_settings_show
+}}
+
+It should print
+<pre>
+uwt INFO: disabled.
+</pre>
+
+'''6.''' Done.
+}}
+}}
