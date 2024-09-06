@@ -1,0 +1,20 @@
+{{Title|title=Start {{project_name_long}}}}
+{{Header}}
+{{#seo:
+|description=
+|image=Banner-997375-640.jpg
+How to Start {{project_name_short}} and Troubleshooting {{project_name_short}} Startup Issues
+}}
+[[File:Banner-997375-640.jpg|thumb]]
+<br />
+Select your platform:
+
+<div class="mininav">
+* [[VirtualBox#starting|VirtualBox]]
+* [[KVM#Start|KVM]]
+* [[Qubes/Install#Next_Steps|Qubes]]
+</div>
+
+{{Footer}}
+
+[[Category:Documentation]]
