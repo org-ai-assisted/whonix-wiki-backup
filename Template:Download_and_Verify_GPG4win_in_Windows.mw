@@ -1,0 +1,73 @@
+<noinclude>
+{{Header}}
+</noinclude>== Install SignTools ==
+
+[https://docs.microsoft.com/en-us/dotnet/framework/tools/signtool-exe SignTools] is a Windows command-line tool that uses [https://docs.microsoft.com/en-us/windows-hardware/drivers/install/authenticode Authenticode] to digitally sign files and verify both signatures in files and timestamp files. SignTool is available as part of [https://en.wikipedia.org/wiki/Microsoft_Windows_SDK Microsoft Windows SDK], which can be installed in just a few easy steps.
+
+{{Box|text=
+'''1.''' Download the latest version of the SDK for the most recent stable version of Windows from the [https://developer.microsoft.com/en-us/windows/downloads/sdk-archive Windows SDK and emulator archive]. Make sure to select "Install SDK".
+
+'''2.''' Double-click the downloaded file. There's no need to change the default installation path. Click "Next".
+
+'''Figure:''' ''Installation Path''
+
+[[File:SDK1.jpg|800px]]
+
+'''3.''' There's no need to enable Microsoft Insights collection, so select "No" and then click "Next".
+
+'''Figure:''' ''Windows Kits Privacy''
+
+[[File:SDK2.jpg|800px]]
+
+'''4.''' Install the necessary SDK package.
+
+The Windows SDK installer provides a number of different packages that can be installed. The only package needed for <code>gpg4win</code> verification is <i>Windows SDK Signing Tools for Desktop Apps</i> (SignTools). Choose it then press on "Install".
+
+'''Figure:''' ''Select SignTools Package''
+
+[[File:SDK3.jpg|800px]]
+
+'''5.''' Once the installation is complete, close the installer.
+
+'''Figure:''' ''Installation completed''
+
+[[File:SDK4.jpg|800px]]
+
+}}
+
+== Download and Verify Gpg4win ==
+<code>SignTool</code> can be used to verify the authenticity of the <code>gpg4win</code> package itself.
+
+<u>Note</u>: To simplify the SignTool verification process, be sure to download the <code>gpg4win</code> package to the Downloads directory.
+
+{{Box|text=
+'''1.''' Download the <code>gpg4win</code> package.
+
+* Navigate to https://gpg4win.org/
+* Download the latest version of <code>gpg4win</code>. 
+
+At the time of writing <code>gpg4win-4.3.1.exe</code> was the latest version.
+
+'''2.''' Verify the <code>gpg4win</code> package by running SignTool from the command prompt.
+
+Now you need to manually locate <code>signtool.exe</code> and run it as a normal <code>*.exe</code> file. You will need to provide a path to your <code>gpg4win-latest.exe</code> file. Open PowerShell then add the following:
+
+Notes: 
+
+* Replace <code>[username]</code> with your computer's username; the uploaded image uses "techy" as an example.
+* Replace gpg4win-<code>[version number]</code>.exe with the version of the downloaded gpg4win file.. 
+
+<code>& "C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\signtool.exe" verify /pa "C:\Users\[username]\Downloads\gpg4win-[version number].exe"</code>.
+
+[[File:SDK5-2.jpg]]
+
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px]]
+| text    = '''Warning:''' If verification fails, delete the <code>gpg4win</code> package and repeat the download and verification process again.
+}}
+
+If verification passes, then you are ready to trust and install gpg using this file, i.e., <code>gpg4win-latest.exe</code>.
+
+}}<noinclude>
+{{Footer}}
+</noinclude>
