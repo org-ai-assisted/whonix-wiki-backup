@@ -1,0 +1,38 @@
+{{Header}}
+{{#seo:
+|description={{project_name_long}} Tutorial Videos
+}}
+{{intro|
+{{project_name_short}} Tutorial Videos
+}}
+= {{project_name_short}} Tutorials =
+* Many YouTubers made videos about {{project_name_short}} and how to install it. Just search YouTube.
+
+= Whonix Explained =
+Videos created by the makers of Whonix:
+
+* {{VideoLink
+|videoid=sRJTHWgbMvc
+|text=What is Whonix? - Your Internet Privacy Super Tool
+}}
+* {{VideoLink
+|videoid=ZEIkYCwVZvM
+|text=Welcome to Whonix - The Superior and Free Internet Privacy Solution!
+}}
+* {{VideoLink
+|videoid=S745kpN6Y
+|text=Superior anonymity - Whonix vs. VPNs (Virtual Private Networks)
+}} [TODO: deleted by YouTube for unknown reason]
+
+= Computer Security and Kicksecure related Videos =
+{{upstream_wiki}}
+
+= See Also =
+* [[Screenshots]]
+* [[Art_Gallery|{{project_name_short}} Art Gallery]]
+* [[Official Online Profiles]]
+* [[YouTube]]
+
+<references />
+{{Footer}}
+[[Category:Documentation]]
