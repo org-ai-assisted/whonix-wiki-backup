@@ -1,0 +1,17 @@
+{{Header}}
+{{Title|
+title={{project_name_long}} for Ubuntu
+}}
+{{#seo:
+|description={{project_name_short}} for Ubuntu
+|image=Logo-ubuntusvg.png
+}}
+[[File:Logo-ubuntusvg.png|thumb|50px|Ubuntu logo|link=VirtualBox]]
+{{intro|
+{{project_name_short}} [[File:{{project_name_short}}_old_logo.png|25px]] for '''Ubuntu''' [[File:Logo-ubuntusvg.png|25px]] inside VirtualBox [[File:Virtualbox_logo.png|25px]].
+}}
+
+<u>'''Go to [[VirtualBox]].'''</u>
+
+{{Footer}}
+[[Category:Documentation]]
