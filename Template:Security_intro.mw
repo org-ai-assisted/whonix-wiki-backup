@@ -1,0 +1,9 @@
+[[File:Kicksecure-badge.svg|thumb|150px|link=https://www.kicksecure.com]]
+[[About|{{project_name_short}}]] comes with {{ExtLink
+|https://www.{{project_clearnet}}/#security
+|http://www.{{project_onion}}/#security
+|text=many security features
+}}. {{project_name_short}} is {{Kicksecure_link
+|
+|{{Kicksecure}}
+}} hardened by default and also provides extensive [[Documentation]] including a [[System Hardening Checklist]]. The more you know, the safer you can be.
