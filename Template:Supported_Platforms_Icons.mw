@@ -1,0 +1,55 @@
+<noinclude>
+<pre>Caution:
+1. The Syntax #tag:gallery is used instead of &lt;gallery&gt;, because the latter doesn't allow parsing of variables like size in our case here
+2. This sign {{!}} stands for pipe (escaped version)
+</pre>
+
+</noinclude>{{mbox
+| icon = fa-solid fa-spinner cs-green-light
+| text = '''Operating System''' : Install {{project_name_short}} on {{os}}
+}}
+{{#tag:gallery|
+File:Logo-windows-500x500.png{{!}}Windows{{!}}link=VirtualBox
+File:logo-linux-variety-500x500.png{{!}}Linux{{!}}link=Linux
+File:logo-linux-variety-500x500.png{{!}}Linux Installer{{!}}link=Linux
+File:logo-apple-500x500.png{{!}}macOS{{!}}link=MacOS
+|heights={{{size}}}
+|widths={{{size}}}
+}}
+{{mbox
+| icon = fa-solid fa-window-restore cs-green
+| text = '''Virtual Machines''' : Install {{project_name_short}} inside a {{VM}}
+}}
+{{#tag:gallery|
+File:Virtualbox_logo.png{{!}}VirtualBox{{!}}link=VirtualBox
+File:Kvm-new-logo.png{{!}}KVM{{!}}link=KVM
+File:qubes-logo-blue.png{{!}}Qubes{{!}}link=Qubes
+|heights={{{size}}}
+|widths={{{size}}}
+}}
+{{mbox
+| icon = fa-solid fa-microchip cs-blue
+| text = '''Architectures''' : Install {{project_name_short}} for different architectures
+}}
+{{#tag:gallery|
+File:Intel-amd-combi-logo.svg{{!}}{{nowrap|Intel64}} / {{nowrap|AMD64}}{{!}}link=Intel_AMD64
+File:Arm64-logo.svg{{!}}{{ComingSoon}}{{nowrap|ARM64}}{{!}}link=ARM64
+File:Ppc64-logo.svg{{!}}{{ComingSoon}}{{nowrap|ppc64el}}{{!}}link=PPC64
+File:Riscv64-logo.svg{{!}}{{ComingSoon}}{{nowrap|RISCV64}}{{!}}link=RISCV64
+|heights={{{size}}}
+|widths={{{size}}}
+|class=gallery-items-position-relative
+}}
+{{mbox
+| icon = fa-solid fa-star cs-yellow
+| text = '''Special''' : For expert users specialized use cases
+}}
+{{#tag:gallery|
+File:logo-usb-500x500.png{{!}}USB{{!}}link=USB Installation
+File:Cd-rom-icon.png{{!}}{{ComingSoon}}ISO{{!}}link=Whonix-Host
+File:Raspberry-pi-logo.svg{{!}}{{ComingSoon}}{{nowrap|Raspberry}}&nbsp;{{nowrap|Pi}} {{nowrap|(RPi)}}{{!}}link=Raspberry_Pi
+File:Source-code-icon.png{{!}}Source Code{{!}}link=Dev/Build_Documentation
+|heights={{{size}}}
+|widths={{{size}}}
+|class=gallery-items-position-relative
+}}
