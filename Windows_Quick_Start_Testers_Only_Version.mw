@@ -1,0 +1,241 @@
+{{Header}} {{hide_all_banners}} {{PreventEnhanceHeadlines}} {{VirtualBox_CSS}}
+{{Title|
+title={{project_name_long}} Windows Installer - Testers Only Version
+}}
+{{#seo:
+|description={{project_name_short}} Windows Installer for VirtualBox - Testers Only Version
+|image=Virtualbox_logo.png
+}}
+{{intro|
+{{project_name_short}} can be easily installed using '''{{project_name_short}} Windows Installer'''.
+}}
+<div class="show-for-nojs-only">
+__TOC__
+</div>
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px|alt={{project_name_short}}]]
+| text    =
+{{project_name_short}} Windows Installer is <u>not yet</u> available. [[Stay Tuned]] for news.
+}}
+{{Testers-only}}
+{{box|text=
+== {{IconSet|h1|1}} Download {{project_name_short}} ==
+{{Anchor|Landing}}
+'''Download the {{project_name_short}} Installer for Windows.'''
+
+{{#widget:Download_Button
+ |text=Download {{project_name_short}} LXQt Windows Installer (FREE!)
+ |url=https://download.{{project_clearnet}}/windows/{{VersionNew}}/{{project_name_short}}-LXQt-{{VersionNew}}.exe
+ |os=windows
+}}
+
+<div class="toccolours mw-collapsible mw-collapsed"  >
+Optional: Digital signature verification.
+<div class="mw-collapsible-content">
+
+{{always_verify_signatures_reminder}}
+
+This step requires that you have already downloaded {{project_name_short}} LXQt Windows Installer. Below is the installer and the PGP OpenPGP signature.
+
+{{windows_installer_image_and_signature}}
+
+Users who are familiar with OpenPGP verification can go straight to download the [[Main/Project Signing Key|signing key]] and verify the {{project_name_short}} Windows installer.
+
+{{signing_key_main}}
+
+Otherwise, for detailed documentation, see [[Verify_the_images_using_Windows|Verify {{project_name_short}} Virtual Machine Images in Windows]].
+</div>
+</div>
+}}
+
+{{box|text=
+== {{IconSet|h1|2}} Install {{project_name_short}} ==
+'''{{project_name_short}} can be installed by simply running <code>{{project_name_short}}-LXQt.exe</code>.''' When installation is complete, users will be greeted with the {{project_name_short}} GUI, which can then be used to start the VMs. Keep in mind that installation can take up to 15 minutes to complete, depending on your hardware configuration.
+
+<div class="toccolours mw-collapsible mw-collapsed"  >
+For detailed {{project_name_short}} Windows Installer instructions, please press the "Learn More" button on the right.
+<div class="mw-collapsible-content">
+{{IconSet|h2|1}} '''Launch {{project_name_short}} Installer'''
+
+In the folder where you downloaded the {{project_name_short}} Windows Installer:
+
+Double "click" <code>{{project_name_short}}-LXQt-{{VersionNew}}.exe</code>
+
+'''Figure:''' ''{{project_name_short}} Windows Installer''
+
+[[File:{{project_name_short}}_windows_installer.png]]
+
+{{IconSet|h2|2}} '''Start Installation'''
+
+'''Figure:''' ''Install {{project_name_short}}''
+
+[[File:{{project_name_short}}_installer_wizard.png]]
+
+{{IconSet|h2|3}} '''Accept License Agreement'''
+
+'''Figure:''' ''License agreement''
+
+[[File:{{project_name_short}}_windows_installer_license_agreement.png]]
+
+{{IconSet|h2|4}} '''Wait for File Extraction'''
+
+'''Figure:''' ''Extracting files''
+
+[[File:Installing_whonix.png]]
+
+{{IconSet|h2|5}} '''Finalized Installation'''
+
+'''Figure:''' ''{{project_name_short}} installation complete''
+
+[[File:{{project_name_short}}_setup_wizard_complete.png]]
+
+{{IconSet|h2|6}} '''Done.'''
+	
+{{project_name_short}} installation is complete.
+</div>
+</div>
+}}
+
+{{box|text=
+== {{IconSet|h1|3}} Start {{project_name_short}} ==
+
+{{IconSet|h2|1}} '''Double click {{project_name_short}} desktop starter'''
+
+{{IconSet|h2|2}} '''Click Start {{project_name_short}}.'''
+
+'''Figure:''' ''{{project_name_short}} desktop starter''
+
+[[File:{{project_name_short}}_desktop_starter.png]]
+
+'''Figure:''' ''{{project_name_short}} Windows Starter''
+
+[[File:{{project_name_short}}_User_Interface_start.png]]
+
+This will start both {{VMs}}, [[Whonix-Gateway]] and [[Whonix-Workstation]].
+
+{{IconSet|h2|3}} '''DONE.'''
+
+<div class="toccolours mw-collapsible mw-collapsed"  >
+Optional: Advanced Start.
+<div class="mw-collapsible-content">
+{{IconSet|h2|1}} '''Double click {{project_name_short}} desktop starter'''
+
+{{IconSet|h2|2}} '''Click Advanced in {{project_name_short}} Windows Starter'''
+
+* When the Advanced button is pressed, the VirtualBox Windows Starter will open and the VMs can be started.
+* The VirtualBox interface will provide more granular control of the VMs. From there, users can manage the {{project_name_short}} VMs or modify VirtualBox settings.
+
+'''Figure:''' ''Start {{project_name_short}} VM''
+
+[[File:Virtualbox_user_interface.png]]
+
+{{IconSet|h2|3}} '''DONE.'''
+</div>
+</div>
+
+<div class="toccolours mw-collapsible mw-collapsed"  >
+Shutdown {{project_name_short}}.
+<div class="mw-collapsible-content">
+{{IconSet|h2|1}} '''Click Stop {{project_name_short}}'''
+
+{{IconSet|h2|2}} '''DONE.'''
+
+'''Figure:''' ''Stop {{project_name_short}} using {{project_name_short}} Windows Starter''
+
+[[File:{{project_name_short}}_User_Interface_stop.png]]
+</div>
+</div>
+}}
+
+{{box|text=
+== {{IconSet|h1|4}} Support the Future of {{project_name_short}} ==
+{{donation_appeal_download}}
+}}
+
+<div class="toccolours mw-collapsible mw-collapsed">
+'''Additional information about the {{project_name_short}} Windows Installer.'''
+<div class="mw-collapsible-content">
+
+= {{project_name_short}} Windows Installer =
+{{IntroLike|
+The {{project_name_short}} Windows Installer streamlines the process of setting up {{project_name_short}} on VirtualBox. While the earlier method required users to follow instructions on the [[VirtualBox|{{project_name_short}} for VirtualBox]] wiki page, this installer makes the entire process more intuitive. Here's an in-depth look at what it does:
+}}
+
+{{{!}} class="wikitable" style="background-color: #fff;text-align: left"
+! '''Question'''
+! '''Answer'''
+{{!}}-
+
+{{!}} What is the purpose of the {{project_name_short}} Windows Installer?
+{{!}} The {{project_name_short}} Windows Installer was developed with design goals focused on providing users with a fast and easy method to install {{project_name_short}} in Microsoft Windows. When <code>{{project_name_short}}-LXQt-{{VersionNew}}.exe</code> is executed, the [[VirtualBox/Recommended_Version|Recommended VirtualBox version]] and both {{project_name_short}} VMs are seamlessly installed on the Windows machine. Once {{project_name_short}} is installed, users only need to click the start button in the {{project_name_short}} GUI for both {{project_name_gateway_long}} and {{project_name_workstation_long}} VMs to start.
+{{!}}-
+
+{{!}} What happens if VirtualBox is already installed?
+{{!}} When the {{project_name_short}} Windows Installer is executed, the currently installed VirtualBox package -- if there is one installed on the system -- is removed and the VirtualBox version that comes with {{project_name_short}} Windows Installer is installed.
+{{!}}-
+
+{{!}} Do I have to use the new {{project_name_short}} Windows Installer?
+{{!}} No. You can still manually install VirtualBox and import {{project_name_short}} by following the instructions on the [[VirtualBox{{!}}{{project_name_short}} for VirtualBox]] wiki page.
+{{!}}-
+
+{{!}} Can a newer version of VirtualBox be installed after using {{project_name_short}} Windows Installer?
+{{!}} Yes. [[Reasons_for_Freedom_Software#No_Intentional_User_Freedom_Restrictions|There are no intentional user freedom restrictions]]. The user is free to install, update or uninstall VirtualBox at any time.
+{{!}}-
+
+{{!}} Is the manual method for VirtualBox installation going to be deprecated?
+{{!}} There's no such plan as of now. The manual method remains crucial as it offers compatibility with certain Linux distributions not supported by the [[Linux|{{project_name_short}} Linux Installer]].
+{{!}}-
+
+{{!}} Can I use {{project_name_gateway_long}} CLI in conjunction with {{project_name_workstation_long}} LXQt?
+{{!}} [https://forums.whonix.org/t/can-i-combine-whonix-gateway-cli-with-whonix-workstation-xfce-yes/6308 Absolutely, find out more here.] However, {{project_name_short}} Windows Installer is only available for {{project_name_short}} LXQt. The {{project_name_short}} CLI can be acquired from the [[VirtualBox{{!}}{{project_name_short}} for VirtualBox]] page. 
+{{!}}-
+
+{{!}} Where can I find the main FAQ?
+{{!}} Check out the [[FAQ{{!}}{{project_name_short}} FAQ]].
+{{!}}-
+
+{{!}} Development wiki pages?
+{{!}} [[Dev/Windows_Installer]] / [[Dev/Windows_Starter]]
+{{!}}-
+
+{{!}}}<!-- close table: Questions and Answers -->
+</div><!-- close mw-collapsible-content -->
+</div><!-- close mw-collapsible -->
+
+== Troubleshooting ==
+To run Whonix Windows Installer in debug mode, simply append <code>--debug</code> after the executable when starting up with the console.
+
+'''1.''' '''Folder navigation.'''
+
+Navigate to the folder where <code>Whonix-LXQt.exe</code> has been downloaded.
+
+<u>Note:</u> This is only an example. Adjust this for the folder where you downloaded <code>Whonix-LXQt.exe</code>.
+
+{{CodeSelect|code=
+cd c:\
+}}
+
+{{CodeSelect|code=
+cd users
+}}
+
+{{CodeSelect|code=
+cd user
+}}
+
+{{CodeSelect|code=
+cd downloads
+}}
+
+'''2.''' '''Run <code>Whonix-LXQt.exe</code> in debug mode.'''
+
+{{CodeSelect|code=
+Whonix-LXQt.exe --debug
+}}
+
+'''Figure:''' ''Whonix Windows Installer in Debug Mode''
+
+[[File:Bildschirmfoto vom 2024-10-13 17-42-16.png|startup in debug mode]]
+
+{{Footer}}
+[[Category:Documentation]]
