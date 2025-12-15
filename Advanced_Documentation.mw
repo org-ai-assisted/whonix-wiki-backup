@@ -1,0 +1,284 @@
+{{Header}} {{hide_all_banners}} {{title|
+title={{project_name_long}} Advanced Documentation
+}} {{#seo:
+|description=Covering a wide spectrum of topics including file transfers, security configurations, platform support, and more. Ideal for advanced users aiming to leverage the full potential of {{project_name_long}}.
+|image=Advanceddocumentation213123.jpg
+}} {{#css:/src-copy/_Page_Advanced_Documentation.css}} __NOTOC__ __NOEDITSECTION__
+{{documentation_mininav}}
+{{Intro|
+For advanced users seeking detailed information on topics ranging from file transfers, security configurations, platform support, to miscellaneous technical details and more. Explore the extensive range of topics to delve deeper into the capabilities of {{project_name_long}}.
+}}
+{{Box|text=
+{{#widget:Expand or Collapse All}}
+
+<div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
+<h4>File Transfers and SSH / SSHFS</h4>
+<div class="use-3-columns mw-collapsible-content">
+* [[File_Transfer#Add_a_USB_Device_to_VirtualBox|Add a USB Device to VirtualBox]]
+* [[File Transfer#Mount and Inspect Images|Mount and Inspect Images (VDI, Raw, VMDK)]]
+* [[File Transfer#Security Overview|Security Overview]]
+* [[File Transfer#Shared Folder|Shared Folders]]
+* [[File Transfer#SSH into {{project_name_gateway_short}}|SSH or SSHFS into {{project_name_gateway_long}}]]
+* [[File_Transfer#SSH_into_{{project_name_workstation_short}}|SSH or SSHFS into {{project_name_workstation_long}}]]
+* [[Sshfs_into_{{project_name_workstation_short}}|SSHFS into {{project_name_workstation_short}}: Standalone Instructions]]
+* [[File_Transfer#Transfer_Files_via_ISO_Images|Transfer Files via ISO Images]]
+* [[File_Transfer#Transfer_Files_via_a_VDI_File|Transfer Files via a VDI File]]
+</div>
+</div>
+
+<div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
+<h4>Miscellaneous</h4>
+<div class="use-3-columns mw-collapsible-content">
+* Alternative Networks / OSes
+** [[File:Androidosicon.png|20px|link=Anbox]] [[Anbox|Android Applications and Games]]
+** [[File:Gnunet.png|20px|link=GNUnet]] [[GNUnet|GNUnet]]
+** [[Usenet|Usenet Applications]]
+** [[Other_Anonymizing_Networks|Other Anonymizing Networks]]
+* Applications
+** [[File:Chromiumicon.png|25px]] [[Chromium]]
+** [[File:GoogleChromeicon.png|25px]] [[Chrome]]
+* Configuration Activities
+** {{kicksecure_wiki
+|wikipage=Configuration_Files
+|text=Configuration Files and Drop-In Folders
+}}
+** [[File:Grub_logo.png|25px|link=GNUnet]] {{kicksecure_wiki
+|wikipage=Grub
+|text=Grub
+}}
+** [[PyLRU|How-to: Install PyLRU in {{project_name_short}}]]
+** {{kicksecure_wiki
+|wikipage=Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot
+|text=Install Debian (-based) Linux Distributions in a Folder
+}}
+* Research Papers
+** {{ExtLink
+|text=Anonymity Bibliography: Anonymity Research 1977-2020
+|https://www.freehaven.net/anonbib/
+|http://7fa6xlti5joarlmkuhjaifa47ukgcwz6tfndgax45ocyn4rixm632jid.onion/anonbib/index.html
+}}
+** [https://www.cl.cam.ac.uk/~rja14/psysec.html Psychology and Security Resource Page]
+* VM Operations
+** [[Local_Connections|connect to localhost from VM]]
+** [[Whonix-Workstation_to_Whonix-Workstation_Connections|Connections between two different Whonix-Workstations]]
+** [[Access_Local_Network_or_Host_or_Clearnet_Internet_from_VM|Access Local Network, Host or Clearnet Internet from VM]]
+** [[VirtualBox/Manual_VM_Import|VirtualBox Manual VM Import using {{cli}}]]
+** {{kicksecure_wiki
+|wikipage=Grow_Virtual_Harddisk
+|text=Virtual Hard Disk Size Increase
+}}
+** {{kicksecure_wiki
+|wikipage=Nested_Virtualization
+|text=Nested Virtualization
+}}
+** {{kicksecure_wiki
+|wikipage=Tuning
+|text=VirtualBox Tuning
+}}
+* {{kicksecure_wiki
+|wikipage=Artificial_intelligence
+|text=Real Open Source Artificial Intelligence (AI)
+}}
+* {{kicksecure_wiki
+|wikipage=Dev/Open_Source_Business_Models
+|text=Open Source Business Models
+}}
+</div>
+</div>
+
+<div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
+<h4>Platform Support</h4>
+<div class="use-3-columns mw-collapsible-content">
+* {{project_name_short}}
+** [[File:Kvm-new-logo.png|30px|link=KVM]] [[KVM|{{project_name_short}} for KVM]]
+** [[File:Qemulogo.svg.png|30px|link=QEMU]] [[QEMU|{{project_name_short}} for QEMU]]
+** [[File:qubes-logo-blue.png|15px|link=Qubes]] [[Qubes|{{project_name_short}} for Qubes OS]]
+** [[Dev/Virtualization_Platform#Other_Virtualization_Platforms|{{project_name_short}} on Unsupported Virtualization Platforms]]
+** [[File:Vmware.jpeg|20px|link=VMware]] [[VMware|{{project_name_short}} for VMware]]
+** [[Dev/Build_Documentation/Physical_Isolation|{{project_name_short}} with a Physically-Isolated Gateway]]
+** [[File:Piraspberryicon.png|20px]] [[Dev/Build_Documentation/Physical_Isolation#Experimental:_On_the_Raspberry_Pi_3_B_.28RPI3.29|{{project_name_gateway_short}} on the Raspberry Pi 3 B (RPI3)]]
+</div>
+</div>
+
+<div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
+<h4>Security</h4>
+<div class="use-3-columns mw-collapsible-content">
+* {{kicksecure_wiki
+|wikipage=Download_Security
+|text=Download Security
+}}
+* {{kicksecure_wiki
+|wikipage=CPUID
+|text=CPUID - Security and Privacy Threats
+}}
+* [[Dev/Leak_Tests|Leak Tests]]
+* {{kicksecure_wiki
+|wikipage=Signify
+|text=Signify: Cryptographically Sign and Verify Files
+}}
+* [[VM Fingerprinting]]
+* [[VPN-Firewall|VPN Firewall]]
+</div>
+</div>
+
+<div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
+<h4>Tor</h4>
+<div class="use-3-columns mw-collapsible-content">
+* [[Alternative DNS Resolver|Alternative DNS Resolvers]]
+* Configure Tor's SocksProxy in {{project_name_workstation_short}}: see [[Stream Isolation|Stream Isolation]]
+* [[Alternative_DNS_Resolver#DNSCrypt|Encrypted DNS / DNSCrypt / httpsdnsd over Tor]]
+* [[Hide Tor from your Internet Service Provider|Hide Tor and {{project_name_short}} Usage]]
+* [[Host a Bridge or Tor Relay|Host a Bridge or Tor Relay]]
+* Issues Tracker
+** {{ExtLink
+|text=Core Tor
+|https://gitlab.torproject.org/tpo/core/tor/-/issues
+|http://eweiibe6tdjsdprb4px6rqrzzcsi22m4koia44kc5pcjr7nec2rlxyad.onion/tpo/core/tor/-/issues
+}}
+** {{ExtLink
+|text=The Tor Project
+|https://gitlab.torproject.org/groups/tpo/-/issues
+|http://eweiibe6tdjsdprb4px6rqrzzcsi22m4koia44kc5pcjr7nec2rlxyad.onion/groups/tpo/-/issues
+}}
+** {{ExtLink
+|text=Tor Browser
+|https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues
+|http://eweiibe6tdjsdprb4px6rqrzzcsi22m4koia44kc5pcjr7nec2rlxyad.onion/tpo/applications/tor-browser/-/issues
+}}
+* Protect against Identity Correlation via Circuit Sharing: see [[Stream Isolation|Stream Isolation]]
+* [[File:Iconfinder_tor_386502.svg|20px|link=Tor]] [[Tor|Tor]]
+** [[Tor#Blacklist_Outgoing_Connections_to_Select_Domains|Blacklist Outgoing Connections to Select Domains]]
+** [[Tor_Entry_Guards#Configure_Non-Persistent_Entry_Guards|Non-Persistent Entry Guards]]
+** [[Speculative_Tor_Attacks|Speculative Tor Attacks]]
+** [[Torify Host Operating System]]
+* [[PPTP|Tor Gateway Connections on the Local Network with a PPTP VPN]]
+* [[Tunnel UDP over Tor|Transport UDP Tunnels over Tor with a VPN]]
+* [[File:Vanguard.png|20px|link=Vanguards]] [[Vanguards|Vanguards]]
+</div>
+</div>
+
+<div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
+<h4>{{project_name_short}}-specific Activities and Configurations</h4>
+<div class="use-3-columns mw-collapsible-content">
+* Backups and Restore
+** {{kicksecure_wiki
+|wikipage=Backup_VMs
+|text=Backup {{project_name_short}} VMs
+}}
+** [[Manually Create Whonix VM Settings|Manually Create {{project_name_short}} VM Settings]]
+** {{kicksecure_wiki
+|wikipage=Raw_Disk_Backup
+|text=Full Raw Disk Backup
+}}
+* Builds
+** [[Dev/Build Documentation|Build and Update {{project_name_short}} from Source Code]]
+** [[Manually Creating Whonix|Manually Creating {{project_name_short}}]]
+* Design
+** {{kicksecure_wiki
+|wikipage=Boot Clock Randomization
+|text=Boot Clock Randomization
+}}
+** [[Protocol-Leak-Protection_and_Fingerprinting-Protection|Protocol Leak and Fingerprinting Protection]]
+** [[Design|Technical Design]]
+** [[Security Roadmap|{{project_name_short}} Security Roadmap]]
+* Desktop Environments
+** [[Other_Desktop_Environments|Other Desktop Environments]]
+* Firewalls
+** [[{{project_name_gateway_short}}_Firewall|{{project_name_gateway_short}} Firewall]]
+** [[{{project_name_workstation_short}}_Firewall|{{project_name_workstation_short}} Firewall]]
+** [[Install_Software#Whonix-Workstation_is_Firewalled|{{project_name_workstation_short}} is Firewalled]]
+* [[Reporting_Bugs#Issue_Tracker|Issues Tracker]]
+** {{ExtLink
+|text=Development Forum
+|https://forums.whonix.org/c/development/8
+|http://forums.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/c/development/8
+}}
+** [https://gitlab.com/whonix GitLab]
+** [https://github.com/Whonix GitHub]
+** {{ExtLink
+|text=Phabricator (Legacy Issue Tracker)
+|https://phabricator.whonix.org
+|http://phabricator.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/
+}}
+* Multiple Instances
+** [[Multiple Qubes-Whonix Templates|Multiple {{q_project_name_long}} Templates]]
+** [[{{project_name_workstation_short}}_Security_Hardening#Multiple_Tor_Browser_Instances_and_Workstations|Multiple Tor Browser Instances]]
+** [[Multiple Whonix-Gateway|Multiple {{project_name_gateway_short}}]]
+** [[Multiple Whonix-Workstation|Multiple {{project_name_workstation_short}}]]
+* Operating Systems
+** [[Other Operating Systems|Torify non-{{project_name_short}} Operating Systems via {{project_name_gateway_short}}]]
+** [[Other Gateways|Use {{project_name_workstation_short}} with Custom-Gateway]]
+* Packages
+** {{kicksecure_wiki
+|wikipage=Apparmor-profile-everything
+|text=Apparmor profile everything
+}}
+** {{kicksecure_wiki
+|wikipage=apt-file
+|text=apt-file
+}} - show which files are being included by a package
+** {{kicksecure_wiki
+|wikipage=command-not-found
+|text=command-not-found - suggest installation of missing software packages in terminal
+}}
+** {{kicksecure_wiki
+|wikipage=debug-misc
+|text=debug-misc: Enable Easier Debugging
+}}
+** [https://www.kicksecure.com/wiki/Hardened-kernel hardened-kernel patch]
+** {{kicksecure_wiki
+|wikipage=Security-misc
+|text=security-misc: Enhance Miscellaneous Security Settings
+}}
+** {{kicksecure_wiki
+|wikipage=swap-file-creator
+|text=swap-file-creator
+}}
+* Repositories and Packages
+** [[Project-APT-Repository|{{project_name_short}} APT Repository and Enabling / Disabling]]
+** [[Debian Packages|{{project_name_short}} Debian Packages and Safe Removal]]
+* Connectivity
+** [[Access_Local_Network_or_Host_or_Clearnet_Internet_from_VM|Access Local Network, Host or Clearnet Internet from Virtual Machine (VM)]]
+* {{project_name_gateway_short}}
+** [[Access Gateway Port From Host|Access {{project_name_gateway_short}} Ports from the Host]]
+** [[Censorship Circumvention Tools|Non-bridge Censorship Circumvention Tools]]
+** [[{{project_name_gateway_short}} System DNS|{{project_name_gateway_short}} System DNS]]
+** [[{{project_name_gateway_short}}_Own_Traffic_Transparent_Proxy|{{project_name_gateway_short}} Traffic: Transparent Proxying]]
+* {{project_name_workstation_short}}
+** [[Access Workstation Port From Host|Access {{project_name_workstation_short}} Ports from the Host]]
+* {{project_name_short}} Miscellaneous
+** [[Connections between Gateway and Workstation|Connections Between {{project_name_gateway_short}} and {{project_name_workstation_short}}]]
+** [[Tor_Browser/Manual_Download|Manually Updating Tor Browser if torbrowser-updater Breaks]]
+** [[Ports|Open a Port(s) in {{project_name_short}} and Port Forwarding]]
+** [[Redirect {{project_name_workstation_short}} Ports or Unix Domain Socket Files to {{project_name_gateway_short}}|Redirect {{project_name_workstation_short}} or Unix Domain Socket Files to {{project_name_gateway_short}}]]
+** {{kicksecure_wiki
+|wikipage=sparse_files
+|text=Sparse Files
+}}
+</div>
+</div>
+
+<div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
+<h4>Incomplete Articles (mixed)</h4>
+<div class="mw-collapsible-content">
+These articles are incomplete. Contributions are welcome.
+<div class="use-3-columns">
+* [[FTP|File Transfer Protocol (FTP)]]
+* {{kicksecure_wiki
+|wikipage=owncloud
+|text=Owncloud
+}}
+* {{kicksecure_wiki
+|wikipage=Server_Security_Guide
+|text=Server Security Guide
+}}
+* [[Systemd]]
+* {{kicksecure_wiki
+|wikipage=socks_firewalling
+|text=SOCKS firewalling
+}}
+</div>
+</div>
+</div>
+}}
+{{Footer}}
