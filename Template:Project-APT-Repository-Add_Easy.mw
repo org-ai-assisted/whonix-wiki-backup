@@ -1,0 +1,28 @@
+'''1.''' Download the [[Signing Key|Signing Key]].
+
+{{CodeSelect|code=
+wget https://www.{{project_clearnet}}/derivative.asc
+}}
+
+'''2.''' ''Optional:'' [[Signing Key|Check the Signing Key]] for better security.
+
+'''3.''' Add {{project_name_short}} signing key.
+
+{{CodeSelect|code=
+sudo cp derivative.asc /usr/share/keyrings/derivative.asc
+}}
+
+'''4.''' {{project_name_short}} APT repository choices.
+
+''Optional:'' See [[Packages for Debian Hosts|{{project_name_short}} Packages for Debian Hosts and {{project_name_short}} Host Enhancements]] instead of the next step for more secure and complex options.
+
+'''5.''' Add {{project_name_short}} APT repository.
+
+{{CodeSelect|code=
+echo "Types: deb
+URIs: https://deb.{{project_clearnet}}
+Suites: {{Stable project version based on Debian testing codename}}
+Components: main contrib non-free
+Enabled: yes
+Signed-By: /usr/share/keyrings/derivative.asc" {{!}} sudo tee /etc/apt/sources.list.d/derivative.sources
+}}
