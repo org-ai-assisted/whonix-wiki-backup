@@ -1,0 +1,40 @@
+{{Box|text=
+<u>If you are using [[Qubes|{{q_project_name_long}}]]</u>, complete the following steps.
+
+<code>
+Qubes App Launcher (blue/grey "Q")</code> &rarr; <code>{{project_name_gateway_long}} ProxyVM (commonly named {{project_name_gateway_vm}})</code> &rarr; <code>Anon Connection Wizard</code>
+
+<u>If you are using a graphical {{project_name_gateway_short}}</u>, complete the following steps.
+
+<code>
+Start Menu</code> &rarr; <code>Applications</code> &rarr; <code>System</code> &rarr; <code>Anon Connection Wizard
+</code>
+
+<u>If you are using a [[Software#Terminal|terminal emulator]] (such as for example qterminal) on {{project_name_gateway_short}}</u>, type.
+
+{{CodeSelect|code=
+anon-connection-wizard
+}}
+
+<u>If you are using a [[VirtualBox|'''CLI''' {{project_name_gateway_short}}]]</u>, see footnote. <ref name=enable-tor-acw-vs-setup-dist>
+Stop:
+
+{{CodeSelect|code=
+sudo systemctl stop tor@default
+}}
+
+{{CodeSelect|code=
+sudo systemctl disable tor@default
+}}
+
+Start:
+
+{{CodeSelect|code=
+sudo systemctl enable tor@default
+}}
+
+{{CodeSelect|code=
+sudo systemctl start tor@default
+}}
+</ref>
+}}
