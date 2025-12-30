@@ -1,0 +1,107 @@
+<noinclude>
+{{Header}}
+</noinclude>Download {{project_name_short}} Templates and Configure <code>{{project_name_gateway_vm}}</code> and <code>{{project_name_workstation_vm}}</code>.
+
+{{IconSet|h2|1}} '''Download speed notice.'''
+
+This downloading procedure can take a long time to finish. Fast Internet connections take only a few minutes, while slow connections can take twenty minutes or more (it is far slower over Tor).
+
+{{IconSet|h2|2}} '''Download both [[{{project_name_gateway_short}}|{{project_name_gateway_long}}]] and [[{{project_name_workstation_short}}|{{project_name_workstation_long}}]] Templates.'''
+
+<u>In <code>dom0</code>.</u> <ref>
+The following <code>qvm-template</code> command is:
+
+* Optional.
+* Useful because it has a progress indicator, while the subsequent <code>qubesctl</code> command does not. (Qubes feature request: [https://github.com/QubesOS/qubes-issues/issues/4215 add salt download progress indicator]) It is very confusing to have a long-running download command with no progress bar, especially over Tor.
+* Insufficient by itself - the subsequent <code>qubesctl</code> command that follows is mandatory, as per [https://github.com/QubesOS/qubes-issues/issues/3447 phase out manual use of qubes-dom0-update by user / replace it by salt] and [[Dev/Qubes#salt]].
+* <code>--enablerepo=qubes-templates-community</code>:
+** <code>--enablerepo=qubes-templates-community</code> can be omitted if the Qubes Community Templates Repository is already enabled in <code>dom0</code>.
+** The Qubes Community Templates Repository should already be enabled by default, unless disabled by the user, restored {{q_project_name_long}} from backup, or in some other edge case.
+** Recommending typing <code>--enablerepo=qubes-templates-community</code> is poor usability, since users cannot copy from their VM browser (where they are most likely reading this) to <code>dom0</code>. But too many people reported this issue. [https://forums.whonix.org/t/had-to-enable-community-templates-to-get-new-template/12489 had to enable Qubes templates community repository]
+** If the Qubes Community Templates Repository is not enabled in <code>dom0</code>, explicitly add <code>--enablerepo=qubes-templates-community</code> or enable it through editing the <code>/etc/yum.repos.d/qubes-templates.repo</code> file in dom0.
+
+{{Box|text=
+<u>In <code>dom0</code>.</u>
+
+{{IconSet|h2|1}} '''Open file <code>/etc/yum.repos.d/qubes-templates.repo</code> in a text editor with root rights.'''
+
+{{CodeSelect|code=
+sudo nano /etc/yum.repos.d/qubes-templates.repo
+}}
+
+{{IconSet|h2|2}} '''In section <code>[qubes-templates-community]</code>, add the following.'''
+
+{{CodeSelect|code=
+enabled = 1
+}}
+
+{{IconSet|h2|3}} '''Save.'''
+
+{{IconSet|h2|4}} '''Done.'''
+
+Qubes Community Templates Repository has been enabled. The command line parameter <code>--enablerepo=qubes-templates-community</code> should no longer be required.
+
+{{IconSet|h2|5}} '''Report.'''
+
+Please report if this step was necessary for you!
+}}
+</ref>
+
+To download {{project_name_gateway_short}} and {{project_name_workstation_short}}, select your version of Qubes OS and.
+
+{{Tab
+|type=controller
+|content=
+{{Tab
+|title= == Qubes R4.2 ==
+|content=
+Run this command:
+
+{{CodeSelect|code=
+qvm-template install --enablerepo=qubes-templates-community whonix-gateway-17 whonix-workstation-17
+}}
+}}
+
+{{Tab
+|title= == Qubes R4.3 ==
+|content=
+Run this command:
+
+{{CodeSelect|code=
+qvm-template install --enablerepo=qubes-templates-community whonix-gateway-18 whonix-workstation-18
+}}
+}}
+}}
+
+{{IconSet|h2|3}} '''Configure <code>{{project_name_gateway_vm}}</code> and <code>{{project_name_workstation_vm}}</code> safely.''' <ref>
+* Do <u>not</u> interrupt the salt process once it has started, or this can lead to an [https://groups.google.com/g/qubes-users/c/fwCqxENXguY unstable system].
+* <code>qubesctl</code>: This is a Qubes command, not from {{project_name_short}}. Advanced users may refer to [https://www.qubes-os.org/doc/salt/ Qubes salt management stack <code>qubesctl</code>] for further information about <code>qubesctl</code> and Qubes salt.
+* If Templates were not previously downloaded using the above <code>qvm-template</code> command, then the <code>qubesctl</code> command would also download both {{project_name_gateway_short}} and {{project_name_workstation_short}} Templates.
+* Related source code files, for developer reference only:
+** https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/{{project_name_gateway_vm}}.sls
+** https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/{{project_name_workstation_vm}}.sls
+</ref>
+
+<u>In <code>dom0</code></u>, run. <ref name=salt-progress>
+No progress indicator is shown. Qubes feature request: [https://github.com/QubesOS/qubes-issues/issues/4215 add salt download progress indicator]
+</ref>
+
+{{CodeSelect|code=
+sudo qubesctl state.sls qvm.{{project_name_workstation_vm}}
+}}
+
+{{IconSet|h2|4}} '''In case of issues.'''
+
+Only in case of issues, refer to the footnotes for troubleshooting tips. <ref>
+If <code>qubesctl</code> still does not work, try shutting down Qubes OS and rebooting the machine.
+
+Please report if this step was necessary for you!
+</ref> Otherwise, proceed.
+
+{{IconSet|h2|5}} '''Done.'''
+
+Download and installation of {{q_project_name_short}} has been completed.<noinclude>
+= Footnotes =
+<references />
+{{Footer}}
+</noinclude>
