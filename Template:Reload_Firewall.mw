@@ -1,0 +1,41 @@
+'''Reload {{project_name_gateway_short}} Firewall.'''
+
+Select your platform.
+
+{{Tab
+|type=controller
+|content=
+
+{{Tab
+|title= ==== Graphical {{project_name_gateway_short}} ====
+|image=[[File:Logo_box.png|25px]]
+|addToClass=info-box
+|content=
+
+<code>Start Menu</code> &rarr; <code>Applications</code> &rarr; <code>System</code> &rarr; <code>Reload Firewall</code>
+
+}} <!-- close tab: Graphical Whonix Gateway -->
+
+{{Tab
+|title= ==== Terminal {{project_name_gateway_short}} ====
+|image=[[File:Utilities-terminal.png|25px]]
+|addToClass=info-box
+|content=
+
+{{CodeSelect|code=
+sudo whonix_firewall
+}}
+
+}} <!-- close tab: Terminal Whonix-Workstation -->
+
+{{Tab
+|title= ==== [[Qubes|{{q_project_name_short}}]] ====
+|image=[[File:Qubes-logo-icon.png|25px]]
+|addToClass=info-box
+|content=
+
+<code>Qubes App Launcher (blue/grey "Q")</code> &rarr; <code>{{project_name_gateway_short}} ProxyVM (commonly named {{project_name_gateway_vm}})</code> &rarr; <code>Reload Firewall</code>
+
+}} <!-- close tab: Qubes-Whonix -->
+
+}} <!-- close Controller: Qubes-Whonix and Graphical Whonix Gateway -->
