@@ -1,0 +1,45 @@
+<noinclude>
+{{header}}
+</noinclude>Clearnet Whonix-Gateway System DNS.
+
+[[Whonix-Gateway_System_DNS|Whonix-Gateway System DNS]] is required when using DNS hostnames. <ref>
+Or [[Advanced Users]] would need to hardcode IP addressed rather than using hostnames.)
+</ref>
+
+{{box|text=
+{{IconSet|h4|1}} Apply the following changes to {{project_name_gateway_long}}.
+
+{{Open with root rights
+|filename=/etc/resolv.conf.whonix
+}}
+
+{{IconSet|h4|2}} Uncomment the line <code>#nameserver 10.0.2.3</code>.
+
+Remove the hash ("<code>#</code>") before <code>nameserver</code>. This means you should change <code>#nameserver 10.0.2.3</code> to <code>nameserver 10.0.2.3</code>.
+
+{{IconSet|h4|3}} Follow platform-specific steps:
+
+* [[Non-Qubes-Whonix|{{non_q_project_name_short}}]]: Done.
+* [[Qubes|{{q_project_name_long}}]]: This should typically work. If not, refer to the footnote. <ref>
+Replace <code>10.0.2.3</code>.
+** To identify the IP to substitute, execute the command below:
+** {{CodeSelect|code=
+qubesdb-read /qubes-netvm-primary-dns
+}}
+** For example, the output might be:
+** <blockquote>10.139.1.1</blockquote>
+** In this case, replace <code>10.0.2.3</code> with <code>10.139.1.1</code>. Note: Use the actual IP from the output of the <code>qubesdb-read /qubes-netvm-primary-dns</code> command.
+</ref>
+
+{{IconSet|h4|4}} Done.
+
+The configuration for {{project_name_gateway_short}} System DNS is complete.
+
+{{IconSet|h4|5}} Note for wiki editors.
+
+Once {{project_name_long}} 17.2.2.6 (Non-Qubes-WHonix) / 18.1.5.9 (Qubes-Whonix) or above is released, [https://github.com/Whonix/anon-gw-anonymizer-config/tree/master/usr/bin/anon-dns <code>anon-dns</code>] can be used and then the DNS enabling part can be simplified.
+}}<noinclude>
+= Footnotes =
+<references />
+{{Footer}}
+</noinclude>
