@@ -1,0 +1,14 @@
+{{Header}}
+{{title|title=
+systemd
+}}
+{{#seo:
+|description=systemd in {{project_name_long}}.
+}}
+{{intro|
+systemd in {{project_name_short}}.
+}}
+
+{{upstream_wiki}}
+
+{{Footer}}
