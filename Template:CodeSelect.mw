@@ -1,0 +1,12 @@
+<!-- Documentation see Dev/mediawiki
+-->{{#widget:CodeSelect
+|code={{{code|code-not-set}}}
+|inline={{{inline|}}}
+|breaklines={{{breaklines|}}}
+|buttonImage={{{buttonImage|unset}}}
+|target={{{target|}}}
+|lang={{{lang|}}}
+|buttonImageEager={{{buttonImageEager|}}}
+}} <noinclude>
+[[Category:MultiWiki]]
+</noinclude>
