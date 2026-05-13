@@ -1,0 +1,127 @@
+{{Header}} {{Hide_all_banners}}
+{{title|title=
+{{project_name_short}} System Requirements
+}}
+{{#seo:
+|description=System Requirements for {{project_name_long}}
+|image=Banner-904887-640.jpg
+}}
+<div class="mininav">
+* [[System Requirements|System Requirements]]
+* [[RAM|RAM System Requirements and Advice for Systems with Low RAM]]
+</div>
+[[File:Banner-904887-640.jpg|thumb]]
+{{intro|
+System Requirements for {{project_name_short}}
+}}
+= Supported Host Operating Systems =
+Any operating system that can run a supported virtualizer can run {{project_name_short}}, including Windows, macOS, BSD, and Linux. Most users begin by installing [[VirtualBox]] on their current operating system and importing the {{project_name_short}} images. Advanced users may wish to [[Host Operating System Selection|select]] and boot a host operating system (usually a Linux distribution) dedicated solely to running the {{project_name_short}} virtual machines.
+
+For the best possible security, users can choose to run {{project_name_short}} virtual machines on the Qubes platform ({{q_project_name_long}}). Qubes is a Xen based hypervisor (virtualizer) that runs on the bare metal of the hardware instead of within a host operating system. <ref>This is more secure because an attacker must subvert the hypervisor, which is far more difficult than exploiting a host operating system.</ref>
+
+= Supported Platforms =
+{{Supported_Platforms}}
+
+= {{non_q_project_name_short}} System Requirements =
+{{non_q_project_name_long}} includes {{project_name_short}} for [[VirtualBox]] and [[KVM]].
+
+{| class="wikitable"
+|+ ''{{non_q_project_name_short}} System Requirements''
+|-
+! '''Category'''
+! '''Description'''
+|-
+
+! Minimum
+|
+* 1 GB free RAM - with {{project_name_gateway_long}} lowered to 256 MB. {{Minimum_RAM}} ([[RAM|Advice for Systems with Low RAM]])
+* 10 GB free hard drive space.
+* A CPU with [https://en.wikipedia.org/wiki/X86_virtualization#AMD_virtualization_.28AMD-V.29 AMD-V] or Intel [https://en.wikipedia.org/wiki/X86_virtualization#Intel_virtualization_.28VT-x.29 VT-x].
+|-
+
+! Recommended
+|
+* Additional hard drive space when installing applications into the {{project_name_workstation_long}}.
+|-
+
+! For Best Performance
+|
+* A solid state drive (SSD).
+* 8 GB of RAM.
+* Additional RAM to dedicate to the {{project_name_workstation_short}} when multitasking. <ref>
+[[Post_Install_Advice#Increase_Virtual_Machine_RAM|Increase Virtual Machine RAM]]
+</ref>
+* Why 8 GB of RAM? See the following table.
+
+{| class="wikitable"
+|-
+! <u>'''Machine'''</u>
+|
+! <u>'''RAM'''</u>
+! <u>'''Total'''</u>
+|-
+
+| Host Operating System
+|
+| <code>2</code> GB
+|-
+
+| {{project_name_gateway_short}}
+| <code>+</code>
+| <code>2</code> GB
+|-
+
+| {{project_name_workstation_short}}
+| <code>+</code>
+| <code>4</code> GB
+|-
+
+|
+| <code>=</code>
+|
+| <u>'''<code>8</code> GB'''</u>
+|-
+
+|}
+|-
+
+! Additional Notes
+|
+* {{project_name_workstation_short}} can be run with 256 MB RAM when not using a desktop environment. {{Minimum_RAM}}
+* For low memory and console only configurations, see
+** [[RAM|Advice for Systems with Low RAM]],
+** [[Troubleshooting#Low_RAM_Issues|Troubleshooting, Low RAM Issues]] and
+** [[Desktop#RAM_Adjusted_Desktop_Starter|RAM Adjusted Desktop Starter]].
+* Users who experience the PAE or "{{Code2|VERR_SSM_FIELD_NOT_CONSECUTIVE}}" error, or similar issues, should refer to the [[VirtualBox/Troubleshooting|VirtualBox Troubleshooting]] chapter.
+|-
+
+|}
+
+= {{q_project_name_short}} System Requirements =
+
+{{q_project_name_short}} does not have any special system requirements beyond Qubes' own system requirements. In other words, it is only necessary to fulfill the minimum system requirements for Qubes compatibility.
+
+Refer to the Qubes documentation for further information:
+
+* [https://www.qubes-os.org/doc/system-requirements/ Qubes System Requirements] ([http://{{QubesOS_onion}}/doc/system-requirements/ .onion])
+* [https://www.qubes-os.org/doc/certified-hardware/ Qubes Certified Hardware] ([http://{{QubesOS_onion}}/doc/certified-hardware/ .onion])
+* [https://forum.qubes-os.org/t/community-recommended-computers/5560 Qubes OS Forum: Community recommended computers]
+* [https://www.qubes-os.org/hcl/ Qubes Hardware Compatibility List (HCL)] ([http://{{QubesOS_onion}}/hcl/ .onion])
+
+= Architecture Support =
+{{architecture_mininav}}
+
+See also [[Dev/64bit]] and [[Dev/Porting]].
+
+= See Also =
+* [[RAM|Advice for Systems with Low RAM]]
+* [[Troubleshooting#Low_RAM_Issues|Troubleshooting, Low RAM Issues]]
+* [[RAM_Adjusted_Desktop_Starter|RAM Adjusted Desktop Starter]]
+* [[Host Operating System Selection]]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
