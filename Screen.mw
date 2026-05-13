@@ -1,0 +1,54 @@
+{{Header}}
+{{Title|
+title=Screen
+}}
+{{#seo:
+|description=Screen Resolution, DPI (dots per inch), Full Screen, Tor Browser window size (maximization?)
+}}
+<div class="mininav">
+* [[screen]]
+* [[resize|wlr-resize-watcher]]
+</div>
+{{intro|
+Screen Resolution, DPI (dots per inch), Full Screen, Tor Browser window size (maximization?)
+}}
+
+= Recommended Screen Resolution =
+* <u>Recommended:</u> Use screen resolution <code>1920x1080</code>.
+* <u>Rationale:</u> See forum discussion: [https://forums.whonix.org/t/make-screen-resolution-1920x1080-by-default-for-all-vms/9143 Make screen resolution 1920x1080 by default for all VMs]
+
+= Default Screen Resolution =
+* <u>Note:</u> Default screen resolution is platform specific.
+* <u>{{non_q_project_name_short}}:</u> VirtualBox and KVM use <code>1920x1080</code> by default.
+* <u>{{q_project_name_short}}:</u> Depends on dom0.
+
+= Full Screen Recommendation =
+* <u>Note:</u> Full screen recommendation is platform specific.
+* <u>{{non_q_project_name_short}}:</u> Virtualizers VirtualBox and KVM do not use full screen by default. It is recommended to use [[Desktop#Use_Full-screen_Mode|Use Full-screen Mode]].
+* <u>{{q_project_name_short}}:</u> Uses full screen by default. [[Desktop#Avoid_VM_Full_Screen_Mode|Avoid VM Full Screen Mode is discouraged]].
+
+= Tor Browser Window Size =
+* <u>Avoid:</u> Maximize or resize the Tor Browser window.
+* <u>Rationale:</u> See [[Tor_Browser#browser_window_size|browser window size]].
+* <u>Keep:</u> Default window size.
+
+= DPI =
+* <u>Avoid:</u> Change DPI settings.
+* <u>Keep:</u> Default DPI settings.
+
+= Custom Settings =
+* <u>Question:</u> Do custom settings negatively affect anonymity?
+* <u>Note:</u> This is [[Unspecific|unspecific to {{project_name_short}}]].
+* <u>Note:</u> This depends on [[Tor Browser]]. Therefore this question is best redirected to Tor Browser as per [[Self Support First Policy]].
+* <u>Recommendation:</u> For abundance of caution, reasonable default settings are recommended on this page.
+* <u>Forum discussion:</u> [https://forums.whonix.org/t/will-custom-dpi-dots-per-inch-values-negatively-affect-my-anonymity/20204 Will custom dpi (dots per inch) values negatively affect my anonymity?]
+
+= Virtualizer Specific =
+* [[KVM#Adjust_Display_Resolution|KVM - Adjust Display Resolution]]
+
+= See Also =
+* [[Tor Browser]]
+
+<references />
+{{Footer}}
+[[Category:Documentation]]
