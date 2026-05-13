@@ -1,0 +1,263 @@
+{{Header}}
+{{Title|title=
+Verify {{project_name_long}} Virtual Machine Images in Windows
+}}
+{{#seo:
+|description=Instructions for OpenPGP Verification of {{project_name_short}} Images using Windows
+|image=Approved-29149640.png
+}}
+[[File:Approved-29149640.png|250px|thumbnail]]
+{{intro|
+Instructions for OpenPGP Verification of {{project_name_short}} Images using Windows
+}}
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px|alt={{project_name_short}}]]
+| text    =
+[[Windows_Quick_Start_Testers_Only_Version|{{project_name_short}} Windows Installer]] is currently unavailable. [[Stay Tuned]] for news.
+}}
+{{Testers-only}}
+= Context =
+{{always_verify_signatures_reminder}}
+
+= Usability =
+Due to [[Verifying_Software_Signatures#Conceptual_Challenges_in_Digital_Signatures_Verification|Conceptual Challenges in Digital Signatures Verification]] and [[Windows_Hosts#Windows_Software_Sources|impracticality, unpopularity of digital software signature verification on the Windows platform]], this is a cumbersome process. None of these issues are specific to {{project_name_short}} or caused by {{project_name_short}}. <ref>
+This is being stated to avoid {{project_name_short}} getting blamed for this mess. Previously users put it this way:
+
+{{quotation
+|quote=I never had to verify any software. Why Whonix makes this more complicated than everyone else?
+}}
+</ref>
+
+{{quotation
+|quote=To keep a system secure and free of malware it is strongly recommended to [[Warning#Always_Verify_Signatures|always verify software signatures]]. However, this is very difficult, if not impossible for Windows users. Most often, Windows programs do not have software signature files (OpenPGP / gpg signatures) that are normally provided by software engineers in the GNU/Linux world.
+}}
+
+Most other vendors of software on the Windows platform are either unaware or ignore this issue. The {{project_name_short}} project makes an effort to document and cope with the mess on the Windows platform.
+
+= Introduction =
+This page includes documentation on how to securely acquire Gpg4win – an application which can be used to verify digital software signatures provided by the {{project_name_short}} project and other software.
+
+Use either option A) <u>or</u> B) <u>or</u> C).
+
+'''A)''' UAC (recommended)
+
+When trying to run the installer on Windows, the User Access Control dialog will show the publisher. (If you have disabled User Access Control use a different method). 
+
+[[File:gpg4win-UAC-window.png|400px]]
+
+'''B)''' <u>Using SignTool to verify Gpg4win</u>:
+
+SignTool is a Windows platform-focused tool provided by Microsoft which can be used to verify software digital signatures.
+
+[https://gnupg.org/ GnuPG] is a complete and free implementation of [[OpenPGP]] that allows users to encrypt and sign data and communications. It is popular on Windows, macOS, and Linux platforms. [https://www.gpg4win.org/ Gpg4win] is a graphical front end for GnuPG that is used for file and email encryption in Windows. The verification process for the {{project_name_short}} Windows Installer includes securely downloading and verifying the <code>gpg4win</code> package. Once completed, GPG can be used from the command-line to verify the {{project_name_short}} Windows Installer.
+
+Download and installation of SignTool (from the Microsoft website over TLS) and verification of Gpg4win using SignTool might be considered optional. This is because both SignTool and Gpg4win (downloaded from the Gpg4win website over TLS) are only downloaded over [[SSL|TLS]], a very basic form of authentication. The argument for this is debatable. "It would be much more unlikely for a massive company like Microsoft to be compromised and serve malicious software than gpg4win server." <ref>
+https://forums.whonix.org/t/testing-whonix-installer-for-windows/2987/217
+</ref> Some browsers might use [[SSL#Key_Pinning|Key Pinning]] for microsoft.com but unfortunately for gpg4win.org, this would not be eligible.
+
+Therefore, optionally, the user might decide to skip the SignTool step and simplify as follows.
+
+'''C)''' <u>Not using SignTool to verify Gpg4win</u>:
+
+# Download and install Gpg4win.
+# Import the developer's GPG signing key into Gpg4win.
+# Verify the {{project_name_short}} Windows Installer using Gpg4win.
+
+The Gpg4win documentation also covers this subject.
+
+* [https://www.gpg4win.org/package-integrity.html Check integrity of Gpg4win packages – Gpg4win website]
+* [https://wiki.gnupg.org/Gpg4win/CheckIntegrity Check integrity of Gpg4win packages – Gpg4win wiki]
+
+= Verify {{project_name_short}} Images in Windows using Gpg4win =
+
+{{Download_and_Verify_GPG4win_in_Windows}}
+
+== Download the {{project_name_short}} Signing Key ==
+
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = This entry is strongly related to the [[Trust|Placing Trust in {{project_name_short}}]] page.
+}}
+
+Since all {{project_name_short}} releases are signed with the same key, it is unnecessary to verify the key every time a new release is announced. Trust in the key might gradually increase over time, but cryptographic signatures must still be verified every time a new release is downloaded.
+
+{{Box|text=
+'''1.''' Download [[Patrick Schleizer]]'s (adrelanos') [[OpenPGP]] key. <ref>
+{{CodeSelect|code=
+curl --tlsv1.3 --proto =https --max-time 180 --output derivative.asc {{project_clearnet}}/keys/derivative.asc
+}}
+</ref><br />
+{{Code2|<u>'''{{signing_key_main}}'''</u>}}
+
+Store the key in <code>\Downloads\</code> folder as <code>derivative.asc</code>
+
+[[File:gpg-windows-import-keys.jpg]]
+
+'''2.''' Open Windows Powershell then Change to the <code>\Downloads\</code> directory.
+
+
+{{CodeSelect|code=
+cd .\Downloads\
+}}
+
+'''3.''' Check fingerprints/owners without importing anything.
+
+{{CodeSelect|code=
+gpg --keyid-format long --with-fingerprint derivative.asc
+}}
+
+'''4.''' Verify the output.
+
+The most important check is confirming the key fingerprint <u>exactly</u> matches the output below. <ref>
+Minor changes in the output such as new uids (email addresses) or newer expiration dates are inconsequential.
+</ref>
+
+<pre>
+      Key fingerprint = 916B 8D99 C38E AF5E 8ADC  7A2A 8D66 066A 2EEA CCDA
+</pre>
+
+The message <code>gpg: key 8D66066A2EEACCDA: 104 signatures not checked due to missing keys</code> is related to the [[OpenPGP#The_OpenPGP_Web_of_Trust|The OpenPGP Web of Trust]]. Advanced users can learn more about this [[Main/Project Signing Key#OpenPGP_Web_of_Trust|here]].
+
+'''5.''' Import the key.
+
+{{CodeSelect|code=
+gpg --import derivative.asc
+}}
+
+The output should include the key was imported.
+
+<pre>
+gpg: Total number processed: 1
+gpg:               imported: 1
+</pre>
+
+''If the {{project_name_short}} signing key was already imported in the past'', the output should include the key is unchanged.
+
+<pre>
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+</pre>
+
+If the following message appears at the end of the output.
+
+<pre>
+gpg: no ultimately trusted keys found
+</pre>
+
+This extra message does not relate to the {{project_name_short}} signing key itself, but instead usually means the user has not created an OpenPGP key yet, which is of no importance when verifying virtual machine images.
+
+Analyze the other messages as usual.
+}}
+
+== Verify the {{project_name_short}} Images ==
+{{Box|text=
+<u>Note:</u> File extension, <code>ova</code> versus <code>exe</code>.
+
+These instructions often reference <code>ova</code> (VirtualBox image). The instructions are equally applicable to other file types such as <code>exe</code> (Whonix Windows Installer). The only difference is the file extension.
+
+'''1.''' Download the Whonix image and the corresponding OpenGPG signature which will be used to verify the image.
+
+Choose either option A) <u>or</u> B)
+
+* '''A)''' <u>Whonix for VirtualBox Windows Installer</u> <code>ova</code>.
+
+Both, the signature and the <code>.ova</code> image should be downloaded into the same directory (mostly in \Downloads\).
+
+Download the {{project_name_short}} VM image and signature from [[VirtualBox|VirtualBox Table]].
+
+* '''B)''' <u>Whonix Windows Installer</u> <code>exe</code>.
+
+Both, the signature and the <code>.exe</code> image should be downloaded into the same directory (mostly in \Downloads\).
+
+{{windows_installer_image_and_signature}}
+
+'''2.''' Start the cryptographic verification; this process can take several minutes.
+
+At the Windows PowerShell, change to the directory with the <code>Whonix.ova</code> or <code>Whonix.exe</code> and corresponding signature file/s downloaded (assuming in \Download\ directly).
+
+{{CodeSelect|code=
+cd .\Downloads\
+}}
+
+'''3.''' Verify the <code>Whonix.ova</code> or <code>Whonix.exe</code> image. <ref>
+Combined command:
+
+{{CodeSelect|code=
+gpg --verify-options show-notations --verify (Get-ChildItem -Filter "Whonix*.*.asc").FullName (Get-ChildItem -Filter "Whonix*.*" {{!}}  Where-Object { $_.FullName -notlike "*.asc" }).FullName
+}}
+</ref>
+
+{{Tab
+|type=controller
+|content=
+{{Tab
+|title= === .exe ===
+|image=
+|addToClass=info-box
+|content=
+{{CodeSelect|code=
+gpg --verify-options show-notations --verify Whonix-LXQt-*.exe.asc Whonix-LXQt-*.exe
+}}
+}} <!-- close tab: GPG verify exe -->
+
+{{Tab
+|title= === .ova ===
+|image=
+|addToClass=info-box
+|active=true
+|content=
+{{CodeSelect|code=
+gpg --verify-options show-notations --verify Whonix-LXQt-*.ova.asc Whonix-LXQt-*.ova
+}}
+}} <!-- close tab: GPG verify ova -->
+}} <!-- close Controller: ova and exe-->
+
+If the Virtual Machine image is correct the output will tell you that the signature is good.
+
+[[File:verify-whonix-windows-images.jpg]]
+
+{{GnuPG-Success}}
+
+This might be followed by a warning saying:
+
+{{Template:GnuPG-Warning}}
+
+{{gpg_signature_timestamp}}
+
+The first line includes the signature creation timestamp. Example.
+
+<pre>
+gpg: Signature made Sun 18 Aug 2019 08:31:41 PM EDT
+</pre>
+
+{{GnuPG_file_names}}
+
+To help users confirm that the file name has not been tampered with, beginning with {{project_name_short}} version 9.6 and above the {{Code2|file@name}} OpenPGP notation includes the file name.
+
+{{do_not_continue_on_gpg_verification_errors}}
+
+'''4.''' When {{project_name_short}} verification is complete, continue with the installation.
+}}
+
+= Troubleshooting =
+== SignTool Certificate Chain Error ==
+
+'''Figure:''' ''Root Certificate Error''
+
+[[File:signtool_error_root_certificate_not_trusted.png]]
+
+This error message occurs if the <code>/pa</code> switch is not used with SignTool. This is because the default SignTool verify <code>some_file.exe</code> command uses the Windows Driver Verification Policy. <ref> See stackoverflow for further information: [https://stackoverflow.com/questions/11230091/whys-my-root-certificate-not-trusted Why's My Root Certificate Not Trusted?]</ref> In order for the file to verify properly the <code>/pa</code> switch must be used so SignTool uses the Default Authentication Verification Policy.
+
+== Encountering GPG Errors ==
+
+When a GPG error is encountered, first try a web search for the relevant error. The [https://security.stackexchange.com security stackexchange website] can also help to resolve GPG problems. Describe the problem thoroughly, but be sure it is GPG-related and not specific to {{project_name_short}}.
+
+More help resources are available on the [[Support]] page.
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
