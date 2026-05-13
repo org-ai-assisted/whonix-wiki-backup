@@ -1,0 +1,28 @@
+{{Header}} {{hide_all_banners}}
+{{title|title=
+Installation of {{project_name_long}} on a ARM64
+}}
+{{#seo:
+|description=Yes, {{project_name_short}} can be installed on a ARM64. Here's how.
+|image=Download-arm64.jpg
+}}
+{{architecture_mininav}}
+[[File:Download-arm64.jpg|thumb]]
+[[File:Arm64-logo.svg|thumb|100px]]
+{{intro|
+{{project_name_short}} can be installed on a ARM64. Here's how.
+}}
+= Introduction =
+{{other_architectures}}
+{{other_architectures_kicksecure}}
+
+= See Also =
+* {{kicksecure_wiki
+|wikipage=Dev/boot#ARM_-_Generally
+|text=Boot Process - Development Wiki Page - ARM - Generally
+}}
+
+<references />
+{{Footer}}
+[[Category:Documentation]]
+[[Category:MultiWiki]]
