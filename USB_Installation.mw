@@ -1,0 +1,109 @@
+{{Header}} {{hide_all_banners}}
+{{title|title=
+Installation of {{project_name_long}} on a USB
+}}
+{{#seo:
+|description=Yes, {{project_name_short}} can be installed on a USB. Here's how.
+|image=Whonix-download-usb.jpg
+}}
+[[File:Whonix-download-usb.jpg|thumb]] {{live}}
+{{intro|
+'''{{project_name_short}} can be used as a plug-and-play operating system on a USB data stick'''. This is particularly useful for users looking for a portable '''persistent''' <u>or</u> '''live''' operating system.
+}}
+= How-to: Install Whonix on USB =
+[[File:logo-usb-500x500.png|45px|link=]] Yes, {{project_name_short}} can be used on a USB.
+
+'''1.''' Select a host operating system.
+
+{{Tab
+|type=controller
+|linkid=os
+|content=
+{{Tab
+|type=section
+|addToClass=info-box
+|title= == Using Kicksecure on USB ==
+|image=[[File:Kicksecure-logo-icon.svg]]
+|content=
+{{ExtLink
+|https://www.kicksecure.com
+|http://w5j6stm77zs6652pgsij4awcjeel3eco7kvipheu6mtr623eyyehj4yd.onion
+|text={{Kicksecure}}
+}} is a security-focused operating system, which is particularly useful as a host {{os}} on USB.
+
+'''2.''' Install Kicksecure on USB
+
+See instructions {{Kicksecure_wiki
+|wikipage=USB_Installation
+|text=Kicksecure USB Installation
+}}.
+
+'''3.''' Boot Kicksecure from USB.
+
+'''4.''' Open a terminal.
+
+<code>Start Menu</code> &rarr; <code>System Tools</code> &rarr; <code>QTerminal</code>
+
+'''5.''' Install Whonix on Kicksecure USB.
+
+{{Kicksecure_wiki
+|wikipage=Whonix
+|text=Whonix Installation on Kicksecure
+}} is simple using [[Linux|Whonix Linux Installer for VirtualBox]]. It's just a single command.
+
+{{CodeSelect|code=
+whonix-lxqt-installer-cli
+}}
+
+'''7.''' Live mode.
+
+Optional: Kicksecure also comes with the <code>grub-live</code> software package installed by default, which makes it possible to boot the host operating system into [[Live Mode]].
+
+'''8.''' Done.
+}}
+
+{{Tab
+|type=section
+|addToClass=info-box
+|title= == Using Other Operating Systems on USB ==
+|image=[[File:Any12312.png]]
+|content=
+'''2.''' [[Host Operating System Selection|Select a suitable host operating system]].
+
+'''3.''' Install it on USB.
+
+There are a number of online guides explaining how to [https://www.debian.org/CD/live/ install Linux on a USB]. These instructions can be followed to create a live {{project_name_short}} USB, with the exception that both a supported virtualizer and {{project_name_short}} must also be installed on the external media.
+
+'''4.''' Install [[Download|{{project_name_short}} on a supported virtualizer]].
+
+'''5.''' Done.
+}}
+}}
+
+= Advantages of {{project_name_short}} on USB =
+
+{{mbox
+|text=
+{{Icon|style=circle|fa-solid fa-shield-halved cs-blue}} '''Better Security''': A higher level of security is achieved by installing the host operating system(s) on a dedicated, ([[Full Disk Encryption|encrypted]]), external disk(s) such as a USB flash drive or others. <ref>
+e.g., eSATA or FireWire.
+
+FireWire should generally be avoided:
+
+* https://louwrentius.com/firewire-the-forgotten-security-risk.html
+* https://en.wikipedia.org/wiki/IEEE_1394#Security_issues
+</ref> In the case of using Dual Boot, using physical external media reduces the risk of malware running on other operating system(s) infecting the host operating system.
+
+{{Icon|style=circle|fa-solid fa-key cs-blue}} '''Can be unplugged and securely stored''': When {{project_name_short}} disk(s) are not in use, they can either be removed or hidden.
+}}
+
+= Related =
+If it is actually booting into non-persistent live boot that you're interested in, look into [[Live Mode]].
+{{live}}
+
+= Future =
+At this time, {{project_name_short}} does not provide a USB creator / image. This might change in the future. See [[Whonix-Host|Whonix-Host Operating System Live ISO, Whonix-Host Installer]]. Community contributions are most welcome.
+
+= Footnotes =
+<references />
+{{Footer}}
+[[Category:Documentation]]
