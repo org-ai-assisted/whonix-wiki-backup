@@ -1,0 +1,145 @@
+{{Header}}
+{{title|title=
+Debian Packages
+}}
+{{#seo:
+|description=Which {{project_name_long}} Debian packages are safe to remove? What is a meta package? What other packages do {{project_name_long}} meta packages install? Which packages should never be removed? How to safely run autoremove?
+|image=Box-158523640.png
+}}
+[[File:Box-158523640.png|thumb]]
+{{intro|
+Which {{project_name_short}} Debian packages are safe to remove? What is a meta package? What other packages do {{project_name_short}} meta packages install? Which packages should never be removed? How to safely run autoremove?
+}}
+
+= Upstream =
+
+This page will focus exclusively on aspects related to {{project_name_short}}/Anonymity. For security hardening and additional insights, users should refer to the Kicksecure page.
+
+{{Upstream_wiki}}
+
+= Introduction =
+
+It is safe to run <code>sudo apt autoremove</code> so long as the specific {{project_name_short}} machine <code>meta package</code> is kept for the {{non q project name short}} or {{q_project_name_short}} platform. In other words, these packages should <u>not</u> be in the list of autoremoved packages.
+
+Platform specific. Select your platform.
+
+{{Tab
+|type=controller
+|linkid=oschoice
+|content=
+
+{{Tab
+|title= == [[Non-Qubes-Whonix|{{non_q_project_name_short}}]] LXQt ==
+|image=[[File:Whonix-logo-standard.svg|25px]]
+|addToClass=info-box
+|content=
+
+* 18:
+** [[{{project_name_gateway_short}}|{{project_name_gateway_short}}]] 18: <code>whonix-gateway-vm-gui-lxqt</code>
+** [[{{project_name_workstation_short}}|{{project_name_workstation_short}}]] 18: <code>whonix-workstation-vm-gui-lxqt</code>
+
+}} <!-- close tab: Non-Qubes-Whonix LXQt -->
+
+{{Tab
+|title= == [[Qubes|{{q_project_name_short}}]] ==
+|image=[[File:Qubes-logo-icon.png|25px]]
+|addToClass=info-box
+|content=
+
+* 18:
+** {{project_name_gateway_short}} 18: <code>whonix-gateway-qubes-gui-lxqt</code>
+** {{project_name_workstation_short}} 18: <code>whonix-workstation-qubes-gui-lxqt</code>
+
+}} <!-- close tab: Qubes -->
+}} <!-- close Controller: Non-Qubes-Whonix LXQt and Qubes -->
+
+It is actually a good idea to safely run <code>sudo apt autoremove</code> according to the following instructions on this wiki page to make sure extraneous packages which might no longer be recommended for default installation are removed.
+
+= Re-install Meta Packages and Safely Run Autoremove =
+
+'''1.''' [[Update]] the package lists.
+
+{{CodeSelect|code=
+sudo apt update
+}}
+
+'''2.''' Ensure a proper meta package is installed. <ref>
+The apt install commands are not strictly required if these packages are already installed. However, the simplest approach is to run these commands to follow the documentation as is.
+
+* Either the packages are already installed: then the command does no harm.  
+* Or the packages are not installed: then these commands are necessary.
+
+The alternative would require more extensive documentation, with a step like "check if this package is installed" followed by "only if missing, install it", but that would make the documentation unnecessarily bloated.
+</ref>
+
+Platform specific. Select your platform.
+
+{{Tab
+|type=controller
+|linkid=oschoice
+|content=
+
+{{Tab
+|title= == [[Non-Qubes-Whonix|{{non_q_project_name_short}}]] LXQt ==
+|image=[[File:Whonix-logo-standard.svg|25px]]
+|addToClass=info-box
+|content=
+
+* 18:
+** 18: {{project_name_gateway_short}}: {{CodeSelect|code=
+sudo apt install whonix-gateway-vm-gui-lxqt
+}}
+** 18: {{project_name_workstation_short}}: {{CodeSelect|code=
+sudo apt install whonix-workstation-vm-gui-lxqt
+}}
+
+}} <!-- close tab: Non-Qubes-Whonix LXQt -->
+
+{{Tab
+|title= == [[Qubes|{{q_project_name_short}}]] ==
+|image=[[File:Qubes-logo-icon.png|25px]]
+|addToClass=info-box
+|content=
+
+* 18:
+** 18: {{project_name_gateway_short}}: {{CodeSelect|code=
+sudo apt install whonix-gateway-qubes-gui-lxqt
+}}
+** 18: {{project_name_workstation_short}}: {{CodeSelect|code=
+sudo apt install whonix-workstation-qubes-gui-lxqt
+}}
+
+}} <!-- close tab: Qubes -->
+}} <!-- close Controller: Non-Qubes-Whonix LXQt and Qubes -->
+
+'''3.''' Auto remove packages.
+
+{{CodeSelect|code=
+sudo apt autoremove
+}}
+
+'''4.''' Reconfirm a proper meta package is still installed.
+
+Repeat step two.
+
+'''5.''' Done.
+
+The procedure of safely running <code>sudo apt autoremove</code> is complete.
+
+Related: [[Factory Reset|{{project_name_short}} Factory Reset]]
+
+= See Also =
+* [[Configuration_Files#Configuration_Drop-In_Folders|Configuration Drop-In Folders]]
+* [[Configuration_Files#Reset_Configuration_Files_to_Vendor_Default|Reset Configuration Files to Vendor Default]]
+* [[Factory Reset|{{project_name_short}} Factory Reset]]
+* [[Packages for Debian Hosts]]
+* [[Project-APT-Repository|{{project_name_short}} APT Repository]]
+* [[Dev/Build Documentation‏‎|Building and Update {{project_name_short}} from Source Code]]
+* [[Dev/Installation_from_Repository|Installing {{project_name_short}} from Repository]]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
