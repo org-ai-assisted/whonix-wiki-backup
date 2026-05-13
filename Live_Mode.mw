@@ -1,0 +1,87 @@
+{{Header}}
+{{Title|
+title=Live Mode for {{project_name_long}}
+}}
+{{#seo:
+|description=Live mode for {{project_name_short}}. All writes are saved in non-persistent memory (RAM). No data is written to the hard drive.
+|image=Whonix-live-mode.jpg
+}}
+[[File:Whonix-live-mode.jpg|thumb|Boot menu with boot option Live Mode selected.]]
+{{intro|
+{{project_name_short}} Live Mode is available for {{project_name_short}} if the host {{os}} supports it. This means that nothing is saved and {{project_name_short}} forgets everything you've done after your session. This feature has been long requested and is very suitable for use cases involving sensitive data.
+
+Alternatively, {{project_name_short}} has a Live Mode boot option.
+}}
+= Introduction and Definitions =
+
+To use {{project_name_short}} without leaving any traces the feature '''live mode''' was introduced. In live mode the system can be used as normal but all data is lost and gone after the session. In sensitive temporary data use cases this is very beneficial.
+
+{{project_name_short}} live mode is available for {{project_name_short}} '''as guest OS and/or if the host OS supports it'''. A '''host {{os}}''' runs directly on your physical hardware. A '''guest OS''' runs inside a virtual machine.
+
+Terminology on this page:
+
+* '''A)''' if live mode is available on the host OS we will use '''''HOST''''',
+* '''B)''' if {{project_name_short}} is a guest OS we will use '''''VM GUEST'''''.
+
+== Starting Live Mode ==
+
+'''1.''' Platform specific notice.
+
+* [[{{non_q_project_name_short}}|{{non_q_project_name_short}}]]: No special notice.
+* [[{{q_project_name_short}}|{{q_project_name_short}}]]: Unavailable. <ref>
+Qubes issue: [https://github.com/QubesOS/qubes-issues/issues/4982 implement live boot by porting grub-live to Qubes - amnesia / non-persistent boot / anti-forensics]
+</ref>
+
+'''2.''' Boot your {{project_name_short}} VM ('''''VM GUEST''''') or power on the computer ('''''HOST''''')
+
+Restart / reboot if your system is already running.
+
+'''3.''' Look closely at the Boot Menu
+
+The grub boot menu (read more about [[grub|grub bootloader here]]) will show your 3 options, the asterisk symbol [[File:asterisk_symbol.png|20px]] indicates the selected option. Read all options and analyse their meaning on a basic level. The "normal" mode is called '''persistent mode'''.
+
+The three options are:
+
+<u>Note:</u> Boot option names have been renamed since version <code>17.3.9.2</code>.
+
+* [[File:asterisk_symbol.png|20px]] <code>{{project_name_short}}</code>
+* <code>Advanced options for {{project_name_short}} GNU/Linux</code>
+* <code>{{project_name_short}} Live-mode GNU/Linux</code>
+
+'''What is the current selection?''' The current boot option selected is indicated by the asterisk symbol [[File:asterisk_symbol.png|20px]] and also by the white text color.
+
+'''Can multiple options be chosen at once?''' No, at a time you can only select on option. The unselected boot options have NO asterisk at the front and a light blue text color.
+
+'''4.''' To choose Live Mode use the arrow keys.
+
+'''LIVE mode USER (For daily activities.)''' - to switch to this option use the arrow keys (up ↑ and down ↓) on the keyboard.
+
+'''5.''' Press ENTER.
+
+Simply press enter after you've selected live mode.
+
+'''6.''' Done.
+
+Now the system is booting into live mode.
+
+= First Boot =
+'''Applicability:''' These instructions are <u>only necessary for users intending to use live mode</u>. Users who always (or mostly) use persistent mode (the default boot option) can disregard these instructions.
+
+For the very first time {{project_name_gateway_long}} is started, please start it '''in persistent mode''' (the option is simply named "{{project_name_short}}"), NOT in live mode. This will allow [[Tor]] to make use of [[Tor Entry Guards]] for automatic initial setup.
+
+From the second time {{project_name_gateway_short}} is started onwards, it is the user may opt-in to run it in live mode if non-persistence, amnesia is desired.
+
+This should eliminate any Tor-related cached data like DNS requests that could leave traces about web activity. However, be warned that it may make your Tor behavior distinguishable from that of regular Tor users, which could weaken your anonymity somewhat. This applies to:
+
+* '''Consensus files:''' These files will be downloaded or re-downloaded more frequently.
+* '''Tor guards:''' When switching to a new guard after several months have passed. <ref>
+https://forums.whonix.org/t/whonix-live-mode-amnesia-amnesic-non-persistent-anti-forensics/3894/127
+</ref>
+
+= Upstream =
+{{upstream_wiki}}
+
+= Footnotes =
+<references />
+[[Category:Documentation]]
+{{Footer}}
