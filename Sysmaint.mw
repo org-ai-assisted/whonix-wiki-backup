@@ -1,0 +1,133 @@
+{{Header}}
+{{Title|
+title=sysmaint - System Maintenance User
+}}
+{{#seo:
+|description={{project_name_short}} specific sysmaint account documentation. Default Installation Status Differences - GUI (LXQt) versus CLI - Older versions versus new images. "permission denied: sudo"
+|image=Whonix-workstation-grub-sysmaint-boot-option.png
+}}
+{{intro|
+* <u>Overview:</u> {{project_name_short}} specific <code>sysmaint</code> account documentation and default installation status differences.
+* <u>Default:</u> {{project_name_short}} LXQt comes with [[sysmaint|<code>user-sysmaint-split</code>]] by default.
+* <u>Accounts:</u> There are two accounts:
+** <u><code>user</code>:</u> For daily activities.
+** <u><code>sysmaint</code>:</u> For system maintenance administrative activities, such as installing software or upgrading.
+* <u>Security rationale:</u> This is a security feature. ({{kicksecure_wiki
+|wikipage=Root#Rationale_for_Separate_sysmaint_Account
+|text=rationale
+}})
+* <u>Administrative access:</u> Boot into the <code>sysmaint</code> session. This is the recommended way to perform administrative tasks, to run tools such as <code>sudo</code> or <code>pkexec</code>.
+* <u>Troubleshooting:</u> If you see the following errors, you are most likely in the <code>user</code> session:
+<pre>
+permission denied: sudo
+</pre>
+<pre>
+permission denied: pkexec
+</pre>
+* <u>Fix:</u> Reboot into the <code>sysmaint</code> session and run administrative commands there.
+* <u>Unrestricted Admin Mode:</u> The opposite of <code>user-sysmaint-split</code> is {{kicksecure_wiki
+|wikipage=unrestricted_admin_mode
+|text=Unrestricted Admin Mode
+}}, which users can opt in to enable. This is generally <u>not</u> recommended, because it removes the security benefits of <code>user-sysmaint-split</code>.
+* <u>Older versions:</u> For older versions, refer to [[Sysmaint#Version_Overview|Version Overview]] for upgrade information.
+}}
+
+= Screenshot =
+[[Non-Qubes-Whonix]]:
+
+'''Image:''' ''Whonix-Workstation - sysmaint Boot Option in [[grub|GRUB]] boot menu''
+
+[[File:whonix-workstation-grub-sysmaint-boot-option.png|400px|Whonix-Workstation GRUB Boot Menu - Sysmaint Boot option]]
+
+[[Qubes-Whonix]]:
+
+'''Image:''' ''Whonix-Workstation - sysmaint Boot Option in Qubes VM Manager (QVMM)''
+
+[[File:Whonix-workstation-persistent-mode-sysmaint-session-qubes.png|400px|Whonix-Workstation Qubes VM Manager - Sysmaint Boot option]]
+
+= Version Overview =
+{| class="wikitable"
+! Feature
+! [[Whonix-Workstation]] LXQt (GUI)
+! [[Whonix-Gateway]] LXQt (GUI)
+! Whonix-Workstation CLI
+! Whonix-Gateway CLI
+|-
+
+! <code>user-sysmaint-split</code>
+| {{Yes}}, default in new images.
+| {{Yes}}, default in new images.
+| {{No}}, not default.
+| {{No}}, not default.
+|-
+
+! Old Versions
+| {{No}}, not auto-installed (to avoid breaking workflows).
+| {{No}}, not auto-installed (to avoid breaking workflows).
+| {{No}}, not applicable (remains <code>sudo</code> passwordless by default).
+| {{No}}, not applicable (remains <code>sudo</code> passwordless by default).
+|-
+
+! New Images
+| {{Yes}}, includes <code>user-sysmaint-split</code> by default.
+| {{Yes}}, includes <code>user-sysmaint-split</code> by default.
+| {{No}}, does not include <code>user-sysmaint-split</code>.
+| {{No}}, does not include <code>user-sysmaint-split</code>.
+|-
+
+! 17 to 18 [[Release Upgrade]]
+| {{No}}, does not auto-install <code>user-sysmaint-split</code>.
+| {{No}}, does not auto-install <code>user-sysmaint-split</code>.
+| {{No}}, does not include <code>user-sysmaint-split</code>.
+| {{No}}, does not include <code>user-sysmaint-split</code>.
+|-
+
+! Opt-Out
+| {{Yes}}, via {{kicksecure_wiki
+|wikipage=unrestricted_admin_mode
+|text=Unrestricted Admin Mode
+}}.
+| {{Yes}}, via {{kicksecure_wiki
+|wikipage=unrestricted_admin_mode
+|text=Unrestricted Admin Mode
+}}.
+| {{Yes}}
+| {{Yes}}
+|-
+
+! Opt-In
+| {{Yes}}, can be installed anytime.
+| {{Yes}}, can be installed anytime.
+| {{Yes}}
+| {{Yes}}
+|-
+
+|}
+
+= user-sysmaint-split - Whonix-Workstation versus Whonix-Gateway - Default Installation Status Differences =
+In the past, in earlier versions, there have been differences between Whonix-Workstation and Whonix-Gateway. <ref>
+[https://forums.whonix.org/t/qubes-sudo-su-root-hardening-development-discussion/8561/54 Whonix Forums Discussion on the usefulness of user-sysmaint-split inside Whonix-Gateway]
+</ref> There are no more differences since {{project_name_short}} 18. <ref>
+[https://forums.whonix.org/t/restrict-root-access/7658/120 Whonix Forums post about restricting root access]
+</ref>
+
+= user-sysmaint-split - GUI vs CLI - Default Installation Status Differences =
+
+* <u>Default installation status:</u> <code>user-sysmaint-split</code> default installation status (installed by default versus not installed by default) differs between the {{gui}} and {{cli}} versions.
+* <u>Future direction:</u> In the future, the CLI version will be improved to be more suitable for servers.
+** <u>Server support:</u> Server support for <code>user-sysmaint-split</code> is not yet as sophisticated as it is for the GUI version.
+** <u>Server use cases:</u> For some server use cases, <code>user-sysmaint-split</code> may be less needed or unnecessary.
+** <u>Further reading:</u> This topic is elaborated in the development chapter {{kicksecure_wiki
+|wikipage=Dev/user-sysmaint-split#Server_Support
+|text=<code>user-sysmaint-split</code> Server Support
+}}.
+
+= Upstream =
+{{upstream_wiki|
+Sysmaint
+}}
+
+= Footnotes =
+<references />
+[[Category:Documentation]]
+{{Footer}}
