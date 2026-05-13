@@ -1,0 +1,16 @@
+{{Header}}
+{{title|title=
+Backup {{project_name_short}} VMs
+}}
+{{#seo:
+|description=Overview of Ways to Backup your {{project_name_long}} Virtual Machines
+|image=Isolated-316392640.jpg
+}}
+[[File:Isolated-316392640.jpg|thumb|200px]]
+{{intro|
+Overview of Ways to Backup your {{project_name_short}} Virtual Machines
+}}
+{{upstream_wiki}}
+<references />
+{{Footer}}
+[[Category:Documentation]]
