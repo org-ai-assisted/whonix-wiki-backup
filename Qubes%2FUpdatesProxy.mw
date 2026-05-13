@@ -1,0 +1,396 @@
+{{Header}}
+{{Title|title=
+{{q_project_name_long}} UpdatesProxy Settings
+}}
+{{#seo:
+|description=Qubes dom0 {{q_project_name_short}} UpdatesProxy and UpdateVM Settings.
+|image=Qubesupdateproxy31231235.png
+}}
+{{qubes_troubleshooting_mininav}}
+[[File:Qubesupdateproxy31231235.png|180px|thumb]]
+{{intro|
+Qubes dom0 {{q_project_name_short}} UpdatesProxy and UpdateVM Settings.
+}}
+<!--EDITORS NOTE:
+https://github.com/{{project_name_short}}/qubes-whonix/blob/master/usr/share/uwt/qubes_torfied_dom0.txt links to this wiki page.
+-->
+
+= Introduction =
+
+{{box|text=
+The following wiki pages have been updated in August 2023 for R4.2 and contain documentation on how to configure Qubes UpdatesProxy:
+
+{{multiple-vms-mininav}}
+
+By following the above wiki pages, there is no need to follow any steps on this wiki page. This wiki page is only needed for troubleshooting or when looking for additional information.
+}}
+
+= Qubes UpdatesProxy Setting =
+{{Box|text=
+Note: In Qubes, in '''<code>dom0</code>'''.
+
+{{IconSet|h1|1}} Locating the settings file.
+
+In '''<code>dom0</code>''' check file <code>/etc/qubes/policy.d/50-config-updates.policy</code> settings.
+
+{{IconSet|h1|2}} View its contents.
+
+{{CodeSelect|code=
+cat /etc/qubes/policy.d/50-config-updates.policy
+}}
+
+{{IconSet|h1|3}} Verify its default entries.
+
+At the very top of that file, the following text should appear.
+
+<pre>qubes.UpdatesProxy * @tag:whonix-updatevm @default allow target=sys-whonix
+qubes.UpdatesProxy * @tag:whonix-updatevm @anyvm deny</pre>
+
+If these lines are not there, add them.
+}}
+
+{{stub}}
+
+= Qubes dom0 UpdateVM Setting =
+
+Qubes <code>dom0</code> does not use Qubes <code>UpdatesProxy</code>.
+
+Therefore, file <code>/etc/qubes-rpc/policy/qubes.UpdatesProxy</code> does not influence which VM <code>dom0</code> will use for fetching updates.
+
+For completeness' sake, see below on how to configure the Qubes <code>dom0</code> <code>UpdateVM</code> setting.
+
+{{Qubes dom0 Updates over Tor}}
+
+= No torified Qubes updates proxy found warning =
+How to fix {{Code2|WARNING: Execution of /usr/bin/apt-get prevented by /etc/uwt.d/40_qubes.conf because no torified Qubes updates proxy found.}}?
+
+If the following warning appears.
+
+<pre>
+WARNING: Execution of /usr/bin/apt-get prevented by /etc/uwt.d/40_qubes.conf because no torified Qubes updates proxy found.
+</pre>
+
+If the warning message is transient, it can be safely ignored. Otherwise, try the following fix.
+
+{{box|text=
+In <code>dom0</code>.
+
+{{IconSet|h1|1}} Open a terminal.
+
+{{IconSet|h1|2}} Use <code>qubesctl</code> (Qubes salt) to set up <code>dom0</code> settings. <ref>
+[[Dev/Qubes#salt]]
+</ref>
+
+{{CodeSelect|code=
+sudo qubesctl state.sls qvm.{{project_name_workstation_vm}}
+}}
+}}
+
+{{box|text=
+In {{project_name_short}} Template.
+
+{{IconSet|h1|3}} Next, check if the problem has been corrected.
+
+Run the following command in {{project_name_short}} Template.
+
+{{CodeSelect|code=
+sudo systemctl restart qubes-whonix-torified-updates-proxy-check
+}}
+
+{{IconSet|h1|4}} Then try to update or use <code>apt</code> again.
+
+{{CodeSelect|code=
+sudo apt update
+}}
+
+{{IconSet|h1|5}} <u>If there are still problems,</u> try re-installation of Qubes-Whonix.
+
+* [[Qubes/Reinstall|Reinstall {{q_project_name_short}} Templates]].
+* If re-installation also fails, then ask for support in the [https://forums.{{project_clearnet}} {{project_name_short}} forums].
+}}
+
+= Additional Information for Advanced Users =
+== Generally ==
+The following {{q_project_name_short}} and {{project_name_short}} GitHub development resources are recommended for interested readers:
+
+* [https://github.com/{{project_name_short}}/qubes-whonix/blob/master/etc/uwt.d/40_qubes.conf <code>/etc/uwt.d/40_qubes.conf</code>]
+* [https://github.com/{{project_name_short}}/qubes-whonix/blob/master/usr/lib/systemd/system/qubes-whonix-torified-updates-proxy-check.service <code>/lib/systemd/system/qubes-whonix-torified-updates-proxy-check.service</code>]
+* [https://github.com/{{project_name_short}}/qubes-whonix/blob/master/usr/lib/qubes-whonix/init/torified-updates-proxy-check <code>/usr/lib/qubes-whonix/init/torified-updates-proxy-check</code>]
+* [https://github.com/{{project_name_short}}/uwt uwt]
+
+== Qubes ==
+* Qubes qrexec policy configuration can be found in the folder <code>/etc/qubes/policy.d/</code>.
+* Qubes defaults are configured in file [https://github.com/QubesOS/qubes-core-admin/blob/main/qubes-rpc-policy/90-default.policy <code>/etc/qubes/policy.d/90-default.policy</code>].
+** Search this file for lines starting with: {{CodeSelect|code=
+qubes.UpdatesProxy
+}}
+** The following comment at the top of this file explains the general principle. {{CodeSelect|code=## Do not modify this file, create a new policy file with a lower number in the
+## filename instead. For example 30-user.policy.}}
+* Check file <code>/etc/qubes/policy.d/50-config-updates.policy</code>
+* As per Qubes default, file <code>/etc/qubes/policy.d/50-config-updates.policy</code> is parsed before <code>/etc/qubes/policy.d/90-default.policy</code>.
+* In case of issues, see also [[Qubes/Troubleshooting#qvm-tags_verification|<code>qvm-tags</code> verification]].
+** See if you can make heads or tails of [[Dev/Qubes#qvm-tags|qvm-tags developer notes]]. If not, skip this step.
+
+== Simulate torified UpdatesProxy check failed ==
+Developers only.
+
+<u>In Template.</u>
+
+{{IconSet|h1|1}} Simulate Qubes-Whonix UpdatesProxy check failed.
+
+{{CodeSelect|code=
+sudo rm /run/updatesproxycheck/whonix-secure-proxy
+}}
+
+{{IconSet|h1|2}} Run APT.
+
+{{CodeSelect|code=
+sudo apt update
+}}
+
+{{IconSet|h1|3}} Result.
+
+<pre>
+WARNING: Execution of /usr/bin/apt prevented by /etc/uwt.d/40_qubes.conf because no torified Qubes updates proxy found.
+Please make sure Whonix-Gateway (commonly called sys-whonix) is running.
+
+Check your _dom0_ settings in the /etc/qubes/policy.d/ folder.
+
+To see if it is fixed, try running in Whonix Template:
+
+sudo systemctl restart qubes-whonix-torified-updates-proxy-check
+
+Then try to update / use apt-get again.
+
+For more help on this subject see:
+[https://www.whonix.org/wiki/Qubes/UpdatesProxy https://www.whonix.org/wiki/Qubes/UpdatesProxy]
+
+If this warning message is transient, it can be safely ignored.
+</pre>
+
+Thanks to [https://github.com/Whonix/qubes-whonix/blob/master/etc/uwt.d/40_qubes.conf <code>/etc/uwt.d/40_qubes.conf</code>] which checks if <code>/run/updatesproxycheck/whonix-secure-proxy</code> exists. It only exists if Qubes UpdatesProxy was reachable and the output of the test included <code>tor proxy</code>.
+
+== Simulate Broken Connectivity ==
+{{IconSet|h1|1}} Break networking.
+
+Unplug the network cable, disable WiFi, or power off the modem or router.
+
+{{IconSet|h1|2}} View <code>qubes-updates-proxy.service</code> logs.
+
+<u>In sys-whonix.</u>
+
+{{CodeSelect|code=
+sudo journalctl --boot -u qubes-updates-proxy.service
+}}
+
+{{IconSet|h1|3}} Result.
+
+<pre>
+Sep 05 13:24:22 host tinyproxy[33224]: opensock: Could not retrieve address info for deb.debian.org:443: Temporary failure in name resolution
+</pre>
+
+== Invalid response from proxy: HTTP/1.1 500 Unable to connect Server: tinyproxy ==
+Understanding Tinyproxy error messages
+
+The objective of this documentation is to help understand and interpret error messages from Tinyproxy seen in APT output.
+
+The APT error message:
+
+<pre>
+HTTP/1.0 500 Unable to connect Server: tinyproxy/1.10.0 Content-Type: text/html Connection: close
+</pre>
+
+is not necessarily indicative of a Tor connectivity issue or issue caused by Whonix.
+
+=== Reproduce the Tinyproxy error by stopping Tor or unplugging the network cable ===
+Developers only. For demonstration purposes.
+
+Either stop Tor, or unplug the network cable from the router, disable WiFi, or similar.
+
+To reproduce and test the origin of this error message:
+
+{{IconSet|h1|1}} Stop Tor.
+
+In <code>sys-whonix</code>, execute:
+
+{{CodeSelect|code=
+sudo systemctl stop tor@default
+}}
+
+{{IconSet|h1|2}} Confirm in the journal log that the Tor service has indeed stopped.
+
+{{IconSet|h1|3}} Attempt an update.
+
+Run the update command in <code>{{project_name_gateway_template}}</code> Template:
+
+{{CodeSelect|code=
+sudo apt update
+}}
+
+{{IconSet|h1|4}} Result.
+
+Now Tor is stopped while attempting to run an apt update in the Template.
+
+The expected result is:
+
+<pre>
+Invalid response from proxy: HTTP/1.1 500 Unable to connect  Server: tinyproxy/1.11.1  Content-Type: text/html  Connection: close [IP: 127.0.0.1 8082]
+</pre>
+
+{{IconSet|h1|5}} Restart Tor.
+
+Optional.
+
+{{IconSet|h1|6}} Done.
+
+=== Reproduce the Tinyproxy error by adding a blocked repository ===
+Developers only. For demonstration purposes.
+
+This example uses <code>blocked.com</code> and the website seems to block Tor traffic, which is useful for testing.
+
+{{IconSet|h1|1}} Mess up APT sources on purpose.
+
+Add a blocked APT source to <code>/etc/apt/sources.list.d/blocked.sources</code>.
+
+<pre>
+Types: deb
+URIs: tor+https://deb.blocked.com
+Suites: bookworm
+Components: main
+Enabled: yes
+</pre>
+
+{{IconSet|h1|2}} Update.
+
+<pre>
+sudo apt update
+</pre>
+
+{{IconSet|h1|3}} Result.
+
+When running an update, all APT sources will function except for <code>blocked.com</code>. The output will be:
+
+<pre>
+Ign:1 tor+https://deb.blocked.com bookworm InRelease                                                                                                         
+Invalid response from proxy: HTTP/1.1 500 Unable to connect  Server: tinyproxy/1.11.1  Content-Type: text/html  Connection: close [IP: 127.0.0.1 8082]
+Reading package lists... Done
+E: Failed to fetch tor+https://deb.blocked.com/dists/bookworm/InRelease  Invalid response from proxy: HTTP/1.1 500 Unable to connect  Server: tinyproxy/1.11.1  Content-Type: text/html  Connection: close [IP: 127.0.0.1 8082]
+</pre>
+
+=== Tinyproxy error interpretation ===
+From the output provided by <code>apt</code> in the Template, based on the message from Tinyproxy, it is challenging to differentiate between:
+
+* '''A)''' <u>Local connectivity issue:</u> Tinyproxy's inability to connect to the destination domain name.
+* '''B)''' <u>Blocked by remote server issue:</u> A connection being blocked by a remote APT server.
+
+The symptoms and output from both scenarios are identical.
+
+== Error Messages ==
+=== Proxying refused on filtered domain "127.0.0.1" ===
+In sys-whonix.
+
+<pre>
+Oct 15 15:34:29 host tinyproxy[846]: Proxying refused on filtered domain "127.0.0.1"
+</pre>
+
+This is a non-issue.
+
+File <code>/etc/tinyproxy/updates-blacklist</code> (owned by package qubes-core-agent-networking) contains:
+
+* [https://github.com/QubesOS/qubes-core-agent-linux/blob/main/network/updates-blacklist updates-blacklist in the qubes-core-agent-linux repository]
+
+[https://github.com/QubesOS/qubes-issues/issues/8606 Qubes issue 8606]
+
+== Could not connect to 127.0.0.1:8082 (127.0.0.1). - connect (113: No route to host) ==
+This issue applies to at least Debian and Qubes-Whonix Templates. It happens if the UpdatesProxy (in case of Qubes-Whonix most likely: <code>sys-whonix</code>) used by the Template has not been started yet.
+
+To reproduce, in Template:
+
+{{CodeSelect|code=
+sudo systemctl stop qubes-updates-proxy-forwarder.socket
+}}
+
+{{CodeSelect|code=
+sudo apt update
+}}
+
+Expected output:
+
+<pre>
+Could not connect to 127.0.0.1:8082 (127.0.0.1). - connect (113: No route to host)
+</pre>
+
+== Reading from proxy failed - read (11: Resource temporarily unavailable) [IP: 127.0.0.1 8082] ==
+
+In <code>sys-whonix</code>:
+
+{{CodeSelect|code=
+sudo systemctl stop qubes-updates-proxy.service
+}}
+
+In Template:
+
+{{CodeSelect|code=
+sudo apt update
+}}
+
+Expected output:
+
+<pre>
+Reading from proxy failed - read (11: Resource temporarily unavailable) [IP: 127.0.0.1 8082]
+</pre>
+
+== Qubes UpdatesProxy running test ==
+{{CodeSelect|code=
+sudo systemctl --no-pager --full -l status qubes-updates-proxy-forwarder.socket
+}}
+
+== Qubes UpdatesProxy reachability test ==
+In Template, use <code>curl</code> to check if Qubes UpdatesProxy is running on IP <code>127.0.0.1</code>, port <code>8082</code>.
+
+{{CodeSelect|code=
+curl 127.0.0.1:8082 
+}}
+
+Expected output:
+
+<pre>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<title>403 Filtered</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="application-name" content="tor proxy"/>
+</head>
+
+<body>
+
+<h1>tor proxy</h1>
+
+This customized file /usr/share/tinyproxy/default.html is stored on on a Tor proxy.
+
+<h1>Filtered</h1>
+
+<p>The request you made has been filtered</p>
+
+<hr />
+
+<p><em>Generated by <a href="https://tinyproxy.github.io/">tinyproxy</a> version 1.11.1.</em></p>
+
+</body>
+
+</html>
+</pre>
+
+== Qubes UpdatesProxy Stream Isolation ==
+See [[Stream_Isolation#Qubes_UpdatesProxy_Stream_Isolation|Qubes UpdatesProxy Stream Isolation]].
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
