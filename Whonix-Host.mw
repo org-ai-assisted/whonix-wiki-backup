@@ -1,0 +1,188 @@
+{{Header}}
+{{Title|title=
+Whonix-Host Operating System Live ISO, Whonix-Host Installer
+}}
+{{#seo:
+|description=Upcoming Host Operating System - In Development - Help wanted! - Please contribute!
+|image=Cd-rom-icon.png
+}}
+<div class="mininav">
+* [[Whonix-Host|Whonix-Host Operating System]]
+* [[USB Installation]]
+* [[Live Mode]].
+</div>
+[[File:Cd-rom-icon.png|thumb]]
+{{Intro|
+Whonix-Host will be a '''complete Operating System''' provided by {{project_name_long}} developers. '''More developers still wanted!''' Not available for users yet. Users should [[Download|install Whonix]] instead, it's available for most major operating systems.
+}}
+
+{{#widget:Icon_Bullet_List|fontSize=18px
+|item=fa-solid fa-person-digging cs-yellow,<b>Help wanted!</b> : A Whonix-Host Operating System Live ISO and Whonix-Host Installer is currently in development. More developers are still wanted!
+|item=fa-solid fa-times cs-red,<b>Not available for users yet</b> : There is no ETA (estimated time of arrival) yet. Users should <a href="/wiki/Download">install Whonix</a> instead.
+|item=fa-solid fa-question,<b>Live Mode</b> : Looking for Whonix Live Mode? It's already available, see <a href="/wiki/Live_Mode">Live Mode</a>.
+|item=fa-brands fa-usb,<b>USB</b> : Want to use Whonix on USB? See <a href="/wiki/USB_Installation">USB Installation</a>.
+|item=fa-regular fa-message cs-green,<b>Name discussion</b> : "Whonix-Host" might not be a good name and might be renamed in the future. You have an opinion? Participate in <a href="https://forums.whonix.org/t/whonixs-host-naming/16094">this forum discussion</a>.
+}}
+
+= General Disclaimer =
+
+DO NOT USE THIS YET AS A USER!
+
+There is no ETA (estimated time of arrival) yet.
+
+'''''Important warning: Whonix-Host is experimental software and still in early development. It is currently missing some core features, such as a working firewall on the Host, and is not yet ready for production use, nor intended for end-users. '''''
+
+'''This wiki page is a preview for developers and curious readers only.'''
+
+<s>[https://forums.whonix.org/t/whonix-host-developers-only-preview-version-15-0-1-2-7-released/9360 Whonix-Host Developers-Only Preview Version 15.0.1.2.7 Released!]</s>
+
+Major missing features in the initial release include:
+
+* [https://forums.whonix.org/t/whonix-host-firewall-for-whonix-host/18498 Whonix Host Firewall for Whonix Host]
+* [https://forums.whonix.org/t/whonix-host-tor-configuration-and-anon-connection-wizard-acw-ipv6-disable-ipv4-forward-disable/18452 Whonix-Host Tor configuration and anon-connection-wizard (ACW)]
+
+progress:
+
+* 2024: {{kicksecure_wiki|
+wikipage=ISO
+|text=Kicksecure ISO
+}} was made available for testers. ([[Based on Kicksecure|Whonix is based on Kicksecure]].) Kicksecure is {{kicksecure_wiki
+|wikipage[[Based on Debian]]
+|text=is based on Debian
+}} <code>{{Stable project version based on Debian codename}}</code>, {{kicksecure_wiki
+|wikipage=dracut
+|text=dracut
+}}, compatible with BIOS, EFI booting, and even {{kicksecure_wiki
+|wikipage=Secure_Boot
+|text=Secure Boot
+}} compatible.
+* 2025: Stable release of Kicksecure.
+
+See also [[Dev/Project Host]].
+
+Help welcome!
+
+= What is Whonix as a host operating system? =
+
+Whonix as a host {{os}} is a complete Operating System provided by {{project_name_short}} developers, specifically designed to run [[Whonix]] virtual machines ("[[Whonix-Gateway]]" and "[[Whonix-Workstation]]").
+
+[[Based on Kicksecure]], Whonix as a host OS comes out-of-the-box with all {{kicksecure}} security features and ready-to-use, pre-installed Whonix virtual machines.
+
+By default, Whonix as a host OS runs from a USB flash drive as a Live ISO, like any modern Linux distribution. This means you can use and test the whole system, including Whonix-Gateway and Whonix-Workstation, without making any changes to your computer ("live" or "amnesic" mode).
+
+Whonix as a host OS can also be installed from the USB flash drive onto an internal hard drive or onto an external drive, such as another USB flash drive, to be used as a permanent Operating System ("persistent" mode).
+
+In other words:
+
+* Supported installation <u>source medium</u>: USB; DVD
+* Supported installation <u>target devices</u>: internal HDD; external HDD; USB; eSATA
+
+= Advantages =
+* Whonix-Host ISO is available as a Live ISO, i.e. it can boot Whonix-Host from a Live DVD or Live USB.
+* Whonix-Host, once installed, includes a boot menu option to start in either persistent mode or live mode.
+* No clearnet traffic by default. ([https://forums.whonix.org/t/should-whonix-host-be-fully-torified-by-default/7404/16 details]) (not implemented yet!)
+
+= Differences with Qubes-Whonix =
+* Does not have some of the [https://forums.whonix.org/t/qubes-whonix-security-disadvantages-help-wanted/8581 Qubes-Whonix security disadvantages].
+* Better hardware support (same as Debian).
+* Does not involve Fedora on the dom0 host.
+* No, avoiding all clearnet traffic by default in Qubes is not easily possible. See:
+** [https://github.com/QubesOS/qubes-issues/issues/1814 sys-net phones home to fedoraproject.org for captive portal detection] (Ticket was closed but the issue was not fixed.)
+** [https://forums.whonix.org/t/qubes-whonix-gateway-as-clockvm/19015 Qubes-Whonix-Gateway as ClockVM]
+
+= Installation =
+
+== Recommended System Specifications ==
+TODO: update
+
+*A 64 bit processor with virtualization capacities
+*Minimum 4GB of RAM
+*Minimum 4GB USB flash drive
+*Optional: another flash drive or HDD/SSD with minimum 10GB of free space if you intend to install Whonix-Host
+
+== Installation Steps ==
+TODO: Will be similar to {{kicksecure_wiki|
+wikipage=ISO
+|text=Kicksecure ISO
+}}
+
+Older screenshots:
+
+'''Figure:''' ''Whonix-Host GRUB bootloader (EFI mode)''
+
+[[File:Whonix-Host GRUB bootloader (EFI mode).png|Whonix-Host GRUB bootloader (EFI mode)|500px]]
+
+'''Figure:''' ''Whonix-Host Calamares Installer - Welcome module''
+
+[[File:Whonix-Host Calamares Installer - Greeter.png|Whonix-Host Calamares Installer - Welcome module|500px]]
+
+'''Figure:''' ''Whonix-Host Calamares Installer - Partitions Module''
+
+[[File:Whonix-Host Calamares Installer - Partitions Module.png|Whonix-Host Calamares Installer - Partitions Module|500px]]
+
+'''Figure:''' ''Whonix-Host Calamares Installer - Summary Module''
+
+[[File:Whonix-Host Calamares Installer - Summary Module.png|Whonix-Host Calamares Installer - Summary Module|500px]]
+
+'''Figure:''' ''Whonix-Host Calamares Installer - Installation in Progress''
+
+[[File:Whonix-Host Calamares Installer - Installation in Progress.png|Whonix-Host Calamares Installer - Installation in Progress|500px]]
+
+'''Figure:''' ''Whonix-Host Calamares Installer - Installation Complete''
+
+[[File:Whonix-Host Calamares Installer - Installation Complete.png|Whonix-Host Calamares Installer - Installation Complete|500px]]
+
+'''Figure:''' ''Whonix-Host Installed - GRUB bootloader''
+
+[[File:Whonix-Host Installed - GRUB booatloader.png|Whonix-Host Installed - GRUB bootloader|500px]]
+
+= Comparison of different Whonix-Host Boot Modes =
+
+{| class="wikitable"
+|
+! '''ISO Boot'''
+! '''Persistent Boot'''
+! '''Live Boot'''
+|-
+
+! data persistence<br/>(read-write)
+| {{No}}
+| {{Yes}}
+| {{No}}
+|-
+
+! non-persistent<br/>(read-only)
+| {{Yes}}
+| {{No}}
+| {{Yes}}
+|-
+
+! Usable without installation<br/>Available <u>before</u> Installation of the Whonix-Host operating system
+| {{Yes}}
+| {{No}}
+| {{No}}
+|-
+
+! Only after installation<br/>Available <u>after</u> Installation of the Whonix-Host operating system
+| {{No}}
+| {{Yes}}
+| {{Yes}}
+|-
+
+|}
+
+= See Also =
+* [[Host Operating System Selection]]
+* [[Essential_Host_Security|Essential Host Security]]
+* {{kicksecure_wiki
+|wikipage=Advanced_Host_Security
+|text=Advanced Host Security
+}}
+*
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
