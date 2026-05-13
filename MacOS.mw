@@ -1,0 +1,261 @@
+{{Header}} {{hide_all_banners}} {{VirtualBox_CSS}}
+{{Title|title=
+{{project_name_long}} for macOS: Download and Installation
+}}
+{{#seo:
+|description={{project_name_short}} for Apple macOS on Intel-based MacBook and Apple Silicon.
+|image=Logo-apple-500x500.png
+}}
+[[File:Logo-apple-500x500.png|thumb|link=|class=hide-enlarge|100px|macOS]]
+{{intro|
+{{project_name_short}} for '''Apple macOS''' on '''Intel-based MacBook''' and '''Apple Silicon.'''
+
+'''Select''' your hardware platform below.
+}}
+
+{{Tab
+|type=controller
+|content=
+
+{{Tab
+|title= = Intel-based MacBook =
+|image=[[File:Apple-with-intel-logo.jpg]]
+|content=
+{{anchor|{{project_name_short}} on Intel-based MacBook}}
+[[File:Apple-with-intel-logo.jpg|thumb|100px]]
+{{IntroLike|
+For Mac computers with an <u>Intel</u> processor, {{project_name_short}} can be run inside VirtualBox.
+
+Follow the documentation on the '''[[VirtualBox]]''' wiki page.
+}}
+}}<!-- close tab Intel -->
+
+{{Tab
+|title= = Apple Silicon =
+|image=[[File:Apple-mx-logo.jpg]]
+|content=
+{{Anchor|M1}}{{Anchor|M2}}{{Anchor|{{project_name_short}} on Apple Silicon}}
+[[File:Apple-mx-logo.jpg|thumb|100px]]
+'''For Mac <u>M1</u>, <u>M2</u>, <u>M3</u>, <u>M4</u>, ...'''
+
+{{IntroLike|
+{{project_name_short}} is not yet available for Mac M1, M2, M3, M4, ... There is no {{ETA}}. No need to ask for status updates. Any updates would certainly be posted in the usual channels, see [[Stay Tuned]].
+}}
+
+{{Unsupported}}
+
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = At the time of writing, running {{project_name_short}} on Apple Silicon is still for developers only!
+}}<!-- close mbox -->
+
+You need to build {{project_name_short}} using derivative-maker to get it running on Apple Silicon.
+
+Virtualizer specific. Select the virtualizer.
+
+{{Tab
+|type=controller
+|content=
+
+{{Tab
+|title= = VirtualBox =
+|image=[[File:Virtualbox logo.png|25px]]
+|content=
+Build environment.
+
+* build host (where derivative-maker needs to run): Intel/AMD64
+* target machine: Mac M# / Apple Silicon
+* future: It will hopefully be possible to build on any [[ARM64]] build host computer, which includes Debian ARM64 based VM running on Mac M# / Apple Silicon.
+
+Build commands.
+
+* {{CodeSelect|code=
+~/derivative-maker/derivative-maker --flavor whonix-gateway-lxqt --target virtualbox --arch arm64 --repo true
+}}
+* {{CodeSelect|code=
+~/derivative-maker/derivative-maker --flavor whonix-workstation-lxqt --target virtualbox --arch arm64 --repo true
+}}
+
+}}<!-- close tab: VirtualBox -->
+
+{{Tab
+|title= = UTM =
+|image=
+|content=
+{{Contributor|
+|status=[[Unsupported|Unmaintained]]. Development stalled.
+|about=About this {{project_name_short}} on Apple Silicon using UTM chapter
+|difficulty=hard
+|contributor=Past: [https://github.com/GavinPacini Gavin Pacini] / Current: none
+|support=[https://forums.whonix.org/t/whonix-on-mac-m1-arm/11310 {{project_name_short}} on Mac M1 (ARM)]
+}}<!-- close box -->
+
+{{IconSet|h1|1}} Environment Setup
+
+{{box|text=
+{{IconSet|h2|1}} Install UTM
+
+* Download [https://github.com/utmapp/UTM/releases/latest/download/UTM.dmg UTM] and install it.
+}}
+
+{{box|text=
+{{IconSet|h2|2}} Create a Debian <code>arm64</code> VM
+
+Then follow these instructions to install your own Debian <code>arm64</code> based VM.
+
+{{IconSet|h3|1}} Get the installer image
+
+* Debian <code>{{Stable project version based on Debian codename}}</code> netinstall disc image
+
+{{IconSet|h3|2}} Start the VM creation wizard
+
+* open UTM
+* click "Create a new virtual machine"
+* click "Virtualize"
+* click "Linux"
+
+{{IconSet|h3|3}} Select the ISO
+
+* click "Browse" and select the downloaded netinstall image ISO file
+* and then click "Next"
+
+{{IconSet|h3|4}} Hardware settings
+
+* on the "Hardware" screen just leave the defaults (4 GB RAM, 4 cores). GPU acceleration is not recommended at this time as it crashes randomly.
+* and then click "Next"
+
+{{IconSet|h3|5}} Storage
+
+* on "Storage" click "Next"
+* click "Browse". Choose the directory that you want the built {{project_name_short}} images to end up in.
+* and then click "Next"
+
+{{IconSet|h3|6}} Save and install
+
+* verify settings on the "Summary" page and then click "Save"
+* start the new VM and install Linux by following the instructions on screen.
+
+{{IconSet|h3|7}} Post-install steps
+
+* once installation is finished, boot into the VM again.
+* open a terminal and run <code>sudo apt install spice-vdagent spice-webdavd dosfstools</code>
+* change the VM hostname to <code>host</code>
+}}
+
+{{box|text=
+{{IconSet|h2|3}} Import the UTM file
+
+Double click the UTM file to import it.
+}}
+
+{{IconSet|h1|2}} Initial Build
+
+{{box|text=
+{{IconSet|h2|1}} Follow build documentation
+
+Follow the [[Dev/Build_Documentation/images|build documentation here]] and be sure to set build parameters:
+
+* <code>--arch arm64</code> and <code>--target utm</code> when running the build script as part of the [[Dev/Build_Documentation/images#VM_Creation]] step.
+* <code>--tb open</code> will result in <code>tb-updater</code> (<code>update-torbrowser</code>) (Tor Browser Downloader by {{project_name_short}} developers) attempting to download Tor Browser during the build process, but it will fail open (continue the build without error) if the download fails.
+* <code>--repo true</code> will result in [[Project-APT-Repository]] being enabled.
+* <code>--vmsize</code> defines the size of the virtual hard drive.
+** <code>--vmsize 15G</code> will create 15 GB disk size for the gateway.
+** <code>--vmsize 25G</code> will create 25 GB disk size for the workstation.
+** These numbers are arbitrarily chosen and not yet optimized. Feel free to use higher disk sizes. Lower disk sizes are ok too. In the worst case, the build will fail or the disk will fill up.
+** It is possible to {{kicksecure_wiki
+|wikipage=Grow_Virtual_Harddisk
+|text=increase the virtual hard disk size later.
+}}
+}}
+
+{{box|text=
+{{IconSet|h2|2}} Build commands
+
+Build commands should look similar to:
+
+* {{CodeSelect|code=
+~/derivative-maker/derivative-maker --flavor whonix-gateway-lxqt --target utm --arch arm64 --tb open --repo true --vmsize 15G
+}}
+* {{CodeSelect|code=
+~/derivative-maker/derivative-maker --flavor whonix-workstation-lxqt --target utm --arch arm64 --tb open --repo true --vmsize 25G
+}}
+}}
+
+{{IconSet|h1|3}} Transfer output files to macOS
+
+If you have built correctly, you will now have two <code>.tar.gz</code> files in folder <code>~/derivative-binary</code> (they will look something like <code>{{project_name_short}}-<flavour>-LXQt-{{VersionNew}}.utm.tar.gz</code>), one for the Workstation and one for the Gateway.
+
+* Move the <code>tar.gz</code> files into the shared folder, so they are transferred to your Mac.
+
+{{IconSet|h1|4}} Import UTM files
+
+{{box|text=
+{{IconSet|h2|1}} Unpack
+
+* unzip the <code>.tar.gz</code> files
+}}
+
+{{box|text=
+{{IconSet|h2|2}} Import
+
+* double click each UTM file to import it
+}}
+
+<u>Note:</u> The UTM files are completely configured and use special networking. They will work as-is, but feel free to tweak memory, or other settings.
+
+{{IconSet|h1|5}} Done.
+
+The process of building and important {{project_name_short}} UTM has been completed.
+
+{{IconSet|h1|6}} Development TODO.
+
+* [[Dev/UTM]]
+* https://forums.whonix.org/t/whonix-on-mac-m1-arm-development-discussion/14136/6
+}}<!-- close tab: UTM -->
+
+}}<!-- close tab controller: VirtualBox versus UTM -->
+
+}}<!-- close tab Apple Silicon -->
+
+{{Tab
+|title= = non-Apple Hardware Hackintosh =
+|image=[[File:Hackintosh-logo.svg]]
+|content=
+{{anchor|{{project_name_short}} on non-Apple Hardware Hackintosh}}
+[[File:Hackintosh-logo.svg|thumb|100px]]
+{{Community_Support|scope=chapter}}
+
+Virtualization on <code>osx86</code> aka "Hackintosh" machines with unmodified "vanilla" kernels works well, but some additional BIOS/UEFI settings need to be confirmed to ensure system stability. As of November 2018 [https://en.wikipedia.org/wiki/VT-d Intel VT-d] is not recommended, although some systems may function if it is enabled. Later BIOS revisions from American Megatrends Inc. (AMI) seem to have improved support compared to earlier releases.
+
+[https://en.wikipedia.org/wiki/AMD-V#I/O_MMU_virtualization_(AMD-Vi_and_Intel_VT-d) AMD-Vi] is not supported, since kernel modifications violating Apple Inc.'s End User License Agreement (EULA) are required to run macOS on platforms other than Intel. It is also recommended to disable the Integrated Graphics Processing Unit (IGPU) if [https://en.wikipedia.org/wiki/PCI_Express PCIe graphics] are in use, as well as disabling any SuperIO/Serial Port options if listed in BIOS. If virtualization problems related to unsupported architectures or features are encountered, please first consult appropriate community forums and wikis available on the Internet.
+}}<!-- close tab Hackintosh -->
+}}<!-- close tab controller -->
+
+= Miscellaneous macOS Advice =
+<div class="toccolours mw-collapsible mw-collapsed"  >
+For miscellaneous advice, please press "Learn More" on the right.
+<div class="mw-collapsible-content">
+{{Community_Support|scope=chapter}}
+
+If the same VMs will be used on multiple systems like Boot Camp or even two different physical machines, then they can be moved to a shared or external hard drive:
+
+# Copy the VirtualBox VMs folder mentioned earlier to the new location.
+# Select the VMs you moved and then click remove.
+# When prompted, select "Delete files".
+# Re-add the VMs from their new location by selecting <code>Machine=>Add</code>, then navigating to the new folder.
+
+[https://en.wikipedia.org/wiki/ExFAT exFAT] is the easiest format for cross platform file sharing with Windows and Linux. exFAT is an option built into Apple's "Disk Utility.app" when initializing or reformatting a storage device. Select exFAT from the drop down menu that appears when you click "Erase". The default option is HFS+ on 10.13 "High Sierra" and earlier and APFS on 10.14 "Mojave".
+
+Note that with its [https://en.wikipedia.org/wiki/POSIX POSIX] kernel and BSD roots, many issues that arise on macOS hosts can be addressed using strategies similar to other Unix-like OSes.
+</div>
+</div>
+
+= See Also =
+* [[Documentation|Documentation]]
+* [[Stay Tuned|Stay Tuned]]
+
+<references />
+{{Footer}}
+
+[[Category:Documentation]]
