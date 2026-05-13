@@ -1,0 +1,53 @@
+{{Header}}
+{{Title|title=
+IP Hiding is an Outdated Threat Model
+}}
+{{#seo:
+|description=The concept of merely hiding IP addresses is outdated, belonging to the threat model of the 1990s. Modern privacy threats extend beyond IP address exposure.
+|image=IP_Hiding_outdated123.jpg
+}}
+{{audit_mininav}}
+[[File:IP_Hiding_outdated123.jpg|thumb]]
+{{intro|
+The concept of merely hiding IP addresses is considered outdated, belonging to the threat model of the 1990s. Modern privacy threats extend beyond IP address exposure.
+}}
+= Beyond IP Hiding =
+{{quotation
+|quote=Hiding your identity is harder than just hiding your IP.
+}}
+
+Hiding IP addresses is an important necessity but concealing one's identity requires more than just obscuring IP addresses. Simple IP address anonymization is insufficient because contemporary adversaries employ a variety of [[Data Collection Techniques]] such as browser fingerprinting that circumvent the need for IP addresses. This is evidenced by various [[Browser Tests]], such as the [https://fingerprint.com/demo/ Fingerprint.com Demo], which illustrates that, as mentioned in [[The_World_Wide_Web_And_Your_Privacy#Fingerprint.com|"12% of the top 500 websites use Fingerprint.com's services"]].
+
+{{quotation
+|quote=
+Though most users feel anonymous when browsing the Web, their browsers constantly turn over unique information such as a list of installed plugins, screen resolution, and the user agent string. Taken together, such bits of information can uniquely identify many users even without cookies.
+
+But this is now old tech; behavioral analytics firms have already moved on. Cookies, browser signatures, and IP addresses can all help identify particular machines and particular browsers—but how can you tell which human actually sits behind the terminal at a given moment? One way is by measuring the "cadence" of their typing.
+
+[...]
+
+So Scout used some Javascript timing features to watch how users type when they enter their login credentials for various services. Shanahan says that his algorithms need a minimum of 5 attempts at entering a phrase of at least 12 characters in order to generate a typing "cadence." By watching repeated logins, Scout could soon categorize these cadences into a digital pattern, then assign each pattern a serial number.
+
+"As you're typing, you have a cadence and rhythm," Shanahan says, a rhythm that includes how long one holds down various keys and how long it takes to move between keys. Applying the technology to its data set of 20 million logins, Scout pulled out 175,000 unique patterns—thereby identifying 175,000 distinct users, even when they used the same login credentials on the same machine.
+|context=[https://arstechnica.com/tech-policy/2010/02/firm-uses-typing-cadence-to-finger-unauthorized-users/ Ars Technica: Firm uses typing cadence to finger unauthorized users] (2010)
+}}
+
+This is called [[Keystroke_and_Mouse_Deanonymization|Keystroke and Mouse Deanonymization]], which [[About|{{project_name_short}}]] mitigates using [[Keystroke_and_Mouse_Deanonymization#Kloak|Kloak]].
+
+The fact that IP hiding is insufficient is also being acknowledged by VPN providers such as Mullvad.
+
+{{quotation
+|quote=When you visit a website, you can be identified and tracked through your IP address, third-party cookies, all kinds of tracking scripts, and through so called browser fingerprints. That’s why masking your IP address is not enough to stop the data collection. 
+|context=[https://web.archive.org/web/20240210111540/https://mullvad.net/en/browser Mullvad Browser]
+}}
+
+To ensure user anonymity, {{project_name_short}} provides [[Reliable IP Hiding]] as well as [[About#Full_Spectrum_Anti-Tracking_Protection|Full Spectrum Anti-Tracking Protection]] and is [https://www.whonix.org/#vpn significantly safer than VPNs], as detailed in the thorough [[Whonix_versus_VPNs|Whonix versus VPNs]] comparison.
+
+Resources:
+
+* [http://jcarlosnorte.com/security/2016/03/06/advanced-tor-browser-fingerprinting.html Advanced Tor Browser Fingerprinting] (2016)
+* [https://bigthink.com/technology-innovation/tor-users-can-be-tracked-by-their-mouse-movements/ Tor Users Can Be Tracked by Their Mouse Movements]
+
+<references />
+{{Footer}}
+[[Category:Documentation]]
