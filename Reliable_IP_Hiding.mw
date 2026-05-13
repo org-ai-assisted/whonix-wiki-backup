@@ -1,0 +1,65 @@
+{{Header}}
+{{Title|title=
+Reliable IP Hiding - with {{project_name_long}} - The All Tor Operating System
+}}
+{{#seo:
+|description={{project_name_short}} is The Everything Tor OS
+|image={{project_name_short}}-concept-detailed.jpg
+}}
+{{audit_mininav}}
+[[File:{{project_name_short}}-concept-detailed.jpg|thumb|{{project_name_short}} Architecture]]
+{{intro|
+{{project_name_short}} is The Everything Tor OS
+}}
+= Reliable IP Hiding =
+All internet traffic is routed through the Tor anonymity network. No exceptions. Whonix is the "All Tor Operating System".
+
+Whonix handles all your activity in a virtual machine and forces all Internet traffic through the [[Why_does_Whonix_use_Tor|Tor network]] to provide the strongest protection of your [[Data_Collection_Techniques#IP_Address|IP address]].
+
+{{TorifiedGateway}}
+
+No additional user configuration is required. (Using helper utilities such as <code>torsocks</code>, <code>torify</code>, or configurations such as Tor <code>SocksPort</code>s is not necessary for IP concealment but can be useful for [[Stream Isolation]].)
+
+This is made possible by [[About#Whonix_Architecture|Whonix's Architecture]].
+
+For technical details on how this is accomplished, readers can refer to the [[Dev/Technical_Introduction|{{project_name_short}} technical introduction]].
+
+* See [[Whonix against Real Attacks]] for a list of many past anonymity attacks where {{project_name_short}} kept its users safe.
+* See [[Dev/Technical_Introduction#multiple_security_layers|{{project_name_short}} uses multiple security layers]] for reasons why leaks are highly unlikely.
+* See this page [[Dev/Leak Tests|Leak Tests]] for testing for IP/DNS leaks generally.
+* If you think you might have found a leak or something unusual, see [[Leaks]].
+* See [[Security Reviews and Feedback]] for a list of notable reviews and feedback about the security of {{project_name_short}}.
+* See {{kicksecure_wiki
+|wikipage=System Audit
+|text=System Audit
+}} for how users (cannot) verify the system is configured as intended.
+* This might also relate to the question "How secure is {{project_name_short}}?" &rarr; [[Dev/Technical_Introduction|Technical Introduction]]
+
+None of the [[Dev/Leak_Tests#Leak_Testing_Websites|Leak Testing Websites]] / [[Browser Tests]] running inside {{project_name_short}} are able to determine the real external clearnet IP address, regardless of whether plugins, flash, and/or java are activated.
+
+Given that there have been no known instances of IP leaks attributed to Whonix bugs throughout its {{project_age_years}} years of [[history]], it can be reasonably inferred that Whonix offers a reliable feature for IP address concealment.
+
+= Fail-Closed Mechanism =
+Whonix's architecture enables the "torification" of applications that lack built-in proxy support. This means users can install and use custom applications or modify their desktop environment without risking IP address leaks.
+
+All application traffic is either routed through the Tor network or entirely blocked. This includes a wide variety of software such as [[Other Browsers|web browsers]], [[Browser Plugins]], [[E-Mail]] clients, [[chat]] applications, [[VoIP]], [[SSH]], [[Remote Administration]] tools, [[Tunnels/Introduction|VPN clients or proxy software]], cryptocurrency wallets or relays, [[Hosting_Location_Hidden_Services|servers]], and many other types of applications.
+
+This fail-closed design is universally applicable and even extends to [[Other Operating Systems]] that are connected through Whonix-Gateway.
+
+See also [[Features#Tor_Network_.2F_Torification_.2F_The_Everything_Tor_OS|Features, Advantages, Use Cases - Whonix chapter Tor Network / Torification / The Everything Tor OS]].
+
+= Beyond IP Hiding =
+{{quotation
+|quote=Hiding your identity is harder than just hiding your IP.
+}}
+
+Concealing one's identity involves far more complexity than simply hiding an IP address. The idea of relying solely on IP address anonymization dates back to the 1990s and is no longer sufficient. Modern adversaries use a wide range of advanced [[Data Collection Techniques]] that can bypass IP-based protections entirely. These techniques are demonstrated in various [[Browser Tests]], such as the [https://fingerprint.com/demo/ Fingerprint.com Demo]. Notably, as referenced in [[The_World_Wide_Web_And_Your_Privacy#Fingerprint.com|"12% of the top 500 websites employ Fingerprint.com's services"]].
+
+For further discussion, see [[IP_hiding_is_outdated|IP Hiding is an Outdated Threat Model]].
+
+To protect user anonymity more comprehensively, {{project_name_short}} provides [[About#Full_Spectrum_Anti-Tracking_Protection|Full Spectrum Anti-Tracking Protection]] and is [https://www.whonix.org/#vpn much safer than VPNs] (see the full [[Whonix_versus_VPNs|Whonix versus VPNs]] comparison).
+
+= Footnotes =
+<references />
+{{Footer}}
+[[Category:Documentation]]
