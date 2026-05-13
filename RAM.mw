@@ -1,0 +1,143 @@
+{{Header}} {{Hide_all_banners}}
+{{Title|title=
+{{project_name_short}} RAM System Requirements and Advice for Systems with Low RAM
+}}
+{{#seo:
+|description=How much RAM does {{project_name_short}} need? 8 GB of RAM would be ideal for best usability and performance, but {{project_name_short}} can also be used with a lot less RAM. 4 GB of RAM or even less is enough.
+|image=Lowram13241324.png
+}}
+<div class="mininav">
+* [[System Requirements|System Requirements]]
+* [[RAM|RAM System Requirements and Advice for Systems with Low RAM]]
+</div>
+[[File:Lowram13241324.png|thumb|200px|Low RAM]]
+{{intro|
+How much RAM does {{project_name_short}} need? 8 GB of RAM would be ideal for best usability and performance when running {{project_name_short}}. However, {{project_name_short}} can also be used with a lot less RAM. 4 GB of RAM is enough.
+
+This wiki page provides advice on how to reduce RAM usage when using low-end systems with {{project_name_long}}, such as those with 4 GB of RAM or less. It includes instructions for reducing RAM and VRAM assignments, running {{project_name_gateway_long}} in CLI mode, and using graphical administration mode.
+}}
+
+= Introduction =
+{{project_name_short}} {{cli}} is normally recommended for advanced users only. However, it is possible to reduce the RAM and VRAM (video RAM) assignment of {{project_name_gateway_short}} without requiring any other configuration changes such as package uninstallation or configuration file modifications.
+
+It is important to note that more RAM is required for upgrades.
+
+{{project_name_gateway_short}} can function with as little as 512 MB of RAM, but resource-intensive operations like upgrades can cause the virtual machine to freeze. <ref name=kernel-upgrade>
+For instance, kernel package upgrades that rebuild the initrd.
+</ref>
+
+Assigning less than 768 MB of RAM to a {{project_name_short}} VM will result in [[RAM_Adjusted_Desktop_Starter|RAM Adjusted Desktop Starter]] launching the {{cli}} only, without LXQt {{gui}}.
+
+Users with 4 GB of RAM or less can temporarily assign 512 MB of RAM to {{project_name_gateway_short}}. This is sufficient for the normal operation of {{project_name_gateway_short}} serving {{project_name_workstation_long}}. This process is described in detail below.
+
+= {{project_name_short}} RAM and VRAM Defaults =
+{{Tab
+|type=controller
+|addToClass=tcc-indent
+|content=
+{{Tab
+|active=true
+|title= == GUI ==
+|image=[[File:Clipart-gui.svg]]
+|content=
+[[File:Gui-preview.jpg|{{project_name_short}} LXQt in VirtualBox|thumb|240px]]
+* {{project_name_short}} LXQt:
+** {{project_name_gateway_short}} LXQt - 1280 MB RAM and 128 MB VRAM.
+** {{project_name_workstation_short}} LXQt - 2048 MB RAM and 128 MB VRAM.
+}}
+{{Tab
+|title= == CLI ==
+|image=[[File:Utilities-terminal.png|50px]]
+|content=
+[[File:Cli-preview.jpg|{{project_name_short}} CLI in VirtualBox|thumb|240px]]
+
+* {{project_name_short}} CLI:
+** {{project_name_gateway_short}} CLI - 512 MB RAM and 16 MB VRAM.
+** {{project_name_workstation_short}} CLI - 512 MB RAM and 16 MB VRAM.
+}}
+}}
+
+= Advice for Systems with Low RAM =
+== swap-file-creator ==
+{{kicksecure_wiki
+|wikipage=swap-file-creator
+|text=swap-file-creator
+}} was enabled by default up to version 17.
+
+In version 18 (and above), to enable an unencrypted swap file using swap-file-creator, follow the instructions below.
+
+{{CodeSelect|code=
+sudo mkdir --parents /usr/local/etc/default/swap-file-creator.d/
+}}
+
+{{CodeSelect|code=
+append-once /usr/local/etc/default/swap-file-creator.d/50_user.conf DO_PRE_CHECK=no
+}}
+
+== {{project_name_gateway_short}} CLI RAM Saving Mode ==
+{{Box|text=
+{{project_name_gateway_short}} initial first boot setup:
+# Run {{project_name_gateway_short}} LXQt normally.
+# Do not start {{project_name_workstation_short}} if you are low on RAM.
+# Complete the initial {{project_name_gateway_short}} setup.
+# Perform the system upgrade.
+# Then, you can enable {{project_name_gateway_short}} CLI RAM Saving Mode to save RAM.
+}}
+
+{{Box|text=
+To run {{project_name_gateway_short}} after its initial first boot setup or after upgrades:
+
+# Shut down {{project_name_gateway_short}}.
+# Allocate less RAM to {{project_name_gateway_short}}: <code>VirtualBox</code> &rarr; <code>click a VM</code> &rarr; <code>Settings</code> &rarr; <code>System</code> &rarr; <code><i>Adjust</i></code> <code>Memory slider to 512</code> &rarr; <code><i>Click:</i> OK</code>.
+# Assign less VRAM to {{project_name_gateway_short}}: <code>VirtualBox</code> &rarr; <code>click a VM</code> &rarr; <code>Settings</code> &rarr; <code>Display</code> &rarr; <code><i>Adjust</i></code> <code>slider for Video Memory to 16</code> &rarr; <code>OK</code>.
+# Restart {{project_name_gateway_short}}.
+# Start {{project_name_workstation_short}}.
+# {{project_name_gateway_short}} is now serving {{project_name_workstation_short}} but operating with less RAM.
+# To reconfigure or upgrade {{project_name_gateway_short}} later, use {{project_name_gateway_short}} Graphical Administration Mode as documented below.
+}}
+
+== {{project_name_gateway_short}} Graphical Administration Mode ==
+
+{{box|text=
+Follow these steps in order to upgrade {{project_name_short}} or change Tor settings:
+
+# Shut down all VMs.
+# Allocate default RAM to {{project_name_gateway_short}}. ([[Post_Install_Advice#Increase_Virtual_Machine_RAM|Increase Virtual Machine RAM]])
+# Allocate default VRAM to {{project_name_gateway_short}}.
+# Start {{project_name_gateway_short}}.
+# The user will now have access to a graphical interface of {{project_name_gateway_short}} with LXQt.
+# Perform administrative tasks such as upgrades and/or changing Tor settings.
+# Shut down {{project_name_gateway_short}}.
+# Apply RAM Saving Mode as described above.
+
+Done. The user has successfully upgraded or changed settings using a graphical interface of {{project_name_gateway_short}} with LXQt.
+}}
+
+== {{project_name_workstation_short}} CLI RAM Saving Mode ==
+
+{{project_name_workstation_short}} CLI can be run with as little as 512 MB of RAM when the LXQt desktop environment is not used. However, resource-intensive operations like upgrades can cause the virtual machine to freeze.<ref name=kernel-upgrade /> It is recommended to allocate more RAM during upgrades.
+
+== {{project_name_workstation_short}} LXQt RAM Saving Mode ==
+
+{{project_name_workstation_short}} LXQt can be run with as little as 768 MB of RAM. However, resource-intensive operations like upgrades can cause the virtual machine to freeze.<ref name=kernel-upgrade /> During upgrades, it is recommended to allocate more RAM, around 1280 MB, which should be more than sufficient. It is important to note that in this configuration, the VM might freeze due to low RAM, and certain applications, especially browsers like [[Tor Browser]], may experience reduced performance, particularly when numerous browser tabs are open simultaneously.
+
+== Alternatives ==
+
+* <u>RAM Saving Tips:</u> '''[[Troubleshooting#Low_RAM_Issues|Troubleshooting, Low RAM Issues]]'''
+* <u>{{project_name_gateway_short}} LXQt RAM Saving Mode</u>: {{project_name_gateway_short}} LXQt can run with as little as 768 MB of RAM. However, resource-intensive operations like upgrades can cause the virtual machine to freeze.<ref name=kernel-upgrade /> For upgrading, you can increase the RAM/VRAM as described in the instructions for {{project_name_gateway_short}} Graphical Administration Mode.
+* <u>{{project_name_short}} with CLI</u>: Advanced users who are comfortable using {{project_name_short}} with the command-line interface (CLI) can choose to permanently set this option.
+* <u>Experiments</u>: Users can experiment with RAM assignments lower than 512 MB. We encourage you to share your results.
+
+= See Also =
+* [[Troubleshooting#Low_RAM_Issues|Troubleshooting, Low RAM Issues]]
+* [[RAM_Adjusted_Desktop_Starter|RAM Adjusted Desktop Starter]]
+* [[System Requirements]]
+* [[Desktop|Platform-specific Desktop Tips]]
+* [[Tuning]]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
