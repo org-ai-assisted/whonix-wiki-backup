@@ -1,0 +1,334 @@
+{{Header}}
+{{Title|title=
+Bisq: The P2P Exchange Network
+}}
+{{#seo:
+|description=How to use Bisq - The P2P Exchange Network - in {{project_name_long}}
+|image=Bisq123123.jpg
+}}
+[[File:Bisqlogo.png|Bisq Logo|thumb]]
+{{intro|
+How to use Bisq - The P2P Exchange Network - in {{project_name_short}}
+}}
+__FORCETOC__
+= Introduction =
+
+Bisq is an open-source, peer-to-peer (P2P) application that went into production on 19 April, 2016. Bisq is designed to allow for a safe, private and decentralized method of exchanging national currencies for cryptocurrencies. Primary features include: <ref>https://github.com/bisq-network/bisq</ref> <ref>https://bisq.network/</ref> <ref>https://docs.bisq.network/exchange/whitepaper.html#introduction</ref>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+* no registration is required - identity theft is impossible
+* fully decentralized and censorship resistant design:
+** multi-signature escrow transactions without a third party
+** security deposits encourage safe, successful trades <ref>A current limit of at most 1 Bitcoin per transaction applies.</ref>
+** resolution of disputes with a decentralized arbitration system
+* protection of user privacy via a custom P2P network of users running Bisq over Tor
+* no data is stored regarding who trades with whom -- end-to-end data encryption ensures trade details are only readable by counterparties
+* no approval wait times
+* resistant against spam or flooding
+* a cross-platform desktop application is available for Linux, macOS and Windows
+* the project is funded directly by its users through trading fees and donations
+</div>
+Bisq holds a lot of promise, since it eliminates the risk associated with theft of funds from centralized exchanges, removes the threat of interference with trades from third parties, and separates users' personal information from associated transactions. To learn more, refer to:
+* the [https://docs.bisq.network/exchange/whitepaper.html original Bisq whitepaper]; and/or
+* [https://docs.bisq.network/dao/phase-zero.html Phase Zero: A plan for bootstrapping the Bisq DAO] for a comprehensive overview of the application.
+
+= Support Status =
+{{Community_Support|scope=page}}
+
+<ref>
+* At time of writing, [https://bisq.network/blog/bisq-2-now-in-beta/ Bisq 2 was still in beta].
+* [https://github.com/bisq-network/bisq2/issues/1798 Fix startup issues of Tor] 
+* [https://github.com/bisq-network/bisq2/issues/1894 Cannot run on Whonix 17]
+* [https://github.com/bisq-network/bisq2/issues/1894 Add Whonix 17 Support]
+* [https://github.com/Whonix/onion-grater/pull/11 Fix Bisq 2 onion-grater profile]
+* [https://github.com/bisq-network/bisq2/releases/tag/v2.0.4 Version 2.0.4 notes introduce support for Whonix.]
+
+No additional information available. All communications happen in public.
+</ref>
+
+= Installation =
+{{onion-grater-warning}}
+
+== {{project_name_gateway_long}} Installation Steps ==
+=== onion-grater Profile ===
+'''On {{project_name_gateway_short}}.'''
+
+'''1.''' {{kicksecure_wiki
+|wikipage=Operating_System_Software_and_Updates
+|text=Update
+}} required. <ref>
+To acquire the updated onion-grater profile: [https://github.com/Whonix/onion-grater/pull/11 Fix Bisq 2 onion-grater profile]
+</ref>
+
+'''2.''' {{Control_Port_Filter_Python_Profile_Add
+|filename_new=40_bisq
+}}
+
+== {{project_name_workstation_long}} Installation Steps ==
+
+=== System Requirements ===
+
+Bisq is an application that is very resource intensive. Your system needs to accommodate the program requirements by changing the VM configuration.
+
+Platform specific.
+
+* [[VirtualBox]] / [[KVM]]:
+** {{kicksecure_wiki
+|wikipage=Tuning#Increase_Virtual_Machine_RAM
+|text=Increase Virtual Machine RAM
+}} to 6GB.
+* [[Qubes-Whonix]]: Assuming that your {{project_name_workstation_long}} is named <code>anon-bisq</code>. <u>In dom0</u>, run:
+** {{CodeSelect|code=
+qvm-prefs anon-bisq memory 600
+}}
+** Memory: <code>6GB</code>: {{CodeSelect|code=
+qvm-prefs anon-bisq maxmem 6000
+}}
+** Virtual CPU: <code>4</code>. {{CodeSelect|code=
+qvm-prefs anon-bisq vcpus 4
+}}
+** Storage: <code>5GB</code>. {{CodeSelect|code=
+qvm-volume extend anon-bisq:private 5Gi
+}}
+
+=== Firewall Settings ===
+Modify the {{project_name_workstation_short}} (<code>{{project_name_workstation_vm}}</code>) user firewall settings and reload them.
+
+{{Firewall_Settings_Workstation}}
+
+Add. TODO: <code>EXTERNAL_OPEN_ALL=true</code> is non-ideal.
+
+{{CodeSelect|code=
+EXTERNAL_OPEN_ALL=true
+}}
+
+Save.
+
+{{Reload_Firewall_ws}}
+
+=== Get the Signing Key ===
+'''On {{project_name_workstation_short}}.'''
+
+<u>Note:</u> The user should take special notice that the Bisq signing key changed on 2023 09 02 without any explanation easily found by the author of this wiki page. <ref>
+
+bisq key change 2023 09 02 archive:
+
+* https://forums.whonix.org/t/bisq-the-p2p-exchange-network/4953/78
+* https://web.archive.org/web/20230902184346/https://bisq.network/downloads/
+* https://web.archive.org/web/20230902184346/https://bisq.network/downloads/v2.0.1/E222AA02.asc
+* [https://web.archive.org/web/20230906114551/https://objects.githubusercontent.com/github-production-release-asset-2e65be/17662022/2819a24a-6c31-4650-b166-189f646683bc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230906%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230906T114551Z&X-Amz-Expires=300&X-Amz-Signature=b4233cda19f2f22738bc0ceb586dd8afe6e55592c98bc9d7b4247d09b5b6b8c9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=17662022&response-content-disposition=attachment%3B%20filename%3DE222AA02.asc&response-content-type=application%2Foctet-stream E222AA02.asc github redirect link]
+</ref>
+
+Version 2.1.2 does not use the signing key of Alejandro García (key ID: E222AA02) that is listed with these downloads on github. However the explanation and signing key are linked from the installation and verification instructions to the wiki at https://bisq.wiki/Bisq_2#Installation  
+
+{{gpg key
+|url=scurl-download https://github.com/bisq-network/bisq2/releases/download/v2.1.7/E222AA02.asc
+|source_filename=E222AA02.asc
+|fingerprint=B493319106CC3D1F252E19CBF806F422E222AA02
+|gpg_fingerprint_output=
+      Key fingerprint = B493 3191 06CC 3D1F 252E  19CB F806 F422 E222 AA02
+}}
+
+=== Bisq1 versus Bisq2 ===
+* Bisq1 is considered a different application than Bisq2.
+* That means, Bisq2 is not a replacement for Bisq1.
+* Bisq1 is not considered outdated.
+
+Forum discussion: https://forum.qubes-os.org/t/is-there-a-tutorial-on-how-to-use-bisq1-on-whonix/34116
+
+=== Bisq Version Number Choice ===
+'''1.''' Check the latest version number and read the release notes:
+
+* '''Bisq<u>1</u>:''' https://github.com/bisq-network/bisq/releases
+* '''Bisq<u>2</u>:''' https://github.com/bisq-network/bisq2/releases
+
+
+'''2.''' The instructions on this wiki page have might not be up-to-date.
+
+=== Download ===
+
+'''On {{project_name_workstation_short}}.'''
+
+Download Bisq.
+
+* '''Bisq<u>1</u>:'''
+** Download Bisq. {{CodeSelect|code=
+scurl-download https://github.com/bisq-network/bisq/releases/download/v1.9.21/Bisq-64bit-1.9.21.deb
+}}
+** Download OpenPGP signature. {{CodeSelect|code=
+scurl-download https://github.com/bisq-network/bisq/releases/download/v1.9.21/Bisq-64bit-1.9.21.deb.asc
+}}
+* '''Bisq<u>2</u>:'''
+** Download Bisq. {{CodeSelect|code=
+scurl-download https://github.com/bisq-network/bisq2/releases/download/v2.1.7/Bisq-2.1.7.deb
+}}
+** Download OpenPGP signature. {{CodeSelect|code=
+scurl-download https://github.com/bisq-network/bisq2/releases/download/v2.1.7/Bisq-2.1.7.deb.asc
+}}
+
+=== Verification ===
+'''On {{project_name_workstation_short}}.'''
+
+Verify OpenPGP signature.
+
+{{CodeSelect|code=
+gpg --verify Bisq*.asc
+}}
+
+{{GnuPG-Success}}
+
+{{GnuPG-Warning}}
+
+=== Tor over Tor Prevention ===
+'''On {{project_name_workstation_short}}.'''
+
+Follow these steps to avoid a Tor over Tor scenario.
+
+* '''Bisq<u>1</u>:'''
+** Create folder the Bisq tor folder. {{CodeSelect|code=
+mkdir -p /home/user/.local/share/Bisq/btc_mainnet/tor/
+}}
+** Create a dummy tor binary. {{CodeSelect|code=
+sudo touch /home/user/.local/share/Bisq/btc_mainnet/tor/tor
+}}
+** Add the executable bit to the dummy tor binary. {{CodeSelect|code=
+sudo chmod +x /home/user/.local/share/Bisq/btc_mainnet/tor/tor
+}}
+** Why is this needed? See footnote for reasons why. <ref>
+* Users: Ignore this footnote.
+* Developers: For an explanation, which might be interesting for developers only, see below.
+
+This is optional. Defense-in-depth only.
+
+Bisq installs its own version of Tor.
+
+From Bisq 2 log.
+
+<pre>
+16:06:19.474 INFO  [NetworkService.network-IO-pool-0] b.t.i.TorInstaller: Tor files installed to /home/user/.local/share/Bisq2/tor 
+</pre>
+
+Why sudo? To avoid <code>/home/user/.local/share/Bisq2/tor/tor</code> getting overwritten by Bisq.
+</ref>
+* '''Bisq<u>2</u>:''' No special notice.
+
+=== xdg-desktop-menu Bug Workaround ===
+'''On {{project_name_workstation_short}}.'''
+
+* '''Bisq<u>1</u>:'''
+** Use the following workaround to avoid a known bug in xdg which fails to find a writable system menu directory. <ref>
+https://github.com/bisq-network/bisq/issues/848
+</ref>
+*** {{CodeSelect|inline=true|code=
+sudo mkdir -p /usr/share/desktop-directories
+}}
+* '''Bisq<u>2</u>:''' No special notice.
+
+=== Install ===
+==== Platform Specific Steps ====
+* [[Non-Qubes-Whonix]]: No special steps required. Go to next chapter.
+* [[Qubes-Whonix]]: See below.
+
+On {{project_name_workstation_short}} <code>anon-bisq</code> App Qube.
+
+You need to extend the bind-dirs configuration inside the VM.
+
+* '''Bisq<u>1</u>:'''
+** {{CodeSelect|code=
+sudo mkdir -p /rw/bind-dirs/opt/bisq
+}}
+* '''Bisq<u>2</u>:'''
+** {{CodeSelect|code=
+sudo mkdir -p /rw/bind-dirs/opt/bisq2
+}}
+** {{CodeSelect|code=
+sudo mkdir -p /rw/config/qubes-bind-dirs.d
+}}
+
+Bisq 1 and Bisq 2: Then create the configuration file:
+
+{{CodeSelect|code=
+sudo nano /rw/config/qubes-bind-dirs.d/50_user.conf
+}}
+
+Paste.
+
+{{CodeSelect|code=
+## Bisq 1:
+binds+=( '/opt/bisq' )
+## Bisq 2:
+binds+=( '/opt/bisq2' )
+## Bisq 1:
+binds+=( '/usr/share/desktop-directories' )
+}}
+
+Save and exit.
+
+Restart the App Qube to apply the bind-dirs settings.
+
+=== Installation Command ===
+'''On {{project_name_workstation_short}}.'''
+
+Install Bisq.
+
+{{CodeSelect|code=
+sudo dpkg -i Bisq*.deb
+}}
+
+= Usage =
+'''On {{project_name_workstation_short}}.'''
+
+Start Bisq.
+
+* '''Bisq<u>1</u>:''' {{CodeSelect|code=
+/opt/bisq/bin/Bisq --torControlPort=9051 --torControlPassword=notrequired --socks5ProxyBtcAddress=127.0.0.1:9050 --useTorForBtc=true
+}}
+* '''Bisq<u>2</u>:''' {{CodeSelect|code=
+/opt/bisq2/bin/Bisq2
+}}
+
+'''Figure:''' ''Bisq Launch in {{project_name_short}}''
+
+[[File:Bisq.png|border]]
+
+'''Figure:''' ''Bisq Client'' <ref>https://docs.bisq.network/getting-started.html</ref>
+
+[[File:Bisqclient.png|border]]
+
+After version 1.9.8, the use of DAO became mandatory for everyone and the line <code>--daoActivated=false</code> now gives an error.
+
+If the fonts are too small, you could alternatively use the following command. <ref>
+It is the same as above but prepended with <code>GDK_SCALE=2</code>.
+
+https://github.com/bisq-network/bisq/issues/1425
+</ref>
+
+* '''Bisq<u>1</u>:''' {{CodeSelect|code=
+GDK_SCALE=2 /opt/bisq/bin/Bisq --torControlPort=9051 --torControlPassword=notrequired --socks5ProxyBtcAddress=127.0.0.1:9050 --useTorForBtc=true --daoActivated=false
+}}
+* '''Bisq<u>2</u>:''' {{CodeSelect|code=
+GDK_SCALE=2 /opt/bisq2/bin/Bisq2
+}}
+
+Refer to the [https://docs.bisq.network/ official Bisq documentation] to learn about trading essentials, including:
+
+* an introduction to Bisq
+* quick start guide to trading in minutes
+* wallet information and security
+* backup and recovery
+* how to stay private
+* trading rules and dispute resolution
+* fees and security deposits
+* payments methods
+
+= Forum Discussion =
+[https://forums.whonix.org/t/bisq-the-p2p-exchange-network/4953 Bisq - The P2P Exchange Network]
+
+= Donations =
+After installing Bisq, please consider making a [[Donate|donation]] to {{project_name_short}} to keep it running for years to come.
+
+{{Pay_Bitcoin_Specific}}
+
+= Footnotes =
+<references />
+{{Footer}}
+[[Category:Documentation]]
