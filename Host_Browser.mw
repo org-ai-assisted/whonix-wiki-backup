@@ -1,0 +1,22 @@
+{{Header}}
+{{Title|title=
+Host Browser
+}}
+{{#seo:
+|description=Recommendations for Host Browsers
+}}
+{{intro|
+Recommendations for Host Browsers
+}}
+
+= Introduction =
+<u>Note:</u> Web browsers or any applications used outside of Whonix are <u>not</u> anonymized through routing their traffic through the [[Tor]] network.
+
+Which browsers are recommended for use on the host operating system for clearnet (without torification)? Refer to upstream documentation.
+
+= Upstream =
+{{upstream_wiki}}
+
+<references />
+{{Footer}}
+[[Category:Documentation]]
