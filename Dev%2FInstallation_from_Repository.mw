@@ -1,0 +1,126 @@
+{{Header}}
+{{title|title=
+{{project_name_long}} Installation from {{project_name_short}} APT Repository
+}}
+{{#seo:
+|description=Also known as proverbial 'sudo apt install whonix' or 'distro-morphing'.
+}}
+<div class="mininav">
+* [[Dev/Installation_from_Repository|{{project_name_short}} Installation from {{project_name_short}} APT Repository]]
+* [[Dev/Porting|Porting {{project_name_short}} to other Architectures]]
+</div>
+{{intro|
+An installation of Debian can be transformed into {{project_name_short}}. Also known as proverbial "{{Code2|sudo apt install whonix}}". This is also called <code>{{Kicksecure_wiki
+|wikipage=Distribution_Morphing
+|text=distro-morphing
+}}</code>
+.
+
+Is this technically feasible? Yes. Here are some examples.
+
+* '''[https://forums.whonix.org/t/sudo-apt-get-install-whonix-part-i/2346/3 This is being used in the wild.]'''
+* This is how [[Qubes|{{q_project_name_long}}]] is built. <ref>
+[[Dev/Source_Code_Intro#Chroot_Scripts|chroot scripts]] are negligible since {{project_name_short}} 13.
+
+old tickets:
+
+* https://forums.whonix.org/t/installation-from-repository-proverbial-sudo-apt-get-install-whonix/18942
+* https://forums.whonix.org/t/qubes-whonix-build-process-install-whonix-from-whonix-binary-apt-repository/18906
+</ref>
+* {{Kicksecure_wiki
+|wikipage=chroot
+|text=Installing {{Kicksecure}} in a chroot
+}}
+* {{Kicksecure_wiki
+|wikipage=Debian
+|text={{Kicksecure}} installation for Debian
+}}
+}}
+
+= Support Status =
+This is [[unsupported]] for acquiring [[{{non q project name short}}|{{non_q_project_name_long}}]], not tested by any [[Contributors|{{project_name_short}} contributors]] and might need some work. What's missing?
+
+Organisational:
+
+* instructions
+* a [[Contribute#Contributor|contributor]]
+* testing
+
+Technical:
+
+* While distro-morphing Debian into {{project_name_short}} should be a stable process because it is very similar to how official {{project_name_short}} downlodable images are built), what's missing is instructions how users get the required VM settings which are crucial to properly connect {{project_name_workstation_long}} to {{project_name_gateway_long}} among other VM settings (see source code). Instructions would be roughly:
+
+{{Testers-Only}}
+{{AdvancedUsersOnly}}
+
+'''1.''' Set up the VM settings for {{project_name_workstation_short}} and {{project_name_gateway_short}}
+
+Either by looking at the source code how the VM settings are configured or by downloading an official VM image.
+
+'''2.''' Set up a new virtual hard drive.
+
+'''3.''' Install a minimal Debian.
+
+'''4.''' Distro-morphing Debian into {{project_name_short}}.
+
+These instructions would be similar to the examples listed on the top of this page, perhaps specifically {{Kicksecure_wiki
+|wikipage=Debian
+|text={{Kicksecure}} installation for Debian
+}}.
+
+'''5.''' Done.
+
+The process of distro-morphing Debian into {{project_name_short}} has been completed.
+
+= Meta Packages =
+The following meta packages:
+
+* <code>whonix-gateway-nonqubes-cli</code>
+* <code>whonix-gateway-nonqubes-gui-lxqt</code>
+* <code>whonix-workstation-nonqubes-cli</code>
+* <code>whonix-workstation-nonqubes-gui-lxqt</code>
+
+can be installed on Debian as per instructions [[Packages for Debian Hosts|{{project_name_short}} Packages for Debian Hosts]].
+
+= From Source Code =
+Above instructions use packages from {{project_name_short}} binary repository. Transforming Debian to {{project_name_short}} is also possible from a local APT repository, i.e. without touching {{project_name_short}} binary repository. If you want to install from source code, info and scripts for automation (package building, creating a local repository, installation) are available <ref>
+[[Dev/Build_Documentation/Upgrading_Derivative_Deb_Packages_from_Source_Code]]
+</ref> <ref>
+https://github.com/{{project_name_short}}/derivative-maker/blob/master/build-steps.d/2100_create-debian-packages
+</ref> <ref>
+https://github.com/Kicksecure/developer-meta-files/blob/master/usr/bin/dm-upgrade-from-local-repository
+</ref> but could use better documentation.
+
+= Forum Discussion =
+https://forums.whonix.org/t/sudo-apt-get-install-whonix-part-i-distro-morphing/2346
+
+= Distro Morphing vs Builds =
+What is the difference between a build (image downloaded or created from source code) versus distro morphing installation method?
+
+* It is quite similar as it should be.
+
+Advantages of builds are that these are "cleaner":
+
+* Have tighter control over the packages getting installed. Using Debian installer is kinda like a "wonder box" what packages get installed. Difficult to predict what packages will be installed without skills to understand Debian installer. When using builds one can see what packages will be installed by studying mostly 1 file + dependency packages.
+* More likely to get the same tested build that developers and users received.
+* More likely to really get the distribution. Distro morphing might fail due to user error and not get noticed by novice users.
+* Redistributable.
+** No daemons where ever started inside the chroot. (Builds are created by mounting the image and <code>chroot</code>'ing into it while preventing daemons from starting.)
+*** Start of daemons inside the image creates several persistent private user data files which must not be re-used by third parties such as the public. In other words, the public should not be using these private user data files as this would be insecure. Such private user data files are for example entropy seeds or Tor state files such as Tor entry guards.
+*** Cleaning such files at the end of the creation of the image is not a reliable method either since that depends on what packages are installed by default which changes over time and what private data daemons create which also changes over time. There is no such list or research into that topic.
+*** By creating a clean image, it used to be created twice and then compared to check what kinda of private data leaked into it.
+** Fewer non-deterministic artifacts which would hinder accomplishment of the [https://reproducible-builds.org/ reproducible builds] goal.
+** Fewer superfluous packages. Build dependencies are only installed on the build machine. Not installed inside the build.
+
+= See Also =
+* [[Packages for Debian Hosts|{{project_name_short}} Packages for Debian Hosts]]
+* [[Debian_Packages|{{project_name_short}} Debian Packages]]
+* [[Dev/Build Documentation‏‎|Building/upgrading {{project_name_short}} debian packages from source code]]
+* [https://www.kicksecure.com/wiki/Debian Install {{Kicksecure}} inside Debian]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Development]]
