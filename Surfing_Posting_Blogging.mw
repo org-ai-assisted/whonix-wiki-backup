@@ -1,0 +1,372 @@
+{{Header}}
+{{#seo:
+|description=Surf, Blog and Post anonymously on the Internet. Essential knowledge about Anonymous File Sharing, Keystroke / Mouse Fingerprinting and Stylometry risks. Tips for avoiding detection.
+|image=Blog-1616979640.jpg
+}}
+{{web_related}}
+{{Contributor|
+|status=stable
+|about=About this {{Code2|{{PAGENAME}}}} Page
+|difficulty=easy
+|contributor=[https://forums.whonix.org/u/hulahoop HulaHoop]
+|support=[[Support]]
+}}
+[[File:Blog-1616979640.jpg|thumb]]
+{{intro|
+Surf, Blog and Post anonymously on the Internet. Essential knowledge about Anonymous File Sharing, Keystroke / Mouse Fingerprinting and Stylometry risks. Tips for avoiding detection.
+}}
+= Introduction =
+
+Tor Browser is installed in {{project_name_long}} by default to browse the Internet anonymously. Tor Browser is optimized for safe browsing via pre-configured security and anonymity settings that are quite restrictive. It is recommended to read the entire [[Tor_Browser|Tor Browser]] chapter for tips on basic usage before undertaking any high-risk activities.
+
+{{project_name_workstation_long}} contains all the necessary tools to post or run a blog anonymously. It is recommended to review the following chapters / sections, as well as follow all the recommendations on this page:
+
+* [[Tips_on_Remaining_Anonymous|Tips on Remaining Anonymous]]
+* [[Data_Collection_Techniques|Data Collection Techniques]]
+* [[Tor_Browser#Unsafe_Tor_Browser_Habits|Unsafe Tor Browser Habits]]
+* [[Hardware_Threat_Minimization|Hardware Threat Minimization]]
+* [[Multiple Whonix-Workstation|Multiple {{project_name_workstation_short}}]]
+
+= Anonymous File Sharing =
+
+== Audio Recordings ==
+
+It is possible for adversaries to link audio recordings to the specific hardware (microphone) that is used. This has implications for shooting anonymous videos. It is also trivial to fingerprint the embedded audio acoustics associated with the particular speaker device; for example, consider ringtones and video playback in public spaces. <ref>[https://www.cs.cmu.edu/~anupamd/paper/CCS2014.pdf Do You Hear What I Hear? Fingerprinting Smart Devices Through Embedded Acoustic Components]</ref> For these reasons it is recommended to follow the operational security measures in the [[#Photographs|Photographs]] section when sharing audio files.
+
+This recommendation equally applies to any data that is recorded by each and every other sensor component, such as [https://en.wikipedia.org/wiki/Accelerometer accelerometers]. <ref>[https://arxiv.org/abs/1408.1416 Mobile Device Identification via Sensor Fingerprinting].</ref> The best way to defend against this threat is to deny all access to the hardware in question, while also avoid the sharing of unencrypted data recorded by sensors. Similarly, it is inadvisable to share audio with third parties who have limited technical ability or if they are potentially malicious.
+
+== Documents ==
+
+Digital watermarks are a subset of the science of [https://en.wikipedia.org/wiki/Steganography steganography] and can be applied to any type of digital media, including audio, pictures, video, texts or 3D models. <ref>For detailed information on this topic, see: [https://web.archive.org/web/20200725225105/https://www.cs.bham.ac.uk/~mdr/teaching/modules03/security/students/SS5/Steganography.pdf Steganography and Digital Watermarking].</ref> In basic terms, covert markers are embedded into the "noise" of data which are imperceptible to humans: <ref>https://www.daoudisamir.com/steganography-and-watermarking/</ref>
+
+<blockquote>Digital watermarking is defined as inserted bits into a digital image, audio or video file that identify the copyright information; the digital watermarking is intended to be totally invisible unlike the printed ones, bits are scattered in different areas of the digital file in such a way that they cannot be identified and reproduced, otherwise the whole goal of watermarking is compromised.</blockquote>
+
+A digital watermark is said to be robust if it remains intact even if modifications are made to the files. <ref>https://en.wikipedia.org/wiki/Digital_watermarking</ref> <ref>Notably the watermark does not change the size of the carrier signal.</ref> In addition to protecting copyright, another watermarking goal is to trace back information leaks to the specific source. A good countermeasure to this threat is to run documents through an [https://en.wikipedia.org/wiki/Optical_character_recognition optical character recognition (OCR)] reader and share the output instead.
+
+According to a talk by Sarah Harrison from WikiLeaks, <ref>Missing footnote.</ref> source tracing can also happen through much simpler techniques such as inspecting the access lists for the materials that have been leaked. For example, if only three people have access to a set of documents then the hunt is narrowed down considerably.
+
+Redacting identifying information in electronic documents by means of image transformation (blurring or pixelization) has proven inadequate for concealing the intended text; the words can be reconstructed by machine learning algorithms. Solid bars are sufficient but they must be large enough to fully cover the original text. Otherwise, clues are left about the length of underlying word(s) which makes it easier to infer the censored text based on the sentence remainder. <ref>[https://cseweb.ucsd.edu/~saul/papers/pets16-redact.pdf On the (In)effectiveness of Mosaicing and Blurring as Tools for Document Redaction]</ref> Only digital redaction bars are recommended as manual  Sharpie ones can be insufficient, leading to leaks when documents are scanned.<ref>https://www.schneier.com/blog/archives/2023/06/redacting-documents-with-a-black-sharpie-doesnt-work.html</ref>
+
+== Photographs ==
+
+Every camera's sensor has a unique noise signature because of subtle hardware differences. The sensor noise is detectable in the pixels of every image and video shot with the camera and could be fingerprinted. In the same way ballistics forensics can trace a bullet to the barrel it came from, the same can be accomplished with adversarial digital forensics for all images and videos. <ref>https://dde.binghamton.edu/download/camera_fingerprint/</ref> <ref>[https://github.com/guardianproject/ObscuraCam/issues/102 Fingerprintable Camera Anomalies]</ref> Note this effect is different from file [[Metadata]] that is easily sanitized with the [[Metadata#MAT2:_Metadata_Anonymisation_Toolkit_v2|Metadata Anonymization Toolkit v2 (MAT2)]]. <ref>While MAT2 does clean a wide range of files, the list of supported file formats is <u>not</u> exhaustive. Also, the author of MAT notes embedded media inside of complex formats might not be cleaned.</ref>
+
+=== Photo-Response NonUniformity ===
+
+A camera fingerprint arises for the following reason: <ref>https://www.slideshare.net/justestadipera/digital-image-forensics-camera-fingerprint-and-its-robustness</ref>
+
+<blockquote>Photo-Response NonUniformity (PRNU) is an intrinsic property of all digital imaging sensors due to slight variations among individual pixels in their ability to convert photons to electrons. Consequently every sensor casts a weak noise-like pattern onto every image it takes and this pattern plays the role of a sensor fingerprint.</blockquote>
+
+The reason for this phenomenon is all devices have manufacturing imperfections that lead to small variation in camera sensors, causing some pixels to project colors a little brighter or darker than normal. When extracted by filters, this leads to a unique pattern. <ref>https://www.futurity.org/smartphones-cameras-prnu-1634712-2/</ref> Simply put, the type of sensor being used, along with shot and pattern noise leads to a specific fingerprint.
+
+The threat to privacy is obvious: if the camera reference pattern can be determined and the noise of an image is calculated, a correlation between the two can be formed. For example, [https://www.buffalo.edu/content/dam/www/news/photos/2017/12/ndss18-paper99.pdf recent research] suggests that only ''one'' image is necessary to uniquely identify a smartphone based on the particular PRNU of the built-in camera's image sensor. <ref>The error rates is less than 0.5%</ref> Major data mining corporations are starting to use this technique to associate identities of camera owners with everything or everyone else they shoot. <ref>https://www.google.com/patents/US20150124107</ref> It follows that governments have had the same capabilities for some time now and can apply them to their vast troves of data.
+
+There are methods to [https://www.slideshare.net/justestadipera/digital-image-forensics-camera-fingerprint-and-its-robustness destroy, forge or remove PRNU], but these should only be used with caution. The reason is related research on the question of spoofing sensor fingerprints in image files has proven non-trivial and easily defeated. <ref>[https://ws2.binghamton.edu/fridrich/Research/EI7541-29.pdf Sensor Noise Camera Identification: Countering Counter-Forensics]</ref> <ref>Anonymizing the PRNU noise pattern of pictures remains a promising area of research.</ref>
+
+=== Other Vectors ===
+
+Other unique camera identifiers include specific JPEG compression implementation, distinct pattern of defective pixels (hot/dead), focal length and lens distortion, camera calibration and radial distortion correction, distribution of pixels in a RAW image and statistical tests such as Peak to Correlation Energy (PCE) ratio. <ref>https://link.springer.com/article/10.1007/s11042-019-08182-z</ref>
+
+=== Operational Security Advice ===
+
+This section assumes the user wants to preserve their anonymity, even when publicly sharing media on networks that are monitored by the most sophisticated adversaries on the Internet. Always conduct a realistic threat assessment before proceeding. These steps do not apply for communications that never leave anonymous encrypted channels between trusted and technically competent parties.
+
+{| class="wikitable"
+|+ ''Operational Security Advice''
+|-
+! '''Domain'''
+! '''Recommendation'''
+|-
+
+! Current Devices
+| It is almost a certainty that photos and videos have been shared from your current devices through non-anonymous channels. Do <u>not</u> use any of these devices to shoot media that will be shared anonymously.
+|-
+
+! Suitable Devices
+|
+Most will probably want to avoid phones altogether and use tablets instead, but for most situations phones are a reasonable choice:
+* Buy a new Android phone with cash if possible.
+* Avoid other choices because a proprietary operating system is a nonstarter.
+* <u>In all cases</u> flash a freedom and privacy-respecting ROM before using the camera. Be aware that the glorified corporate malware that comes pre-installed on the phone will leak a range of data to the cloud.
+|-
+
+! Safe Use
+|
+* The camera must <u>only</u> be reserved for anonymous media.
+* Do not commit serious mistakes like taking "selfies" or photographing places or people associated with you.
+* Sanitize metadata with [[Metadata#MAT2:_Metadata_Anonymisation_Toolkit_v2|MAT2]] before sharing photographs anonymously online.
+* Completely obscure faces with solid fills using an image manipulation program. Advancements in neural nets and deep machine learning make pixelated or gaussian blurred faces reconstructable. <ref>https://github.com/david-gpu/srez/blob/master/README.md</ref> <ref>[https://arxiv.org/pdf/1609.00408v2.pdf Defeating Image Obfuscation with Deep Learning]</ref>
+* Consider using the [https://guardianproject.info/apps/obscuracam/ ObscuraCam] app from The Guardian Project to protect the identities of protestors: <ref>https://lists.mayfirst.org/pipermail/guardian-dev/2016-September/004895.html</ref>
+** It pixelates images using a technique resistant to facial reconstruction.
+** ObscuraCam also offers a full pixel removal "black bar" option.
+|-
+
+|}
+
+= Keystroke and Mouse Fingerprinting =
+{{anchor|Keystroke Fingerprinting}}
+Keystroke dynamics is a way to recognize people based on how they type. Everyone types in a unique way, just like handwriting or a signature. This poses a risk to anonymity and privacy because even if someone hides their IP address (like using Tor), their typing style can still expose their identity.
+
+This is being elaborated on the [[Keystroke_and_Mouse_Deanonymization|Keystroke and Mouse Deanonymization]] wiki page.
+
+In addition, users must also disguise their linguistic style to combat [[Surfing_Posting_Blogging#Stylometry|stylometric analysis]] and be aware of [[Surfing_Posting_Blogging#Mouse_Fingerprinting|mouse tracking techniques]] available to adversaries.
+
+Keystroke and Mouse Anonymization Tool (Kloak)
+
+{{anchor|Keystroke Anonymization Tool (kloak)}}
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = Platform Specific Notice:
+
+* [[{{non_q_project_name_short}}|{{non_q_project_name_short}}]]: Kloak is installed in [[{{project_name_workstation_short}}|{{project_name_workstation_short}}]] by default.
+* [[{{q_project_name_short}}|{{q_project_name_short}}]]: At time of writing - unfortunately [[unsupported]]. <ref>
+* https://github.com/QubesOS/qubes-issues/issues/2558
+* https://github.com/QubesOS/qubes-issues/issues/1850
+* https://github.com/vmonaco/kloak/issues/74
+* Using <code>/dev/input/event0</code> in Qubes VMs [https://forums.whonix.org/t/current-state-of-kloak/5605/6 will not work since not a keyboard device].
+</ref> However, kloak-alike functionality will become available in Qubes R4.3 and above. For more information and updates, see [[Keystroke_and_Mouse_Deanonymization#Qubes_Event_Buffering|Qubes Event Buffering]].
+}}
+
+= Mouse Fingerprinting =
+
+Mouse fingerprinting happens when software records how a user moves their mouse or cursor and where they click. This can help website designers, but it also creates de-anonymization risks. See [[Keystroke_and_Mouse_Deanonymization#Mouse_Fingerprinting|Mouse Fingerprinting]].
+
+= Covert Impairments in Human Computer Interaction =
+
+Recent [https://vmonaco.com/papers/Bug%20or%20Feature%20-%20Covert%20Impairments%20to%20Human%20Computer%20Interaction.pdf research] on deceptive input modifications - where a
+site deliberately misrepresents mouse movements or key presses to elicit
+a corrective user reaction - reveals that this reaction is apparently fingerprintable. This tactic is used in CAPTCHAs and site logins. Possible mitigations involve detecting third party meddling with inputs (since it is an active process) and applying anti-fingerprinting protections on the fly.
+
+= Stylometry =
+
+{{project_name_short}} does not obfuscate an individual's writing style. Consequently, unless precautions are taken (see below), users are at risk from [https://en.wikipedia.org/wiki/Stylometry stylometric analysis based on their linguistic style]. Research suggests only a few thousand words (or less) may be enough to positively identify an author and there are a host of software tools available to conduct this analysis.
+
+This technique is used by advanced adversaries to attribute authorship to anonymous documents, online texts (web pages, blogs etc.), electronic messages (emails, tweets, posts etc.) and more. The field is dominated by A.I. techniques like neural networks and statistical pattern recognition, and is critical to privacy and security. Current anonymity and circumvention systems are focused on location-based privacy, but ignore leakage of identification via the content of data which has a high accuracy in authorship recognition (90%+ probability).
+<ref name=stylometry>https://web.archive.org/web/20160304062339/https://www.cs.drexel.edu/~sa499/papers/adversarial_stylometry.pdf</ref>
+
+There are multiple ways to conduct statistical analysis on "anonymous" texts, including: <ref name=stylometry /> <ref>https://en.wikipedia.org/wiki/Stylometry</ref>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+* keystroke fingerprinting, for example in conjunction with Javascript
+* stylistic flourishes
+* abbreviations
+* spelling preferences and misspellings
+* language preferences
+* word frequency
+* number of unique words
+* regional linguistic preferences in slang, idioms and so on
+* sentence/phrasing patterns
+* word co-location (pairs)
+* use of formal/informal language
+* function words
+* vocabulary usage and lexical density
+* character count with white space
+* average sentence length
+* average syllables per word
+* synonym choice
+* expressive elements like colors, layout, fonts, graphics, emoticons and so on
+* analysis of grammatical structure and syntax
+</div>
+
+Fortunately, research suggests that by purposefully obfuscating linguistic style or imitating the style of other known authors, this is largely successful in defeating all stylometric analysis methods. This means they are no better than randomly guessing the correct author of a document. However, using automated methods like machine translation services does not appear to be a viable method of circumvention. <ref name=stylometry />
+
+= Tips for Anonymous Posting, Blogging and Uploading =
+
+Before undertaking any anonymous activities, be sure to understand and exercise a healthy dose of [[Tips_on_Remaining_Anonymous|Operational Security]] (OpSec). Even the best anonymity software available today cannot prevent catastrophic mistakes by individuals.
+
+== Blogging ==
+
+{| class="wikitable"
+|+ ''Blogging Tips''
+|-
+! '''Activity'''
+! '''Tips'''
+|-
+! Activity Partitioning
+| Separate all online activities and only use a dedicated email address for the blog.
+|-
+! Blog Administration
+| Usually the blog is administrated via a web interface only. Use Tor Browser for all blog activities.
+|-
+! Blog Posting
+| Every type of blog software offers the option to select a point in time when new postings are published. It is safer to delay the publishing of new posts to a time when you are not online anymore, rather than publishing immediately. <ref>This will trick lesser adversaries, who cannot force the blog service provider to reveal exactly when and for how long a blog administrator logged in. This will not fool the blog service provider nor an adversary capable of recording all internet traffic.</ref>
+|-
+! Email Address Registration
+|
+For anonymous blogs hosted on third-party services, register it with a new and anonymous e-mail address (see [[E-Mail]]) that has never been used before and which has been exclusively paired with Tor for logins and other related activity: <ref>Do not use personal or identifying data as part of the account creation.</ref>
+* Different Providers: The blog can be registered with different providers anonymously; for example, to utilize https://wordpress.com/
+* Payments: If using a premium product, keep the option open to [[Money|pay anonymously]].
+|}
+
+== Browser Input ==
+
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px]]
+| text    = A browser is an unsafe environment to directly write text, regardless of whether it is a forum post, email, webmail or IMAP-related reply.
+}}
+
+{| class="wikitable"
+|+ ''Browser Input Tips''
+|-
+! '''Activity'''
+! '''Tips'''
+|-
+
+! Accidental Searches
+| Text can be accidentally pasted into the search or URL bar, which triggers an unintended search across the public internet.
+|-
+
+! JavaScript
+|
+With JavaScript enabled, user behavior can be tracked and profiled as already noted in this chapter:<br />
+* [[#Keystroke_Fingerprinting|Keystroke Fingerprinting]].
+* [[#Mouse_Fingerprinting|Mouse Fingerprinting]]. See additional footnotes. <ref>As noted in the [[#Mouse_Fingerprinting|Mouse Fingerprinting]] section, mouse movements are another biometric profiling vector and disabling JavaScript is therefore recommended. High accuracy is achieved in limited situations, such as active authentication during log-on.</ref> <ref>This does not clear EU false positive requirements however, so they recommend it is combined with keystroke dynamics for extra confirmation, see: [https://web.archive.org/web/20230519163324/https://csis.pace.edu/~ctappert/it691-projects/mouse-pusara.pdf User re-authentication via mouse movements], [http://www.cs.sjsu.edu/faculty/pollett/papers/shivanipaper.pdf On Using Mouse Movements as a Biometric] and [https://web.archive.org/web/20190711092234/http://www.cs.wm.edu/~hnw/paper/ccs11.pdf http://www.cs.wm.edu/~hnw/paper/ccs11.pdf]</ref>
+* When the methods above are combined with [[#Stylometry|Stylometry]], a user will be de-anonymized unless countermeasures are implemented, like faking one's authorship style <ref>For instance, stylometry works with less data (final text only) and in concert with keystroke fingerprinting is completely effective. An adversary can compare statistics about a user's typing over clearnet, then compare it to texts composed over Tor in real-time.</ref> and confusing stylometry with a spell checker. <ref>For example, launch KWrite: <code>Start menu button</code> &rarr; <code>Applications</code> &rarr; <code>Utilities</code> &rarr; <code>Text Editor (KWrite)</code>. Once KWrite is open, click on <code>Tools</code> &rarr; <code>Automatic spell checking</code>. Misspelled words will be underlined with a red color. </ref>
+* Tor Browser defenses are based on skewing JavaScript's perception of time. <ref>https://gitlab.torproject.org/legacy/trac/-/issues/19186</ref> <ref name=tbb-user-behaviour>[https://2019.www.torproject.org/projects/torbrowser/design/ '''User Behavior''']
+<blockquote>
+While somewhat outside the scope of browser fingerprinting, for completeness it is important to mention that users themselves theoretically might be fingerprinted through their behavior while interacting with a website. This behavior includes e.g. keystrokes, mouse movements, click speed, and writing style. Basic vectors such as keystroke and mouse usage fingerprinting can be mitigated by altering Javascript's notion of time. More advanced issues like writing style fingerprinting are the domain of other tools.
+</blockquote>
+</ref> The packaging of [https://github.com/Whonix/kloak kloak] (keystroke-level online anonymization kernel) in {{project_name_short}} provides a system-wide solution for keystroke and mouse profiling.
+|-
+
+! Text Editors
+|
+* Offline Editors: It is recommended to prepare text in an offline text editor like KWrite and then copy and paste the content into the web interface once finished.
+|-
+
+|}
+
+== Hardware Threat Mitigation ==
+
+{| class="wikitable"
+|+ ''Hardware Threat Tips''
+|-
+
+! '''Category'''
+! '''Tips'''
+|-
+
+! Disable Dangerous Peripherals
+|
+* Speakers / Microphones: It is advisable to shut off the speakers and [[Hardware_Threat_Minimization#Microphones|microphone]] at all times, as newer methods of advertisement tracking can link multiple devices via ultrasound covert channels. <ref>This deanonymization technique works by playing a unique sound inaudible to human ears which is picked up by the microphones of untrusted devices. Watermarked audible sounds are equally dangerous, which means that hardware incapable of ultrasound is an ineffective protection.</ref> It is also possible to decrease the risk by playing video and audio from untrusted sources with headphones connected and adjusted at a low volume <ref>https://www.schneier.com/blog/archives/2015/11/ads_surreptitio.html</ref> Speakers may also be repurposed into microphones by malicious software running on compromised devices. <ref>[https://arxiv.org/ftp/arxiv/papers/1611/1611.07350.pdf SPEAKE(a)R: Turn Speakers to Microphones for Fun and Profit]</ref>
+* HDDs: Acoustic signals can be used to cause rotational vibrations in HDD platters in an attempt to create failures in read/write operations, ultimately halting the correct operation of HDDs.<ref>[https://www.princeton.edu/~pmittal/publications/acoustic-ashes18.pdf Acoustic Denial of Service Attacks on Hard Disk Drives]</ref> 
+* Active microphones open up the system to the vulnerability of running either humanly unintelligible<ref>[https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_carlini.pdf Hidden Voice Commands], [https://www.usenix.org/system/files/conference/woot15/woot15-paper-vaidya.pdf Cocaine Noodles: Exploiting the Gap between Human and Machine Speech Recognition]</ref> or inaudible <ref>[https://arxiv.org/pdf/1708.07238.pdf Inaudible Voice Commands], [https://arxiv.org/pdf/1708.09537v1.pdf DolphinAtack: Inaudible Voice Commands]</ref> acoustic commands if a virtual assistant is installed. Sound can be maliciously weaponized to degrade performance and damage MEMS gyroscopes and accelerometers.<ref>[https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-son-updated.pdf Rocking Drones with Intentional Sound Noise on Gyroscopic Sensors], [https://timothytrippel.com/pubs/walnut/walnut-euros&p-17.pdf WALNUT: Waging Doubt on Integrity of MEMS Accelerometers with Acoustic Injection Attacks]</ref>
+* Sensors: Gyroscopes can be used to discern the speech of the talker in its vicinity<ref>[https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-michalevsky.pdf Gyrophone: Recognizing Speech from Gyroscope Signals]</ref> while accelerometers can be used to reconstruct the responses of the callee and virtual assistant played through the loudspeaker.<ref>[https://sci-hub.st/10.1145/3372224.3417323 Accelerometer-based smartphone eavesdropping], [https://arxiv.org/pdf/1907.05972.pdf Spearphone: Motion Sensor-based Privacy Attack on Smartphones], [https://www.ndss-symposium.org/wp-content/uploads/2020/02/24076-paper.pdf Learning-based Practical Smartphone Eavesdropping with Built-in Accelerometer]</ref>
+* LCD Coil Whine: The coil whining of LCD screens is unique enough to leak the information presented on the screen as reconstructed by machine learning applied on wiretapped data (leaked via the webcam microphone). <ref>https://arstechnica.com/information-technology/2018/08/researchers-find-way-to-spy-on-remote-screens-through-the-webcam-mic/</ref> A solution is to turn off the device with sensitive data while chatting on the phone.
+|-
+
+! Remove External Devices
+| Remove all phones, tablets and so on from the room to avoid them issuing watermarked sounds as well as listening to keystroke sounds and watermarked sounds. <ref>https://www.newscientist.com/article/2110762-your-homes-online-gadgets-could-be-hacked-by-ultrasound/</ref> <ref>https://gitlab.torproject.org/legacy/trac/-/issues/20214</ref> Similarly, do not make / take calls in the same room where anonymous browsing is underway, or run sensitive applications (like Tor Browser for Android) or have documents open on the phone before calls.
+|-
+
+! Side-channel Attacks
+| This class of attacks depend on eavesdropping on the passively leaked signals by a trusted process which a surveilling entity can use to reconstruct the sensitive data on the computer. These are more dangerous than covert-channels discussed below.
+* Energy leaks that reveal sensitive information are a long studied area of cryptography research; see footnotes. <ref>[https://www.tau.ac.il/~tromer/radioexp/ Stealing Keys from PCs using a Radio: Cheap Electromagnetic Attacks on Windowed Exponentiation]: Extraction of secret decryption keys from laptop computers, by non-intrusively measuring electromagnetic emanations for a few seconds from a distance of 50 cm. The attack can be executed using cheap and readily-available equipment: a consumer-grade radio receiver or a Software Defined Radio USB dongle.</ref> <ref> Another attack involves measuring acoustic emanations: [https://www.tau.ac.il/~tromer/papers/acoustic-20131218.pdf RSA Key Extraction via Low-Bandwidth Acoustic Cryptanalysis].</ref> <ref>A poor man's implementation of TEMPEST attacks (recovering cryptographic keys by measuring electromagnetic emissions) using $3000 worth of equipment was proven possible from an adjacent room across a 15cm wall. These attacks were only possible for adversaries with nation-state resources for the past 50 years. See: [https://eprint.iacr.org/2016/129.pdf CDH Key-Extraction via Low-Bandwidth Electromagnetic Attacks on PCs]</ref> These attacks were mitigated by software countermeasures in cryptographic libraries such as GPG.
+* There is a very crude proof-of-concept attack that remotely controls touchscreen devices via electromagnetic fields, with the caveat of it requiring close proximity to an antenna. This shows the possibility of manipulating devices using TEMPEST like attacks and not just spying on them <ref>https://invisiblefinger.click/assets/notrandompath/SP2021_EMI.pdf</ref> <ref>https://www.schneier.com/blog/archives/2022/08/remotely-controlling-touchscreens-2.html</ref>
+* Power LED Side-Channel Attack: A surveillance camera captures high-speed footage of the power LED on a smart card reader­—or of an attached peripheral device—­during cryptographic operations.<ref>https://www.schneier.com/blog/archives/2023/06/power-led-side-channel-attack.html</ref> A simple mitigation is covering LED lights with electrical tape.
+|-
+
+! Covert-channel Attacks
+|In contrast to side-channel attacks, covert-channels depend on a compromised process operating on the machine to be able to exfiltrate data to the outside without being noticed by the machine operator. While attacks of this nature that cross security and virtualization boundaries on the same machine are known, this section covers air-gapped machines which are the hardest targets to penetrate from the attacker's perspective. While using SSD PCs are a solution to many of these attacks, they bring another set of problems regarding the impossibility of secure data erasure.
+* Attacks include leaking sensitive data from an air-gapped machine via a computer's fan noise<ref>https://web.archive.org/web/20170227052456/https://www.cio.com.au/article/602415/researchers-steal-data-from-pc-by-controllng-noise-from-fans/, [https://arxiv.org/ftp/arxiv/papers/1606/1606.05915.pdf Fansmitter: Acoustic Data Exfiltration from (Speakerless) Air-Gapped Computers]</ref>, hard drive noise <ref>https://www.computerworld.com/article/3106862/sounds-from-your-hard-disk-drive-can-be-used-to-steal-a-pcs-data.html, [https://arxiv.org/ftp/arxiv/papers/1608/1608.03431.pdf DiskFiltration: Data Exfiltration from Speakerless Air-Gapped
+Computers via Covert Hard Drive Noise]</ref>, hard drive LED<ref>https://www.computerworld.com/article/3173370/a-hard-drives-led-light-can-be-used-to-covertly-leak-data.html, [https://web.archive.org/web/20230419233019/https://cyber.bgu.ac.il/advanced-cyber/system/files/LED-it-GO_0.pdf Leaking (a lot of) Data from Air-Gapped Computers via the (small) Hard Drive LED]</ref>, CPU frequency patterns<ref>https://www.wired.com/story/air-gap-researcher-mordechai-guri/ [https://arxiv.org/pdf/1802.02700.pdf ODINI : Escaping Sensitive Data from Faraday-Caged, Air-Gapped Computers via Magnetic Fields]</ref> or scanner light.<ref>https://www.schneier.com/blog/archives/2017/04/jumping_airgaps.html, [https://arxiv.org/pdf/1703.07751.pdf Oops!...I think I scanned a malware]</ref> The data is leaked to a compromised security cam, cellphone or even drone flying outside the building window. 
+|-
+
+! Wi-Fi Signal Emitters
+| Another keystroke snooping technique involves a WiFi signal emitter (router) and malicious receiver (laptop) that detects changes in the signal that correspond to movements of the target's hands on their keyboard. According to researchers, a user’s movement over the keyboard generates a unique pattern in the time-series of Channel State Information (CSI) values. A Wi-Fi signal based keystroke recognition system called WiKey can recognize typed keys based on CSI values at the Wi-Fi signal receiver end using Commercial Off-The-Shelf Wi-Fi devices. In real-world testing, “WiKey achieves an average keystroke recognition accuracy of 77.43% for typed sentences when 30 training samples per key were used. WiKey achieves an average keystroke recognition accuracy of 93.47% in continuously typed sentences with 80 training samples per key,”. Limitations, include variations in environment, as it can work well only under relatively stable environments. Human motion in surrounding areas, changes in orientation and distance of transceivers, typing speeds, and keyboard layout and size also influence the accuracy.<ref>[https://www.sigmobile.org/mobicom/2015/papers/p90-aliA.pdf Keystroke Recognition Using WiFi Signals]</ref><ref>https://web.archive.org/web/20221022104553/https://cse.msu.edu/~alikamr3/pdf/jsac2017_doublecolumn.pdf</ref><ref>https://www.securityweek.com/researchers-use-wifi-signals-read-keystrokes</ref><ref>In the paper: An attack variant using USRP (cellphone radio ranges) has performed poorly because of background energy interference due to microwave ovens, refrigerators, and televisions.</ref>
+|-
+
+|}
+
+== User Habits ==
+
+{| class="wikitable"
+|+ ''User Habit Tips''
+|-
+! '''Category'''
+! '''Tips'''
+|-
+
+! CAPTCHA / reCAPTCHA
+| Google's CAPTCHAs fingerprint the behavior of individuals. <ref>
+https://www.quora.com/Why-cant-bots-check-%E2%80%9CI-am-not-a-robot%E2%80%9D-checkboxes/answer/Oliver-Emberton?share=1
+</ref> Only enable JavaScript if it must absolutely be solved. <ref>https://web.archive.org/web/20190806062009/http://scraping.pro/no-captcha-recaptcha-challenge/
+</ref> <ref>
+CAPTCHAS also directly enhance the strike capabilities of military drones, see: https://joeyh.name/blog/entry/prove_you_are_not_an_Evil_corporate_person/
+</ref>
+|-
+
+! Cookies
+| Remember to purge the browser's cookie and history cache periodically. When running [[Tor Browser]], it is recommended to simply close Tor Browser after online activities are finished, then restart it.
+|-
+
+! Environment
+|
+* Avoid public places where people are likely to shoulder surf or where CCTV cameras are deployed. It is also possible to reconstruct text reflections in eyeglasses from 720p cams. <ref>
+https://www.schneier.com/blog/archives/2022/09/leaking-screen-information-on-zoom-calls-through-reflections-in-eyeglasses.html
+</ref> When having sensitive conversations, even over encrypted channels, consider that AI is capable of reading lips when captured on video footage. <ref>
+https://arxiv.org/pdf/1611.01599.pdf
+</ref> Even if your hands are concealed while typing, it is possible for AI to infer with high accuracy, what words are being typed by analyzing shoulder movements. <ref>
+https://www.schneier.com/blog/archives/2020/11/determining-what-video-conference-participants-are-typing-from-watching-shoulder-movements.html
+</ref> Heat traces from a recently typed password could be captured by thermal cameras in the vicinity of your hardware. <ref>
+[https://www.schneier.com/blog/archives/2022/10/recovering-passwords-by-measuring-residual-heat.html ThermoSecure: Investigating the effectiveness of AI-driven thermal attacks on commonly used computer keyboards]
+</ref>
+
+* External Devices: Avoid typing in places where open microphones are used, otherwise recorded keyboard sounds might provide enough information to accurately reconstruct what was typed. <ref>
+This is a variation of an older attack perfected during the Cold War where recorded typewriter sounds allowed discovery of what was typed. See: https://freedom-to-tinker.com/2005/09/09/acoustic-snooping-typed-information/ and https://www.schneier.com/blog/archives/2016/10/eavesdropping_o_6.html
+</ref> The minute vibrations of tapping touchscreens are detectable by virtual assistant microphones in a range of 0.5 meters even in the midst of noisy environments. Note that haptic feedback wasn't enabled. <ref>
+https://arxiv.org/pdf/2012.00687.pdf
+</ref> <ref>
+https://arxiv.org/pdf/1903.11137.pdf
+</ref>
+|-
+
+! File Sanitization
+|
+Generally, any blog pictures, documents or other files must have unique [[Metadata]] removed (anonymized) before they are uploaded - check the file format is compatible with the [[Metadata#MAT2:_Metadata_Anonymisation_Toolkit_v2|MAT2]] software: <ref>
+Such as unique camera IDs and often GPS coordinates in the case of photographs.
+</ref>
+* Refer to the additional, [[#Operational_Security_Advice|operational security advice]] for photographs.
+* Follow the same [[#Operational_Security_Advice|operational security advice]] for audio recordings.
+* Refer to the additional [[#Documents|countermeasures]] for embedded digital watermarks in documents.
+|-
+
+! Passwords
+|
+* Detection: Although a remote threat, thermal imaging can capture body heat remains from keys touched to input passwords up to one minute after the fact. <ref>
+https://www.schneier.com/blog/archives/2018/07/recovering_keyb.html
+</ref> Also avoid places with CCTV or those which risk shoulder surfing.
+* Generation: Use random usernames and [[Passwords#Generating_Unbreakable_Passwords|strong Diceware passwords]] for anonymous accounts. <code>pwgen</code> should only be used to generate usernames and not passphrases because its emphasis is on generating phonemes; see footnote. <ref>
+Such a bias means the program does what it is designed to do: produce pronounceable passwords rather than pure line noise. Even with the secure option <code>-s</code> it has been noted that it produces passwords with bias towards numbers and uppercase letters to make password checkers happy. The CVE to fix this was rejected and the behavior was not corrected by the authors. This is undesirable for creating true random output, see: [https://bugs.debian.org/726578 pwgen: Multiple vulnerabilities in passwords generation].
+</ref>
+* Retention: Consider the password-retention policy of the browser. If it supports a master password that encrypts every password it saves, then use that feature. It is generally safest not to save any blog or other passwords in the browser, but instead use a password manager and cut and paste passwords into the browser.
+|-
+
+! Pseudonym Isolation
+| For advanced separation of discrete activities, use [[Multiple Whonix-Workstation|Multiple {{project_name_workstation_short}}]].
+|-
+
+! Publishing Time
+| Over time, pseudonymous activity can be profiled to provide an accurate estimate of the timezone, reducing the user's anonymity set. It is better to restrict posting activity to a fixed time that fits the daily activity pattern of people across many places.
+|-
+
+! Tor Browser Censorship
+| In most cases, Tor blocks by destination servers can be easily bypassed with simple [[Tor_Browser#Bypass_Tor_Censorship|proxies]].
+|-
+
+|}
+
+= See Also =
+* [[Metadata]]
+* [[Geo-blocking]]
+
+= Footnotes =
+<references />
+
+= License =
+
+{{JonDos}} The Surfing, Posting, Blogging page contains content from the JonDonym documentation [https://web.archive.org/web/20120510190850/https://anonymous-proxy-servers.net/en/help-live-cd/jondo-live-cd4.html Surfing and Blogging] page.
+
+{{Footer}}
+
+[[Category:Documentation]]
