@@ -1,0 +1,94 @@
+{{Header}}
+{{Title|title=
+System Timezone
+}}
+{{#seo:
+|description=Information about system timezone setting. How to change the System Timezone.
+|image=Timezone123123451.png
+}}
+{{time_mininav}}
+[[File:Timezone123123451.png|thumb]]
+{{intro|
+Information about system timezone setting. How to change the System Timezone.
+}}
+= Information =
+Quote {{project_name_long}} [[Post Install Advice]]:
+
+<blockquote>
+To protect against time zone leaks, the system clock inside {{project_name_short}} is set to UTC. This means it may be a few hours before or ahead of your host system clock. <u>Do not change this setting!</u>
+</blockquote>
+
+= Change System Timezone =
+'''1.''' Introduction.
+
+'''{{project_name_short}} <u>specific</u> part:''' To prevent package [https://github.com/whonix/anon-apps-config anon-apps-config] from changing the timezone to UTC during upgrades, a status file must be created as documented in the next step. <ref>
+https://github.com/Whonix/anon-apps-config/commit/85dcdaaeafe150a740949d5b8d167e6f0fa10c7d
+</ref>
+
+'''2.''' Platform specific.
+
+Select your platform.
+
+{{Tab
+|type=controller
+|addToClass=tcc-indent
+|id=timezone-qubes-vs-nonqubes
+|content=
+{{Tab
+|addToClass=margin-top-20
+|id=timezone-qubes-vs-nonqubes
+|title= == {{non_q_project_name_long}} ==
+|image=[[File:Whonix-logo-standard.svg|25px]]
+|content=
+'''3.''' Run the following command.
+
+{{CodeSelect|code=
+sudo touch /etc/noutc
+}}<!-- close: CodeSelect -->
+}}<!-- close: tab -->
+{{Tab
+|addToClass=margin-top-20
+|id=timezone-qubes-vs-nonqubes
+|title= == {{q_project_name_long}} ==
+|image=[[File:Qubes-logo-icon.png|25px]]
+|content=
+'''3.''' Run the following 2 commands.
+
+{{CodeSelect|code=
+sudo mkdir -p /usr/local/etc/
+}}<!-- close: CodeSelect -->
+
+{{CodeSelect|code=
+sudo touch /usr/local/etc/noutc
+}}<!-- close: CodeSelect -->
+}}<!-- close: tab -->
+}}<!-- close: controller -->
+
+'''4.''' Actual timezone change.
+
+'''{{project_name_short}} <u>unspecific</u> part:''' Time zone can be adjusted as per [[Self_Support_First_Policy|Self Support First Policy]].
+
+'''5.''' See upstream documentation.
+
+{{upstream_wiki}}
+
+'''6.''' Done.
+
+The process of changing the timezone has been completed.
+
+= Timezone vs sdwdate =
+[[sdwdate]] is mostly unrelated. It can operate independently of system timezone setting. It is a time synchronization daemon. It does not alter the system timezone.
+
+= Timezone vs Tor Browser =
+[[Tor Browser]] has its own independent development team and independent implementation of timezone change. This is [[unspecific]] to Whonix. Tor Browser does the same on non-Whonix systems. In other words, Tor Browser does the same on Debian hosts. Changing the system timezone will not affect Tor Browser.
+
+= Related =
+* [[Network Time Synchronization]]
+* [[sdwdate]]
+
+= Footnotes / References =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
