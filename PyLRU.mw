@@ -1,0 +1,127 @@
+{{Header}}
+{{Title|
+title=How-to: Install PyLRU in {{project_name_long}}
+}}
+{{#seo:
+|description=PyLRU python library
+|image=Py123123.png
+}}
+[[File:Py123123.png|thumb]]
+{{intro|
+PyLRU python library
+}}
+__FORCETOC__
+= Introduction =
+
+PyLRU is: <ref>https://pypi.org/project/pylru/</ref>
+<blockquote>...a true LRU cache along with several support classes. The cache is efficient and written in pure Python. It works with Python 2.6+ including the 3.x series. Basic operations (lookup, insert, delete) all run in a constant amount of time. Pylru provides a cache class with a simple dict interface. It also provides classes to wrap any object that has a dict interface with a cache. Both write-through and write-back semantics are supported. Pylru also provides classes to wrap functions in a similar way, including a function decorator.</blockquote>
+
+= PyLRU Setup =
+
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = Perform the following procedure in {{project_name_workstation_long}} ([[Qubes|{{q_project_name_long}}]]: <code>{{project_name_workstation_vm}}</code> App Qube).
+}}
+
+== Download ==
+
+Acquire the [https://github.com/jlhutch/pylru PyLRU] source code by Jay Hutchinson ([https://github.com/jlhutch <code>jlhutch</code> on GitHub]).
+
+{{CodeSelect|code=
+git clone https://github.com/jlhutch/pylru ~/pylru
+}}
+
+== Digital Signature Verification ==
+
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = This section is optional, but provides better security.
+}}
+
+{{Box|text=
+'''1.''' Import Jay Hutchinson signing key. <ref>
+* https://github.com/jlhutch/pylru/issues/33
+* https://web.archive.org/web/20231219165732/https://api.github.com/users/jlhutch/gpg_keys
+</ref>
+
+Note: File name and URL might change in the future from <code>.gpg</code> to <code>.asc</code> in the future as per [https://github.com/jlhutch/pylru/issues/33 PyLRU github issue: please upload your OpenPGP / gpg public key].
+
+{{gpg key
+|url=scurl-download https://github.com/jlhutch.gpg
+|source_filename=jlhutch.gpg
+|fingerprint=1E0B4C97BD81966B3BDCF84D2FF6B00325E9519C
+|gpg_fingerprint_output=
+In late-2023, the output is identical to the following.
+
+      Key fingerprint = 1E0B 4C97 BD81 966B 3BDC  F84D 2FF6 B003 25E9 519C
+}}
+
+'''2.''' Enter the repository.
+{{CodeSelect|code=
+cd ~/pylru
+}}
+
+'''3.''' Perform digital signature verification. <ref>
+Alternative command:
+
+{{CodeSelect|code=
+git log -1 --show-signature
+}}
+}}
+</ref>
+
+{{CodeSelect|code=
+git verify-commit HEAD
+}}
+
+{{GnuPG-Success}}
+
+{{GnuPG-Warning}}
+}}
+
+== Installation ==
+
+{{Box|text=
+'''1.''' Create folder <code>/usr/local/lib/python3.11/dist-packages/</code>.
+
+{{CodeSelect|code=
+sudo mkdir -p /usr/local/lib/python3.11/dist-packages/
+}}
+
+'''2.''' Install <code>pylru.py</code> in folder <code>/usr/local/lib/python3.11/dist-packages/</code>.
+
+{{CodeSelect|code=
+sudo cp ~/pylru/pylru.py /usr/local/lib/python3.11/dist-packages/
+}}
+
+'''3.''' Done.
+
+PyLRU installation is now complete.
+}}
+
+= Troubleshooting =
+<pre>
+electrumx_server[]: PermissionError: [Errno 13] Permission denied: '/usr/local/lib/python3.11/dist-pa...pylru.py'
+</pre>
+
+'''Permission fix.'''
+
+Required in some build versions of {{project_name_long}}. <ref>
+The issue is the read permission for "<code>others</code>" than root were not set during file creation.
+
+Related issue: [https://github.com/Kicksecure/security-misc/issues/185 Restrict umask to 027 except for sudo/root broken]
+</ref>
+
+{{CodeSelect|code=
+sudo chmod --recursive o+r /usr/local/lib/python3.11/dist-packages
+}}
+
+= Footnotes =
+
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
