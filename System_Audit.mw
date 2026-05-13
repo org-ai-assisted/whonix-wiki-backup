@@ -1,0 +1,20 @@
+{{Header}}
+{{Title|title=
+System Audit
+}}
+{{#seo:
+|description=Verifying the system is configured as intended
+|image=Systemcheck1234640.png
+}}
+{{audit_mininav}}
+[[File:Systemcheck1234640.png|thumb|150px]]
+{{intro|
+Verifying the system is configured as intended
+}}
+
+= Upstream =
+{{upstream_wiki}}
+
+<references />
+{{Footer}}
+[[Category:Documentation]]
