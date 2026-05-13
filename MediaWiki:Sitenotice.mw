@@ -1,0 +1,38 @@
+<!--
+Instructions for editors
+1. Create a banner following the steps in https://www.kicksecure.com/wiki/Dev/mediawiki#SiteNotice_Info_and_Donation_Banners
+2. Remember to use a unique ID! (string allowed, best: [a-zA-Z0-9_-.]
+3. Change The /wiki/Template:Sitenotice_id to the ID of the banner which should be display.
+3.1. If no banner should be displayed use a non-existent ID
+-->
+{{SitenoticeBannerEndOfYear
+|html=<img src="/w/images/thumb/e/e8/Flyin-donate-promo.jpg/300px-Flyin-donate-promo.jpg" decoding="async" loading="lazy" height="215" width="300" alt="Notification image">
+<p>
+Your donation helps keep {{project_name_short}} independent, maintained, and available to everyone. Please consider supporting ongoing development with a <a href="/wiki/Donate" class="cs-blue-font">donation</a>.
+</p>
+}}
+{{SitenoticeBanner
+|id=38
+|href=/wiki/Donate
+|html=<img class="icon" src="/w/images/0/0b/Grow-symbol.png" width="53" height="40" alt="grow symbol"><span>Want to help us grow?</span>
+}}
+{{SitenoticeBanner
+|id=37
+|href=/wiki/Donate
+|html=<img class="full-size" src="/w/images/e/ee/Banner-11-years-slim.jpg" width="960" height="140" alt="11 years of Whonix success celebration banner">
+}}
+{{SitenoticeBanner
+|id=36
+|href=/wiki/Tips_on_Remaining_Anonymous
+|html=<img class="full-size" src="/w/images/a/a2/Banner-did-you-know-tips-slim.jpg" width="960" height="140" alt="Did you know: Tips for anonymity">
+}}
+{{SitenoticeBanner
+|id=35
+|href=/wiki/Live_Mode
+|html=<img class="full-size" src="/w/images/a/a3/Banner-live-mode-slim.jpg" width="960" height="140" alt="Whonix has a Live Mode and a permanent mode">
+}}
+{{SitenoticeBanner
+|id=34
+|href=/wiki/Contribute
+|html=<img class="full-size" src="/w/images/9/9e/Banner-we-want-you-slim.jpg" width="960" height="140" alt="Whonix is looking for contributors - especially developers">
+}}
