@@ -1,0 +1,137 @@
+{{Header}}
+{{Title|title=
+{{project_name_long}} Chat
+}}
+{{#seo:
+|description=Currently inactive. - Read-Only - Reasons - use https://forums.{{project_clearnet}} instead
+|image=1024px-Telegram_2019_Logo.svg.png
+}}
+[[File:1024px-Telegram_2019_Logo.svg.png|Telegram Logo|200px|thumb|link=https://t.me/{{project_name_short}}_Chat_No_Media]]
+[[File:Matrix_logo.svg.png|Matrix Logo|200px|thumb|link=https://matrix.to/#/#{{project_name_short}}:{{project_matrix_server}}]]
+<!--* [[File:1024px-Telegram_2019_Logo.svg.png|50px|link=https://t.me/{{project_name_short}}_Important_News]] https://t.me/{{project_name_short}}_Important_News-->
+
+= Inactive =
+All {{project_name_short}} chat channels are currently inactive and read-only. Please use https://forums.{{project_clearnet}} instead.
+
+Reasons:
+
+* It was an experiment and deemed unsuccessful.
+* Led to reduced activity on forums.{{project_clearnet}}.
+* Duplication of content between chat and forums.{{project_clearnet}} increased support effort.
+* Repetitive, circular, off-topic, endless discussions.
+* Spam.
+* [[Limitations_on_Free_Speech_on_{{project_name_short}}_Website|Legal liability]].
+* [[Policy of Website and Chat#Volume|Volume]].
+* Many [[contributors]] only participate in forums.{{project_clearnet}} and not in {{project_name_short}} chat.
+* Unproductive in terms of improving {{project_name_short}} [[Documentation]], development progress, bug fixes, or source code enhancements.
+* Distracts from development progress.
+* Chat format is unsuitable for finding previous (or even recent) discussions.
+* No topic separation like in forums.
+* The previous read-write {{project_clearnet}} chat was an experiment and does not create a perpetual obligation to maintain it. Sometimes decisions are re-evaluated: "If this were not the case now, based on what we know today, would it be a good decision to do so now?"
+
+Therefore, a decision was made to set all {{project_name_short}} chat channels to read-only.
+
+Gratitude is extended to all contributors to {{project_name_short}} chat!
+
+Can the chat remain active (read-write) for user-to-user support without moderation and active contributors? Unfortunately not, due to [[Limitations_on_Free_Speech_on_{{project_name_short}}_Website|legal liability]] and [[Policy of Website and Chat#Volume|volume]].
+
+Why not delete these chat channels? To prevent impostors from recreating them and pretending to be the official chat, possibly scamming users.
+
+Users are welcome to use the official https://forums.{{project_clearnet}} [[Support]], where admins and contributors are active. Users may also idle in existing chat channels, as news updates will continue to be forwarded there. These may be useful in the future if there is a 24/7 moderation/support team or for special occasions.
+
+[[#{{project_name_short}} News Announcements|{{project_name_short}} News Announcements Channel]] will remain up to date.
+
+= {{project_name_short}} Telegram Chat =
+== No Media {{project_name_short}} Telegram Chat ==
+* Currently [[#Inactive|inactive, read-only]].
+* Everyone who can use Telegram can join (both iPhone and Android).
+* Posting links is forbidden.
+* Posting screenshots is unsupported.
+
+[https://t.me/{{project_name_short}}_Chat_No_Media {{project_name_short}} Project Chat (everyone, limited)]
+
+== Better {{project_name_short}} Telegram Chat ==
+* Currently [[#Inactive|inactive, read-only]].
+* iPhone users might not be able to join.
+* Users from "some countries" might not be able to join.
+* Posting links is allowed if relevant to {{project_name_short}}.
+* Posting screenshots is allowed.
+
+[https://t.me/{{project_name_short}} {{project_name_short}} Project Chat (posting links and screenshots allowed)]
+
+== Reasons for Two Telegram Discussion Groups ==
+This is what happened: a spambot joined the [https://t.me/{{project_name_short}} "normal, main" {{project_name_short}} chat] and posted pornographic content (video). It was quickly deleted by an administrator. Telegram, via [https://t.me/AbuseNotifications @AbuseNotifications], sent a private message to all channel administrators.
+
+<blockquote>
+Our users reported some of the content posted in your group @{{project_name_short}} as pornographic, and our moderators have confirmed this.  
+For this reason, we had to restrict access to your group from iOS devices and from some countries.  
+We’ll be glad to lift the restrictions if you remove pornographic content from your group and pledge to take reasonable care with moderation in the future. Please notify us here as soon as the group is free from porn again.  
+If all the offending content is already removed, please send us the following command: /unblock_group1336747164@AbuseNotifications
+</blockquote>
+
+This happened to other Telegram groups too. See: https://www.reddit.com/r/Telegram/comments/9ifp7s/group_blocked_because_of_pornographic_content/
+
+Telegram is likely strict about this due to Apple's App Store policy banning pornography. Telegram doesn’t want to be removed from the App Store, as that would reduce user adoption.
+
+Apple iPhone restricts user freedom and consists mostly of non-freedom software. Therefore, [[Avoid_nonfreedom_software|Avoid Non-Freedom Software]]. See also this GNU essay: [https://www.gnu.org/proprietary/malware-apple.en.html Apple's Operating Systems Are Malware].
+
+Telegram handles spam poorly.
+
+An option would have been to disable all media in the {{project_name_short}} main Telegram channel, but that would be dull because many users post screenshots.
+
+== Criticisms ==
+The Telegram client is Freedom Software. The Telegram server, at the time of writing, is non-freedom software. <ref>
+[[Miscellaneous Threats to User Freedom]]
+</ref>
+
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px]]
+| text    = [[Avoid_nonfreedom_software|Avoid non-freedom software]].
+}}
+
+To avoid [[Warning#Unsubstantiated_Conclusions|unsubstantiated conclusions]] about {{project_name_short}} having a Telegram chat, see [[Official Online Profiles#Selection_of_Platforms|Criteria for Selection of Platforms]].
+
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px]]
+| text    = Telegram requires a phone number, which can be bad for anonymity. See [[Phone Number Validation]].
+}}
+
+== Telegram Alternatives ==
+Join the [https://t.me/{{project_name_short}} {{project_name_short}} Project Chat] using:
+
+* Currently [[#Inactive|inactive, read-only]].
+* Try https://web.telegram.org
+* Try using an Android phone.
+* [[#{{project_name_short}} Matrix Chat|{{project_name_short}} Matrix Chat]]
+
+= {{project_name_short}} News Announcements =
+[[File:1024px-Telegram_2019_Logo.svg.png|50px|link=https://t.me/{{project_name_short}}_]] [https://t.me/{{project_name_short}}_ {{project_name_short}} News Announcements Channel] <ref>
+* https://twitter.com/Whonix/status/1358386915008012290
+* https://tgstat.com/chat/@{{project_name_short}}_Chat
+</ref>
+
+= {{project_name_short}} Matrix Chat =
+* Currently [[#Inactive|inactive, read-only]].
+* [[File:Matrix_logo.svg.png|50px|link=https://matrix.to/#/#{{project_name_short}}:{{project_matrix_server}}]] [https://matrix.to/#/#{{project_name_short}}:{{project_matrix_server}} {{project_name_short}} Matrix Channel]
+
+= Admins =
+The personal opinions of moderators or contributors to the {{project_name_short}} project do not represent the project as a whole.
+
+= See Also =
+* [[Telegram|Using Telegram in {{project_name_short}}]]
+* [[Phone_Number_Validation|Phone Number Validation vs User Privacy]]
+* {{kicksecure_wiki
+|wikipage=Mobile Phone Security
+|text=Mobile Phone Security
+}}
+* [[Two-factor_authentication_2FA|Two-factor Authentication (2FA)]]
+* [[Official Online Profiles#Selection_of_Platforms|Rationale for selection of {{project_name_short}} platforms]]
+* [[Official Online Profiles|Official {{project_name_short}} Online Profiles]]
+* [[Policy of Website and Chat|{{project_name_short}} Policy of {{project_name_short}} Website and {{project_name_short}} Chat]]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
