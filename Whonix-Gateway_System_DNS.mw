@@ -1,0 +1,144 @@
+{{Header}}
+{{#seo:
+|description=Information about {{project_name_gateway_long}} System DNS, /etc/resolv.conf, and nslookup. Getting System DNS working on {{project_name_gateway_long}}.
+|image=Robot-162087640.png
+}}
+[[File:Robot-162087640.png|200px|thumb]]
+{{intro|
+Information about {{project_name_gateway_short}} System DNS, <code>/etc/resolv.conf</code>, and <code>nslookup</code>. Getting System DNS working on {{project_name_gateway_short}}.
+}}
+= Introduction =
+{{Box|text=
+System DNS is defined as:
+
+* Resolving DNS:
+** Without the use of a socksifier such as <code>torsocks</code>,
+** Without application proxy settings,
+** Without a Tor <code>SocksPort</code>.
+* Using the standard mechanisms on Linux for DNS resolution.
+* Typically configured through the configuration file <code>/etc/resolv.conf</code>.
+* The process that occurs when running <code>nslookup</code>.
+}}
+
+{{Box|text=
+{{TorifiedGateway}}
+}}
+
+{{Box|text=
+{{project_name_workstation_long}} is configured to use various [https://2019.www.torproject.org/docs/tor-manual.html.en#SocksPort <code>SocksPort</code>s], [https://2019.www.torproject.org/docs/tor-manual.html.en#DNSPort <code>DNSPort</code>], and [https://2019.www.torproject.org/docs/tor-manual.html.en#TransPort <code>TransPort</code>]. See also [[Stream Isolation]]. By default, using system DNS on {{project_name_workstation_long}} does not require {{project_name_gateway_short}} system DNS. <ref>
+This is because DNS traffic originating from {{project_name_workstation_short}} is redirected to Tor's <code>DNSPort</code> running on {{project_name_gateway_short}} by the [[Whonix-Gateway Firewall]].
+</ref> Modifications to <code>/etc/resolv.conf</code> on {{project_name_gateway_short}} do not affect {{project_name_workstation_short}}.
+}}
+
+{{Box|text=
+{{project_name_gateway_short}} is only configured to use various <code>SocksPort</code>s. A global system DNS resolver for resolving DNS requests from applications running on {{project_name_gateway_short}} isn't necessary for most common use cases, so it isn't enabled by default. Potential use cases where this could be beneficial include:
+
+* Resolving the hostname of a proxy specified in <code>/usr/local/etc/torrc.d/50_user.conf</code> via Tor.
+* Resolving the hostname of a VPN. However, a VPN configuration using only IPs would be more suitable.
+* One could consider using <code>/etc/hosts</code> for such scenarios instead of enabling system DNS.
+}}
+
+= Whonix-Gateway Default System DNS Setting =
+As of this writing, no DNS server is pre-configured.
+
+To verify this, users can run the command below. This command will display all lines in the system DNS configuration file <code>/etc/resolv.conf</code> except those that are commented out (lines starting with a hash ("<code>#</code>")).
+
+{{CodeSelect|code=
+cat /etc/resolv.conf {{!}} grep --invert-match \#
+}}
+
+Modifying this configuration may be safe, beneficial, and necessary for certain use cases such as [[Bridges]], pluggable transports, simplified meek and [[Bridges#Snowflake|snowflake]] support. <ref>
+https://forums.whonix.org/t/censorship-circumvention-tor-pluggable-transports/2601/40
+</ref>
+
+= Whonix-Gateway System DNS Configuration =
+{{Tab
+|type=controller
+|addToClass=info-box
+|content=
+{{Tab
+|title= == Whonix-Gateway System DNS over Clearnet ==
+|type=section
+|addToClass=info-box
+|active=true
+|content=
+=== Setup ===
+<u>Notes:</u>
+
+* '''This is often unnecessary.'''
+* However, it simplifies the setup when using:
+** [[Bridges]] that require DNS such as [[Bridges#Snowflake|Snowflake]] or [[Bridges#lyrebird|lyrebird]].
+** [[Tunnels/Connecting to SSH before Tor | connect to SSH before Tor]] (<code>User</code> &rarr; <code>SSH</code> &rarr; <code>Tor</code> &rarr; <code>Internet</code>)
+
+{{Whonix-Gateway System DNS over Clearnet}}
+
+=== Test ===
+<u>Notes:</u>
+
+* If you're using [[Bridges#Snowflake|Snowflake]], testing this is typically unnecessary.
+
+To test, use the {{project_name_gateway_short}} user named <code>clearnet</code>.
+
+{{mbox
+| type    = critical
+| image   = [[File:Ambox_warning_pn.svg.png|40px]]
+| text    = Be cautious: When using the <code>clearnet</code> user account, traffic will bypass Tor and use the standard internet, compromising anonymity!
+}}
+
+Run <code>bash</code> as user <code>clearnet</code>.
+
+<ref>
+This is analogous to logging in as the user <code>clearnet</code>.
+</ref>
+
+{{CodeSelect|code=
+sudo -u clearnet bash
+}}
+
+To verify, you can use a tool like <code>dig</code>:
+
+{{CodeSelect|code=
+dig +short example.com
+}}
+}} <!-- end of tab -->
+
+{{Tab
+|title= == Whonix-Gateway System DNS over Tor ==
+|type=section
+|addToClass=info-box
+|active=false
+|content=
+'''This approach is generally not recommended and is often unnecessary.'''
+
+Torified Whonix-Gateway System DNS.
+
+[[Undocumented]].
+}}
+}} <!-- end of tab controller -->
+
+= Impact of enabling Whonix-Gateway System DNS =
+What is the impact of enabling Whonix-Gateway System DNS?
+
+* <u>Tor has always had full internet access:</u> Tor running under account <code>debian-tor</code> on Whonix-Gateway has always had full internet access: TCP, UDP, DNS. <ref>
+In theory, UDP could be blocked, but that would not provide any actual benefit. If Tor ever added any use of UDP, it would later break. Tor does not use UDP anyway. And Tor is necessarily trusted anyhow.
+</ref>
+* <u>System DNS enables internal DNS resolution:</u> Tor could always have resolved DNS for any internal purpose if it had DNS resolving capability built-in. Enabling system DNS on Whonix-Gateway grants Tor the ability to resolve DNS for any internal purpose.
+* <u>Useful in specific scenarios:</u> DNS is usually unnecessary, but in cases like [[Bridges]], it can be useful. For example, domains used by meek such as <code>1098762253.rsc.cdn77.org</code> or <code>stun.voipgate.com</code> can be resolved by Tor.
+* <u>No direct fingerprinting risk:</u> Enabling system DNS on Whonix-Gateway does not directly leak to network observers that a user is using Tor or Whonix. However, this is a complex topic where other factors besides DNS play a role. See [[Hide Tor and Whonix from your ISP]] and [[Fingerprint]].
+* <u>Disabling DNS does not provide anonymity:</u> Keeping Whonix-Gateway system DNS disabled does not hide the fact that a user is using Tor or Whonix. Same rationale as above.
+* <u>Whonix-Workstation unaffected:</u> Whonix-Workstation cannot resolve DNS over clearnet. It still has no method to use clearnet DNS whatsoever.
+* <u>Whonix-Gateway system upgrades are unaffected:</u> Whonix-Gateway is upgraded using APT, which requires administrative ("[[root]]") rights and runs under the <code>root</code> account, which has no access to system DNS because APT is configured for [[Stream_Isolation|Stream Isolation]] using a <code>uwt</code> wrapper, which essentially redirects calls to <code>apt</code> / <code>apt-get</code> to <code>torsocks</code>, and because [[Whonix-Gateway Firewall]] does not permit the account <code>root</code> to use system DNS / UDP / TCP by default. Only the account <code>debian-tor</code> is permitted to use the system's default networking.
+* <u>Introduction chapter remains valid:</u> Everything stated in [[Reliable IP Hiding]] and [[Whonix-Gateway_System_DNS#Introduction|Introduction]] still applies. Also refer to the "learn more" button in the introduction chapter.
+* <u>Disabled by default for caution:</u> Whonix-Gateway system DNS is disabled by default out of an abundance of caution. There are no practically known risks from enabling it.
+* <u>Expected in user systems:</u> This behavior aligns with Tor and Linux distribution specifications, where a functional system DNS is reasonably expected on a typical user system.
+* <u>Forum discussion:</u> https://forums.whonix.org/t/censorship-circumvention-tor-pluggable-transports/2601/37
+
+= See Also =
+* [[{{project_name_gateway_short}}_Own_Traffic_Transparent_Proxy|Enable Transparent Proxying for {{project_name_gateway_short}} own traffic]]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
