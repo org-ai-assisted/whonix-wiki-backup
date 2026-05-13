@@ -1,0 +1,426 @@
+{{Header}}
+{{Title|title=
+Multiple {{project_name_workstation_long}}
+}}
+{{#seo:
+|description=Compartmentalization. Better separation of different tasks and/or pseudonyms by using multiple {{project_name_workstation_short}}.
+|image=Petunia-14052640.jpg
+}}
+{{multiple-vms-mininav}}
+[[File:Petunia-14052640.jpg|thumb]]
+{{intro|
+Compartmentalization. Better separation of different tasks and/or pseudonyms by using multiple {{project_name_workstation_short}}.
+}}
+= Introduction =
+
+{{project_name_short}} is a secure operating system consisting of two virtual machines which are isolated both from each other and the host. This configuration averts many threats posed by malware, misbehaving applications and user error. While {{project_name_short}} protects against many real world threats, <ref>See: [[Whonix against Real Attacks|Protection Against Real World Attacks]].</ref> it is still possible for skilled adversaries to compromise {{project_name_workstation_short}} ([[Qubes|{{q_project_name_short}}]]: <code>{{project_name_workstation_vm}}</code>).
+
+If a single {{project_name_workstation_short}} is used for all anonymous activities and is exploited, the attacker gains access to available data and can monitor all online activity. To minimize the impact of a compromise, it is recommended to utilize multiple {{project_name_workstation_short}} to compartmentalize different identities and/or additional software. Depending on individual preferences and requirements, a second, third ... n<sup>th</sup> {{project_name_workstation_short}} VM can be created.
+
+== Multiple {{project_name_workstation_short}} Rationale ==
+
+Different Torified clients can be used in a completely isolated manner with multiple {{project_name_workstation_short}}. By compartmentalizing each identity or client, an attacker can only read the data in the compromised VM. For example, if Tor Browser in VM-1 was compromised it could not read a user's IRC identity in VM-2. <ref>Without using an additional exploit to successfully break out of the infected VM, which is a difficult task.</ref>
+
+One disadvantage of this configuration is that if the host Internet connection goes offline or Tor on {{project_name_gateway_short}} (<code>{{project_name_gateway_vm}}</code>) suddenly fails, then all {{project_name_workstation_short}} will go offline simultaneously. If multiple Tor clients were running and abruptly stop in unison, a network observer could link these activities to the same identity (pseudonym). For instance, a strong correlation is formed if two Tor users in one chat channel go offline at exactly the same time.
+
+== {{q_project_name_short}} vs {{non_q_project_name_short}} ==
+
+[[Qubes|{{q_project_name_short}}]] is the recommended choice for multiple {{project_name_workstation_short}} because it is specifically designed for compartmentalization (a.k.a. sandboxing) of multiple running VMs. This provides significant speed and security advantages relative to the traditional Type 2 hypervisor model, where two (or more) {{project_name_short}} VMs are run inside programs like [[VirtualBox]] on top of the host OS. For further information, see: [[Virtualization_Platform_Security#Type_1_vs_Type_2_Hypervisors|Type 1 vs Type 2 Hypervisors]] and [[Qubes/Why_use_Qubes_over_other_Virtualizers|Why use Qubes over other Virtualizers?]]
+
+{{q_project_name_short}} also has a TemplateBased filesystem which saves time and improves usability compared to {{non_q_project_name_short}}:
+
+* <u>Centralized Updates:</u> [https://www.qubes-os.org/doc/glossary/#app-qube App Qubes] are based on the corresponding Template's root filesystem. After updating the Template, those same updates will be reflected in the root filesystem of every [https://www.qubes-os.org/doc/glossary/#app-qube App Qube]. [[Non-Qubes-Whonix|{{non_q_project_name_short}}]] users must spend more time updating each VM individually.
+* <u>Minimal Disk Usage:</u> App Qubes require far less disk space than traditional VMs since the App Qube's root filesystem is based on the corresponding template. The App Qube only requires enough disk space to hold user files in the <code>/home</code> directory.
+* <u>VM Management:</u> Cloning VMs is a simple two-step process which can be done in Qube Manager. {{non_q_project_name_short}} requires a multi-step process to clone and configure each VM.
+
+= Safety Precautions =
+
+* '''Group Workstations per Activity Group''': Use separate {{project_name_workstation_short}}s for each distinct pseudonym or activity group. This helps to maintain separation between different identities or activities. See [[Tips_on_Remaining_Anonymous#Only_Use_One_Online_Pseudonym_at_the_Same_Time|Only Use One Online Pseudonym at the Same Time]] for details. For example:
+** {{project_name_workstation_short}} for pseudonym Alice - browsing activities
+** {{project_name_workstation_short}} for pseudonym Alice - e-mail communications
+** {{project_name_workstation_short}} for pseudonym Bob - browsing activities
+** {{project_name_workstation_short}} for pseudonym Bob - chat communications
+* '''Side-Channel Risks''': If a single {{project_name_workstation_short}} is compromised, it could perform various side-channel attacks to learn about running processes in other VMs.
+** '''Compromise Scenario''': A compromised {{project_name_workstation_short}} could exploit side channels to gather data about other VMs.
+** '''Mitigation Limitations''': Some side-channel attacks cannot be completely prevented.
+* '''Pseudonym Correlation''': Adversaries might be able to link multiple {{project_name_workstation_short}} to the same pseudonym based on user activity.
+* '''Single Pseudonym Rule''': Shut down all {{project_name_workstation_short}} associated with one pseudonym such as (Alice) before switching to another pseudonym (Bob).
+
+= Cross-VM Attack Vectors =
+{| class="wikitable"
+|+ ''Cross-VM Attack Vectors''
+|-
+! '''Category'''
+! '''Description'''
+|-
+!- scope="row" | Attacks via the shared bridge
+|
+Multiple workstation VMs are all connected to the gateway using the same virtual bridge; they share an IP subnet. A variety of attacks permit devices sharing a bridge to view or steal one another's traffic, or to impersonate one another at the IP layer. The exact attacks available depend on the specific bridge implementation, but some are always available. At a minimum, VMs sharing a bridge can always trivially detect one another, and determine one another's local IP addresses on the bridge, simply by watching broadcast traffic like ARP and IPv6 neighbor discovery.
+
+The snooping and impersonation vulnerabilities are particularly dangerous because the communication between the Tor process running on the gateway and the client programs running on the workstation is neither encrypted nor cryptographically authenticated. Connections are made either using the (cleartext) SOCKS5 protocol or using Tor's transparent connection proxying feature. Even if the actual application data are encrypted, DNS lookups and circuit creation data are always sent in the clear. A workstation VM that intercepts another workstation's bridge traffic is in a position to know the destinations of all outgoing connections over Tor from that other workstation, as well as the timing and volume of traffic sent over each such connection. It may also be possible to intercept Tor control traffic generated by the "new identity" button. If the user sends cleartext data at the actual application layer, then hostile VMs are in a position to steal those data as well.
+
+In effect, none of the workstation VMs receives Tor's core protections with respect to the other workstation VMs. Although many things in each workstation may be protected against the other workstations, for Tor purposes all of the VMs effectively share the same compartment.
+
+This could be mitigated by providing each workstation VM with a separate virtual bridge and a separate virtual interface on the gateway VM. The gateway configuration should also be reviewed to make sure that the gateway isn't routing unnecessary traffic between the workstations at the IP layer.
+
+For a potential remedy see [[Connections between Gateway and Workstation|Connections between {{project_name_gateway_short}} and {{project_name_workstation_short}}]].
+|-
+! Distributed Denial of Service (DDOS) Attack
+|
+An adversary that managed to compromise a VM with [[Malware and Firmware Trojans|malware]] could stress any system such as CPU, GPU, HDD, RAM, network connection and other {{project_name_workstation_short}}. If a [https://en.wikipedia.org/wiki/Denial-of-service_attack Distributed Denial of Service (DDOS) Attack] is launched from an infected {{project_name_short}} VM, then:
+
+* {{project_name_gateway_short}}:
+** The {{project_name_gateway_short}} can also be DDOSed, and there is no current defense. This might bring down networking of any connected {{project_name_workstation_short}}.
+* {{project_name_workstation_short}}
+** <u>{{non_q_project_name_short}}</u>: Other {{project_name_workstation_short}} can be DDOSed. For a potential remedy see [[Connections between Gateway and Workstation|Connections between {{project_name_gateway_short}} and {{project_name_workstation_short}}]].
+** <u>{{q_project_name_short}}</u>: Safe. <ref name=qubes-isolated />
+* Potentially the host could be negatively affected as well.
+|-
+
+! Local VM Fingerprinting
+| See [[VM Fingerprinting]].
+|-
+
+! Exploits against other {{project_name_gateway_short}} <ref>To minimize the threat of exploits it is recommended to apply relevant instructions found in the [[System_Hardening_Checklist|System Hardening Checklist]].</ref>
+|
+Following infection, an adversary could try to exploit the {{project_name_gateway_short}}.
+|-
+
+! Exploits against other {{project_name_workstation_short}}
+| Following infection, an adversary could try to exploit other {{project_name_workstation_short}}:
+
+* <u>{{non_q_project_name_short}}</u>: At risk.
+* <u>{{q_project_name_short}}</u>: Users are safe, unless {{project_name_gateway_short}} is compromised first. <ref name=qubes-isolated />
+|-
+
+! Identity Correlation through Circuit Sharing
+|
+When different applications use the same Tor circuit and exit relay, these activities can be linked to the same pseudonym (see [[Stream Isolation]] for further details):
+
+* <u>{{non_q_project_name_short}}</u>:
+** If not compromised: Safe. Multiple {{project_name_workstation_short}} which have different internal IPs configured (see the instructions further below) are automatically [[Stream Isolation|stream-isolated]]. <ref>
+Since [https://web.archive.org/web/20170303015402/https://www.torproject.org/docs/tor-manual.html.en IsolateClientAddr] is the Tor default.
+</ref>
+** If compromised: Not safe. Stream isolation might be broken through impersonating. A compromised VM could use the IP of another VM. Thereby break stream isolation. For a potential remedy see [[Connections between Gateway and Workstation|Connections between {{project_name_gateway_short}} and {{project_name_workstation_short}}]].
+* <u>{{q_project_name_short}}</u>: Safe. <ref name=qubes-isolated />
+|-
+
+! Impersonation
+|
+Multiple {{project_name_workstation_short}} are supposed to have different internal IPs configured. Once a VM is compromised by malware it could attempt to impersonate another VM by taking its internal IP.
+
+* <u>{{non_q_project_name_short}}</u>: Same as above.
+* <u>{{q_project_name_short}}</u>: Safe. <ref name=qubes-isolated />
+|-
+
+|}
+
+= How-to: Use more than One {{project_name_workstation_short}} - Easy =
+Platform specific. Select your platform.
+
+{{Tab
+|type=controller
+|linkid=platformchoice
+|content=
+
+{{Tab
+|title= == {{non_q_project_name_short}} ==
+|type=section
+|image=[[File:Whonix-logo-standard.svg|25px]]
+|addToClass=info-box
+|content=
+
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=info]]
+| text    = '''Note:''' The following instructions only apply to Download/Default-{{project_name_workstation_short}} or {{project_name_short}} VMs built from source code. To use another operating system like Windows, other GNU/Linux, BSD etc. please see the [[Other Operating Systems]] chapter instead.
+}} <!-- close: mbox -->
+
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px|alt=warning]]
+| text    = Each additional {{project_name_workstation_short}} VM <u>must</u> have its own MAC address and internal LAN IP address.
+}} <!-- close: mbox -->
+
+{{IconSet|h1|1}} '''Clone a fresh VM:'''
+
+Make a copy of a clean {{project_name_workstation_short}} VM, so you start from a known good state.
+
+* <u>VirtualBox</u>: In VirtualBox Manager, [https://dirkstrauss.com/clone-virtualbox-vm/ clone] a clean {{project_name_workstation_short}}.
+
+[[File:Virtualbox_Clone_Mac_Change1.png|800px]]
+
+* <u>KVM</u>: In Virtual Machine Manager, clone a clean {{project_name_workstation_short}}: <code>Highlight {{project_name_workstation_short}}</code> &rarr; <code>Open</code> &rarr; <code>Virtual Machine</code> &rarr; <code>Clone</code>
+
+{{IconSet|h1|2}} '''Assign a new MAC address:'''
+
+This avoids two VMs having the same network identity, which can cause network conflicts.
+
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=info]]
+| text    = '''Note:''' A new MAC address is necessary if an additional [[VirtualBox]] VM is imported.
+}} <!-- close: mbox -->
+
+[[File:Virtualbox_Clone_Mac_Change2.png|800px]]
+
+* <u>KVM</u>: To change the internal network in KVM, see: [[KVM#Creating_Multiple_Internal_Networks|Creating Multiple Internal Networks]].
+
+{{IconSet|h1|3}} {{sysmaint_notice}}
+
+{{IconSet|h1|4}} '''Edit the network interfaces file:'''
+
+Change the internal LAN IP address, so the cloned VM does not reuse the same IP as the original VM.
+
+{{CodeSelect|code=
+sudoedit /etc/network/interfaces.d/30_non-qubes-whonix
+}} <!-- close: CodeSelect -->
+
+Ignore all lines starting with a hashtag ("<code>#</code>"). That is because comments are only for documentation and notes. However, comments are ignored by the system.
+
+Look for line <code>address 10.152.152.11</code>. Change the last octet. For example, change <code>10.152.152.1'''1'''</code> to <code>10.152.152.1'''2'''</code>
+
+Save and exit.
+
+{{IconSet|h1|5}} '''Review your changes:'''
+
+This is optional, but it helps confirm the file looks correct and shows the contents without comment lines.
+
+{{CodeSelect|code=
+cat /etc/network/interfaces.d/30_non-qubes-whonix {{!}} grep --invert-match "#"
+}} <!-- close: CodeSelect -->
+
+That should show for example:
+
+<pre>
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+       address 10.152.152.12
+       netmask 255.255.192.0
+       gateway 10.152.152.10
+</pre>
+
+It would even be possible to replace the contents of that config file with the above contents. When using more than 1 additional Whonix-Workstation however <code>10.152.152.12</code> should be changed to <code>10.152.152.13</code> and so forth.
+
+{{IconSet|h1|6}} '''Reboot or restart networking:'''
+
+Apply the new IP settings by rebooting, or by restarting networking.
+
+Reboot the {{project_name_workstation_short}} or alternately restart the network.
+
+{{CodeSelect|code=
+sudo service networking restart
+}} <!-- close: CodeSelect -->
+
+{{IconSet|h1|7}} '''Done.'''
+
+The additional {{project_name_workstation_short}} VM should now have a unique MAC address and a unique internal LAN IP address.
+
+}} <!-- close: Tab, {{non_q_project_name_short}} -->
+
+{{Tab
+|title= == {{q_project_name_short}} ==
+|image=[[File:Qubes-logo-icon.png|25px]]
+|addToClass=info-box
+|content=
+{{IconSet|h1|1}} '''Create a new App Qube:'''
+
+Create an additional App Qube based on the {{project_name_workstation_short}} Template (<code>{{project_name_workstation_template}}</code>) and give it a distinctive name such as for example <code>{{project_name_workstation_vm}}<u>-2</u></code>. (A more distinctive name is desirable.)
+
+{{IconSet|h1|2}} '''Confirm the net qube:'''
+
+Make sure the new {{project_name_workstation_short}} App Qube is using a {{project_name_gateway_short}} (such as for example the default <code>{{project_name_gateway_vm}}</code>) as its [https://www.qubes-os.org/doc/glossary/#net-qube <code>net qube</code>].
+
+If creating a new App Qube is unfamiliar, follow these step-by-step instructions: 
+
+{{box|text=
+'''Figure:''' ''App Qube Creation using Qubes VM Manager (QVMM)''
+
+[[File:Create_Qubes-Whonix-Workstation_AppVM.png|App Qube Creation using Qubes VM Manager (QVMM)]]
+
+{{IconSet|h2|1}} '''Create Qubes-{{project_name_workstation_short}} App Qube:'''
+
+Create Qubes-{{project_name_workstation_short}} App Qube.
+
+{{IconSet|h2|2}} '''Name and label:'''
+
+Name the App Qube. Don't include any personal information (if the App Qube is compromised, the attacker could run <code>qubesdb-read /name</code> to reveal the VM name). Name the App Qube something generic, for example: <code>{{project_name_workstation_vm}}<u>-2</u></code>.
+
+{{IconSet|h2|3}} '''Choose a color label:'''
+
+Choose a color label for the {{project_name_workstation_short}} App Qube.
+
+{{IconSet|h2|4}} '''Select the template:'''
+
+Use the {{project_name_workstation_short}} Template. For example: <code>{{project_name_workstation_template}}</code>.
+
+{{IconSet|h2|6}} '''Set the type:'''
+
+Keep it on <code>Application</code> which is the default.
+
+{{IconSet|h2|7}} '''Network:'''
+
+Choose the desired {{project_name_gateway_short}} ProxyVM from the list. For example: <code>{{project_name_gateway_vm}}</code>.
+
+{{IconSet|h2|8}} '''Confirm:'''
+
+Press: <code>Create new qube</code>.
+
+{{IconSet|h2|9}} '''Open a dom0 terminal:'''
+
+You will run a <code>qvm-tags</code> command in <code>dom0</code>.
+
+{{IconSet|h2|10}} '''Add the anon-vm tag:'''
+
+Add qvm-tag <code>anon-vm</code>, <code>sdwdate-gui-client</code> to the newly created App Qube. <ref>
+[[Dev/Qubes#qvm-tags|Developer documentation about <code>qvm-tags</code>]]
+</ref>
+
+<u>Note:</u> Replace <code>{{project_name_workstation_vm}}<u>-2</u></code> with the actual name of the VM.
+
+{{CodeSelect|code=
+qvm-tags anon-whonix-2 add anon-vm sdwdate-gui-client
+}} <!-- close: CodeSelect -->
+
+{{IconSet|h2|11}} '''Done.'''
+}} <!-- close: box --> 
+
+{{IconSet|h1|3}} '''Choose the gateway scenario:'''
+
+Depending on the <code>net qube</code> setting.
+
+Select an option.
+
+{{Tab
+|type=controller
+|content=
+
+{{Tab
+|title= === If you are using the default sys-whonix as gateway ===
+|type=section
+|addToClass=info-box
+|content=
+
+If the {{project_name_workstation_short}} App Qube <u>is connected to <code>{{project_name_gateway_vm}}</code></u>: No special instructions required.
+
+}} <!-- close: Tab, default sys-whonix gateway -->
+
+{{Tab
+|title= === If you are using a gateway other than sys-whonix ===
+|content=
+
+If the {{project_name_workstation_short}} App Qube <u>is connected to any {{project_name_gateway_short}} other than <code>{{project_name_gateway_vm}}</code></u>, apply the following instructions:
+
+The other gateway should be set up according to the instructions on the [[Multiple Whonix-Gateway]] wiki page.
+
+{{box|text=
+<u>Note:</u> Inside the {{project_name_workstation_short}} App Qube.
+
+{{IconSet|h2|1}} '''Create the config folder:'''
+
+Create folder <code>/usr/local/etc/sdwdate-gui.d</code>.
+
+{{CodeSelect|code=
+sudo mkdir -p /usr/local/etc/sdwdate-gui.d
+}} <!-- close: CodeSelect -->
+
+{{IconSet|h2|2}} '''Open the config file:'''
+
+Open with root rights.
+<!-- WIKI EDITORS NOTE: Template:Open_with_root_rights should not be used. -->
+
+{{CodeSelect|code=
+sudoedit /usr/local/etc/sdwdate-gui.d/50_user.conf
+}} <!-- close: CodeSelect -->
+
+{{IconSet|h2|3}} '''Add the gateway setting:'''
+
+Add the following text.
+
+Note: The following example uses <code>{{project_name_gateway_vm}}<u>-2</u></code> as an example. Replace <code>{{project_name_gateway_vm}}<u>-2</u></code> with the name of the VM of {{project_name_gateway_short}} which this {{project_name_workstation_short}} App Qube uses as its <code>net qube</code>. For example, <code>{{project_name_gateway_vm}}<u>-3</u></code>.
+
+{{CodeSelect|code=
+gateway="{{project_name_gateway_vm}}-2"
+}} <!-- close: CodeSelect -->
+
+{{IconSet|h2|4}} '''Save the file:'''
+
+Save the file.
+
+{{IconSet|h2|5}} '''Restart the VM:'''
+
+Restart the VM. <ref>
+Or restart sdwdate-watcher (sdwdate-gui).
+
+{{CodeSelect|code=
+killall sdwdate-watcher
+}} <!-- close: CodeSelect -->
+
+{{CodeSelect|code=
+/usr/libexec/sdwdate-gui/start-maybe
+}} <!-- close: CodeSelect -->
+</ref>
+
+{{IconSet|h2|6}} '''If there are issues:'''
+
+sdwdate-gui qrexec denied messages? See [[Qubes/Troubleshooting#sdwdate-gui_qrexec_settings|{{q_project_name_short}} troubleshooting, sdwdate-gui qrexec]].
+}} <!-- close: box -->
+
+}} <!-- close: Tab, non-default gateway -->
+
+{{IconSet|h1|4}} '''Done:'''
+
+The process of setting up an additional {{project_name_workstation_short}} App Qube has been completed.
+
+}} <!-- close: Tab controller, gateway scenario -->
+
+}} <!-- close: Tab, {{q_project_name_short}} -->
+
+}} <!-- close: Tab controller, platform selection -->
+
+= How-to: Use more than one {{project_name_workstation_short}} - More Security =
+{{Anchor|Firewall}}
+Platform-specific. Select your platform.
+
+{{Tab
+|type=controller
+|linkid=platformchoice
+|content=
+
+{{Tab
+|title= == {{non_q_project_name_short}} ==
+|type=section
+|image=[[File:Whonix-logo-standard.svg|25px]]
+|addToClass=info-box
+|content=
+[[Non-Qubes-Whonix|{{non_q_project_name_short}}]]: See: [[Connections between Gateway and Workstation|Connections between {{project_name_gateway_short}} and {{project_name_workstation_short}}]].
+}}
+
+{{Tab
+|title= == {{q_project_name_short}} ==
+|type=section
+|image=[[File:Qubes-logo-icon.png|25px]]
+|addToClass=info-box
+|content=
+[[Qubes|{{q_project_name_short}}]]: This step can be skipped. <ref name=qubes-isolated>
+By default, App Qubes that are behind the same <code>net qube</code> are prevented from connecting to each other in Qubes.
+</ref>
+
+}} <!-- close tab: Qubes-Whonix -->
+}} <!-- close tab controller: platform selection -->
+
+= See Also =
+
+{{multiple-vms-mininav}}
+
+* [[Whonix-Workstation]]
+* [[Whonix-Workstation_to_Whonix-Workstation_Connections|Connections between two different Whonix-Workstations]]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
