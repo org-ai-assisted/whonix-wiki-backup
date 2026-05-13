@@ -1,0 +1,403 @@
+{{Header}}
+{{#seo:
+|description=Introduction into {{project_name_long}} Technical Design.
+|image=Whonix-technical-introduction.png
+}}
+{{title|title=
+Technical Introduction
+}}
+{{tech_intro_mininav}}
+[[File:Whonix-technical-introduction.png|200px|thumb]]
+{{intro|
+Introduction into {{project_name_short}} Technical Design.
+
+* <u>Technical readers:</u> This wiki page is intended for technical readers.
+* <u>Laymen users:</u> Laymen users should read [[About|{{project_name_short}} Overview]] instead.
+}}
+= Summary =
+
+{{project_name_short}} aims to be safer than Tor alone. The primary goal is that no one can find out the user's IP, location, or de-anonymize the user.
+
+{{project_name_short}} consists of two Debian ({{Kicksecure_link
+|
+|{{Kicksecure}}
+}}) based (virtual) machines (VMs), which are connected through an isolated network. 
+
+* A) One machine acts as the client or ''{{project_name_workstation_short}}'', running applications such as a browser; and
+* B) the other as a proxy or ''{{project_name_gateway_short}}'', which runs Tor and routes all {{project_name_workstation_long}} traffic through Tor.
+
+{{TorifiedGateway}}
+
+This setup can be implemented either through virtualization and/or Physical Isolation (explained below).
+
+To visualize this configuration, imagine physically computer A) having no direct internet connection (no Wifi, no modem, no cable, no DSL) and being connected by a LAN cable to a separate physical computer B). In such a setup by default, computer A) has no way to access the internet. Computer B), the proxy, can however opt-in to provide network access to computer A).
+
+In this setup, how could computer A) get access to the internet? One way would be for computer B) to enable IP forwarding. {{project_name_short}} does not do this by design. Another way would be for computer B) to run proxy software that opens port(s) (services) that computer A) can access. This is the core principle of what {{project_name_short}} does.
+
+{{project_name_short}} comes with many [https://www.whonix.org/#security security-enhancing and anonymity-protecting features].
+
+[[Reliable_IP_Hiding|Whonix provides reliable IP hiding]]. However, hiding your identity is harder than just hiding your IP. Merely [[IP_hiding_is_outdated|hiding IP addresses is an outdated, year 1990 threat model]]. Simply masking the user's IP address is insufficient, as adversaries employ various [[Data Collection Techniques]] that do not require IP addresses. This is evidenced by numerous [[Browser Tests]], such as the [https://fingerprint.com/demo/ Fingerprint.com Demo], particularly since [[The_World_Wide_Web_And_Your_Privacy#Fingerprint.com|"12% of the largest 500 websites use Fingerprint.com"]].
+
+To keep users anonymous, {{project_name_short}} offers [[About#Full_Spectrum_Anti-Tracking_Protection|Full Spectrum Anti-Tracking Protection]] and is [https://www.whonix.org/#vpn much safer than VPNs] (refer to the comprehensive [[Whonix_versus_VPNs|Whonix versus VPNs]] comparison).
+
+[[What_we_do|Project activities]] include:
+
+* Maintaining approximately [https://github.com/{{project_name_short}} ~ 16 {{project_name_short}} source code repositories].
+* and [https://github.com/Kicksecure ~ 56 Kicksecure source code repositories].
+
+__TOC__
+
+= Essentials =
+The basic assumption is, that all applications are untrustworthy. No application must be able to obtain the user's real external IP. {{project_name_short}} ensures that applications can only connect through Tor. Direct connections (leaks) must be impossible. This is the only way we know of, that can reliably protect your anonymity from client application vulnerabilities and IP/DNS and [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO#protocol-leaks protocol leaks]. When the term protocol leak or "information leak" is used in the context of security and anonymity it is referring to an event that causes the release of secure or private information to an untrusted party or environment <ref name=leaks>
+[https://en.wikipedia.org/wiki/Information_leakage https://en.wikipedia.org/wiki/Information_leakage]
+</ref> <ref name=data-breach>[https://en.wikipedia.org/wiki/Data_breach https://en.wikipedia.org/wiki/Data_breach]
+</ref>.
+
+The '''{{project_name_short}} Concept''' (see below) is agnostic about everything, the anonymizer, platform, etc. See '''{{project_name_short}} Framework''' below.
+
+'''{{project_name_short}} Example Implementation''': Anonymity setup built around '''Tor''', two virtual machines using [[Qubes]], [[KVM]], [[VirtualBox]] or [[Physical Isolation|physical isolation]] and '''Debian GNU/Linux'''. {{project_name_short}} can be installed on every [[Supported Platforms|supported platform]]. (Supports Windows, OS X, Linux, BSD and Solaris.)
+
+Physical Isolation describes installing {{project_name_gateway_long}} and {{project_name_workstation_short}} on two different pieces of hardware. It is more secure than VirtualBox / KVM virtual machines alone, requires more physical space, and hardware and electricity costs are higher. Keep in mind that you don't need very powerful dedicated servers or desktops. Unfortunately, using [[Qubes|{{q_project_name_long}}]] with physical isolation is [[unsupported]]. For more information, see [[Dev/Build_Documentation/Physical_Isolation|Physical Isolation]].
+
+See [[Design]] for Technical Design and security of {{project_name_short}}. For security introduction, see below.
+
+The listed [[Features]], advantages and disadvantages shall give you an overview, what {{project_name_short}} is useful for, what {{project_name_short}} can do for you, and what not.
+
+= Technical Challenges =
+
+System security, privacy and anonymity are dependent upon sensitive information or data not escaping the trusted environment, which is protected and under the user's control. This is a technically challenging task with a multitude of elements to be considered. The numerous applications and background processes running on a system at any given time exacerbate the difficulties encountered.
+
+== Sensitive Information ==
+
+In the context of privacy and anonymity, sensitive information is any information that can be used to identify an individual. An inexhaustive list of sensitive information includes:
+
+* [https://en.wikipedia.org/wiki/Serial_number Hardware serials] - can be used to uniquely identify a computer and in turn be linked to the person who purchased or was using it.
+* [https://www.dnsleaktest.com/what-is-a-dns-leak.html DNS leak] - if DNS queries are leaking, an ISP or any on-path eavesdropper can log the sites that are visited.<ref name=DNS>[https://en.wikipedia.org/wiki/DNS_leak DNS leak]</ref>
+* [https://browserleaks.com/ip IP leaks] - a user's external (ISP-facing) IP address can be used to identify an individual as well as their location.
+* [https://digitalguardian.com/blog/what-personally-identifiable-information Personally identifiable information] (PII) - information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context.<ref name=IPP>[https://en.wikipedia.org/wiki/Personal_data https://en.wikipedia.org/wiki/Personal_data]</ref>.
+
+== Origin of Leaks ==
+
+Even if sensitive data is only a very small proportion of the total, it is extremely difficult to block all available leak avenues. Information leaks have several primary causes:
+
+* '''Misbehaving applications''' ([https://en.wikipedia.org/wiki/Software_bug buggy software]) - programs that do not function as intended, leading directly to data leakage or causing other applications they interact with to leak.
+
+* '''Deliberate''' ([https://en.wikipedia.org/wiki/Backdoor_(computing) Backdoors]) - a backdoor is a method, often secret, of bypassing normal authentication or encryption in a computer system, product, or embedded device (like a home router), or its embodiment which forms part of a cryptosystem, an algorithm, a chipset, or a "homunculus computer".<ref name=backdoor>[https://en.wikipedia.org/wiki/Backdoor_(computing) https://en.wikipedia.org/wiki/Backdoor_(computing)]</ref>
+
+* '''Mis-configured applications''' - some applications can leak sensitive information if configured improperly. For instance, VPN clients can [https://en.wikipedia.org/wiki/DNS_leak leak DNS queries]. Other applications that can be used to block information leaks, such as [https://en.wikipedia.org/wiki/Iptables iptables], may be ineffective if configured improperly.
+
+* '''Software vulnerability''' - a weakness which allows an adversary to reduce a system's integrity, availability, authenticity, non-repudiation and confidentiality of user data.<ref name=vulnerability>[https://en.wikipedia.org/wiki/Vulnerability_(computing) https://en.wikipedia.org/wiki/Vulnerability_(computing)]</ref><ref name=assurance>[https://en.wikipedia.org/wiki/Information_assurance https://en.wikipedia.org/wiki/Information_assurance]</ref>
+
+= {{project_name_short}} Framework =
+
+The '''{{project_name_short}} Concept''' is agnostic about everything. With some development effort you can replace any component. The {{project_name_short}} developers would like to support each and any use case, but due to limited amount of developers this is impossible and we focus on the '''{{project_name_short}} Example Implementation'''.
+
+The Tor network is {{project_name_short}} official and best supported anonymizing network. {{project_name_short}} can also potentially and optionally use [[OtherAnonymizingNetworks|other anonymizing networks]] (Such as JonDo, I2P, Freenet, RetroShare), either in addition ([[Tunnels|tunneled]] through Tor) or as a replacement for Tor. See the article for more information.
+
+You can also avoid using virtualization by using [[Dev/Build_Documentation/Physical_Isolation|Physical Isolation]] without any virtualization, although that is not recommended, see [[Comparison of different variants‎]] for more information.
+
+It is possible to use other virtualization platforms than VirtualBox, e.g. [[Qubes]] (which is based on XEN), [[VMware]], [[KVM]], XEN, [[QEMU]], Bochs, etc. (See [[Dev/Other Virtualization Platforms]].).
+
+Other operating systems (e.g. Windows; *nix; BSD; etc.) can potentially be used as host and/or guest operating system. See the [[Other Operating Systems]] for more information.
+
+== Design ==
+
+A robust "security by isolation" model is incorporated into the {{project_name_short}} framework to counter the ever-present threat of information leaks.  This model is composed of four (three when using physical isolation)<ref>{{project_name_short}} uses three components when using physical isolation, non-virtualization. {{project_name_workstation_short}}, {{project_name_gateway_short}} and Tor</ref> unique, but essential components.
+
+*  '''Hypervisor''' - also referred to as a virtual machine monitor. This is software, firmware, or hardware that creates and runs [https://en.wikipedia.org/wiki/Virtual_machine virtual machines]. Several elements are involved:
+** The computer on which the hypervisor runs is called the host.
+** The hypervisor in turn runs virtual machines which are called guest machines. The hypervisor provides hardware virtualization which hides the characteristics of a computing platform from the user, instead presenting an abstract computing platform.
+** This platform virtualization -- creation of a virtual machine that acts like a real computer -- is performed on a given hardware platform by host software (a control program).
+** The host software creates a simulated computer environment; a virtual machine (VM), for its guest software.
+** The guest software executes as if it were running directly on the physical hardware.
+** Due to these factors, {{project_name_short}} is able to isolate the the virtual machines from the actual computer hardware. This prevents the virtual machines from accessing sensitive information on the host OS or from each other.<ref name=hypervisor>[https://en.wikipedia.org/wiki/Hypervisor https://en.wikipedia.org/wiki/Hypervisor]</ref><ref name=virt_platform>[https://en.wikipedia.org/wiki/Hardware_virtualization https://en.wikipedia.org/wiki/Hardware_virtualization]</ref>
+
+*  '''{{project_name_gateway_short}}''' - the first of two VMs that make up {{project_name_short}}. The function of {{project_name_gateway_short}} is to run [[Tor]] processes and force all traffic through the Tor network. This is done through a modest application of [https://en.wikipedia.org/wiki/Iptables iptables], which blocks network traffic from passing through any other channel besides the dedicated Tor gateway. As mentioned earlier, the hypervisor enforces the isolation between the two VMs used in {{project_name_short}}. Consequently, any [[Malware and Firmware Trojans|malware]] that might infect {{project_name_workstation_short}} (the second VM) will not compromise {{project_name_gateway_short}} or the host.
+
+*  '''{{project_name_workstation_short}}''' - the second of two VMs, the Workstation is responsible for running user applications. This includes any pre-installed or custom-installed user applications. Since {{project_name_workstation_short}} is isolated from both the {{project_name_gateway_short}} and host OS, if an application misbehaves or is exploited by an adversary, this will be contained in the isolated {{project_name_workstation_short}}. Unless an advanced adversary is able to break out of the VM, there is no way for hardware serials or the externally-facing IP address to leak; {{project_name_workstation_short}} is simply unaware of sensitive information. Moreover, DNS leaks are eliminated since all DNS requests are sent over the Tor network via the {{project_name_gateway_short}}.
+
+* '''Tor''' -[https://www.torproject.org Tor] is an anonymity network which helps users defend against traffic analysis, network surveillance and privacy threats. Tor protects users by bouncing their communications around a distributed network of relays.<ref name=Tor>[https://en.wikipedia.org/wiki/Tor_(network) https://en.wikipedia.org/wiki/Tor_(network)]</ref>
+
+= {{project_name_short}} Concept =
+
+{{project_name_short}} is an [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO/IsolatingProxy Isolating Proxy] with an additional [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TransparentProxy Transparent Proxy], which can be optionally disabled. (See [[Stream Isolation]]).
+
+= Goals and Non-Goals =
+
+* Tor Browser development non-goal: make every user look like someone unique else.
+* Tor Browser development goal: to make everyone look the same from the perspective of destination websites; hiding the fact that someone is using Tor from destination websites.
+ {{project_name_short}} by concept is an extension to Tor Browser expanding these goals to the whole operating system.
+
+Goals are restricted not by what developers would ideally want to provide but by technical challenges and what's realistic.
+
+= Security Overview =
+
+== In layman's terms ==
+Is {{project_name_short}} safe?
+
+{{project_name_short}} has a solid {{project_age_years}} years [[history]] of providing [[Whonix_against_Real_Attacks|Whonix Track Record against Real Cyber Attacks]]. No data leaks have ever been reported.
+
+It is in the nature of security related software, that there is no 100% safety. Believe it or not, we use it ourselves and we keep maintaining and developing it. We believe that {{project_name_short}} is safer than other tools in some aspects, threat models, and use cases. There is detailed reasoning for such claims on the [https://www.whonix.org/#security {{project_name_short}} Homepage].
+
+If you are more paranoid or have higher security needs, read everything, full documentation and full technical design, you'll learn about physical isolation and build {{project_name_short}} from source code and so on.
+
+And no, {{project_name_short}} does '''not''' claim to protect from very powerful adversaries, to be a perfectly secure system, to provide strong anonymity, or to provide protection from technically advanced surveillance and similar.
+
+See also [[Warning#{{project_name_short}}_is_a_Work_in_Progress|{{project_name_short}} is a work in progress]].
+
+At first glance this site may create the impression that {{project_name_short}} is completely insecure and everything is a lost cause. We are upfront with things we could do better and we are still working on and try to consider all possibilities and document all thinkable and future threats. You must judge for your own which risks are acceptable for your use cases.
+
+== With more technical terms ==
+
+It is difficult to write a summary of {{project_name_short}} security features. Both anonymity and security consist of so many different aspects. That's why there is lots of [[Documentation]] and the whole Technical [[Design]].
+
+The Technical [[Design]] intends to document security philosophy, design, goals and current shortcomings of {{project_name_short}}.
+
+This chapter is only a short introduction. Please read the full [[Design]].
+
+{{project_name_short}} follows the principle of security by isolation. We know that making our currently used systems secure is a lost cause. They are too complex and too large to be trustworthy and verifiably free of any bugs. {{project_name_short}} can't solve this but it tries to minimize attack surfaces and limit what danger exploitable bugs in more exposed parts can do, one primary danger specific to Tor is the danger of exposing the public IP address of a system. {{project_name_short}} isolates client applications inside the {{project_name_workstation_short}} from discovering the external IP address. Specifically, {{project_name_short}} is designed to prevent direct detection of the IP (not more!) even if an adversary has unrestricted access to the {{project_name_workstation_short}}.
+
+Once there is a vulnerability found in Tor (ex: exploiting Tor's ports) or a successful attack against Tor, {{project_name_short}} fails.
+
+Same goes for iptables. {{project_name_short}} is a setup based on Linux, iptables, Tor, etc. If any of the underlying projects has a vulnerability, which cannot be ruled out, of course, {{project_name_short}} will fail as well.
+
+{{project_name_short}} also has [[Advanced Deanonymization Attacks| limited countermeasures]] and protections against most classes of [[Advanced Security Guide#Side Channel Attacks|side-channel attacks]].
+
+In summary, {{project_name_short}} does '''not''' claim to be a perfectly secure system or able to provide anonymity if one faces a very powerful adversary, and so on.
+
+There are [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO#general-torifying-information to torify]. Read the link for a comparison of the security.
+
+{{project_name_workstation_short}} has no access to the internet without going through Tor. You can look into our setup. It is all Open Source and well documented.
+
+{{Anchor|multiple_security_layers}}
+([[#multiple_security_layers|#multiple security layers]])
+
+{{project_name_short}} uses multiple security layers.
+
+# IP-forwarding is disabled.
+# There is no dependency on routing table modifications. <ref>
+By comparison, when using popular VPN software, networking depends on the state of the VPN software modifying the routing table. This can cause clearnet leaks. See [[Whonix_versus_VPNs#VPN Software is not Designed for Anonymity|VPN Software is not Designed for Anonymity]]. Whonix does not depend on and does not make any routing table modifications.
+</ref>
+# In general terms ([[unspecific|unspecific to {{project_name_short}}]]): if one VM is only connected to another VM through a virtual, internal LAN and has no other network interfaces besides that, it does not easily gain internet access. That requires IP forwarding to be enabled the other VM.
+# In {{project_name_short}} specific terms: Since one VM {{project_name_workstation_short}} is only connected to another VM {{project_name_gateway_short}} through a virtual, internal LAN, {{project_name_workstation_short}} does not easily gain internet access.
+# What application internet traffic originating from {{project_name_workstation_short}} essentially do is attempting to talk to a "service" on {{project_name_gateway_short}}, which is [[Tor]]. However, if Tor refuses connections or Tor isn't even available, there is nothing legitimate that the application traffic can do from within {{project_name_workstation_short}}. <ref>
+Illegitimate example: [[malware]] exploiting the hypervisor and executing code on the host operating system.
+</ref>
+# Therefore even if {{project_name_gateway_short}} if powered off and only {{project_name_workstation_short}} is powered on, no leaks are possible.
+# If Tor is not running or not responding on {{project_name_gateway_short}}, then {{project_name_workstation_short}} has no way to connect to the internet.
+# In other words, {{project_name_short}} fails "closed": when Tor is disabled, loses connection, or the {{project_name_gateway_short}} crashes, no network connections are possible. (Fails "closed" means, connection failing without any leak. Nothing goes out to the internet. Failing "open" in this context would mean it would fail to connect using Tor and connect using the user's real external IP address instead.)
+# IPv6 is disabled.
+# The Iptables firewall on {{project_name_gateway_short}} redirects any traffic from originating from {{project_name_workstation_short}} to Tor's [[ports]] on {{project_name_gateway_short}}. Local network connections are dropped. No leaks are possible, assuming the TCB is trustworthy.
+# Even without [[Whonix-Gateway Firewall]] and without [[Whonix-Workstation]] firewall, no leaks are possible. Traffic from {{project_name_workstation_short}} can either reach Tor which is running on {{project_name_gateway_short}} or no destination at all.
+# The only thing that breaks and fails closed even without any firewalls is [[Stream_Isolation#Transparent_Proxy|transparent proxying]].
+# Applications are configured correctly using latest suggestions (correct application and proxy and other privacy settings, [[Stream Isolation]]).
+# Firewall rules are enforced and prevent accessing the internet directly, thus leaks are prevented in case some application leaks.
+# Optionally, [[Dev/Build_Documentation/Physical_Isolation|Physical Isolation]] is documented.
+# [[Protocol-Leak-Protection and Fingerprinting-Protection]].
+# [[Dev/TimeSync|{{project_name_short}} Secure And Distributed Time Synchronization Mechanism]].
+# Check.torproject.org is checked (see [https://www.kicksecure.com/wiki/Systemcheck systemcheck]) anyway, even though we are sure, that there are no leaks.
+# Built in update notification for operating system updates, Tor Browser version and {{project_name_short}} version (see [https://www.kicksecure.com/wiki/Systemcheck systemcheck]).
+# Comprehensive, growing [[Documentation]].
+# Comprehensive, growing [[Design|Technical Design]].
+# Openness about weaknesses, shortcomings, etc.
+# Cryptographically signed binary builds and git source code tags.
+# ...
+
+{{project_name_short}} was tested for leaks, see [[Dev/Leak Tests]]. All went negative, meaning no leaks have ever been found. Additionally, Skype, which is known for it is ability to punch through firewalls, was not able to establish non-torified connections. Also BitTorrent doesn't leak the IP (there is an online bittorrent leak tester), which of course should never be used through Tor (because it chokes Tor nodes), but for leak testing it was welcome. Right now we don't know of any leak tests which leaks the real IP.
+
+{{project_name_short}} is safe (not affected) from [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO#protocol-leaks Protocol leaks], like this the ones listed on [[Whonix against Real Attacks]], Skype, Flash or BitTorrent. This already justifies to use a "no non-Tor connections possible" approach.
+
+See also [[Security Reviews and Feedback]].
+
+When you go ahead now, and ask in a hacker forum, they probably won't spread a simple method to get the real IP of {{project_name_workstation_short}}. On the other hand, if you run an intelligence service and have 100.000 $ left over, you can announce something like "find a new exploit in Tor's SocksPort and get 100.000 $". Qualified people start looking into it and might find something.
+
+= Does {{project_name_short}} / Tor Provide Protection from Advanced Adversaries? =
+
+== Targeted Surveillance ==
+
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px]]
+| text    = Based on intelligence disclosures, users targeted for active surveillance by advanced adversaries are almost guaranteed to be infected!
+}}
+
+{{project_name_short}} cannot provide protection against [https://www.spiegel.de/international/world/catalog-reveals-nsa-has-back-doors-for-numerous-devices-a-940994.html advanced attack tools] which have the capability to penetrate all types of OSes, firewalls, routers, VPN traffic, computers, smartphones and other digital devices. Implants are capable of surviving across reboots, software / firmware upgrades and following the re-installation of operating systems. <ref>For example, BIOS is a favorite target of IC operatives for persistence.</ref>
+
+Once infected in this way, it is virtually undetectable and no solution can be readily found, except throwing away the hardware and moving on from the targeted physical / network location. Encryption, Tor / Tor Browser, other anonymity tools, "secure" hardware configurations and so on are helpless against these attacks, which are increasingly automated and being scaled up in size. For example, the American IC prefers using the [https://theintercept.com/2014/03/12/nsa-plans-infect-millions-computers-malware/ TURBINE] system for this purpose.
+
+The following is just a small sample of the hundreds of advanced implants and tools currently in use. Needless to say, advanced adversaries can achieve almost any outcome they like: <ref>https://theintercept.com/2014/03/12/nsa-plans-infect-millions-computers-malware/</ref> <ref>https://www.washingtonpost.com/world/national-security/powerful-nsa-hacking-tools-have-been-revealed-online/2016/08/16/bce4f974-63c7-11e6-96c0-37533479f3f5_story.html</ref> <ref>https://www.schneier.com/blog/archives/2013/10/code_names_for.html</ref>
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+* Exfiltrate or modify information / data including removable flash drives (SALVAGERABBIT).
+* Log keystrokes or browser history (GROK, FOGGYBOTTOM).
+* Surreptitiously turn on cameras or microphones (CAPTIVATEAUDIENCE, GUMFISH).
+* Exploit VPN  and VoIP data (HAMMERCHANT, HAMMERSTEIN).
+* Block certain websites (QUANTUMSKY).
+* Corrupt downloads (QUANTUMCOPPER).
+* Present fake or malware-ridden servers (FOXACID, QUANTUMHAND). <ref>A popular attack against Tor Browser users.</ref>
+* Launch malware attacks (SECONDDATE).
+* Upload and download data from an infected machine (VALIDATOR).
+* Detect certain targets for attack (TURMOIL). <ref>This relies on selector types like machine IDs, attached devices, cipher keys, network IDs and various user-specific leads such as cookies.</ref>
+* Collect images of computer screens (VAGRANT).
+* Collect from LAN implants (MINERALIZE).
+* Image the hard drive (LIFESAFER).
+* Jump air-gaps (GENIE).
+* Inject ethernet packets onto targets (RADON).
+* And much, much [https://electrospaces.blogspot.fr/p/nicknames-and-codewords.html more].
+</div>
+The take-home message is that current hardware and software solutions provide multiple attack vectors which are impossible to completely close. Air-gapped solutions which have never been connected to the Internet ''may'' provide security for targeted individuals, but Internet-connected devices should be considered completely unsafe.
+
+== Passive Surveillance ==
+
+Users should be aware that passive surveillance systems will attempt to intercept, record, categorize and attribute all data that can be feasibly collected, including [[Surveillance_Capabilities#Internet_Backbone_Surveillance|straight off the Internet backbone]]. These systems are designed to hoover up ''everything'', irrespective of whether it is browsing history, emails, chat / video, voice data, photographs, attachments, VoIP, file transfers, video conferencing, social networking, logins, or user activity meta-data.
+
+{{mbox
+| type      = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = Any data packets which traverse networks (particularly encrypted traffic like Tor) are targeted for collection. Targeting of popular technology companies is also the IC's bread and butter.
+}}
+
+Consistent use of anonymous handles, strong encryption, Tor / Tor Browser and world class open source anonymity tools and platforms ''may'' provide partial protection against [https://en.wikipedia.org/wiki/List_of_government_mass_surveillance_projects passive surveillance programs], such as:
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+* [https://en.wikipedia.org/wiki/PRISM PRISM].
+* [https://www.dailydot.com/debug/nsa-spy-prgrams-prism-fairview-blarney/#fairview FAIRVIEW].
+* [https://www.dailydot.com/debug/nsa-spy-prgrams-prism-fairview-blarney/#blarney BLARNEY].
+* [https://www.dailydot.com/debug/nsa-spy-prgrams-prism-fairview-blarney/#so STORMBREW and OAKSTAR].
+* [https://www.dailydot.com/debug/nsa-spy-prgrams-prism-fairview-blarney/#xks XKEYSCORE].
+* [https://www.dailydot.com/debug/nsa-spy-prgrams-prism-fairview-blarney/#mtp MARINA, TRAFFICTHIEF, PINWHALE].
+* [https://en.wikipedia.org/wiki/MAINWAY MAINWAY].
+* [https://en.wikipedia.org/wiki/MYSTIC MYSTIC].
+* And many similar programs run by governments worldwide.
+</div>
+Be aware that this claim comes with an important caveat - it depends on whether Tor (and other software / hardware solutions) [https://lists.torproject.org/pipermail/tor-talk/2013-July/029014.html provide adequate protection or not]. The answer to that question is not clear. {{project_name_short}} has adopted a skeptical mindset and only makes conservative claims, because it is impossible to prove a negative. For a related statement about advanced adversaries, refer to the following [[Technical Introduction#With more technical terms|technical introduction]].
+
+= Can Certain Activities Leak DNS and/or the Real External IP Address / Location? =
+
+No activity conducted inside {{project_name_workstation_short}} can cause IP/DNS leaks so long as {{project_name_gateway_short}} is left unchanged or only documented changes are made like configuring bridges, establishing onion services and running updates.
+
+However, certain behaviors can degrade anonymity or inadvertently expose a user's real identity or location. For instance:
+
+* Do not confuse [[Tips_on_Remaining_Anonymous#Study:_Anonymity_and_Pseudonymity_are_not_the_same|pseudonymity with anonymity]].
+* Avoid activities that [[Tips_on_Remaining_Anonymous|risk de-anonymization]].
+* Avoid major networking changes like using non-Tor, [[Secondary_DNS_Resolver|secondary DNS resolvers]] or establishing permanent Tor exit relays. <ref>Both of these methods shift trust to a single provider, rather than distributing it. In the case of the DNS resolver, it may lead to identity correlation or weaken safeguards against potentially hostile applications; for example, see [[Voip#Skype|Skype]].</ref>
+
+= Forensics =
+== Forensic Considerations ==
+
+In the past, a number of ideas have been put forward as anti-forensics.
+
+* Shredding the {{project_name_short}} hard disk images.
+* Having a zip archive of {{project_name_short}} hard disk images and restoring them every time {{project_name_short}} is used.
+* Restoring a fresh [[{{project_name_workstation_short}}_Security#VM_Snapshots|snapshot]] every time {{project_name_short}} is used.
+* Running {{project_name_short}} [https://forums.whonix.org/t/whonix-and-truecrypt/293/6 completely in ramdisks].
+* Using [[Full_Disk_Encryption|full disk encryption]].
+* Logs deletion.
+* And so on.
+
+Unfortunately, these methods are not a sufficient substitute. It is manifestly unsafe to try and deal with data by wiping it after it has already been stored, so this is a poor design principle to implement. One reason for that is [https://en.wikipedia.org/wiki/Wear_leveling wear leveling]. The issue with wear leveling is that the disk controller tells the kernel "file deleted," while in reality the sector has been marked as unusable but still contains data. This data can be recovered by data recovery professionals using low-level disk controller commands. This is documented in more detail here: {{kicksecure_wiki
+|wikipage=Full_Disk_Encryption#Advice_for_Solid-state_Drives_and_USB_Storage
+|text=Advice for Solid-state Drives and USB Storage
+}}.
+
+Use [[Live Mode]] on the host {{os}} instead. The advantage is that sensitive (or unencrypted) data is never stored on storage media in the first place. Ideally, this would be combined with {{kicksecure_wiki
+|wikipage=read-only
+|text=read-only
+}} mode.
+
+Using full disk encryption is still useful to protect against forensic analysis, but in some parts of the world this is illegal or draws unwanted attention.
+
+== Anti-forensic Claims ==
+
+Readers are urged to exercise caution when encountering claims about the capability to defeat disk forensics. For instance, the {{project_name_short}} team does not possess expertise in areas such as:
+
+* HDD/SSD swap space.
+* [https://en.wikipedia.org/wiki/Computer_forensics Computer forensics].<ref>While the developers have a foundational understanding, they primarily advocate caution.</ref>
+* Residual data on USBs and SSDs post [https://web.archive.org/web/20201201150503/http://www.infosecisland.com/blogview/12153-Data-Remains-on-USB-and-SSDs-After-Secure-Erase.html "secure" erasure].
+* [https://en.wikipedia.org/wiki/Wear_leveling Wear leveling].
+** {{kicksecure_wiki
+|wikipage=Full_Disk_Encryption#Advice_for_Solid-state_Drives_and_USB_Storage
+|text=Advice for Solid-state Drives and USB Storage
+}}
+* Occasional tendencies of conventional hard drives to flag sectors as defective, retaining their data indefinitely.<ref>This phenomenon warrants further research.</ref>
+* Data remnants potentially [https://research.torproject.org/techreports/tbb-forensic-analysis-2013-06-28.pdf left behind by Tor Browser] across macOS, Linux, and Windows.
+* Other associated [https://web.archive.org/web/20170911205814/http://www.forensicswiki.org/wiki/Main_Page forensic competencies].
+
+Even meticulously crafted systems struggle to match the effectiveness of an amnesic setup. To confidently assert anti-forensic capabilities, the following procedures are fundamental:
+
+# Create an image of the HDD/SSD.
+# Operate {{project_name_short}} and engage in a variety of typical user actions.
+# Produce a subsequent image of the HDD/SSD.
+# Compare the two images.
+
+Elaborating on the process:
+
+# Boot using an alternate system, an external (Live) DVD or USB.
+# {{kicksecure_wiki
+|wikipage=Raw_Disk_Backup
+|text=Create a raw disk backup image of the internal storage.
+}}
+# Shutdown.
+# Boot into live mode from the internal storage.
+# Launch various applications and carry out a spectrum of regular user tasks.
+# Shutdown.
+# Construct a second raw disk backup image of the internal storage.
+# Compare the images checksums utilizing tools like <code>sha512sum</code> or its equivalents.
+# Conclusion:
+
+* <u>If both images have the same checksum:</u> Excellent, the system demonstrates amnesia.
+* <u>Otherwise:</u> There is an issue.
+
+Without executing these critical steps, a system might seem amnesic yet fail against modern forensic instruments. Those anxious about local forensic threats should consider {{kicksecure_wiki
+|wikipage=Full_Disk_Encryption
+|text=full disk encryption
+}}. Leveraging reputable open-source encryption methods like Linux dmcrypt, when used appropriately, generally delivers on its assurances. Nonetheless, be mindful that this strategy has its limitations, especially when users might be compelled to disclose their passwords. Opting for [[Live Mode]] is a preferable alternative.
+
+Related:
+
+* development task: [https://phabricator.whonix.org/T910 anti-forensics / amnesia testing of Whonix-Host in Live mode]
+* [https://www.reddit.com/r/Whonix/comments/15q7vcs/have_the_dev_team_tested_the_antiforensic/ Have the dev team tested the anti-forensic capability of Whonix-live mode and grub live?]
+
+= Images =
+== Why are {{project_name_short}} Images so Large? ==
+
+From {{project_name_short}} 14:
+
+* zerofree has been used to reduce the size of the {{project_name_gateway_short}} from 1.7 GB to 850 MB, while the {{project_name_workstation_short}} is reduced from 2 GB to 1.1 GB. <ref>https://phabricator.whonix.org/T790</ref>
+* A [[VirtualBox|headless, cli-only version of {{project_name_short}}]] is available.
+
+<s>This is still larger than other "Tor-VM" or "Tor-LiveCD/DVD" projects, which sometimes depend on specially "stripped-down" or minimal distributions like [http://www.tinycorelinux.net/ TinyCore], [http://www.damnsmalllinux.org/ DSL] and [https://puppylinux-woof-ce.github.io/ Puppy Linux].</s>
+
+= Live Operating System =
+== Is there Something like {{project_name_short}} Live? ==
+[[Non-Qubes-Whonix|{{non_q_project_name_short}}]]: See [[Live Mode]]
+
+[[Qubes|{{q_project_name_short}}]]: look into something roughly similar, see [[Qubes/Disposables|Qubes Disposables]].
+
+Alternatively, users can follow the recommendations to run {{project_name_short}} with the [[System_Configuration_and_Access#Use_a_Dedicated_Host_Operating_System_and_Computer|dedicated host operating system]] installed on [[USB Installation|external media]] in combination with [[Full_Disk_Encryption|full disk encryption]].
+
+== Is there a {{project_name_short}} Amnesic Feature / Live CD / Live DVD? What about Forensics? ==
+Amnesic Feature: See [[Live Mode]].
+
+Live: See [[Whonix-Host]].
+
+{{Anchor|future-live-dvd}}
+
+== Will there be a {{project_name_short}} Live CD or DVD? ==
+Probably yes. See [[Whonix-Host]].
+
+=== {{non_q_project_name_long}} ===
+
+[[Whonix-Host|possibly in future]].
+
+=== {{q_project_name_short}} ===
+Another promising long term possibility may be running [[Qubes|{{q_project_name_short}}]] on [https://www.qubes-os.org Qubes OS] Live DVD/USB, which is currently in Alpha. <ref>See also: https://groups.google.com/g/qubes-users/c/IQdCEpkooto</ref> Unfortunately, at the time of writing Live-mode is no longer supported or maintained by Qubes. <ref>https://www.qubes-os.org/downloads/</ref> Nevertheless, if this is further developed in the future, only limited changes are required on the {{project_name_short}} side. The primary responsibility for hardware support and Live operating system development rests upon Qubes developers, with whom the {{project_name_short}} team has a strong, collaborative, working relationship.
+
+For something roughly similar see [[Qubes/Disposables|Qubes Disposables]].
+
+= See Also =
+* [[Comparison with Others|Comparison of {{project_name_short}}, Tails, Tor Browser, TorVM and corridor]]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Design]]
