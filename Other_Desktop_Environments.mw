@@ -1,0 +1,36 @@
+{{Header}}
+{{title|title=
+Other Desktop Environments
+}}
+{{#seo:
+|description=How to use Other Desktop Environments other than LXQt with {{project_name_short}}. Current situation. Risks. Future. (Gnome, KDE, Xfce, MATE, ...)
+|image=Organize-27344_640.png
+}}
+{{other_mininav}}
+[[File:Organize-27344_640.png|thumb|200px]]
+{{intro|
+How to use Other Desktop Environments other than LXQt with {{project_name_short}}. Current situation. Risks. Future. (Gnome, KDE, Xfce, MATE, ...)
+}}
+= Current Situation =
+As of version <code>18</code>, the [[Download]]able {{project_name_short}} versions are available with either:
+
+* '''A)''' <u>[[VirtualBox#GUI|LXQt]]:</u> desktop environment ({{gui}}; <u>OR</u>
+* '''B)''' <u>[[VirtualBox#CLI|{{cli}}]]:</u> text terminal only (no desktop environment).
+
+However, other desktop environments like Gnome, KDE, Xfce, LXDE and so on can be manually installed.
+
+= Risks =
+{{upstream_wiki}}
+
+= Future =
+Since {{project_name_short}} is an Open Source / [https://forums.whonix.org/t/lets-call-it-freedom-software-rather-than-free-software-or-open-source/6961 Freedom Software] project, {{project_name_short}} developers are hoping that other developers join the project and maintain other desktop environments. That someone could be you?
+
+= See Also =
+* [[Debian Packages|{{project_name_short}} Debian Packages, which ones are safe to remove?]]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
