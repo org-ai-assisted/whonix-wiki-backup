@@ -1,0 +1,265 @@
+{{Header}}
+{{title|title=
+{{q_project_name_long}} Tor Connectivity and sdwdate Troubleshooting
+}}
+{{#seo:
+|description=Troubleshooting Tor, Network and sdwdate Issues with {{project_name_long}}
+|image=Torconnectivitytroubleshoot.png
+}}
+{{qubes_troubleshooting_mininav}}
+[[File:Torconnectivitytroubleshoot.png|thumb]]
+{{intro|
+Troubleshooting Tor, Network and sdwdate Issues with {{project_name_short}}
+}}
+= Introduction =
+Occasionally, {{q_project_name_short}} user are reporting connectivity issues as well as sdwdate issues. However, a lot issues {{q_project_name_short}} connectivity issues are [[unspecific|unspecific to {{project_name_short}}]]. These issues are often misattributed to {{project_name_short}}.
+
+Even though the issue is happening inside {{project_name_short}}, the cause is most often unrelated to {{project_name_short}} source code. Qubes is developed by [https://www.qubes-os.org Qubes OS Project], which is an independent entity. The is the norm in Linux distributions. To learn more about such relationships see {{kicksecure_wiki
+|wikipage=Linux User Experience versus Commercial Operating Systems
+|text=Linux User Experience versus Commercial Operating Systems
+}}. A different issue could be a [[Network Obstacle]].
+
+{{project_name_short}} does integration work {{project_name_short}} integrated into the Qubes platform. To use a simple analogy, {{project_name_short}} stays "on the outside". Very few modifications are made to Qubes through Qubes dom0 package [https://github.com/QubesOS/qubes-core-admin-addon-whonix qubes-core-admin-addon-whonix] as described for developers in the [[Dev/Qubes#qvm-tags|{{q_project_name_short}} <code>qvm-tags</code>]] chapter.
+
+In the past, Qubes was released with some "strange" connectivity bugs such as [https://github.com/QubesOS/qubes-issues/issues/7123 this].
+
+A Qubes user might think the user has updated Qubes which should include bug fixes but actually the update might not have happened due to Qubes Updater issues. See [[Qubes/Update|Qubes-Whonix/Update]].
+
+To remedy this kind of issue, [[#Connectivity Troubleshooting Approaches|there are a few approaches]].
+
+= Qubes sdwdate specific =
+It is often suspected that sdwdate might be the cause.
+
+This is unlikely. No issues are reported for {{project_name_short}} on other platforms such as {{project_name_short}} for VirtualBox which has a magnitude of more users but no (or very rare) similar connectivity bug reports.
+
+[[sdwdate-gui]] makes Tor issues in {{q_project_name_short}} more visible due to its graphical indication and easily accessible logs.
+
+However, at time of writing [[sdwdate-gui]] is mostly a [[Troubleshooting#Unsuitable Connectivity Troubleshooting Tools|unsuitable connectivity troubleshooting tool]].
+
+To exclude the possibly that sdwdate is the cause, the user could attempt to disable the autostart of sdwdate.
+
+* info: [[sdwdate]]
+* try: [https://www.kicksecure.com/wiki/Sdwdate#Disable_Autostart Disable Autostart of sdwdate]
+
+= Connectivity Troubleshooting Approaches =
+== Generally ==
+'''1.''' The user is encouraged to learn about general ([[unspecific|unspecific to {{project_name_short}}]]) Qubes Updater issues and make sure updates are really installed. See also [[Qubes/Update]].
+
+'''2.''' [[Troubleshooting#Connectivity Troubleshooting|Connectivity Troubleshooting]]
+
+'''3.''' [[Tor#Connectivity_Troubleshooting|Tor Connectivity Troubleshooting]]
+
+== Qubes sys-net workaround ==
+Complete the following steps:
+
+# Shut down <code>{{project_name_gateway_vm}}</code>.
+# Change the <code>{{project_name_gateway_vm}}</code> NetVM setting from <code>sys-firewall</code> to <code>sys-net</code>.
+# Restart <code>{{project_name_gateway_vm}}</code>.
+
+This procedure might help, but should not be considered a final solution. <ref>
+This procedure was useful for [[Qubes|{{q_project_name_short}}]] R3.2 users, although the Qubes bug report is now resolved: https://github.com/QubesOS/qubes-issues/issues/2141
+</ref>
+
+Please report if this workaround helped.
+
+= systemd-socket-proxyd =
+* <code>systemd-socket-proxyd</code> using 100% CPU was reported [https://forum.qubes-os.org/t/suspend-swap-and-whonix-gateway-performance-issues/11310 here]
+* <code>systemd-socket-proxyd</code> <code>Failed to get remote socket: Too many open files</code> potentially caused by [https://github.com/QubesOS/qubes-issues/issues/7539 VM logs filled with "host kernel: xen:grant_table: g.e x still pending" messages #7539]
+
+= xen:grant_table =
+* Both,
+** <code>kernel: xen:grant_table: g.e. redacted still pending</code>
+** <code>kernel: deferring g.e. redacted (pfn redacted)</code>
+* potentially caused by [https://github.com/QubesOS/qubes-issues/issues/7539 VM logs filled with "host kernel: xen:grant_table: g.e x still pending" messages #7539]
+
+= suspend resume related =
+* [https://github.com/QubesOS/qubes-issues/issues/7554 VM using kernel 5.10.112 unable to resume after suspension #7554]
+* [https://github.com/QubesOS/qubes-issues/issues/7548 Windows become unresponsive for VMs that were paused before suspend #7548]
+
+Potential fix:
+
+[https://github.com/QubesOS/qubes-core-admin/pull/473 Properly suspend all VMs, not only those with PCI devices #473]
+
+= clocksource tsc vs xen =
+
+* https://github.com/QubesOS/qubes-issues/issues/7404#issuecomment-1113299850
+
+= Future =
+The community is encouraged not to wait for {{project_name_short}} to fix these connectivity issues since this unfortunately is unlikely to happen. This is because {{project_name_short}} developers are not affected by these connectivity issues, these are non-reproducible issues and sometimes these are caused by already fixed Qubes bugs which are not yet fixed on Qubes due to Qubes Updater issues.
+
+= Related Qubes Bugs =
+* [https://github.com/QubesOS/qubes-issues/issues/7013 <code>Denied: whonix.SdwdateStatus</code> error message after DispVM has halted]
+** https://github.com/QubesOS/updates-status/issues/2824 will fix most if not all <code>Denied: whonix.</code> alike issues
+* [https://github.com/QubesOS/qubes-issues/issues/4167 Qubes doesn’t backup and restore qvm-tags.] Therefore, sdwdate <code>Denied</code> messages can happen.
+* [https://github.com/QubesOS/qubes-issues/issues/7287 Switching qube to Whonix template fails to add <code>anon-vm</code> qvm-tag, resulting in <code>sys-whonix: denied: denied by policy</code>]
+
+= Unexpected autostart of sys-whonix =
+If using multiple {{q_project_name_short}} VMs, the user should make sure to have followed the relevant documentation.
+
+{{multiple-vms-mininav}}
+
+3 components are related here.
+
+* '''A)''' [https://www.qubes-os.org/doc/how-to-install-software-in-dom0/ Qubes dom0 UpdateVM setting]
+* '''B)''' Qubes dom0 [[Multiple_Qubes-Whonix_Templates#UpdatesProxy_Settings|UpdatesProxy]]
+* '''C)''' Qubes dom0 [[#sdwdate-gui_qrexec_settings|sdwdate-gui qrexec settings]].
+
+On the [[Multiple Qubes-Whonix Templates]] wiki page take special note of the warning box in the [[Multiple_Qubes-Whonix_Templates#UpdatesProxy|UpdatesProxy]] chapter.
+
+Related:
+
+* [[Dev/Qubes#qvm-tags|Developer documentation about <code>qvm-tags</code>]]
+* [[Dev/Qubes#qvm_tags_issues|<code>qvm-tags</code> issues]]
+
+== sdwdate-gui qrexec settings ==
+=== sdwdate-gui qrexec settings fix ===
+* A) New installation of Qubes R4.2: These steps are very most likely not required.
+* B) A fully updated Qubes should not require any of the following steps.
+
+'''1.''' [https://github.com/QubesOS/qubes-core-admin-addon-whonix/blob/master/qubes-rpc-policy/80-whonix.policy <code>80-whonix.policy</code> on github] ([https://raw.githubusercontent.com/QubesOS/qubes-core-admin-addon-whonix/master/qubes-rpc-policy/80-whonix.policy raw]) should look same as <code>/etc/qubes/policy.d/80-whonix.policy</code> in dom0.
+
+'''2.''' The following files are legacy and could optionally be safely removed if step 1 was confirmed.
+
+{{CodeSelect|code=
+sudo rm /etc/qubes-rpc/policy/whonix.GatewayCommand
+}}
+
+{{CodeSelect|code=
+sudo rm /etc/qubes-rpc/policy/whonix.NewStatus
+}}
+
+{{CodeSelect|code=
+sudo rm /etc/qubes-rpc/policy/whonix.SdwdateStatus
+}}
+
+=== sdwdate-gui qrexec debugging ===
+==== dom0 journal log file reading ====
+Check, follow dom0 journal log file while reproducing sdwdate-gui qrexec messages.
+
+Look for <code>denied:</code> messages.
+
+In dom0.
+
+{{CodeSelect|code=
+sudo journalctl | grep denied:
+}}
+
+Or.
+
+{{CodeSelect|code=
+sudo journalctl -f
+}}
+
+==== sdwdate-watcher debugging ====
+'''1.''' Inside the Whonix-Workstation App Qube.
+
+'''2.''' Kill sdwdate-watcher.
+
+sdwdate-watcher is the part of sdwdate-gui which watches sdwdate events from /var/run/sdwdate folder and notifies the <code>gateway</code> configured in <code>/usr/local/etc/sdwdate-gui.d/50_user.conf</code>.
+
+{{CodeSelect|code=
+killall sdwdate-watcher
+}}
+
+'''3.''' Start sdwdate-watcher.
+
+{{CodeSelect|code=
+/usr/libexec/sdwdate-gui/start-maybe
+}}
+
+'''4.''' Restart sdwdate.
+
+This is to produce new sdwdate activity that sdwdate-watcher can observe.
+
+{{CodeSelect|code=
+sudo systemctl restart sdwdate
+}}
+
+'''5.''' See if there are any error messages.
+
+==== qvm-tags verification ====
+<u>Notes:</u>
+
+* Any commands that follow must be run in Qubes dom0.
+* Debugging Qubes qrexec is largely [[unspecific|unspecific to {{q_project_name_short}}]]. Qubes qrexec debugging instructions from other resources, such as the Qubes website, should also apply.
+
+{{IconSet|h1|1}} Background information on qvm-tags.
+
+See if you can make head or tail of [[Dev/Qubes#qvm-tags|qvm-tags developer notes]]. If not, skip this step.
+
+{{IconSet|h1|2}} Check qvm-tags of {{project_name_gateway_long}} Net Qube.
+
+<u>Note:</u> Replace <code>sys-whonix</code> with the actual name of the Whonix-Gateway you are using.
+
+{{CodeSelect|code=
+qvm-tags sys-whonix
+}}
+
+Expected printout should include:
+
+<pre>
+anon-gateway
+</pre>
+
+<pre>
+sdwdate-gui-server
+</pre>
+
+{{IconSet|h1|3}} Check qvm-tags of {{project_name_workstation_long}} App Qube.
+
+<u>Note:</u> Replace <code>anon-whonix</code> with the actual name of the Whonix-Workstation you are using.
+
+{{CodeSelect|code=
+qvm-tags anon-whonix
+}}
+
+Expected printout should include:
+
+<pre>
+anon-vm
+</pre>
+
+<pre>
+sdwdate-gui-client
+</pre>
+
+{{IconSet|h1|4}} Check qvm-tags of {{project_name_gateway_short}} Template.
+
+<u>Note:</u> Replace <code>{{project_name_gateway_template}}</code> with the actual name of the Whonix-Gateway Template you are using.
+
+{{CodeSelect|code=
+qvm-tags {{project_name_gateway_template}}
+}}
+
+Expected printout should include:
+
+<pre>
+whonix-updatevm
+</pre>
+
+{{IconSet|h1|5}} Check qvm-tags of {{project_name_workstation_short}} Template.
+
+<u>Note:</u> Replace <code>{{project_name_workstation_template}}</code> with the actual name of the Whonix-Workstation Template you are using.
+
+{{CodeSelect|code=
+qvm-tags {{project_name_workstation_template}}
+}}
+
+Expected printout should include:
+
+<pre>
+whonix-updatevm
+</pre>
+
+= See Also =
+* [[Troubleshooting#Connectivity Troubleshooting|Connectivity Troubleshooting]]
+* [[Troubleshooting#General Troubleshooting|General Troubleshooting]]
+* [[Network Obstacle]]
+* [[Tor]]
+* [[vanguards]]
+* [https://forums.whonix.org/t/qubes-whonix-development/13323 {{q_project_name_short}} Development]
+
+= Footnotes =
+<references />
+{{Footer}}
+[[Category:Documentation]]
