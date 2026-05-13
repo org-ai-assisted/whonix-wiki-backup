@@ -1,0 +1,32 @@
+{{Header}} {{hide_all_banners}}
+{{title|title=
+{{project_name_long}} Architecture Support
+}}
+{{#seo:
+|description=Yes, {{project_name_short}} can be installed on different architectures. Here's how.
+|image=Architectures-combi-logo.svg
+}}
+{{architecture_mininav}}
+[[File:Architectures-combi-logo.svg|thumb|200px]]
+{{intro|
+{{project_name_short}} can be installed on different architectures. Here's how.
+}}
+
+{{mbox|text=
+[[File:Intel-amd-combi-logo.svg|Intel64 / AMD64|100px|link=Intel_AMD64]]
+[[File:Arm64-logo.svg|100px|link=ARM64]]
+[[File:raspberry-pi-logo.svg|100px|link=Raspberry_Pi]]
+[[File:Ppc64-logo.svg|100px|link=PPC64]]
+[[File:Riscv64-logo.svg|100px|link=RISCV64]]
+}}
+
+{{mbox|text=
+[[File:Logo-apple-500x500.png|100px|link=macOS]]
+[[File:Apple-with-intel-logo.jpg|100px|link=macOS#Intel-based_MacBook]]
+[[File:Apple-mx-logo.jpg|100px|link=macOS#MacOS#Apple_Silicon]]
+}}
+
+<references />
+{{Footer}}
+[[Category:Documentation]]
+[[Category:MultiWiki]]
