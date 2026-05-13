@@ -1,0 +1,89 @@
+{{Header}}
+{{title|title=Access Local Network, Host, or Clearnet Internet from VM}}
+{{#seo:
+|description=Advanced guide on establishing connections from a VM to a server service on the host, LAN, or clearnet internet.
+|image=Access12323.jpg
+}}
+{{local_connections_mininav}}
+[[File:Localaccessnet1163108640.jpg|thumb]]
+{{intro|
+Advanced documentation detailing the process to connect from inside a VM to a server service running on the host, within the LAN, or clearnet internet.
+}}
+
+= Introduction =
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = This subject is advanced. The instructions provided are generally unnecessary for most users.
+}}
+
+Consider [[File Transfer]] as a simpler alternative for standard requirements.
+
+= Prerequisite Knowledge =
+* [[Stream_Isolation/Easy|Stream Isolation: Basic Knowledge]]
+* [[Stream_Isolation/Disable_Easy|Disabling Stream Isolation]]
+
+= Access Host from within Whonix-Gateway =
+This example demonstrates using <code>ssh</code>, but other methods may be substituted accordingly.
+
+== On the Host ==
+Install the necessary server software; <code>ssh</code> is illustrated as an example.
+
+{{Install Package|package=ssh}}
+
+If <code>ssh</code> is utilized, its setup on the host (such as public key setup) and related issues are considered prerequisite knowledge and are out of scope for this documentation. This wiki chapter is focused on connectivity, not on server configuration details.
+
+== Inside the VM ==
+Install the corresponding client software, e.g., <code>openssh-client</code>.
+
+{{Box|text=
+'''1.''' Install <code>openssh-client</code>.
+{{Install Package|package=openssh-client}}
+
+'''2.''' ''Optional:'' Configure a persistent home folder for the user <code>clearnet</code>.
+
+{{CodeSelect|code=sudo mkhomedir_helper clearnet}}
+
+'''3.''' Launch a shell under user <code>clearnet</code>.
+
+{{CodeSelect|code=sudo -u clearnet bash}}
+
+'''4.''' Disable stream isolation permanently or circumvent it temporarily, as needed.
+
+{{CodeSelect|code=client-software ip-address}}
+
+Note:
+
+* Substitute <code>ssh</code> with your client software of choice.
+* Replace <code>192.168.1.0</code> with the actual local LAN IP of the host.
+* Remove <code>.anondist-orig</code> if the command isn’t uwt-wrapped by default.
+{{CodeSelect|code=ssh.anondist-orig 192.168.1.0}}
+
+'''5.''' Completion.
+
+An SSH connection from within Whonix-Gateway to the host should now be established.
+}}
+
+= Access Host from within Whonix-Workstation =
+This scenario is currently [[undocumented]] and likely necessitates a complex setup with a high risk of clearnet leaks. See footnote. <ref>
+Options could include:
+* <u>Less safe</u>: Enabling IP forwarding inside {{project_name_gateway_long}}.
+* <u>Safer</u>: [[{{project_name_gateway_short}} Firewall|Opening an Incoming Port on {{project_name_gateway_short}} Firewall]] and running proxy software in {{project_name_gateway_short}} with user <code>clearnet</code> to allow forwarding to the host, LAN, or clearnet Internet.
+</ref> Instead, users are recommended to explore [[File_Transfer#SSH_into_{{project_name_gateway_short}}|SSH / SSHFS into {{project_name_gateway_short}}]], [[File_Transfer#SSH_into_{{project_name_workstation_long}}|SSH / SSHFS into {{project_name_workstation_short}}]], and [[sshfs into Whonix-Workstation|SSHFS into {{project_name_workstation_long}}]].
+
+= Troubleshooting =
+* Check whether a configured host firewall is blocking connections to the service.
+
+= Forum Discussion =
+https://forums.whonix.org/t/how-to-connect-from-a-guest-whonix-gateway-to-a-proxy-client-running-on-a-host/8874
+
+= See Also =
+* [[Host_a_Bridge_or_Tor_Relay|Host a Bridge or Tor Relay]]
+* [[Ports]]
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
