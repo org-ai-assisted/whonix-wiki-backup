@@ -1,0 +1,16 @@
+{{Header}}
+{{title|title=
+{{project_name_short}} is based on Kicksecure
+}}
+{{#seo:
+|description={{project_name_short}} is based on Kicksecure.
+|image=Kicksecure-seal.png
+}}
+{{documentation_mininav}}
+{{intro|
+{{project_name_short}} is based on Kicksecure.
+}}
+{{upstream_wiki}}
+<references />
+{{Footer}}
+[[Category:Documentation]]
