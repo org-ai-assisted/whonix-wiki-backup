@@ -1,0 +1,210 @@
+{{Header}}
+{{Title|title=
+{{project_name_long}} Project Activities: Innovation, Cooperation and Education
+}}
+{{about_mininav}}
+{{#seo:
+|description=Things the {{project_name_short}} project is working on; Innovate; Cooperate; Mentor; Educate; Maintenance; Research
+|image=Workingon-1008908640.jpg
+}}
+{{intro|
+Things the {{project_name_short}} project is working on; Innovate; Cooperate; Mentor; Educate; Maintenance; Research
+}}
+[[File:Workingon-1008908640.jpg|thumb]]
+
+= {{project_name_short}} Project Activities =
+
+== Innovation ==
+
+{| class="wikitable"
+|+ ''{{project_name_short}} Innovation''
+|-
+
+! '''Category'''
+! '''Description'''
+|-
+
+! Anonymity
+|
+* Thinking hard about obscure attacks on anonymity such as clock correlation deanonymization attacks and developing countermeasures; see [[Dev/TimeSync|TimeSync]].
+* Adding support for multiple anonymity networks to cater to different user bases.
+|-
+
+! Invent mechanisms for rapid Debian packaging
+|
+* [https://github.com/{{project_name_short}}/genmkfile genmkfile] - easy and turbo packaging of scripts and configuration files.
+* Demonstrating how to write hassle free man pages.
+** For example, the following methodology is used for all related {{project_name_short}} packages.
+** Written in markdown.
+** Just three lines of packaging is required.
+** https://github.com/Kicksecure/tor-ctrl/blob/master/man/tor-ctrl.8.md
+*** https://github.com/Kicksecure/tor-ctrl/blob/master/debian/control#L9
+*** https://github.com/Kicksecure/tor-ctrl/blob/master/debian/control#L17-L18
+|-
+
+! Holistic focus
+|
+* Focusing on the anonymity and privacy field, without getting into unimportant details.
+* Understanding issues regular users are experiencing and creating a better user experience.
+|-
+
+! Develop concepts
+|
+* [[Dev/project-news|Emergency Security News Notification]]
+* [[Dev/Permanent Takedown Attack Defender|Permanent Takedown Attack Defender, proposal to defend against a permanent takedown threat]]
+* [[Dev/apt-revoker|apt-revoker Check for Revocation Certificates before running <code>apt</code>]]
+* [https://www.whonix.org/pipermail/whonix-devel/2019-January/001293.html Package manager update security on/off switch]
+* And much more.
+|-
+
+! Miscellaneous
+| Maintaining a general interest in security matters, scrutinizing solutions, and connecting people. <ref>
+https://forums.whonix.org/t/jitterentropy-rngd/7204
+</ref>
+|-
+
+! Documentation
+| Huge wiki. 100's of wiki pages. See [[Documentation]] and [[Design]]. Lots of {{kicksecure_wiki
+|wikipage=Wiki_Enhancements
+|text=Wiki Enhancements.
+}}.
+|-
+
+|}
+
+== Cooperation ==
+
+{| class="wikitable"
+|+ ''{{project_name_short}} Cooperation''
+|-
+
+! '''Category'''
+! '''Description'''
+|-
+
+! Issue/bug reports
+| Reporting issues or bugs at other projects, such as:
+* [https://github.com/QubesOS/qubes-issues/issues/created_by/adrelanos Qubes]
+* [https://www.virtualbox.org/query?status=%21closed&reporter=adrelanos VirtualBox]
+|-
+
+! The Tor Project
+|
+* Successfully communicate issues in the Tor ecosystem and do so whenever we find something. Some suggestions have been implemented and others accepted.
+** https://web.archive.org/web/20201028003446/https://trac.torproject.org/projects/tor/query?reporter=proper&col=id&col=summary&col=status&col=type&col=priority&col=milestone&col=component&order=priority
+** https://web.archive.org/web/20201021121818/https://trac.torproject.org/projects/tor/query?reporter=adrelanos&col=id&col=summary&col=type&col=status&col=priority&col=milestone&col=component&order=priority
+* Reporting any security/privacy/anonymity issues discovered, including some which could lead to deanonymization.
+<div class="toccolours mw-collapsible mw-collapsed">
+Please press on expand on the right for a list of references.
+<div class="mw-collapsible-content">
+** [https://gitlab.torproject.org/legacy/trac/-/issues/8751 do something about TLS HELLO gmt_unix_time]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/8170 get independent from host clock time / insecure NTP]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/9810 use Valid-Until field to prevent downgrade attacks for deb.torproject.org]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/9811 use sha256 or sha512 instead of sha1 for deb.torproject.org]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/6336 deactivate Check for new messages on startup]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/6335 deactive submit performance data]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/6337 deactivate Check for new messages every 10 minutes]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/6338 enable connection security by default]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/8312 Remove "This Plugin is Disabled" click-through]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/6210 set plugin.expose_full_path to false]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/7197 Adapt Tor installer to allow users to avoid connecting to the public tor network]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/6102 Add warning related to Identity correlation through circuit sharing]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/8213 spoof history.length - browser.sessionhistory.max_entries]
+** [https://gitlab.torproject.org/legacy/trac/-/issues/16659 Linux TCP Initial Sequence Numbers may aid correlation]
+</div>
+|-
+
+! Other collaborative efforts/contributions
+|
+* [https://github.com/vmonaco/kloak/issues/10 kloak] - [[Keystroke_and_Mouse_Deanonymization|Keystroke and Mouse Anonymization]] Tool <ref>
+* https://github.com/vmonaco/kloak/pull/5
+* https://github.com/vmonaco/kloak/issues/10
+* https://github.com/vmonaco/kloak/issues?utf8=%E2%9C%93&q=is%3Aissue+author%3Aadrelanos+
+* https://github.com/vmonaco/kloak/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aadrelanos+
+</ref>
+* https://web.archive.org/web/20170511021801/https://secure-os.org/pipermail/desktops/
+* zuluCrypt <ref>
+* https://github.com/mhogomchungu/zuluCrypt/issues/114
+* https://github.com/mhogomchungu/zuluCrypt/issues/115
+</ref>
+|-
+
+! Developer community
+|
+* Coordination of an active developer community, see: [[Contributors|{{project_name_short}} contributors]].
+* {{project_name_short}} contributions:
+** founder [https://github.com/adrelanos?tab=repositories adrelanos]
+** developer [https://github.com/troubadoour?tab=repositories troubadour]
+** developer [https://github.com/madaidan?tab=repositories madaidan]
+** former developer [https://github.com/0brand?tab=repositories 0brand]
+** developer [https://github.com/HulaHoopWhonix?tab=repositories HulaHoop]
+** developer [https://github.com/JasonJAyalaP?tab=repositories Jason Ayala]
+** developer [https://github.com/Algernon-01?tab=repositories Algernon]
+** developer [https://github.com/0xsirus?tab=repositories Sirus Shahini]
+** incomplete list
+|-
+
+! Miscellaneous
+|
+* Flexible packaging to allow cherry-picking of functionality by privacy and non-privacy distributions alike: https://github.com/{{project_name_short}}/anon-meta-packages/blob/master/debian/control
+* Providing all {{project_name_short}} improvements to Debian as reusable (by others) packages split by functionality: https://github.com/{{project_name_short}}
+* [[Packages for Debian Hosts|Use many packages developed by {{project_name_short}} with Debian too]].
+* Timely review and merging of contributions.
+|-
+
+! Based on Whonix
+|
+* [https://forums.whonix.org/t/securedrop-journalist-workstation-based-on-qubes-whonix/9079 SecureDrop Journalist Workstation based on Qubes-Whonix]
+|-
+
+|}
+
+== Mentoring ==
+
+* [https://forums.whonix.org/t/gsoc-with-tor-and-whonix-anon-connection-wizard/4266 Google Summer of Code]
+* [https://forums.whonix.org/t/google-season-of-docs-gsod-2019/7191/1 Google Season of Docs (GSoD)]
+* [https://forums.whonix.org/t/cs-student-capstone-bachelors-senior-project-for-whonix/8821 CS Student Capstone (Bachelor's Senior project) for Whonix]
+
+== Education ==
+
+{{project_name_short}} undertakes a broad range of educational activities, including:
+* Extensive [[Documentation]] covering technical aspects and operational security.
+** Security and anonymity matters are documented in detail, including unique material not covered elsewhere. <ref>For example, the [[Warning|Tips on Remaining Anonymous]] page outlines that [[Tips_on_Remaining_Anonymous#Only_Connect_to_a_Server_Either_Anonymously_Or_Non-anonymously|non-anonymous activity in one
+browser and simultaneous anonymous activity in another browser]] can lead to deanonymization.</ref>
+** Technical documentation is also provided, for example: [[Configuration_Files|Configuration Files]].
+* {{project_name_short}} answers are seldom disputed; for example see [https://tor.stackexchange.com/users/80/adrelanos?tab=answers answers by Patrick Schleizer] on [https://tor.stackexchange.com/ Tor Stack Exchange].
+* Operating a responsive [https://forums.{{project_clearnet}} forum], providing user support for the community.
+* Debian derivative development documentation, for example: [[Dev/About_Debian_Packaging|About Debian Packaging]]
+
+== Maintenance ==
+
+{{project_name_short}} maintenance activities are wide in scope and include:
+* Following developments in anonymity, security and privacy and formulating solutions.
+* Maintaining various [[Contribute#Contributor_List|components]].
+* Ongoing development:
+** Refer to this [https://github.com/{{project_name_short}}/derivative-maker/commits/master <u>subset</u> list of {{project_name_short}} git commits]; and
+** [https://github.com/{{project_name_short}} ~ 16 {{project_name_short}} source code repositories].
+* Keeping the whonix.org server safe and up-to-date with various webapps (website, wiki, forums and issue tracker).
+* Testing new packages.
+* Calling for testers, then reviewing and processing feedback from testers.
+* Creating [[Download|downloadable]] {{project_name_short}} builds.
+* Keeping the community informed about [https://forums.whonix.org/t/recent-developments-at-whonix/7152 recent developments at Whonix].
+* Porting to the next stable version of Debian. <ref>
+https://forums.whonix.org/t/port-whonix-from-debian-stretch-to-debian-buster/7101
+</ref>
+
+TODO expand
+
+== Research ==
+See [[Dev/research|Research]].
+
+= Kicksecure =
+{{upstream_wiki}}
+
+= Footnotes =
+<references />
+
+{{Footer}}
+
+[[Category:Documentation]]
+[[Category:Design]]
