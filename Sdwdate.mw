@@ -1,0 +1,60 @@
+{{Header}}
+{{Title|
+title=sdwdate: Secure Distributed Web Date
+}}
+{{#seo:
+|description=sdwdate - Secure Distributed Web Date - in {{project_name_long}}
+|image=Sunset-1331088640.jpg
+}}
+{{time_mininav}}
+[[File:sdwdate2.png|[[sdwdate-gui]] Control Panel|thumb]]
+{{intro|
+sdwdate - Secure Distributed Web Date - in {{project_name_short}}
+}}
+__TOC__
+= sdwdate Documentation =
+{{Upstream_wiki}}
+
+= {{project_name_short}} specific =
+
+{{project_name_short}} sets the configuration option <code>RANDOMIZE_TIME=true</code> through the package [https://github.com/Whonix/anon-apps-config anon-apps-config] in the file [https://github.com/Whonix/anon-apps-config/blob/master/etc/sdwdate.d/40_anon-apps-config.conf <code>/etc/sdwdate.d/40_anon-apps-config.conf</code>] with the line <code>RANDOMIZE_TIME=true</code>.
+
+Prerequisite knowledge: [[Timezone]]
+
+= Do sdwdate issues impact anonymity? =
+
+sdwdate failing doesn't mean deanonymization.
+
+Even if sdwdate does not work, there is still [[Boot Clock Randomization]].
+
+To put it into perspective, Tor Browser Bundle on the host operating system (unrelated to {{project_name_short}}) has neither sdwdate nor Boot Clock Randomization.
+
+This is similar to asking, "How secure is {{project_name_short}}?" See: [[Dev/Technical_Introduction#Security_Overview|Security Overview]] and [[Whonix_against_Real_Attacks|{{project_name_short}} Protection against Real World Attacks]].
+
+[[sdwdate-gui]] makes Tor issues more visible due to its graphical indication and easily accessible logs. It would be an [[Warning#Unsubstantiated_Conclusions|unsubstantiated conclusion]] to deduce that sdwdate is the cause of Tor issues.
+
+The timing of sdwdate issues matters. If sdwdate fails:
+
+* '''A)''' during its first run after boot, then that's worse than  
+* '''B)''' sdwdate failing during any subsequent runs.
+
+In case of A), the user would only be protected by {{kicksecure_wiki
+|wikipage=Boot_Clock_Randomization
+|text=Boot Clock Randomization
+}}.
+
+In case of B), it is less of an issue because it is only for timekeeping in long-running VMs. For example, if sdwdate succeeded after boot but then only succeeded once per day in long-running VMs, that might still be good enough.
+
+Planned sdwdate-gui enhancements include:
+
+* Only showing sdwdate failure if sdwdate failed after boot and multiple times in long-running VMs.
+* Making Tor log output ([[Tor#anon-log|<code>anon-log</code>]]) more accessible. This might help redirect the often misplaced attention from sdwdate to Tor.
+
+= See Also =
+* [[sdwdate-gui]]
+* [[Timezone]]
+* [[Network Time Synchronization]]
+
+<references />
+{{Footer}}
+[[Category:Documentation]]
