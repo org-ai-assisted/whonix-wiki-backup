@@ -1,0 +1,890 @@
+{{Header}}
+<!--
+Copyright:
+
+   {{project_name_long}} Chat wiki page Copyright (C) Amnesia <amnesia at boum dot org>
+   {{project_name_short}} Chat wiki page Copyright (C) 2012 - 2026 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to:
+
+    Free Software Foundation, Inc.
+    51 Franklin St, Fifth Floor
+    Boston, MA 02110-1301, USA.
+
+On Debian GNU/Linux systems, the complete text of the GNU General Public
+License can be found in the /usr/share/common-licenses' directory.
+
+The complete text of the GNU General Public License can also be found online on gnu.org <https://www.gnu.org/licenses/gpl.html>, in {{project_name_short}} virtual machine images in /usr/share/common-licenses/GPL-3 file or on Github <https://github.com/{{project_name_short}}/derivative-maker/blob/master/GPLv3>.
+-->
+<!--
+This Chat page is a fork of the Tails Pidgin page, from this exact source <https://git.immerda.ch/?p=amnesia.git;a=blob;f=wiki/src/doc/anonymous_internet/pidgin.mdwn;hb=96c45f5ed786f3d24c51e1a2ef8ecedf5f2644d8>.
+-->
+{{Title|title=
+Instant Messenger Chat
+}}
+{{#seo:
+|description=Anonymous Chat, IRC, XMPP in {{project_name_short}}.
+|image=Balloons-874841640.jpg
+}}
+{{chat_mininav}}
+[[File:Balloons-874841640.jpg|thumb]]
+{{intro|
+Anonymous Chat, IRC, XMPP in {{project_name_short}}.
+}}
+= General Safety Advice =
+{{mbox
+| type      = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = '''Tip:''' Most existing instant messenger protocols are unsafe from a privacy point of view. This is not a {{project_name_short}}-specific problem, but a general problem with instant messengers.
+}}
+{{PQCrypto}}
+
+It is recommended to review the [[Tips_on_Remaining_Anonymous#Keep_Anonymity_Modes_separate|Do not Mix Anonymity Modes]] section in conjunction with this entry. For a comprehensive comparison of instant messengers, [https://en.wikipedia.org/wiki/Comparison_of_instant_messaging_clients see here].
+
+== Encryption ==
+
+[[Warning#Exit_Relays_can_Eavesdrop_on_Communications|Tor exit relays can eavesdrop]] on communications if encryption to the server is disabled. Depending on the protocol which an instant messenger is using, encryption might be disabled by default or not even supported. Tails has noted that without encryption, Tor exit relays can see the contact list, all messages, file transfers, and audio/video. <ref>
+See: https://tails.boum.org/todo/Pidgin_Protocol_Review/ for an overview of Pidgin protocols and associated encryption features.
+</ref> While encryption to the server prevents exit relay eavesdropping, it still leaves one problem unresolved: [[Chat#Server_Logging|server logging]].
+
+High-risk users should also bear in mind that even in the event that strong and secure end-to-end encryption is used -- for example encrypted chat using <code>.onion</code> connections only (staying within the Tor network) -- advanced adversaries are capable of compromising the trusted computing base (TCB) <ref>
+"... the trusted computing base or TCB comprises the set of all hardware, software, and firmware components that are critical to establishing and maintaining its security. Typically, the TCB consists of an operating system with all its in-built security controls, individual system hardware, network hardware and software, defined security procedures and protocols, and the actual physical location of the system itself." [https://web.archive.org/web/20210724143029/https://blog.finjan.com/trusted-computing-base/ Trusted Computing Base or "TCB"]
+</ref> of nearly all platforms: <ref>
+https://github.com/maqp/tfc/wiki/Security-design#the-issue-of-endpoint-security</ref>
+<blockquote>
+All proper end-to-end encrypted (E2EE) messaging systems store private key(s) exclusively on user's device (endpoint). The holy grail of attacks against E2EE systems is called exfiltration where the sensitive data, namely the private keys or plaintext messages, are stolen from the endpoint. The attack is directed against the trusted computing base (TCB) of the target system. The overwhelming majority of TCBs are connected to the network and compromising them with polished malware that exploits a zero-day vulnerability, is trivial and undetectable.
+</blockquote>
+
+Another consideration is that even when using end-to-end encrypted applications, additional strong security protocols such as [https://en.wikipedia.org/wiki/Forward_secrecy forward secrecy] <ref>
+[https://signal.org/blog/advanced-ratcheting/ Advanced cryptographic ratcheting]:<blockquote>As we’ve discussed previously, “forward secrecy” is one of the critical security properties OTR is designed to provide. In contrast to the PGP protocol model, where messages to a recipient are encrypted with the same public key over and over again, OTR uses ephemeral key exchanges for each session. This is a critical feature of any modern secure protocol, because otherwise a network adversary who records (potentially years of) ciphertext traffic can later decrypt all of it if they manage to later compromise the one key that was used. By contrast, with ephemeral key exchanges, there is no key to compromise in the future (since the keys are only ephemerally in memory for a short time), so any recorded ciphertext should remain private.</blockquote>
+</ref> may not be available for group communication channels, see: [https://eprint.iacr.org/2017/713.pdf More is Less: On the End-to-End Security of Group Chats in Signal, WhatsApp, and Threema].
+
+== Web Interfaces ==
+
+Avoid using web interfaces for any messengers because they break end-to-end encryption (E2E). If the website can show the messages, it follows that the server, if malicious or compromised, could also view the messages. Locally running applications should be preferred. Web apps running on a foreign server accessed through the user's browser are more exposed and therefore have a higher security risk.
+
+== Server Logging ==
+
+Encrypted server connections does not prevent the server from gathering information about users or building a [https://en.wikipedia.org/wiki/Social_graph social graph]. A non-exhaustive list of things the server could infer or log are:
+
+* Account names
+* List of contacts
+* The exact date and time of logins
+* Message timestamps
+* Communication patterns like common contacts (see footnote) <ref>If the recipient knows the sender and has ever used a non-anonymous account or logged in without Tor, this information can be used to try and determine the sender's identity.</ref>
+
+The content of messages will only be protected by using end-to-end encryption, for example [https://en.wikipedia.org/wiki/OMEMO OMEMO]. The threat of server logging can be completely removed with decentralized (server-less) instant messengers like [[OnionShare]].
+
+== Jabber / XMPP ==
+
+[https://xmpp.org/ Jabber/XMPP] is a libre server-federation protocol designed with openness in mind: "''... All of the existing XMPP servers, clients, and programming libraries support the key features of an IM system, such as one-to-one and multi-party messaging, presence subscriptions and notifications, and contact lists.''"
+
+The system is decentralized because there is no central authoritative server; anyone can run a server. Some users are confused on this point because there are a number of large and popular public XMPP servers (like jabber.org), to which many have subscribed. <ref>Other popular public servers are listed [https://xmpp.org/getting-started/ here].</ref> A list of all public servers is available at https://list.jabber.at/ 
+Each network user has a unique XMPP address called a JID (Jabber ID). The JID is similar to an email address insofar as it has a username and domain name like username@example.com <ref name=Xmpp>https://en.wikipedia.org/wiki/XMPP</ref>
+
+Safely using the protocol requires enabling encryption (such as OMEMO), because it is unwise to trust server connections are properly encrypted between each other. You can check the OMEMO version used by different clients on this page: https://xmpp.org/extensions/#xep-0384-implementationsJabber (note that the latest versions of the protocol may be in the experimental stage). XMPP privacy is also limited, as various adversaries are capable of observing which accounts are communicating. XMPP and Tor combined only guarantee pseudonymous communications, as while the user's current location is hidden, the social graph can still expose their true identity. For tips on operational security when chatting anonymously, see this [https://archive.ph/n116i article] by [https://theintercept.com/2015/07/14/communicating-secret-watched/ The Intercept]. Also see: [https://forums.whonix.org/t/why-is-icq-considered-unsafe-through-tor/1096 Why prefer open protocols such as Jabber/XMPP over proprietary ones such as ICQ?]
+
+== IRC ==
+
+When using IRC (Internet Relay Chat) inside {{project_name_workstation_long}}, the [https://en.wikipedia.org/wiki/Ident_protocol Ident Protocol] is automatically blocked because {{project_name_workstation_long}} is firewalled. Therefore the associated daemon will not identify the username which is linked with a particular TCP connection, as is normally the case.
+
+Some IRC networks (most notably Libera.Chat) do not permit anonymous Tor access and require that you identify yourself in order to use the network over Tor. OFTC, however, allows anonymous Tor access.
+
+The Tor Project [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO/IRC Internet Relay Chat] page contains a number of important recommendations and tips for safe IRC use:
+<div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">
+* Use onion services when available.
+** Check self-signed certificates have the correct SSL/TLS certificate.
+* Cycle Tor circuits to evade censorship bans.
+* Chain VPNs and Tor for registration.
+* Use OTR for end-to-end encryption.
+* Distrust users and servers in general.
+* Avoid personally identifiable information in chats.
+* Check the user fingerprint before using IRC.
+* Harden the IRC client.
+* And more.
+</div>
+
+== Legal Data Access ==
+
+In 2021, a Freedom of Information request uncovered a FBI training document that summarizes the level of access US law enforcement has to various secure messaging services. Most importantly, it revealed there is some limited access to encrypted messages in iMessage, Line and WhatsApp, but not to messages sent with [[Signal]], [[Telegram]], Viber, WeChat and [[Wickr]]; refer to the comparison table below.
+
+{| class="wikitable"
+|+ ''Legal Access: Secure Messaging Service Comparison'' <ref>https://therecord.media/fbi-document-shows-what-data-can-be-obtained-from-encrypted-messaging-apps/</ref>
+|-
+
+! '''Application'''
+! '''Legal Process and Other Details'''
+|-
+
+! Apple iMessage
+|
+* Message content limited.
+* Subpoena: can render basic subscriber information.
+* 18 USC §2703(d): can render 25 days of iMessage lookups and from a target number.
+* Pen Register: no capability.
+* Search Warrant: can render backups of a target device; if target uses iCloud backup, the encryption keys should also be provided with content return can also acquire iMessages from iCloud returns if target has enabled Messages in iCloud.
+|-
+
+! Line
+|
+* Message content limited.
+* Suspect’s and/or victim’s registered information (profile image, display name, email address, phone number, LINE ID, date of registration, etc.).
+* Information on usage.
+* Maximum of seven days worth of specified users’ text chats (only when E2EE has not been elected and applied and only when receiving an effective warrant; however, video, picture, files, location, phone call audio and other such data will not be disclosed).
+|-
+
+! [[Signal]]
+|
+* No message content.
+* Date and time a user registered.
+* Last date of a user’s connectivity to the service.
+|-
+
+! [[Telegram]]
+|
+* No message content.
+* Court order: For confirmed terrorist investigations <ref>
+https://telegram.org/privacy?setln=ru#8-3-law-enforcement-authorities
+</ref> or copyright infringement <ref>
+https://torrentfreak.com/telegram-discloses-personal-details-of-pirating-users-following-court-order-221130/
+</ref>, Telegram may disclose phone numbers, IP addresses, and email addresses to relevant authorities.
+|-
+
+! Threema
+|
+* No message content.
+* Hash of phone number and email address, if provided by user.
+* Push Token, if push service is used.
+* Public Key.
+* Date (no time) of Threema ID creation.
+* Date (no time) of last login.
+|-
+
+! Viber
+|
+* No message content.
+* Provides account (i.e. phone number) registration data and IP address at time of creation.
+* Message history: time, date, source number, and destination number.
+|-
+
+! WeChat
+|
+* No message content.
+* Accepts account preservation letters and subpoenas, but cannot provide records for accounts created in China.
+* For non-China accounts, they can provide basic information (name, phone number, email, IP address), which is retained for as long as the account is active.
+|-
+
+! WhatsApp
+|
+* Message content limited.
+* Subpoena: can render basic subscriber records.
+* Court order: Subpoena return as well as information like blocked users.
+* Search warrant: Provides address book contacts and WhatsApp users who have the target in their address book contacts.
+* Pen register: Sent every 15 minutes, provides source and destination for each message.
+* If target is using an iPhone and iCloud backups enabled, iCloud returns may contain WhatsApp data, to include message content.
+|-
+
+! [[Wickr]]
+|
+* No message content.
+* Date and time account created.
+* Type of device(s) application is installed on.
+* Date of last use.
+* Number of messages.
+* Number of external IDs (email addresses and phone numbers) connected to the account, bot not to plaintext external IDs themselves.
+* Avatar image.
+* Limited records of recent changes to account setting such as adding or suspending a device (does not include message content or routing and delivery information).
+* Wickr version number.
+|-
+
+|}
+
+= Instant Messenger Selection Criteria =
+A recommendation if any can be made depends on the threat model, priorities of the user. An obvious recommendation is impossible at time of writing because no instant messenger exists with all of the minimum desired security properties.
+
+[[Signal]] is adamant about phone number validation (see [[Phone Number Validation|Phone Number Validation vs User Privacy]])
+, registration by phone which leads to very bad usability for most users that wish to remain anonymous and/or hide their social graph from the server.
+
+OMEMO encryption has amazing security properties but it's opt-in in all known chat programs, which is a huge usability issue. Meaning users could easily forget to enable it or due to bugs getting disabled. It is also XMPP-specific, therefore there are no instant messengers that are serverless (and thereby hiding the user's social graph) as well as at the same time support OMEMO encryption. OMEMO is built on top of the double-ratchet encryption algorithm however, and there are a variety of messengers that support double-ratchet encryption.
+
+The most secure instant messenger would be serverless with local data storage, peer to peer (p2p) over Tor onions or another metadata protection-resistant onion routing, without a permanent user ID,  with well-audited quantum resistance to double-ratchet end-to-end encryption enabled by default — only [[SimpleX]] and [[Cwtch]] are closest to these criteria.
+
+= Instant Messenger Security Properties Comparison =
+
+* <u>TODO:</u> unfinished
+* <u>Wiki editors notice:</u> Please do not expand this table without prior discussion. To keep maintenance effort low, this table shall be a curated list with most suitable choices only. Messengers that are discouraged in context of anonymity such as [[Telegram]] and [[Signal]] (due to the [[Phone Number Validation]] issue), shall not be added to this list.
+
+{| class="wikitable"
+|+ ''Instant Messenger Security Properties Comparison''
+|-
+
+! <!-- feature --> '''Feature'''
+! <!-- SimpleX --> [[SimpleX]]
+! <!-- Cwtch --> [[Cwtch]]
+! <!-- Dino IM --> Dino IM
+! <!-- Gajim --> Gajim
+! <!-- OnionShare --> [[OnionShare]]
+|-
+
+! <!-- feature --> Network
+| <!-- SimpleX --> SimpleX Network
+| <!-- Cwtch --> Tor onion
+| <!-- Dino IM --> XMPP ("Jabber")
+| <!-- Gajim --> XMPP ("Jabber")
+| <!-- OnionShare --> Tor onion
+|-
+
+! <!-- feature --> End-to-end encryption (E2E) protocol
+| <!-- SimpleX --> Simplex Messaging Protocol (SMP)<ref>https://github.com/simplex-chat/simplexmq/blob/stable/protocol/simplex-messaging.md</ref>
+| <!-- Cwtch --> Tapir Protocol<ref>https://pkg.go.dev/cwtch.im/tapir</ref>
+| <!-- Dino IM --> OMEMO<ref>https://xmpp.org/software/dino/</ref>
+| <!-- Gajim --> OMEMO<ref>https://xmpp.org/software/gajim/</ref>
+| <!-- OnionShare --> Tor onion protocol<ref>https://spec.torproject.org/tor-spec/index.html</ref>
+|-
+
+! colspan="6" <!-- security feature header --> | '''Security Property'''
+|-
+
+! <!-- feature --> Serverless / peer to peer / onion to onion
+| <!-- SimpleX --> Client to unidirectional SimpleX routing (server does not store data)<ref>https://simplex.chat/blog/20240604-simplex-chat-v5.8-private-message-routing-chat-themes.html</ref>
+| <!-- Cwtch --> {{Yes}}, client to onion (server)
+| <!-- Dino IM --> {{No}}
+| <!-- Gajim --> {{No}}
+| <!-- OnionShare --> {{Yes}}, client to onion (server)
+|-
+
+! <!-- feature --> No risks introduced for hosting an Onion Service <ref>
+There are more de-anonymization attacks against onion services than against Tor users who only use Tor as a client since it is possible to make onion services talk. See [[Onion_Services#Onion_Services_Security|Onion Services Security]].
+</ref>
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> ? {{Yes}}
+| <!-- Dino IM --> {{Yes}}
+| <!-- Gajim --> {{Yes}}
+| <!-- OnionShare --> {{No}}
+|-
+
+! <!-- feature --> End-to-end encryption (E2E) by default
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{Yes}}
+| <!-- Dino IM --> {{No}}
+| <!-- Gajim --> {{No}}
+| <!-- OnionShare --> {{Yes}}
+|-
+
+! <!-- feature --> Quantum resistance
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{No}}
+| <!-- Dino IM --> {{No}}
+| <!-- Gajim --> {{No}}
+| <!-- OnionShare --> {{No}}
+|-
+
+! <!-- feature --> Verifiability
+| <!-- SimpleX --> {{Yes}} (Simplex Messaging Protocol)
+| <!-- Cwtch --> {{Yes}} (Tapir Protocol)
+| <!-- Dino IM --> {{Yes}} (OMEMO)
+| <!-- Gajim --> {{Yes}} (OMEMO)
+| <!-- OnionShare --> {{Yes}} (Onion E2EE authentication)
+|-
+
+! <!-- feature --> Deniability
+| <!-- SimpleX --> {{Yes}} (Simplex Messaging Protocol)
+| <!-- Cwtch --> {{Yes}} (Tapir Protocol)
+| <!-- Dino IM --> {{Yes}} (OMEMO)
+| <!-- Gajim --> {{Yes}} (OMEMO)
+| <!-- OnionShare --> {{No}}
+|-
+
+! <!-- feature --> Message padding <ref>
+Attacker able to observe even approximate message sizes can use these sizes as an additional signal for machine learning to de-anonymise the users and to categorize the relationships between the users.
+If a messenger conceals the routing of the messages to hide the transport identities (IP addresses) of senders and recipients, message sizes can be used by traffic observers to confirm the fact of communication with a much higher degree of certainty.
+</ref>
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{Yes}}
+| <!-- Dino IM --> {{Yes}}
+| <!-- Gajim --> {{Yes}}
+| <!-- OnionShare --> ?
+|-
+
+! <!-- feature --> Perfect Forward Secrecy (PFS)
+| <!-- SimpleX --> {{Yes}} (Simplex Messaging Protocol)
+| <!-- Cwtch --> {{Yes}}, Tor provides forward secrecy
+| <!-- Dino IM --> {{Yes}} (OMEMO)
+| <!-- Gajim --> {{Yes}} (OMEMO)
+| <!-- OnionShare --> {{Yes}}, Tor provides forward secrecy
+|-
+
+! <!-- feature --> Written in memory safe language
+| <!-- SimpleX --> {{Yes}} (Haskell, Kotlin)
+| <!-- Cwtch --> {{Yes}} (Go, Rust)
+| <!-- Dino IM --> {{No}} (C)
+| <!-- Gajim --> {{Yes}} (python)
+| <!-- OnionShare --> {{Yes}} (python)
+|-
+
+! <!-- feature --> Metadata resistant
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{Yes}}
+| <!-- Dino IM --> {{No}}
+| <!-- Gajim --> {{No}}
+| <!-- OnionShare --> {{Yes}}
+|-
+
+! <!-- feature --> Self-destruct passcode
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{No}}
+| <!-- Dino IM --> {{No}}
+| <!-- Gajim --> {{No}}
+| <!-- OnionShare --> {{No}}
+|-
+
+! <!-- feature --> Audited protocol/crypto/client
+| <!-- SimpleX --> {{Yes}}, (Trail of Bits: 2022, 2024) <ref>
+*https://github.com/trailofbits/publications/blob/master/reviews/SimpleXChat.pdf
+*https://github.com/simplex-chat/simplex-chat/blob/stable/docs/SimpleX_Design_Review_2024_Summary_Report_12_08_2024.pdf
+</ref>
+| <!-- Cwtch --> {{No}}
+| <!-- Dino IM --> {{No}}, only protocol/crypto (Radically Open Security: 2016) <ref>https://conversations.im/omemo/audit.pdf</ref>
+| <!-- Gajim --> {{No}}, only protocol/crypto (Radically Open Security: 2016) <ref>https://conversations.im/omemo/audit.pdf</ref>
+| <!-- OnionShare --> {{Yes}}, (Radically Open Security: 2021) <ref>https://raw.githubusercontent.com/onionshare/onionshare/develop/security/2021%20Penetration%20Test%20Report.pdf</ref>
+|-
+
+! <!-- feature --> Signed application releases
+| <!-- SimpleX --> {{Yes}} (SimpleX Chat team, Flux team) <ref>https://github.com/simplex-chat/simplex-chat/releases</ref>
+| <!-- Cwtch --> ? <ref>https://git.openprivacy.ca/cwtch.im/cwtch-ui/releases</ref>
+| <!-- Dino IM --> ? <ref>https://github.com/dino/dino/releases</ref>
+| <!-- Gajim --> ? <ref>https://dev.gajim.org/gajim/gajim/-/releases</ref>
+| <!-- OnionShare --> {{Yes}} (OnionShare team) <ref>
+*https://docs.onionshare.org/2.6.2/en/install.html
+*https://github.com/onionshare/onionshare/releases
+</ref>
+|-
+
+! <!-- feature --> Signed source code
+| <!-- SimpleX --> ? <ref>https://github.com/simplex-chat/simplex-chat/commits/stable/</ref>
+| <!-- Cwtch --> ? <ref>https://git.openprivacy.ca/cwtch.im/cwtch-ui/commits/branch/trunk</ref>
+| <!-- Dino IM --> ? <ref>https://github.com/dino/dino/commits/master/</ref>
+| <!-- Gajim --> ? <ref>https://dev.gajim.org/gajim/gajim/-/commits/master</ref>
+| <!-- OnionShare --> ? <ref>https://github.com/onionshare/onionshare/commits/main/</ref>
+|-
+
+! <!-- feature --> Reproducible builds
+| <!-- SimpleX --> {{Yes}} (Server, client)<ref>
+*https://github.com/simplex-chat/simplex-chat/blob/stable/docs/SERVER.md#reproduce-builds
+*https://github.com/simplex-chat/simplex-chat/blob/stable/scripts/simplex-chat-reproduce-builds.sh
+</ref>
+| <!-- Cwtch --> {{Yes}}<ref>https://docs.cwtch.im/blog/cwtch-bindings-reproducible/</ref>
+| <!-- Dino IM --> {{Yes}}<ref>
+*https://github.com/dino/dino/wiki/Build
+*https://reproduce.debian.net/amd64/#dino-im
+</ref>
+| <!-- Gajim --> {{Yes}}<ref>
+*https://reproduce.debian.net/amd64/#dino-im
+*https://dev.gajim.org/gajim/gajim/#building
+</ref>
+| <!-- OnionShare --> {{No}}
+|-
+
+! colspan="6" <!-- usability feature header --> | '''Usability Property'''
+|-
+
+! <!-- feature --> Multiple Devices Support
+| <!-- SimpleX --> {{No}}
+| <!-- Cwtch --> {{Yes}}
+| <!-- Dino IM --> {{Yes}}
+| <!-- Gajim --> {{Yes}}
+| <!-- OnionShare --> {{No}}
+|-
+
+! <!-- feature --> Offline Messages / Backlog
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{No}}
+| <!-- Gajim --> {{Yes}}
+| <!-- Gajim --> {{Yes}}
+| <!-- OnionShare --> {{No}}
+|-
+
+! <!-- feature --> File Transfer
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{Yes}}
+| <!-- Dino IM --> {{Yes}}
+| <!-- Gajim --> {{Yes}}
+| <!-- OnionShare --> {{Yes}}
+|-
+
+! <!-- feature --> Voice Messages
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{No}}
+| <!-- Dino IM --> {{No}}
+| <!-- Gajim --> {{Yes}} (Available since Debian Trixie)
+| <!-- OnionShare --> {{No}}
+|-
+
+! <!-- feature --> Voice Chat
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{No}}
+| <!-- Dino IM --> {{Yes}}
+| <!-- Gajim --> {{No}} (with plugin)
+| <!-- OnionShare --> {{No}}
+|-
+
+! <!-- feature --> Video Chat
+| <!-- SimpleX --> {{Yes}}
+| <!-- Cwtch --> {{No}}
+| <!-- Dino IM --> {{Yes}}
+| <!-- Gajim --> {{No}} (with plugin)
+| <!-- OnionShare --> {{No}}
+|-
+
+|}
+
+= Recommendation =
+Applications discussed in this chapter are listed in order of best usability and compatibility with {{project_name_short}}, based on the opinion and experience of {{project_name_short}} developers.
+
+It should be noted that no single application listed here has a superior feature set. Users must make a choice based on personal preferences and their [https://www.kicksecure.com/wiki/Threat_Modeling self-assessed threat model]:
+# [[SimpleX]] has a high level of security and anonymity: post-quantum encryption, does not require a phone number or email for registration, protects against metadata collection, data is stored locally, incognito mode allows for the creation of separate chats with random names, etc.
+# [[Cwtch]] has a high  anonymity and protection against metadata collection: does not require a phone number or email for registration, data is stored locally, all communication is end-to-end encrypted and takes place over Tor (there is no “Cwtch service” or “Cwtch network”). Not undergone an independent security audit at the time of writing.
+# [[#Dino_IM|Dino IM]] provides a good UX, a modern and clean look and OMEMO support. On the downside, it requires a Jabber server which weakens anonymity.
+# [[#Gajim|Gajim]] has more Jabber users, is written in memory-safe python, supports offline messages, and can provide OMEMO encryption. On the downside, it requires a Jabber server which weakens anonymity.
+# [[OnionShare]] provides a serverless (hosted using a Tor onion service), secure, ephemeral and anonymous chat feature. It is particularly useful because it does not require account creation, is encrypted end-to-end and reduces the risk of messages being stored locally.
+
+= SimpleX =
+{{Anchor|SimpleX Chat}}
+[[File:SimpleX_Logo_Small.png|border|SimpleX logo]]
+
+See [[SimpleX]].
+
+= Cwtch =
+
+See [[Cwtch]].
+
+= Dino IM =
+[[File:Dinologo.png|border]]
+
+== Overview ==
+
+[https://dino.im/ Dino IM] is a modern XMPP ("Jabber") Chat Client written in GTK+/Vala for GNU/Linux and is available in Debian. OMEMO is supported, but needs to be toggled in the chat window. OpenPGP is also supported.
+
+== Installation ==
+
+{{Install Package|
+package=dino-im
+}}
+
+== Key Backup ==
+
+In addition to the fingerprint displayed in clients, OMEMO uses session/ephemeral keys: as soon as you chat with someone, these keys are created and they are replaced with new ones after every message exchange.
+
+Without the latest session keys, incoming messages cannot be decrypted. This means when session keys are imported from an older backup, problems are likely if the keys were used in between.
+
+Both types of keys are stored in <code>~/.local/share/dino/omemo.db</code> (a SQLite database). Problems are avoided so long as keys are not backed up while Dino is running and Dino is not started from the same database twice.
+
+= Gajim =
+
+[[File:Gajimlogo.png|border]]
+
+== Overview ==
+
+Ubuntu provides a succinct overview of Gajim: <ref>https://help.ubuntu.com/community/Gajim</ref>
+
+<blockquote>Gajim is a free software, instant messaging client for the Jabber (XMPP) protocol which uses the GTK+ toolkit. It runs on GNU/Linux, BSD and Windows. The name Gajim is a recursive acronym for Gajim (is) a jabber instant messenger.
+
+The goal of Gajim is to provide a full featured and easy to use Jabber client. Gajim works nicely with GNOME, but does not require it to run. It is released under the GNU General Public License. </blockquote>
+
+Gajim has various features, including: <ref>https://gajim.org/</ref>
+* chat client synchronization
+* group chats
+* sending of pictures, videos and other files to friends or groups
+* secure end-to-end encryption via OMEMO or PGP
+* the option to keep and manage all chat history
+* connection compatibility with other messengers via transports, such as IRC
+* various other features are available via plugins
+
+In 2021, audio/video is reportedly not functional in Gajim. Further, OTR support was dropped in Gajim release <code>1.0</code>, but the [https://dev.gajim.org/gajim/gajim-plugins/wikis/OmemoGajimPlugin OMEMO plugin] is an encryption alternative. <ref>https://dev.gajim.org/gajim/gajim/-/wikis/help/gajimfaq#does-gajim-support-audiovideo</ref>
+
+'''Figure:''' ''Gajim Client in {{project_name_short}}''
+
+[[File:Gajim.png|1600px]]
+
+== Installation ==
+
+{{mbox
+| type      = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = '''Tip:''' Gajim dependencies and Debian instructions are always available [https://dev.gajim.org/gajim/gajim/blob/master/README.md here].
+}}
+The steps below install Gajim, along with the OMEMO encryption plugin and [https://dev.gajim.org/gajim/gajim-plugins/wikis/HttpUploadPlugin HTTP Upload plugin] (which is required for file transfers). <ref>Note this feature can be combined with OMEMO for encrypted file transfers.</ref> The latter plugin is fully integrated into the core Gajim software as of version <code>1.0</code>. Upon first launch of the program, users can use an existing [[#Jabber_.2F_XMPP|XMPP account]] or create a new one.
+
+{{Update}}
+
+{{CodeSelect|code=
+sudo apt update
+}}
+
+Install gajim and gajim-httpupload. <ref><code>gajim-omemo</code> is installed by default in Debian <code>bullseye</code> during the Gajim installation.</ref>
+
+{{CodeSelect|code=
+sudo apt install gajim gajim-httpupload
+}}
+
+Start Gajim from the start menu or type in konsole.
+
+{{CodeSelect|code=
+gajim
+}}
+
+<ref>
+[https://github.com/{{project_name_short}}/anon-apps-config anon-apps-config] which is installed by default will [https://github.com/{{project_name_short}}/anon-apps-config/blob/master/debian/anon-apps-config.hide deactivate gajim plugin installer / updater] because it is not secure.
+</ref>
+
+== Configuration ==
+
+=== Account ===
+
+On first launch, an Account Creation Wizard Dialog will appear. Use the wizard to either create a new account to connect to the jabber network or use an existing account. For new accounts, there are multiple jabber servers available and only a username and password is required to join. <ref>A new account can always be added with: <code>Edit</code> &rarr; <code>Accounts</code> &rarr; <code>New</code></ref>
+
+=== Gajim Settings ===
+
+The following changes are recommended for better security and privacy.
+{{Box|text=
+<u>Logs:</u>
+* <code>Edit</code> &rarr; <code>Accounts</code> &rarr; <u>'''un'''check</u> <code>Save conversation logs for all contacts</code> <br />
+<u>Activity settings:</u>
+* <code>Preferences</code> &rarr; <code>Status</code> &rarr; <u>'''un'''check</u> <code>Away after</code> <ref>To prevent needlessly leaking your activity to the server.</ref>
+* <code>Preferences</code> &rarr; <code>Status</code> &rarr; <u>'''un'''check</u> <code>Not available after</code>
+<u>Privacy settings:</u>
+* <code>Preferences</code> &rarr; <code>Advanced</code> &rarr; <code>Privacy</code> &rarr; <u>'''un'''check</u>
+** <code>Allow client / OS information to be sent</code>
+** <code>Allow local system time information to be sent</code>
+** <code>Log encrypted chat session</code>
+** <code>Allow my idle time to be sent</code>
+<u>Prevent auto-start:</u>
+* <code>Preferences</code> &rarr; <code>Advanced</code>&rarr; <code>applications</code> &rarr; <code>Custom</code> &rarr; <u>clear fields</u> for: <ref>For better security, this prevents the automatic start of these applications from the chat client.</ref>
+** <code>Browser</code>
+** <code>Mail Client</code>
+** <code>File Browser</code>
+<u>Network settings:</u> <ref>To set use of the Tor network, along with [[Stream Isolation]].</ref> <ref>[https://forums.whonix.org/t/whonix-gajim-instructions-giving-error/11632 Whonix gajim instructions giving error]. Proxy authentication is tested to work in {{project_name_short}} 16 when the <code>username</code> and <code>password</code> are left blank in settings.</ref>
+* <code>Preferences</code> &rarr; <code>Advanced</code> &rarr; <code>global proxy</code> &rarr; <code>Tor</code>
+* <code>Preferences</code> &rarr; <code>Advanced</code> &rarr; <code>global proxy</code> &rarr; <code>mange</code> &rarr; <code>Tor</code> &rarr; <u>check</u> <code>Use proxy authentication</code> &rarr; <u>leave</u> <code>username</code> blank &rarr; <u>leave</u> <code>password</code> blank
+}}
+Gajim cannot be installed by default in {{project_name_short}} yet, as there is more development work TODO; see [[Dev/Gajim]].
+
+= OnionShare =
+
+[[File:OnionShare_logo.png|128px|border|OnionShare logo]]
+
+See [[OnionShare]].
+
+= Delta Chat =
+
+See [[DeltaChat]].
+
+= IRC Clients =
+== irssi ==
+* Text-only IRC client, runs in a terminal.
+* To install: <code>sudo apt install irssi irssi-plugin-otr</code>
+* Setup instructions: https://irssi.org/New-users/
+* Supports OTR chat encryption: https://irssi.org/documentation/help/otr/
+
+== WeeChat ==
+* Text-only IRC client, runs in a terminal.
+* To install: <code>sudo apt install weechat</code>
+* Setup instructions: https://weechat.org/files/doc/weechat/stable/weechat_quickstart.en.html
+* Supports a large number of plugins (known as "scripts" in WeeChat) that can be installed directly from within the IRC client. Some of these scripts [https://weechat.org/scripts/tag/crypto/ provide cryptography support within WeeChat], however OTR encryption is not well-maintained or even usable.
+
+== Quassel IRC ==
+* Graphical IRC client based on Qt and KDE libraries. Not an official KDE project.
+* To install: <code>sudo apt install quassel</code>
+* Features an integrated setup wizard. Documentation is at https://bugs.quassel-irc.org/projects/quassel-irc/wiki
+* Does not support OTR encryption, however rudimentary symmetric encryption via Blowfish is supported. Documentation on enabling and using encryption: https://bugs.quassel-irc.org/projects/quassel-irc/wiki/Blowfish_Encryption_Manual
+** Do NOT use ECB mode, it is highly insecure. See https://crypto.stackexchange.com/a/20946 for details on why.
+
+= Matrix clients =
+Matrix is a federated chat protocol and server network. It is similar to XMPP in that one can create an account on any Matrix server to access chatrooms and communicate with users on the Matrix network, even if the other users being communicated with are using a different Matrix server.
+
+While Matrix does support end-to-end encryption in both one-on-one and group chats, it has a number of serious shortcomings:
+
+* A verification procedure is needed to ensure the Matrix server is not performing a man-in-the-middle attack on encrypted communications. However, this verification procedure can oftentimes be difficult to impossible to complete due to client and/or server bugs.
+* Messages in encrypted rooms are sometimes unable to be decrypted by some of the users in the room.
+* Matrix server admins can trivially intercept new encrypted messages sent to a user by logging into that user's Matrix account themselves. Even though their new login will not be "verified" and will not have access to previously sent messages, Matrix clients will by default encrypt all newly sent messages with a key that the unverified device can read.
+* Support for encryption varies between Matrix clients, and oftentimes isn't implemented at all.
+* libolm, which was previously the primary library used to provide encryption functionality for Matrix, had multiple dangerous security flaws that would potentially have allowed Matrix's encryption to be compromised.<ref>
+https://soatok.blog/2024/08/14/security-issues-in-matrixs-olm-library/
+</ref> This library has since been deprecated.
+* Matrix has well-known issues with large-scale metadata leakage. <ref>
+Matrix metadata leakage references:
+
+* User contributed references - not reviewed by {{project_name_short}} developers in detail.
+** https://gitlab.com/libremonde-org/papers/research/privacy-matrix.org/-/blob/master/part1/README.md
+** https://gitlab.com/libremonde-org/papers/research/privacy-matrix.org/-/blob/master/part2/README.md
+** https://forum.hackliberty.org/t/why-we-abandoned-matrix-the-dark-truth-about-user-security-and-safety/224
+** https://hackea.org/notas/matrix.html
+** https://github.com/matrix-org/synapse/issues/5677
+</ref>
+* The Matrix protocol itself theoretically supports forward secrecy <ref>
+https://gitlab.matrix.org/matrix-org/olm/blob/master/docs/megolm.md#partial-forward-secrecy
+</ref>, but certain clients, such as Element, may not have this feature. Users should review the client's documentation before starting a chat.
+* The Matrix protocol has been criticized for several practically-exploitable cryptographic vulnerabilities that, together, invalidate the confidentiality and authentication guarantees claimed by Matrix against a malicious server. <ref>
+https://eprint.iacr.org/2023/485.pdf
+</ref>
+
+While not technically a shortcoming, most rooms on the Matrix network do not have encryption enabled.
+
+Many different Matrix clients exists, Element being the most commonly used client.
+See other Matrix clients here: 
+https://matrix.org/ecosystem/clients/
+
+== Element ==
+Not recommended for these reason: Element do not have forward secrecy at the time of writing. Any key compromise among message recipients would affect the confidentiality of all past communications.<ref>
+* https://web.archive.org/web/20250402144326/https://www.privacyguides.org/en/real-time-communication/#additional-options
+* https://github.com/element-hq/element-meta/issues/1296
+</ref>
+
+=== Notices ===
+{{Third_Party_Repository}}
+
+=== Element installation ===
+
+{{CodeSelect|code=
+sudo extrepo enable element.io
+}}
+
+{{Install Package|package=
+element-desktop
+}}
+
+== Quaternion ==
+
+[[File:quaternion.png|128px|border]]
+
+=== Overview ===
+
+Quaternion is a Qt-based desktop IM client for the Matrix protocol. Matrix is an open, federated communications protocol. <ref>
+https://packages.debian.org/{{Stable project version based on Debian codename}}/quaternion
+</ref>
+
+At time of writing, [https://github.com/quotient-im/Quaternion/issues/75 Quaternion did not support end-to-end encryption] yet.
+
+For example, it is possible to create an account on the [https://chat.{{project_matrix_server}}/#/register {{project_matrix_server}}] home server for a more private experience; less data is collected about users compared to the matrix.org home server. The privacy issues are inherent in the synapse server side software itself; refer to this [https://github.com/privacytools/services/issues/17 list] for a full write-up. Besides federating with other Matrix instances, Quaternion supports bridging to IRC, Telegram and many other protocols. <ref>
+https://matrix.org/bridges/
+</ref>
+
+=== Installation ===
+
+{{Install Package
+|package=quaternion
+}}
+
+== Nheko Reborn ==
+
+[[File:Nhekologo.png|128px|border]]
+
+=== Overview ===
+
+Nheko Reborn is: <ref>https://packages.debian.org/bullseye/nheko</ref>
+<blockquote>... a Qt-based chat client for Matrix, an open, federated communications protocol. The motivation behind the project is to provide a native desktop app for Matrix that feels more like a mainstream chat app and less like an IRC client.</blockquote>
+
+The developers explicitly warn that although the current implementation of end-to-end encryption is functional, it may have bugs that affect security. Further, it may be necessary to bootstrap cross-signing keys in a different client. Online key backup is not supported, but this can be performed offline. Most major chat features are available such as: VoIP calls (voice and video); user registration; creating, joining and leaving rooms; sending and receiving invites/files/emojis and so on.
+
+Refer to the [https://github.com/Nheko-Reborn/nheko Nheko Reborn GitHub README] for further information.
+
+=== Installation ===
+
+{{Install Package
+|package=nheko
+}}
+
+= Web Browser / JavaScript Clients =
+
+Web clients can provide weaker or stronger security depending on the user's threat model.
+
+One disadvantage of web clients is that they rely on the server not attacking the user and stealing their encryption keys from the browser. Websites can target specific users with malicious JavaScript whereas with an installed application, the code is completely static. <ref>
+https://proton.me/blog/cryptographic-architecture-response/
+</ref>
+
+Furthermore, installed applications can utilize TLS certificate pinning to better mitigate [[Warning#Man-in-the-middle_Attacks|man-in-the-middle attacks]] by eliminating the dependence on potentially compromised certificate authorities. Certificate pinning is already being extensively used by applications such as Signal <ref>
+https://www.signal.org/blog/certifiably-fine/
+</ref>, ProtonMail <ref>
+https://proton.me/blog/tls-ssl-certificate#Extra-security-precautions-taken-by-ProtonMail
+</ref> and others.
+
+In addition, the stateless design of Tor Browser will erase any keys created and approved by communicating parties. This can cause confusion about the trustworthiness of contacts in subsequent sessions -- one workaround is to use a dedicated install of Firefox for that purpose.
+
+However, there are advantages to web clients too. Websites are much less privileged than installed applications and have no direct access to system resources. Common browsers also often employ browser sandboxing technologies to contain malicious websites even in the event of a browser exploit (unless chained with an additional sandbox escape exploit).
+
+== Element Web ==
+
+[https://app.element.io/#/welcome Element Web App] is a browser-based Matrix client. It can also be run from [https://element.io/get-started different platforms].
+
+== Converse.js ==
+
+[https://conversejs.org/ Converse.js] is an OMEMO browser client which is provided by some XMPP hosting services. However, chat encryption is only available on "Trusted Devices".
+
+= Briar =
+
+Not recommended due to [https://www.whonix.org/wiki/Tips_on_Remaining_Anonymous#Refrain_from_.22Tor_over_Tor.22_Scenarios tor over tor scenario] at the time of writing. 
+
+See forum discussion: 
+https://forums.whonix.org/t/briar-desktop-in-whonix/9565/21
+
+= Session =
+
+Not recommended for these reasons: 
+* Only one account with a permanent ID in the desktop client
+* Encryption issues identified in 2025 <ref>
+*https://soatok.blog/2025/01/14/dont-use-session-signal-fork/
+*https://soatok.blog/2025/01/20/session-round-2/
+</ref>
+* [https://github.com/oxen-io/session-desktop/issues/2321 session private messenger does not consider supply chain attacks yet? #2321]
+* [https://github.com/oxen-io/session-desktop/issues/2322 security: NPM found 91 vulnerabilities #2322]
+* Does not have PFS (Perfect Forward Secrecy)
+
+{{quotation
+|quote=A detailed blog post on why Session removed PFS (Perfect Forward Secrecy), and what that means for users can be found [https://getsession.org/session-protocol-technical-information here].
+|context=[https://getsession.org/a-response-to-recent-claims-about-sessions-security-architecture A Response to Recent Claims About Session's Security Architecture]
+}}
+
+See forum discussion: https://forums.whonix.org/t/session-private-messenger/13264
+
+= Wire =
+
+Not recommended due to these issues:
+* Broken encryption identified in 2023 <ref>https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/673362/Tsouloupas_Andreas.pdf</ref>
+* Linux support is still experimental <ref>https://wire.com/en/app-download, Linux builds are listed as experimental and community-supported</ref>
+
+= Status =
+
+Not recommended due to these issues:
+* Privacy policy is referenced in various places but does not actually exist. <ref>https://status.app/help/getting-started/prioritising-user-privacy-in-status-software#the-privacy-policy</ref><ref>A Whonix contributor attempted to locate Status's privacy policy online. When that failed, they installed Status in a virtual machine, launched it, and found the button for viewing the privacy policy. Clicking that button opened a window with the title "Status Software Privacy Policy" and an empty text box.</ref> Documentation indicates that telemetry and analytics are present.
+* No recent security research to confirm or deny Status's encryption's reliability is known to exist.
+* Most recent security audit was in 2019, uncovering almost 40 security-affecting issues, three of which affected cryptography. <ref>https://our.status.im/status-mobile-app-security-audit-complete-ahead-of-v1-launch/</ref> Status promised to publicize the results of the audit, but finding those results is unresonably difficult and it is unclear how much of the info they actually publicized.
+* Heavily tied to cryptocurrency technologies, possibly enabling identity leaks.
+* Documentation indicates Status is beta-quality. <ref>https://status.app/help/getting-started/how-to-use-status-your-quick-start-guide</ref>
+
+= Deprecated Chat Clients =
+== Introduction ==
+
+The following is a list of chat clients which were previously documented on this page. It is not a list of all deprecated chat clients that have ever existed.
+
+== CoyIM ==
+
+CoyIM is no longer included in {{project_name_short}} due to technical issues. Namely, it is currently not available from Debian stable or backports package sources (<code>packages.debian.org</code>). <ref>
+https://forums.whonix.org/t/coyim-in-whonix-development-discussion/5901/16
+</ref> There is a chance it will be reintroduced when {{project_name_short}} 16 (based on Debian <code>bullseye</code>) is released. Manual software installation might also be possible (see [[Install Software]]), but that procedure is [[Unsupported|undocumented]] by {{project_name_short}} developers.
+
+== Nheko ==
+
+The original Nheko application is no longer maintained and was last worked on in 2018. <ref>
+https://github.com/mujx/nheko
+
+<blockquote>
+This repository has been archived by the owner. It is now read-only.
+</blockquote>
+</ref>
+
+As an alternative, consider installing [[#Nheko_Reborn|Nheko Reborn]].
+
+== Pidgin ==
+
+Pidgin supports most protocols and OTR end-to-end encrypted chat. However, it is not recommended because it has a [https://pidgin.im/about/security/advisories/ very poor security record] with many remotely exploitable bugs. Security researcher and developer Micah Lee notes this is the result of reliance on legacy protocols and the libpurple, libotr and libxml libraries which are: ''"... massive, written in C/C++, and are littered with memory corruption bugs. ..."'' <ref>https://micahflee.com/2013/02/using-gajim-instead-of-pidgin-for-more-secure-otr-chat/</ref>
+
+== RetroShare ==
+
+{{project_name_short}} developers no longer list RetroShare, which is a [https://en.wikipedia.org/wiki/Friend-to-friend friend-to-friend] (peer-to-peer), decentralized network and not an anonymizing network. Encrypted RetroShare connections support chat, voice and video, mail, file-sharing, forums and Tor. <ref>Unlike other private P2P options, the F2F network can grow in size without compromising their users' identities. Also, passwords or digital signatures are required for authentication.</ref> Although RetroShare is [https://github.com/RetroShare/RetroShare under active development], <ref>See also: https://retroshareteam.wordpress.com/2021/03/15/release-notes-for-v0-6-6/</ref> there are several serious concerns which disqualify a recommendation:
+
+* The RetroShare package is signed with [[RetroShare#Installation|weak 1024-bit keys]] (in late-2018).
+* A 2016 code review which focused on implementation vulnerabilities discovered multiple security issues: <ref>https://www.elttam.com/blog/a-review-of-the-eff-secure-messaging-scorecard-pt1/</ref>
+** The attack surface is high due to the feature-rich codebase.
+** Systemic "insecure coding practice" was identified, particularly ''"...inconsistent return value checking and error handling, poor usage of explicit and implicit typecasting, and relaxed handling of adverse security edge-cases."''
+** Within a 24-hour period, auditors had developed proof of concept exploits for web-like vulnerabilities, weak binary protections, and out of bound memory reads and remote memory corruption (promptly rectified by developers).
+* A coverity scan of the RetroShare code shows a large number of outstanding defects, along with a relatively high defect density. <ref>https://scan.coverity.com/projects/retroshare-retroshare</ref> <ref>For example, compare this result with the low number of defects and defect density of the [https://scan.coverity.com/projects/tor Tor] codebase.</ref>
+
+== Ricochet IM ==
+Ricochet IM (original) is no longer recommended as a decentralized (server-less) option because it is not functional in {{project_name_short}} and deprecated upstream by its original developers. Ricochet IM 'only' uses onion encryption and is difficult to set up and use. OTR or double-ratchet encryption is not available and offline messages are not supported. <ref>
+https://github.com/ricochet-im/ricochet/issues/72
+</ref> <ref>
+https://github.com/ricochet-im/ricochet/issues/405
+</ref> Ricochet Refresh is [[Unsupported|unsupported]] since it was broken in {{project_name_short}} 15 [https://forums.whonix.org/t/ricochet-support/7174 despite all efforts to fix it]. A contributor submitted github pull requests <ref>
+* https://forums.whonix.org/t/ricochet-support/7174/56
+* https://github.com/blueprint-freespeech/ricochet-refresh/pull/101
+* https://github.com/blueprint-freespeech/ricochet-refresh/pull/102
+</ref> which were unfortunately rejected due to Ricochet Refresh's rewrite [https://github.com/blueprint-freespeech/gosling gosling] in development. [https://github.com/blueprint-freespeech/ricochet-refresh/commit/b0a274c07f0e8afd7b6727e3fe8428e1f9ad5249 The Ricochet Refresh was changed and Ricochet rewrite is now non-freedom software]. The [https://github.com/blueprint-freespeech/gosling/commit/27fe04db12f8d83d44e4c21d94a8331e8aa8b8f5 chosen license for gosling (a rewrite of Ricochet Refresh) is the same non-freedom software license] [https://www.gnu.org/licenses/license-list.html#comclause <code>Commons Clause</code>].
+
+{{Non-freedom-software}}
+
+An issue [https://github.com/blueprint-freespeech/ricochet-refresh/issues/153 Ricochet-Refresh is now proprietary] had been reported. According to the [https://github.com/blueprint-freespeech/ricochet-refresh/issues/153#issuecomment-1126821612 Ricochet-Refresh developer's reply] it seems unlikely that the license would be reverted to a Freedom Software license.
+
+<u>Update:</u> Was reverted? <ref>
+* [https://github.com/blueprint-freespeech/ricochet-refresh/pull/156 Adding Comment Headers and Making Changes for REUSE Compliance] has been closed without merge.
+</ref>
+
+([[Deprecated/Ricochet IM|archived documentation]])
+
+== TorChat ==
+
+TorChat has not been recommended by {{project_name_short}} developers since late-2015. The reason is [https://github.com/prof7bit/TorChat/issues development has been at a standstill] since 2013 and the TorChat developer does not respond to other people, suggesting the project has been abandoned. TorChat is also an unofficial project and unaffiliated with The Tor Project. Since communication, support, active development and security fixes are essential for anonymity-related projects, modern software alternatives are recommended. <ref>Ricochet IM was previously recommended in this section, since it passed a recent (2016) security audit with flying colors.</ref>
+
+Another reason to avoid TorChat is the findings of a 2015 security analysis <ref>[https://kodu.ut.ee/~arnis/torchat_thesis.pdf Security Analysis of Instant Messenger TorChat]</ref> which inspected the protocol and Python implementation: <ref>https://en.wikipedia.org/wiki/TorChat#Security</ref>
+
+<blockquote>It was found that although the design of TorChat is sound, its implementation has several flaws, which make TorChat users vulnerable to impersonation, communication confirmation and denial-of-service attacks.</blockquote>
+
+== Tor Messenger ==
+
+Do <u>not</u> use Tor Messenger! It was deprecated by upstream developers in early-2018. <ref>
+* https://blog.torproject.org/sunsetting-tor-messenger
+* [[Deprecated#Tor_Messenger]]
+* https://forums.whonix.org/t/tor-messenger-is-no-longer-maintained-as-of-march-2018
+</ref>
+
+== Tox ==
+Tox is a fully-featured, decentralized (server-less) option which employs strong encryption, but the software is in alpha status.
+
+qTox has been [https://forums.whonix.org/t/tox-qtox-whonix-integration/1219/18 removed from {{project_name_short}}] due to serious security issues.
+
+== HexChat ==
+HexChat is no longer maintained. It may contain serious bugs or security vulnerabilities that render it unsafe to use. See the final release announcement. Whonix no longer includes HexChat by default.
+
+See [[HexChat]].
+
+= Other Software =
+
+For anonymous Voice over IP (VoIP) or encrypted, anonymous phone calls using the Tor anonymity network, see: [[VoIP]].
+
+If a messenger program is not listed in this chapter, it is for now recommended against. If readers feel any privacy-respecting chat clients are missing on this page, first search the [https://forums.{{project_clearnet}} {{project_name_short}} forums] to see if that application has been discussed in the recent past. Any additions to this page will be based on an objective analysis of the software's underlying strength and compatibility with {{project_name_short}}. <ref>
+Also see: https://forums.whonix.org/t/client-server-instant-messengers-im/3081
+</ref>
+
+= Resources =
+* https://www.securemessagingapps.com/
+* https://www.privacyguides.org/en/real-time-communication/
+* https://privacyspreadsheet.com/messaging-apps
+* https://eylenburg.github.io/im_comparison.htm
+* https://www.kuketz-blog.de/die-grosse-messenger-uebersicht-kompakt-kritisch-direkt/
+* {{ExtLink
+|https://archive.is/20250416085840/https://www.heise.de/select/ct/2025/9/2505715264990543311
+}} <ref>
+Original and web archived behind paywall:
+
+* https://www.heise.de/select/ct/2025/9/2505715264990543311
+* https://web.archive.org/web/20250418145817/https://www.heise.de/select/ct/2025/9/2505715264990543311
+* https://bkil.gitlab.io/secuchart/
+</ref>
+
+= Footnotes / References =
+<references />
+
+= License =
+{{License_Amnesia|{{FULLPAGENAME}}}}
+{{Footer}}
+[[Category:Documentation]]
