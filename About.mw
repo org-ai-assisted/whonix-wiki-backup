@@ -1,0 +1,454 @@
+<!--
+Copyright:
+
+   {{project_name_long}} About wiki page Copyright (C) Amnesia <amnesia at boum dot org>
+   {{project_name_short}} About wiki page Copyright (C) 2012 - 2026 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to:
+
+    Free Software Foundation, Inc.
+    51 Franklin St, Fifth Floor
+    Boston, MA 02110-1301, USA.
+
+On Debian GNU/Linux systems, the complete text of the GNU General Public
+License can be found in the /usr/share/common-licenses' directory.
+
+The complete text of the GNU General Public License can also be found online on gnu.org <https://www.gnu.org/licenses/gpl.html>, in {{project_name_short}} virtual machine images in /usr/share/common-licenses/GPL-3 file or on Github <https://github.com/{{project_name_short}}/derivative-maker/blob/master/GPLv3>.
+--> <!--
+This wiki page is a fork of the Tails About page, from this exact source <https://git.immerda.ch/?p=amnesia.git;a=blob;f=wiki/src/about.mdwn;hb=9ff23c529b206f6f3d637257f8f1f2aa434f3d27>.
+-->
+{{Header}} {{hide_all_banners}} {{Title|title=
+{{project_name_long}} - Overview
+}} {{#seo:
+|description=Privacy protection. Anonymity online. Anonymous Operating System. {{project_name_short}} routes all Internet traffic through the Tor anonymity network. Security by Isolation. Based on Debian. {{project_name_short}} Architecture.
+|image=Whonix-homepage-main.png
+}} {{#css:/src-copy/_Page_About.css}} {{Anchor|overview}} {{documentation_mininav}} {{intro|thumb=Whonix-homepage-main.png|
+'''{{project_name_short}} is an anonymous operating system that runs like an app''' and routes all Internet traffic through the Tor anonymity network. It offers privacy protection and anonymity online and is available for all major operating systems.
+
+{{VideoLink
+|videoid=sRJTHWgbMvc
+|text=What is Whonix? - Your Internet Privacy Super Tool
+}} ([[Videos|more videos]]).
+
+Technical readers can refer to the [[Dev/Technical_Introduction|{{project_name_short}} technical introduction]] instead.
+}}
+
+{{LeftRightImageText
+|image=Whonix-homepage-main.png
+|addToClass=promo-style
+|imagelink=Download
+|imageAlt=Whonix homepage image
+|text=
+<h2>Superior Internet Privacy</h2>
+<p>
+{{project_name_short}} is a free and open-source desktop {{os}} that is specifically designed for [https://www.whonix.org/#security advanced security and privacy]. It's based on the [https://torproject.org Tor] anonymity network, security-focused Linux Distribution {{Kicksecure_link
+|
+|{{Kicksecure}}
+}}, GNU/Linux and the principle of security by isolation. {{project_name_short}} [[Whonix_against_Real_Attacks|defeats common attacks]] while maintaining usability.
+</p>
+}}
+
+<div class="vspacer-20 margin-top-20"></div>
+
+{{LeftRightImageText
+|image=Kicksecure-promo.jpg
+|addToClass=promo-style
+|imageright=1
+|imagelink=https://www.kicksecure.com
+|imageAlt=Kicksecure promo image
+|text=
+<h2>Security hardened</h2>
+<p>
+{{project_name_short}} uses an extensively security reconfigured of the Debian base ({{Kicksecure}} Hardened) which is run inside multiple <u>v</u>irtual <u>m</u>achines (VMs) on top of the host OS. This architecture provides a substantial layer of protection from malware and [[Data_Collection_Techniques#IP_Address|IP]] leaks. Applications are pre-installed and configured with safe defaults to make them ready for use with minimal user input. [[#Introduction|Learn more]].
+</p>
+}}
+
+<center>
+{{#widget:Download_Button
+ |text=Download Whonix (FREE)
+ |url=/wiki/Download
+ |fontsize=22px
+}}
+</center>
+
+{{LeftRightImageText
+|image=Preview-user-groups.jpg
+|addToClass=promo-style
+|imageright=1
+|imagelink=Users_of_Whonix
+|imageAlt=Preview user groups
+|text=
+<h2>Privacy First Users</h2>
+<p>
+The increasing threat of mass surveillance and repression all over the world means our freedoms and privacy are rapidly being eroded. {{project_name_short}} is a powerful solution to this problem. Anyone who values privacy, has business secrets, needs private communication or does sensitive work on their desktop or online can greatly benefit from using {{project_name_short}}. [[#Introduction|Learn more]].
+</p>
+}}
+
+<div class="vspacer-20 margin-top-20"></div>
+
+{{LeftRightImageText
+|image={{project_name_short}}-concept-detailed.jpg
+|imageAlt={{project_name_short}} detailed concept
+|addToClass=promo-style
+|text=
+<h2>Innovative Architecture</h2>
+<p>
+{{project_name_short}} consists of two VMs: the [[{{project_name_gateway_short}}|{{project_name_gateway_long}}]] and the [[{{project_name_workstation_short}}|{{project_name_workstation_long}}]]. 
+The former runs Tor processes and acts as a gateway, while the latter runs user applications on a completely isolated network. This innovative architecture allows for maximum privacy, keeps applications in check and makes DNS leaks impossible. [[#Whonix_Architecture|Learn more]].
+</p>
+}}
+
+<center>
+{{#widget:Download_Button
+ |text=Download Whonix (FREE)
+ |url=/wiki/Download
+ |fontsize=22px
+}}
+</center>
+
+{{IntroLike|
+'''Now we're diving deep into what makes {{project_name_short}} great.''' We'll provide a more detailed look and lots of links for you to even more thoroughly study {{project_name_short}}.
+}}
+
+<div class="vspacer-20"></div>
+
+__TOC__
+
+= Introduction =
+
+[[File:Whonix-logo-rectangle.png|thumb|130px|border|alt={{project_name_short}} rectangular logo|[[Dev/Logo|{{project_name_short}} rectangular logo]]]]
+[[File:Kicksecure-seal.png|thumb|130px|border|alt=Kicksecure seal|Kicksecure Hardened]]
+[[File:Debian.png|thumb|130px|border|alt=Debian logo|Debian logo]]
+[[File:Tor-logo.png|thumb|130px|border|alt=Tor logo|Tor logo]]
+'''{{project_name_short}} is a free and open-source desktop {{os}}''' that is specifically designed for [https://www.whonix.org/#security advanced security and privacy]. It's based on the [https://torproject.org Tor] anonymity network, security-focused Linux Distribution {{Kicksecure_link
+|
+|{{Kicksecure}}
+}}, GNU/Linux and the principle of security by isolation.
+
+'''{{project_name_short}} [[Whonix_against_Real_Attacks|defeats common attacks]] while maintaining usability'''. Online anonymity and censorship circumvention is attainable via fail-safe, automatic and desktop-wide use of the Tor network. This helps to protect from traffic analysis by bouncing communications around a distributed network of relays run by global volunteers. Without advanced, end-to-end, netflow correlation attacks, an adversary watching an Internet connection cannot easily determine the sites visited, and those sites cannot discover the [[Users_of_Whonix|user]]'s physical location. <ref>
+Current practical, low-latency, anonymity designs like Tor fail when the attacker can see both ends of the communication channel (traffic going into and out of the Tor network). [https://blog.torproject.org/one-cell-enough-break-tors-anonymity/ If you can see both flows], simple statistics based on data volume and timing can determine whether they match up.
+</ref>
+
+'''{{project_name_short}} uses an extensively security reconfigured of the Debian base ({{Kicksecure}} Hardened)'''. It consists of two virtual machines -- [[{{project_name_gateway_short}}|{{project_name_gateway_short}}]] and [[{{project_name_workstation_short}}|{{project_name_workstation_short}}]] -- which are designed to be used on a [[Download|supported]] host OS ([[Host_Operating_System_Selection|Host Operating System Selection]]). The host OS supporting {{project_name_short}} is usually the one installed on the user's computer, but OSes installed on external drives will also work ([[USB Installation]]). Users choose the preferred {{project_name_short}} configuration and may use either a Type I hypervisor ([[Qubes|{{q_project_name_long}}]]), or a Type II hypervisor like [[KVM|KVM]] and [[VirtualBox|VirtualBox]].
+
+'''This architecture provides a substantial layer of protection from malware and [[Data_Collection_Techniques#IP_Address|IP]] leaks'''. Applications are pre-installed and configured with safe defaults to make them ready for use with minimal user input. The user may install custom applications or personalize their desktop without fear of information leaks that could lead to de-anonymization. {{project_name_short}} is the only actively developed OS designed to be run inside a VM and paired with Tor. Though technically a "desktop" operating system, the security and anonymity tools {{project_name_short}} provides also make it ideally suited for hosting secure and anonymous onion services.
+
+'''By helping [[Users_of_Whonix|users]] run applications anonymously {{project_name_short}} aims to preserve privacy and anonymity'''. A [[Tor Browser|web browser]], [[Software#Office_Suite|office suite]], and [[Software|other relevant applications]] come pre-configured with security in mind. Internet traffic by {{project_name_short}} is all routed through the Tor anonymity network.
+
+{{project_name_short}} is [[Reasons for Freedom Software|Freedom Software]] and is based on {{Kicksecure_link
+|
+|{{Kicksecure}}
+}} (security-focused Linux Distribution), Tor <ref>
+https://www.torproject.org/about/overview.html.en
+</ref>, Debian GNU/Linux <ref>
+[https://en.wikipedia.org/wiki/Debian Debian Wikipedia]
+</ref>, and the principle of security by isolation.
+
+= {{project_name_short}} User Groups =
+
+[[File:Preview-user-groups.jpg|thumb|alt=users of Whonix|[[Users_of_Whonix|Users of {{project_name_short}}]]|link=Users of Whonix]]
+
+'''Privacy is a human right'''. The increasing threat of mass surveillance and repression all over the world means our freedoms and privacy are rapidly being eroded. {{project_name_short}} is a powerful solution to this problem. Anyone who values privacy, has business secrets, needs private communication or does sensitive work on their desktop or online can greatly benefit from using {{project_name_short}}. This includes the following. Also see [[Users_of_Whonix|Users of {{project_name_short}}]].
+
+# '''Investigators and whistleblowers whose work threatens the powerful'''. Within our isolated environment, research and evidence can be gathered without accidental exposure.
+# '''Researchers, government officials or business-people who may be targets of espionage'''. Anti-malware and anti-exploit modifications lower the threat of trojans and backdoors.
+# '''Journalists who endanger themselves and their families by reporting on organized crime'''. Compartmentalized, anonymous Internet use prevents identity correlation between social media and other logins.
+# '''Political activists under targeted surveillance and attack'''. The usefulness of threatening the ISP in order to analyze a target's Internet use is severely limited. The cost of targeting a {{project_name_short}} user is greatly increased.
+# '''Average computer users in a repressive or censored environment'''. Easy Tor setup and options for advanced configurations means users in repressive countries can fully access the Internet desktop-wide, not just in their browser.
+# '''Average computer users who simply don’t want all or some aspect of their private lives uploaded, saved and analyzed'''. {{project_name_short}} does not silently upload identifying information in the background.
+
+= {{project_name_short}} Architecture =
+
+{{Anchor|architecture}}
+
+[[File:{{project_name_short}}-concept-detailed.jpg|thumb|alt={{project_name_short}} Architecture]]
+'''{{project_name_short}} consists of two VMs: the [[{{project_name_gateway_short}}|{{project_name_gateway_short}}]] and the [[{{project_name_workstation_short}}|{{project_name_workstation_short}}]]'''. <ref>
+In [[Qubes|{{q_project_name_short}}]], these VMs are named <code>{{project_name_gateway_vm}}</code> and <code>{{project_name_workstation_vm}}</code>, respectively.
+</ref> The former runs Tor processes and acts as a gateway, while the latter runs user applications on a completely isolated network. The {{project_name_short}} architecture affords several benefits:
+
+* Only connections through Tor are permitted.
+* Servers can be run, and applications used, anonymously over the Internet.
+* DNS leaks are impossible.
+* Malware with root privileges cannot discover the user's real IP address.
+* Threats posed by misbehaving applications and user error are minimized.
+* The platform has [https://www.whonix.org/#security extensive security hardening].
+
+= Features =
+
+== Full Spectrum Anti-Tracking Protection ==
+
+'''Hiding your identity is harder than just hiding your IP'''. Internet tracking companies don't even need to know your IP address to be able to identify you. They have multiple alternative tracking technologies in their arsenal. Whonix provides full spectrum anti-tracking protection.
+
+{| class="wikitable"
+|+ ''Surveillance Technology, Impact and {{project_name_short}} Defenses''
+|-
+
+! '''Surveillance Technology'''
+! '''Impact on your Privacy'''
+! '''{{project_name_short}} Tracking Protection Technology'''
+|-
+
+! [[Data_Collection_Techniques#IP|IP address tracking]]
+| IP is tied to user identity and physical location.
+| [[Reliable_IP_Hiding|Reliable IP Hiding]]; [[Why_does_Whonix_use_Tor|IP cloaking using Tor]]
+|-
+
+! [[Data_Collection_Techniques#Browser_Fingerprinting|Browser fingerprinting]]
+| Tracking, creating a profile of the user even if the user is already cloaking its IP.
+| [[Tor Browser]]
+|-
+
+! TCP ISN / network stack fingerprinting
+| Some fingerprinting techniques analyze patterns in network packets such as TCP initial sequence numbers (ISN).
+| [https://github.com/Kicksecure/tirdad tirdad] (TCP ISN randomization)
+|-
+
+! [[Fingerprint#Website_Traffic_Fingerprinting|Website Traffic Fingerprinting]]
+| Your {{isp}} knows which websites and when you visited but does not know the exact details. And that even if the website is using https and you are using VPN. <ref>
+[[Whonix_versus_VPNs#VPNs_do_not_even_hide_visited_websites_from_your_Internet_Service_Provider|VPNs do not even hide visited websites from your Internet Service Provider]]
+</ref>
+
+For example, if you are posting to a discussion forum, your ISP or a man-in-the-middle could know the time and that you used that discussion forum but not the exact contents of your post. However, due to the specific timing specifically over time an attacker could figure out who you are.
+| [[Why_does_Whonix_use_Tor|IP cloaking using Tor]]
+|-
+
+! Cross-application correlation
+| If multiple activities share the same Tor circuit, it can become easier to correlate different applications and identities to the same user.
+| [[Stream_Isolation/Easy|Stream Isolation]]
+|-
+
+! [[Keystroke_and_Mouse_Deanonymization|Personal keyboard typing and mouse fingerprinting]]
+| Re-identification once you are interacting with a website because of your personal typing style or mouse movement patterns. These behavioral fingerprints can be analyzed, including with modern machine learning.
+| [[Keystroke_and_Mouse_Deanonymization#Kloak|kloak (keystroke and mouse anonymizer)]]
+|-
+
+! [[Time_Attacks|Time attacks]]
+| Individual computer time can give away your identity.
+| [[Boot Clock Randomization]] and secure network time synchronization through [[sdwdate]] (Secure Distributed Web Date)
+|-
+
+! Application misconfiguration and unsafe defaults
+| Many applications are not designed with anonymity in mind. Small configuration mistakes or unsafe defaults can have privacy consequences.
+| Researched, tested privacy and security defaults; [https://github.com/Whonix/anon-apps-config anon-apps-config]
+|-
+
+! Hardware identifiers and host file leaks
+| Some applications try to identify a system using hardware identifiers (such as serial numbers), or accidentally access host resources. This can weaken privacy and increase linkability across sessions.
+| [[Protocol-Leak-Protection_and_Fingerprinting-Protection|Virtualizer friendly abstraction layer]]
+|-
+
+! Other threats.
+| Techniques like [[Stylometry]] (analysis of writing style) and various other tracking technologies can be employed to track users without the need for IP addresses.
+| Whonix is a technological means to anonymity, but staying safe necessitates complete behavioral change; it is a complex problem without an easy solution. The more you know, the safer you can be. See [[Documentation]].
+|-
+
+|}
+
+== Based on Debian ==
+
+[[File:Debian.png|thumb|130px|border|alt=Debian logo]]
+{{Based_on_Debian}}
+
+== Based on Kicksecure ==
+{{upstream_wiki}}
+
+== Security by Isolation ==
+
+'''{{project_name_short}} is the best way to use Tor and provides the strongest protection for your privacy online by hiding your real IP address, because {{project_name_short}} protects from leaks'''. In laymen's terms a leak occurs if a user expects to be wholly using Tor, but instead some application traffic bypasses Tor and is routed over the normal internet (clearnet). A solitary leak is all that is required to de-anonymize the user, for example via IP leaks, DNS leaks, UDP and other channels.
+
+'''Even when Tor provides sufficient anonymity, it can be [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO very complicated or impossible] for users to configure applications''' so all traffic is routed through the Tor network. The reason is networking is very complex and most applications are not designed with anonymity or privacy in mind. Some applications like the Tor Browser Bundle are specifically designed for anonymity and attempt to eliminate all known leak vectors.  Unfortunately, despite all best efforts leaks have occurred in the past due to [[Whonix_against_Real_Attacks#Tor_Browser_Bundle|Tor Browser Bundle software defects (bugs)]]. In such cases, {{project_name_short}} users were protected and unaffected by these leaks.
+
+'''In {{project_name_short}}, DNS and other related leaks (IP, DNS, UDP, ICMP) are impossible'''. Even malware with root privileges cannot discover the user's real IP address because {{project_name_short}}'s split-VM design ensures all internet traffic is routed through Tor.
+
+''{{project_name_short}} is divided into two VMs'':
+
+* [[{{project_name_gateway_short}}|{{project_name_gateway_short}}]] to enforce routing of all Internet traffic through the Tor network, and
+* [[{{project_name_workstation_short}}|{{project_name_workstation_short}}]] for work activities. {{project_name_workstation_short}} is unaware of its real external IP address, which means the user's real external IP address is always protected and leaks are impossible.
+
+'''This security by isolation configuration averts many threats posed by [[malware]], misbehaving applications, and user error.'''
+
+'''Figure:''' ''{{project_name_short}} Operating System Design''
+
+[[File:{{project_name_short}}-concept-detailed.jpg|border|500px|alt={{project_name_short}} Operating System Design]]
+
+([[Art_Gallery#Technical_Illustrations|more technical illustrative images]])
+
+'''This is not an empty claim -- {{project_name_short}} has been audited via the [[corridor]] (Tor traffic whitelisting gateway) and other [[Dev/Leak Tests|leak tests]]'''. In over a [[History|decade]], no leaks were ever discovered. Technical readers can refer to the [[Dev/Technical_Introduction|{{project_name_short}} technical introduction]] and [[Dev/Technical_Introduction#Security_Overview|security overview]] chapters for further details.
+
+== Online Anonymity via Tor ==
+
+[[File:Tor-logo.png|thumb|130px|alt=Tor logo]]
+{{project_name_short}} relies on the Tor network to protect a user's anonymity online; all connections are forced through Tor or otherwise blocked. Tor helps to protect users by bouncing communications around a distributed network of relays run by volunteers all around the world. Without advanced, end-to-end, netflow correlation attacks, anybody watching a user's Internet connection cannot easily determine the sites visited, and those sites cannot learn the user's physical location. <ref>
+Current practical, low-latency, anonymity designs like Tor fail when the attacker can see both ends of the communication channel (traffic going into and out of the Tor network). {{ExtLink
+|text=If both flows are visible
+|https://blog.torproject.org/one-cell-enough-break-tors-anonymity/
+|http://pzhdfe7jraknpj2qgu5cz2u3i4deuyfwmonvzu5i3nyw4t4bmg7o5pad.onion/one-cell-enough-break-tors-anonymity/index.html
+}} simple statistics can determine whether they match up.
+</ref>
+
+To learn more about Tor, see [[Why_does_Whonix_use_Tor|Why does {{project_name_short}} use Tor]] and read the official documentation on the {{ExtLink
+|text=Tor website
+|https://www.torproject.org/
+|http://2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.onion/index.html
+}}:
+
+* {{ExtLink
+|text=Tor overview: Why we need Tor
+|https://2019.www.torproject.org/about/overview.html.en#whyweneedtor
+|http://jqyzxhjk6psc6ul5jnfwloamhtyh7si74b4743k2qgpskwwxrzhsxmad.onion/about/overview.html.en#whyweneedtor
+}}
+* {{ExtLink
+|text=Tor overview: How Tor Works
+|https://2019.www.torproject.org/about/overview.html.en#thesolution
+|http://jqyzxhjk6psc6ul5jnfwloamhtyh7si74b4743k2qgpskwwxrzhsxmad.onion/about/overview.html.en#thesolution
+}}
+* {{ExtLink
+|text=Who uses Tor?
+|https://2019.www.torproject.org/about/torusers.html.en
+|http://jqyzxhjk6psc6ul5jnfwloamhtyh7si74b4743k2qgpskwwxrzhsxmad.onion/about/torusers.html.en
+}}
+
+= Summary =
+
+{| class="wikitable"
+|+ ''{{project_name_short}} Goals, Design and Limitations''
+|-
+
+! '''Category'''
+! '''Description'''
+|-
+
+! {{project_name_short}} is
+|
+* a free and open operating system
+* an anti-censorship tool
+* the first step among many in hiding a user's identity
+|-
+
+! {{project_name_short}} helps to
+|
+* disguise a user's IP address
+* prevent <u>i</u>nternet <u>s</u>ervice <u>p</u>rovider (ISP) spying
+* prevent websites from identifying the user
+* prevent malware from identifying the user
+* circumvent censorship
+|-
+
+! {{project_name_short}} is not
+|
+* a one-click anonymization solution, since anonymity is a complex behavioral and technical problem in a highly surveilled world <ref>
+Readers of the [[Documentation|{{project_name_short}} documentation]] will quickly learn that one-click anonymization solutions simply <u>do not exist</u> and will likely never be developed.
+</ref>
+|-
+
+|}
+
+{{Anchor|Release and Support Schedule}}
+
+= Releases =
+
+== {{project_name_short}} Version ==
+Each {{project_name_short}} release is based on a particular version of Debian:
+
+{| class="wikitable"
+|+ {{project_name_short}} Version
+|-
+
+! <u>{{project_name_short}} version</u> !! ''Debian Version'' !! ''Debian Codename'' !! Supported
+|-
+
+| {{project_name_short}} <code><u>17</u></code> || ''<code>12</code>'' || [https://www.debian.org/releases/bookworm/ <code>bookworm</code>] || Being deprecated.
+|-
+
+| {{project_name_short}} <code><u>18</u></code> || ''<code>13</code>'' || [https://www.debian.org/releases/trixie/ <code>{{Stable project version based on Debian codename}}</code>] || {{Yes}}
+|-
+
+|}
+
+Users can manually check the {{project_name_short}} version at any time by following [[Systemcheck#Check_Version|Check Version]].
+
+{{Anchor|Release and Support Schedule}}
+
+== Release Schedule ==
+{{project_name_short}} does not have a fixed release schedule. A new stable release only becomes available when it is deemed ready.
+
+== Support Schedule ==
+
+{| class="wikitable"
+|+ ''{{project_name_short}} Support Schedule''
+|-
+
+! '''Notice'''
+! '''Details'''
+|-
+
+! Platform specific
+|
+* [[Non-Qubes-{{project_name_short}}|Non-Qubes-{{project_name_short}}]]:
+** VMs: ''<u>One month</u>'' after a new stable version of <u>Debian</u> is released, {{project_name_short}} VMs may no longer be supported on any older version of Debian. All users must upgrade the Debian platform promptly after the deprecation notice to continue using {{project_name_short}} safely.
+** [[ISO]]: ''<u>One month</u>'' after a new stable version of <u>{{project_name_short}}</u> is released, older versions will no longer be supported. All users must upgrade the {{project_name_short}} platform promptly to remain safe.
+* {{Anchor|Qubes_Hosts}} [[Qubes|{{Q project name short}}]]:
+** Version [https://github.com/QubesOS/qubes-issues/issues/10219 <code>17</code>: The goal is to provide support for as long as Qubes <code>R4.<u>2</u></code> receives security support from Qubes] and Debian. <ref>
+Responsible for:
+
+* Debian security issues -> Debian project
+* Qubes security issues -> Qubes project
+* {{project_name_short}} security issues -> {{project_name_short}} project
+</ref>
+** Version <code>18</code>: Supported. <!--
+even if Qubes <code>R4.<u>3</u></code> is only available as {{RC}}. <ref>
+This is because it includes much newer software packages. That is what developers are using and where the development focus is. {{project_name_short}} is a small project and does not have a dedicated team for <code>oldstable</code> support. Therefore, <code>oldstable</code> support is maintained as a side project.
+
+More details: [https://github.com/QubesOS/qubes-issues/issues/10219 decide availability of Kicksecure and Whonix 18 (Debian trixie based) on Qubes R4.2 versus R4.3 #10219]
+</ref>
+-->
+|-
+
+! Deprecation Notices
+| We aim to announce deprecation events one month in advance to remind users to upgrade on the [https://forums.{{project_clearnet}}/c/news <code>{{project_clearnet}}</code> news forum]. [[Stay Tuned]]! All users must upgrade the respective platform promptly to remain safe.
+|-
+
+|}
+
+= Next Steps =
+
+Learning more about {{project_name_short}} is the best way to determine whether it is a suitable solution in your personal circumstances. The following chapters are recommended:
+
+* The [[Warning]] page to understand the security limitations of {{project_name_short}} and Tor.
+* Further information about {{project_name_short}} [[Features]].
+* The implied [[Trust]] placed in {{project_name_short}} when it is used.
+* Other relevant [[Documentation|Documentation]] explaining how to use {{project_name_short}} safely.
+
+= See Also =
+
+* [[Whonix against Real Attacks|Whonix Track Record against Real Cyber Attacks]]
+* [[History|{{project_age_years}} years history of success]]
+
+= Footnotes =
+
+<references />
+
+[[About|About]]
+
+[[Category:Documentation]]
+
+= License =
+
+{{License_Amnesia|{{FULLPAGENAME}}}}
+
+{{JonDos}} The "Summary" chapter of the {{project_name_short}} Design and Goals wiki page contains content from the JonDonym documentation [https://web.archive.org/web/20200123130536/http://anonymous-proxy-servers.net/en/help/about.html Features] page.
+
+{{Footer}}
+
+[[Category:Documentation]]
