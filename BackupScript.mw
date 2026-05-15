@@ -1,0 +1,37 @@
+{{Header}}
+{{Title|title=
+Backup {{project_name_short}} Project - Get a Copy of {{project_name_short}} Website and Source Code
+}}
+{{#seo:
+|description=Create a Backup of Website and Source Code of the {{project_name_long}}
+|image=whonixbackup.jpg
+}}
+[[File:whonixbackup.jpg|thumb]]
+{{intro|
+Create a backup of Website and Source Code of the {{project_name_short}}
+}}
+= Resources =
+
+* [https://github.com/{{project_name_short}}/{{project_name_short}}-wiki-backup github {{project_name_short}}-wiki-backup], [https://gitlab.com/{{project_name_short}}/{{project_name_short}}-wiki-backup gitlab {{project_name_short}}-wiki-backup].
+* https://gitlab.com/{{project_name_short}}/{{project_name_short}}-wiki-html
+* {{Github_link|
+https://github.com/Kicksecure/{{project_name_short}}-discourse-html-backup
+}}
+* https://gitlab.com/{{project_name_short}}/wiki-backup-dump-content-current
+
+= Automated Backup Script =
+To create a backup of the {{project_name_short}} website and source code, please run the {{project_name_short}} backup script ({{Github_link|
+https://github.com/Kicksecure/usability-misc/blob/master/usr/bin/{{project_name_short_lowercase}}-dev-backup
+}}) every now and then.
+
+{{CodeSelect|code=
+{{project_name_short_lowercase}}-dev-backup
+}}
+
+= Related =
+* [[Offline Documentation]]
+
+{{Footer}}
+[[Category:Documentation]]
+[[Category:Development]]
+[[Category:MultiWiki]]
