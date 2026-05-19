@@ -1,0 +1,47 @@
+{{Header}}
+{{#seo:
+|description=Future {{project_name_long}} Security Enhancements
+|image=Roadmap.jpg
+}}
+{{title|title=
+{{project_name_short}} Security Roadmap
+}}
+[[File:Roadmap.jpg|thumb|400px]]
+{{intro|
+Future {{project_name_short}} Security Enhancements
+}}
+= Introduction =
+
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = <u>'''See {{ExtLink
+|text=Upcoming Security Enhancements on the {{project_name_short}} Homepage
+|https://www.{{project_clearnet}}/#upcoming
+|http://www.{{project_onion}}/#upcoming
+}}.'''</u>
+}}
+
+{{stub}}
+
+= Upstream =
+{{upstream_wiki}}
+
+= See Also =
+* {{kicksecure_wiki
+|wikipage=Security_Roadmap
+|text={{kicksecure}} Security Roadmap
+}}
+* [https://forums.whonix.org/t/fixing-the-desktop-linux-security-model/9172 Fixing the Desktop Linux Security Model]
+* {{kicksecure_wiki
+|wikipage=Dev/About_Computer_Insecurity
+|text=About Computer (In)Security
+}}
+* {{kicksecure_wiki
+|wikipage=Test
+|text=Testers for New Security Features Wanted!
+}}
+
+<references />
+{{Footer}}
+[[Category:Development]]
