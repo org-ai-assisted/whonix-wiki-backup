@@ -1,8 +1,5 @@
 {{GoogleOff | content=
-{{#css:/mw-combined-skincss.min.css}}{{#css:
-body.ctbc_hide-sitenotice-{{Sitenotice_id}}_true #siteNotice .sitenotice-banner[data-banner-id="{{Sitenotice_id}}"] { display: none !important; }
-#siteNotice .sitenotice-banner:not([data-banner-id="{{Sitenotice_id}}"]) { display: none !important; }
-}}{{#seo:
+{{#seo:
 |type=website
 }}{{#widget:Header
 |part=1

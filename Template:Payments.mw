@@ -1,5 +1,4 @@
 <noinclude>__NOINDEX__</noinclude>
-{{#css:/src-copy/Donation_Panel.min.css}}
 <div class="donation-panel">
 {{#widget:Donation_Panel
  |Pay_Bitcoin={{Pay_Bitcoin}}
