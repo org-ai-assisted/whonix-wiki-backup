@@ -1,0 +1,199 @@
+{{Header}}
+{{#seo:
+|description=Inspiration for developing new {{project_name_long}} Features.
+}}
+{{intro|
+Inspiration for developing new {{project_name_long}} Features.
+}}
+= WARNING =
+
+'''This page is intended for people interested in developing {{project_name_short}}, NOT for users. It contains only partial-finished attempts adding new features to {{project_name_short}}.'''
+
+= Rudimentary {{project_name_short}} Support for Other Anonymizing Networks =
+
+See [[Other Anonymizing Networks]]
+
+= I2P =
+
+{{Anchor|I2PBOX}}
+== Installing I2P on {{project_name_gateway_long}} (I2PBOX) ==
+Development stalled due to lack of interest from {{project_name_short}} developers and the I2P community. See:
+
+* Development thread: <nowiki>https://sourceforge.net/projects/whonix/wiki/Dev_old_1/#optionalfeature-I2P-support-waitlooking-for-contributorsmore-mature-upstream</nowiki> Support for I2P WAIT for contributors/more mature upstream]
+* <nowiki>http://forum.i2p/viewtopic.php?t=7037</nowiki> I2P thread (<nowiki>http://forum.i2p.re/viewtopic.php?t=7037</nowiki> re)
+* [[Dev/Anonymity Network#I2P]]
+* [[I2P]]
+
+Anyone feel free it take it.
+
+Guide by i2p:
+
+* reachable only when using i2p: <nowiki>http://killyourtv.i2p/howtos/whonix/</nowiki> (down...)
+* i2p to clearnet service ".re", reachable over clearnet and Tor: <nowiki>http://killyourtv.i2p.re/howtos/whonix/</nowiki> (down, but see below...)
+
+Currently in development by goldstein:
+
+https://forums.whonix.org/t/i2p-running-on-whonix-gateway/2163
+
+= VPN =
+
+== Introduction ==
+
+'''Not finished yet.''' '''''UNTESTED!''''' [Dev] "#SupportforVPNsasTorreplacementOPTIONALFEATURE dev thread"
+
+Read first: [[Tunnels/Examples]].
+
+Third party '''VPN-Gateway'''
+
+https://www.ivpn.net/privacy-guides/advanced-privacy-and-anonymity-part-6
+
+== VPN's as a Tor replacement (VPNBOX) ==
+
+Small update: there is now [[VPN-Firewall]].
+
+'''Development stalled.''' '''''UNTESTED!''''' [Dev] "#SupportforVPNsasTorreplacementOPTIONALFEATURE dev thread"
+
+In this chapter we explain, how you can replace Tor with a VPN. Regarding security see 'Introduction' on this page at the top. It is your responsibility to find a (non-logging, safe) free/paid VPN provider or to stick with Tor.
+
+(1). Test if your host internet connection is working.
+
+(2). Test if your tor internet connection is working.
+
+(3). Store your routing table before starting the VPN and before modifying anything. Type in console:
+
+<pre>route</pre>
+
+(4). Start VPN.
+
+<pre>sudo openvpn /etc/openvpn/client.conf</pre>
+
+(5). Test if your ISP IP gets replaced with the VPN IP.
+
+(6). Store the modified routing table. Type in console:
+
+<pre>route</pre>
+
+(7). Delete your default route and set your new default route to the virtual VPN network adapter.
+
+<pre>sudo route del default
+sudo route add default dev tun0</pre>
+
+(8). Test if your VPN IP is still valid.
+
+(9). Store the modified routing table. Type in console:
+
+<pre>route</pre>
+
+(10). For testing purposes, kill your OpenVPN connection.
+
+<pre>sudo killall openvpn</pre>
+
+(11). Test if you can NOT connect to anything anymore. That's the whole point to prevent any leaks in the clear.
+
+TODO:
+
+* Testing.
+* Autostart everything.
+* Use up in /etc/network/interfaces.
+* Final step: forwarding traffic from the Workstation to the Gateway.
+* Extra: VPNchains (two or more independent VPN providers in a chain)
+
+= Proxy =
+
+== Introduction ==
+
+Required reading:
+
+* [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/proxy proxy]
+* [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorPlusVPN#vpnssh-versus-proxy Tor + VPN or Proxy]
+
+Recommended reading:
+
+* [[Tunnels/Introduction]]
+* [[Tunnels/Connecting_to_Tor_before_a_proxy]]
+* [[Tunnels/Connecting_to_a_proxy_before_Tor]]
+
+== Proxies in addition to Tor ==
+
+See [[Features#Advantages_of_{{project_name_short}}|Advantages of {{project_name_short}}]], "It is possible to use {{project_name_short}} setup in conjunction with VPNs, ssh and other proxies....".
+
+== ProxyBOX - a VM or machine running Proxy Software - similar to Whonix-Gateway ==
+Some development: [[ProxyBOX]]
+
+'''Development stalled.''' '''Not finished yet.'''
+
+[Dev] "#SupportforproxiesasTorreplacementOPTIONALFEATURE dev thread"
+
+It is possible to create another VM (or physically isolated machine) which runs a proxy software or enfofced connections are going through The proxy. Whonix-Gateway / Tor could be combined with local or remote proxies.
+
+* '''<code>{{project_name_workstation_long}}</code> &rarr; <code>Proxy-Gateway</code> &rarr; <code>{{project_name_gateway_short}}</code>'''
+* '''<code>User</code> &rarr; <code>Tor</code> &rarr; <code>Proxy</code> &rarr; <code>Internet</code>'''
+
+It would also be possible to replace Tor on Whonix-Gateway with any other proxy. Note that anonymity is sufficiently lower with (single hop) proxies.
+
+The technical difficulty is, that most proxies lack a TransPort and DnsPort.
+
+It also depends, what kind of proxy you want to use.
+
+See also [[Tunnels/Connecting_to_Tor_before_a_proxy#Transparent_Proxying_Method|Transparent Proxying]] (Describes Transparent Proxying inside {{project_name_workstation_short}} to an extra proxy, i.e. {{project_name_workstation_short}} &rarr; Tor &rarr; Proxy.)
+
+There are two options available. 1. Transparent Proxying Method or 2. The Proxy Settings Method.
+
+=== Depending on Proxy type ===
+
+http proxies are not suited, because we would not be able to connect to https protected websites. The setup for https, socks4(a)/5 proxies should be very similar.
+
+=== Transparent Proxying Method ===
+
+'''Development stalled. Unfinished.'''
+
+<u>Issue:</u> [[Stream_Isolation#Transparent_Proxy|Transparent Proxying]] (like in {{project_name_short}} thanks to Tor's <code>TransPort</code>) is, due to technical limitations, not fully supported by proxies. Proxies do not offer a feature similar to Tor's <code>DnsPort</code> and also do not act as a DNS resolver. While it is possible to relay TCP and UDP traffic through the proxy on the IP level (using firewalls such as iptables, nftables, ...), the user would still always require known (as in the user knows the IP) DNS resolver. (i.e. public DNS server such as OpenDNS, Google, httpsdnsd)
+
+DNS resolution would look like: Proxy-Workstation &rarr; Proxy-Gateway &rarr; Proxy &rarr; DNS server.
+
+It is technically not possible to let the proxy transparently (!) do the DNS resolution (no tools available) - at least not as far as the author knows after extended research. This is because proxies offer hostname resolution, but not DNS resolution. These are different protocols.
+
+redsocks (and probably also transocks_ev) can translate transparently proxyied TCP traffic to proxy protocols (http, https, socks4(a), socks5). There is however no translation available from transparently proxied DNS traffic to hostname resolution as supported by proxies.
+
+Some applications have support for various proxy protocols. This means developers did teach the application how to communicate with the proxy in order to use hostname resolution. No developer is maintaining functionality to translate transparently proxyied TCP traffic to proxy protocols.
+
+This issue is [[unspecific|unspecific to {{project_name_short}}]].
+
+<u>Future:</u> This technical limitation may be lifted if redsocks [https://github.com/darkk/redsocks/issues/23 Feature Request: fake DNS resolver] ever gets implemented. At time of writing the last commit to redsocks was 4 years ago with unmerged pull requests. Redsocks being unmaintained makes this feature even less likely.
+
+<u>Impact:</u> Due to the DNS issue, the user cannot completely hide behind the proxy (using it transparently). The user would always have to reveal, that the user is using a public (or private) extra DNS resolver. Of course, the user would also not only have to trust the proxy, but also the extra DNS server, which can see, log and correlate all DNS queries.
+
+For TCP and UDP: Proxy-Workstation &rarr; Proxy-Gateway &rarr; network layer &rarr; redsocks &rarr; proxy For DNS: Proxy-Workstation &rarr; Proxy-Gateway &rarr; network layer &rarr; redsocks &rarr; proxy &rarr; public DNS server
+
+<u>Sources:</u>
+
+* Leonid Evdokimov (author of [https://github.com/darkk/redsocks redsocks]) on mailing list, [https://web.archive.org/web/20190613215033/http://librelist.com/browser//redsocks/2012/5/15/transparent-proxy-dns-without-public-dns-server/ Transparent Proxy, DNS, without public DNS server]
+* [https://tiggerswelt.net/Ueber%20uns/impressum/ Bernd Holzmüller] (author of [http://oss.tiggerswelt.net/transocks_ev/ transocks_ev]) by e-mail)
+
+<u>Update:</u> Maybe https://github.com/jtRIPper/dns-tcp-socks-proxy could help?
+
+=== Proxy Settings Method ===
+
+'''Development stalled.''' '''Not finished.'''
+
+Design: The Proxy-Workstation is on an isolated internal LAN (similar to {{project_name_short}} {{project_name_workstation_short}} design) and can't connect to the internet directly. (Iptables rules on the Proxy-Gateway forbid that.) All applications installed inside the Proxy-Workstation have to use the correct [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO#classicalcommonway:usetheapplicationsproxysettings proxy settings] or a wrapper https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO#uncommon-use-a-wrapper-force-the-application-to-use-a-proxy-torsocks
+
+For TCP, UDP and DNS: Proxy-Workstation &rarr; Proxy-Gateway &rarr; proxy
+
+= Freenet =
+
+== Freenet on the {{project_name_gateway_short}} (FreenetBOX) ==
+
+Can be also potentially only be used parallel to Tor. It is impossible to tunnel Freenet through Tor (see above). Also replacing Tor with Freenet is impossible, as freenet is a separated network, not designed to exit the network. Apt-get couldn't work.
+
+Not written yet.
+
+= Retroshare =
+
+== RetroShare as Anonymizer ==
+
+In fact [https://retroshare.cc/index.html RetroShare] is not an [https://en.wikipedia.org/wiki/Anonymous_proxy anonymizing network], it is a [https://en.wikipedia.org/wiki/Friend-to-friend friend-to-friend] (F2F) network, or optionally a [https://en.wikipedia.org/wiki/Dark_web darknet]. RetroShare has a very different audience and threat model. RetroShare does not support using an outproxy yet, for this reason, it can not replace Tor on the {{project_name_gateway_short}}.
+
+{{Footer}}
+
+[[Category:Development]] [[Category:Deprecated]]
