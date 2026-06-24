@@ -1,0 +1,320 @@
+{{Header}}
+{{title|title=
+Whonix-Workstation Firewall
+}}
+{{#seo:
+|description=How-To: Open a Port in {{project_name_workstation_long}} Firewall, Restrict Outgoing IPs, Additional User Custom Firewall Rules and other settings for advanced users.
+|image=Firewall-34227640.png
+}}
+{{firewall_mininav}}
+[[File:Firewall-34227640.png|250px|thumb]]
+{{intro|
+How-To: Open a Port in {{project_name_workstation_short}} Firewall, Restrict Outgoing IPs, Additional User Custom Firewall Rules and other settings for advanced users.
+}}
+<ref>
+https://gitlab.com/{{project_name_short}}/whonix-firewall/blob/master/man/whonix_firewall.8.ronn
+</ref> <ref>
+{{CodeSelect|code=
+man whonix_firewall
+}}
+</ref>
+
+= How-to: Open a Port in {{project_name_workstation_short}} Firewall =
+
+== Open an Incoming Port ==
+
+'''<code>{{project_name_gateway_short}}</code> &rarr; <code>{{project_name_workstation_short}}</code> &rarr; <code>server running inside {{project_name_workstation_short}}</code>
+
+This allows for an incoming connection from {{project_name_gateway_short}}. This is useful for various purposes such as:
+
+* A) making [[Onion Services]] reachable; and
+* B) [[Whonix-Workstation to Whonix-Workstation Connections]].
+
+{{Box|text=
+'''1.''' {{Firewall_Settings_Workstation}}
+
+'''2.''' Add.
+
+Replace <code>80</code> with the actual port you would like to open.
+
+{{CodeSelect|code=
+EXTERNAL_OPEN_PORTS+=" 80 "
+}}
+
+'''3.''' Save.
+
+'''4.''' {{Reload_Firewall_ws}}
+
+The procedure is complete.
+}}
+
+== Open an Outgoing Port ==
+This allows for an outgoing connection to {{project_name_gateway_short}}.
+
+'''<code>{{project_name_workstation_short}}</code> &rarr; <code>{{project_name_gateway_short}}</code> &rarr; Tor <code>SocksPort</code>
+
+This might be useful for [[Tor#Additional_SocksPorts|Tor additional <code>SocksPort</code>s]].
+
+{{Firewall_Custom}}
+
+{{Box|text=
+'''1.''' Reminder on opening outgoing ports.
+
+This is usually not required since {{project_name_workstation_short}} firewall does not restrict what ports on {{project_name_gateway_short}} are reachable if these are open in {{project_name_gateway_short}} firewall.
+
+It is only useful to prevent connections to Tor SocksPorts in timesync-fail-closed firewall mode. <ref>
+https://phabricator.whonix.org/T533#11025
+</ref>
+
+'''2.''' {{Firewall_Settings_Workstation}}
+
+'''3.''' Add.
+
+Note: Replace <code>9230</code> with the actual port you would like to open.
+
+{{CodeSelect|code=
+INTERNAL_OPEN_PORTS+=" 9230 "
+}}
+
+'''4.''' Save.
+
+'''5.''' {{Reload_Firewall_ws}}
+
+The procedure is complete.
+}}
+
+= How-to: Open All Ports in {{project_name_workstation_short}} Firewall =
+'''<code>{{project_name_gateway_short}}</code> &rarr; <code>{{project_name_workstation_short}}</code> &rarr; <code>server running inside {{project_name_workstation_short}}</code>
+
+This allows for an incoming connection from {{project_name_gateway_short}}. This is useful for various purposes such as making [[Onion Services]] reachable.
+
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = This procedure is usually not required and should be avoided.
+}}
+
+{{Box|text=
+'''1.''' {{Firewall_Settings_Workstation}}
+
+'''2.''' Add.
+
+{{CodeSelect|code=
+EXTERNAL_OPEN_ALL=true
+}}
+
+Save.
+
+'''3.''' {{Reload_Firewall_ws}}
+
+The procedure is complete.
+}}
+
+= How-to: Restrict Outgoing IPs in {{project_name_workstation_short}} Firewall =
+This allows to restrict which outgoing IPs can be reached from inside {{project_name_workstation_short}}. This might be useful for single use-case VMs (specifically App Qubes).
+
+'''Testers only!'''
+
+{{Box|text=
+'''1.''' {{Firewall_Settings_Workstation}}
+
+'''2.''' Add.
+
+Note: Replace the example IP address <code>95.216.25.250</code> with an actual IP address. Multiple similar lines are supported.
+
+{{CodeSelect|code=
+outgoing_allow_ip_list+=" 95.216.25.250 "
+}}
+
+Save.
+
+'''3.''' '''Reboot''' <u>or</u> {{Reload_Firewall_ws}}
+
+'''4.''' The procedure is complete.
+}}
+
+To test:
+
+{{CodeSelect|code=
+curl.anondist-orig 95.216.25.250
+}}
+
+= Disable {{project_name_workstation_short}} Firewall Until Reboot =
+To disable until reboot.
+
+Perform this action inside {{project_name_workstation_short}} -- see [[Dev/Firewall_Unload|Firewall Unload]].
+
+= Permanently Disable {{project_name_workstation_short}} Firewall =
+
+Perform this action inside {{project_name_workstation_short}}.
+
+(In Qubes-Whonix: In Template.)
+
+{{CodeSelect|code=
+sudo systemctl mask whonix-firewall
+}}
+
+No firewall rules will load after rebooting.
+
+= Additional User Custom Firewall Rules =
+Testers only! [[Unsupported]]!
+
+This might be possible by using a systemd drop-in file.
+
+'''1.''' Firewall refactoring. (Optional.)
+
+It would be good to master the skill of [https://www.kicksecure.com/wiki/Dev/Firewall_Refactoring Firewall Refactoring] first.
+
+'''2.''' {{Open with root rights|filename=
+/usr/bin/user-firewall-script
+}}
+
+'''3.''' Paste.
+
+NOTE: Replace <code>## custom user firewall rules here</code> with the actual user custom firewall rules.
+
+{{CodeSelect|code=
+#!/bin/bash
+
+## custom user firewall rules here
+}}
+
+'''4.''' Save and exit.
+
+'''5.''' Make executable.
+
+{{CodeSelect|code=
+sudo chmod +x /usr/bin/user-firewall-script
+}}
+
+'''6.''' Manually test the user firewall script.
+
+{{CodeSelect|code=
+sudo user-firewall-script
+}}
+
+Once the user firewall script is functional, the user can proceed to automate loading of the user firewall script.
+
+'''7.''' Create folder <code>/lib/systemd/system/whonix-firewall.service.d</code>.
+
+{{CodeSelect|code=
+sudo mkdir -p /lib/systemd/system/whonix-firewall.service.d
+}}
+
+'''8.''' {{Open with root rights|filename=
+/lib/systemd/system/whonix-firewall.service.d/50_user.conf
+}}
+
+'''9.''' Paste.
+
+{{CodeSelect|code=
+[Service]
+ExecStartPost=/usr/bin/user-firewall-script
+}}
+
+'''10.''' Save and exit.
+
+'''11.''' Reload systemd.
+
+{{CodeSelect|code=
+sudo systemctl daemon-reload
+}}
+
+'''12.''' {{Reload_Firewall_ws}}
+
+'''13.''' Done.
+
+Firewall rules should now be automatically load after reboot. It would be prudent to verify that using firewall refactoring method.
+
+= Ping =
+
+* <u>Ping is blocked by design:</u> Ping commands should <u>not</u> work for external addresses from the {{project_name_workstation_short}}.
+** <u>Example failure:</u> For example, <code>ping google.com</code> will not work.
+** <u>ICMP is not supported:</u> The reason is [https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol ICMP traffic] (UDP) is not proxied.
+*** <u>Firewall filtering:</u> It is filtered by the {{project_name_short}} Firewall (<code>{{W_Firewall}}</code>),
+*** <u>No UDP support in Tor:</u> Ping required UDP (ICMP) but [[Tor#UDP|Tor does not support UDP]].
+*** <u>Reference:</u> See also: [[#Allow UDP|Allow UDP]] chapter.
+* <u>Security measure - SUID bit removed:</u> [[SUID Disabler and Permission Hardener]] disables the SUID bit from <code>ping</code> to reduce the attack surface since it would not work anyway. <ref>
+* <u>Source code file:</u> https://github.com/Whonix/anon-apps-config/blob/master/etc/permission-hardener.d/30_ping.conf
+* <u>Potential future enhancement:</u> In the future, capability removal of <code>CAP_NET_RAW</code> might be useful if Debian starts doing that.
+</ref>
+* <u>Re-enable ping:</u> Optional. To re-enable <code>ping</code> functionality - in so far as re-adding the SUID bit - refer to the [[SUID_Disabler_and_Permission_Hardener#Whitelist_Specific_Capability_Binaries|Whitelist Specific Capability Binaries]] chapter.
+** <u>For experimentation:</u> Only useful in case you wish to experiment with <code>ping</code>.
+** <u>Limitation remains:</u> This of course does not resolve the connectivity issue that Tor does not support UDP.
+* <u>Forum discussion:</u> [https://forums.whonix.org/t/ping-operation-permitted/11056/ Ping operation permitted?]
+
+<u>'''Alternative:'''</u>
+
+{{CodeSelect|code=
+nping
+}}
+
+= Allow UDP =
+
+{{Tor_UDP}}
+
+To allow UDP, complete the following steps.
+
+{{Box|text=
+'''1.''' {{Firewall_Settings_Workstation}}
+
+'''2.''' Add. <ref>
+* https://forums.whonix.org/t/does-whonix-have-torrents-available/10046/8
+* https://forums.whonix.org/t/whonix-15-0-1-5-1-for-virtualbox-point-release/10294
+</ref>
+
+{{CodeSelect|code=
+firewall_allow_udp=true
+}}
+
+Save.
+
+'''3.''' {{Reload_Firewall_ws}}
+
+'''4.''' Done.
+
+The procedure is complete. {{project_name_workstation_short}} firewall will now permit UDP.
+
+'''5.''' Notice.
+
+Allowing UDP in the firewall by itself is insufficient to make UDP work. See the infobox on top of this wiki chapter.
+}}
+
+= Allow DNS =
+Similar to above.
+
+By following instructions to Allow UDP, there will be no restrictions for DNS.
+
+= Purpose =
+
+Refer to [https://github.com/Whonix/whonix-firewall/blob/master/man/whonix_firewall.8.ronn#whonix-workstation-firewall-design-notes {{project_name_workstation_short}} firewall design notes] for further information.
+
+= Per-Application Filtering =
+To the knowledge of the author, what on the Windows platforms is attempted by personal firewalls, is not very popular on Linux distributions.
+
+This is [[unsupported]]. This might change in the very long-term future. There is no {{ETA}}. Should this change, this wiki chapter will be updated.
+
+TODO: OpenSnitch might be capable of doing this. It might be incompatible with Whonix-Workstation firewall. An open technical question is, if per-application firewalls are even worthwhile. Sandboxing solutions might actually be superior depending on the user's use case. See below for sandboxing.
+
+Alternatives:
+
+* <u>Sandboxing:</u> For example, [[AppArmor]] or other sandboxing frameworks for Linux with user-custom profiles might have this capability. This is out-of-scope for {{project_name_short}} documentation. This process would be [[unspecific|unspecific to {{project_name_short}}]].
+* <u>Disabling transparent proxying:</u> By disabling transparent proxying, applications not explicitly configured to use a Tor SocksPort will be unable to connect. This is sufficient for preventing accidental connections. It is, however, not a sandbox that could contain [[Malware_and_Firmware_Trojans|malware]]. In this case, see [[Whonix-Gateway_Firewall#Disable_Transparent_Proxying|Disable Transparent Proxying]].
+
+Forum discussion: https://forums.whonix.org/t/blocking-certain-applications-from-accessing-internet/20247
+
+= See Also =
+
+* [[Install_Software#{{project_name_workstation_short}}_is_Firewalled|{{project_name_workstation_short}} is Firewalled]]
+* [[Ports|Open a Port(s) in {{project_name_short}} and Port Forwarding]]
+* [[Configuration_Files#Configuration_Drop-In_Folders|{{project_name_short}} Configuration Drop-In Folders]]
+* https://github.com/Whonix/whonix-firewall/blob/master/etc/whonix_firewall.d/30_whonix_workstation_default.conf
+* https://github.com/Whonix/whonix-firewall/blob/master/usr/bin/whonix-workstation-firewall
+* https://github.com/Whonix/whonix-firewall
+* [[{{project_name_gateway_short}}_Firewall|{{project_name_gateway_long}} Firewall]]
+* [[Redirect_Whonix-Workstation_Ports_or_Unix_Domain_Socket_Files_to_Whonix-Gateway|Redirect Whonix-Workstation Ports or Unix Domain Socket Files to Whonix-Gateway]]
+
+= Footnotes =
+<references />
+{{Footer}}
+[[Category:Documentation]]
