@@ -1,0 +1,79 @@
+<noinclude>
+{{header}}
+</noinclude>'''Restart Tor.'''
+
+Platform specific. Select your platform.
+
+{{Tab
+|type=controller
+|content=
+{{Tab
+|title= = <u>{{non_q_project_name_short}}</u> =
+|image=[[File:{{project_name_short}}-logo-icon.svg]]
+|addToClass=info-box
+|content=
+<code>Start Menu</code> &rarr; <code>Applications</code> &rarr; <code>Settings</code> &rarr; <code>Restart Tor
+</code>
+
+}} <!-- close tab: Graphical Whonix-Gateway -->
+
+{{Tab
+|title= = <u>[[Qubes|{{q_project_name_short}}]]</u> =
+|image=[[File:Qubes-logo-icon.png]]
+|addToClass=info-box
+|content=
+<code>Qubes App Launcher (blue/grey "Q")</code> &rarr; <code>{{project_name_gateway_long}} ProxyVM (commonly named '{{project_name_gateway_vm}}')</code> &rarr; <code>Restart Tor</code>
+
+}} <!-- close tab: Qubes Whonix -->
+
+{{Tab
+|title= = <u>Terminal</u> =
+|image=[[File:Utilities-terminal.png]]
+|addToClass=info-box
+|content=
+Restart Tor.
+
+{{CodeSelect|code=
+sudo service tor@default restart
+}}
+
+Check Tor's daemon status.
+
+{{CodeSelect|code=
+sudo service tor@default status
+}}
+
+It should include a a message saying.
+
+<pre>
+Active: active (running) since ...
+</pre>
+
+In case of issues, try the following debugging steps.
+
+Check Tor's config.
+
+{{CodeSelect|code=
+anon-verify
+}}
+
+The output should be similar to the following.
+
+<pre>
+/===================================================================\
+|                     Report Summary                               |
+\===================================================================/
+No error detected in your Tor configuration.
+</pre>
+
+}} <!-- close tab: Terminal -->
+
+https://forums.whonix.org/t/restart-tor-on-a-whonix-gateway-without-root-access-via-the-console/23315
+
+{{CodeSelect|code=
+leaprun acw-tor-control-restart
+}}
+
+}} <!-- close Controller: Tabs for restarting Tor --><noinclude>
+{{footer}}
+</noinclude>
