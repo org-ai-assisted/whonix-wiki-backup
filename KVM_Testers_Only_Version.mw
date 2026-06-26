@@ -2462,7 +2462,7 @@ If the same issue occurs, [[Verify the images]]. If your Whonix download is corr
 * [https://forums.whonix.org/t/help-welcome-kvm-development-staying-the-course/166/546 Using <code>hubport</code> to avoid KVM network interfaces being visible on the host operating system], this would likely fix some [[Dev/VirtualBox#Why_use_VirtualBox_over_KVM.3F|{{project_name_short}} KVM issues with host operating system firewalls and VPNs]]
 
 = Footnotes =
-{{#widget:Expand or Collapse All}}
+{{#expandcollapseall:}}
 
 <references />
 

@@ -14,8 +14,7 @@
 |{{q_project_name_short}} is the seamless combination of [https://www.qubes-os.org Qubes OS] and [https://www.whonix.org {{project_name_long}}] for advanced security and anonymity.
 }}
 = Overview =
-{{#widget:Download_Button
- |text=Download Qubes-Whonix (FREE!)
+{{#downloadbutton:text=Download Qubes-Whonix (FREE!)
  |url=Qubes/Install
  |os=qubes
 }}

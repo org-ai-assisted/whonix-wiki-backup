@@ -13,9 +13,7 @@
 |videoid=m-S745kpN6Y
 |text=Superior anonymity - Whonix vs. VPNs
 }}</font>
-{{#widget:Icon_Bullet_List
-
-|addClass=minimal
+{{#iconbulletlist:addClass=minimal
 
 |fontSize=17px
 
@@ -32,8 +30,7 @@
 }}
 __TOC__
 = Summary =
-{{#widget:Icon_Bullet_List
-|addClass=minimal
+{{#iconbulletlist:addClass=minimal
 
 |fontSize=17px
 

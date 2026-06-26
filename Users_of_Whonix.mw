@@ -5,8 +5,7 @@ Who uses {{project_name_long}}?
 |image=Preview-user-groups.jpg
 }} {{intro|
 Groups of users using {{project_name_short}}.
-}} {{#widget:LeftRightImageText
-|image=/w/images/thumb/2/2f/Ug-01-privacy.png/600px-Ug-01-privacy.png
+}} {{#leftrightimagetext:image=/w/images/thumb/2/2f/Ug-01-privacy.png/600px-Ug-01-privacy.png
 |addToClass=promo-style
 |text=
 <h3>Privacy Enjoyers</h3>
@@ -17,8 +16,7 @@ assured that no one tracks them, profiles them and analyses their data. Whonix i
 </p>
 }}
 
-{{#widget:LeftRightImageText
-|image=/w/images/thumb/0/02/Ug-02-freedom.png/600px-Ug-02-freedom.png
+{{#leftrightimagetext:image=/w/images/thumb/0/02/Ug-02-freedom.png/600px-Ug-02-freedom.png
 |addToClass=promo-style
 |imageright=1
 |text=
@@ -30,8 +28,7 @@ Whonix is free, fully auditable and without artificial limitations. Use it freel
 </p>
 }}
 
-{{#widget:LeftRightImageText
-|image=/w/images/thumb/e/e0/Ug-03-secret.png/600px-Ug-03-secret.png
+{{#leftrightimagetext:image=/w/images/thumb/e/e0/Ug-03-secret.png/600px-Ug-03-secret.png
 |addToClass=promo-style
 |text=
 <h3>Secret Protectors, CEOs, Entrepreneurs</h3>
@@ -42,8 +39,7 @@ from private, corporate and government prying eyes on the Internet.
 </p>
 }}
 
-{{#widget:LeftRightImageText
-|image=/w/images/thumb/0/09/Ug-04-research.png/600px-Ug-04-research.png
+{{#leftrightimagetext:image=/w/images/thumb/0/09/Ug-04-research.png/600px-Ug-04-research.png
 |addToClass=promo-style
 |imageright=1
 |text=
@@ -55,8 +51,7 @@ a broader and more neutral perspective in your research.
 </p>
 }}
 
-{{#widget:LeftRightImageText
-|image=/w/images/thumb/2/21/Ug-05-truth.png/600px-Ug-05-truth.png
+{{#leftrightimagetext:image=/w/images/thumb/2/21/Ug-05-truth.png/600px-Ug-05-truth.png
 |addToClass=promo-style
 |text=
 <h3>Truth Tellers</h3>
@@ -67,8 +62,7 @@ risks to their lives.
 </p>
 }}
 
-{{#widget:LeftRightImageText
-|image=/w/images/thumb/c/c5/Ug-06-travel.png/600px-Ug-06-travel.png
+{{#leftrightimagetext:image=/w/images/thumb/c/c5/Ug-06-travel.png/600px-Ug-06-travel.png
 |addToClass=promo-style
 |imageright=1
 |text=
@@ -80,8 +74,7 @@ many of these limitations to enable you to surf just like at home.
 </p>
 }}
 
-{{#widget:LeftRightImageText
-|image=/w/images/thumb/8/81/Ug-07-itprof.png/600px-Ug-07-itprof.png
+{{#leftrightimagetext:image=/w/images/thumb/8/81/Ug-07-itprof.png/600px-Ug-07-itprof.png
 |addToClass=promo-style
 |text=
 <h3>IT Professionals</h3>
@@ -92,8 +85,7 @@ everything by yourself.
 </p>
 }}
 
-{{#widget:LeftRightImageText
-|image=/w/images/thumb/7/7c/Ug-08-phantom.png/600px-Ug-08-phantom.png
+{{#leftrightimagetext:image=/w/images/thumb/7/7c/Ug-08-phantom.png/600px-Ug-08-phantom.png
 |addToClass=promo-style
 |imageright=1
 |text=

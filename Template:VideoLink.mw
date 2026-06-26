@@ -1,5 +1,4 @@
-{{#widget:VideoLink
-|videoid={{{videoid|}}}
+{{#videolink:videoid={{{videoid|}}}
 |text={{{text|}}}
 |style={{{style|}}}
 }}<noinclude>

@@ -38,9 +38,7 @@ title=Tor Browser Essentials
 }}
 {{browser_mininav}}
 [[File:Torbrowser_icon.png|thumb|50px|Tor Browser Icon]]
-{{#widget:Icon_Bullet_List
-
-|addClass=minimal margin-bottom-20
+{{#iconbulletlist:addClass=minimal margin-bottom-20
 
 |fontSize=17px
 

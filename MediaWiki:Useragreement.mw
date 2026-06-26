@@ -1,5 +1,5 @@
 Please read our legal agreements in its entirety.
 
-{{#widget:Terms of Service Agree}}  {{#widget:Terms of Service Disagree}}
+{{#termsofserviceagree:}}  {{#termsofservicedisagree:}}
 
 {{Terms_of_Service}}

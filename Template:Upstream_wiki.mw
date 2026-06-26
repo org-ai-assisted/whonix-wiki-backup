@@ -17,8 +17,7 @@
 }}
 }}
 
-{{#widget:Icon_Bullet_List
-|addClass=minimal
+{{#iconbulletlist:addClass=minimal
 |fontSize=17px
 
 |item=fa-solid fa-circle-info cs-blue,<u>Introduction</u>: <a href="/wiki/Introduction">{{project_name_short}} Documentation Introduction, User Expectations, Footnotes and References, User Expectations - What Documentation Is and What It Is Not</a>
@@ -63,8 +62,7 @@
 }}
 }}
 
-{{#widget:Icon_Bullet_List
-|addClass=minimal
+{{#iconbulletlist:addClass=minimal
 |fontSize=17px
 |item=fa-solid fa-sticky-note cs-yellow,<u>Note:</u> Re-interpretation...
 }}

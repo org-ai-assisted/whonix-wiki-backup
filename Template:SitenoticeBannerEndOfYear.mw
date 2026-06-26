@@ -1,5 +1,4 @@
-{{#widget:SitenoticeBanner
-|currentMonth={{CURRENTMONTH}}
+{{#sitenoticebanner:currentMonth={{CURRENTMONTH}}
 |page={{PAGENAME}}
 |id=end-of-year
 |html=

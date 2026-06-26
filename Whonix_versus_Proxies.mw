@@ -8,9 +8,7 @@ Whonix versus Proxies
 }}
 {{other_networks_mininav}}
 [[File:Masks-827730640.jpg|thumb]]
-{{#widget:Icon_Bullet_List
-
-|addClass=minimal
+{{#iconbulletlist:addClass=minimal
 
 |fontSize=17px
 

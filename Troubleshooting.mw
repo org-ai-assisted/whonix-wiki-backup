@@ -14,7 +14,7 @@ Troubleshooting Installation and Network Issues with {{project_name_short}}.
 }}
 = Introduction =
 
-{{#widget:Icon_Bullet_List|fontSize=18px
+{{#iconbulletlist:fontSize=18px
 |item=fa-solid fa-1 cs-green,On this page you will find help for <b>various troubleshooting topics</b>, including general troubleshooting, connectivity troubleshooting
 |item=fa-solid fa-2 cs-green,You will also learn about <b>virtual machine bug analysis, system logs</b> and other related topics
 |item=fa-solid fa-3 cs-green,Please be aware that some very specific, individual problems <b>can take a long time</b> to research and solve. Don't expect a "magic solution" for most of these issues
@@ -27,7 +27,7 @@ This chapter covers connectivity issues that you may encounter.
 
 == Introduction ==
 
-{{#widget:Icon_Bullet_List|fontSize=18px
+{{#iconbulletlist:fontSize=18px
 |item=fa-solid fa-network-wired cs-green,<b>There is no general network problem analysis tool.</b> While there are many tools and commands available for specific aspects of network diagnostics, there isn't a single built-in command for any operating system that performs a fully comprehensive, automated network analysis with one execution.
 |item=fa-solid fa-ban cs-orange,<b>Shortcut? There is no shortcut:</b> Network diagnostics require a systematic approach, where each potential issue must be carefully examined and ruled out one by one. Unlike other processes that may offer quick fixes or automated solutions, network troubleshooting involves methodically testing different aspects of the network to identify the root cause of a problem. This process is inherently time-consuming. Attempting to rush through diagnostics or skipping steps can lead to incomplete or inaccurate conclusions, making the resolution process even longer. Therefore, persistence and attention to detail are essential when working through network issues, as there is no single tool or command that can automatically solve all potential problems.
 |item=fa-solid fa-lightbulb cs-yellow,<b>Is there really no shortcut? There is not.</b> While a theoretical "shortcut" might exist, it would be economically infeasible. [1]

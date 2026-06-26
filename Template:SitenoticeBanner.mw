@@ -1,5 +1,4 @@
-{{#widget:SitenoticeBanner
-|id={{{id|}}}
+{{#sitenoticebanner:id={{{id|}}}
 |href={{{href|}}}
 |html={{{html|}}}
 |expires={{{expires|}}}

@@ -1,6 +1,6 @@
 <noinclude>
 {{Header}}
-</noinclude>{{#widget:Pay_by_PayPal_Subscription}}<noinclude>
+</noinclude><noinclude>
 {{Footer}}
 [[Category:MultiWiki]]
 

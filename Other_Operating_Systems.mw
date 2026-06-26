@@ -750,8 +750,7 @@ It is only a VirtualBox VM <code>.ova</code> image that only contains an <code>.
 forum discussion: [https://forums.whonix.org/t/whonix-custom-workstation-small-file-size/20655 Whonix-Custom-Workstation Small File Size?]
 </ref>
 
-{{#widget:Download_Button
- |text=Download {{project_name_customworkstation_short}} (FREE!)
+{{#downloadbutton:text=Download {{project_name_customworkstation_short}} (FREE!)
  |url=https://download.{{project_clearnet}}/ova/{{Whonix-Custom-Workstation-Version}}/{{project_name_short}}-CUSTOM-{{Whonix-Custom-Workstation-Version}}.ova
  |os=windows|os=osx|os=linux
 }}
@@ -760,8 +759,7 @@ forum discussion: [https://forums.whonix.org/t/whonix-custom-workstation-small-f
 
 Download the corresponding OpenPGP signature.
 
-{{#widget:Download_Button
- |text=Download {{project_name_customworkstation_short}} OpenPGP signature (FREE!)
+{{#downloadbutton:text=Download {{project_name_customworkstation_short}} OpenPGP signature (FREE!)
  |url=https://download.{{project_clearnet}}/ova/{{Whonix-Custom-Workstation-Version}}/{{project_name_short}}-CUSTOM-{{Whonix-Custom-Workstation-Version}}.ova.asc
  |os=windows|os=osx|os=linux
 }}
@@ -1482,7 +1480,7 @@ A {{project_name_customworkstation_short}} ''can be made'' (your responsibility!
 You might wonder what "[[#Your_Responsibility|your responsibility]]" means. Some users are wondering, where the documentation for these aspects can be found. No documentation has been written yet. There is a lack of resources to maintain such instructions. I.e. writing them, and more so, keeping them up to date, testing them, answering support requests, fixing bugs and implementing feature requests. Please [[contribute]]. For more detailed explanation, see also [[#{{project_name_short}} Packages|{{project_name_short}} Packages]].
 
 = References =
-{{#widget:Expand or Collapse All}}
+{{#expandcollapseall:}}
 
 <references />
 

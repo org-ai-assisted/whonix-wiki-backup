@@ -23,8 +23,7 @@ __TOC__
 {{Anchor|Landing}}
 '''Download the {{project_name_short}} Installer for Windows.'''
 
-{{#widget:Download_Button
- |text=Download {{project_name_short}} LXQt Windows Installer (FREE!)
+{{#downloadbutton:text=Download {{project_name_short}} LXQt Windows Installer (FREE!)
  |url=https://download.{{project_clearnet}}/windows/{{VersionNew}}/{{project_name_short}}-LXQt-{{VersionNew}}.exe
  |os=windows
 }}

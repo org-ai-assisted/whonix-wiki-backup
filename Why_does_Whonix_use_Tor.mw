@@ -42,9 +42,7 @@ Why does {{project_name_long}} use Tor?
 [[File:Onion_diagram.svg.png|thumb|[[#Onion-Layered Encryption|Tor Onion Encryption Layers Diagram]] ([[#onion_diagram_license|license]])]]
 [[File:Tor-logo.png|thumb|Tor logo]]
 [[File:Osi standard logo 0.png|thumb|Tor is Open Source / Freedom Software.]]
-{{#widget:Icon_Bullet_List
-
-|addClass=minimal margin-bottom-20
+{{#iconbulletlist:addClass=minimal margin-bottom-20
 
 |fontSize=17px
 

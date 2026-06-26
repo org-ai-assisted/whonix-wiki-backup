@@ -10,9 +10,7 @@ Wiki Editing Policy
 {{project_name_short}} Wiki Editing Policy
 }}
 
-{{#widget:Icon_Bullet_List
-
-|addClass=minimal
+{{#iconbulletlist:addClass=minimal
 
 |fontSize=17px
 

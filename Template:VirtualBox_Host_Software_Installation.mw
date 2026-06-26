@@ -8,8 +8,7 @@
 |title= === Windows ===
 |image=[[File:Logo-windows-500x500.png|alt=Logo Windows|50px]]
 |content=
-{{#widget:Download_Button
-|text=Download VirtualBox for Windows (FREE!)
+{{#downloadbutton:text=Download VirtualBox for Windows (FREE!)
 |os=windows
 |fontsize=18px
 |url=https://download.virtualbox.org/virtualbox/7.2.8/VirtualBox-7.2.8-173730-Win.exe
@@ -33,8 +32,7 @@ Microsoft Visual C++ 2019 Redistributable Package must be installed. <ref>
 This link has been found on the <code>microsoft.com</code> website: [https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170 Microsoft Visual C++ Redistributable latest supported downloads]
 </ref>
 
-{{#widget:Download_Button
-|text=Microsoft Visual C++ 2019 Redistributable Package (FREE!)
+{{#downloadbutton:text=Microsoft Visual C++ 2019 Redistributable Package (FREE!)
 |os=windows
 |fontsize=18px
 |url=https://aka.ms/vs/17/release/vc_redist.x64.exe
@@ -74,8 +72,7 @@ Select your hardware platform.
 |title= = Intel-based MacBook =
 |addToClass=info-box
 |content=
-{{#widget:Download_Button
-|text=Download VirtualBox for macOS (Intel) (FREE!)
+{{#downloadbutton:text=Download VirtualBox for macOS (Intel) (FREE!)
 |os=osx
 |fontsize=18px
 |url=https://download.virtualbox.org/virtualbox/7.2.8/VirtualBox-7.2.8-173730-OSX.dmg
@@ -86,8 +83,7 @@ Select your hardware platform.
 |title= = Apple Silicon =
 |addToClass=info-box
 |content=
-{{#widget:Download_Button
-|text=Download VirtualBox for macOS (Apple Silicon, M1, M2, ...) (FREE!)
+{{#downloadbutton:text=Download VirtualBox for macOS (Apple Silicon, M1, M2, ...) (FREE!)
 |os=osx
 |fontsize=18px
 |url=https://download.virtualbox.org/virtualbox/7.2.8/VirtualBox-7.2.8-173730-macOSArm64.dmg

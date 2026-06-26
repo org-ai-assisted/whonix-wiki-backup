@@ -11,8 +11,7 @@ Contact
 {{intro|
 Contact {{project_name_short}} developers and the {{project_clearnet}} webmaster, security vulnerabilities reporting, press contact.
 }}
-{{#widget:Icon_Bullet_List
-|addClass=info-box
+{{#iconbulletlist:addClass=info-box
 |fontSize=17px
 |item=fa-solid fa-envelope,<u>Please use email for</u> <a href="#For Reporting Security Issues">reporting security vulnerabilities</a>!
 |item=fa-solid fa-info-circle,<u>For all other issues,</u> refer to the most relevant section below.

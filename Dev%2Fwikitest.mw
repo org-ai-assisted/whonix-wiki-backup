@@ -374,16 +374,14 @@ There is a whole page for tests of the DonorCard [[Testpage_Donors]]
 
 text, url, redirectUrl=VirtualBox
 
-{{#widget:Download_Button
- |text=DownloadTest1
+{{#downloadbutton:text=DownloadTest1
  |url=/keys/derivative.asc
  |redirectUrl=/wiki/VirtualBox
 }}
 
 text, addToClass, url, os, targetBlank
 
-{{#widget:Download_Button
- |text=DownloadTest2
+{{#downloadbutton:text=DownloadTest2
  |addToClass=test-class
  |url=/keys/derivative.asc
  |os=osx|os=debian|os=kvm|os=linux|os=qubes|os=usb|os=virtualbox|os=windows|os=iso
@@ -392,8 +390,7 @@ text, addToClass, url, os, targetBlank
 
 text, url, os, targetBlank, onion, fontSize
 
-{{#widget:Download_Button
- |text=DownloadTest3
+{{#downloadbutton:text=DownloadTest3
  |url=/keys/derivative.asc
  |os=osx|os=debian|os=kvm|os=linux
  |targetBlank=true
@@ -403,8 +400,7 @@ text, url, os, targetBlank, onion, fontSize
 
 Example with text, url, os, onion, addToClass=text-class, fontsize=20px, targetBlank=true, redirectUrl
 
-{{#widget:Download_Button
-|text=Test for Download Button
+{{#downloadbutton:text=Test for Download Button
 |url=/keys/derivative.asc
 |os=linux
 |os=windows
@@ -418,40 +414,35 @@ Example with text, url, os, onion, addToClass=text-class, fontsize=20px, targetB
 
 Example with signature icon, text and url
 
-{{#widget:Download_Button
-|icon=sig
+{{#downloadbutton:icon=sig
 |text=Signature test
 |url=/wiki/Download
 }}
 
 Example with sha icon, text and url
 
-{{#widget:Download_Button
-|icon=sha
+{{#downloadbutton:icon=sha
 |text=Sha test
 |url=/keys/derivative.asc
 }}
 
 Example with signify icon, text and url
 
-{{#widget:Download_Button
-|icon=sigf
+{{#downloadbutton:icon=sigf
 |text=Signify test
 |url=/keys/derivative.asc
 }}
 
 Download button width parameter <code>modal=true</code> opening DownloadButton-PayAsYouGoModal
 
-{{#widget:Download_Button
-|text=DownloadTest Modal
+{{#downloadbutton:text=DownloadTest Modal
 |url=/keys/derivative.asc
 |modal=true
 }}
 
 Malicious Editor attack / editor mistake test: redirect URL is external - Click + see warning in browser dev tools console
 
-{{#widget:Download_Button
-|text=Malicious / mistake redirect test
+{{#downloadbutton:text=Malicious / mistake redirect test
 |url=/keys/derivative.asc
 |redirectUrl=https://www.malicious-website.com
 }}
@@ -675,7 +666,7 @@ The following html comment in wikitext will not be rendered into the source code
 <!-- Comment will not be rendered -->
 
 The following html comment (via the HtmlComment widget) will be rendered into the source code
-{{#widget:HtmlComment|content=Html comment that is rendered}}
+{{#htmlcomment:content=Html comment that is rendered}}
 
 == Icon (Template) ==
 
@@ -703,14 +694,13 @@ Icon red, with thick border, Text f123+, with shadow, style rounded, slim font a
 
 Default list with longer and shorter list item
 
-{{#widget:Icon_Bullet_List
-|item=fa-solid fa-check,Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points
+{{#iconbulletlist:item=fa-solid fa-check,Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points Plus Points
 |item=fa-solid fa-minus,Negative Points
 }}
 
 Longer list with addClass=inverse minimal, fontSize=20px
 
-{{#widget:Icon_Bullet_List|addClass=inverse minimal|fontSize=20px
+{{#iconbulletlist:addClass=inverse minimal|fontSize=20px
 |item=fa-solid fa-star,Standard
 |item=fa-solid fa-check cs-green,Plus Points
 |item=fa-solid fa-times cs-red,Negative Points
@@ -794,8 +784,7 @@ no key given
 
 Left example, promo style
 
-{{#widget:LeftRightImageText
-|image=/w/images/thumb/c/c6/Self-support.jpg/799px-Self-support.jpg?20230412112808
+{{#leftrightimagetext:image=/w/images/thumb/c/c6/Self-support.jpg/799px-Self-support.jpg?20230412112808
 |addToClass=promo-style
 |text=
 <b>Left example</b>
@@ -806,8 +795,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Right example, with imagelink=/wiki/About, imageright=true
 
-{{#widget:LeftRightImageText
-|image=/w/images/thumb/c/c6/Self-support.jpg/799px-Self-support.jpg?20230412112808
+{{#leftrightimagetext:image=/w/images/thumb/c/c6/Self-support.jpg/799px-Self-support.jpg?20230412112808
 |imagelink=/wiki/About
 |imageright=true
 |text=

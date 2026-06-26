@@ -9,7 +9,7 @@ title={{project_name_long}} Advanced Documentation
 For advanced users seeking detailed information on topics ranging from file transfers, security configurations, platform support, to miscellaneous technical details and more. Explore the extensive range of topics to delve deeper into the capabilities of {{project_name_long}}.
 }}
 {{Box|text=
-{{#widget:Expand or Collapse All}}
+{{#expandcollapseall:}}
 
 <div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
 <h4>File Transfers and SSH / SSHFS</h4>

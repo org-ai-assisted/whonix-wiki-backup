@@ -1,7 +1,6 @@
 <!--
 Documentation see Dev/mediawiki
--->{{#widget:subdomain_link
- |text={{{text|}}}
+-->{{#subdomainlink:text={{{text|}}}
  |sub={{{sub|}}}
  |append={{{append|}}}
  |result={{{result|}}}

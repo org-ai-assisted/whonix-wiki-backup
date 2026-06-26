@@ -1,6 +1,5 @@
 <!-- Documentation see Dev/mediawiki
--->{{#widget:CodeSelect
-|code={{{code|code-not-set}}}
+-->{{#codeselect:code={{{code|code-not-set}}}
 |inline={{{inline|}}}
 |breaklines={{{breaklines|}}}
 |buttonImage={{{buttonImage|unset}}}

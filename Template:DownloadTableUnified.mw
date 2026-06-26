@@ -1,7 +1,6 @@
 <noinclude>{{Header}}</noinclude>
 <div class="download-wrapper">
-{{#widget:Download_Button
- |text=Download {{{project_name}}} {{{flavor}}} ({{{os_name}}}) ({{{version_type}}}) (FREE!)
+{{#downloadbutton:text=Download {{{project_name}}} {{{flavor}}} ({{{os_name}}}) ({{{version_type}}}) (FREE!)
  |url=/download/{{{after_slash}}}/{{{version}}}/{{{project_name}}}-{{{flavor}}}-{{{version}}}.{{{extension}}}
  |os={{{os_keyword}}}
  |modal=true
@@ -36,8 +35,7 @@
 |image=[[File:GnuPG-Logo.svg|25px]]
 |active=true
 |content=
-<div class="margin-top-20">[[File:Icon-openpgp.png|40px]] {{#widget:Download_Button
-|text=OpenPGP Signature
+<div class="margin-top-20">[[File:Icon-openpgp.png|40px]] {{#downloadbutton:text=OpenPGP Signature
 |icon=sig
 |url=/download/{{{after_slash}}}/{{{version}}}/{{{project_name}}}-{{{flavor}}}-{{{version}}}.{{{extension}}}.asc
 }}
@@ -54,16 +52,14 @@
 |active=false
 |content=
 
-[[File:Icon-sha512.png|40px]] {{#widget:Download_Button
-|text=SHA-512 checksum file
+[[File:Icon-sha512.png|40px]] {{#downloadbutton:text=SHA-512 checksum file
 |icon=sig
 |url=/download/{{{after_slash}}}/{{{version}}}/{{{project_name}}}-{{{flavor}}}-{{{version}}}.{{{extension}}}.sha512sums
 }}
 
 <hr>
 
-[[File:Icon-sha512signify.png|40px]] {{#widget:Download_Button
-|text=SHA-512 checksum file signify signature
+[[File:Icon-sha512signify.png|40px]] {{#downloadbutton:text=SHA-512 checksum file signify signature
 |icon=sig
 |url=/download/{{{after_slash}}}/{{{version}}}/{{{project_name}}}-{{{flavor}}}-{{{version}}}.{{{extension}}}.sha512sums.sig
 }}

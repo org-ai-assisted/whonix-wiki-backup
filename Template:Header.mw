@@ -1,18 +1,11 @@
 {{GoogleOff | content=
-{{#css:/mw-combined-skincss.min.css}}
-{{#css:
-body.ctbc_hide-sitenotice-{{Sitenotice_id}}_true #siteNotice .sitenotice-banner[data-banner-id="{{Sitenotice_id}}"]:not(.force-show) { display: none !important; }
-#siteNotice .sitenotice-banner:not([data-banner-id="{{Sitenotice_id}}"]) { display: none !important; }
-}}
-{{#ifeq: {{Sitenotice_id}} | end-of-year | {{#css:/src-copy/Donation_Panel.min.css}} }}
+
+{{#ifeq: {{Sitenotice_id}} | end-of-year |  }}
 {{#seo:
 |type=website
-}}{{#widget:Header
-|part=1
-}}{{#widget:HeaderLocalWiki
-|part=1
-}}{{#widget:Header
-|part=2
+}}{{#widgetheader:part=1
+}}{{#headerlocalwiki:part=1
+}}{{#widgetheader:part=2
 |page={{FULLPAGENAME}}
 |revision={{REVISIONID}}
 }}

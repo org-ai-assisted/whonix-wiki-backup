@@ -67,11 +67,6 @@ Search engines suggestions are chosen by the following criteria and consideratio
 
 = Search Engines Evaluation =
 
-{{#css:
-.wikitable code { white-space: nowrap; }
-.wikitable .padded-content-icon { margin-left: 0; }
-}}
-
 This evaluation is not a universal statement on these search engines, but an assessment based on [[#Search_Engines_Criteria|our criteria]].
 
 {| class="wikitable"
