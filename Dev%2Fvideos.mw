@@ -1,4 +1,4 @@
-{{Header}}
+{{#kicksecure_css_page_dev_videos:}}{{Header}}
 {{#seo:
 |description=Video Drafts for {{project_name_long}}
 }}
@@ -9,7 +9,6 @@
 {{intro|
 Video Drafts for {{project_name_short}}
 }}
-{{#css:/src-copy/_Page_Dev--videos.css}}
 == Upstream ==
 {{upstream_wiki}}
 
