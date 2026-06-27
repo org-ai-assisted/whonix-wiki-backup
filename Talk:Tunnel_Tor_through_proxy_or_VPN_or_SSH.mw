@@ -1,3 +1,0 @@
->The following command has to be run in background (TODO: add line how to do that)
-
-protip - run UNIX commands in the background adding & to the end of the line. also look into the use of "screen"
