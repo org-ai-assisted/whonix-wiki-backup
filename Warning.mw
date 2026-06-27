@@ -272,7 +272,7 @@ For greater security it is recommended to generate strong and unique [[Passwords
 Virtualizers like Qubes, VirtualBox and KVM cannot absolutely prevent the compromise of hardware, nor detect advanced malware. Running all activities inside VMs is a very reasonable approach. However, this only raises the bar and makes it more difficult and/or expensive to compromise the whole system. It is by no means a perfect solution. As one Google Project Zero researcher noted recently when demonstrating a VM escape in KVM: <ref>https://googleprojectzero.blogspot.com/2021/06/an-epyc-escape-case-study-of-kvm.html</ref>
 <blockquote>The bug and its exploit still serve as a demonstration that highly exploitable security vulnerabilities can still exist in the very core of a virtualization engine, which is almost certainly a small and well audited codebase. While the attack surface of a hypervisor such as KVM is relatively small from a pure LoC perspective, its low level nature, close interaction with hardware and pure complexity makes it very hard to avoid security-critical bugs.
 
-While we have not seen any in-the-wild exploits targeting hypervisors outside of competitions like Pwn2Own, these capabilities are clearly achievable for a well-financed adversary. I’ve spent around two months on this research, working as an individual with only remote access to an AMD system. Looking at the potential ROI on an exploit like this, it seems safe to assume that more people are working on similar issues right now and that vulnerabilities in KVM, Hyper-V, Xen or VMware will be exploited in-the-wild sooner or later.</blockquote>
+While we have not seen any in-the-wild exploits targeting hypervisors outside of competitions like Pwn2Own, these capabilities are clearly achievable for a well-financed adversary. I've spent around two months on this research, working as an individual with only remote access to an AMD system. Looking at the potential ROI on an exploit like this, it seems safe to assume that more people are working on similar issues right now and that vulnerabilities in KVM, Hyper-V, Xen or VMware will be exploited in-the-wild sooner or later.</blockquote>
 
 {{project_name_short}} cannot provide protection if the system's [https://en.wikipedia.org/wiki/Trusted_computing_base trusted computing base] has been compromised by:
 
@@ -569,7 +569,7 @@ Some criticisms of Telegram.
 |-
 | whonix.org has a public [https://forums.{{project_clearnet}} forum].
 | The whonix.org forum and associated comments are intended to promote free speech.
-| Unfortunately, running a free speech platform is a full-time job and would constitute a separate project in itself. This is simply not possible as a side project. For further details, see: [[Limitations on Free Speech on Whonix Website ‎and Whonix Chat]].
+| Unfortunately, running a free speech platform is a full-time job and would constitute a separate project in itself. This is simply not possible as a side project. For further details, see: [[Limitations on Free Speech on Whonix Website &lrm;and Whonix Chat]].
 
 |-
 | {{project_name_short}} is Open Source.
@@ -587,7 +587,7 @@ It is also recommended to consult the following resources:
 }}; and
 * the underpinning [[Tips_on_Remaining_Anonymous#Rationale|Rationale]] for this chapter.
 
-On top of unsubstantiated conclusions it also happens that adherence to "perfectly moral" behavior or an approved ™ set of political/ideological beliefs is expected from the {{project_name_short}} project. However, what counts as "perfectly moral" and the path of attaining therein will always be subjective and disputed among proponents. Such demands include "don't allow running {{project_name_short}} on Windows hosts", "don't have a twitter project account", "don't accept Bitcoin donation", "don't use centralized services such as telegram", "don't document X, because of Y". Those disagreeing with our methods and philosophy are welcome to exercise their right to [https://en.wikipedia.org/wiki/Fork_(software_development) software fork] the project under the respective licenses.
+On top of unsubstantiated conclusions it also happens that adherence to "perfectly moral" behavior or an approved &trade; set of political/ideological beliefs is expected from the {{project_name_short}} project. However, what counts as "perfectly moral" and the path of attaining therein will always be subjective and disputed among proponents. Such demands include "don't allow running {{project_name_short}} on Windows hosts", "don't have a twitter project account", "don't accept Bitcoin donation", "don't use centralized services such as telegram", "don't document X, because of Y". Those disagreeing with our methods and philosophy are welcome to exercise their right to [https://en.wikipedia.org/wiki/Fork_(software_development) software fork] the project under the respective licenses.
 
 = Footnotes =
 <references />

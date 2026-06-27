@@ -703,7 +703,7 @@ This might be hard because Tor does not honor its DisableNetwork.
 
 Quote https://manpages.debian.org/tor
 
-<blockquote>DisableNetwork 0|1 When this option is set, we don’t listen for or accept any connections other than controller connections, and we close (and don’t reattempt) any outbound connections. Controllers sometimes use this option to avoid using the network until Tor is fully configured. Tor will make still certain network-related calls (like DNS lookups) as a part of its configuration process, even if DisableNetwork is set.</blockquote>
+<blockquote>DisableNetwork 0|1 When this option is set, we don't listen for or accept any connections other than controller connections, and we close (and don't reattempt) any outbound connections. Controllers sometimes use this option to avoid using the network until Tor is fully configured. Tor will make still certain network-related calls (like DNS lookups) as a part of its configuration process, even if DisableNetwork is set.</blockquote>
 </ref>
 | ?
 | ?

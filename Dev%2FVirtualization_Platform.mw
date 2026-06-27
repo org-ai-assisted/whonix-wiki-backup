@@ -68,7 +68,7 @@ All that's missing for other virtualizer support are some bits and pieces. By co
 
 For example, some users already managed to write documentation how to use Whonix in [[VMware]] or [[QEMU]] and there are various [[Dev/Porting|ports of Whonix to other architectures]] in various development stages.
 
-Related: [[Dev#Porting_Simplicity|Existing Ports of and Porting Whonix ™ to other Architectures chapter Porting Simplicity]]
+Related: [[Dev#Porting_Simplicity|Existing Ports of and Porting Whonix &trade; to other Architectures chapter Porting Simplicity]]
 
 == Whonix-Host ISO versus Virtualizer Support ==
 Note, that the upcoming [[Whonix-Host]] ISO will cannot simplify ports of Whonix to other virtualizers. This is because the Whonix-Host ISO is "designed" to be run on host operating systems and not inside VMs. "Designed" is written in quotes because that is not an intentional user freedom restriction. It is because Whonix-Host is a host operating system which comes with a virtualizer installed by default that runs the Whonix-Gateway and Whonix-Workstation VMs.

@@ -95,11 +95,11 @@ It is possible to:
 ! Difficulty of spotting "direct" backdoors <ref>
 An example of a "direct" backdoor is a hardcoded username and password or login key only known by the software vendor. In this circumstance there is no plausible deniability for the software vendor.
 </ref> <ref>
-List of [https://en.wikipedia.org/wiki/Backdoor_(computing)#List_of_known_backdoors “direct” backdoors in wikipedia].
+List of [https://en.wikipedia.org/wiki/Backdoor_(computing)#List_of_known_backdoors "direct" backdoors in wikipedia].
 </ref> <ref>
-One interesting “direct” backdoor was this bitcoin copay wallet backdoor:
+One interesting "direct" backdoor was this bitcoin copay wallet backdoor:
 
-* <blockquote>If more than 100 BTC, steal it. Otherwise, don’t bother.</blockquote>
+* <blockquote>If more than 100 BTC, steal it. Otherwise, don't bother.</blockquote>
 * https://www.synopsys.com/blogs/software-security/malicious-dependency-supply-chain/
 * https://github.com/dominictarr/event-stream/issues/116
 * https://github.com/dominictarr/event-stream/issues/116#issuecomment-441759047
@@ -290,7 +290,7 @@ This is particularly a concern for developers collaborating on privacy or securi
 
 Whilst individual developers are a natural target, it additionally encourages attacks on build infrastructure as an successful attack would provide access to a large number of downstream computer systems. By modifying the generated binaries here instead of modifying the upstream source code, illicit changes are essentially invisible to its original authors and users alike.
 
-The motivation behind the Reproducible Builds project is therefore to allow verification that no vulnerabilities or backdoors have been introduced during this compilation process. By promising identical results are always generated from a given source, this allows multiple third parties to come to a consensus on a “correct” result, highlighting any deviations as suspect and worthy of scrutiny.
+The motivation behind the Reproducible Builds project is therefore to allow verification that no vulnerabilities or backdoors have been introduced during this compilation process. By promising identical results are always generated from a given source, this allows multiple third parties to come to a consensus on a "correct" result, highlighting any deviations as suspect and worthy of scrutiny.
 
 This ability to notice if a developer has been compromised then deters such threats or attacks occurring in the first place as any compromise would be quickly detected. This offers comfort to front-liners that they not only can be threatened, but they would not be coerced into exploiting or exposing their colleagues or end-users.
 

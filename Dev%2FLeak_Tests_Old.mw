@@ -11,7 +11,7 @@
 
 This leak testing article was written by adrelanos and smarm for {{project_name_long}} but it can be useful for other projects as well.
 
-Discussion: “Leak testing” (as defined here), is the process of verifying that the {{project_name_gateway_long}} will not send unencrypted / “in the clear” network traffic. Only Tor traffic should be observed coming from the {{project_name_gateway_long}}.
+Discussion: "Leak testing" (as defined here), is the process of verifying that the {{project_name_gateway_long}} will not send unencrypted / "in the clear" network traffic. Only Tor traffic should be observed coming from the {{project_name_gateway_long}}.
 
 = Leak through the {{project_name_gateway_short}} =
 
@@ -46,9 +46,9 @@ This has to be undone after you finished testing. You will be reminded at the en
 
 Three tools are used during testing:
 
-[https://en.wikipedia.org/wiki/Scapy Scapy]: To create network traffic for testing. It is also desirable that the network traffic used in testing does not expose you to possible violations of security! Thus Scapy offers fine grained control over the creation of traffic for use with testing. Functionality defined here can be formalized into [https://en.wikipedia.org/wiki/Unit_test “Unit Tests”] via [https://web.archive.org/web/20240212064015/https://www.secdev.org/projects/UTscapy/ UTScapy].
+[https://en.wikipedia.org/wiki/Scapy Scapy]: To create network traffic for testing. It is also desirable that the network traffic used in testing does not expose you to possible violations of security! Thus Scapy offers fine grained control over the creation of traffic for use with testing. Functionality defined here can be formalized into [https://en.wikipedia.org/wiki/Unit_test "Unit Tests"] via [https://web.archive.org/web/20240212064015/https://www.secdev.org/projects/UTscapy/ UTScapy].
 
-[https://en.wikipedia.org/wiki/Wireshark Wireshark]: Used to sniff network traffic. Can be configured with fine grained [https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html “Capture Filters”], which can filter the traffic reported and captured by wireshark while sniffing traffic.
+[https://en.wikipedia.org/wiki/Wireshark Wireshark]: Used to sniff network traffic. Can be configured with fine grained [https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html "Capture Filters"], which can filter the traffic reported and captured by wireshark while sniffing traffic.
 
 [https://en.wikipedia.org/wiki/Python_%28programming_language%29 Python]: Used to support Scapy and can be used to easily script Scapy tests.
 
@@ -76,7 +76,7 @@ Starting <code>Wireshark</code> without options will begin to capture packets on
 
 <pre>tshark</pre>
 
-You should see packets begin to scroll down the screen. This indicates you are seeing normal network traffic (ARP, DHCP requests, Tor traffic, etc). This will give you some idea of what to look for when we test for “leaked” traffic below.
+You should see packets begin to scroll down the screen. This indicates you are seeing normal network traffic (ARP, DHCP requests, Tor traffic, etc). This will give you some idea of what to look for when we test for "leaked" traffic below.
 
 == Step 3: Verify Scapy is installed and working ==
 
@@ -91,7 +91,7 @@ This should present you with an interactive prompt:
 <pre>Welcome to Scapy 2.1.0
 >;>;>;</pre>
 
-Other “WARNING” or “INFO” items that appear when you start Scapy, are most likely not going to effect your use of Scapy for this testing.
+Other "WARNING" or "INFO" items that appear when you start Scapy, are most likely not going to effect your use of Scapy for this testing.
 
 Type the <code>ls()</code> command, to see an overview of the protocols supported by Scapy:
 
@@ -181,7 +181,7 @@ Begin emission:
 Received 7 packets, got 1 answers, remaining 0 packets
 </pre>
 
-== Step 5: Setting up a “non-Tor traffic” capture with Wireshark ==
+== Step 5: Setting up a "non-Tor traffic" capture with Wireshark ==
 
 ({{project_name_gateway_short}})
 
@@ -214,9 +214,9 @@ Leave this capture running for subsequent tests.
 
 '''-f''': Set the capture filter expression.
 
-The “capture expression” (the bit in quotes above, after the '-f') reads: IP packets and from host 10.0.2.15 (your '''eth0 IP''' address) where the ports are NOT 80, 443, 9901 or 9030 ([https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorFAQ#DoIhavetoopenalltheseoutboundportsonmyfirewall common ports for Tor, see the FAQ]). The “ssh” keyword on the end is a predefined primitive in wireshark, used to define SSH traffic only. Adding this should not effect your capture if you are not using SSH to connect to the gateway, but should save you quite a bit of trouble filtering out your SSH traffic if you are.
+The "capture expression" (the bit in quotes above, after the '-f') reads: IP packets and from host 10.0.2.15 (your '''eth0 IP''' address) where the ports are NOT 80, 443, 9901 or 9030 ([https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorFAQ#DoIhavetoopenalltheseoutboundportsonmyfirewall common ports for Tor, see the FAQ]). The "ssh" keyword on the end is a predefined primitive in wireshark, used to define SSH traffic only. Adding this should not effect your capture if you are not using SSH to connect to the gateway, but should save you quite a bit of trouble filtering out your SSH traffic if you are.
 
-See the [https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html documentation for the format of the “capture filter” here], for more information.
+See the [https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html documentation for the format of the "capture filter" here], for more information.
 
 (Note: This may not cover all valid TOR traffic emiting from your {{project_name_short}}, some Tor nodes may use non-standard ports and was observed during testing. The FAQ above, also covers this.)
 

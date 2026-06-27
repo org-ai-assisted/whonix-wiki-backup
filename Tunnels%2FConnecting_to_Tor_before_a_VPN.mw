@@ -112,7 +112,7 @@ At the time of writing Debian 11 <code>bullseye</code> was the stable release ve
 
 '''3.''' Create a new ProxyVM based on the newly cloned template.
 
-Name the VM VPN-Gateway and set the {{project_name_gateway_short}} ProxyVM (<code>{{project_name_gateway_vm}}</code>) as NetVM. Make sure to check [✔] the box for "provides network".
+Name the VM VPN-Gateway and set the {{project_name_gateway_short}} ProxyVM (<code>{{project_name_gateway_vm}}</code>) as NetVM. Make sure to check [&#10004;] the box for "provides network".
 
 {{Box|text=
 <code>Qube Manager</code> &rarr; <code><u>Q</u>ube</code> &rarr; <code>Create <u>n</u>ew qube</code>
@@ -121,7 +121,7 @@ Name the VM VPN-Gateway and set the {{project_name_gateway_short}} ProxyVM (<cod
 * Type: <code>Qube based on a template (AppVM)</code>
 * Template: <code>debian-{{Stable_project_version_based_on_Debian_version_short}}-vpn</code>
 * Networking: <code>{{project_name_gateway_vm}}</code>
-* Advanced:   [<code>✔</code>] Provides network
+* Advanced:   [<code>&#10004;</code>] Provides network
 * Press: <code><u>O</u>K</code>
 }}
 

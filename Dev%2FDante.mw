@@ -34,7 +34,7 @@ vpn-ed-anon-whonix <code>/etc/resolv.conf</code> might require same DNS settings
 = Tor Browser Error Messages =
 
 <pre>
-Hmm. We’re having trouble finding that site.
+Hmm. We're having trouble finding that site.
 </pre>
 
 Indicates broken DNS.

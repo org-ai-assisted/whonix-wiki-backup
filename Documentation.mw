@@ -691,7 +691,7 @@ Not using strict-list-columns because the list is too long to be broken.
 }}
 ** [[Qubes/Tor_Browser|Using Tor Browser in {{q_project_name_short}}]]
 * Advanced Topics
-** [[Multiple_Whonix-Gateway#Qubes-Whonix_™|Create {{project_name_gateway_short}} ProxyVMs]]
+** [[Multiple_Whonix-Gateway#Qubes-Whonix_&trade;|Create {{project_name_gateway_short}} ProxyVMs]]
 ** [[Qubes/UpdatesProxy|dom0 / Template Updates over Tor]]
 ** [[Multiple Qubes-Whonix Templates|Multiple {{q_project_name_short}} Templates]]
 ** [[Multiple Whonix-Gateway|Multiple {{project_name_gateway_short}}]]

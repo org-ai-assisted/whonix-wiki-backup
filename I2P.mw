@@ -394,14 +394,14 @@ HexChat-like client users can create a new network with the server 127.0.0.1/666
 '''Practical practice:'''
 
 * Hexchat inside whonix need specific small tweak:
-** Go to Settings → Preferences
-** Then Network setup → Proxy Server then follow the image instruction then press ok
+** Go to Settings &rarr; Preferences
+** Then Network setup &rarr; Proxy Server then follow the image instruction then press ok
 
 [[File:HexchatI2P1.png|400px]]
 
 [[File:HexchatI2P2.png|400px]]
 
-* Back to hexchat press on Hexchat → Network list
+* Back to hexchat press on Hexchat &rarr; Network list
 
 [[File:HexchatI2P3.png|400px]]
 

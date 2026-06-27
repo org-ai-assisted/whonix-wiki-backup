@@ -49,7 +49,7 @@ nyx
 == Basic Tests ==
 {{Box|text=
 # Power off {{project_name_gateway_short}}. Try to ping outside or to use the browser in {{project_name_workstation_short}}. Obviously this should <u>not</u> work.
-# Power on {{project_name_gateway_short}} again. Visit https://check.torproject.org/ with Tor Browser. You should see a “Congratulations”.
+# Power on {{project_name_gateway_short}} again. Visit https://check.torproject.org/ with Tor Browser. You should see a "Congratulations".
 # Ping the {{project_name_gateway_short}}; this will <u>not</u> work. <ref>
 You will not be able to ping the {{project_name_gateway_short}} because ICMP is blocked by the firewall. If you want to test it, you have to adjust the firewall or deactivate it while testing on both, {{project_name_gateway_short}} and {{project_name_workstation_short}}.
 </ref> {{CodeSelect|code=

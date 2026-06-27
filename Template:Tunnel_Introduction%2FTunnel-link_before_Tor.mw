@@ -5,5 +5,5 @@ In this configuration network traffic will (1) enter the tunnel-link and pass th
 
 ''' Possible uses: '''
 * You must connect to your tunnel-link to access the internet.
-* Your ISP blocks Tor and Tor bridges but doesn’t block the tunnel-link.
+* Your ISP blocks Tor and Tor bridges but doesn't block the tunnel-link.
 * Fear of de-anonymizing attacks against the Tor network; belief that your tunnel-link is able to protect your identity in such case.

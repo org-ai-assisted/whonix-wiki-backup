@@ -35,7 +35,7 @@ This is being stated to avoid {{project_name_short}} getting blamed for this mes
 Most other vendors of software on the Windows platform are either unaware or ignore this issue. The {{project_name_short}} project makes an effort to document and cope with the mess on the Windows platform.
 
 = Introduction =
-This page includes documentation on how to securely acquire Gpg4win – an application which can be used to verify digital software signatures provided by the {{project_name_short}} project and other software.
+This page includes documentation on how to securely acquire Gpg4win - an application which can be used to verify digital software signatures provided by the {{project_name_short}} project and other software.
 
 Use either option A) <u>or</u> B) <u>or</u> C).
 
@@ -65,8 +65,8 @@ Therefore, optionally, the user might decide to skip the SignTool step and simpl
 
 The Gpg4win documentation also covers this subject.
 
-* [https://www.gpg4win.org/package-integrity.html Check integrity of Gpg4win packages – Gpg4win website]
-* [https://wiki.gnupg.org/Gpg4win/CheckIntegrity Check integrity of Gpg4win packages – Gpg4win wiki]
+* [https://www.gpg4win.org/package-integrity.html Check integrity of Gpg4win packages - Gpg4win website]
+* [https://wiki.gnupg.org/Gpg4win/CheckIntegrity Check integrity of Gpg4win packages - Gpg4win wiki]
 
 = Verify {{project_name_short}} Images in Windows using Gpg4win =
 

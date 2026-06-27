@@ -53,9 +53,9 @@ Risk of maintaining an Internet connection when compromised:
 ** Malware might upload more files over time; upload over Tor is slow.
 ** Depending on when the compromise was noticed, everything may not be in the hands of the attacker yet. This is particularly true with large files such as video recordings.
 * The attacker might upload illegal files (non-torified) somewhere that result in a raid by authorities.
-* The attacker might come up with a new strategy, such as uploading false evidence files to the victim’s computer followed by authority tip-offs that result in a police raid and false accusations.
+* The attacker might come up with a new strategy, such as uploading false evidence files to the victim's computer followed by authority tip-offs that result in a police raid and false accusations.
 * When a malicious computer is connected, it might perform illegal activities like becoming part of a spam botnet.
-* The longer a compromised machine is connected to the Internet -- imagine a user following poor advice and taking days to search for all relevant data and making backups -- it is harder to explain away a decision to continue operating it. For example, stating “my computer was compromised, it wasn’t me” is hard to reconcile with evidence that it was used in an attack for days on end.
+* The longer a compromised machine is connected to the Internet -- imagine a user following poor advice and taking days to search for all relevant data and making backups -- it is harder to explain away a decision to continue operating it. For example, stating "my computer was compromised, it wasn't me" is hard to reconcile with evidence that it was used in an attack for days on end.
 
 Refer to the following image to understand what compromised computers can be used for: https://krebsonsecurity.com/wp-content/uploads/2012/10/HackedPC2012.png
 

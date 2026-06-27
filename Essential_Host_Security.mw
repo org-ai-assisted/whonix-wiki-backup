@@ -65,7 +65,7 @@ Many mobile modem devices are manufactured by a handful of companies like Huawei
 
 <blockquote>The findings include Remote Code Execution (RCE) in web scripts, integrity attacks, Cross-Site Request Forgery (CSRF), and Cross-Site Scripting (XSS).<br />
 
-The research covers a full range of attacks against carrier customers using these types of modems — device identification, code injection, PC infection, SIM card cloning, data interception, determining subscriber location, getting access to user accounts on the operator's website, and APT attacks. <br />
+The research covers a full range of attacks against carrier customers using these types of modems -- device identification, code injection, PC infection, SIM card cloning, data interception, determining subscriber location, getting access to user accounts on the operator's website, and APT attacks. <br />
 ...
 All in all, we have a full infection cycle of devices and related PCs. Using the infected devices, we can determine location, intercept and send SMS messages and USSD requests, read HTTP and HTTPS traffic (by replacing SSL certificates), attack SIM cards via binary SMS messages, and intercept 2G traffic. Further infection can continue through the operator's networks, popular websites or equipment infected by worms (when connecting a new device).</blockquote>
 
@@ -117,7 +117,7 @@ Some providers assign additional and unique IPv6 IP addresses to their users. Th
 = Anonymous Internet Connection =
 Normally, your dial-up or broadband internet provider knows your name, postal address, and how you paid. If Tor or {{project_name_short}} ever gets compromised, an attacker could find out who you are by contacting or hacking your internet provider.
 
-This risk is lower when using a public WiFi hotspot, such as one in a café or library, where the internet provider doesn't know your real identity.
+This risk is lower when using a public WiFi hotspot, such as one in a caf&eacute; or library, where the internet provider doesn't know your real identity.
 
 For the best protection, combine this with an anonymous WiFi adapter.
 
@@ -127,7 +127,7 @@ To stay safer, it's recommended to:
 * Buy the WiFi adapter anonymously, without giving your name, preferably in person, second-hand, or on the street.
 * Never share personal details during the purchase.
 * Pay cash. (See also [[Money|Anonymous Money]].)
-* Don’t use the adapter for anything linked to your identity. Some hotspots record device IDs (called MAC addresses) or usernames (if payment is required). In theory, even the unique electronic signals your device gives off could be tracked. <ref>
+* Don't use the adapter for anything linked to your identity. Some hotspots record device IDs (called MAC addresses) or usernames (if payment is required). In theory, even the unique electronic signals your device gives off could be tracked. <ref>
 https://nweb.eng.fiu.edu/selcuk/papers/uluagac-gtid-cns-13.pdf
 </ref>
 * Use free WiFi hotspots or pay anonymously (such as with cash or prepaid cards). Avoid ones that require non-anonymous payment.

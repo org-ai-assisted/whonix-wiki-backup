@@ -23,9 +23,9 @@ The Full level gathers info necessary to identify and to help fix problems, foll
 
 Additionally, at this level, devices opted in to the Windows Insider Program will send events that can show Microsoft how pre-release binaries and features are performing. All devices in the Windows Insider Program are automatically set to this level.
 
-If a device experiences problems that are difficult to identify or repeat using Microsoft’s internal testing, additional info becomes necessary. This info can include any user content that might have triggered the problem and is gathered from a small sample of devices that have both opted into the Full telemetry level and have exhibited the problem.
+If a device experiences problems that are difficult to identify or repeat using Microsoft's internal testing, additional info becomes necessary. This info can include any user content that might have triggered the problem and is gathered from a small sample of devices that have both opted into the Full telemetry level and have exhibited the problem.
 
-However, before more info is gathered, Microsoft’s privacy governance team, including privacy and other subject matter experts, must approve the diagnostics request made by a Microsoft engineer. If the request is approved, Microsoft engineers can use the following capabilities to get the information:
+However, before more info is gathered, Microsoft's privacy governance team, including privacy and other subject matter experts, must approve the diagnostics request made by a Microsoft engineer. If the request is approved, Microsoft engineers can use the following capabilities to get the information:
 
 * Ability to run a limited, pre-approved list of Microsoft certified diagnostic tools, such as msinfo32.exe, powercfg.exe, and dxdiag.exe.
 * Ability to get registry keys.
@@ -57,7 +57,7 @@ If you are concerned enough about privacy to have read this far, you probably wa
 
 Quote [https://www.researchgate.net/publication/336750047_OS_Call_Home_Background_Telemetry_Reporting_in_Windows_10 OS researchgate: Call Home: Background Telemetry Reporting in Windows 10] (<u>Underline</u> added.):
 
-<blockquote><u>The default level</u> for Windows 10 Home and Pro is “Full” and “Enhanced” for Enterprise editions.</blockquote>
+<blockquote><u>The default level</u> for Windows 10 Home and Pro is "Full" and "Enhanced" for Enterprise editions.</blockquote>
 
 Quote [https://web.archive.org/web/20180520075416/https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization Microsoft (web archived, year 2018)] (<u>Underline</u> added.):
 
@@ -69,9 +69,9 @@ Alternative write-up: [https://www.sandon.it/node/104 Scaring: Windows 10 lets M
 
 In theory, it might be possible to disable this behavior, but there have also been cases where these settings were not honored, as documented in chapter [[#Inescapable Telemetry|Inescapable Telemetry]].
 
-There is a <u>privacy by policy</u> safeguard implemented at the Microsoft organizational level. Quote: "However, before more info is gathered, Microsoft’s privacy governance team, including privacy and other subject matter experts, must approve the diagnostics request made by a Microsoft engineer." However, privacy by policy is not privacy by design (privacy enforced through technology). Generally speaking, there is a history of privacy by policy safeguards being circumvented by malicious employees (insider attack), hacking (outsider attacks), and privacy by policy also fails in the case of government requests. Microsoft’s privacy governance team would be circumvented if Microsoft were compelled through a government order.
+There is a <u>privacy by policy</u> safeguard implemented at the Microsoft organizational level. Quote: "However, before more info is gathered, Microsoft's privacy governance team, including privacy and other subject matter experts, must approve the diagnostics request made by a Microsoft engineer." However, privacy by policy is not privacy by design (privacy enforced through technology). Generally speaking, there is a history of privacy by policy safeguards being circumvented by malicious employees (insider attack), hacking (outsider attacks), and privacy by policy also fails in the case of government requests. Microsoft's privacy governance team would be circumvented if Microsoft were compelled through a government order.
 
-Quote [https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute FBI–Apple encryption dispute] (<u>Underline</u> added. <code>code</code> added.):
+Quote [https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute FBI-Apple encryption dispute] (<u>Underline</u> added. <code>code</code> added.):
 
 <blockquote>In 2015 and 2016, Apple Inc. received and objected to or challenged at least 11 orders issued by United States district courts under the All Writs Act of 1789. Most of these seek to compel Apple "<u>to use its <code>existing capabilities</code> to extract data like contacts, photos and calls</u> from locked iPhones [...]</blockquote>
 
@@ -98,9 +98,9 @@ Whether using this <code>existing capability</code> is possible against any user
 
 Quote [https://theintercept.com/2015/12/28/recently-bought-a-windows-computer-microsoft-probably-has-your-encryption-key/ The Intercept: (...) Microsoft Probably Has Your Encryption Key]:
 
-<blockquote>But what is less well-known is that, if you are like most users and login to Windows 10 using your Microsoft account, your computer automatically uploaded a copy of your recovery key — which can be used to unlock your encrypted disk — to Microsoft’s servers, probably without your knowledge and without an option to opt out.</blockquote>
+<blockquote>But what is less well-known is that, if you are like most users and login to Windows 10 using your Microsoft account, your computer automatically uploaded a copy of your recovery key -- which can be used to unlock your encrypted disk -- to Microsoft's servers, probably without your knowledge and without an option to opt out.</blockquote>
 
-<blockquote>“When a device goes into recovery mode, and the user doesn’t have access to the recovery key, the data on the drive will become permanently inaccessible. Based on the possibility of this outcome and a broad survey of customer feedback we choose to automatically backup the user recovery key,” a Microsoft spokesperson told me. “The recovery key requires physical access to the user device and is not useful without it.”</blockquote>
+<blockquote>"When a device goes into recovery mode, and the user doesn't have access to the recovery key, the data on the drive will become permanently inaccessible. Based on the possibility of this outcome and a broad survey of customer feedback we choose to automatically backup the user recovery key," a Microsoft spokesperson told me. "The recovery key requires physical access to the user device and is not useful without it."</blockquote>
 But disabling this requires awareness of the issue, skills of using search engines and finding documentation how to do so, and technical skills to disable this privacy intrusion. This is often not the case for non-technical users. ([[#The Tyranny of the Default|The Tyranny of the Default]])
 
 Quote [https://www.theguardian.com/world/2013/jul/11/microsoft-nsa-collaboration-user-data Microsoft handed the NSA access to encrypted messages]:
@@ -130,10 +130,10 @@ Quote [https://www.theguardian.com/world/2013/jul/11/microsoft-nsa-collaboration
 |
 * Microsoft SkyDrive [https://www.itproportal.com/2014/05/14/microsoft-openly-offered-cloud-data-fbi-and-nsa/ allows adversaries to examine user data].
 * Microsoft has [https://www.forbes.com/sites/petercohan/2013/06/20/project-chess-how-u-s-snoops-on-your-skype/ enabled spyware in Skype] and [https://www.guardian.co.uk/world/2013/jul/11/microsoft-nsa-collaboration-user-data specifically changed the software] to enable this function.
-** Microsoft’s purchase of Skype was detrimental to privacy. Quote: [https://www.theguardian.com/world/2013/jul/11/microsoft-nsa-collaboration-user-data The Guardian: Microsoft handed the NSA access to encrypted messages]:
+** Microsoft's purchase of Skype was detrimental to privacy. Quote: [https://www.theguardian.com/world/2013/jul/11/microsoft-nsa-collaboration-user-data The Guardian: Microsoft handed the NSA access to encrypted messages]:
 *** <blockquote>In July last year, nine months after Microsoft bought Skype, the NSA boasted that a new capability had tripled the amount of Skype video calls being collected through Prism;</blockquote>
 *** It might have been better for privacy if Microsoft had not purchased Skype.
-*** Microsoft could have kept end-to-end encryption intact, transformed Skype into an Open Source project, and/or fought illegitimate requests in the courts, as Apple did. ([https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute FBI–Apple encryption dispute]) Microsoft, however, did not take a stand for their users and did none of that.
+*** Microsoft could have kept end-to-end encryption intact, transformed Skype into an Open Source project, and/or fought illegitimate requests in the courts, as Apple did. ([https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute FBI-Apple encryption dispute]) Microsoft, however, did not take a stand for their users and did none of that.
 |-
 
 ! scope="row" style="vertical-align: top; text-decoration: underline;" | Anonymity
@@ -153,7 +153,7 @@ Quote {{ExtLink
 
 <blockquote>What are speech, inking, and typing services?
 
-When you interact with your Windows device by speaking, writing (handwriting), or typing, Microsoft collects speech, inking, and typing information—including information about your Calendar and People (also known as contacts)— [...]</blockquote>
+When you interact with your Windows device by speaking, writing (handwriting), or typing, Microsoft collects speech, inking, and typing information--including information about your Calendar and People (also known as contacts)-- [...]</blockquote>
 
 Quote <ref>
 modified by author: added link to web archive with quote from 2015
@@ -162,7 +162,7 @@ modified by author: added link to web archive with quote from 2015
 <blockquote>Microsoft pretty much admits it has a keylogger in its {{ExtLink
 |https://web.archive.org/web/20150801001352/http://windows.microsoft.com/en-us/windows-10/speech-inking-typing-privacy-faq
 |text=Microsoft: Windows 10 speech, inking, typing, and privacy FAQ
-}}: “When you interact with your Windows device by speaking, writing (handwriting), or typing, Microsoft collects speech, inking, and typing information—including information about your Calendar and People (also known as contacts)…”</blockquote>
+}}: "When you interact with your Windows device by speaking, writing (handwriting), or typing, Microsoft collects speech, inking, and typing information--including information about your Calendar and People (also known as contacts)..."</blockquote>
 
 Quoting the 2015 version of [https://web.archive.org/web/20150801001352/http://windows.microsoft.com/en-us/windows-10/speech-inking-typing-privacy-faq Microsoft: Windows 10 speech, inking, typing, and privacy FAQ]:
 
@@ -220,17 +220,17 @@ Such data is vulnerable to {{whonix_wiki
 |
 * The "privacy" policy in Windows 10 explicitly authorizes Microsoft [https://edri.org/microsofts-new-small-print-how-your-personal-data-abused/ to look at user files at any time and to sell almost any information] it collects.
 
-<blockquote>Summing up these 45 pages, one can say that Microsoft basically grants itself very broad rights to collect everything you do, say and write with and on your devices in order to sell more targeted advertising or to sell your data to third parties. The company appears to be granting itself the right to share your data either with your consent “or as necessary”.</blockquote>
+<blockquote>Summing up these 45 pages, one can say that Microsoft basically grants itself very broad rights to collect everything you do, say and write with and on your devices in order to sell more targeted advertising or to sell your data to third parties. The company appears to be granting itself the right to share your data either with your consent "or as necessary".</blockquote>
 
-<blockquote>By default, when signing into Windows with a Microsoft account, Windows syncs some of your settings and data with Microsoft servers, for example “web browser history, favorites, and websites you have open” as well as “saved app, website, mobile hotspot, and Wi-Fi network names and passwords”. Users can however deactivate this transfer to the Microsoft servers by changing their settings.</blockquote>
+<blockquote>By default, when signing into Windows with a Microsoft account, Windows syncs some of your settings and data with Microsoft servers, for example "web browser history, favorites, and websites you have open" as well as "saved app, website, mobile hotspot, and Wi-Fi network names and passwords". Users can however deactivate this transfer to the Microsoft servers by changing their settings.</blockquote>
 
-<blockquote>“We will access, disclose and preserve personal data, including your content (such as the content of your emails, other private communications or files in private folders), when we have a good faith belief that doing so is necessary to”, for example, “protect their customers” or “enforce the terms governing the use of the services”.</blockquote>
+<blockquote>"We will access, disclose and preserve personal data, including your content (such as the content of your emails, other private communications or files in private folders), when we have a good faith belief that doing so is necessary to", for example, "protect their customers" or "enforce the terms governing the use of the services".</blockquote>
 
 * Windows 10 sends a host of [https://betanews.com/2016/11/24/microsoft-shares-windows-10-telemetry-data-with-third-parties core debugging information to Microsoft] and third parties.
 * Windows 10 sends information to Microsoft about [https://www.ghacks.net/2016/01/05/microsoft-may-be-collecting-more-data-than-initially-thought/ applications used and those that are running].
 * Windows 10 has a [https://duo.com/blog/bring-your-own-dilemma-oem-laptops-and-windows-10-security host of snooping options enabled by default]. This includes [https://web.archive.org/web/20151001035410/https://jonathan.porta.codes/2015/07/30/windows-10-seems-to-have-some-scary-privacy-defaults/ snooping] on files, text input, voice input, location information, contacts, calendar records, web browsing history, screenshots of running programs and how long they were running, and auto-connection to open hotspots which show targeted advertisements. Many options cannot be disabled at all in a standard installation.
 
-[https://www.theverge.com/2017/2/21/14682256/microsoft-windows-10-eu-privacy-concerns EU still concerned over Windows 10 privacy despite Microsoft’s changes] (2017)
+[https://www.theverge.com/2017/2/21/14682256/microsoft-windows-10-eu-privacy-concerns EU still concerned over Windows 10 privacy despite Microsoft's changes] (2017)
 
 Quote EFF [https://www.eff.org/deeplinks/2016/08/windows-10-microsoft-blatantly-disregards-user-choice-and-privacy-deep-dive With Windows 10, Microsoft Blatantly Disregards User Choice and Privacy: A Deep Dive]:
 
@@ -318,7 +318,7 @@ Archived, redacted version after court order requested by Microsoft against news
 |https://web.archive.org/web/20160314224745/https://www.zeit.de/digital/datenschutz/2013-08/trusted-computing-microsoft-windows-8-nsa/seite-2
 |text=page 2
 }} (DeepL translated <ref>
-<blockquote>So heißt es in einem internen Papier aus dem Wirtschaftsministerium von Anfang 2012: "Durch den Verlust der vollen Oberhoheit über Informationstechnik" seien "die Sicherheitsziele 'Vertraulichkeit' und 'Integrität' nicht mehr gewährleistet." An anderer Stelle stehen Sätze wie: "Erhebliche Auswirkungen auf die IT-Sicherheit der Bundesverwaltung können damit einhergehen." Die Schlussfolgerung lautet dementsprechend: "Der Einsatz der 'Trusted-Computing'-Technik in dieser Ausprägung … ist für die Bundesverwaltung und für die Betreiber von kritischen Infrastrukturen nicht zu akzeptieren."</blockquote>
+<blockquote>So hei&szlig;t es in einem internen Papier aus dem Wirtschaftsministerium von Anfang 2012: "Durch den Verlust der vollen Oberhoheit &uuml;ber Informationstechnik" seien "die Sicherheitsziele 'Vertraulichkeit' und 'Integrit&auml;t' nicht mehr gew&auml;hrleistet." An anderer Stelle stehen S&auml;tze wie: "Erhebliche Auswirkungen auf die IT-Sicherheit der Bundesverwaltung k&ouml;nnen damit einhergehen." Die Schlussfolgerung lautet dementsprechend: "Der Einsatz der 'Trusted-Computing'-Technik in dieser Auspr&auml;gung ... ist f&uuml;r die Bundesverwaltung und f&uuml;r die Betreiber von kritischen Infrastrukturen nicht zu akzeptieren."</blockquote>
 </ref>):
 
 <blockquote>For example, an internal paper from the Ministry of Economics from early 2012 states: "Due to the loss of full sovereignty over information technology," the security goals of "confidentiality" and "integrity" are no longer guaranteed. Elsewhere, there are sentences such as, "Significant impacts on the IT security of the federal administration may result." Accordingly, the conclusion is: "The use of 'trusted computing' technology in this form ... is unacceptable for the federal administration and for operators of critical infrastructures."</blockquote>
@@ -326,7 +326,7 @@ Archived, redacted version after court order requested by Microsoft against news
 What was it that ZEIT ONLINE needed to redact?
 
 Quote [https://wikileaks.org/bnd-inquiry/docs/BSI/ A BSI-2i.pdf German government internal documents leaked on wikileaks] (DeepL translated <ref>
-<blockquote>Bei der Verhandlungsführung kann bezogen auf die TPM-Nutzung daraufhingewiesen werden,
+<blockquote>Bei der Verhandlungsf&uuml;hrung kann bezogen auf die TPM-Nutzung daraufhingewiesen werden,
 dass nicht nur die Bundesregierung den nicht selbst kontrollierten Einsatz von TPMs kritisch
 sieht, sondern auch weite Teile der deutschen Industrie, insbesondere in Kritischen Infrastrukturen.</blockquote>
 </ref>):
@@ -334,9 +334,9 @@ sieht, sondern auch weite Teile der deutschen Industrie, insbesondere in Kritisc
 <blockquote>With regard to the use of TPMs, it can be pointed out in the negotiations, that not only the German government is critical of the use of TPMs that it does not control itself, but also wide sections of German industry, especially in critical infrastructures.</blockquote>
 
 <ref>
-<blockquote>Daher argumentiert Microsoft damit, dass sie selbst die Kontrolle über UEFI „Secure Boot"
-benötigen, um für den Eigentümer UEFI „Secure Boot" sicher zu verwalten. Aus Sicht des BSI
-ist der Aufwand für eine selbst kontrollierte Konfiguration von UEFI „Secure Boot" zwar
+<blockquote>Daher argumentiert Microsoft damit, dass sie selbst die Kontrolle &uuml;ber UEFI &bdquo;Secure Boot"
+ben&ouml;tigen, um f&uuml;r den Eigent&uuml;mer UEFI &bdquo;Secure Boot" sicher zu verwalten. Aus Sicht des BSI
+ist der Aufwand f&uuml;r eine selbst kontrollierte Konfiguration von UEFI &bdquo;Secure Boot" zwar
 derzeit hoch, aber insbesondere in Einsatzbereichen mit hohem Schutzbedarf oder in Kritischen
 Infrastrukturen dringend geboten.</blockquote>
 </ref>
@@ -344,7 +344,7 @@ Infrastrukturen dringend geboten.</blockquote>
 <blockquote>Therefore, Microsoft argues that they themselves need control over UEFI "Secure Boot". in order to securely manage UEFI "Secure Boot" for the owner. From the BSI's point of view the effort for a self-controlled configuration of UEFI "Secure Boot" is currently high, but it is urgently required in particular in areas of application with a high need for protection or in critical infrastructures.</blockquote>
 
 [https://www.heise.de/ct/ausgabe/2015-19-Deutschen-Behoerden-entgleitet-die-Kontrolle-ueber-kritische-IT-Systeme-2784249.html Heise: German authorities are losing control over critical IT systems] (German language, use DeepL and/or Google Translate) <ref>
-<blockquote>Einerseits verlangt die Bundesregierung „uneingeschränkte Kontrollierbarkeit“ von Computern, die kritische Infrastrukturen am Laufen halten – also Atomkraftwerke, Wasser-, Energie und Verkehrsnetze. Andererseits tun die zuständigen Behörden nichts, um die bereits an Intel und Microsoft verlorene Kontrolle zurückzuerlangen.</blockquote>
+<blockquote>Einerseits verlangt die Bundesregierung &bdquo;uneingeschr&auml;nkte Kontrollierbarkeit" von Computern, die kritische Infrastrukturen am Laufen halten - also Atomkraftwerke, Wasser-, Energie und Verkehrsnetze. Andererseits tun die zust&auml;ndigen Beh&ouml;rden nichts, um die bereits an Intel und Microsoft verlorene Kontrolle zur&uuml;ckzuerlangen.</blockquote>
 </ref>:
 
 <blockquote>On the one hand, the federal government demands "unrestricted controllability" of computers that keep critical infrastructures running - i.e. nuclear power plants, water, energy and transport networks. On the other hand, the responsible authorities are doing nothing to regain the control already lost to Intel and Microsoft.</blockquote>
@@ -352,7 +352,7 @@ Infrastrukturen dringend geboten.</blockquote>
 [https://www.theregister.com/2013/08/23/nsa_germany_windows_8/ The Register - Germany warns: You just CAN'T TRUST some Windows 8 PCs]
 
 A whitewashed statement by the German government, Federal Office for Information Security, BSI, <ref>
-Bundesamt für Sicherheit in der Informationstechnik
+Bundesamt f&uuml;r Sicherheit in der Informationstechnik
 </ref> wrote ({{ExtLink
 |https://web.archive.org/web/20210125185418/https://www.bsi.bund.de/DE/Presse/Pressemitteilungen/Presse2013/Windows_TPM_Pl_21082013.html
 |text=See full statement (web archived)
@@ -459,7 +459,7 @@ https://www.computerworld.com/article/3012278/microsoft-sets-stage-for-massive-w
 == Adversary Collaboration ==
 Microsoft has a history of informing adversaries of bugs before they are fixed. Microsoft reportedly [https://www.bloomberg.com/news/articles/2013-06-14/u-s-agencies-said-to-swap-data-with-thousands-of-firms gives adversaries security tips] ([https://archive.is/PdLBZ archive.is]) on how to crack into Windows computers.
 
-<blockquote>Microsoft Corp. (MSFT), the world’s largest software company, provides intelligence agencies with information about bugs in its popular software before it publicly releases a fix, according to two people familiar with the process.</blockquote>
+<blockquote>Microsoft Corp. (MSFT), the world's largest software company, provides intelligence agencies with information about bugs in its popular software before it publicly releases a fix, according to two people familiar with the process.</blockquote>
 
 <blockquote>Redmond, Washington-based Microsoft (MSFT) and other software or Internet security companies have been aware that this type of early alert allowed the U.S. to exploit vulnerabilities in software sold to foreign governments, according to two U.S. officials. Microsoft doesn't ask and can't be told how the government uses such tip-offs, said the officials, who asked not to be identified because the matter is confidential.</blockquote>
 
@@ -507,7 +507,7 @@ Simplified summary: Independent security researchers do not have access to the s
 
 The fact that there is no way to completely remove or disable telemetry requires further consideration. For instance, non-enterprise editions [https://www.eff.org/deeplinks/2016/08/windows-10-microsoft-blatantly-disregards-user-choice-and-privacy-deep-dive do not permit anyone to completely opt out of the surveillance "features"] of Windows 10.
 
-Quote: [https://arstechnica.com/information-technology/2015/08/even-when-told-not-to-windows-10-just-cant-stop-talking-to-microsoft/ Even when told not to, Windows 10 just can’t stop talking to Microsoft].
+Quote: [https://arstechnica.com/information-technology/2015/08/even-when-told-not-to-windows-10-just-cant-stop-talking-to-microsoft/ Even when told not to, Windows 10 just can't stop talking to Microsoft].
 
 Quote: [https://thehackernews.com/2016/02/microsoft-windows10-privacy.html Windows 10 Sends Your Data 5500 Times Every Day Even After Tweaking Privacy Settings].
 
@@ -655,11 +655,11 @@ https://answers.microsoft.com is mostly user-to-user discussion. It is difficult
 There is also https://techcommunity.microsoft.com.
 </ref> Microsoft's internal issue tracker is private and inaccessible to the public, even for reading purposes.<ref>
 Evidence that Microsoft maintains an internal issue tracker: https://www.engadget.com/2017-10-17-microsoft-bug-database-hacked-in-2013.html
-</ref> The ability of the public to gain insights into Microsoft’s planning and development processes, or to participate in the development of Windows, is significantly limited. This is common among closed source, proprietary software projects. The community is largely excluded from development. In contrast, Open Source projects often maintain public issue trackers where anyone can post and reply (except in the case of embargoed security issues).
+</ref> The ability of the public to gain insights into Microsoft's planning and development processes, or to participate in the development of Windows, is significantly limited. This is common among closed source, proprietary software projects. The community is largely excluded from development. In contrast, Open Source projects often maintain public issue trackers where anyone can post and reply (except in the case of embargoed security issues).
 
 When users encounter problems and seek help, the common advice is often to "reinstall Windows". Due to the closed source nature of Windows, analyzing issues, creating bug fixes, and developing workarounds is considerably more difficult.
 
-Reverse engineering is sometimes cited as an alternative to the lack of access to Windows source code. However, reverse engineering is much more difficult and limited in scope. For example, the [[#Forced Updates|forced updates]] and [[#Forced Upgrades|forced upgrades]] instances where Windows ignores the user's automatic update settings (as documented in chapter [[#Windows User Freedom Restrictions|Windows User Freedom Restrictions]])—were not foreseen or published by anyone performing reverse engineering. Users were taken by surprise.
+Reverse engineering is sometimes cited as an alternative to the lack of access to Windows source code. However, reverse engineering is much more difficult and limited in scope. For example, the [[#Forced Updates|forced updates]] and [[#Forced Upgrades|forced upgrades]] instances where Windows ignores the user's automatic update settings (as documented in chapter [[#Windows User Freedom Restrictions|Windows User Freedom Restrictions]])--were not foreseen or published by anyone performing reverse engineering. Users were taken by surprise.
 
 == Using Earlier Windows Versions is No Good Alternative ==
 
@@ -704,9 +704,9 @@ Quote from The Tyranny of the Default: <ref>
 Broken link: <nowiki>https://cmitsolutions.com/hartford/the-tyranny-of-the-default</nowiki>
 </ref>
 
-<blockquote>“‘The tyranny of the default’ [is] the expression I like to use for: we know most users don’t go in and change things. They just assume that someone smarter than them chose the settings that are best for them, and so they say ‘YES’ a lot when they’re asked questions. <b>What that means is that if it’s enabled by default, it’ll tend to stay on.</b>”</blockquote>
+<blockquote>"'The tyranny of the default' [is] the expression I like to use for: we know most users don't go in and change things. They just assume that someone smarter than them chose the settings that are best for them, and so they say 'YES' a lot when they're asked questions. <b>What that means is that if it's enabled by default, it'll tend to stay on.</b>"</blockquote>
 
-Any anti-features of Windows, such as telemetry, cannot be excused by the argument "but it can be disabled". That is, at best, a workaround - not a fix. The fact remains: for most users, if it’s enabled by default, it will tend to stay on.
+Any anti-features of Windows, such as telemetry, cannot be excused by the argument "but it can be disabled". That is, at best, a workaround - not a fix. The fact remains: for most users, if it's enabled by default, it will tend to stay on.
 
 Changing defaults requires awareness of the issue, the ability to use search engines to find documentation, and the technical skills to make the change. This is often not the case for non-technical users. Even technical users might forget to reapply changes in situations such as after a reinstallation. Therefore, default settings matter.
 

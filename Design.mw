@@ -250,7 +250,7 @@ Technical Design and Conception of the {{project_name_long}} Anonymous Operating
 * [[Dev/Redistribution#Pre_Building|Redistribution Pre Building]] (Only required if you want to redistribute (official) {{project_name_short}} release builds.)
 * [[Dev/Redistribution#Post_Building|Redistribution Post Building]] (Only required if you want to redistribute (official) {{project_name_short}} release builds.)
 * [[Essential_Tests|Essential {{project_name_short}} Functionality Tests]]
-* [[Dev/Vision‎|Whonix² Project Vision]]
+* [[Dev/Vision&lrm;|Whonix&sup2; Project Vision]]
 * [https://forums.whonix.org/tag/project-philosophy Project Philosophy]
 * [[Community_survey|Community Survey, collecting feedback for the future direction of {{project_name_short}}]]
 </div>

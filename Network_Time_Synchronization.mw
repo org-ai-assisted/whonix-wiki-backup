@@ -20,7 +20,7 @@ A reasonably accurate host clock is crucially important. An inaccurate clock can
 * '''A)''' Broken internet connectivity, and
 * '''B)''' [[Time Attacks]].
 
-Therefore, at all times it is recommended to have a host clock with accuracy of up to ± 30 minutes. Clocks that are days, weeks, months or even years slow or fast can lead to many issues such as connectivity problems with Tor, inability to download operating system upgrades and inaccessible websites. <ref>
+Therefore, at all times it is recommended to have a host clock with accuracy of up to &plusmn; 30 minutes. Clocks that are days, weeks, months or even years slow or fast can lead to many issues such as connectivity problems with Tor, inability to download operating system upgrades and inaccessible websites. <ref>
 Due to invalid (not yet or no longer valid) TLS certificates.
 </ref>
 
@@ -28,7 +28,7 @@ Follow the platform-specific recommendations below to avoid Tor connectivity pro
 
 = Host Clock =
 
-Your computer's host clock must have an accuracy of at least ±30 minutes, ideally better. Otherwise, connectivity can be broken. A minute range of accuracy is more than enough for {{project_name_short}}. There is no need for seconds accuracy, let alone nanosecond accuracy.
+Your computer's host clock must have an accuracy of at least &plusmn;30 minutes, ideally better. Otherwise, connectivity can be broken. A minute range of accuracy is more than enough for {{project_name_short}}. There is no need for seconds accuracy, let alone nanosecond accuracy.
 
 {{IconSet|h1|1}} '''Prerequisite knowledge:''' time formats, 12 hours AM/PM, 24 hours format, timezones. (Common knowledge. Not specific to computers.)
 

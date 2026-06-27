@@ -85,8 +85,8 @@ Using a VPN or SSH does not provide strong guarantees of hiding your the fact yo
 
 [...]
 
-* 1 See ​Tor Browser Design for a general definition and introduction into Website traffic fingerprinting.
-* 2 See slides for ​Touching from a Distance: Website Fingerprinting Attacks and Defenses. There is also a ​research paper from those authors. Unfortunately, it's not free. However, you can find free ones using search engines. Good search terms include "Website Fingerprinting VPN". You'll find multiple research papers on that topic.
+* 1 See &#8203;Tor Browser Design for a general definition and introduction into Website traffic fingerprinting.
+* 2 See slides for &#8203;Touching from a Distance: Website Fingerprinting Attacks and Defenses. There is also a &#8203;research paper from those authors. Unfortunately, it's not free. However, you can find free ones using search engines. Good search terms include "Website Fingerprinting VPN". You'll find multiple research papers on that topic.
 </blockquote></ref>
 # Depending on the configuration, VPN tunnels combined with Tor can worsen anonymity. For example it can lead to a permanent Tor exit relay in the network or remove [[Stream_Isolation|Stream Isolation]] of different online activities.
 # It is difficult to anonymously register and pay for VPN services.

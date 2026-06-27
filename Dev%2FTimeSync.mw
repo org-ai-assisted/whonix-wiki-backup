@@ -761,7 +761,7 @@ Under [https://github.com/{{project_name_short}}/sdwdate/pull/4 consideration] i
 The offset mode for <code>adjtimex</code> allows a change of 0.5 seconds per call (used to be ~130 milliseconds until the 2.6 kernel). The documentation of this call is incomplete, partly resulting from the limited number of clients (<code>ntpd</code>, <code>chronyd</code>) using this interface, but by tracing the kernel internals (<code>linux/kernel/time/ntp.c</code> and <code>/linux/kernel/time/timekeeping.c</code>) one can get a more complete picture, including that modern kernels support a <code>NANO</code> mode for easier implementation of smaller adjustments than the older microsecond based interface, without the need to do clock tick adjustment calculations.
 
 Based on this interface and mode bit definitions taken from <code>/usr/include/linux/timex.h</code> (more complete than the counterparts you typically find online), a Python based interface is formed via <code>ctypes</code>. First, set the kernel internals to handle nanosecond specifications and run in <code>PLL</code> mode. Then use <code>OFFSET</code> to adjust the time.
-With this call the kernel is instructed to change the time gradually. You can observe this change by making further calls to <code>adjtimex</code>, this time without setting any values (specified by 0 in the modes bitfield of the structure handed to <code>adjtimex</code>). To handle changes of more than the maximum allowed (±0.5 seconds), you need to invoke a 0.5 second change and observe if the offset has been reduced to 0, then invoke again. Writing a new offset using <code>adjtimex</code> will overwrite any running adjustment process, therefore you have to wait.
+With this call the kernel is instructed to change the time gradually. You can observe this change by making further calls to <code>adjtimex</code>, this time without setting any values (specified by 0 in the modes bitfield of the structure handed to <code>adjtimex</code>). To handle changes of more than the maximum allowed (&plusmn;0.5 seconds), you need to invoke a 0.5 second change and observe if the offset has been reduced to 0, then invoke again. Writing a new offset using <code>adjtimex</code> will overwrite any running adjustment process, therefore you have to wait.
 
 By default the kernel uses a decreasing step size as the remaining offset approaches 0. This can be influenced by <code>TIMECONST</code> to start with bigger steps, or even reset the step size on a regular basis while the kernel is changing the clock according to the remaining offset.
 
@@ -815,7 +815,7 @@ Stopping a previous invocation of <code>sclockadj2</code> (which might be loopin
 * https://weberblog.net/network-time-security-strengths-weaknesses/
 * https://weberblog.net/setting-up-nts-secured-ntp-with-ntpsec/
 * https://weberblog.net/network-time-security-new-ntp-authentication-mechanism/
-** <blockquote>the time data is not encrypted by NTS – but authenticated.</blockquote>
+** <blockquote>the time data is not encrypted by NTS - but authenticated.</blockquote>
 * https://chrony.tuxfamily.org/comparison.html
 * https://blog.apnic.net/2019/11/08/network-time-security-new-ntp-authentication-mechanism/
 * https://www.cloudflare.com/time/

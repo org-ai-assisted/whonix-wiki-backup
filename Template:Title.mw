@@ -2,7 +2,7 @@
 |
 {{DISPLAYTITLE:{{#if:{{{title|}}}|{{{title}}}|{{{1}}}}}}}
 {{#seo:
-|title={{#replace:{{#replace:{{#if:{{{title|}}}|{{{title}}}|{{{1}}}}}|<sup>™</sup>|}}|<sup>®</sup>|}}
+|title={{#replace:{{#replace:{{#if:{{{title|}}}|{{{title}}}|{{{1}}}}}|<sup>&trade;</sup>|}}|<sup>&reg;</sup>|}}
 }} {{#ifeq: {{WikiBookIndex}} | page-not-indexed ||
 <div class="first-heading">{{WikiBookIndex|firstheading}}{{#if:{{{title|}}}|{{{title}}}|{{{1}}}}}</div>
 }}

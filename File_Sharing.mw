@@ -25,7 +25,7 @@ The Magic-Wormhole package: <ref>https://github.com/magic-wormhole/magic-wormhol
 
 This is by far the simplest way to send files securely between two endpoints that the {{project_name_short}} developers have encountered.
 
-The wormhole tool uses [https://www.researchgate.net/publication/260357994_Efficient_Two-Server_Password-Only_Authenticated_Key_Exchange PAKE “Password-Authenticated Key Exchange”], a family of cryptographic algorithms that uses a short low-entropy password to establish a strong high-entropy shared key. <ref>https://magic-wormhole.readthedocs.io/en/latest/welcome.html#design</ref> The codes are short and human-pronounceable, using a phonetically-distinct word list. The receiving side offers tab-completion on the code words, so usually only a few characters must be typed. Wormhole codes are single-use and do not need to be memorized.
+The wormhole tool uses [https://www.researchgate.net/publication/260357994_Efficient_Two-Server_Password-Only_Authenticated_Key_Exchange PAKE "Password-Authenticated Key Exchange"], a family of cryptographic algorithms that uses a short low-entropy password to establish a strong high-entropy shared key. <ref>https://magic-wormhole.readthedocs.io/en/latest/welcome.html#design</ref> The codes are short and human-pronounceable, using a phonetically-distinct word list. The receiving side offers tab-completion on the code words, so usually only a few characters must be typed. Wormhole codes are single-use and do not need to be memorized.
 
 In the future, it is planned to use ephemeral onion services (OnionShare style) to eliminate reliance on a rendezvous server susceptible to DoS attacks. <ref>https://github.com/magic-wormhole/magic-wormhole/blob/master/docs/tor.rst</ref> Work on a Rust port is underway. <ref>https://web.archive.org/web/20190817162545/https:/twitter.com/str4d/status/1153247233044860928</ref> <ref>https://github.com/magic-wormhole/magic-wormhole.rs</ref>
 
@@ -121,16 +121,16 @@ Roger Dingledine also talks in his paper about the difficulties that P2P and tor
 https://svn-archive.torproject.org/svn/projects/roadmaps/2009-03-11-performance.pdf
 </ref>:
 
-<blockquote> ...normal web browsing users will always get squeezed out by people pulling down larger content and tolerating high latency. But the next problem is that some users simply add more load than the network can handle. Just making sure that all the load gets handled fairly isn’t enough if there’s too much load in the first place.
+<blockquote> ...normal web browsing users will always get squeezed out by people pulling down larger content and tolerating high latency. But the next problem is that some users simply add more load than the network can handle. Just making sure that all the load gets handled fairly isn't enough if there's too much load in the first place.
 </blockquote>
 
 Roger Dingledine also comments on how exit operations often have to limit the ports used on their node to 80 and 443, limiting other protocols in an effort to prevent DMCA complaints and potentially affecting completely innocent users as mentioned above. He also comments on how even this might not work in the future if Torrenting developers add these ports as acceptable P2P ports:
 
-<blockquote>We hear periodically from relay operators who had problems with DMCA takedown attempts, switched to an exit policy of “permit only ports 80 and 443”, and no longer hear DMCA complaints.
+<blockquote>We hear periodically from relay operators who had problems with DMCA takedown attempts, switched to an exit policy of "permit only ports 80 and 443", and no longer hear DMCA complaints.
 
 Does that mean that most file-sharing attempts go over some other port? If only a few exit relays permitted ports other than 80 and 443, we would effectively squeeze the high-volume flows onto those few exit relays, reducing the total amount of load on the network.
 
-First, there’s a clear downside: we lose out on other protocols. Part of the point of Tor is to be application-neutral. Also, it’s not clear that it would work long-term, since corporate firewalls are continuing to push more and more of the Internet onto port 80.</blockquote>
+First, there's a clear downside: we lose out on other protocols. Part of the point of Tor is to be application-neutral. Also, it's not clear that it would work long-term, since corporate firewalls are continuing to push more and more of the Internet onto port 80.</blockquote>
 
 That does not mean that divergent opinions do not exist. For example, former Tor developer Jacob Appelbaum stated in 2011: <ref>
 https://lists.torproject.org/pipermail/tor-talk/2011-December/022376.html

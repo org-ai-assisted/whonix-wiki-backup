@@ -52,7 +52,7 @@ In this data protection declaration we use the following terms:
 |-
 
 | Personal data
-| Personal data means any information relating to an identified or identifiable natural person (“data subject”). An identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.
+| Personal data means any information relating to an identified or identifiable natural person ("data subject"). An identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.
 |-
 
 | Data subject
@@ -189,7 +189,7 @@ This Usage Data may include:
 {{Box|text=
 <div class="toccolours mw-collapsible mw-collapsed">
 * IP address of the requesting computer
-* Name of the user’s internet access provider
+* Name of the user's internet access provider
 * the website that referred you to our Service
 * Cookies and Usage Data
 
@@ -246,7 +246,7 @@ because we cannot infer your contact information from usage data. Rather, we hav
 {{name-short}} stores aggregate statistics about use for as long as {{name-short}} hosts the website, but those statistics do not include data identifiable to you personally with the aim of increasing the data protection and data security of our enterprise, and to ensure an optimal level of protection for the personal data we process. The anonymous data of the server log files are stored separately from all personal data provided by a data subject.
 
 {{Box|text=
-Legal basis for the collection of usage data is the General Data Protection Regulation (GDPR), §6, 1, (f), the legitimate interest of the data controller.
+Legal basis for the collection of usage data is the General Data Protection Regulation (GDPR), &sect;6, 1, (f), the legitimate interest of the data controller.
 }}
 }}
 
@@ -285,7 +285,7 @@ We have never used tracking technologies for advertising. We do not sell or rent
 {{Privacypolicy/Right|content=
 <!-- A "tracking pixel" (sometimes called "web beacons", "transparent GIFs", "clear GIFs", Wpixel gifsW, or Wpixel tagsW) is a tiny, invisible image that allows us to track activities on our Sites or activities based on email notifications we send. Although tracking pixels are commonly associated with advertising, we never use tracking pixels for advertising nor do we sell or rent the information collected through tracking pixels. Information collected through tracking pixels can only be shared with third parties in aggregated form and in accordance with the Privacy Policy. Tracking pixels help us figure out if certain features, notifications, and products are effective and if they can be improved. [https://en.wikipedia.org/wiki/Web_beacon Learn more on Wikipedia]. -->
 <!--"JavaScript" is a standard software programming language used on most modern websites. [https://en.wikipedia.org/wiki/JavaScript Learn more on Wikipedia.]-->
-<!--"Local Storage" (also known as "Web Storage") is a way for a website to collect and store information "locally" (i.e. on the user's device rather than on the website’s server) and then later retrieve it again. For example, by using LocalStorage, a user’s visits can be stored on their own computer, counted, and then given to us. This allow us to receive important use statistics (the count of visits), while the specific information about when each individual visit occurred would never be transmitted to us.-->
+<!--"Local Storage" (also known as "Web Storage") is a way for a website to collect and store information "locally" (i.e. on the user's device rather than on the website's server) and then later retrieve it again. For example, by using LocalStorage, a user's visits can be stored on their own computer, counted, and then given to us. This allow us to receive important use statistics (the count of visits), while the specific information about when each individual visit occurred would never be transmitted to us.-->
 <!--We actively collect some types of information with a variety of commonly-used technologies. These generally include, JavaScript, and a variety of "locally stored data" technologies, such as cookies and local storage. We realize that some of these technologies do not have the best reputation in town and can be used for less-than-noble purposes. So we want to be as clear as we can about why we use these methods and the type of information we collect with them.-->
 <!--Depending on which technology we use, locally stored data can be anything from text, pictures, and whole articles (as we explain further below) to Personal Information (like your IP address) and information about your use of our Sites (like your username or the time of your visit).-->
 <!--Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service.-->
@@ -312,7 +312,7 @@ Examples of Cookies we use:
 For more information, please visit our [[Cookie Policy]].
 
 {{Box|text=
-Legal basis for the collection of Tracking and Cookies Data is the General Data Protection Regulation (GDPR), §6, 1, (f), the legitimate interest of the data controller.
+Legal basis for the collection of Tracking and Cookies Data is the General Data Protection Regulation (GDPR), &sect;6, 1, (f), the legitimate interest of the data controller.
 }}
 
 {{Box|text=
@@ -418,8 +418,8 @@ The registration of the data subject, with the voluntary indication of personal 
 {{Box|text=
 Legal basis for the storage of account data is the:
 
-* General Data Protection Regulation (GDPR), §6, 1, (f), the legitimate interest of the data controller.
-* General Data Protection Regulation (GDPR), §6, 1, (a), the consent of the data subject
+* General Data Protection Regulation (GDPR), &sect;6, 1, (f), the legitimate interest of the data controller.
+* General Data Protection Regulation (GDPR), &sect;6, 1, (a), the consent of the data subject
 }}
 }}
 
@@ -462,7 +462,7 @@ The forums by {{name-short}} require an account to post and reply to topics.
 
 To sign up for a forum account, the forum software requires a username, and an email address.
 
-{{name-short}} uses your account data to identify you on the forum, and to create pages specific to you, like your profile page. If the forum is public, {{name-short}} publishes your account data. If the forum is access-restricted, {{name-short}} makes your account data available to everyone who can access the forum, according to the forum administrator’s configuration.
+{{name-short}} uses your account data to identify you on the forum, and to create pages specific to you, like your profile page. If the forum is public, {{name-short}} publishes your account data. If the forum is access-restricted, {{name-short}} makes your account data available to everyone who can access the forum, according to the forum administrator's configuration.
 
 {{name-short}} uses your email address to:
 
@@ -471,7 +471,7 @@ To sign up for a forum account, the forum software requires a username, and an e
 * contact you in special circumstances related to your account
 * contact you about legal requests, like DMCA takedown requests
 
-You may provide additional data for your account, like a short biography, your location, your birthday, an avatar (graphical representation of the user) or photography on the profile settings page for your account. {{name-short}} makes that data available to others who can access the forum. You don’t have to provide this additional information, and you can erase it at any time.
+You may provide additional data for your account, like a short biography, your location, your birthday, an avatar (graphical representation of the user) or photography on the profile settings page for your account. {{name-short}} makes that data available to others who can access the forum. You don't have to provide this additional information, and you can erase it at any time.
 
 {{name-short}} stores your account data as long as your account remains open.
 
@@ -493,7 +493,7 @@ Your account activity page also includes a link to download all of your activity
 
 '''How can I change or erase data about me?'''
 
-You can change your account data at any time by visiting the profile settings page for your account. The settings for a particular forum may also allow you to close your account, on the settings page for your account. Closing your account starts a process of erasing or anonymizing {{name-short}}’s records of data you provided for your account. Forum administrators can also erase and anonymize accounts.
+You can change your account data at any time by visiting the profile settings page for your account. The settings for a particular forum may also allow you to close your account, on the settings page for your account. Closing your account starts a process of erasing or anonymizing {{name-short}}'s records of data you provided for your account. Forum administrators can also erase and anonymize accounts.
 
 You are also able to edit, anonymize, or erase your posts. When you edit posts, {{name-short}} will keep all versions of your posts. Forum administrators can view old versions of posts, and optionally make them visible to other forum visitors.
 
@@ -506,7 +506,7 @@ If you think a post has been wrongly blocked or removed, contact an administrato
 
 '''{{name-short}} uses data about posts and activity to set trust levels automatically.'''
 
-The forum may use data about your posts and activity to award you badges and calculate a trust level for your account. Your trust level may affect how you can participate in the forum, such as whether you can upload images, as well as give you access to moderation and management powers in the forum. Your trust level therefore reflects forum administrators’ confidence in you, and their willingness to delegate community management functions, like moderation.
+The forum may use data about your posts and activity to award you badges and calculate a trust level for your account. Your trust level may affect how you can participate in the forum, such as whether you can upload images, as well as give you access to moderation and management powers in the forum. Your trust level therefore reflects forum administrators' confidence in you, and their willingness to delegate community management functions, like moderation.
 
 If you think your trust level has been set incorrectly, contact an administrator of your forum. They can manually adjust the trust level of your account.
 }}
@@ -619,8 +619,8 @@ The personal data collected as part of a registration for the newsletter will on
 {{Box|text=
 Legal basis for the storage of account data is the:
 
-* General Data Protection Regulation (GDPR), §6, 1, (f), the legitimate interest of the data controller.
-* General Data Protection Regulation (GDPR), §6, 1, (a), the consent of the data subject
+* General Data Protection Regulation (GDPR), &sect;6, 1, (f), the legitimate interest of the data controller.
+* General Data Protection Regulation (GDPR), &sect;6, 1, (a), the consent of the data subject
 }}
 
 {{Box|text=
@@ -658,9 +658,9 @@ The website of the {{name-short}} contains information that enables a quick elec
 {{Box|text=
 Legal basis for the storage of account data is the:
 
-* General Data Protection Regulation (GDPR), §6, 1, (f), the legitimate interest of the data controller.
-* General Data Protection Regulation (GDPR), §6, 1, (a), the consent of the data subject.
-* General Data Protection Regulation (GDPR), §6, 1, (b), the performance of a contract.
+* General Data Protection Regulation (GDPR), &sect;6, 1, (f), the legitimate interest of the data controller.
+* General Data Protection Regulation (GDPR), &sect;6, 1, (a), the consent of the data subject.
+* General Data Protection Regulation (GDPR), &sect;6, 1, (b), the performance of a contract.
 }}
 }}
 
@@ -872,7 +872,7 @@ We sometimes require your data to pursue our legitimate interests in a way that 
 {{Privacypolicy/Right|content=
 For example, we use identity, device, and location information to prevent fraud and abuse and to keep the Services secure. We may also send you promotional communications about our Services, subject to your right to control whether we do so.
 
-We analyze how visitors interact with our sites so we can better understand what elements of the site’s design are working well and which are not working well. This allows us to continuously improve and develop the quality of the online experience we offer to all our visitors.
+We analyze how visitors interact with our sites so we can better understand what elements of the site's design are working well and which are not working well. This allows us to continuously improve and develop the quality of the online experience we offer to all our visitors.
 
 If necessary, we process your data beyond the actual fulfillment of the contract for the protection of our legitimate interests or of third parties' legitimate interests.
 
@@ -901,7 +901,7 @@ The criteria used to determine the period of storage of personal data is the res
 
 {{name-short}} will also retain [[#Usage Data]] for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer periods of time.
 
-Please remember that certain information, such as your [[#IP Addresses]] (if you edit while not logged in) might and any public contributions to our Sites are archived and displayed indefinitely by design; the transparency of the projects’ contribution and revision histories is critical to their effectiveness and trustworthiness.
+Please remember that certain information, such as your [[#IP Addresses]] (if you edit while not logged in) might and any public contributions to our Sites are archived and displayed indefinitely by design; the transparency of the projects' contribution and revision histories is critical to their effectiveness and trustworthiness.
 
 Routine erasure and blocking of personal data:
 
@@ -1053,7 +1053,7 @@ The supervisory authority with which the complaint has been lodged shall inform 
 
 <!--
 == Google DoubleClick DART Cookie ==
-Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – https://policies.google.com/technologies/ads
+Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL - https://policies.google.com/technologies/ads
 
 == Service Providers ==
 We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.
@@ -1078,7 +1078,7 @@ Google Analytics is a web analytics service offered by Google that tracks and re
 
 You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.
 
-For more information about Google’s Terms of Use and Privacy, please visit https://www.google.com/analytics/terms/de.html or https://www.google.de/intl/en/policies/. Please note that on this website Google Analytics has been extended to include the code "anonymizeIp" in order to ensure the anonymized collection of IP addresses (so-called IP-Masking).
+For more information about Google's Terms of Use and Privacy, please visit https://www.google.com/analytics/terms/de.html or https://www.google.de/intl/en/policies/. Please note that on this website Google Analytics has been extended to include the code "anonymizeIp" in order to ensure the anonymized collection of IP addresses (so-called IP-Masking).
 
 ==== Piwik or Matomo ====
 Piwik or Matomo is a web analytics service. You can visit their Privacy Policy page here: https://matomo.org/privacy-policy
@@ -1114,7 +1114,7 @@ If you make a payment, the payment data you provide will be supplied to the paym
 
 === PayPal ===
 {{Privacypolicy/Right|content=
-Our website accepts payments via PayPal, which is a third-party payment processor. The provider of this service is PayPal (Europe) S.à r.l. & Cie, S.C.A. (22-24 Boulevard Royal, L-2449 Luxembourg).
+Our website accepts payments via PayPal, which is a third-party payment processor. The provider of this service is PayPal (Europe) S.&agrave; r.l. & Cie, S.C.A. (22-24 Boulevard Royal, L-2449 Luxembourg).
 
 PayPal has its own [https://www.paypal.com/en/webapps/mpp/ua/privacy-full Privacy Policy]. As a result, your personal information may be transferred to locations outside Europe. Please carefully review PayPal's privacy policy if you are considering making any payments using PayPal and see if it is agreeable to you.
 }}

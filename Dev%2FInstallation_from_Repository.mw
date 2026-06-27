@@ -115,7 +115,7 @@ Advantages of builds are that these are "cleaner":
 = See Also =
 * [[Packages for Debian Hosts|{{project_name_short}} Packages for Debian Hosts]]
 * [[Debian_Packages|{{project_name_short}} Debian Packages]]
-* [[Dev/Build Documentation‏‎|Building/upgrading {{project_name_short}} debian packages from source code]]
+* [[Dev/Build Documentation&rlm;&lrm;|Building/upgrading {{project_name_short}} debian packages from source code]]
 * [https://www.kicksecure.com/wiki/Debian Install {{Kicksecure}} inside Debian]
 
 = Footnotes =

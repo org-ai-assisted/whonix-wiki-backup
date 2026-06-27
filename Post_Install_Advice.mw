@@ -104,7 +104,7 @@ A reasonably accurate host clock is required for many general security propertie
 * Broken internet connectivity; and
 * [[Time Attacks]].
 
-Therefore, at all times ensure the host clock has an accuracy of up to ± 30 minutes.
+Therefore, at all times ensure the host clock has an accuracy of up to &plusmn; 30 minutes.
 
 '''3.''' Avoid pause / suspend / save / hibernate functions.
 

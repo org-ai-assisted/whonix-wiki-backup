@@ -119,7 +119,7 @@ date
 }}
 </ref>
 
-Check if the host clock time and date have accuracy of up to ± 30 minutes. If the host clock is more than 1 hour in the past or more than 3 hours in the future, Tor cannot connect. ([[Network Time Synchronization|details]])
+Check if the host clock time and date have accuracy of up to &plusmn; 30 minutes. If the host clock is more than 1 hour in the past or more than 3 hours in the future, Tor cannot connect. ([[Network Time Synchronization|details]])
 
 If not, fix host clock, power off VM and restart the VM.
 
@@ -295,7 +295,7 @@ The only chance is to go through the troubleshooting guide step-by-step. Then pl
 }}
 
 == Clock Fix ==
-Broken internet connectivity is to be expected if the clock is incorrect. At all times it is recommended to have a host clock with accuracy of up to ± 30 minutes.
+Broken internet connectivity is to be expected if the clock is incorrect. At all times it is recommended to have a host clock with accuracy of up to &plusmn; 30 minutes.
 
 Quote {{project_name_short}} [[Post Install Advice]]:
 

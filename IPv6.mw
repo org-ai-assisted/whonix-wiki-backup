@@ -17,7 +17,7 @@ Enabling and using IPv6 in {{project_name_short}}.
 
 * <u>Protocol overview:</u> IPv6 is the newer version of the Internet's addressing system. Like the older IPv4, it helps devices find and talk to each other over a network or the Internet.
 * <u>Main advantage:</u> IPv6 offers many more unique addresses than IPv4, which helps solve the problem of running out of IP addresses.
-* <u>Adoption issues:</u> Some networks still only support IPv4. Others support both IPv4 and IPv6. A few newer networks only support IPv6, which can cause connection problems for older systems or software that don’t support IPv6.
+* <u>Adoption issues:</u> Some networks still only support IPv4. Others support both IPv4 and IPv6. A few newer networks only support IPv6, which can cause connection problems for older systems or software that don't support IPv6.
 
 = Whonix IPv6 Status =
 
@@ -36,7 +36,7 @@ Enabling and using IPv6 in {{project_name_short}}.
 * <u>Tor Browser access:</u> Websites and services that use IPv6 can be reached with Tor Browser from {{project_name_workstation_short}}.
 * <u>Workstation to Gateway communication:</u> The connection between {{project_name_workstation_short}} and {{project_name_gateway_short}} still uses IPv4 only.
 * <u>Gateway to Tor network:</u> {{project_name_gateway_short}} connects to the Tor network using only IPv4. IPv6 is completely disabled here. However, Tor can still access IPv6 websites by tunneling through the IPv4 network.
-* <u>Command-line utilities:</u> Most tools used in the terminal on {{project_name_workstation_short}} don’t work with IPv6 unless special workarounds are used.
+* <u>Command-line utilities:</u> Most tools used in the terminal on {{project_name_workstation_short}} don't work with IPv6 unless special workarounds are used.
 </ref>
 
 '''In {{project_name_short}} 18 (newer version):'''
@@ -58,7 +58,7 @@ Not sure if your Internet connection supports IPv6, IPv4, or both? Use the follo
 * <u>Tests overview:</u>
 ** <u>Normal Test:</u> Checks if your connection supports both IPv4 and IPv6.
 ** <u>IPv4 only Test:</u> If this doesn't work, it may mean your network only supports IPv6, or something is misconfigured.
-** <u>IPv6 only Test:</u> If this doesn't work, that’s usually okay.
+** <u>IPv6 only Test:</u> If this doesn't work, that's usually okay.
 
 * <u>Example test websites:</u>
 ** ip6.me

@@ -69,8 +69,7 @@ RetoSwap official redirect (Github mirror):
 https://docs.retoswap.com/tor-config/DirectBindTor/#whonix
 
 = Installation =
-{{#widget:Icon_Bullet_List
-|item=fa-solid fa-info cs-blue,This guide was created in February 2025 and is based on {{project_name_long}} 17.2.8.5 and RetoSwap v1.0.18. As the app's name was recently changed from Haveno-reto, some file paths referenced below use the name <code>haveno</code> or <code>haveno-reto</code>. This may change in the future.
+{{#iconbulletlist:item=fa-solid fa-info cs-blue,This guide was created in February 2025 and is based on {{project_name_long}} 17.2.8.5 and RetoSwap v1.0.18. As the app's name was recently changed from Haveno-reto, some file paths referenced below use the name <code>haveno</code> or <code>haveno-reto</code>. This may change in the future.
 }} <!-- End #widget:Icon_Bullet_List -->
 
 == System Requirements ==
@@ -79,8 +78,7 @@ Generally, RetoSwap does not use a lot of system resources, as it connects to re
 Generally, the storage space used by RetoSwap will be under 100 MB.
 
 == Downloading & Installing RetoSwap ==
-{{#widget:Icon_Bullet_List
-|item=fa-solid fa-info cs-blue,All of the steps for downloading and installing the RetoSwap .deb file take place on {{project_name_workstation_short}}.
+{{#iconbulletlist:item=fa-solid fa-info cs-blue,All of the steps for downloading and installing the RetoSwap .deb file take place on {{project_name_workstation_short}}.
 }} <!-- End #widget:Icon_Bullet_List -->
 
 {{IconSet|h1|1}} Download RetoSwap.
@@ -110,7 +108,21 @@ Related: [[Tor_Browser#Navigating_Tor_Browser_Downloads|Navigating Tor Browser D
 
 {{IconSet|h1|3}} Verify the signature.
 
-[[Undocumented]]. Out of scope for this guide. Refer to upstream documentation (if any exists) or general third-party documentation on digital software signature verification.
+RetoSwap releases on [https://github.com/retoaccess1/haveno-reto/releases the releases page] are accompanied by a signed hash list (<code><version>.hashes</code> and a detached OpenPGP signature <code><version>.hashes.sig</code>) and a detached signature of the <code>.deb</code> installer (<code>...installer.deb.sig</code>).
+
+The signature is made by an OpenPGP key with the fingerprint:
+
+<pre>
+DAA2 4D87 8B8D 36C9 0120  A897 CA02 DAC1 2DAE 2D0F
+</pre>
+
+The key carries only the unverified user ID <code>reto</code> and can be retrieved from the public keyservers (for example <code>keys.openpgp.org</code> or <code>keyserver.ubuntu.com</code>).
+
+{{Warning|1=
+'''The release signing key cannot be authenticated to a named maintainer.''' The project does not publish this key fingerprint through any channel independent of the GitHub releases themselves: the <code>desktop/package/</code> directory in the source repository ships only the legacy Bisq maintainer keys (Christoph Atteneder, Chris Beams, Manfred Karrer), none of which sign RetoSwap builds; the website, documentation, release notes and this wiki do not list the fingerprint; the release git tag is unsigned; and the repository commits are GitHub web-flow signatures, not signatures by this key.
+
+Verifying a download against this key therefore only confirms that successive releases were signed by the same anonymous key (trust on first use). It does '''not''' establish that the key belongs to the legitimate developer. Treat RetoSwap as effectively unsigned for the purpose of author-identity verification.
+}}
 
 {{IconSet|h1|4}} Extract the archive.
 
@@ -149,8 +161,7 @@ Optional. Copy (or drag) <code>/opt/haveno/lib/haveno-Haveno.desktop</code> to y
 RetoSwap download and installation steps have been completed.
 
 == Setting Up the Tor Hidden Service ==
-{{#widget:Icon_Bullet_List
-|item=fa-solid fa-info cs-blue,All of the steps for setting up the Tor hidden service take place on {{project_name_gateway_short}}.
+{{#iconbulletlist:item=fa-solid fa-info cs-blue,All of the steps for setting up the Tor hidden service take place on {{project_name_gateway_short}}.
 }} <!-- End #widget:Icon_Bullet_List -->
 
 {{IconSet|h1|1}} Create the Tor hidden service.
@@ -190,8 +201,7 @@ Copy and keep your <code>.onion</code> address handy for the next steps.
 Tor hidden service setup steps have been completed.
 
 == Setting Up the Firewall ==
-{{#widget:Icon_Bullet_List
-|item=fa-solid fa-info cs-blue,All of the steps for setting up the firewall take place on {{project_name_workstation_short}}.
+{{#iconbulletlist:item=fa-solid fa-info cs-blue,All of the steps for setting up the firewall take place on {{project_name_workstation_short}}.
 }} <!-- End #widget:Icon_Bullet_List -->
 
 {{IconSet|h1|1}} Open the firewall port.
@@ -218,16 +228,14 @@ Save and close the file.
 Firewall configuration steps have been completed.
 
 == Setting Up RetoSwap ==
-{{#widget:Icon_Bullet_List
-|item=fa-solid fa-info cs-blue,All of the steps for setting up RetoSwap take place on {{project_name_workstation_short}}.
+{{#iconbulletlist:item=fa-solid fa-info cs-blue,All of the steps for setting up RetoSwap take place on {{project_name_workstation_short}}.
 }} <!-- End #widget:Icon_Bullet_List -->
 
 {{IconSet|h1|1}} Set your hidden service address.
 
 Open the file <code>/home/user/.local/share/Haveno-reto/haveno.properties</code> in an editor.
 
-{{#widget:Icon_Bullet_List
-|item=fa-solid fa-info,This filepath uses the old name "Haveno-reto"; this might change in a future update of RetoSwap.
+{{#iconbulletlist:item=fa-solid fa-info,This filepath uses the old name "Haveno-reto"; this might change in a future update of RetoSwap.
 }} <!-- End #widget:Icon_Bullet_List -->
 
 Edit the file to add the following:

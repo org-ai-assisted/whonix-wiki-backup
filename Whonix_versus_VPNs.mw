@@ -121,7 +121,7 @@ Update: 3 hops until/if vanguards gets fixed.
 = VPNs do not even hide visited websites from your ISP =
 Any local observer on the network (ISP, WLAN) can make estimates of websites requested over the VPN by simply analyzing the size and timing of the encrypted VPN data stream ([[Fingerprint#Website_Traffic_Fingerprinting|Website Fingerprinting Attacks]]).
 
-A scientific article demonstrating the attack [https://epub.uni-regensburg.de/11919/1/authorsversion-ccsw09.pdf Website Fingerprinting: Attacking Popular Privacy Enhancing Technologies with the Multinomial Naïve-Bayes Classifier] had the success over 90% for VPNs.
+A scientific article demonstrating the attack [https://epub.uni-regensburg.de/11919/1/authorsversion-ccsw09.pdf Website Fingerprinting: Attacking Popular Privacy Enhancing Technologies with the Multinomial Na&iuml;ve-Bayes Classifier] had the success over 90% for VPNs.
 
 In contrast, Tor is quite resilient against this attack.
 
@@ -134,7 +134,7 @@ Issue being acknowledged by VPN provider Mullvad:
 The consensus opinion of security professionals is that VPNs pose more risks than benefits, and it is for this reason {{project_name_short}} does not endorse their use.
 
 {{quotation
-|quote=We don’t talk about it a lot, but VPNs are entirely based on trust. As a consumer, you have no idea which company will best protect your privacy. You don’t know the data protection laws of the Seychelles or Panama. You don’t know which countries can put extra-legal pressure on companies operating within their jurisdiction. You don’t know who actually owns and runs the VPNs. You don’t even know which foreign companies the NSA has targeted for mass surveillance. All you can do is make your best guess, and hope you guessed well.
+|quote=We don't talk about it a lot, but VPNs are entirely based on trust. As a consumer, you have no idea which company will best protect your privacy. You don't know the data protection laws of the Seychelles or Panama. You don't know which countries can put extra-legal pressure on companies operating within their jurisdiction. You don't know who actually owns and runs the VPNs. You don't even know which foreign companies the NSA has targeted for mass surveillance. All you can do is make your best guess, and hope you guessed well.
 |context=[https://www.schneier.com/blog/archives/2021/06/vpns-and-trust.html Bruce Schneier, renowned cryptographer and computer security professional]
 }}
 
@@ -143,7 +143,7 @@ The consensus opinion of security professionals is that VPNs pose more risks tha
 
 [...]
 
-“Hide your IP and ensure anonymous browsing.”
+"Hide your IP and ensure anonymous browsing."
 
 [...]
 
@@ -176,9 +176,9 @@ By comparison, for example the homepage of the The Tor Project or the Whonix pro
 
 [[#vpwns|<code>vpwns</code> (research paper)]]:
 
-<blockquote>Whenever a tool is pressed into service to provide data security properties for which it was not originally designed and tested, the potential for subtle security flaws greatly increases. In the particular case of a VPN used as an anonymizing service, the issues seem to arise primarily from the conventional relationship the VPN client software has with the endpoint system’s routing table.</blockquote>
+<blockquote>Whenever a tool is pressed into service to provide data security properties for which it was not originally designed and tested, the potential for subtle security flaws greatly increases. In the particular case of a VPN used as an anonymizing service, the issues seem to arise primarily from the conventional relationship the VPN client software has with the endpoint system's routing table.</blockquote>
 
-<blockquote>But when the goal of the system is to provide strong user anonymity, the requirements become much more stringent. Even a single leaked DNS query or TCP SYN packet may be enough to reveal the user’s identity entirely and subject them to consequences much greater than those of a failed connection. Under these new requirements, the method of securing traffic via the endpoint system’s routing table is insufficient. It proves vulnerable to a number of generic problems that have the effect of expanding the user’s attack surface dramatically.</blockquote>
+<blockquote>But when the goal of the system is to provide strong user anonymity, the requirements become much more stringent. Even a single leaked DNS query or TCP SYN packet may be enough to reveal the user's identity entirely and subject them to consequences much greater than those of a failed connection. Under these new requirements, the method of securing traffic via the endpoint system's routing table is insufficient. It proves vulnerable to a number of generic problems that have the effect of expanding the user's attack surface dramatically.</blockquote>
 
 When the VPN is started, the VPN software modifies the routing table to route the traffic over the VPN. However, when the VPN looses connection, restarts or starts after networking was enabled, there could be clearnet leaks. Automatically started applications or daemons might make clearnet connections before the VPN started and modified the routing table. This is why something like [[VPN-Firewall]] is required. <ref>
 https://superuser.com/questions/1725438/how-can-i-prevent-wireguard-from-leaking-traffic
@@ -198,7 +198,7 @@ https://blog.torproject.org/toggle-or-not-toggle-end-torbutton/
 
 [[#vpwns|<code>vpwns</code> (research paper)]]:
 
-<blockquote>If an attacker were simply to deny all traffic to the VPN host by way of Deep Packet Inspection, it may cause the user to disable or restart the VPN client, or the VPN connection may even restart itself with a watchdog timer of some kind. Until the VPN reconnection is complete, the client’s routing table momentarily assumes an unsecured default (or even unpredictable) state. Applications the user expects to be secure now simply connect directly.</blockquote>
+<blockquote>If an attacker were simply to deny all traffic to the VPN host by way of Deep Packet Inspection, it may cause the user to disable or restart the VPN client, or the VPN connection may even restart itself with a watchdog timer of some kind. Until the VPN reconnection is complete, the client's routing table momentarily assumes an unsecured default (or even unpredictable) state. Applications the user expects to be secure now simply connect directly.</blockquote>
 
 When using {{project_name_short}}, there is no documented way to disable its traffic anonymization through use of the Tor anonymity network. It is [[Dev/Technical_Introduction#Security_Overview|very difficult]] to reconfigure {{project_name_workstation_long}} to connect over clearnet (non-anonymous). Users are unable to do this. <ref>
 * Nobody has posted instructions how to do that yet.
@@ -300,7 +300,7 @@ It is logical that governments would set up providers in this manner to attract 
 ! Multi-hop VPNs
 | Advertisements for double, triple or multi-hop VPNs are meaningless. For example as in case of [https://web.archive.org/web/20210528044214/https:/www.doublevpn.com/ DoubleVPN], quote [https://www.malwarebytes.com/blog/news/2021/06/police-seize-doublevpn-data-servers-and-domain Police seize DoubleVPN data, servers, and domain]:
 
-<blockquote>law enforcement also seized “personal information, logs, and statistics kept by DoubleVPN about all of its customers.”</blockquote>
+<blockquote>law enforcement also seized "personal information, logs, and statistics kept by DoubleVPN about all of its customers."</blockquote>
 
 Unless the user builds their own custom VPN chain by carefully choosing different VPN providers, operated by different companies, then they are fully trusting only one provider. But even in that case, the user would still lack [[Why_does_Whonix_use_Tor#Route_Randomization|route randomization]].
 |-
@@ -546,10 +546,10 @@ The fact that VPNs are often perceived as anonymity tools has also been confirme
 
 * Quote [[#VPNalyzer|<code>VPNalyzer</code>]]:
 ** <blockquote>Worryingly, we find that users have flawed mental models about the protection VPNs provide, and about the data collected by VPNs.</blockquote>
-** <blockquote>Alarmingly, we find the highest degree of misalignment in the user’s trust in the VPN recommendation and review ecosystem. Most providers agreed that the review ecosystem is far from reliable and largely motivated by money. However, users are completely unaware of this, and rely on them believing they are trustworthy.</blockquote>
+** <blockquote>Alarmingly, we find the highest degree of misalignment in the user's trust in the VPN recommendation and review ecosystem. Most providers agreed that the review ecosystem is far from reliable and largely motivated by money. However, users are completely unaware of this, and rely on them believing they are trustworthy.</blockquote>
 ** <blockquote>Furthermore, 118 users also write-in additional reasons why they use VPNs (Appendix B.1), and we find that privacy (60.2%, 71 of 118; from ISP, tracking, surveillance, ad targeting) , security (12.71%, 15), being offered the service (10.1%, 12; by a company, with a purchase), during travel (7.6%, 9), and anonymity (2.5%, 3) are the main reasons for use.</blockquote>
-** <blockquote>Malicious Marketing (6/9): Many providers mention several issues, that we term as malicious marketing, including the use of affiliate marketing, preying upon users’ lack of knowledge, and overselling of service including selling anonymity even though that is not a VPN guarantee.</blockquote>
-** <blockquote>To understand users’ threat models when it comes to using a VPN, we first ascertain whether users use a VPN to secure their online activities, and if yes, who they want to protect it from. Notably, 91.5% (1145 of 1,252) of users indicate they use VPNs for securing or protecting their online activity. When exploring who they aim to protect from, we find that hackers/eavesdroppers on open WiFi networks (83.9%, 1,051 of 1,252), advertising companies (65.4%, 819), and internet service providers (ISP) (46.9% 587) are the top three responses. Notably, only ≈30% of users are concerned about the U.S. government or other governments. This is intriguing because post Snowden’s surveillance revelations in 2014, more users moved towards privacy tools such as VPNs and anonymity tools such as Tor [41]. Our results indicate a shift in user’s attitudes, and show a growing concern towards corporate and advertisement surveillance. This shift could have been influenced by the security advice users are exposed to, as shown in prior work [1] that finds that YouTubers often cite “the media” and “hackers” as common adversaries.</blockquote>
+** <blockquote>Malicious Marketing (6/9): Many providers mention several issues, that we term as malicious marketing, including the use of affiliate marketing, preying upon users' lack of knowledge, and overselling of service including selling anonymity even though that is not a VPN guarantee.</blockquote>
+** <blockquote>To understand users' threat models when it comes to using a VPN, we first ascertain whether users use a VPN to secure their online activities, and if yes, who they want to protect it from. Notably, 91.5% (1145 of 1,252) of users indicate they use VPNs for securing or protecting their online activity. When exploring who they aim to protect from, we find that hackers/eavesdroppers on open WiFi networks (83.9%, 1,051 of 1,252), advertising companies (65.4%, 819), and internet service providers (ISP) (46.9% 587) are the top three responses. Notably, only &asymp;30% of users are concerned about the U.S. government or other governments. This is intriguing because post Snowden's surveillance revelations in 2014, more users moved towards privacy tools such as VPNs and anonymity tools such as Tor [41]. Our results indicate a shift in user's attitudes, and show a growing concern towards corporate and advertisement surveillance. This shift could have been influenced by the security advice users are exposed to, as shown in prior work [1] that finds that YouTubers often cite "the media" and "hackers" as common adversaries.</blockquote>
 * Quote research paper [https://www.usenix.org/system/files/conference/foci12/foci12-final8.pdf vpwns: Virtual Pwned Networks] by Security and Privacy Research Lab University of Washington & The Tor Project:
 ** <blockquote>The anonymity community often ignores VPN-based solutions, considering them obviously flawed against strong attackers. Nevertheless, these solutions are routinely employed by users who believe the claims of vendors.</blockquote>
 * Quote research paper [https://www.researchgate.net/publication/351159071_Awareness_Adoption_and_Misconceptions_of_Web_Privacy_Tools Awareness, Adoption, and Misconceptions of Web Privacy Tools] <ref>
@@ -570,7 +570,7 @@ Whether it is worth combining Tor with a VPN -- either as pre-Tor-VPN (user &rar
 
 == VPNalyzer ==
 
-<code>VPNalyzer</code>: [https://vpnalyzer.org/ VPNalyzer VPNalyzer: Crowdsourced Investigation into Commercial VPNs] research paper [https://arxiv.org/pdf/2208.03505.pdf “All of them claim to be the best”: Multi-perspective study of VPN users and VPN providers] by a [https://vpnalyzer.org/about#team group of computer science researchers at the University of Michigan].
+<code>VPNalyzer</code>: [https://vpnalyzer.org/ VPNalyzer VPNalyzer: Crowdsourced Investigation into Commercial VPNs] research paper [https://arxiv.org/pdf/2208.03505.pdf "All of them claim to be the best": Multi-perspective study of VPN users and VPN providers] by a [https://vpnalyzer.org/about#team group of computer science researchers at the University of Michigan].
 
 == Other Sources ==
 See footnotes.

@@ -23,15 +23,15 @@ This section is applicable when the game server uses standard onion services -- 
 sudo apt install teg
 }}
 
-If a password prompt appears, type “changeme” and press Enter (unless the password was changed).
+If a password prompt appears, type "changeme" and press Enter (unless the password was changed).
 
 After installation, open up the game from the system menu: <code>K</code> &rarr; <code>Applications</code> &rarr; <code>Games</code> &rarr; <code>Tactics & Strategy</code> &rarr; <code>Tenes Empanadas Graciela client</code> <ref>Or type in a terminal window: tegclient</ref>
 
-After it starts it should open a “Connect to server” window. If not, open it from the menu <code>Game</code> &rarr; <code>Connect</code>
+After it starts it should open a "Connect to server" window. If not, open it from the menu <code>Game</code> &rarr; <code>Connect</code>
 
-If it already says “2000” in the Server port field leave it as is. Where it says “Server name” add the onion address, for example w7jnpxhu3re5qarr.onion. Next, choose a “Name” in the field for your playername and you’re good to go -- press OK if you want to join the server.
+If it already says "2000" in the Server port field leave it as is. Where it says "Server name" add the onion address, for example w7jnpxhu3re5qarr.onion. Next, choose a "Name" in the field for your playername and you're good to go -- press OK if you want to join the server.
 
-In case you only want to observe the game and not play check the checkbox “Dont play, just observe” and then hit the OK button.
+In case you only want to observe the game and not play check the checkbox "Dont play, just observe" and then hit the OK button.
 
 = Game Connection: stealth auth {{project_name_short}} 14 =
 
@@ -51,7 +51,7 @@ Open up a terminal and type.
 /usr/local/etc/torrc.d/50_user.conf
 }}
 
-Then type your password. If it has not changed, the original is “changeme”.
+Then type your password. If it has not changed, the original is "changeme".
 
 Next, modify the file as follows.
 <pre>
@@ -85,7 +85,7 @@ Active: active (running) since
 
 Where "active (running)" is in green, this means everything is fine. If something went wrong, please [[Onion_Services#Step_3:_make_changes_to_Tor_config_take_effect|troubleshoot]] the problem.
 
-Now it’s time to find out which .onion address you can share with your friends. Open up a terminal and run (a password prompt might appear).
+Now it's time to find out which .onion address you can share with your friends. Open up a terminal and run (a password prompt might appear).
 
 {{CodeSelect|code=
 sudo cat /var/lib/tor/hidden_service/hostname
@@ -133,7 +133,7 @@ Once the server is running, you can share the .onion address that you got earlie
 
 = TEG Server: stealth auth =
 
-Very basic protection against DDOS attacks done versus your server so follow this guide if you want to abandon the ‘single point of failure’ that is your only .onion address that all your players know (as of the previous “standard guide”). This section is to protect you against at least 1 bad player who wants to ddos your game server (regardless of the reason).
+Very basic protection against DDOS attacks done versus your server so follow this guide if you want to abandon the 'single point of failure' that is your only .onion address that all your players know (as of the previous "standard guide"). This section is to protect you against at least 1 bad player who wants to ddos your game server (regardless of the reason).
 
 == {{project_name_short}} Gateway VirtualBox Configuration ==
 
@@ -171,7 +171,7 @@ Save and close the file. For the changes to take effect, open a terminal and run
 sudo service tor@default reload
 }}
 
-Alternatively, open the "K" menu, search for reload and click on “Reload Tor”. <ref>This basically runs ''sudo service tor@default reload'' and ''sudo service tor@default status''</ref>
+Alternatively, open the "K" menu, search for reload and click on "Reload Tor". <ref>This basically runs ''sudo service tor@default reload'' and ''sudo service tor@default status''</ref>
 
 Now discover which .onion addresses you can share with your friends. Open up a terminal and run (enter the password if prompted).
 
@@ -179,7 +179,7 @@ Now discover which .onion addresses you can share with your friends. Open up a t
 sudo cat /var/lib/tor/hidden_service/hostname
 }}
 
-Since I’m going to regenerate all my .onion addresses by making new ones, I’m posting what this might actually look like when you try it yourself. Your ‘player invites’ will be similar to the following.
+Since I'm going to regenerate all my .onion addresses by making new ones, I'm posting what this might actually look like when you try it yourself. Your 'player invites' will be similar to the following.
 
 <pre>
 aokofajrpe4g2zrf.onion QlQlXlPdXyTUf6WIOf1tfR # client: 1234567890123400
@@ -200,7 +200,7 @@ rczg4s5reivwhd7p.onion pl/3phzLLB4hHsknnfOOxB # client: 1234567890123414
 yl6ulm2lzvtsvdfx.onion G0v/YtNeaCgBuvFw6QfTTR # client: 1234567890123415
 </pre>
 
-I posted the above because I’ve already changed the client numbers for all my 16 addresses already to begin with and reloading Tor after changing something in your client numbers makes Tor regenerating a new address for each of those 16 possible clients/‘groups of players’ where you changed an id. Right now I don’t have the above addresses so I took the step to post how it actually looked like when I followed the guide myself and that’s what you see above. Also when Tor generates new addresses it also generates the ‘gibberish’ that you see right next to each .onion address, let’s take the .onion address yl6ulm2lzvtsvdfx.onion as an example. To the right of that address there is this number “G0v/YtNeaCgBuvFw6QfTTR” which is going to be explained later in this guide.
+I posted the above because I've already changed the client numbers for all my 16 addresses already to begin with and reloading Tor after changing something in your client numbers makes Tor regenerating a new address for each of those 16 possible clients/'groups of players' where you changed an id. Right now I don't have the above addresses so I took the step to post how it actually looked like when I followed the guide myself and that's what you see above. Also when Tor generates new addresses it also generates the 'gibberish' that you see right next to each .onion address, let's take the .onion address yl6ulm2lzvtsvdfx.onion as an example. To the right of that address there is this number "G0v/YtNeaCgBuvFw6QfTTR" which is going to be explained later in this guide.
 
 = Credits =
 

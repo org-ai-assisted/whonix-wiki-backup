@@ -65,7 +65,7 @@ At the time of writing Debian <code>{{Stable_project_version_based_on_Debian_ver
 
 <code>Qube Manager</code> &rarr; <code>debian-{{Stable_project_version_based_on_Debian_version_short}}</code> &rarr; <code><u>C</u>lone qube</code> &rarr; <i><code>Enter name for Qube clone:</i> debian-{{Stable_project_version_based_on_Debian_version_short}}-vpn</code> &rarr; <code>Press: OK</code>
 
-'''2.''' Create a new ProxyVM based on the newly cloned template. Name the VM <code>sys-vpn</code> and set <code>sys-firewall</code> as NetVM. Make sure to check [✔] the box for <code>provides_network</code>.
+'''2.''' Create a new ProxyVM based on the newly cloned template. Name the VM <code>sys-vpn</code> and set <code>sys-firewall</code> as NetVM. Make sure to check [&#10004;] the box for <code>provides_network</code>.
 
 {{Box|text=
 <code>Qube Manager</code> &rarr; <code><u>Q</u>ube</code> &rarr; <code>Create <u>n</u>ew qube</code>
@@ -74,7 +74,7 @@ At the time of writing Debian <code>{{Stable_project_version_based_on_Debian_ver
 * Type: <code>AppVM</code>
 * Template: <code>debian-{{Stable_project_version_based_on_Debian_version_short}}-vpn</code>
 * Networking: <code>sys-firewall</code>
-* Advanced:   [<code>✔</code>] <code>Provides network</code>
+* Advanced:   [<code>&#10004;</code>] <code>Provides network</code>
 * Press: <code>OK</code>
 }}
 

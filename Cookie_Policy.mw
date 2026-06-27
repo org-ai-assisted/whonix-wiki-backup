@@ -56,7 +56,7 @@ Here are a few examples:
 |-
 
 ! wikiUserID, wikiUserName, wikiToken
-| 365 days if the user chooses ‘Keep me logged in’; otherwise 30 days.
+| 365 days if the user chooses 'Keep me logged in'; otherwise 30 days.
 | Functionality
 | Helps identify you to the wiki, and keeps you logged in.
 |-
@@ -139,18 +139,18 @@ Here are a few examples:
 ! theme_key
 | Y
 | Forever
-| Client theme personalization. Only used when “Make this my default theme on all my devices” is unselected.
+| Client theme personalization. Only used when "Make this my default theme on all my devices" is unselected.
 |-
 
 ! cn
 | Y
 | Forever
-| Client cleared notifications. This is counted as user input instead of personalization because it doesn’t make sense to ‘undo’ or change cleared notifications.
+| Client cleared notifications. This is counted as user input instead of personalization because it doesn't make sense to 'undo' or change cleared notifications.
 |-
 ! _bypass_cache
 | Y
 | Session
-| Used with ‘fsl’ for full screen login
+| Used with 'fsl' for full screen login
 |-
 
 ! _t
@@ -197,7 +197,7 @@ Here are a few examples:
 ! stopMobileRedirect
 | 30 days
 | Preferences
-| Tells us not to redirect to the mobile site if you don’t like that.
+| Tells us not to redirect to the mobile site if you don't like that.
 |-
 
 ! uls-preferences

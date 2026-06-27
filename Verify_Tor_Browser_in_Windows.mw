@@ -134,7 +134,7 @@ Navigate to the folder <code>torbrowser-install-win64-8.5.4_en-US</code> was dow
 
 '''2.''' Complete Tor Browser setup.
 
-Once Tor Browser has been installed a popup window will ask if a Start Menu and Desktop Shortcut should be added and if Tor Browser should be started once complete. Check ☑ both boxes and "click" Finish.
+Once Tor Browser has been installed a popup window will ask if a Start Menu and Desktop Shortcut should be added and if Tor Browser should be started once complete. Check &#9745; both boxes and "click" Finish.
 
 '''Figure:''' ''Tor Browser Installation Complete''
 

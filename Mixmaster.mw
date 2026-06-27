@@ -33,7 +33,7 @@ A fresh list of Mixmaster nodes is required. You can either update using the ncu
 sudo mixmaster-update --verbose
 }}
 
-If it fails, enumerate other available pingers to update stats from. This shows a list of all available sources (banana, austria, etc…):
+If it fails, enumerate other available pingers to update stats from. This shows a list of all available sources (banana, austria, etc...):
 
 {{CodeSelect|code=
 sudo mixmaster-update --verbose --list-sources

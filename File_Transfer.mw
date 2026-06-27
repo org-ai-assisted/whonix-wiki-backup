@@ -37,7 +37,7 @@ If you are interested in sharing files with others, see [[File Sharing]].
 |-
 
 ! Adding Host-Only Networking adapter to {{project_name_workstation_short}}
-| This method is unrecommended. For further details, see: [[Whonix-Workstation_Security#Add_a_Host-Only_Networking_Adapter_/_SSH_into_Whonix-Workstation_™|Adding a Host-Only Networking Adapter to Whonix-Workstation ™ / SSH into Whonix-Workstation ™]].
+| This method is unrecommended. For further details, see: [[Whonix-Workstation_Security#Add_a_Host-Only_Networking_Adapter_/_SSH_into_Whonix-Workstation_&trade;|Adding a Host-Only Networking Adapter to Whonix-Workstation &trade; / SSH into Whonix-Workstation &trade;]].
 |-
 
 ! ISO Images
@@ -343,7 +343,7 @@ Failures or successes can also be shared in [https://forums.{{project_clearnet}}
 
 '''5.''' ''Optional'': Install the <code>ntfs-3g</code> package.
 
-If the USB device is formatted with NTFS, it is necessary to install the [https://tracker.debian.org/pkg/ntfs-3g ntfs-3g driver package] and run a special mount command, see: [https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7 Can’t enable USB Drive in VirtualBox – troubleshooting help needed].
+If the USB device is formatted with NTFS, it is necessary to install the [https://tracker.debian.org/pkg/ntfs-3g ntfs-3g driver package] and run a special mount command, see: [https://forums.whonix.org/t/can-t-enable-usb-drive-in-virtualbox-troubleshooting-help-needed/1563/7 Can't enable USB Drive in VirtualBox - troubleshooting help needed].
 }}
 
 == SSH into {{project_name_gateway_short}} ==

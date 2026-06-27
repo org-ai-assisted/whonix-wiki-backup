@@ -65,13 +65,13 @@ This is what happened: a spambot joined the [https://t.me/{{project_name_short}}
 <blockquote>
 Our users reported some of the content posted in your group @{{project_name_short}} as pornographic, and our moderators have confirmed this.  
 For this reason, we had to restrict access to your group from iOS devices and from some countries.  
-We’ll be glad to lift the restrictions if you remove pornographic content from your group and pledge to take reasonable care with moderation in the future. Please notify us here as soon as the group is free from porn again.  
+We'll be glad to lift the restrictions if you remove pornographic content from your group and pledge to take reasonable care with moderation in the future. Please notify us here as soon as the group is free from porn again.  
 If all the offending content is already removed, please send us the following command: /unblock_group1336747164@AbuseNotifications
 </blockquote>
 
 This happened to other Telegram groups too. See: https://www.reddit.com/r/Telegram/comments/9ifp7s/group_blocked_because_of_pornographic_content/
 
-Telegram is likely strict about this due to Apple's App Store policy banning pornography. Telegram doesn’t want to be removed from the App Store, as that would reduce user adoption.
+Telegram is likely strict about this due to Apple's App Store policy banning pornography. Telegram doesn't want to be removed from the App Store, as that would reduce user adoption.
 
 Apple iPhone restricts user freedom and consists mostly of non-freedom software. Therefore, [[Avoid_nonfreedom_software|Avoid Non-Freedom Software]]. See also this GNU essay: [https://www.gnu.org/proprietary/malware-apple.en.html Apple's Operating Systems Are Malware].
 

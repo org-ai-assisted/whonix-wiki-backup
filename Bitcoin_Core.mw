@@ -41,7 +41,7 @@ Other bitcoin wallets like [[electrum|Electrum]] may have better usability, but 
 * reproducible builds <ref>
 <blockquote>Special warning about https://bitcoinbinary.org/ as a trusted reference: While good to have a compilation of reproducible binaries, if nobody is auditing the build procedure, then it becomes a blind spot. Bitcoin core is reproducible and extensive work was made with guix sigs.
 
-One example that is not reproducible building from source is Sparrow wallet, which is listed on the site of the first post - deterministic build, differences in modules · Issue #192 · sparrowwallet/sparrow · GitHub. Observing the video of the reproducible build, made by the same person in Github Issue #192 it is noticeable that the entire folder is not compared, only a single file. If comparing the whole folder, which has more binaries, there would be a diff from the released binaries and the built ones
+One example that is not reproducible building from source is Sparrow wallet, which is listed on the site of the first post - deterministic build, differences in modules &middot; Issue #192 &middot; sparrowwallet/sparrow &middot; GitHub. Observing the video of the reproducible build, made by the same person in Github Issue #192 it is noticeable that the entire folder is not compared, only a single file. If comparing the whole folder, which has more binaries, there would be a diff from the released binaries and the built ones
 
 In short:
 Bitcoin Core is reproducible but linking to bitcoinbinary(dot)org, is unfortunate, as the process of submitting new software to that page is not investigated, it is just accepted.</blockquote>

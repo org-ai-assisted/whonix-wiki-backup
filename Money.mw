@@ -108,7 +108,7 @@ Update: [https://forums.whonix.org/t/coin-mixing-illegal-wallet-developers-arres
 | Fees when receiving money from a different country
 |-
 | Western Union <ref>PayPal does not generally have a minimum payment; see [https://www.quora.com/What-is-the-minimum-amount-of-money-I-can-send-using-PayPal?share=1 here]. However, in Europe payment by Western Union may only be possible for 40 Euros and above. You have to pay the complete transaction fees and it may take up to a week until payment arrives.</ref>
-| Receiver’s bank name, bank code and bank account number
+| Receiver's bank name, bank code and bank account number
 <ref name=Western_Union>https://web.archive.org/web/20200225001508/https://www.westernunion.com/ee/en/faq-send-money-to-bank-account.html</ref>
 | 1 to 2 working days <ref name=Western_Union />
 | Transaction fees
@@ -158,7 +158,7 @@ Update: [https://forums.whonix.org/t/coin-mixing-illegal-wallet-developers-arres
 |{{No}} <ref name=transaction_history>Transaction history -- which account number was credited, the size of the payment, the date/time of the transaction, and the recipient of funds -- is available to the payment processor, authorities, tax investigators and a number of other third parties.</ref>
 |-
 |Western Union
-|{{No}} <ref>[https://web.archive.org/web/20200225001508/https://www.westernunion.com/ee/en/faq-send-money-to-bank-account.html Western Union FAQ]: <blockquote>Your Receiver’s bank name. Your Receiver’s Bank Code and bank account number. The amount and currency you wish to send.</blockquote></ref>
+|{{No}} <ref>[https://web.archive.org/web/20200225001508/https://www.westernunion.com/ee/en/faq-send-money-to-bank-account.html Western Union FAQ]: <blockquote>Your Receiver's bank name. Your Receiver's Bank Code and bank account number. The amount and currency you wish to send.</blockquote></ref>
 |{{No}}
 |{{No}} <ref name=transaction_history />
 |-
@@ -190,7 +190,7 @@ Update: [https://forums.whonix.org/t/coin-mixing-illegal-wallet-developers-arres
 
 = Prepaid Cards =
 
-It is possible to buy prepaid cards at many newspaper stands, gas stations and supermarkets anonymously using cash. <ref>Refer to the comparison tables for information on the degree of anonymity.</ref> However, strict limits are normally imposed; for example, in Germany the Gesetz über das Kreditwesen (Banking Act) means there is an individual limit of 100 euros per month. <ref>https://www.gesetze-im-internet.de/kredwg/__25i.html</ref>
+It is possible to buy prepaid cards at many newspaper stands, gas stations and supermarkets anonymously using cash. <ref>Refer to the comparison tables for information on the degree of anonymity.</ref> However, strict limits are normally imposed; for example, in Germany the Gesetz &uuml;ber das Kreditwesen (Banking Act) means there is an individual limit of 100 euros per month. <ref>https://www.gesetze-im-internet.de/kredwg/__25i.html</ref>
 
 To locate outlets selling cash codes (Paysafecard, Giftcard and so on) in your area, use the "Find sales outlets" search function on the provider's website. To ensure the smooth and anonymous deployment of cash codes, follow this advice:
 * Refrain from checking the cash codes before using them; use the codes immediately. Due to restrictive security settings, cash codes are blocked automatically if they are entered from more than one IP address.

@@ -13,8 +13,8 @@ Donate to {{project_name_long}} using Bank Wire
 }}
 {{#tag:gallery|
   AUD_128.png{{!}}100px{{!}}alt=AU ${{!}}link=Donate/AUD{{!}}AU $
-  Euro_128.png{{!}}alt=EUR €{{!}}link=Donate/EUR{{!}}EUR €
-  GBP_128.png{{!}}alt=GBP £{{!}}link=Donate/GBP{{!}}GBP £
+  Euro_128.png{{!}}alt=EUR &euro;{{!}}link=Donate/EUR{{!}}EUR &euro;
+  GBP_128.png{{!}}alt=GBP &pound;{{!}}link=Donate/GBP{{!}}GBP &pound;
   Dollar_128.png{{!}}alt=US ${{!}}link=Donate/USD{{!}}US $
   Payment-generic-symbol.png{{!}}alt=Contact{{!}}link=Contact#For_Payments{{!}}Other
   |heights=65
@@ -22,14 +22,14 @@ Donate to {{project_name_long}} using Bank Wire
 }}
 
 {{#tag:gallery|
-IBAN_128.png{{!}}alt=EUR €{{!}}link=Donate/EUR{{!}}IBAN</br> EUR €
-Sepa-card-dark_128.png{{!}}alt=EUR €{{!}}link=Donate/EUR{{!}}SEPA</br> EUR €
+IBAN_128.png{{!}}alt=EUR &euro;{{!}}link=Donate/EUR{{!}}IBAN</br> EUR &euro;
+Sepa-card-dark_128.png{{!}}alt=EUR &euro;{{!}}link=Donate/EUR{{!}}SEPA</br> EUR &euro;
 WireTransfer_128.png{{!}}alt=US ${{!}}link=Donate/USD{{!}}US $</br> Wire Transfer
 ACH_128.png{{!}}alt=US ${{!}}link=Donate/USD{{!}}ACH Payments</br> US $
-Swift_128.png{{!}}alt=US ${{!}}link=Donate/EUR{{!}}SWIFT</br> EUR €
-CHAPS_128.png{{!}}alt=GBP £{{!}}link=Donate/GBP{{!}}CHAPS</br> GBP £
-BACS_128.png{{!}}alt=GBP £{{!}}link=Donate/GBP{{!}}BACS</br> GBP £
-FasterPay_128.png{{!}}alt=GBP £{{!}}link=Donate/GBP{{!}}Faster Payments</br> GBP £
+Swift_128.png{{!}}alt=US ${{!}}link=Donate/EUR{{!}}SWIFT</br> EUR &euro;
+CHAPS_128.png{{!}}alt=GBP &pound;{{!}}link=Donate/GBP{{!}}CHAPS</br> GBP &pound;
+BACS_128.png{{!}}alt=GBP &pound;{{!}}link=Donate/GBP{{!}}BACS</br> GBP &pound;
+FasterPay_128.png{{!}}alt=GBP &pound;{{!}}link=Donate/GBP{{!}}Faster Payments</br> GBP &pound;
   |heights=65
   |widths=65
 }}

@@ -45,14 +45,14 @@ https://ieeexplore.ieee.org/document/10190681/
 |quote=
 [...]
 
-mouse tracking has very practical applications for webmasters, and in particular for search engines. Dr. Ioannis Aparakis from Telefonica Research and co-author of both publications, clarifies: “When you search for something at Google or Bing, your mouse movements are sending a tiny signal to the search engine indicating if you are interested or not in the content you have been shown. As mouse tracking may have privacy issues, we investigated the possibility of recording only a small part of the whole movement trajectory and see if we can still infer how people make choices in web search.”
+mouse tracking has very practical applications for webmasters, and in particular for search engines. Dr. Ioannis Aparakis from Telefonica Research and co-author of both publications, clarifies: "When you search for something at Google or Bing, your mouse movements are sending a tiny signal to the search engine indicating if you are interested or not in the content you have been shown. As mouse tracking may have privacy issues, we investigated the possibility of recording only a small part of the whole movement trajectory and see if we can still infer how people make choices in web search."
 
 [...]
 |context=University of Luxembourg, Faculty of Science, Technology and Medicine (FSTM) University / Central Administration and Rectorate, [https://www.uni.lu/en/news/mouse-movements-reveal-your-behaviour/ Mouse movements reveal your behaviour]
 }}
 </ref> 
 
-Several companies offer mouse tracking and behavioral analytics tools designed to monitor user interactions - such as mouse movements, clicks, and scrolls - to enhance marketing strategies, boost sales, and improve user experience. These tools are widely used in e-commerce, advertising, and conversion rate optimization (CRO).​
+Several companies offer mouse tracking and behavioral analytics tools designed to monitor user interactions - such as mouse movements, clicks, and scrolls - to enhance marketing strategies, boost sales, and improve user experience. These tools are widely used in e-commerce, advertising, and conversion rate optimization (CRO).&#8203;
 
 {{quotation
 |quote=Trusted by 210,000+ digital experience frontrunners worldwide<br/>
@@ -98,7 +98,7 @@ Other details websites can record, additional mouse tracking techniques:
 *** https://web.archive.org/web/20221114004700/http://jcarlosnorte.com/security/2016/03/06/advanced-tor-browser-fingerprinting.html
 </ref>
 
-Imagine someone using the internet both normally (without tools to hide their identity) and through privacy tools like Tor. People have unique ways of moving their mouse. Computers can learn those patterns. So if a person acts anonymously on Tor but has similar mouse behavior as they do on regular websites, their identities can be linked. <ref name=mouse_tracking /> This technique is already used in real life. For example, if someone’s behavior seems very different from usual, websites may block access to their accounts until their identity is confirmed. This kind of tracking - called behavioral biometrics - is sold by companies as a product to website owners. <ref>
+Imagine someone using the internet both normally (without tools to hide their identity) and through privacy tools like Tor. People have unique ways of moving their mouse. Computers can learn those patterns. So if a person acts anonymously on Tor but has similar mouse behavior as they do on regular websites, their identities can be linked. <ref name=mouse_tracking /> This technique is already used in real life. For example, if someone's behavior seems very different from usual, websites may block access to their accounts until their identity is confirmed. This kind of tracking - called behavioral biometrics - is sold by companies as a product to website owners. <ref>
 * https://www.pingidentity.com/en/resources/blog/post/behavioral-biometrics.html
 * https://www.feedzai.com/blog/behavioral-biometrics-next-generation-fraud-prevention/
 * https://www.biocatch.com/
@@ -159,9 +159,9 @@ These are known as "seek time," "hold time," and "flight time" in keystroke dyna
 * patterns that reveal their likely native language
 * which keyboard layout they use (like QWERTY or Dvorak), which influences speed and errors
 
-A computer program can build a profile based on these typing traits - similar to how a signature or handwriting can be used to identify someone. While typing styles may change depending on a person’s mood, energy, or time of day, the patterns are still often unique enough to recognize individuals. <ref name=keystroke_dynamics />
+A computer program can build a profile based on these typing traits - similar to how a signature or handwriting can be used to identify someone. While typing styles may change depending on a person's mood, energy, or time of day, the patterns are still often unique enough to recognize individuals. <ref name=keystroke_dynamics />
 
-If users don’t take steps to block this kind of tracking, their typing rhythm can likely be used to deanonymize them. For example, someone using Tor might unknowingly type the same way they do on other websites, allowing trackers or attackers to match both identities. Adversaries may already have samples of how the person types on the regular internet and can use that to link them.
+If users don't take steps to block this kind of tracking, their typing rhythm can likely be used to deanonymize them. For example, someone using Tor might unknowingly type the same way they do on other websites, allowing trackers or attackers to match both identities. Adversaries may already have samples of how the person types on the regular internet and can use that to link them.
 
 To reduce this risk:
 

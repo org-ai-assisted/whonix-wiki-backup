@@ -542,7 +542,7 @@ Optional.
 === IsolateSOCKSAuth ===
 See [https://2019.www.torproject.org/docs/tor-manual.html.en Tor manual] <code>IsolateSOCKSAuth</code>.
 
-<blockquote>Don’t share circuits with streams for which different SOCKS authentication was provided. [...]</blockquote>
+<blockquote>Don't share circuits with streams for which different SOCKS authentication was provided. [...]</blockquote>
 
 This can be used with the <code>SocksPort</code> option.
 

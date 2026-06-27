@@ -623,7 +623,7 @@ Prerequisite knowledge:
 
 '''1.''' We will start by setting up the frontend host. We will install onionbalance and we will run onionbalance so that it generates a frontend onion service configuration.
 
-'''2.''' We will then setup the backend instances by configuring Tor as an onion service and putting it into “onionbalance instance” mode.
+'''2.''' We will then setup the backend instances by configuring Tor as an onion service and putting it into "onionbalance instance" mode.
 
 '''3.''' In the end of the guide, we will setup onionbalance by informing it about the backend instances, and we will start it up. After this, we should have a working onionbalance configuration.
 

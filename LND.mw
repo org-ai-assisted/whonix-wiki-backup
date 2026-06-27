@@ -1,13 +1,49 @@
 {{Header}}
 {{#seo:
-|description=todo
+|description=Installing and verifying LND (Lightning Network Daemon) in {{project_name_long}}.
 }}
 {{bitcoin_mininav}}
 {{intro|
-todo
+Installing and verifying LND (Lightning Network Daemon) in {{project_name_short}}.
 }}
 
-{{stub}}
+LND is the [https://github.com/lightningnetwork/lnd Lightning Network Daemon] by Lightning Labs, an implementation of a Lightning Network node.
+
+{{IconSet|h1|1}} Download the release, the manifest and the signatures.
+
+LND releases on the [https://github.com/lightningnetwork/lnd/releases releases page] ship a manifest file <code>manifest-<version>.txt</code> (the SHA-256 hashes of every release binary) together with one detached signature per maintainer, named <code>manifest-<maintainer>-<version>.sig</code>. The release is signed by multiple maintainers; verifying several independent signatures is stronger than relying on a single key.
+
+{{IconSet|h1|2}} Retrieve and verify the signing keys.
+
+Unlike a single-key project, LND publishes the maintainer signing keys '''inside the source repository''', under [https://github.com/lightningnetwork/lnd/tree/master/scripts/keys <code>scripts/keys/</code>] (one <code>.asc</code> per maintainer, e.g. <code>roasbeef.asc</code>). Retrieve the keys from there. <ref>
+Because the keys are committed to the repository they can be audited across the project's git history, rather than being fetched ad hoc from a keyserver.
+</ref>
+
+{{IconSet|h1|3}} Verify the manifest signatures.
+
+Verify each maintainer signature against the manifest, for example with Sequoia:
+
+{{CodeSelect|code=
+sqv --keyring <all-maintainer-keys> manifest-<maintainer>-<version>.sig manifest-<version>.txt
+}}
+
+or with GnuPG after importing the keys:
+
+{{CodeSelect|code=
+gpg --verify manifest-<maintainer>-<version>.sig manifest-<version>.txt
+}}
+
+A release should be accepted only if a quorum of independent maintainer signatures verifies. At the time of writing, release <code>v0.21.0-beta</code> carried five maintainer signatures (roasbeef, hieblmi, suheb, yyforyongyu, ziggie1984), all of which verify against the in-repository keys.
+
+{{IconSet|h1|4}} Verify the downloaded binary against the manifest.
+
+Once the manifest signatures are verified, confirm the downloaded archive matches the hash in the manifest:
+
+{{CodeSelect|code=
+sha256sum --check --ignore-missing manifest-<version>.txt
+}}
+
+The expected output for the downloaded archive is <code>OK</code>.
 
 {{Community Support|scope=page}}
 

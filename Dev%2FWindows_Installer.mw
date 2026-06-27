@@ -156,7 +156,7 @@ Certum:
 * https://shop.certum.eu/ev-code-signing-in-the-cloud.html
 * SimplySign cloud-based solution eliminates the need for a physical card and a reader
 * https://www.files.certum.eu/software/SimplySignDesktop/Linux-Ubuntu/2.9.8-9.1.6.0/SimplySignDesktop-2.9.8-9.1.6.0-x86_64-prod-ubuntu.bin
-* €379.00
+* &euro;379.00
 
 sectigo:
 
@@ -188,7 +188,7 @@ ssl.com:
 *** [https://github.com/SSLcom/esigner-codesign/issues/8 provide demo certificate authority file (CAfile)]
 * B) optional Google Cloud HSM compatibility
 ** https://www.ssl.com/guide/supported-cloud-hsms-document-signing-ev-code-signing/
-** <blockquote>SSL.com’s fee for Google Cloud HSM attestation is $500.00 USD.</blockquote>
+** <blockquote>SSL.com's fee for Google Cloud HSM attestation is $500.00 USD.</blockquote>
 
 Google Cloud HSM;
 
@@ -376,7 +376,7 @@ end;
 </pre>
 
 '''Answer from Developer:'''
-In most cases with dynamic data this is correct, but this code only loads static content from the program resources (license text) which is always present (except by any errors while compile time), so I have omitted the “try finally” for shorter code.
+In most cases with dynamic data this is correct, but this code only loads static content from the program resources (license text) which is always present (except by any errors while compile time), so I have omitted the "try finally" for shorter code.
 
 = TODO =
 == merge ==

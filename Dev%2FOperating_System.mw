@@ -96,7 +96,7 @@ Mac OS X cannot be used for legal reasons. Even if that were not an issue, it is
 {{quotation
 |quote=Signed repositories
 
-The Fedora Project does not sign our package repositories (yet), even though this has been requested a lot of times. One of the main reasons for this is that DNF/YUM repodata has no “ValidUntil” or sortalike attribute. Additionally, librepo - which DNF uses to download and verify repodata - regards expired GPG signatures as fully valid. This means that there is no way at all to mark repository data as valid for a limited amount of time.
+The Fedora Project does not sign our package repositories (yet), even though this has been requested a lot of times. One of the main reasons for this is that DNF/YUM repodata has no "ValidUntil" or sortalike attribute. Additionally, librepo - which DNF uses to download and verify repodata - regards expired GPG signatures as fully valid. This means that there is no way at all to mark repository data as valid for a limited amount of time.
 
 As such, while it can protect against modification of the repository data, it does not protect against attackers (or outdated mirrors) shipping ancient repositories with known-vulnerable software.
 |context=Fedora Magazine: [https://fedoramagazine.org/fedora-secures-package-delivery/ How Fedora Secures Package Delivery]
@@ -266,7 +266,7 @@ More: [https://forums.whonix.org/t/guixsd-distro-preview/11727 GuixSD Distro pre
 == Voidlinux ==
 
 * Their main developer left the project; they [https://itsfoss.com/void-linux-crisis/ lost access to their resources] like GitHub, IRC, domain, etc. (regained access to only some of them)
-* Another sad loss for the project was the passing of [https://voidlinux.org/news/2021/03/In-memoriam-pullmoll.html Jürgen Buchmüller (pullmoll)], one of their main maintainers.
+* Another sad loss for the project was the passing of [https://voidlinux.org/news/2021/03/In-memoriam-pullmoll.html J&uuml;rgen Buchm&uuml;ller (pullmoll)], one of their main maintainers.
 * After almost 6 years, they [https://voidlinux.org/news/2021/02/OpenSSL.html switched back] from LibreSSL to OpenSSL.
 * They do not sandbox their packages with MAC/Namespaces by default. Only xbps-src, which is the package builder, but it is not used for sandboxing packages within their distro.
 
@@ -671,7 +671,7 @@ Debian does not oppose [https://en.wikipedia.org/wiki/Fork_(software_development
 * [https://wiki.debian.org/Derivatives/Census List of Debian-based projects]
 
 == Debian Security ==
-Debian is not (a | the most) security-focused Linux distribution. Under some threat models, Debian is judged insecure. Issues with Debian then would have to be considered deeper than technical - i.e., architectural, organizational, or ideological issues. To put it another way, (a lot | many | most) (?) Debian Developers do not prioritize security over everything else, readily compromising on other things such as package availability, features, usability, etc. That should not come as a surprise. Debian’s slogan is "the universal operating system" - not "attempting to be the most secure operating system" - and therefore Debian did not attract that mindset. Debian consists mostly of volunteers who need to attend to day jobs, which might arguably not be the best for security either.
+Debian is not (a | the most) security-focused Linux distribution. Under some threat models, Debian is judged insecure. Issues with Debian then would have to be considered deeper than technical - i.e., architectural, organizational, or ideological issues. To put it another way, (a lot | many | most) (?) Debian Developers do not prioritize security over everything else, readily compromising on other things such as package availability, features, usability, etc. That should not come as a surprise. Debian's slogan is "the universal operating system" - not "attempting to be the most secure operating system" - and therefore Debian did not attract that mindset. Debian consists mostly of volunteers who need to attend to day jobs, which might arguably not be the best for security either.
 
 === Debian - packages with many unfixed high severity security issues ===
 For a prolonged amount of time.
@@ -693,7 +693,7 @@ Debian version of Chromium reported to be exploited in the wild.
 
 {{quotation
 |quote=
-Patch Google Chrome with the latest updates – if you don't, you're vulnerable to a zero-day that is actively being exploited, the US Cybersecurity and Infrastructure Security Agency (CISA) has warned.
+Patch Google Chrome with the latest updates - if you don't, you're vulnerable to a zero-day that is actively being exploited, the US Cybersecurity and Infrastructure Security Agency (CISA) has warned.
 
 Criminals are targeting users of Chrome with outdated installations, CISA said in an advisory note urging folk to update their browsers immediately.
 

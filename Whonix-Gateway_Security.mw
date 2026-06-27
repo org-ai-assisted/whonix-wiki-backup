@@ -80,9 +80,9 @@ https://blog.torproject.org/tor-0317-now-released
 </ref>
 
 <blockquote>
-Connections between clients and relays now send a padding cell in each direction every 1.5 to 9.5 seconds (tunable via consensus parameters). This padding will not resist specialized eavesdroppers, but it should be enough to make many ISPs’ routine network flow logging less useful in traffic analysis against Tor users.
+Connections between clients and relays now send a padding cell in each direction every 1.5 to 9.5 seconds (tunable via consensus parameters). This padding will not resist specialized eavesdroppers, but it should be enough to make many ISPs' routine network flow logging less useful in traffic analysis against Tor users.
 
-Padding is negotiated using Tor’s link protocol, so both relays and clients must upgrade for this to take effect. '''Clients may still send padding despite the relay’s version by setting ConnectionPadding 1 in torrc''', and may disable padding by setting ConnectionPadding 0 in torrc.</blockquote>
+Padding is negotiated using Tor's link protocol, so both relays and clients must upgrade for this to take effect. '''Clients may still send padding despite the relay's version by setting ConnectionPadding 1 in torrc''', and may disable padding by setting ConnectionPadding 0 in torrc.</blockquote>
 
 Note that since most relays are on the latest versions, keeping it on automatic is acceptable for anonymity, but setting it to 1 will not cause significant security or usability issues and may even help if you are connected to a relay running an older version of Tor.
 

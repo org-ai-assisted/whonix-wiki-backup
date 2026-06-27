@@ -366,7 +366,7 @@ For simplicity, the {{project_name_short}} images should be downloaded and store
 |type=controller
 |content=
 
-<!-- ────────────────  SECTION 1  ──────────────── -->
+<!-- &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;  SECTION 1  &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; -->
 {{Tab
 |active=true
 |title= == GUI ==
@@ -414,7 +414,7 @@ For simplicity, the {{project_name_short}} images should be downloaded and store
 
 }} <!-- close tab: Section 1 -->
 
-<!-- ────────────────  SECTION 2  ──────────────── -->
+<!-- &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;  SECTION 2  &#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; -->
 {{Tab
 |title= == CLI ==
 |image=[[File:Utilities-terminal.png|alt=Symbol representing CLI|50px]]
@@ -930,7 +930,7 @@ Prerequisite knowledge: [[screen|{{project name short}} screen wiki page]]
 Option A: Use scaling instead.
 
 {{quotation
-|quote=Enable display scaling in virt-manager, disable automatic guest resizing, and then grow the window. Rather than increasing the resolution, it will just make everything bigger (and blurrier, but that’s unfortunately mostly unavoidable if you want the VM’s display bigger without the VM knowing that its display is bigger).
+|quote=Enable display scaling in virt-manager, disable automatic guest resizing, and then grow the window. Rather than increasing the resolution, it will just make everything bigger (and blurrier, but that's unfortunately mostly unavoidable if you want the VM's display bigger without the VM knowing that its display is bigger).
 |context=[https://forums.whonix.org/t/font-too-small-can-changing-lead-to-fingerprinting/23167 Font Too Small - Can Changing Lead to Fingerprinting?]
 }}
 
@@ -1088,14 +1088,14 @@ Dnsmasq is visible to an nmap scan from the Workstation but little else. Manual 
     ;; global options: +cmd
     ;; connection timed out; no servers could be reached
 </pre>
-</ref> DNS is not explicitly enabled for guests unless it is added to a network’s configuration. <ref>
+</ref> DNS is not explicitly enabled for guests unless it is added to a network's configuration. <ref>
 https://fabianlee.org/2018/10/22/kvm-using-dnsmasq-for-libvirt-dns-resolution/
 </ref> <ref>
 https://www.cyberciti.biz/faq/linux-kvm-libvirt-dnsmasq-dhcp-static-ip-address-configuration-for-guest-os/
 </ref> Even when DNS is enabled, the way Libvirt uses it does not increase the host's attack surface (for example, by using raw sockets). Likewise, DHCP does not increase the attack surface since it is bound to a specific NIC in this case. <ref>
 https://unix.stackexchange.com/questions/256061/is-libvirt-dnsmasq-exposed-to-the-network-if-i-run-fedora-without-a-firewall:
 
-<blockquote>So I can see an open TCP port. However it responds as if it’s “tcpwrapped”. That implies if you connect over a different interface from virbr0, dnsmasq closes the connection without reading any data. So data you send to it doesn’t matter; it can’t e.g. exploit a classic buffer overflow.</blockquote>
+<blockquote>So I can see an open TCP port. However it responds as if it's "tcpwrapped". That implies if you connect over a different interface from virbr0, dnsmasq closes the connection without reading any data. So data you send to it doesn't matter; it can't e.g. exploit a classic buffer overflow.</blockquote>
 </ref> Attempting to edit the Dnsmasq configuration files directly will fail, as settings are rewritten and enforced through Libvirt by design. <ref>
 https://serverfault.com/questions/840163/custom-dnsmasq-or-custom-options-with-libvrt
 </ref>
@@ -1709,7 +1709,7 @@ sudo chmod 701 /home/user
 sudo setfacl -m u:libvirt-qemu:x /home/user
 }}
 
-{{IconSet|h1|6}} If you are using the command line instead of virt-manager to edit the VM’s device settings, add the following section to the XML:
+{{IconSet|h1|6}} If you are using the command line instead of virt-manager to edit the VM's device settings, add the following section to the XML:
 
 <u>Note:</u> Replace account <code>user</code> with your actual account.
 
@@ -1850,7 +1850,7 @@ By default, the shipped configuration includes only a speaker (without a microph
 
 To enable microphone input for specific guests, edit the VM configuration and change:
 
-<code><codec type='output'/></code> → <code><codec type='micro'/></code>
+<code><codec type='output'/></code> &rarr; <code><codec type='micro'/></code>
 
 == Creating Multiple Internal Networks ==
 
@@ -1883,7 +1883,7 @@ Todo: Re-test these instructions with Wayland running on the host.
 
 == Setting up gdb to work with qemu-kvm via libvirt ==
 
-To debug a Linux kernel running as a KVM guest, the <code>-s</code> parameter must be specified for the <code>qemu-kvm</code> command line. When using libvirt and virt-manager to manage virtual machines (instead of invoking KVM directly), this requires editing the VM’s XML configuration so that <code>-s</code> is passed to <code>qemu-kvm</code>.
+To debug a Linux kernel running as a KVM guest, the <code>-s</code> parameter must be specified for the <code>qemu-kvm</code> command line. When using libvirt and virt-manager to manage virtual machines (instead of invoking KVM directly), this requires editing the VM's XML configuration so that <code>-s</code> is passed to <code>qemu-kvm</code>.
 
 {{Box|text=
 '''1.''' Open the XML configuration.
@@ -2180,16 +2180,16 @@ Longer log:
 
 <pre>
 Traceback (most recent call last):
-File “/usr/share/virt-manager/virtManager/asyncjob.py”, line 75, in cb_wrapper
+File "/usr/share/virt-manager/virtManager/asyncjob.py", line 75, in cb_wrapper
 callback(asyncjob, *args, **kwargs)
-File “/usr/share/virt-manager/virtManager/asyncjob.py”, line 111, in tmpcb
+File "/usr/share/virt-manager/virtManager/asyncjob.py", line 111, in tmpcb
 callback(*args, **kwargs)
-File “/usr/share/virt-manager/virtManager/libvirtobject.py”, line 66, in newfn
+File "/usr/share/virt-manager/virtManager/libvirtobject.py", line 66, in newfn
 ret = fn(self, *args, **kwargs)
-File “/usr/share/virt-manager/virtManager/domain.py”, line 1400, in startup
+File "/usr/share/virt-manager/virtManager/domain.py", line 1400, in startup
 self._backend.create()
-File “/usr/lib/python3/dist-packages/libvirt.py”, line 1080, in create
-if ret == -1: raise libvirtError (‘virDomainCreate() failed’, dom=self)
+File "/usr/lib/python3/dist-packages/libvirt.py", line 1080, in create
+if ret == -1: raise libvirtError ('virDomainCreate() failed', dom=self)
 libvirt.libvirtError: cannot set CPU affinity on process 1994: invalid argument
 </pre>
 
@@ -2420,7 +2420,7 @@ For alternative installation guides contributed by community members, see: [[KVM
 * [https://forums.whonix.org/t/no-internet-connection-on-workstation-when-vpn-on-host/13763 No Internet Connection inside Whonix-Workstation KVM with NordVPN with Kill-Switch on Host]
 * [https://forums.whonix.org/t/failure-to-connect-when-vpn-on-host/3133 Failure to connect when VPN on host]
 
-Potential solution: → [[#Development Help Wanted]]
+Potential solution: &rarr; [[#Development Help Wanted]]
 
 * https://forums.whonix.org/t/help-welcome-kvm-development-staying-the-course/166/546
 * [https://lists.libvirt.org/archives/list/users@lists.libvirt.org/thread/UUMUA4X3YWTOTQYSXTMOWDZDKXZYGS7U/ KVM static internal networking without host bridge interface (virbr)]

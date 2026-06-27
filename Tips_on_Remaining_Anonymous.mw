@@ -42,7 +42,7 @@ This chapter explains the difference between pseudonymous connections and anonym
 
 As soon as a user logs into a website with a username for activities like forum posting or webmail, the connection is by definition no longer anonymous, but pseudonymous. The origin of the connection (IP address / location) is still hidden, but the connection can be associated with an identifier <ref name=identifier />; in this case, an account name. Identifiers can be used to keep a log of various things: when a user wrote something, the date and time of login and logout, what a user wrote and to whom, the IP address used (useless if it is a Tor exit relay), the recorded browser fingerprint and so on.
 
-'''The authors strongly recommend always preferring anonymity, not pseudonymity'''. But there are other opinions. Maxim Kammerer, developer of Liberté Linux <ref>
+'''The authors strongly recommend always preferring anonymity, not pseudonymity'''. But there are other opinions. Maxim Kammerer, developer of Libert&eacute; Linux <ref>
 https://dee.su/liberte
 </ref>, for example has disparate ideas on anonymity and pseudonymity which should not be withheld from the reader so you can form your own opinion: <ref>
 broken link: <nowiki>https://forum.dee.su/topic/anon-test-for-ll-on-ipcheck-info#65650000000264003</nowiki>
@@ -154,7 +154,7 @@ Some users conclude that because various computing security mechanisms can be su
 
 * Fail to use a [[Protection_Against_Physical_Attacks#BIOS_Password|BIOS password]] because computing history reveals a master BIOS password existed at some time.
 * Ignore advice relating to [[Full Disk Encryption and Encrypted Images|full disk encryption]] due to the existence of attack vectors like [[Protection_Against_Physical_Attacks#Cold_Boot_Attacks|cold boot attacks]].
-* Refrain from setting up [https://www.qubes-os.org/doc/anti-evil-maid/ Anti-evil Maid] protection for their computer (despite the presence of a Trusted Platform Module), because research reveals that attackers can sometimes recover private keys from digital signature schemes. <ref>See: [https://tpm.fail/ TPM—Fail: TPM meets Timing and Lattice Attacks].</ref>
+* Refrain from setting up [https://www.qubes-os.org/doc/anti-evil-maid/ Anti-evil Maid] protection for their computer (despite the presence of a Trusted Platform Module), because research reveals that attackers can sometimes recover private keys from digital signature schemes. <ref>See: [https://tpm.fail/ TPM--Fail: TPM meets Timing and Lattice Attacks].</ref>
 * Use less-researched, unproven, proprietary networks in preference to Tor, due to known vulnerabilities such as end-to-end correlation attacks.
 
 It might be tempting to bypass long-studied and robust security mechanisms due to perceived failings, particularly if the user is not an expert in areas such as Tor routing, full disk encryption, and so on. But this is illogical and often just an excuse for laziness or unsatisfied perfectionism. Avoid the trap of letting "the perfect be the enemy of the good". Computer software and hardware solutions will always remain imperfect. But steady, incremental improvements are occurring over time. '''It is a crucial mistake to confuse the transparency of developers and engineers about small shortcomings with a failure of these highly capable solutions'''. The engineers and developers only highlight shortcomings to then improve the software or hardware even more through rigorous discussion.
@@ -481,7 +481,7 @@ The danger of third-party resources to privacy should not be underestimated: <re
 For instance, advanced adversaries are known to piggyback on third-party tracking cookies to de-anonymize Tor users and to identity targets for exploitation.
 </ref>
 
-<blockquote>Every time a user’s browser is instructed to fetch a third-party resource, that third-party server is given the ability to deliver tracking scripts and associate the first-party website with the bearer of third-party cookies and browser fingerprints. This tracking of online behavior allows for the construction of increasingly detailed user profiles, including sensitive information such as a user’s political views and medical history.</blockquote>
+<blockquote>Every time a user's browser is instructed to fetch a third-party resource, that third-party server is given the ability to deliver tracking scripts and associate the first-party website with the bearer of third-party cookies and browser fingerprints. This tracking of online behavior allows for the construction of increasingly detailed user profiles, including sensitive information such as a user's political views and medical history.</blockquote>
 
 '''Therefore restrict the logged in time''' for Twitter, Facebook, Google and any other account-based services (like web forums) to the absolute minimum required. '''Immediately log out after reading, posting, blogging''' and other tasks are complete. Following log out, it is safest to '''then shut down Tor Browser, change the Tor circuit using a [[Tor Controller]], wait for 10 seconds''' until the circuit has changed and then restart Tor Browser. For better security follow the [[{{project_name_workstation_short}}_Security#VM_Snapshots|recommendations to use multiple VM Snapshots]] and/or [[Multiple Whonix-Workstation|use multiple {{project_name_workstation_short}}]].
 
@@ -518,7 +518,7 @@ Modification of network settings should only be undertaken with great care, and 
 https://support.torproject.org/#misc_misc-11
 </ref>
 
-<blockquote>We don't want to encourage people to use paths longer than this — it increases load on the network without (as far as we can tell) providing any more security. Remember that the best way to attack Tor is to attack the endpoints and ignore the middle of the path. Also, using paths longer than 3 could harm anonymity, first because it makes "denial of security" attacks easier, and second because it could act as an identifier if only a few people do it ("Oh, there's that person who changed her path length again").</blockquote>
+<blockquote>We don't want to encourage people to use paths longer than this -- it increases load on the network without (as far as we can tell) providing any more security. Remember that the best way to attack Tor is to attack the endpoints and ignore the middle of the path. Also, using paths longer than 3 could harm anonymity, first because it makes "denial of security" attacks easier, and second because it could act as an identifier if only a few people do it ("Oh, there's that person who changed her path length again").</blockquote>
 
 Users can manually choose an entry or exit point in the Tor network, 
 <ref>

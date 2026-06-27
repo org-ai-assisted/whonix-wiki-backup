@@ -272,7 +272,7 @@ As noted in the [[#Security vs Usability Trade-off|previous section]], disabling
 }}.
 * <u>Technical challenges:</u> There is no stable application-programmable interface (API) to reliably disable JavaScript by default in Tor Browser.<ref>
 https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/25391
-</ref> {{project_name_short}} developers cannot use such an API, and there won’t be one<ref>
+</ref> {{project_name_short}} developers cannot use such an API, and there won't be one<ref>
 https://gitlab.torproject.org/legacy/trac/-/issues/25391#note_2277828
 </ref> unless someone contributes this feature to upstream, Tor Browser.<ref>
 {{project_name_short}} previously shipped a desktop file and menu options that affected the [[#Security Slider|security slider]] setting after first launching Tor Browser. However, this feature was removed due to unreliability. See [https://forums.whonix.org/t/ship-an-additional-version-of-tor-browser-with-security-slider-settings-to-high-by-default/7591 this forum thread] for further details.
@@ -350,7 +350,7 @@ The Tor Project explicitly warns against using non-default add-ons with Tor Brow
 
 ...
 
-Video websites, such as Vimeo, make use of the Flash Player plugin to display video content. Unfortunately, this software operates independently of Tor Browser and cannot easily be made to obey Tor Browser’s proxy settings. It can therefore reveal your real location and IP address to the website operators or to an outside observer. For this reason, Flash is disabled by default in Tor Browser, and enabling it is not recommended.</blockquote>
+Video websites, such as Vimeo, make use of the Flash Player plugin to display video content. Unfortunately, this software operates independently of Tor Browser and cannot easily be made to obey Tor Browser's proxy settings. It can therefore reveal your real location and IP address to the website operators or to an outside observer. For this reason, Flash is disabled by default in Tor Browser, and enabling it is not recommended.</blockquote>
 
 === Recommendations ===
 
@@ -449,7 +449,7 @@ Readers who are interested in why the "Open Networking Settings" and "Tor Circui
 
 == Security Slider ==
 
-Tor Browser includes a “Security Slider” that allows the disabling of certain web features that can be used to compromise security and anonymity. At present there are three levels: "Safest", "Safer" and "Standard". It is necessary to make a trade-off between security, usability and privacy. At the higher levels the slider will prevent some sites from working properly. <ref>https://tb-manual.torproject.org/security-settings/</ref> Note that as of Tor Browser release v8.5, the security slider function has shifted to the taskbar. <ref>https://blog.torproject.org/new-release-tor-browser-85</ref> <ref>https://gitlab.torproject.org/legacy/trac/-/issues/29825</ref>
+Tor Browser includes a "Security Slider" that allows the disabling of certain web features that can be used to compromise security and anonymity. At present there are three levels: "Safest", "Safer" and "Standard". It is necessary to make a trade-off between security, usability and privacy. At the higher levels the slider will prevent some sites from working properly. <ref>https://tb-manual.torproject.org/security-settings/</ref> Note that as of Tor Browser release v8.5, the security slider function has shifted to the taskbar. <ref>https://blog.torproject.org/new-release-tor-browser-85</ref> <ref>https://gitlab.torproject.org/legacy/trac/-/issues/29825</ref>
 
 To use this feature: <code>Click Security Level button (taskbar 'shield')</code> &rarr; <code>Click "Advanced Security Settings..."</code> &rarr; <code>Select desired security level</code>
 
@@ -881,10 +881,10 @@ Tor Browser provides reasonable security in its stock configuration. However, mi
 <!--
 {{Anchor|Hardening}}
 ! Firejail Confinement
-| Firejail can be used as an alternative sandboxing measure to restrict the Tor Browser process. The Tor Browser Starter by {{project_name_short}} developers in {{project_name_short}} testers repository includes a “hardening” option that permits certain features to be enabled that on the upside increase security, but on the downside might decrease anonymity. <ref>[https://github.com/Kicksecure/tb-starter/blob/master/usr/bin/torbrowser tb-starter] will enable the Tor Browser Firejail profile. [https://forums.whonix.org/t/automatically-firejailing-tor-browser/4767/21 development discussion]
+| Firejail can be used as an alternative sandboxing measure to restrict the Tor Browser process. The Tor Browser Starter by {{project_name_short}} developers in {{project_name_short}} testers repository includes a "hardening" option that permits certain features to be enabled that on the upside increase security, but on the downside might decrease anonymity. <ref>[https://github.com/Kicksecure/tb-starter/blob/master/usr/bin/torbrowser tb-starter] will enable the Tor Browser Firejail profile. [https://forums.whonix.org/t/automatically-firejailing-tor-browser/4767/21 development discussion]
 </ref>
 
-It is necessary to make a trade-off between security, usability and privacy. With “hardening” enabled, certain website features might be non-functional or Tor Browser may no longer start after an upgrade. Also, the [[Fingerprint#Visited_Websites|fingerprint]] seen by websites ('web fingerprint') might reveal subtle differences between Tor Browser instances that have enabled this feature compared to the default configuration. The population of Linux Tor Browser users who regularly utilize Firejail is likely to be tiny. At the time of writing (2019) there were no reports confirming a detectable fingerprint, but there is also no known research being undertaken in this area. <ref>The Tor Project does not currently provide a hardened / sandboxed Tor Browser build, see: [https://gitlab.torproject.org/legacy/trac/-/issues/25540 Stop building and distributing sandboxed-tor-browser binaries].</ref> <ref>[https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorBrowser/Sandbox/Linux Linux Sandboxed Tor Browser Documentation]: <blockquote>WARNING: This project is no longer maintained. DO NOT EXPECT ANY FURTHER FIXES, INCLUDING SECURITY AND STOP USING THIS AS SOON AS POSSIBLE.
+It is necessary to make a trade-off between security, usability and privacy. With "hardening" enabled, certain website features might be non-functional or Tor Browser may no longer start after an upgrade. Also, the [[Fingerprint#Visited_Websites|fingerprint]] seen by websites ('web fingerprint') might reveal subtle differences between Tor Browser instances that have enabled this feature compared to the default configuration. The population of Linux Tor Browser users who regularly utilize Firejail is likely to be tiny. At the time of writing (2019) there were no reports confirming a detectable fingerprint, but there is also no known research being undertaken in this area. <ref>The Tor Project does not currently provide a hardened / sandboxed Tor Browser build, see: [https://gitlab.torproject.org/legacy/trac/-/issues/25540 Stop building and distributing sandboxed-tor-browser binaries].</ref> <ref>[https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorBrowser/Sandbox/Linux Linux Sandboxed Tor Browser Documentation]: <blockquote>WARNING: This project is no longer maintained. DO NOT EXPECT ANY FURTHER FIXES, INCLUDING SECURITY AND STOP USING THIS AS SOON AS POSSIBLE.
 
 WARNING: There are several unresolved issues that affect security and fingerprinting. Do not assume that this is perfect, merely "an improvement over nothing".
 

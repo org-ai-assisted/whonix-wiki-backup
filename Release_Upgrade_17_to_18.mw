@@ -92,7 +92,7 @@ This method is still possible. All the automated {{Github_link|repo=legacy-dist|
 
 {{quotation
 |quote=
-Install the <code>qubes-dist-upgrade</code> tool. This is the in-place upgrade tool, which is not what we’re doing. However, it will be needed in order to upgrade the templates to the 4.3 version. You install it with the following command in the dom0 terminal:
+Install the <code>qubes-dist-upgrade</code> tool. This is the in-place upgrade tool, which is not what we're doing. However, it will be needed in order to upgrade the templates to the 4.3 version. You install it with the following command in the dom0 terminal:
 
 {{CodeSelect|code=
 sudo qubes-dom0-update -y qubes-dist-upgrade
@@ -110,7 +110,7 @@ sudo qubes-dist-upgrade --releasever=4.3 --template-standalone-upgrade
 |context=[https://doc.qubes-os.org/en/latest/user/downloading-installing-upgrading/upgrade/4_3.html How to upgrade to Qubes 4.3]
 }}
 
-<u>Note on terminology:</u> The option name <code>--template-standalone-upgrade</code> is unfortunately easy to misread because Qubes uses “Standalone” as a VM type name. Here, “standalone” in the option name refers to the fact that this '''stage can be run by itself''' (as a standalone step). It is '''not''' an instruction to “upgrade Standalones only”. This step upgrades '''TemplateVMs''' <u>and</u> also any '''Standalone''' Qubes (VM type) that are applicable. <ref>
+<u>Note on terminology:</u> The option name <code>--template-standalone-upgrade</code> is unfortunately easy to misread because Qubes uses "Standalone" as a VM type name. Here, "standalone" in the option name refers to the fact that this '''stage can be run by itself''' (as a standalone step). It is '''not''' an instruction to "upgrade Standalones only". This step upgrades '''TemplateVMs''' <u>and</u> also any '''Standalone''' Qubes (VM type) that are applicable. <ref>
 https://forums.whonix.org/t/qubes-whonix-18-released-major-release-upgrade/22517/7
 </ref>
 

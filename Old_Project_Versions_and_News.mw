@@ -108,7 +108,7 @@ I did not want to delay this release any further. The mess with multiple project
 
 <sup>1</sup> Rebranding. '''aos''' is the new project name. The process of rebranding is ongoing. Also all links have to be renamed. That will be done as soon as a new home for aos has been found.
 
-<sup>2</sup> A aos (previously called TorBOX) source code 0.2.1 is now on [https://github.com/{{project_name_short}}/{{project_name_short}} github]. The source code will be polished so it will be easier to understand, maintain and contribute. The ​devel branch contains latest changes.
+<sup>2</sup> A aos (previously called TorBOX) source code 0.2.1 is now on [https://github.com/{{project_name_short}}/{{project_name_short}} github]. The source code will be polished so it will be easier to understand, maintain and contribute. The &#8203;devel branch contains latest changes.
 
 '''2012-07-16'''
 

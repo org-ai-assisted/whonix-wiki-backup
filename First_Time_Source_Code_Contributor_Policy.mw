@@ -49,7 +49,7 @@ Verification is not yet governed by a fixed policy and may evolve over time. How
 * '''Non-code activity only:''' Prior contributions limited to issue comments, suggestions, or other non-technical participation without source code implementation.
 
 == Why This Policy Exists ==
-This policy is not meant to gatekeep contributors - it is here to protect everyone’s time and ensure the project stays focused and sustainable.
+This policy is not meant to gatekeep contributors - it is here to protect everyone's time and ensure the project stays focused and sustainable.
 
 * '''Extended discussions without code:''' In Open Source, it's common for well-meaning users (and sometimes trolls or bots) to engage in long conversations without ever submitting working code.
 * '''Source contributions require initiative:''' While general questions are welcome in discussion channels, code contributions demand technical skill, follow-through, and independent effort.
@@ -57,7 +57,7 @@ This policy is not meant to gatekeep contributors - it is here to protect everyo
 * '''Time cost for maintainers:''' These exchanges often take more time to respond to than it would take to write the code ourselves, reducing time available for actual development.
 * '''Contributing is difficult:''' Most people cannot perform heart surgery. Even a doctor who does not specialize in it may not be able to perform it. There is no shame in that.
 
-To help explain this dynamic, here’s a quote:
+To help explain this dynamic, here's a quote:
 
 {{quotation
 |quote=
@@ -89,10 +89,10 @@ This is a common issue:
 * https://opensource.guide/best-practices/
 
 == Final Notes ==
-* '''No need to reference this policy:''' If you’re doing real work, your contributions will speak for themselves.
-* '''Support is available for genuine contributors:''' We’re happy to assist contributors who show initiative and effort - this policy exists to protect that energy, not to discourage it.
+* '''No need to reference this policy:''' If you're doing real work, your contributions will speak for themselves.
+* '''Support is available for genuine contributors:''' We're happy to assist contributors who show initiative and effort - this policy exists to protect that energy, not to discourage it.
 * '''Not sure where to start?''' Check out open issues tagged as "good first issue" or take a look through the codebase and reach out with concrete questions.
-* '''More contribution, more support:''' The more source code evidence of skill and initiative you demonstrate, the more support and guidance you’ll naturally receive.
+* '''More contribution, more support:''' The more source code evidence of skill and initiative you demonstrate, the more support and guidance you'll naturally receive.
 
 == Illustrative Examples ==
 Pull requests that were minimal and required no prior communication:

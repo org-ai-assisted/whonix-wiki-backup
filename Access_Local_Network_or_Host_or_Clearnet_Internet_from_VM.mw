@@ -56,7 +56,7 @@ Note:
 
 * Substitute <code>ssh</code> with your client software of choice.
 * Replace <code>192.168.1.0</code> with the actual local LAN IP of the host.
-* Remove <code>.anondist-orig</code> if the command isn’t uwt-wrapped by default.
+* Remove <code>.anondist-orig</code> if the command isn't uwt-wrapped by default.
 {{CodeSelect|code=ssh.anondist-orig 192.168.1.0}}
 
 '''5.''' Completion.

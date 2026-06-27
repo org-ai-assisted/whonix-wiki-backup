@@ -8,7 +8,7 @@
 {{intro|
 {{project_name_long}} Project Very Long Term Vision
 }}
-= Whonix² =
+= Whonix&sup2; =
 
 That's just a code name for a '''BOX''' setup "2.0" that may eventually offer strong guarantees of security and anonymity.
 
@@ -24,7 +24,7 @@ It should address all the current single points of failure:
 
 '''"Protocol leaks", Anonymity set reduction:''' The current platform of choice (for pretty much everything, including anonymous communication) is the web browser. Browsers really suck when it comes to privacy, anonymity, or security. Allowing scripting, storing IDs (cookies and more), constantly changing features (html5, webgl, websockets...), [https://rdist.root.org/2010/11/29/final-post-on-javascript-crypto/ lack] of a strong crypto environment make the web browser one of the worst platforms imaginable for strong anonymity (or security). Why? Because we also lack a credible alternative. One such alternative could have been the now dead or in limbo [https://syndie.de/ Syndie] ("Syndie's design as an anonymity-sensitive client application carefully avoids the intricate data sensitivity problems that nearly every application not built with anonymity in mind does not.")
 
-'''In summary:''' Whonix² needs to consist of at least two very diverse systems, different hardware manufacturers, different kernels, different companies/orgs providing support, and offer at least two different anonymizing networks. Bonus points for utilizing diverse crypto systems and cascades. Neither system should "know" both who is communicating and with whom.
+'''In summary:''' Whonix&sup2; needs to consist of at least two very diverse systems, different hardware manufacturers, different kernels, different companies/orgs providing support, and offer at least two different anonymizing networks. Bonus points for utilizing diverse crypto systems and cascades. Neither system should "know" both who is communicating and with whom.
 
 {{Footer}}
 

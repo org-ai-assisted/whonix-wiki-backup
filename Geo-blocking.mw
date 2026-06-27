@@ -64,7 +64,7 @@ Can {{project_name_short}} be the cause of the inability to access specific dest
 A potential cause for confusion is the following: Cloudflare treats [[Tor Browser]] users differently than [[Other Browsers|other browsers]] (such as Firefox) or command line substitutes (such as curl) when being used over Tor. Cloudflare discusses this in their announcement of the Cloudflare Onion Service:
 
 {{quotation
-|quote=Today’s edition of the Crypto Week introduces an “opportunistic” solution to this problem, so that under suitable conditions, anyone using Tor Browser 8.0 will benefit from improved security and performance when visiting Cloudflare websites without having to face a CAPTCHA.
+|quote=Today's edition of the Crypto Week introduces an "opportunistic" solution to this problem, so that under suitable conditions, anyone using Tor Browser 8.0 will benefit from improved security and performance when visiting Cloudflare websites without having to face a CAPTCHA.
 |context=[https://blog.cloudflare.com/cloudflare-onion-service/ Introducing the Cloudflare Onion Service]
 }}
 

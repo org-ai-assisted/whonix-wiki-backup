@@ -29,7 +29,7 @@ This might happen when the required dom0 <code>qvm-tags</code> are missing.
 The easiest and safest way to fix this is to reboot. <ref>
 Alternatively, in dom0, restart the <code>qubesd.service</code> systemd unit.
 
-<u>Warning:</u> Restarting <code>qubesd</code> can cause some odd behavior, for instance Qube Manager might crash, so make sure you aren’t doing any important work when you try this.
+<u>Warning:</u> Restarting <code>qubesd</code> can cause some odd behavior, for instance Qube Manager might crash, so make sure you aren't doing any important work when you try this.
 
 {{CodeSelect|code=
 sudo systemctl restart qubesd.service

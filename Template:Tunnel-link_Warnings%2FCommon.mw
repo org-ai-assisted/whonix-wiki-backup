@@ -18,7 +18,7 @@ In order to circumvent state-level censorship of the Tor network, [[Bridges]] or
 {{mbox
 | image   = [[File:Ambox_warning_pn.svg.png|40px|alt=Warning]]
 | text    =
-If your software configuration doesn’t block all traffic when your tunnel-link connection suddenly disconnects, your encrypted Tor traffic will go through your ISP without warning. This is the default nature of most tunnel configurations and not an issue specific to {{project_name_short}}. <ref>For example, VPNs require a failed closed configuration to prevent DNS leaks.</ref>
+If your software configuration doesn't block all traffic when your tunnel-link connection suddenly disconnects, your encrypted Tor traffic will go through your ISP without warning. This is the default nature of most tunnel configurations and not an issue specific to {{project_name_short}}. <ref>For example, VPNs require a failed closed configuration to prevent DNS leaks.</ref>
 }}
 ----
 === Tunnel-links can Affect Anonymity ===

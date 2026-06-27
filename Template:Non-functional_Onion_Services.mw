@@ -25,7 +25,7 @@ Err:7 tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion 
 SOCKS proxy socks5h://localhost:9050 could not connect to 5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion (0.0.0.0:0) due to: Host unreachable (6)
 Err:8 tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian {{Stable project version based on Debian codename}} InRelease
 SOCKS proxy socks5h://localhost:9050 could not connect to 2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion (0.0.0.0:0) due to: Host unreachable (6)
-Reading package lists… Done
+Reading package lists... Done
 W: Failed to fetch tor+http://5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion/dists/{{Stable project version based on Debian codename}}/updates/InRelease SOCKS proxy socks5h://localhost:9050 could not connect to 5ajw6aqf3ep7sijnscdzw77t7xq4xjpsy335yb2wiwgouo7yfxtjlmid.onion (0.0.0.0:0) due to: Host unreachable (6)
 W: Failed to fetch tor+http://2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion/debian/dists/{{Stable project version based on Debian codename}}/InRelease SOCKS proxy socks5h://localhost:9050 could not connect to 2s4yqjx5ul6okpp3f2gaunr2syex5jgbfpfvhxxbbjwnrsvbk5v3qbid.onion (0.0.0.0:0) due to: Host unreachable (6)
 W: Some index files failed to download. They have been ignored, or old ones used instead.

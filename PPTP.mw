@@ -46,7 +46,7 @@ Because VPN services [https://en.wikipedia.org/wiki/IP_tunnel tunnel] all Intern
 
 If the tunnel ends outside the area where the Internet is being restricted, this can be an effective method of circumvention, since the filtering entity/server sees only encrypted data, and has no way of knowing what data is passing through the tunnel. It has the additional effect of making all your different kinds of traffic look similar to an eavesdropper.
 
-We use VPN here for its “tunnel” capabilities, so that others that you allow access, can take advantage of Tor via {{project_name_short}} with a single connection.
+We use VPN here for its "tunnel" capabilities, so that others that you allow access, can take advantage of Tor via {{project_name_short}} with a single connection.
 
 = Install PPTPd =
 
@@ -97,9 +97,9 @@ This can be potentially confusing, as the documentation in the configuration fil
 
 See the [https://poptop.sourceforge.net/dox/qna.html#19 FAQ here for information]. For a simple overview of the VPN process see [https://help.ubuntu.com/community/VPNClient#Extra_credit:_how_VPN_works''how''VPN_works VPNClient @ Ubuntu Community Documentation].
 
-'''localip''', for simplicity should be the IP of your eth1, as Tor is already configured to listen here and we don't actually do any routing creating an IP address conflict. '''remoteip''', should be several IP's on your internal network (you should have as many IP's as potential clients, for example the “192.168.0.200-250” range above defines IP's for 50 clients)
+'''localip''', for simplicity should be the IP of your eth1, as Tor is already configured to listen here and we don't actually do any routing creating an IP address conflict. '''remoteip''', should be several IP's on your internal network (you should have as many IP's as potential clients, for example the "192.168.0.200-250" range above defines IP's for 50 clients)
 
-(Advanced: <code>localip</code> and <code>remoteip</code> can be set to other networks, other subnets, etc. With our approach it doesn't matter what their IP's are, simply that they exist. It is in fact encouraged that such clients be assigned to a “quarantine” network. Since we don't have routing enabled, other subnets would prevent your client's from seeing each other and your already established “safe” LAN; where your {{project_name_workstation_long}} lives. But! The <code>torrc</code> would need to be updated to listen on said addresses as well. Subneting in this fashion is beyond the scope of this document.)
+(Advanced: <code>localip</code> and <code>remoteip</code> can be set to other networks, other subnets, etc. With our approach it doesn't matter what their IP's are, simply that they exist. It is in fact encouraged that such clients be assigned to a "quarantine" network. Since we don't have routing enabled, other subnets would prevent your client's from seeing each other and your already established "safe" LAN; where your {{project_name_workstation_long}} lives. But! The <code>torrc</code> would need to be updated to listen on said addresses as well. Subneting in this fashion is beyond the scope of this document.)
 
 = Configure PPTP Options =
 
@@ -141,7 +141,7 @@ TRANS_PORT#"9040"
 iptables -t nat -A PREROUTING -i $PPP_IFACE -p udp --dport 53 -j REDIRECT --to-ports 53
 iptables -t nat -A PREROUTING -i $PPP_IFACE -p tcp --syn -j REDIRECT --to-ports $TRANS_PORT</pre>
 
-The variable “$PPP_IFACE” is defined in the script (see the documentation at the beginning of the ip-up script) and resolves to the name of the interface established after a PPTP connection (e.g. ppp0).
+The variable "$PPP_IFACE" is defined in the script (see the documentation at the beginning of the ip-up script) and resolves to the name of the interface established after a PPTP connection (e.g. ppp0).
 
 Similarly the <code>ip-down</code> script is called when tearing down the connection. To prevent your iptables from getting polluted with redundant rules, we remove the previously configured rules here:
 
@@ -215,7 +215,7 @@ pkts bytes target     prot opt in     out     source                   destinati
 
 On the client you should then be able to connect via Tor.
 
-* Browse to <code>check.torproject.org</code> and verify the “congratulations” message
+* Browse to <code>check.torproject.org</code> and verify the "congratulations" message
 
 Next disconnect from the VPN. On the server you should see several changes: ({{project_name_gateway_short}})
 

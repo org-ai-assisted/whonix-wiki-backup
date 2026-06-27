@@ -375,7 +375,7 @@ https://phabricator.whonix.org/T931
 https://packages.debian.org/{{Stable project version based on Debian codename}}/simple-tpm-pk11
 
 <pre>
-simple-tpm-pk11 provides tools to create a key in your TPM (Trusted Platform Module) chip which can then be used with SSH. The package comes with a library that you can use as “PKCS11Provider” in your SSH configuration file.
+simple-tpm-pk11 provides tools to create a key in your TPM (Trusted Platform Module) chip which can then be used with SSH. The package comes with a library that you can use as "PKCS11Provider" in your SSH configuration file.
 </pre>
 
 swtpm binary missing in Debian Buster and hasn't been packaged yet. <ref>
@@ -538,7 +538,7 @@ See [https://travis-ci.org/github/{{project_name_short}}/{{project_name_short}}-
 <pre style="white-space: pre-wrap;">
 
 user@host:~/derivative-maker/packages/kicksecure/libvirt-dist/usr/share/libvirt-dist/xml$ sudo virsh domxml-to-native qemu-argv Whonix-Gateway.xml
-    LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin USER=root HOME=/var/lib/libvirt/qemu/domain–1-Whonix-Gateway XDG_DATA_HOME=/var/lib/libvirt/qemu/domain–1-Whonix-Gateway/.local/share XDG_CACHE_HOME=/var/lib/libvirt/qemu/domain–1-Whonix-Gateway/.cache XDG_CONFIG_HOME=/var/lib/libvirt/qemu/domain–1-Whonix-Gateway/.config /usr/bin/qemu-system-x86_64 -name guest=Whonix-Gateway,debug-threads=on -S -object ‘{“qom-type”:“secret”,“id”:“masterKey0”,“format”:“raw”,“file”:“/var/lib/libvirt/qemu/domain–1-Whonix-Gateway/master-key.aes”}’ -machine pc-i440fx-8.2,usb=off,vmport=off,dump-guest-core=off,mem-merge=off,memory-backend=pc.ram,hpet=off,acpi=on -accel kvm -cpu host,migratable=on,kvmclock=on,kvm-pv-unhalt=on,pmu=off -m size=524288k -object ‘{“qom-type”:“memory-backend-ram”,“id”:“pc.ram”,“size”:536870912}’ -overcommit mem-lock=off -smp 1,sockets=1,cores=1,threads=1 -uuid c567c4e6-f750-4ecb-ab90-321012c3d927 -device ‘{“driver”:“vmgenid”,“guid”:“99f50c12-3f81-4339-b390-c2fba5587b2c”,“id”:“vmgenid0”}’ -no-user-config -nodefaults -chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/domain–1-Whonix-Gateway/monitor.sock,server=on,wait=off -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc,clock=vm,driftfix=slew -global kvm-pit.lost_tick_policy=delay -no-shutdown -global PIIX4_PM.disable_s3=1 -global PIIX4_PM.disable_s4=1 -boot strict=on -device ‘{“driver”:“piix3-usb-uhci”,“id”:“usb”,“bus”:“pci.0”,“addr”:“0x1.0x2”}’ -device ‘{“driver”:“virtio-serial-pci”,“id”:“virtio-serial0”,“bus”:“pci.0”,“addr”:“0x5”}’ -blockdev ‘{“driver”:“file”,“filename”:“/var/lib/libvirt/images/Whonix-Gateway.qcow2”,“node-name”:“libvirt-1-storage”,“auto-read-only”:true,“discard”:“unmap”}’ -blockdev ‘{“node-name”:“libvirt-1-format”,“read-only”:false,“driver”:“qcow2”,“file”:“libvirt-1-storage”}’ -device ‘{“driver”:“virtio-blk-pci”,“bus”:“pci.0”,“addr”:“0x6”,“drive”:“libvirt-1-format”,“id”:“virtio-disk0”,“bootindex”:1}’ -netdev ‘{“type”:“tap”,“fd”:“17”,“vhost”:true,“vhostfd”:“28”,“id”:“hostnet0”}’ -device ‘{“driver”:“virtio-net-pci”,“netdev”:“hostnet0”,“id”:“net0”,“mac”:“52:54:00:78:69:11”,“bus”:“pci.0”,“addr”:“0x3”}’ -netdev ‘{“type”:“tap”,“fd”:“29”,“vhost”:true,“vhostfd”:“30”,“id”:“hostnet1”}’ -device ‘{“driver”:“virtio-net-pci”,“netdev”:“hostnet1”,“id”:“net1”,“mac”:“52:54:00:f5:5c:a2”,“bus”:“pci.0”,“addr”:“0x4”}’ -chardev pty,id=charserial0 -device ‘{“driver”:“isa-serial”,“chardev”:“charserial0”,“id”:“serial0”,“index”:0}’ -chardev spicevmc,id=charchannel0,name=vdagent -device ‘{“driver”:“virtserialport”,“bus”:“virtio-serial0.0”,“nr”:1,“chardev”:“charchannel0”,“id”:“channel0”,“name”:“com.redhat.spice.0”}’ -audiodev ‘{“id”:“audio1”,“driver”:“spice”}’ -spice port=5901,addr=127.0.0.1,disable-ticketing=on,disable-agent-file-xfer=on,seamless-migration=on -device ‘{“driver”:“virtio-vga”,“id”:“video0”,“max_outputs”:1,“bus”:“pci.0”,“addr”:“0x2”}’ -object ‘{“qom-type”:“rng-random”,“id”:“objrng0”,“filename”:“/dev/urandom”}’ -device ‘{“driver”:“virtio-rng-pci”,“rng”:“objrng0”,“id”:“rng0”,“bus”:“pci.0”,“addr”:“0x7”}’ -sandbox on,obsolete=deny,elevateprivileges=deny,spawn=deny,resourcecontrol=deny -msg timestamp=
+    LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin USER=root HOME=/var/lib/libvirt/qemu/domain-1-Whonix-Gateway XDG_DATA_HOME=/var/lib/libvirt/qemu/domain-1-Whonix-Gateway/.local/share XDG_CACHE_HOME=/var/lib/libvirt/qemu/domain-1-Whonix-Gateway/.cache XDG_CONFIG_HOME=/var/lib/libvirt/qemu/domain-1-Whonix-Gateway/.config /usr/bin/qemu-system-x86_64 -name guest=Whonix-Gateway,debug-threads=on -S -object '{"qom-type":"secret","id":"masterKey0","format":"raw","file":"/var/lib/libvirt/qemu/domain-1-Whonix-Gateway/master-key.aes"}' -machine pc-i440fx-8.2,usb=off,vmport=off,dump-guest-core=off,mem-merge=off,memory-backend=pc.ram,hpet=off,acpi=on -accel kvm -cpu host,migratable=on,kvmclock=on,kvm-pv-unhalt=on,pmu=off -m size=524288k -object '{"qom-type":"memory-backend-ram","id":"pc.ram","size":536870912}' -overcommit mem-lock=off -smp 1,sockets=1,cores=1,threads=1 -uuid c567c4e6-f750-4ecb-ab90-321012c3d927 -device '{"driver":"vmgenid","guid":"99f50c12-3f81-4339-b390-c2fba5587b2c","id":"vmgenid0"}' -no-user-config -nodefaults -chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/domain-1-Whonix-Gateway/monitor.sock,server=on,wait=off -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc,clock=vm,driftfix=slew -global kvm-pit.lost_tick_policy=delay -no-shutdown -global PIIX4_PM.disable_s3=1 -global PIIX4_PM.disable_s4=1 -boot strict=on -device '{"driver":"piix3-usb-uhci","id":"usb","bus":"pci.0","addr":"0x1.0x2"}' -device '{"driver":"virtio-serial-pci","id":"virtio-serial0","bus":"pci.0","addr":"0x5"}' -blockdev '{"driver":"file","filename":"/var/lib/libvirt/images/Whonix-Gateway.qcow2","node-name":"libvirt-1-storage","auto-read-only":true,"discard":"unmap"}' -blockdev '{"node-name":"libvirt-1-format","read-only":false,"driver":"qcow2","file":"libvirt-1-storage"}' -device '{"driver":"virtio-blk-pci","bus":"pci.0","addr":"0x6","drive":"libvirt-1-format","id":"virtio-disk0","bootindex":1}' -netdev '{"type":"tap","fd":"17","vhost":true,"vhostfd":"28","id":"hostnet0"}' -device '{"driver":"virtio-net-pci","netdev":"hostnet0","id":"net0","mac":"52:54:00:78:69:11","bus":"pci.0","addr":"0x3"}' -netdev '{"type":"tap","fd":"29","vhost":true,"vhostfd":"30","id":"hostnet1"}' -device '{"driver":"virtio-net-pci","netdev":"hostnet1","id":"net1","mac":"52:54:00:f5:5c:a2","bus":"pci.0","addr":"0x4"}' -chardev pty,id=charserial0 -device '{"driver":"isa-serial","chardev":"charserial0","id":"serial0","index":0}' -chardev spicevmc,id=charchannel0,name=vdagent -device '{"driver":"virtserialport","bus":"virtio-serial0.0","nr":1,"chardev":"charchannel0","id":"channel0","name":"com.redhat.spice.0"}' -audiodev '{"id":"audio1","driver":"spice"}' -spice port=5901,addr=127.0.0.1,disable-ticketing=on,disable-agent-file-xfer=on,seamless-migration=on -device '{"driver":"virtio-vga","id":"video0","max_outputs":1,"bus":"pci.0","addr":"0x2"}' -object '{"qom-type":"rng-random","id":"objrng0","filename":"/dev/urandom"}' -device '{"driver":"virtio-rng-pci","rng":"objrng0","id":"rng0","bus":"pci.0","addr":"0x7"}' -sandbox on,obsolete=deny,elevateprivileges=deny,spawn=deny,resourcecontrol=deny -msg timestamp=
 
 </pre>
 
@@ -547,7 +547,7 @@ user@host:~/derivative-maker/packages/kicksecure/libvirt-dist/usr/share/libvirt-
 <pre style="white-space: pre-wrap;">
 
 user@host:~/derivative-maker/packages/kicksecure/libvirt-dist/usr/share/libvirt-dist/xml$ sudo virsh domxml-to-native qemu-argv Whonix-Workstation.xml
-    LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin USER=root HOME=/var/lib/libvirt/qemu/domain–1-Whonix-Workstation XDG_DATA_HOME=/var/lib/libvirt/qemu/domain–1-Whonix-Workstation/.local/share XDG_CACHE_HOME=/var/lib/libvirt/qemu/domain–1-Whonix-Workstation/.cache XDG_CONFIG_HOME=/var/lib/libvirt/qemu/domain–1-Whonix-Workstation/.config /usr/bin/qemu-system-x86_64 -name guest=Whonix-Workstation,debug-threads=on -S -object ‘{“qom-type”:“secret”,“id”:“masterKey0”,“format”:“raw”,“file”:“/var/lib/libvirt/qemu/domain–1-Whonix-Workstation/master-key.aes”}’ -machine pc-i440fx-8.2,usb=off,vmport=off,dump-guest-core=off,mem-merge=off,memory-backend=pc.ram,hpet=off,acpi=on -accel kvm -cpu host,migratable=on,kvmclock=off,kvm-pv-unhalt=on,pmu=off -m size=1572864k -object ‘{“qom-type”:“memory-backend-ram”,“id”:“pc.ram”,“size”:1610612736}’ -overcommit mem-lock=off -smp 1,sockets=1,cores=1,threads=1 -uuid aebc953d-a3ef-40f4-a080-bbddd0bc9351 -device ‘{“driver”:“vmgenid”,“guid”:“fd6de7ed-c6d3-43c0-9325-0ba2d4394069”,“id”:“vmgenid0”}’ -no-user-config -nodefaults -chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/domain–1-Whonix-Workstation/monitor.sock,server=on,wait=off -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc -global kvm-pit.lost_tick_policy=delay -no-shutdown -global PIIX4_PM.disable_s3=1 -global PIIX4_PM.disable_s4=1 -boot strict=on -device ‘{“driver”:“piix3-usb-uhci”,“id”:“usb”,“bus”:“pci.0”,“addr”:“0x1.0x2”}’ -device ‘{“driver”:“virtio-serial-pci”,“id”:“virtio-serial0”,“bus”:“pci.0”,“addr”:“0x5”}’ -blockdev ‘{“driver”:“file”,“filename”:“/var/lib/libvirt/images/Whonix-Workstation.qcow2”,“node-name”:“libvirt-1-storage”,“auto-read-only”:true,“discard”:“unmap”}’ -blockdev ‘{“node-name”:“libvirt-1-format”,“read-only”:false,“driver”:“qcow2”,“file”:“libvirt-1-storage”}’ -device ‘{“driver”:“virtio-blk-pci”,“bus”:“pci.0”,“addr”:“0x6”,“drive”:“libvirt-1-format”,“id”:“virtio-disk0”,“bootindex”:1}’ -netdev ‘{“type”:“tap”,“fd”:“26”,“vhost”:true,“vhostfd”:“28”,“id”:“hostnet0”}’ -device ‘{“driver”:“virtio-net-pci”,“netdev”:“hostnet0”,“id”:“net0”,“mac”:“52:54:00:51:33:f5”,“bus”:“pci.0”,“addr”:“0x3”}’ -chardev pty,id=charserial0 -device ‘{“driver”:“isa-serial”,“chardev”:“charserial0”,“id”:“serial0”,“index”:0}’ -chardev spicevmc,id=charchannel0,name=vdagent -device ‘{“driver”:“virtserialport”,“bus”:“virtio-serial0.0”,“nr”:1,“chardev”:“charchannel0”,“id”:“channel0”,“name”:“com.redhat.spice.0”}’ -audiodev ‘{“id”:“audio1”,“driver”:“spice”}’ -spice port=5901,addr=127.0.0.1,disable-ticketing=on,disable-copy-paste=on,disable-agent-file-xfer=on,seamless-migration=on -device ‘{“driver”:“virtio-vga”,“id”:“video0”,“max_outputs”:1,“bus”:“pci.0”,“addr”:“0x2”}’ -device ‘{“driver”:“intel-hda”,“id”:“sound0”,“bus”:“pci.0”,“addr”:“0x4”}’ -device ‘{“driver”:“hda-output”,“id”:“sound0-codec0”,“bus”:“sound0.0”,“cad”:0,“audiodev”:“audio1”}’ -object ‘{“qom-type”:“rng-random”,“id”:“objrng0”,“filename”:“/dev/urandom”}’ -device ‘{“driver”:“virtio-rng-pci”,“rng”:“objrng0”,“id”:“rng0”,“bus”:“pci.0”,“addr”:“0x7”}’ -sandbox on,obsolete=deny,elevateprivileges=deny,spawn=deny,resourcecontrol=deny -msg timestamp=on
+    LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin USER=root HOME=/var/lib/libvirt/qemu/domain-1-Whonix-Workstation XDG_DATA_HOME=/var/lib/libvirt/qemu/domain-1-Whonix-Workstation/.local/share XDG_CACHE_HOME=/var/lib/libvirt/qemu/domain-1-Whonix-Workstation/.cache XDG_CONFIG_HOME=/var/lib/libvirt/qemu/domain-1-Whonix-Workstation/.config /usr/bin/qemu-system-x86_64 -name guest=Whonix-Workstation,debug-threads=on -S -object '{"qom-type":"secret","id":"masterKey0","format":"raw","file":"/var/lib/libvirt/qemu/domain-1-Whonix-Workstation/master-key.aes"}' -machine pc-i440fx-8.2,usb=off,vmport=off,dump-guest-core=off,mem-merge=off,memory-backend=pc.ram,hpet=off,acpi=on -accel kvm -cpu host,migratable=on,kvmclock=off,kvm-pv-unhalt=on,pmu=off -m size=1572864k -object '{"qom-type":"memory-backend-ram","id":"pc.ram","size":1610612736}' -overcommit mem-lock=off -smp 1,sockets=1,cores=1,threads=1 -uuid aebc953d-a3ef-40f4-a080-bbddd0bc9351 -device '{"driver":"vmgenid","guid":"fd6de7ed-c6d3-43c0-9325-0ba2d4394069","id":"vmgenid0"}' -no-user-config -nodefaults -chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/domain-1-Whonix-Workstation/monitor.sock,server=on,wait=off -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc -global kvm-pit.lost_tick_policy=delay -no-shutdown -global PIIX4_PM.disable_s3=1 -global PIIX4_PM.disable_s4=1 -boot strict=on -device '{"driver":"piix3-usb-uhci","id":"usb","bus":"pci.0","addr":"0x1.0x2"}' -device '{"driver":"virtio-serial-pci","id":"virtio-serial0","bus":"pci.0","addr":"0x5"}' -blockdev '{"driver":"file","filename":"/var/lib/libvirt/images/Whonix-Workstation.qcow2","node-name":"libvirt-1-storage","auto-read-only":true,"discard":"unmap"}' -blockdev '{"node-name":"libvirt-1-format","read-only":false,"driver":"qcow2","file":"libvirt-1-storage"}' -device '{"driver":"virtio-blk-pci","bus":"pci.0","addr":"0x6","drive":"libvirt-1-format","id":"virtio-disk0","bootindex":1}' -netdev '{"type":"tap","fd":"26","vhost":true,"vhostfd":"28","id":"hostnet0"}' -device '{"driver":"virtio-net-pci","netdev":"hostnet0","id":"net0","mac":"52:54:00:51:33:f5","bus":"pci.0","addr":"0x3"}' -chardev pty,id=charserial0 -device '{"driver":"isa-serial","chardev":"charserial0","id":"serial0","index":0}' -chardev spicevmc,id=charchannel0,name=vdagent -device '{"driver":"virtserialport","bus":"virtio-serial0.0","nr":1,"chardev":"charchannel0","id":"channel0","name":"com.redhat.spice.0"}' -audiodev '{"id":"audio1","driver":"spice"}' -spice port=5901,addr=127.0.0.1,disable-ticketing=on,disable-copy-paste=on,disable-agent-file-xfer=on,seamless-migration=on -device '{"driver":"virtio-vga","id":"video0","max_outputs":1,"bus":"pci.0","addr":"0x2"}' -device '{"driver":"intel-hda","id":"sound0","bus":"pci.0","addr":"0x4"}' -device '{"driver":"hda-output","id":"sound0-codec0","bus":"sound0.0","cad":0,"audiodev":"audio1"}' -object '{"qom-type":"rng-random","id":"objrng0","filename":"/dev/urandom"}' -device '{"driver":"virtio-rng-pci","rng":"objrng0","id":"rng0","bus":"pci.0","addr":"0x7"}' -sandbox on,obsolete=deny,elevateprivileges=deny,spawn=deny,resourcecontrol=deny -msg timestamp=on
 </pre>
 
 === Kicksecure ===
@@ -555,7 +555,7 @@ user@host:~/derivative-maker/packages/kicksecure/libvirt-dist/usr/share/libvirt-
 <pre style="white-space: pre-wrap;">
 
 user@host:~/derivative-maker/packages/kicksecure/libvirt-dist/usr/share/libvirt-dist/xml$ sudo virsh domxml-to-native qemu-argv Kicksecure.xml
-    LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin USER=root HOME=/var/lib/libvirt/qemu/domain–1-Kicksecure XDG_DATA_HOME=/var/lib/libvirt/qemu/domain–1-Kicksecure/.local/share XDG_CACHE_HOME=/var/lib/libvirt/qemu/domain–1-Kicksecure/.cache XDG_CONFIG_HOME=/var/lib/libvirt/qemu/domain–1-Kicksecure/.config /usr/bin/qemu-system-x86_64 -name guest=Kicksecure,debug-threads=on -S -object ‘{“qom-type”:“secret”,“id”:“masterKey0”,“format”:“raw”,“file”:“/var/lib/libvirt/qemu/domain–1-Kicksecure/master-key.aes”}’ -machine pc-i440fx-8.2,usb=off,vmport=off,dump-guest-core=off,mem-merge=off,memory-backend=pc.ram,hpet=off,acpi=on -accel kvm -cpu host,migratable=on,kvmclock=off,kvm-pv-unhalt=on,pmu=off -m size=1572864k -object ‘{“qom-type”:“memory-backend-ram”,“id”:“pc.ram”,“size”:1610612736}’ -overcommit mem-lock=off -smp 1,sockets=1,cores=1,threads=1 -uuid 51458204-52f4-4400-a335-8c491c0d2552 -device ‘{“driver”:“vmgenid”,“guid”:“b0b49359-2f5e-46d5-aa38-0b0e55751e06”,“id”:“vmgenid0”}’ -no-user-config -nodefaults -chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/domain–1-Kicksecure/monitor.sock,server=on,wait=off -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc -global kvm-pit.lost_tick_policy=delay -no-shutdown -global PIIX4_PM.disable_s3=1 -global PIIX4_PM.disable_s4=1 -boot strict=on -device ‘{“driver”:“piix3-usb-uhci”,“id”:“usb”,“bus”:“pci.0”,“addr”:“0x1.0x2”}’ -device ‘{“driver”:“virtio-serial-pci”,“id”:“virtio-serial0”,“bus”:“pci.0”,“addr”:“0x5”}’ -blockdev ‘{“driver”:“file”,“filename”:“/var/lib/libvirt/images/Kicksecure.qcow2”,“node-name”:“libvirt-1-storage”,“auto-read-only”:true,“discard”:“unmap”}’ -blockdev ‘{“node-name”:“libvirt-1-format”,“read-only”:false,“driver”:“qcow2”,“file”:“libvirt-1-storage”}’ -device ‘{“driver”:“virtio-blk-pci”,“bus”:“pci.0”,“addr”:“0x6”,“drive”:“libvirt-1-format”,“id”:“virtio-disk0”,“bootindex”:1}’ -netdev ‘{“type”:“tap”,“fd”:“26”,“vhost”:true,“vhostfd”:“28”,“id”:“hostnet0”}’ -device ‘{“driver”:“virtio-net-pci”,“netdev”:“hostnet0”,“id”:“net0”,“mac”:“52:54:00:33:6a:10”,“bus”:“pci.0”,“addr”:“0x3”}’ -chardev pty,id=charserial0 -device ‘{“driver”:“isa-serial”,“chardev”:“charserial0”,“id”:“serial0”,“index”:0}’ -chardev spicevmc,id=charchannel0,name=vdagent -device ‘{“driver”:“virtserialport”,“bus”:“virtio-serial0.0”,“nr”:1,“chardev”:“charchannel0”,“id”:“channel0”,“name”:“com.redhat.spice.0”}’ -audiodev ‘{“id”:“audio1”,“driver”:“spice”}’ -spice port=5901,addr=127.0.0.1,disable-ticketing=on,disable-copy-paste=on,disable-agent-file-xfer=on,seamless-migration=on -device ‘{“driver”:“virtio-vga”,“id”:“video0”,“max_outputs”:1,“bus”:“pci.0”,“addr”:“0x2”}’ -device ‘{“driver”:“intel-hda”,“id”:“sound0”,“bus”:“pci.0”,“addr”:“0x4”}’ -device ‘{“driver”:“hda-output”,“id”:“sound0-codec0”,“bus”:“sound0.0”,“cad”:0,“audiodev”:“audio1”}’ -object ‘{“qom-type”:“rng-random”,“id”:“objrng0”,“filename”:“/dev/urandom”}’ -device ‘{“driver”:“virtio-rng-pci”,“rng”:“objrng0”,“id”:“rng0”,“bus”:“pci.0”,“addr”:“0x7”}’ -sandbox on,obsolete=deny,elevateprivileges=deny,spawn=deny,resourcecontrol=deny -msg timestamp=on
+    LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin USER=root HOME=/var/lib/libvirt/qemu/domain-1-Kicksecure XDG_DATA_HOME=/var/lib/libvirt/qemu/domain-1-Kicksecure/.local/share XDG_CACHE_HOME=/var/lib/libvirt/qemu/domain-1-Kicksecure/.cache XDG_CONFIG_HOME=/var/lib/libvirt/qemu/domain-1-Kicksecure/.config /usr/bin/qemu-system-x86_64 -name guest=Kicksecure,debug-threads=on -S -object '{"qom-type":"secret","id":"masterKey0","format":"raw","file":"/var/lib/libvirt/qemu/domain-1-Kicksecure/master-key.aes"}' -machine pc-i440fx-8.2,usb=off,vmport=off,dump-guest-core=off,mem-merge=off,memory-backend=pc.ram,hpet=off,acpi=on -accel kvm -cpu host,migratable=on,kvmclock=off,kvm-pv-unhalt=on,pmu=off -m size=1572864k -object '{"qom-type":"memory-backend-ram","id":"pc.ram","size":1610612736}' -overcommit mem-lock=off -smp 1,sockets=1,cores=1,threads=1 -uuid 51458204-52f4-4400-a335-8c491c0d2552 -device '{"driver":"vmgenid","guid":"b0b49359-2f5e-46d5-aa38-0b0e55751e06","id":"vmgenid0"}' -no-user-config -nodefaults -chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/domain-1-Kicksecure/monitor.sock,server=on,wait=off -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc -global kvm-pit.lost_tick_policy=delay -no-shutdown -global PIIX4_PM.disable_s3=1 -global PIIX4_PM.disable_s4=1 -boot strict=on -device '{"driver":"piix3-usb-uhci","id":"usb","bus":"pci.0","addr":"0x1.0x2"}' -device '{"driver":"virtio-serial-pci","id":"virtio-serial0","bus":"pci.0","addr":"0x5"}' -blockdev '{"driver":"file","filename":"/var/lib/libvirt/images/Kicksecure.qcow2","node-name":"libvirt-1-storage","auto-read-only":true,"discard":"unmap"}' -blockdev '{"node-name":"libvirt-1-format","read-only":false,"driver":"qcow2","file":"libvirt-1-storage"}' -device '{"driver":"virtio-blk-pci","bus":"pci.0","addr":"0x6","drive":"libvirt-1-format","id":"virtio-disk0","bootindex":1}' -netdev '{"type":"tap","fd":"26","vhost":true,"vhostfd":"28","id":"hostnet0"}' -device '{"driver":"virtio-net-pci","netdev":"hostnet0","id":"net0","mac":"52:54:00:33:6a:10","bus":"pci.0","addr":"0x3"}' -chardev pty,id=charserial0 -device '{"driver":"isa-serial","chardev":"charserial0","id":"serial0","index":0}' -chardev spicevmc,id=charchannel0,name=vdagent -device '{"driver":"virtserialport","bus":"virtio-serial0.0","nr":1,"chardev":"charchannel0","id":"channel0","name":"com.redhat.spice.0"}' -audiodev '{"id":"audio1","driver":"spice"}' -spice port=5901,addr=127.0.0.1,disable-ticketing=on,disable-copy-paste=on,disable-agent-file-xfer=on,seamless-migration=on -device '{"driver":"virtio-vga","id":"video0","max_outputs":1,"bus":"pci.0","addr":"0x2"}' -device '{"driver":"intel-hda","id":"sound0","bus":"pci.0","addr":"0x4"}' -device '{"driver":"hda-output","id":"sound0-codec0","bus":"sound0.0","cad":0,"audiodev":"audio1"}' -object '{"qom-type":"rng-random","id":"objrng0","filename":"/dev/urandom"}' -device '{"driver":"virtio-rng-pci","rng":"objrng0","id":"rng0","bus":"pci.0","addr":"0x7"}' -sandbox on,obsolete=deny,elevateprivileges=deny,spawn=deny,resourcecontrol=deny -msg timestamp=on
 </pre>
 
 == Kernel Direct Boot ==
@@ -679,7 +679,7 @@ sudo chmod ug+x /mnt/shared
 2. Import Kicksecure image:
 <pre>virsh -c qemu:///session define Kicksecure*.xml</pre>
 
-3. Moving the Kicksecure ™ Image File
+3. Moving the Kicksecure &trade; Image File
 <pre>mv Kicksecure*.qcow2 ~/.local/share/libvirt/images/Kicksecure.qcow2</pre>
 
 
@@ -814,7 +814,7 @@ The virtio NIC has to be explicitly specified to avoid emulated ones
 
 *Tunnels will fix the OpenVPN killswitch problems and other conflicts on host networking because of its former bridge use like corridor:
 
- Finally, it’s worth mentioning an unpleasant quirk of the UDP tunnels. They don’t use Linux interfaces, making it impossible to do simple packet capture on VM-to-VM links. QEMU does provide a traffic capture CLI command3 that saves packets into a file, and there might be a Wireshark plugin out there that strips the UDP header automatically (or you could create custom decoding rules). netlab uses a workaround: it politely tells you how to replace a UDP tunnel with a Linux bridge.
+ Finally, it's worth mentioning an unpleasant quirk of the UDP tunnels. They don't use Linux interfaces, making it impossible to do simple packet capture on VM-to-VM links. QEMU does provide a traffic capture CLI command3 that saves packets into a file, and there might be a Wireshark plugin out there that strips the UDP header automatically (or you could create custom decoding rules). netlab uses a workaround: it politely tells you how to replace a UDP tunnel with a Linux bridge.
 
 https://blog.ipspace.net/2025/02/virtual-labs-p2p-links/
 
@@ -824,7 +824,7 @@ https://blog.ipspace.net/2025/02/virtual-labs-p2p-links/
 *The complex and outdated QEMU SLiRP is a different code base than what is used to implement UDP tunnels
 
 
-*Disabling the ‘default’ network should disable dnsmasq and it was indeed the case as confirmed by ‘netstat -tulpen’. So by not creating or using a network that would use dnsmasq’s services it is never used and can be safely ignored.
+*Disabling the 'default' network should disable dnsmasq and it was indeed the case as confirmed by 'netstat -tulpen'. So by not creating or using a network that would use dnsmasq's services it is never used and can be safely ignored.
 Attempting to remove the dnsmasq-base package out right would rip the guts out of the libvrit install.
 
 <pre>
@@ -840,7 +840,7 @@ https://jamielinux.com/docs/libvirt-networking-handbook/custom-nat-based-network
 
 
 * On vhost-user vs user - factoring in performance differences between both
-UPDATE: A speed test running in WS Tor Browser gave pretty identical results. I’d prefer going for user in his case since I’m iffy about using shared memory for anything, it could very well be coded with security in mind, but still any bugs can be pretty bad.
+UPDATE: A speed test running in WS Tor Browser gave pretty identical results. I'd prefer going for user in his case since I'm iffy about using shared memory for anything, it could very well be coded with security in mind, but still any bugs can be pretty bad.
 
 
 * VSock sockets are not shared nor connectable to each other by KVM (circa 2026) and need host side sorcery with socat to route packets between them. Unsure how the security situation would compare between this setup and just using natively supported tunnels. Socat would need to be compared with peer apps on security merits and further host side confinement for it would be needed. 
@@ -869,7 +869,7 @@ Vhost-user sockets provide enhanced security by allowing a backend process to ha
 
 libvirt cannot process relative paths. I think the only easy solution that is readily implementable is to create a subdirectory under /opt/ with user accessible permissions and use that as the storage pool for QEMU sessionhttps://linuxvox.com/blog/linux-opt-folder-and-permissions/
 
-Someone on SE suggests using /srv/ instead for this purpose. Let’s decide on the cleanest way to use a generic dir for thishttps://unix.stackexchange.com/questions/70700/whats-the-most-appropriate-directory-where-to-place-files-shared-between-users#70708
+Someone on SE suggests using /srv/ instead for this purpose. Let's decide on the cleanest way to use a generic dir for thishttps://unix.stackexchange.com/questions/70700/whats-the-most-appropriate-directory-where-to-place-files-shared-between-users#70708
 
 
 
@@ -912,14 +912,14 @@ Gemini corroborates what I suspected:
 <pre>
 sVirt is not utilized when running VMs via qemu:///session.
 
-The qemu:///session URI connects to a libvirtd/virtqemud instance running under your exact user account. Consequently, the VM processes (and their disk images) share your user’s Linux permissions, bypassing mandatory access controls like SELinux or AppArmor.
+The qemu:///session URI connects to a libvirtd/virtqemud instance running under your exact user account. Consequently, the VM processes (and their disk images) share your user's Linux permissions, bypassing mandatory access controls like SELinux or AppArmor.
 
 qemu:///session (User Sessions): sVirt is disabled. VMs are isolated strictly by standard discretionary access control (file permissions). Because all VMs run as your user, a compromised VM process could theoretically access the files of any other VM running under the same user session.
 
-qemu:///system (System Sessions): sVirt is enabled. VMs run with elevated root privileges, but sVirt enforces Mandatory Access Control (MAC) using SELinux or AppArmor. It gives each VM process and its virtual disks a unique, randomized security label (e.g., svirt_t:s0:c34,c44), preventing one compromised VM from accessing another VM’s data on the host.
+qemu:///system (System Sessions): sVirt is enabled. VMs run with elevated root privileges, but sVirt enforces Mandatory Access Control (MAC) using SELinux or AppArmor. It gives each VM process and its virtual disks a unique, randomized security label (e.g., svirt_t:s0:c34,c44), preventing one compromised VM from accessing another VM's data on the host.
 </pre>
 
-Also attempting to start qemu:///session VMs with seclabel apparmor results in:“Error starting domain: unsupported configuration: Security driver model ‘apparmor’ is not available”
+Also attempting to start qemu:///session VMs with seclabel apparmor results in:"Error starting domain: unsupported configuration: Security driver model 'apparmor' is not available"
 
 We are essentially sacrificing inter vm isolation, on the otherhand qemu is on the whole running in a less privileged manner than under qemu:///system
 
@@ -958,7 +958,7 @@ allow virbr1
 allow virbr2
 
 
-Restrict the permissions of this file to make sure it can’t be edited by regular users.
+Restrict the permissions of this file to make sure it can't be edited by regular users.
 
 # chown root:libvirt /etc/qemu/bridge.conf
 # chmod 755 /etc/qemu/bridge.conf
@@ -998,7 +998,7 @@ Insecure. Therefore not using cpumodel qemu64.
 |quote=
 Important CPU features for Intel x86 hosts
 
-The following are important CPU features that should be used on Intel x86 hosts, when available in the host CPU. Some of them require explicit configuration to enable, as they are not included by default in some, or all, of the named CPU models listed above. In general all of these features are included if using “Host passthrough” or “Host model”.
+The following are important CPU features that should be used on Intel x86 hosts, when available in the host CPU. Some of them require explicit configuration to enable, as they are not included by default in some, or all, of the named CPU models listed above. In general all of these features are included if using "Host passthrough" or "Host model".
 |context=https://www.qemu.org/docs/master/system/i386/cpu.html
 }}
 
@@ -1044,7 +1044,7 @@ In order to test this you simply need to create an image with extended_l2=on, an
 
 $ qemu-img create -f qcow2 -o extended_l2=on,cluster_size=128k img.qcow2 1T
 
-And that’s all you need to do. Once the image is created all allocations will happen at the subcluster level.
+And that's all you need to do. Once the image is created all allocations will happen at the subcluster level.
 </pre>
 
 Change commit:
@@ -1138,7 +1138,7 @@ metrics https://web.archive.org/web/20220331095121/http://flyer.sis.smu.edu.sg/n
 
 [15] An Efficient User Verification System via Mouse Movements [DOI=10.1.1.220.9410] https://web.archive.org/web/20190303210911/http://www.cs.wm.edu/~hnw/paper/ccs11.pdf
 
-[16] Knowing the User’s Every Move – User Activity Tracking
+[16] Knowing the User's Every Move - User Activity Tracking
 for Website Usability Evaluation and Implicit Interaction https://www.medien.ifi.lmu.de/pubdb/publications/pub/atterer2006www/atterer2006www.pdf
 
 [17] Eliminating Fine Grained Timers in Xen https://cseweb.ucsd.edu/~bvattikonda/docs/xentimers-ccsw11.pdf
@@ -1175,7 +1175,7 @@ high accuracy achieved in limited situations - actice authentication during log-
 
 In the scenario of static verification, a user is required to perform a series of mouse movements and its mouse data is verified within a certain amount of time (e.g., login time). A good example of this scenario is a click-based graphical password for user login, where five clicks are estimated to be made in no more than 25 seconds.
 
-By contrast, in the scenario of continuous verification, a user’s mouse data is continuously collected and verified throughout the entire session. This is non-intrusive to users and meets the goal of passive monitoring. However, the frequency of user mouse actions varies significantly in different sessions. In general, the average frequency of user mouse actions will be much lower than that of the static scenario.
+By contrast, in the scenario of continuous verification, a user's mouse data is continuously collected and verified throughout the entire session. This is non-intrusive to users and meets the goal of passive monitoring. However, the frequency of user mouse actions varies significantly in different sessions. In general, the average frequency of user mouse actions will be much lower than that of the static scenario.
 
 Even for the same user at different times, the number of mouse events per unit time varies a lot. However, to the best of our knowledge, our work is the first to achieve high accuracy with a reasonably small number of mouse events.
 
@@ -1251,7 +1251,7 @@ Re-reading the article it seems the choice made is OK. The limit sets the max a 
 https://www.certdepot.net/rhel7-get-started-random-number-generator/
 
 <pre>
-Note: Just after <rng model=’virtio’>, you can add a line like <rate bytes=’1024′ period=’1000’/> to prevent a guest from consuming more than 1 KB per second of pseudo random numbers. Otherwise, one single guest could consume all the available pseudo random numbers at the expense of all the others.
+Note: Just after <rng model='virtio'>, you can add a line like <rate bytes='1024&prime; period='1000'/> to prevent a guest from consuming more than 1 KB per second of pseudo random numbers. Otherwise, one single guest could consume all the available pseudo random numbers at the expense of all the others.
 </pre>
 
 Also applied for GW since some crypto requiring operations under the control of WS processes can abuse the entropy available to it if unchecked.
@@ -1309,7 +1309,7 @@ https://unix.stackexchange.com/questions/43539/what-do-the-flags-in-proc-cpuinfo
 
 https://www.berrange.com/posts/2010/02/15/guest-cpu-model-configuration-in-libvirt-with-qemukvm/
 
-"Every hypervisor has its own policies for what a guest will see for its CPUs by default, Xen just passes through the host CPU, with QEMU/KVM the guest sees a generic model called “qemu32” or “qemu64”.  "
+"Every hypervisor has its own policies for what a guest will see for its CPUs by default, Xen just passes through the host CPU, with QEMU/KVM the guest sees a generic model called "qemu32" or "qemu64".  "
 
 cat output:
 
@@ -1455,8 +1455,8 @@ KSM security implications?
 ATTACK ON MEMORY
 DEDUPLICATION
 Memory deduplication may be subject to a memory disclosure
-attack from the attacker’s VM to the victim’s VM. The attack
-guesses a process running on a victim’s VM or a file downloaded
+attack from the attacker's VM to the victim's VM. The attack
+guesses a process running on a victim's VM or a file downloaded
 by a browser.
 Memory deduplication shares 4KB pages which have the
 same contents. When data is written to a deduplicated page, the
@@ -2007,7 +2007,7 @@ When uncompressed, upload would take ~250 hours per image. Now compressing using
 In xml file add:
 <timer name='kvmclock' present='no'/>
 
-What does KVMClock do? "kvmclock or KVM pvclock lets guests read the host’s wall clock time." This is bad. [https://rwmj.wordpress.com/2010/10/15/kvm-pvclock/ source]
+What does KVMClock do? "kvmclock or KVM pvclock lets guests read the host's wall clock time." This is bad. [https://rwmj.wordpress.com/2010/10/15/kvm-pvclock/ source]
 
 How to adjust KVM to have clock=vm on host.
 

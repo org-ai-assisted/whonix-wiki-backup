@@ -33,7 +33,7 @@ https://github.com/{{project_name_short}}/anon-ws-disable-stacked-tor/blob/maste
 
 Since {{project_name_workstation_short}} has no way to determine its own external IP address, joining Tor Browser's fingerprint for {{project_name_short}} users, and having no access to Tor's control port, Tor Button's new requirement to access the control port contradicted itself.
 
-onion-grater has been implemented as a solution. It grants {{project_name_workstation_short}} access to a limited set of Tor control port commands using whitelisting (not blacklisting). For example, it allows <code>SIGNAL NEWNYM</code>, enabling Tor Button’s New Identity feature for users running Tor Browser in {{project_name_workstation_short}}.
+onion-grater has been implemented as a solution. It grants {{project_name_workstation_short}} access to a limited set of Tor control port commands using whitelisting (not blacklisting). For example, it allows <code>SIGNAL NEWNYM</code>, enabling Tor Button's New Identity feature for users running Tor Browser in {{project_name_workstation_short}}.
 
 onion-grater limits the maximum accepted command string length to 128 (configurable), enhancing security (credits: <ref>[https://web.archive.org/web/20170222094246/https://mailman.boum.org/pipermail/tails-dev/2014-February/005041.html As done by Tails.]</ref> <ref>Thanks to HulaHoop for [<nowiki>https://www.whonix.org/old-forum/index.php/topic,342.0.html</nowiki> suggesting this].</ref>).
 
@@ -229,7 +229,7 @@ grep -r -i sendCommand *
 
 === TorButton Network Settings ===
 {{CodeSelect|code=
-TorButton → Open Network Settings...
+TorButton &rarr; Open Network Settings...
 }}
 
 Uses the following commands:
@@ -250,20 +250,20 @@ As a next logical step, they are likely to add:
    "GETCONF HTTPProxy"
 }}
 
-We are [https://github.com/{{project_name_short}}/anon-ws-disable-stacked-tor/blob/master/usr/libexec/anon-ws-disable-stacked-tor/torbrowser.sh setting] the environment variable <code>[https://gitlab.torproject.org/legacy/trac/-/issues/14100 export TOR_NO_DISPLAY_NETWORK_SETTINGS=1]</code> to disable the "TorButton" → "Open Network Settings..." menu item. It is not useful and is confusing to have on a workstation, because Tor must be configured on the gateway, and for security reasons this is forbidden from the workstation.
+We are [https://github.com/{{project_name_short}}/anon-ws-disable-stacked-tor/blob/master/usr/libexec/anon-ws-disable-stacked-tor/torbrowser.sh setting] the environment variable <code>[https://gitlab.torproject.org/legacy/trac/-/issues/14100 export TOR_NO_DISPLAY_NETWORK_SETTINGS=1]</code> to disable the "TorButton" &rarr; "Open Network Settings..." menu item. It is not useful and is confusing to have on a workstation, because Tor must be configured on the gateway, and for security reasons this is forbidden from the workstation.
 
 === TorButton issues ===
 Looking for contributor!
 
 * Say hello in the [https://forums.whonix.org/c/development {{project_name_short}} Development Forum].
 ==== Clock skew ====
-In the future, Tor Button will likely use something like [https://gitlab.torproject.org/legacy/trac/-/issues/3652 <code>GETINFO clockskew</code>]. The Tor Browser developer [https://gitlab.torproject.org/legacy/trac/-/issues/8032 rejected] the idea of adding the statement {{Code2|require no access to Tor's control port}} to Tor Browser’s design.
+In the future, Tor Button will likely use something like [https://gitlab.torproject.org/legacy/trac/-/issues/3652 <code>GETINFO clockskew</code>]. The Tor Browser developer [https://gitlab.torproject.org/legacy/trac/-/issues/8032 rejected] the idea of adding the statement {{Code2|require no access to Tor's control port}} to Tor Browser's design.
 
 Therefore, when onion-grater receives a <code>GETINFO net/listeners/socks</code> request, it lies and responds with <code>250-net/listeners/socks="127.0.0.1:9150"</code>. This satisfies Tor Button, causing it to show a "Congratulations!" (success) welcome page on its default homepage about:tor, rather than a failure page that would confuse users. Since bug [https://gitlab.torproject.org/legacy/trac/-/issues/9224 TorButton about:tor fails when using additional socks listeners] was fixed by the Tor Project, this lie is no longer technically necessary.
 
 <font size=-3>We're keeping the lie because it's unnecessary for Tor Button to retrieve the full list of all ports Tor is listening on. If an attacker compromises {{project_name_workstation_short}}, hiding that list has advantages. The attacker can only probe what ports are accessible to the compromised {{project_name_workstation_short}}. If the user has added extra ports that are not available to this compromised {{project_name_workstation_short}} (only available to another {{project_name_workstation_short}} listening on a different IP), those ports remain secret. (This is somewhat theoretical, as a compromised {{project_name_workstation_short}} could spoof its LAN IP, and very few users implement ARP spoofing defenses. Should we add ARP spoofing defenses by default in the future, this concern would become less relevant.)</font>
 
-For any future Tor control port access requirements by Tor Button, the configuration file of accepted commands will need to be extended. If Tor Button ever requests something that contradicts {{project_name_short}} design, in particular, the requirement that {{project_name_workstation_short}} must not discover its own external IP address — such as <code>GETINFO address</code>, then a new lie must be added to the onion-grater script. If many more lies become necessary, they should be moved into the configuration file; for now, hardcoding them is sufficient.
+For any future Tor control port access requirements by Tor Button, the configuration file of accepted commands will need to be extended. If Tor Button ever requests something that contradicts {{project_name_short}} design, in particular, the requirement that {{project_name_workstation_short}} must not discover its own external IP address -- such as <code>GETINFO address</code>, then a new lie must be added to the onion-grater script. If many more lies become necessary, they should be moved into the configuration file; for now, hardcoding them is sufficient.
 
 ==== Circuit View ====
 TODO: Make Tor Circuit View [[Tor_Browser/Advanced_Users#Tor_Circuit_View|screenshot]] with redacted IPs, fingerprints, and locations work with Tor Browser in {{project_name_short}} through filtered Tor control port access (onion-grater). 
@@ -361,7 +361,7 @@ The goal is not necessarily to show the actual circuits, but at least to display
 
 If someone with JavaScript knowledge could patch upstream to at least show the <code>New circuit for this site</code> button even if the credentials don't match, that would be a good start. Currently, the Tor Button either fully shows or does not show at all. A more complex improvement would be to show a helpful message when the browser fails to retrieve the correct credentials, informing users that it cannot display the circuits because it could not determine the stream.
 
-There is a lower likelihood that upstream would accept rewriting the countries and IPs of the circuits to fake data if the stream cannot be established, as that might be seen as a workaround. Nonetheless, a better user experience is needed for the Tor Circuit View. Even an error message would help non-developers or users unfamiliar with the Tor Button and Tor Browser source code understand what’s going on.
+There is a lower likelihood that upstream would accept rewriting the countries and IPs of the circuits to fake data if the stream cannot be established, as that might be seen as a workaround. Nonetheless, a better user experience is needed for the Tor Circuit View. Even an error message would help non-developers or users unfamiliar with the Tor Button and Tor Browser source code understand what's going on.
 
 Trials with onion-grater:
 

@@ -13,7 +13,7 @@ Compartmentalization. Managing multiple {{q_project_name_short}} Templates.
 }}
 = Introduction =
 
-Multiple [[Qubes|{{q_project_name_short}}]] Templates provides much greater flexibility over a single template when choosing software packages. The additional cloned templates can be customized with software to meet specific requirements; something impossible to achieve with a single Template. <ref>Optionally, the default template can be cloned and used as the default template for App Qubes. Having a “known-good” backup template available at all times is best practice.</ref>
+Multiple [[Qubes|{{q_project_name_short}}]] Templates provides much greater flexibility over a single template when choosing software packages. The additional cloned templates can be customized with software to meet specific requirements; something impossible to achieve with a single Template. <ref>Optionally, the default template can be cloned and used as the default template for App Qubes. Having a "known-good" backup template available at all times is best practice.</ref>
 
 = Rationale =
 

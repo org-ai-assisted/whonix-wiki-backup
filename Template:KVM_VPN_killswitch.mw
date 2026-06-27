@@ -24,8 +24,8 @@ Libvirt will <u>automatically</u> create these iptables rules when the Whonix-Ex
 -A FORWARD -s 10.0.2.0/24 -i virbr1 -o tun0 -j ACCEPT
 </pre>
 
-That’s it.
+That's it.
 
 If your VPN connection drops, all Whonix connectivity will die instantly, because tun0 is the only target for NAT.
 
-Thus, incoming traffic can’t reach because the the ESTABLISHED connection rule points to the internal IP of your tun0 interface (which is not assigned if the VPN drops) and outgoing doesn’t work either for the same reason.<ref>https://forums.whonix.org/t/guide-easy-fix-for-whonix-firewall-kill-switch/14449</ref>
+Thus, incoming traffic can't reach because the the ESTABLISHED connection rule points to the internal IP of your tun0 interface (which is not assigned if the VPN drops) and outgoing doesn't work either for the same reason.<ref>https://forums.whonix.org/t/guide-easy-fix-for-whonix-firewall-kill-switch/14449</ref>

@@ -254,11 +254,11 @@ Resolving www.torproject.org (www.torproject.org)... 116.202.120.165
 Connecting to www.torproject.org (www.torproject.org)|116.202.120.165|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 19623 (19K) [text/html]
-Saving to: ‘index.html’
+Saving to: 'index.html'
 
 index.html                  100%[===========================================>]  19.16K  62.3KB/s    in 0.3s
 
-2019-12-10 12:25:47 (62.3 KB/s) - ‘index.html’ saved [19623/19623]
+2019-12-10 12:25:47 (62.3 KB/s) - 'index.html' saved [19623/19623]
 </pre>
 
 = Troubleshooting =

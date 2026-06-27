@@ -124,7 +124,7 @@ When deciding on the type of bridge to configure, it is recommended to:
 * Use less well-known bridges, since it is safer. <ref>
 Some bridge addresses are freely provided by the Tor website or by email upon request, meaning adversaries likely use these methods to obtain bridge information. The Tor Project has some protection against adversary threats, but they are far from perfect.
 </ref>
-* Avoid using a meek provider that also runs DNS core servers, like Google's (now defunct) bridge. <ref>Google sees forty percent of Tor Exits' DNS traffic and so using them as a bridge aids website fingerprinting attacks. That said, there is evidence that website fingerprinting is more difficult to mount than previously thought. See: [https://nymity.ch/tor-dns/tor-dns.pdf The Effect of DNS on Tor’s Anonymity]
+* Avoid using a meek provider that also runs DNS core servers, like Google's (now defunct) bridge. <ref>Google sees forty percent of Tor Exits' DNS traffic and so using them as a bridge aids website fingerprinting attacks. That said, there is evidence that website fingerprinting is more difficult to mount than previously thought. See: [https://nymity.ch/tor-dns/tor-dns.pdf The Effect of DNS on Tor's Anonymity]
 </ref>
 * Note that domain fronting [https://blog.torproject.org/domain-fronting-critical-open-web has been pulled by Google and Amazon], limiting the meek pluggable transport options to <code>meek_azure</code> only in Anon Connection Wizard.
 * For greater safety, use a {{Code2|private obfuscated bridge}} run by a trusted friend or organization in a different country. In this case "{{Code2|private}}" means that the bridge is configured with the option {{Code2|PublishServerDescriptor 0}}. <ref>
@@ -357,7 +357,7 @@ You can follow the Whonix forum thread related to this guide:
 Snowflake is: <ref>
 https://gitlab.torproject.org/legacy/trac/-/wikis/doc/Snowflake
 </ref>
-<blockquote>...a [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/PluggableTransports pluggable transport] that proxies traffic through temporary proxies using ​[https://webrtc.org/ WebRTC], a peer-to-peer protocol with built-in NAT punching. It aims to work kind of like flash proxy, but without flash proxy's problems with NAT.</blockquote>
+<blockquote>...a [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/PluggableTransports pluggable transport] that proxies traffic through temporary proxies using &#8203;[https://webrtc.org/ WebRTC], a peer-to-peer protocol with built-in NAT punching. It aims to work kind of like flash proxy, but without flash proxy's problems with NAT.</blockquote>
 
 === Setup Snowflake ===
 
@@ -657,15 +657,15 @@ Further investigation of the GFW active probing system in 2015 revealed: <ref>ht
 * The GFW sensor is unable to reassemble TCP streams.
 
 In 2019, The Tor Project noted: <ref>https://blog.torproject.org/new-release-bridgedb-071</ref>
-<blockquote>When the Great Firewall's active probing attack discovered a bridge, the GFW used to block the bridge by its IP address ''and'' port, which conveniently left other transport protocols that ran on the same IP address, say obfs4, reachable. This behavior changed recently, and bridges are now blocked by their IP address. This means that a protocol that is vulnerable to the GFW’s active probing attack (e.g., vanilla Tor, fte, and obfs3) can get the entire bridge blocked—including obfs4, which is resistant to active probing! The new BridgeDB release addresses this issue by only handing out a bridge’s probing-resistant protocols if the bridge supports protocols that are both vulnerable ''and'' resistant to active probing. For example, if a bridge supports both vanilla Tor and obfs4, then we ''only'' hand obfs4 to users.</blockquote>
+<blockquote>When the Great Firewall's active probing attack discovered a bridge, the GFW used to block the bridge by its IP address ''and'' port, which conveniently left other transport protocols that ran on the same IP address, say obfs4, reachable. This behavior changed recently, and bridges are now blocked by their IP address. This means that a protocol that is vulnerable to the GFW's active probing attack (e.g., vanilla Tor, fte, and obfs3) can get the entire bridge blocked--including obfs4, which is resistant to active probing! The new BridgeDB release addresses this issue by only handing out a bridge's probing-resistant protocols if the bridge supports protocols that are both vulnerable ''and'' resistant to active probing. For example, if a bridge supports both vanilla Tor and obfs4, then we ''only'' hand obfs4 to users.</blockquote>
 
 Research suggests [https://www.cs.kau.se/philwint/scramblesuit/ ScrambleSuit] and [https://github.com/Yawning/obfs4/blob/master/doc/obfs4-spec.txt obfs4] can successfully defend against probing attacks, but their ongoing effectiveness will remain an open research question. The take-home message is that {{project_name_short}} users in heavily censored nations like China and Iran will require an obfs4 bridge or other probe-resistant protocols to try and circumvent censorship.
 
 For further reading on this topic, see:
 * [https://ensa.fi/active-probing/imc2015.pdf Examining How the Great Firewall Discovers Hidden Circumvention Servers]
-* [https://aaltodoc.aalto.fi/bitstream/handle/123456789/102539/master_Liubinskii_Pavel_2021.pdf?sequence=1&isAllowed=y The Great Firewall’s active probing circumvention technique with portknocking and SDN]
+* [https://aaltodoc.aalto.fi/bitstream/handle/123456789/102539/master_Liubinskii_Pavel_2021.pdf?sequence=1&isAllowed=y The Great Firewall's active probing circumvention technique with portknocking and SDN]
 * [https://medium.com/mobile-asia/demystifying-the-great-firewall-of-china-22f4a97550cc Demystifying the Great Firewall of China]
-* [https://www.usenix.org/system/files/conference/foci18/foci18-paper-dunna.pdf Analyzing China’s Blocking of Unpublished Tor Bridges]
+* [https://www.usenix.org/system/files/conference/foci18/foci18-paper-dunna.pdf Analyzing China's Blocking of Unpublished Tor Bridges]
 * [https://www.cs.kau.se/philwint/gfw/ How the Great Firewall of China is Blocking Tor]
 * [https://censorbib.nymity.ch/pdf/Frolov2020a.pdf Detecting Probe-resistant Proxies]
 

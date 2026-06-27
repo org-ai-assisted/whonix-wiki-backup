@@ -1,7 +1,7 @@
 {{Header}}
 {{Title|title=
 Protocol Leak and Fingerprinting Protection
-‎}}
+&lrm;}}
 {{#seo:
 |description=Protection from IP Leaks, DNS Leaks, Protocol Leaks and Fingerprinting. Analysis of host hardware identifiers visible or hidden inside virtual machines.
 |image=Leakprotection-840835.jpg
@@ -490,7 +490,7 @@ The same question rephrased in more technical terms: should identifiers such as 
 https://github.com/Whonix/dist-base-files
 </ref> It may be possible to argue for either option. However, upon consideration, it seems clear that A) offers greater privacy in the context of how {{project_name_short}} is used.
 
-The threat model being considered here is that some software inside {{project_name_workstation_short}} might read system identifiers — such as the machine ID — and send them to a remote server. That remote server could then use this identifier to recognize or track users. This type of software can be described as privacy-invasive or, in more severe cases, malicious.
+The threat model being considered here is that some software inside {{project_name_workstation_short}} might read system identifiers -- such as the machine ID -- and send them to a remote server. That remote server could then use this identifier to recognize or track users. This type of software can be described as privacy-invasive or, in more severe cases, malicious.
 
 Choosing option A) does mean that the machine ID reveals, "this is a {{project_name_short}} system." However, avoiding this kind of leakage is realistically not possible. For a deeper explanation, refer to the [[VM Fingerprinting]] page and the {{kicksecure_wiki
 |wikipage=System_identity_camouflage
@@ -505,7 +505,7 @@ There is also a trade-off between two goals: complete resistance to fingerprinti
 
 When not using virtual machines (VMs),  privacy-invasive software running on the host system has even greater ability to fingerprint users, because it can directly access hardware identifiers such as serial numbers, MAC addresses, or CPU features.
 
-For a related wiki page on identifiers, see: [[Protocol-Leak-Protection_and_Fingerprinting-Protection|Protocol Leak Protection and Fingerprinting Protection‎]].
+For a related wiki page on identifiers, see: [[Protocol-Leak-Protection_and_Fingerprinting-Protection|Protocol Leak Protection and Fingerprinting Protection&lrm;]].
 
 Discussions:
 
@@ -2247,7 +2247,7 @@ get-edid: get-edid version 2.0.0
 
         Performing real mode VBE call
         Interrupt 0x10 ax=0x4f00 bx=0x0 cx=0x0
-halt_sys: file ��y�*+, line -1216758308
+halt_sys: file &#65533;&#65533;y&#65533;*+, line -1216758308
         Function unsupported
         Call successful
 
@@ -2259,7 +2259,7 @@ VBE/DDC service about to be called
 
         Performing real mode VBE call
         Interrupt 0x10 ax=0x4f15 bx=0x0 cx=0x0
-halt_sys: file ��y�*+, line -1216720908
+halt_sys: file &#65533;&#65533;y&#65533;*+, line -1216720908
         Function unsupported
         Call successful
 
@@ -2270,7 +2270,7 @@ VBE/DDC service about to be called
 
         Performing real mode VBE call
         Interrupt 0x10 ax=0x4f15 bx=0x1 cx=0x0
-halt_sys: file ��y�*+, line -1216720908
+halt_sys: file &#65533;&#65533;y&#65533;*+, line -1216720908
         Function unsupported
         Call successful
 

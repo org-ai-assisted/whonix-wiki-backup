@@ -26,7 +26,7 @@ Take careful note of the following issues when using standard, common http(s)/SO
 * If state-level censorship of the Tor network must be circumvented, then a better solution may be [[Bridges]] or other [[Lantern|alternative]] [[Anon_Connection_Wizard|circumvention]] [[Censorship_Circumvention_Tools|tools]]. <ref>Users in China are [https://web.archive.org/web/20171218203107/https://www.cs.uml.edu/~xinwenfu/paper/Bridge.pdf unlikely to circumvent government censorship] with vanilla bridges, as they are uniformly blocked. That said, Anon Connection Wizard configured with the <code>meek-amazon</code> or <code>meek-azure</code> pluggable transport was reported to bypass Chinese censorship in late 2017. Unfortunately the <code>meek-amazon</code> pluggable transport was [https://gitlab.torproject.org/legacy/trac/-/issues/26098 deprecated in 2018] after Amazon removed the domain fronting option.</ref>
 * Be especially careful with http(s) proxies. Some of them send the [[Whonix_versus_Proxies#Summary|<code>X-Forwarded-For</code>]] header which discloses the IP address. http(s) proxies that do not send this header are sometimes called "elite" or "anonymous" proxies.
 * When using <code>X-Forwarded-For</code> http(s) proxies, Tor entry guards and Tor [[Bridges|bridges]] can determine the IP address.
-* The unencrypted nature of proxies makes them unsuitable to hide Tor from destination websites. For simple IP logging / IP detection they might work unless they’re http(s) proxies and send the <code>X-Forwarded-For</code> header.
+* The unencrypted nature of proxies makes them unsuitable to hide Tor from destination websites. For simple IP logging / IP detection they might work unless they're http(s) proxies and send the <code>X-Forwarded-For</code> header.
 
 For further detailed information on proxies, see: [[Whonix_versus_Proxies|Tor vs. Proxies, Proxy Chains]].
 }}
@@ -119,9 +119,9 @@ Socks5ProxyPassword password
 
 FascistFirewall 0|1
 
-ReachableAddresses ADDR[/MASK][:PORT]…
-ReachableDirAddresses ADDR[/MASK][:PORT]…
-ReachableORAddresses ADDR[/MASK][:PORT]…
+ReachableAddresses ADDR[/MASK][:PORT]...
+ReachableDirAddresses ADDR[/MASK][:PORT]...
+ReachableORAddresses ADDR[/MASK][:PORT]...
 </pre>
 
 '''3.''' {{Reload_Tor}}

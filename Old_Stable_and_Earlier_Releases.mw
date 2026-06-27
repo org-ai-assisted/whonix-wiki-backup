@@ -1223,7 +1223,7 @@ As {{project_name_short}} is now a rolling distribution, users will benefit from
 
 ptrace will allow the Tor Browser to modify and inspect other running processes.
 
-sys_admin will allow the Tor Browser to do a whole load of things that it probably shouldn’t be able to.
+sys_admin will allow the Tor Browser to do a whole load of things that it probably shouldn't be able to.
 
 sys_chroot will allow the Tor Browser to chroot which can make an attacker able to put a setuid program inside a chroot jail with a fake /etc/passwd and /etc/shadow which can fool it into giving it root access.</blockquote></ref>
 * Amended the Tor Browser AppArmor profiles so 8.* versions correctly launch. <ref>https://forums.whonix.org/t/tor-browser-8-wont-launch/5863</ref> <ref>https://github.com/Kicksecure/apparmor-profile-torbrowser/commit/5b1550cc51d73652d63af1fd010d9beb34e2069e</ref>
@@ -1542,7 +1542,7 @@ Other AppArmor improvements:
 * Added <code>/usr/lib/anon-gw-anonymizer-config/edit-etc-resolv-conf</code> as another part of fixing meek lite in {{project_name_short}}. <ref>See: [https://forums.whonix.org/t/whonix-gateway-cli-15-0-1-5-4-meek-azure-bridge-tls-error/11383 Whonix Gateway CLI-15.0.1.5.4 - meek-azure bridge "TLS_ERROR"].</ref> <ref>https://github.com/Kicksecure/anon-connection-wizard/commit/2b33df7e051a2d7426b6312ecc9a128f7e7ffa95</ref>
 * Fixed <code>anon-connection-wizard</code> truncated text.
 * Fixed a bug in Whonix <code>15.0.0.8.9</code> where <code>anon-connection-wizard</code> added %include /etc/torrc.d/95_whonix.conf to <code>/etc/tor/torrc</code> configuration file even though Whonix was already ported to %include /etc/torrc.d/
-* Fixed some “unknown connection tag” messages in Whonix-Gateway.
+* Fixed some "unknown connection tag" messages in Whonix-Gateway.
 * Fixed default bridges. <ref>https://github.com/Kicksecure/anon-connection-wizard/commit/56cdf3e3de1753f61827cf402116357b3292a80b</ref> <ref>https://forums.whonix.org/t/anon-connection-wizard-crash/11782</ref>
 
 [https://github.com/whonix/anon-gw-anonymizer-config <code>anon-gw-anonymizer-config</code>]:
@@ -1550,7 +1550,7 @@ Other AppArmor improvements:
 * Partial meek lite fix in {{project_name_short}} -- added <code>/usr/lib/anon-gw-anonymizer-config/edit-etc-resolv-conf</code>. <ref>https://github.com/Whonix/anon-gw-anonymizer-config/commit/3242a0fc37b24847a6168cd7563af9ab582dbb4a</ref> <ref>See forum threads: [https://forums.whonix.org/t/censorship-circumvention-tor-pluggable-transports/2601/9  censorship circumvention / Tor pluggable transports] and [https://forums.whonix.org/t/whonix-gateway-cli-15-0-1-5-4-meek-azure-bridge-tls-error/11383 Whonix Gateway CLI-15.0.1.5.4 - meek-azure bridge "TLS_ERROR" ].</ref>
 
 [https://github.com/whonix/anon-meta-packages <code>anon-meta-packages</code>]:
-* Fixed ristretto missing thumbnails and popup by installing tumbler by default -- added “Depends: tumbler” to <code>whonix-workstation-packages-recommended-gui</code> <ref>https://github.com/whonix/anon-meta-packages/commit/0ad99f40b5496bf4ddb38aa5aa8ec42e6d923075</ref> <ref>tumbler is a “Recommends:” of ristretto.</ref> <ref>[https://forums.whonix.org/t/which-image-viewer-to-install-by-default/9268/3  Which image viewer to install by default?]</ref>
+* Fixed ristretto missing thumbnails and popup by installing tumbler by default -- added "Depends: tumbler" to <code>whonix-workstation-packages-recommended-gui</code> <ref>https://github.com/whonix/anon-meta-packages/commit/0ad99f40b5496bf4ddb38aa5aa8ec42e6d923075</ref> <ref>tumbler is a "Recommends:" of ristretto.</ref> <ref>[https://forums.whonix.org/t/which-image-viewer-to-install-by-default/9268/3  Which image viewer to install by default?]</ref>
 * OnionShare is no longer installed by default. <ref>https://github.com/whonix/anon-meta-packages/commit/3e0d2bdceea7046e1120e289e0077d3127057ee5</ref> Debian <code>buster</code> -- which {{project_name_short}} 15 is based on -- packages version <code>1.3.2</code>. This only supports legacy v2 onions which are being [https://blog.torproject.org/v2-deprecation-timeline phased out and deprecated on July 15th, 2021]. <ref>https://lists.torproject.org/pipermail/tor-dev/2020-May/014322.html</ref> <ref>[https://forums.whonix.org/t/onionshare-whonix-integration-development-discussion/300 OnionShare Whonix integration development discussion].</ref> The [[OnionShare|Flatpak installation method]] is recommended at this time.
 * Bumped <code>python-msgpack</code> to python3. ZeroNet now uses python3 and python2 is removed from Debian as of <code>bullseye</code>. <ref>https://github.com/whonix/anon-meta-packages/commit/d95f9ec9333591ad1edd100662c5a71b5cd66f9b</ref>
 * Split the repository-dist GUI / CLI dependencies. <ref>https://github.com/whonix/anon-meta-packages/commit/7fa7f26037976fea5b48bb1852d7caa5809e3ee2</ref> <ref>https://forums.whonix.org/t/kicksecure-minimal-version/11613/4</ref>
@@ -1570,7 +1570,7 @@ Various fixes for [[I2p|I2P]] inside Whonix-Workstation: <ref>https://forums.who
 * Remove SecBrowser code since it is deprecated. <ref>https://github.com/Kicksecure/open-link-confirmation/commit7c8fce21d7146a370adbd3073f25b4602901b813</ref>
 
 [[Qubes-Whonix]]:
-* Enabled a workaround for a Qubes (Xen) Monero bug - “Automatic fallback to softwarecontext renderer”.
+* Enabled a workaround for a Qubes (Xen) Monero bug - "Automatic fallback to softwarecontext renderer".
 * <code>sdwdate-gui</code>: Fixed an unwanted automatic restart of Qubes-Whonix-Workstation after shutdown and no longer qrexec notify self on shutdown.
 * Fixed a msgcollector sudoers issue when <code>qubes-core-agent-passwordless-root</code> package was removed.
 * <code>vm-config-dist</code> is now installed in {{q_project_name_short}} so the QMLSCENE_DEVICE=softwarecontext workaround is available. <ref>https://github.com/whonix/anon-meta-packages/commit/4e6db57c3fba6329dd1f23818523e43fa4e1e98d</ref>
@@ -1600,7 +1600,7 @@ Various fixes for [[I2p|I2P]] inside Whonix-Workstation: <ref>https://forums.who
 * During package upgrades of <code>anon-gw-anonymizer-config</code>, avoid moving <code>/etc/torrc.d/95_whonix.conf</code> to <code>/etc/torrc.d/backup/95_whonix.conf.dpkg-new</code>. <ref>https://github.com/Whonix/anon-gw-anonymizer-config/commit/97baabc4b71abf6395ef0d1815cd63e74b7da050</ref>
 
 [https://github.com/whonix/whonix-firewall <code>whonix-firewall</code>]:
-* Miscellenous improvements. <ref>[https://github.com/Whonix/whonix-firewall/compare/a8ceb10498b48b70110593c41dab95f11cb9c4fb...16932a004befd1b2c175648f29e6eb77c42f2cc5  fix, don’t lock down network if IPv6 isn’t available and thereby no need to firewall, apparmor profile added in complain mode].</ref>
+* Miscellenous improvements. <ref>[https://github.com/Whonix/whonix-firewall/compare/a8ceb10498b48b70110593c41dab95f11cb9c4fb...16932a004befd1b2c175648f29e6eb77c42f2cc5  fix, don't lock down network if IPv6 isn't available and thereby no need to firewall, apparmor profile added in complain mode].</ref>
 * Remove deprecated variable <code>SOCKS_PORT_TBB_GPG</code>. <ref>https://github.com/Whonix/whonix-firewall/commit/24dd32c992a426c43d08e972fb8004614a314f75</ref>
 * Whonix-Gateway firewall: implemented <code>INTERNAL_OPEN_PORTS</code>.
 * Deprecated support for <code>SOCKS_PORT_CUSTOM=" 9230 "</code> syntax; use <code>INTERNAL_OPEN_PORTS+=" 9230 "</code> instead.
@@ -1618,7 +1618,7 @@ Other fixes:
 * Implemented a <code>command-not-found</code> permission fix to avoid the ''WARNING:root:could not open file '/etc/apt/sources.list''' message. <ref>https://github.com/Kicksecure/legacy-dist/commit/4202681132b1f0307cc95ceb3a1ca231fe6d9b3d</ref> <ref>https://forums.whonix.org/t/command-not-found-warningcould-not-open-file-etc-apt-sources-list/7903</ref>
 * Fixed the bug parsing <code>torrc.d</code> twice.
 * Added <code>x11-xserver-utils</code> to <code>kicksecure-desktop-environment-essential-gui</code> to fix Xfce logout button. <ref>[https://forums.whonix.org/t/whonix-host-operating-system/3931/109 Whonix host operating system]</ref>
-* Disabled <code>vm.unprivileged_userfaultfd=0</code> because it is currently broken. <ref>[https://forums.whonix.org/t/kernel-hardening/7296/406 Kernel Hardening]</ref> <ref>Reverts “Restrict the userfaultfd() syscall to root as it can make heap sprays easier.”</ref> <ref>https://duasynt.com/blog/linux-kernel-heap-spray</ref>
+* Disabled <code>vm.unprivileged_userfaultfd=0</code> because it is currently broken. <ref>[https://forums.whonix.org/t/kernel-hardening/7296/406 Kernel Hardening]</ref> <ref>Reverts "Restrict the userfaultfd() syscall to root as it can make heap sprays easier."</ref> <ref>https://duasynt.com/blog/linux-kernel-heap-spray</ref>
 * pkexec wrapper: fixed gdebi / synaptic but at the cost of checking for passwordless sudo /etc/suders /etc/sudoers.d exceptions. <ref>[https://forums.whonix.org/t/cannot-use-pkexec/8129/53 cannot use pkexec]</ref>
 * SecBrowser / i2pbrowser: no longer use firejail by default even if installed since it is not currently  maintained by a contributor in Whonix / Kicksecure.
 * Fixed an onioncircuits error report related to user permissions. <ref><blockquote>disksd[572]: failed to load module crypto: libbd_crypto.so.2: cannot open shared object file: No such file or directory</blockquote></ref> <ref>[https://forums.whonix.org/t/onion-circuits-does-not-appear-in-the-tor-control-panel/8838 onioncircuits started from tor-control-panel by running it under user debian-tor rather than root].</ref>
@@ -1646,7 +1646,7 @@ Other fixes:
 ** Tor Browser Updater by Whonix Developers gpg key download (9116) <ref>The key is now hardcoded in package source code.</ref>
 ** Tor Messenger (9153)
 * Installation no longer requires auditd by default. <ref>https://github.com/Whonix/anon-gw-anonymizer-config/commit/520f232dd68dafd9e66f0c78a37ebc3223d691c0</ref> <ref>https://phabricator.whonix.org/T537</ref>
-* [https://github.com/Kicksecure/kicksecure-meta-packages <code>kicksecure-meta-packages</code>]: Fixed missing ristretto thumbnails and popup by installing tumbler by default -- this adds “Depends: tumbler” to <code>whonix-workstation-packages-recommended-gui</code>. <ref>https://github.com/Kicksecure/kicksecure-meta-packages/commit/493155ea1b77c22b3e0e4749105503b42f03d2c7</ref> <ref>tumbler is a “Recommends:” of ristretto.</ref> <ref>[https://forums.whonix.org/t/which-image-viewer-to-install-by-default/9268/3 Which image viewer to install by default?]</ref>
+* [https://github.com/Kicksecure/kicksecure-meta-packages <code>kicksecure-meta-packages</code>]: Fixed missing ristretto thumbnails and popup by installing tumbler by default -- this adds "Depends: tumbler" to <code>whonix-workstation-packages-recommended-gui</code>. <ref>https://github.com/Kicksecure/kicksecure-meta-packages/commit/493155ea1b77c22b3e0e4749105503b42f03d2c7</ref> <ref>tumbler is a "Recommends:" of ristretto.</ref> <ref>[https://forums.whonix.org/t/which-image-viewer-to-install-by-default/9268/3 Which image viewer to install by default?]</ref>
 
 === Builds ===
 
@@ -1728,7 +1728,7 @@ Other changes:
 * Wrote [[Dev/VirtualBox|VirtualBox developer documentation]] on VirtualBox Licensing Issues, unavailable in Debian main and Debian backports, missing features, VirtualBox security and arguments for keeping VirtualBox Support.
 * Documented [[Onion_Services#Step_3:_Configure_Onion_Services_Authentication|Onion Services Authentication]] for v3 onions.
 * Researched and documented [[Dev/Entropy|entropy / randomness generation]].
-* Rebranded Whonix as a research project. <ref>https://forums.whonix.org/t/whonix-experimental-for-how-long/5206/6</ref> <ref>Old: “Whonix is experimental software. Do not rely on it for strong anonymity.” New: “Whonix is a research project.”</ref>
+* Rebranded Whonix as a research project. <ref>https://forums.whonix.org/t/whonix-experimental-for-how-long/5206/6</ref> <ref>Old: "Whonix is experimental software. Do not rely on it for strong anonymity." New: "Whonix is a research project."</ref>
 * Added [[Vanguards|vanguards documentation]]. <ref>[https://forums.whonix.org/t/vanguards-additional-protections-for-tor-onion-services/8064/11 vanguards - Additional protections for Tor Onion Services]</ref>
 * Added [[Security-misc|security-misc documentation]] for [https://github.com/Kicksecure/security-misc#enhances-miscellaneous-security-settings stable security features], testing security features and experimental security features.
 * Documented how to create and use a [[One_Time_Pad|Physical One-time Pad]] for unbreakable message or email encryption (perfect secrecy).
@@ -1785,7 +1785,7 @@ Multiple wiki improvements/enhancements:
 * Updated to Debian v3 onion sources: <code>https://onion.debian.org</code> <ref>https://github.com/Kicksecure/anon-apt-sources-list/commit/e3a261a3ab032f964c65c47a3187d6f4624f01f4</ref>
 
 [https://github.com/Kicksecure/anon-connection-wizard <code>anon-connection-wizard</code>]:
-* Updated the default bridges in <code>anon-connection-wizard</code> from The Tor Project <ref>https://gitweb.torproject.org/builders/tor-browser-build.git/tree/projects/tor-browser/Bundle-Data/PTConfigs/bridge_prefs.js</ref> and removed ‘-max 3’ from the snowflake command.
+* Updated the default bridges in <code>anon-connection-wizard</code> from The Tor Project <ref>https://gitweb.torproject.org/builders/tor-browser-build.git/tree/projects/tor-browser/Bundle-Data/PTConfigs/bridge_prefs.js</ref> and removed '-max 3' from the snowflake command.
 * Removed the deprecated <code>obfs3</code> bridges option from Anon Connection Wizard.
 
 <code>anon-consensus-delete</code>:
@@ -1799,8 +1799,8 @@ Multiple wiki improvements/enhancements:
 
 [[Tor#Configuration_Check|anon-verify]]:
 * Report extraneous Tor configuration files (files that do not end with file extension .conf).
-* Ignore file names starting with dot (.) <ref>Quote Tor manual: ‘Files starting with a dot are ignored.’</ref>
-* Ignore subfolders when using %include /path/to/folder <ref>Quote Tor manual: ‘Files on subfolders are ignored.’</ref>
+* Ignore file names starting with dot (.) <ref>Quote Tor manual: 'Files starting with a dot are ignored.'</ref>
+* Ignore subfolders when using %include /path/to/folder <ref>Quote Tor manual: 'Files on subfolders are ignored.'</ref>
 * Fix checking of all files in <code>torrc.d</code> folders for issues.
 
 [https://github.com/Kicksecure/binaries-freedom <code>binaries-freedom</code>]:
@@ -1838,11 +1838,11 @@ Multiple wiki improvements/enhancements:
 
 Onion services authentication: <ref>[https://forums.whonix.org/t/onion-services-authentication/975 Onion Services Authentication]</ref>
 * Created a [https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-auth-autogen.8.ronn anon-auth-autogen(8) Tor Authenticated Onion Service Configuration Generator].
-* Created a [https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-server-to-client-install.8.ronn anon-server-to-client-install(8) Tor Authenticated Onion Service “.auth_private” file (private key) Server to Client Installer].
+* Created a [https://github.com/Whonix/anon-gw-anonymizer-config/blob/master/man/anon-server-to-client-install.8.ronn anon-server-to-client-install(8) Tor Authenticated Onion Service ".auth_private" file (private key) Server to Client Installer].
 
 [https://github.com/Kicksecure/sdwdate-gui <code>sdwdate-gui</code>]:
 * Ported from <code>tor-control-status</code> <code>tor_status</code> to <code>anon-connection-wizard</code> and fixed minor confusing log output. <ref>https://forums.whonix.org/t/full-system-apparmor-policy-testers-wanted/10381/83</ref> <ref>https://github.com/Kicksecure/sdwdate-gui/commit/b0aef886b6eda84e9d787868f10b0f105402863b</ref>
-* Disabled systemxcheck “Connecting to Tor…” and “Connected to Tor.” messages in favor of <code>sdwdate-gui</code>. <ref>whonixcheck connectivity check code checks Tor as well as sdwdate. Due to slow Tor/onion speed it often times out. Improving that code is difficult, so sdwdate-gui is used instead as a solution that provides better visual feedback to users.</ref>
+* Disabled systemxcheck "Connecting to Tor..." and "Connected to Tor." messages in favor of <code>sdwdate-gui</code>. <ref>whonixcheck connectivity check code checks Tor as well as sdwdate. Due to slow Tor/onion speed it often times out. Improving that code is difficult, so sdwdate-gui is used instead as a solution that provides better visual feedback to users.</ref>
 
 [https://github.com/Kicksecure/security-misc <code>security-misc</code>]:
 * Implemented systemd <code>RemainAfterExit=yes</code> for better usability. <ref>https://github.com/Kicksecure/security-misc/commit/41734ec523eb3cd233fe4651b9807222c8ccb1d5</ref> <ref>[https://forums.whonix.org/t/restrict-hardware-information-to-root-testers-wanted/8618/33 Restrict Hardware Information to Root - Testers Wanted!]</ref>
@@ -1867,8 +1867,8 @@ Onion services authentication: <ref>[https://forums.whonix.org/t/onion-services-
 
 [https://github.com/Kicksecure/tb-updater <code>tb-updater</code>]:
 * Upgraded Tor Browser to version 10 and later releases in this series.
-* Set alpha tbb_hardcoded_version=“10.5a16”. <ref>https://github.com/Kicksecure/tb-updater/commit/6900f4d100a8b71572f055a61bec557fa633c5ce</ref>
-* Set tbb_hardcoded_version=“10.0.18”. <ref>https://github.com/Kicksecure/tb-updater/commit/1bf4af07d859c89c66880d7376c1707841022b77</ref>
+* Set alpha tbb_hardcoded_version="10.5a16". <ref>https://github.com/Kicksecure/tb-updater/commit/6900f4d100a8b71572f055a61bec557fa633c5ce</ref>
+* Set tbb_hardcoded_version="10.0.18". <ref>https://github.com/Kicksecure/tb-updater/commit/1bf4af07d859c89c66880d7376c1707841022b77</ref>
 * Utilize the Heikki Lindholm GPG signing key for digital signature verification of <code>arm64</code> builds from sourceforge.net created by Heikki Lindholm. <ref>https://forums.whonix.org/t/arm64-tor-browser-maintainer/11786</ref> <ref>https://github.com/Kicksecure/tb-updater/commit/e0ad939dc0d8978198d0a85df6f2ff63947c0f6c</ref>
 * Added the Heikki Lindholm GPG signing key for <code>arm64</code> builds. <ref>https://forums.whonix.org/t/arm64-tor-browser-maintainer/11786</ref> <ref>https://github.com/Kicksecure/tb-updater/commit/129ee59b2768b902b6ad6f8ff58fc738ab3b3c02</ref>
 * Created an <code>arm64</code> port. <ref>https://github.com/Kicksecure/tb-updater/commit/285fa1a3569395a722486cb80a999e3d370efdcb</ref>
@@ -1900,7 +1900,7 @@ Onion services authentication: <ref>[https://forums.whonix.org/t/onion-services-
 * Added UTM configs. <ref>https://github.com/Kicksecure/libvirt-dist/commit/f88e3b3876e5ed11b998fd7502ccaade4a57789f</ref>
 
 Other changes:
-* Added support for OnionShare “bundled Tor”.
+* Added support for OnionShare "bundled Tor".
 * Packaged <code>str_replace</code> for literal search and replace functions.
 * Display the pulseaudio plugin by default.
 * Added <code>arc-theme</code>, <code>gnome-themes-extra</code>, <code>gnome-themes-extra-data</code> and <code>gtk2-engines-murrine</code> for better visual presentation and a more modern look.
@@ -1930,19 +1930,19 @@ Other changes:
 * Permit Tor Browser to show improved error pages for onion service errors.
 * Whonix-Workstation Firewall: added a configuration option <code>firewall_allow_udp=true</code> to allow outgoing UDP.
 * <code>anon-apps-config</code>: Skip setting timezone to UTC if file <code>/etc/noutc</code> or <code>/usr/local/etc/noutc</code> exists.
-* whonixcheck now warns if <code>dmesg</code> contains “Bad RAM detected”.
+* whonixcheck now warns if <code>dmesg</code> contains "Bad RAM detected".
 * Added a DVD drive by default for Whonix-Custom-Workstation. <ref>This avoids a grave usability issue whereby users cannot choose ISO in VirtualBox first start wizard (which asks for which ISO to boot).</ref> <ref>https://forums.whonix.org/t/no-longer-add-virtual-dvd-drive-to-vm-by-default/9337</ref>
 * Created a [https://forums.whonix.org/t/constrained-system-resources-program-starter-wrapper/10914 constrained system resources program starter wrapper] which is useful to run applications with limited system resources.
 * Implemented an <code>apt-get-reset</code> command for improved usability. <ref>https://github.com/Kicksecure/usability-misc/commit/d8a390c2c546e560c9b31c483b9ab4bcc1f0b067</ref>
 * <code>whonix-welcome-page</code>: added a link to https://web.archive.org/https://t.me/s/Whonix_
-* Added <code>gpg-dearmor</code>. <ref>https://github.com/Kicksecure/helper-scripts/commit/5ffcd6d28454195889c8dd208a35a5d405524430</ref> This is a wrapper to convert to GPG ASCII-armored format binary format. <ref>Due to apt-key deprecation by Debian. Only GPG binary format is understood by Debian’s APT; see: [https://forums.whonix.org/t/apt-key-deprecation-apt-2-2-changes/11240 apt-key Deprecation / Apt 2.2 changes].</ref>.
+* Added <code>gpg-dearmor</code>. <ref>https://github.com/Kicksecure/helper-scripts/commit/5ffcd6d28454195889c8dd208a35a5d405524430</ref> This is a wrapper to convert to GPG ASCII-armored format binary format. <ref>Due to apt-key deprecation by Debian. Only GPG binary format is understood by Debian's APT; see: [https://forums.whonix.org/t/apt-key-deprecation-apt-2-2-changes/11240 apt-key Deprecation / Apt 2.2 changes].</ref>.
 
 === Kernel and Related Hardening ===
 
 Significant [https://forums.whonix.org/t/kernel-hardening/7296/140 kernel] and other security hardening has been implemented; numerous enhancements have been made to [https://github.com/Kicksecure/security-misc security-misc]: <ref>https://github.com/Kicksecure/security-misc/compare/a99dfd067ac8a43bdcd779cf57b3533bdaa404fb...163e20b886f298cb9d3aca54c14f66991001b396</ref>
 * Enabled kernel panic on kernel oops after boot, see: [https://forums.whonix.org/t/set-oops-panic-kernel-parameter-or-kernel-panic-on-oops-1-sysctl-for-better-security/7713 set oops=panic kernel parameter or kernel.panic_on_oops=1 sysctl for better security].
 * Enabled <code>pam_umask.so</code> usergroups, so group permissions are the same as user permissions. <ref>By default, Debian utilizes [https://wiki.debian.org/UserPrivateGroups User Private Groups (UPG)]. Also see: <code>/usr/share/pam-configs/usergroups-security-misc</code></ref>
-* Removed read, write and execute access for others for all users who have home folders under folder /home. <ref>For example, this affects those running “chmod o-rwx /home/user” during package installation or an upgrade.</ref> <ref>This is only performed once for each folder in the parent /home folder, so users who wish to relax file permissions can do so. This action protects files in the user's home folder which were previously created with lax file permissions prior to the installation of this package.</ref>
+* Removed read, write and execute access for others for all users who have home folders under folder /home. <ref>For example, this affects those running "chmod o-rwx /home/user" during package installation or an upgrade.</ref> <ref>This is only performed once for each folder in the parent /home folder, so users who wish to relax file permissions can do so. This action protects files in the user's home folder which were previously created with lax file permissions prior to the installation of this package.</ref>
 * Group sudo membership is required to use <code>su</code>.
 * [[Root#Passwordless_Recovery_Mode_Security_Discussion|Passwordless]], [[Recovery|recovery / emergency mode]] has been implemented.
 * Lock user accounts with <code>pam_tally2</code> after five failed authentication attempts are detected. <ref>See: [[Recovery#Unlock_User_Account:_Excessive_Wrong_Password_Entry_Attempts|unlock instructions]]. This means it is possible to have short, easy-to-remember, "weak" passwords for the user <code>user</code> account, while still preventing compromised non-root users from bruteforcing it.</ref>
@@ -1953,7 +1953,7 @@ Significant [https://forums.whonix.org/t/kernel-hardening/7296/140 kernel] and o
 * Enabled [https://en.wikipedia.org/wiki/Input%E2%80%93output_memory_management_unit IOMMU].
 * The SysRq key is restricted to only allow shutdowns/reboots.
 * [https://forums.whonix.org/t/sysrq-magic-sysrq-key/8079 Restrict] the [[SysRq]] key so it can only be used for shutdowns and the Secure Attention Key.
-* A systemd service mounts /proc with <code>hidepid=2</code> at boot, thereby preventing users from seeing each other’s processes.
+* A systemd service mounts /proc with <code>hidepid=2</code> at boot, thereby preventing users from seeing each other's processes.
 * A systemd service clears System.map on boot as these contain kernel symbols that could be useful to an attacker. <ref>[https://forums.whonix.org/t/kernel-hardening/7296/130 Forum discussion].</ref>
 * Remove System.map after a kernel upgrade.
 * remove-system-map: use shred instead of rm.
@@ -1983,7 +1983,7 @@ Significant [https://forums.whonix.org/t/kernel-hardening/7296/140 kernel] and o
 ** Distrust the CPU for initial entropy at boot as it is not possible to audit, may contain weaknesses or a backdoor.
 ** Disable trusting RDRAND.
 ** <code>random.trust_cpu=off</code>
-* Experimental: remount <code>/home</code>, <code>/tmp</code>, <code>/dev/shm</code> and <code>/run</code> with nosuid,nodev (default) and noexec (opt-in). To disable this, see footnote. <ref>Run “sudo touch /etc/remount-disable”. To opt-in noexec, run “sudo touch /etc/noexec” and reboot (easiest). Alternatively file <code>/usr/local/etc/remount-disable</code> or file <code>/usr/local/etc/noexec</code> could be used.</ref> <ref>[https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/1 (re-)mount home (and other?) with noexec (and nosuid among other useful mount options) for better security?]</ref> <ref>[https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27 More work needed]. Help welcome!</ref>
+* Experimental: remount <code>/home</code>, <code>/tmp</code>, <code>/dev/shm</code> and <code>/run</code> with nosuid,nodev (default) and noexec (opt-in). To disable this, see footnote. <ref>Run "sudo touch /etc/remount-disable". To opt-in noexec, run "sudo touch /etc/noexec" and reboot (easiest). Alternatively file <code>/usr/local/etc/remount-disable</code> or file <code>/usr/local/etc/noexec</code> could be used.</ref> <ref>[https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/1 (re-)mount home (and other?) with noexec (and nosuid among other useful mount options) for better security?]</ref> <ref>[https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707/27 More work needed]. Help welcome!</ref>
 * [https://forums.whonix.org/t/xfce4-power-manager-xfpm-power-backlight-helper-pkexec-lxsudo-popup/8764 Fix xfce4-power-manager xfpm-power-backlight-helper pkexec lxsudo popup].
 * Do show lxqt-sudo password prompt if there is a sudoers exception.
 * Improved pkexec wrapper logging.
@@ -1992,7 +1992,7 @@ Significant [https://forums.whonix.org/t/kernel-hardening/7296/140 kernel] and o
 * Add user <code>user</code> to group <code>console</code> in Whonix and Kicksecure.
 * [https://forums.whonix.org/t/how-strong-do-linux-user-account-passwords-have-to-be-when-using-full-disk-encryption-fde-too/7698/19 Lock user accounts after 50 rather than 100 failed login attempts].
 * Disable the busmaster bit on all PCI bridges during very early boot to avoid holes in IOMMU. <ref>GRUB_CMDLINE_LINUX="$GRUB_CMDLINE_LINUX efi=disable_early_pci_dma"</ref> <ref>https://mjg59.dreamwidth.org/54433.html</ref> <ref>https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=4444f8541dad16fefd9b8807ad1451e806ef1d94</ref>
-* Only allow symlinks to be followed when outside of a world-writable sticky directory, or when the owner of the symlink and follower match, or when the directory owner matches the symlink’s owner. Prevent hardlinks from being created by users that do not have read/write access to the source file. These prevent many TOCTOU races:
+* Only allow symlinks to be followed when outside of a world-writable sticky directory, or when the owner of the symlink and follower match, or when the directory owner matches the symlink's owner. Prevent hardlinks from being created by users that do not have read/write access to the source file. These prevent many TOCTOU races:
 ** <code>fs.protected_symlinks=1</code>
 ** <code>fs.protected_hardlinks=1</code>
 * Restrict loading TTY line disciplines to CAP_SYS_MODULE to prevent unprivileged attackers from loading vulnerable line disciplines with the TIOCSETD ioctl which has been used in exploits before. <ref>Such as [https://a13xp0p0v.github.io/2017/03/24/CVE-2017-2636.html CVE-2017-2636].</ref> <ref>https://lkml.org/lkml/2019/4/15/890</ref> <ref>Sets <code>dev.tty.ldisc_autoload=0</code></ref>
@@ -2000,7 +2000,7 @@ Significant [https://forums.whonix.org/t/kernel-hardening/7296/140 kernel] and o
 
 [https://github.com/Kicksecure/hardened-kernel <code>hardened-kernel</code>]:
 * Enabled <code>CONFIG_KPROBES</code>. <ref>https://github.com/Kicksecure/hardened-kernel/commit/1fdfc87335534e627a29b6cc8d140c5634ce9dd5</ref>
-* Reverted “Optionally enable kprobes/ftrace for LKRG support” <ref>This reverts the [https://github.com/Kicksecure/hardened-kernel/commit/4d4993602e9222141f5dfda1373d44c647ff9920 following commit].</ref>
+* Reverted "Optionally enable kprobes/ftrace for LKRG support" <ref>This reverts the [https://github.com/Kicksecure/hardened-kernel/commit/4d4993602e9222141f5dfda1373d44c647ff9920 following commit].</ref>
 
 === KVM ===
 
@@ -2017,7 +2017,7 @@ Significant [https://forums.whonix.org/t/kernel-hardening/7296/140 kernel] and o
 * Fixed the KVM prepare_release script.
 * Fixed the GPU tag in libvirt XML.
 * Updated Tor Browser to version 9.0.1, then later versions (9.5).
-* Fixed {{kicksecure}} KVM’s broken networking.
+* Fixed {{kicksecure}} KVM's broken networking.
 * Moved to <code>gitlab.com</code>. <ref>https://forums.whonix.org/t/whonix-moving-from-github-to-gitlab/9676</ref>
 * Other platforms build fix.
 * <code>monero-gui</code> can be uninstalled.
@@ -2055,8 +2055,8 @@ Eased installation of [[Linux_Kernel_Runtime_Guard_LKRG|Linux Kernel Runtime Gua
 * Improves overall system security and is compatible with tirdad.
 * Hardens kernel security by killing whole classes of exploits, detecting exploits and performing Linux kernel runtime integrity checking.
 * Worked with LKRG upstream to fix LKRG VirtualBox host support.
-* Packaging enhancements were incorporated, so any standard Debian build tool can be used. <ref>This is quick and easy. For example: “dpkg-buildpackage -b”</ref>
-* Disabled the “System is clean!” message to avoid spamming dmesg and tty1.
+* Packaging enhancements were incorporated, so any standard Debian build tool can be used. <ref>This is quick and easy. For example: "dpkg-buildpackage -b"</ref>
+* Disabled the "System is clean!" message to avoid spamming dmesg and tty1.
 * [https://forums.whonix.org/t/dkms-kernel-modules-lkrg-and-tirdad-fail-to-properly-recompile-on-kernel-upgrade/8931 Fixed] compilation using DKMS on kernel upgrade by adding support for make variable KERNELRELEASE (DKMS sets it).
 * Auto-load LKRG after installation. <ref>Since LKRG now supports module parameters and [https://www.openwall.com/lists/lkrg-users/2020/01/25/2 VirtualBox host support], it can be automatically started after installation since it would no longer kill VirtualBox VMs running on a host.</ref>
 * Upgraded LKRG to the latest upstream version (version <code>0.8.1</code>; although not yet installed by default).
@@ -2096,7 +2096,7 @@ Eased installation of [[Linux_Kernel_Runtime_Guard_LKRG|Linux Kernel Runtime Gua
 
 [https://github.com/Kicksecure/security-misc <code>security-misc</code>]:
 * <code>pam-abort-on-locked-password</code>: implemented more descriptive error handling. <ref>https://forums.whonix.org/t/restrict-root-access/7658/1</ref> <ref>https://github.com/Kicksecure/security-misc/commit/74e39cbf690dae2bf72bd9f152ea91c364f5feff</ref>
-* Restricted sudo’s file permissions. <ref>https://github.com/Kicksecure/security-misc/commit/97d8db3f74b9fc00c8f4416cb72966e62c7de88e</ref>
+* Restricted sudo's file permissions. <ref>https://github.com/Kicksecure/security-misc/commit/97d8db3f74b9fc00c8f4416cb72966e62c7de88e</ref>
 * <code>config-package-dev</code>: displaced <code>/etc/dkms/framework.conf</code> <ref>https://forums.whonix.org/t/enforce-kernel-module-software-signature-verification-module-signing-disallow-kernel-module-loading-by-default/7880/58</ref> <ref>https://github.com/Kicksecure/security-misc/commit/6e759f9196412b1742db1e4c68a70867e1ad8629</ref>
 * Modified DKMS configuration file <code>/etc/dkms/framework.conf</code>: lower parallel compilation jobs to 1 if there is less than 2 GB RAM to avoid virtual machine freezing (<code>parallel_jobs=1</code>). <ref>This does not necessarily belong in <code>security-misc</code>. However, it is likely <code>security-misc</code> will need to modify <code>/etc/dkms/framework.conf</code> in the future to enable kernel module signing.</ref> <ref>https://forums.whonix.org/t/linux-kernel-runtime-guard-lkrg-linux-kernel-runtime-integrity-checking-and-exploit-detection/8477/26</ref> <ref>https://forums.whonix.org/t/enforce-kernel-module-software-signature-verification-module-signing-disallow-kernel-module-loading-by-default/7880/58</ref> <ref>https://github.com/Kicksecure/security-misc/commit/e2afd00627b097f75467cd0e2fe7e15977141026</ref>
 * Added <code>/etc/dkms/framework.conf.security-misc</code> original. <ref>From https://github.com/dell/dkms/blob/master/dkms_framework.conf and https://raw.githubusercontent.com/dell/dkms/master/dkms_framework.conf</ref> <ref>https://forums.whonix.org/t/enforce-kernel-module-software-signature-verification-module-signing-disallow-kernel-module-loading-by-default/7880/58</ref> <ref>https://github.com/Kicksecure/security-misc/commit/3ba3b371873d221db6845fb0fe52191b8b349b0a</ref>
@@ -2133,11 +2133,11 @@ Other security enhancements:
 * Reverted to <code>vmsvga</code> grapics controller settings due to [https://forums.whonix.org/t/black-screen-on-15-0-0-6-6-and-15-0-0-7-1/8554 issues].
 * [https://forums.whonix.org/t/whonix-virtualbox-15-0-0-8-7-testers-wanted-vanguards-tcp-isn-leak-protection-extensive-hardening/8914/4 Increased] Whonix-Gateway default RAM to 1280 MB. Otherwise, VirtualBox guest additions kernel modules fail to compile.
 * Current [https://www.kicksecure.com/wiki/VirtualBox/Troubleshooting#Screen_Resolution_Bug VirtualBox screen resolution situation]:
-** Functional VirtualBox VM Window → View → Virtual Screen 1 → resize to resolution
-** Functional VirtualBox VM Window → View → Adjust Window Size
+** Functional VirtualBox VM Window &rarr; View &rarr; Virtual Screen 1 &rarr; resize to resolution
+** Functional VirtualBox VM Window &rarr; View &rarr; Adjust Window Size
 ** A workaround to improve this situation is still required.
 ** Added <code>xserver-xorg-video-vmware</code> to <code>kicksecure-desktop-environment-essential-gui</code> because it is required by VirtualBox Graphics Controller VMSVGA for auto resize and resize through VirtualBox settings menu.
-** Again set the VirtualBox Graphics Controller to VMSVGA (equivalent to “VirtualBox → click a VM → Settings → Display → Graphics Controller → VMSVGA → OK”). <ref>Quote [https://www.virtualbox.org/manual/ch03.html VirtualBox manual]: <blockquote>VMSVGA: Use this graphics controller to emulate a VMware SVGA graphics device. This is the default graphics controller for Linux guests.</blockquote></ref> <ref>This has better desktop resolution in CLI (virtual terminal) mode. When it was previously disabled, this led to a [https://forums.whonix.org/t/black-screen-on-15-0-0-6-6-and-15-0-0-7-1/8554 black screen] on <code>15.0.0.6.6</code> and <code>15.0.0.7.1</code>.</ref>
+** Again set the VirtualBox Graphics Controller to VMSVGA (equivalent to "VirtualBox &rarr; click a VM &rarr; Settings &rarr; Display &rarr; Graphics Controller &rarr; VMSVGA &rarr; OK"). <ref>Quote [https://www.virtualbox.org/manual/ch03.html VirtualBox manual]: <blockquote>VMSVGA: Use this graphics controller to emulate a VMware SVGA graphics device. This is the default graphics controller for Linux guests.</blockquote></ref> <ref>This has better desktop resolution in CLI (virtual terminal) mode. When it was previously disabled, this led to a [https://forums.whonix.org/t/black-screen-on-15-0-0-6-6-and-15-0-0-7-1/8554 black screen] on <code>15.0.0.6.6</code> and <code>15.0.0.7.1</code>.</ref>
 ** Increased Whonix VirtualBox Whonix-Gateway video RAM to 128 MB since the previous assignment of only 16 MB RAM can cause resize issues.
 ** Updated VirtualBox and VirtualBox guest addition to <code>6.1.4</code>. The VirtualBox guest addition has been further upgraded to <code>6.1.6</code> in a later Whonix release.
 * Added a workaround for the bug causing the VirtualBox screen resolution to be too small; the screen resolution is now [https://forums.whonix.org/t/make-screen-resolution-1920x1080-by-default-for-all-vms/9143 1920x1080 by default for all VMs].
@@ -2152,8 +2152,8 @@ Other security enhancements:
 * Wiki editing over onion.
 * Using {{project_name_short}} forums over onion.
 * Mostly fixed onion forum site redirects to clearnet. <ref>https://forums.whonix.org/t/onion-forum-site-redirects-to-clearnet/197/13</ref>
-* Implemented the [https://community.torproject.org/onion-services/advanced/onion-location/ Onion-Location] header, which shows the “onion available” message to any Tor Browser user visiting the clearnet version of whonix.org.
-* Fixed a false Mediawiki message that identified {{project_name_short}} forum logins as insecure over onion (thereby offering a https connection to the onion URL). <ref>https://forums.whonix.org/t/wiki-miss-offer-secure-connection-while-the-connection-over-onion/10349/7</ref> <ref><blockquote>Mediawiki thinks the connection is insecure since it does not have internal concepts onion traffic. I am now sending http request <code>X-Forwarded-Proto: https</code> for onion to let mediawiki know that it’s a secure connection.</blockquote></ref>
+* Implemented the [https://community.torproject.org/onion-services/advanced/onion-location/ Onion-Location] header, which shows the "onion available" message to any Tor Browser user visiting the clearnet version of whonix.org.
+* Fixed a false Mediawiki message that identified {{project_name_short}} forum logins as insecure over onion (thereby offering a https connection to the onion URL). <ref>https://forums.whonix.org/t/wiki-miss-offer-secure-connection-while-the-connection-over-onion/10349/7</ref> <ref><blockquote>Mediawiki thinks the connection is insecure since it does not have internal concepts onion traffic. I am now sending http request <code>X-Forwarded-Proto: https</code> for onion to let mediawiki know that it's a secure connection.</blockquote></ref>
 * Implemented Expect-CT security header for whonix.org. <ref>https://forums.whonix.org/t/expect-ct-security-header-for-whonix-org/10286/3</ref>
 * Fixed URL with no onion mirror. <ref>https://forums.whonix.org/t/url-with-no-onion-mirror/10341</ref>
 * Reviewed [https://www.hardenize.com/ hardenize.com] results (no clean HSTS-Preload / DNSSEC). <ref>https://forums.whonix.org/t/no-clean-hsts-preload-dnssec/10255</ref>

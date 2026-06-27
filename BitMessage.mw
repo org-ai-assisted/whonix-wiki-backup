@@ -103,7 +103,7 @@ The next box will document digital signature verification and the over next box 
 {{Box|text=
 Digital signature verification.
 
-'''1.''' Download the GPG public key of Pete Šurda, BitMessage core developer.
+'''1.''' Download the GPG public key of Pete &Scaron;urda, BitMessage core developer.
 
 {{always_verify_signatures_reminder}}
 

@@ -25,11 +25,11 @@ There is a mistake in the VirtualBox manual stating <code>enter</code> which doe
 </ref> <ref>
 https://www.virtualbox.org/manual/ch08.html
 <blockquote>
---l1d-flush-on-vm-enter on|off: Enables flushing of the level 1 data cache on VM enter. See Section 13.4.1, “CVE-2018-3646”.
+--l1d-flush-on-vm-enter on|off: Enables flushing of the level 1 data cache on VM enter. See Section 13.4.1, "CVE-2018-3646".
 </blockquote>
 </ref> <ref>
 <blockquote>
---l1d-flush-on-sched on|off: Enables flushing of the level 1 data cache on scheduling EMT for guest execution. See Section 13.4.1, [https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646 “CVE-2018-3646”].
+--l1d-flush-on-sched on|off: Enables flushing of the level 1 data cache on scheduling EMT for guest execution. See Section 13.4.1, [https://www.virtualbox.org/manual/ch13.html#sec-rec-cve-2018-3646 "CVE-2018-3646"].
 <br />
 https://www.virtualbox.org/manual/ch08.html
 </blockquote>
@@ -53,7 +53,7 @@ https://www.virtualbox.org/manual/ch08.html
 According to this [https://www.virtualbox.org/ticket/17987 VirtualBox ticket] <code>--spec-ctrl</code> should be set to <code>on</code>.
 </ref> <ref>
 <blockquote>
---nestedpaging on|off: If hardware virtualization is enabled, this additional setting enables or disables the use of the nested paging feature in the processor of your host system; see Section 10.7, “Nested paging and VPIDs” and Section 13.4.1, “CVE-2018-3646”.
+--nestedpaging on|off: If hardware virtualization is enabled, this additional setting enables or disables the use of the nested paging feature in the processor of your host system; see Section 10.7, "Nested paging and VPIDs" and Section 13.4.1, "CVE-2018-3646".
 </blockquote>
 </ref>
 

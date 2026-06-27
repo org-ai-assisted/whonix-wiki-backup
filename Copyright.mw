@@ -71,7 +71,7 @@ The compilation is made available under the terms of the <code>{{license_name_wi
 The license can be referred to as <code>{{license_name_wiki}}</code>.<br />
 For considerations - which however are not part of the license - on why this license was chosen, see our wiki page [[Dev/Licensing]].
 
-Individual pages utilizing different licenses mention these in the wiki source code. This can be viewed when using the edit function (Actions → Edit) and/or when downloading [[Offline_Documentation|{{project_name_short}} wiki source code]]. Additionally, this is mentioned in the chapter License for applicable wiki pages.
+Individual pages utilizing different licenses mention these in the wiki source code. This can be viewed when using the edit function (Actions &rarr; Edit) and/or when downloading [[Offline_Documentation|{{project_name_short}} wiki source code]]. Additionally, this is mentioned in the chapter License for applicable wiki pages.
 
 {{Project_License}}
 

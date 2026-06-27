@@ -10,7 +10,7 @@ Current practical, low-latency, anonymity designs like Tor fail when the attacke
 Mitigating this threat requires consideration of the Tor network topology. Suppose the attacker controls, or can observe, <i>C</i> relays from a pool of <i>N</i> total relays. If a user selects a new entry and exit relay each time the Tor network is used, the attacker can correlate all traffic sent with a probability of <i>(c/n)<sup>2</sup></i>. For most users, profiling is as hazardous as being traced all the time. Simply put, users want to repeat activities without the attacker noticing, but being noticed once by the attacker is as detrimental as being noticed more frequently. [...]
 </p>
 <p>
-The solution to this problem is "entry guards". Each Tor client selects a few relays at random to use as entry points, and only uses those relays for the first hop. If those relays are not controlled or observed, the attacker can't use end-to-end techniques and the user is secure. If those relays <i>are</i> observed or controlled by the attacker, then they see a larger <i>fraction</i> of the user's traffic — but still the user is no more profiled than before. Thus, entry guards increase the user's chance of avoiding profiling (on the order of <i>(n-c)/n</i>), compared to the former case.
+The solution to this problem is "entry guards". Each Tor client selects a few relays at random to use as entry points, and only uses those relays for the first hop. If those relays are not controlled or observed, the attacker can't use end-to-end techniques and the user is secure. If those relays <i>are</i> observed or controlled by the attacker, then they see a larger <i>fraction</i> of the user's traffic -- but still the user is no more profiled than before. Thus, entry guards increase the user's chance of avoiding profiling (on the order of <i>(n-c)/n</i>), compared to the former case.
 </p>
 <p>
 You can read more at [https://www.freehaven.net/anonbib/#wright02 An Analysis of the Degradation of Anonymous Protocols], [https://www.freehaven.net/anonbib/#wright03 Defending Anonymous Communication Against Passive Logging Attacks], and especially [https://www.freehaven.net/anonbib/#hs-attack06 Locating Hidden Servers].
@@ -57,7 +57,7 @@ For details on how this is possible, press Expand on the right.
 <div class="mw-collapsible-content">
 Consider the following scenario. A user connects to Tor via a laptop at their home address. An advanced adversary has observed the client-to-guard-node network path to discover the user's entry point to the Tor network.
 
-Soon afterwards, the same user attends a prominent event or protest in a nearby city. At that location, the user decides to anonymously blog about what transpired using the same laptop. This is problematic for anonymity, as the Tor client is using the same entry guard normally correlated with the user’s home address.
+Soon afterwards, the same user attends a prominent event or protest in a nearby city. At that location, the user decides to anonymously blog about what transpired using the same laptop. This is problematic for anonymity, as the Tor client is using the same entry guard normally correlated with the user's home address.
 
 To understand the potential threat, consider the following:
 
@@ -66,7 +66,7 @@ To understand the potential threat, consider the following:
 * As the IP address of Tor entry guards is static and Tor network traffic is easily distinguishable, this information becomes public knowledge.
 * It is feasible that if a user-guard relationship is unique in a city location, and that user moves, it is likely (but not certain) that there was a location change.
 * At the event, the user might be the only one using Tor (or among a handful).
-* If the user posts about the event ''and'' an adversary who is passively monitoring network traffic conducts the same successful observation of the client-to-guard network path, then it’s likely the "anonymous" posts will be linked with the same person who normally connects to that guard at home.
+* If the user posts about the event ''and'' an adversary who is passively monitoring network traffic conducts the same successful observation of the client-to-guard network path, then it's likely the "anonymous" posts will be linked with the same person who normally connects to that guard at home.
 
 The relative uncommonness of Tor usage simply exacerbates the potential for de-anonymization.
 </div>

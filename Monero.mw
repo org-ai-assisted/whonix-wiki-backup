@@ -37,7 +37,7 @@ This issue is happening because [https://github.com/monero-project/monero-gui/is
 If not enabling unverified publishers, the following issue would happen.
 
 <pre>
-Looking for matches…
+Looking for matches...
 error: Nothing matches org.getmonero.Monero in remote flathub
 zsh: exit 1     flatpak install flathub org.getmonero.Monero
 </pre>

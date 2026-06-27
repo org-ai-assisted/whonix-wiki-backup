@@ -158,10 +158,10 @@ For example, one could ask why Qubes Debian Template might not look the same as 
 
 * Different default Fedora packages.
 * Therefore different amount of traffic.
-* Connections to Qubes’ Fedora repository (qubes-core-agent, …)
+* Connections to Qubes' Fedora repository (qubes-core-agent, ...)
 * Qubes Fedora disables TCP timestamps. (Actually good.)
 * [https://github.com/QubesOS/qubes-core-agent-linux/blob/main/config-overrides/20_tcp_timestamps.conf qubes-core-agent-linux/config-overrides/20_tcp_timestamps.conf]
-** Upstream Fedora probably doesn’t.
+** Upstream Fedora probably doesn't.
 * Conclusion: Fingerprintable.
 
 Other considerations:

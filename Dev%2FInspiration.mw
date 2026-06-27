@@ -168,7 +168,7 @@ For TCP and UDP: Proxy-Workstation &rarr; Proxy-Gateway &rarr; network layer &ra
 <u>Sources:</u>
 
 * Leonid Evdokimov (author of [https://github.com/darkk/redsocks redsocks]) on mailing list, [https://web.archive.org/web/20190613215033/http://librelist.com/browser//redsocks/2012/5/15/transparent-proxy-dns-without-public-dns-server/ Transparent Proxy, DNS, without public DNS server]
-* [https://tiggerswelt.net/Ueber%20uns/impressum/ Bernd Holzmüller] (author of [http://oss.tiggerswelt.net/transocks_ev/ transocks_ev]) by e-mail)
+* [https://tiggerswelt.net/Ueber%20uns/impressum/ Bernd Holzm&uuml;ller] (author of [http://oss.tiggerswelt.net/transocks_ev/ transocks_ev]) by e-mail)
 
 <u>Update:</u> Maybe https://github.com/jtRIPper/dns-tcp-socks-proxy could help?
 

@@ -1114,7 +1114,7 @@ The output should be similar the following showing tor@default service is inacti
 tor@default.service - Anonymizing overlay network for TCP
    Loaded: loaded (/lib/systemd/system/tor@default.service; static; vendor prese
   Drop-In: /lib/systemd/system/tor@default.service.d
-           └─30_qubes.conf
+           &#9492;&#9472;30_qubes.conf
    Active: inactive (dead)
 </pre>
 

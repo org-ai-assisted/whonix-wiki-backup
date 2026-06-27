@@ -842,7 +842,7 @@ R3.1: *0633
 = Qubes VM debug mode =
 Quote Marek https://forums.whonix.org/t/whonix-live-mode/3894/36
 <blockquote>
-Works only with HVM (on PVH or PV you don’t have emulated VGA). Also it enables more verbose logging - shouldn’t affect performance, but syslog in the VM may be hard to read in some cases. No other disadvantages.
+Works only with HVM (on PVH or PV you don't have emulated VGA). Also it enables more verbose logging - shouldn't affect performance, but syslog in the VM may be hard to read in some cases. No other disadvantages.
 </blockquote>
 
 See table at the bottom of https://www.qubes-os.org/news/2018/01/24/qsb-37-update/
@@ -1324,13 +1324,13 @@ Copy files from /boot/efi/EFI/qubes/ to /boot/efi/EFI/BOOT/
 sudo cp -r /boot/efi/EFI/qubes/* /boot/efi/EFI/BOOT/
 }}
 
-Change filename grubx64.efi → BOOTX64.efi
+Change filename grubx64.efi &rarr; BOOTX64.efi
 
 {{CodeSelect|code=
 sudo mv /boot/efi/EFI/BOOT/grubx64.efi /boot/efi/EFI/BOOT/BOOTX64.efi
 }}
 
-Change filename grub.cfg → BOOTX64.cfg
+Change filename grub.cfg &rarr; BOOTX64.cfg
 
 {{CodeSelect|code=
 sudo mv /boot/efi/EFI/BOOT/grub.cfg /boot/efi/EFI/BOOT/BOOTX64.cfg

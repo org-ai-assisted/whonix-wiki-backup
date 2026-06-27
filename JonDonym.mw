@@ -128,13 +128,13 @@ https://web.archive.org/web/20210617211029/https://search.edwardsnowden.com/docs
 
 (S//REL) Comparison with Tor
 
-• (S//REL) Not nearly as well studied
+&bull; (S//REL) Not nearly as well studied
 
 * (S//REL) Much smaller contained development community
 
-• (S//REL) More centralized structure (all mixes centrally approved)
+&bull; (S//REL) More centralized structure (all mixes centrally approved)
 
-• (S//REL) Not as diverse geographically or scalable
+&bull; (S//REL) Not as diverse geographically or scalable
 
 * (S//REL) Not as well used or publicized
 
@@ -154,7 +154,7 @@ https://web.archive.org/web/20230330171711/https://anonymous-proxy-servers.net/e
 
 <blockquote>JonDonym does not make it impossible to uncover individual users, as there is no such thing as a 100% security. However, such a disclosure is by magnitudes more difficult than for other VPN or proxy services, as this would require the cooperation of several states and organizations.
 
-JonDonym is no technology for preventing law enforcement on the internet. In very serious cases, it is possible to uncover the abuse of Mix services. User connections may be individually observed, if all operators of a Mix cascade get such an official order, valid in their respective country (in Germany accourding to §100a/b StPO). The official order has to provide an identification feature for individually observed connections (like the IP address used by the observed person or something else).
+JonDonym is no technology for preventing law enforcement on the internet. In very serious cases, it is possible to uncover the abuse of Mix services. User connections may be individually observed, if all operators of a Mix cascade get such an official order, valid in their respective country (in Germany accourding to &sect;100a/b StPO). The official order has to provide an identification feature for individually observed connections (like the IP address used by the observed person or something else).
 
 However, the independence of JonDonym operators vastly lowers the danger of an illegitimate law enforcement done by non-democratic states or arbitrary individual public officers. Any disclosure basically needs the cooperation of all operators of a Mix cascade. This was never realized for premium mix cascades in the past.</blockquote>
 

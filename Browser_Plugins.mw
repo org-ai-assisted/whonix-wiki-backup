@@ -68,7 +68,7 @@ Flash Player was deprecated by Firefox in 2020 and the Debian <code>flashplugin-
 
 What if I still depend on Flash content?
 
-For enterprise customers who need help transitioning Flash content to other supported technologies or require Flash Player licensing support after 2020, please contact Adobe’s official distribution licensing partner, HARMAN, for more information about their [https://services.harman.com/partners/adobe commercial support offerings].</blockquote>
+For enterprise customers who need help transitioning Flash content to other supported technologies or require Flash Player licensing support after 2020, please contact Adobe's official distribution licensing partner,&#8239;HARMAN, for more information about their [https://services.harman.com/partners/adobe commercial support offerings].</blockquote>
 
 [https://addons.mozilla.org/en-US/firefox/addon/flash-player-emulator/ Emulators] are still available to play Flash content if it is absolutely necessary.
 

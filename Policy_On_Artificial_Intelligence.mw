@@ -30,7 +30,7 @@ Do not post AI-generated content in communications or source code contributions 
 
 = Rationale =
 {{quotation
-|quote=Generative AI allows potential contributors to generate large amounts of content quickly and at near-zero cost. If these contributions are of high quality, they will be welcome. Unfortunately, however, they are often of low quality, in which case it is easy for even a single GenAI-assisted contributor to overwhelm the entire project’s human review capacity.
+|quote=Generative AI allows potential contributors to generate large amounts of content quickly and at near-zero cost. If these contributions are of high quality, they will be welcome. Unfortunately, however, they are often of low quality, in which case it is easy for even a single GenAI-assisted contributor to overwhelm the entire project's human review capacity.
 |context=[https://doc.qubes-os.org/en/latest/introduction/contributing.html#using-ai-in-contributions Qubes OS: Using AI in contributions] / [https://forum.qubes-os.org/t/guidance-on-using-ai-in-contributions/39626 Qubes forum discussion: Guidance on using AI in contributions]
 }}
 
@@ -38,7 +38,7 @@ Do not post AI-generated content in communications or source code contributions 
 Posts partially or fully written by AI.
 
 * <u>Nonexistent settings:</u> [https://forums.kicksecure.com/t/consider-battery-charging-thresholds-and-optimizations/912 suggesting to enable settings by default, which do not exist]
-* <u>Self-hosting confusion:</u> [https://meta.discourse.org/t/discourse-ai-self-hosted-guide/259598/16 post on "self-hosting ChatGPT4"], which [https://meta.discourse.org/t/discourse-ai-self-hosted-guide/259598/17 cannot be self-hosted]. [https://meta.discourse.org/t/discourse-ai-self-hosted-guide/259598/18 "I guess that’s what you get when using ChatGPT to help you work out self-hosting ChatGPT costs."]
+* <u>Self-hosting confusion:</u> [https://meta.discourse.org/t/discourse-ai-self-hosted-guide/259598/16 post on "self-hosting ChatGPT4"], which [https://meta.discourse.org/t/discourse-ai-self-hosted-guide/259598/17 cannot be self-hosted]. [https://meta.discourse.org/t/discourse-ai-self-hosted-guide/259598/18 "I guess that's what you get when using ChatGPT to help you work out self-hosting ChatGPT costs."]
 * <u>Screenshot example:</u> https://daniel.haxx.se/media/curl-github-issue-15736.png
 * <u>Blog post example:</u> https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/
 ** <u>Related report:</u> https://hackerone.com/reports/2199174

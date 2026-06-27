@@ -268,7 +268,7 @@ CodeSelect in Lists
 * {{CodeSelect|code=
 def
 ghi123
-asölfkasjdölfkajdöslkjasdfölkfjaölksdjaslökdjfaöslkjfaöslkjfdsalökdjfalöksjfaklösjfaslökjfasölkjfasölkjfadsölkjafdsklöfjlköasdjflkösajdfsölkjadsölkjfdaslksafjfkl
+as&ouml;lfkasjd&ouml;lfkajd&ouml;slkjasdf&ouml;lkfja&ouml;lksdjasl&ouml;kdjfa&ouml;slkjfa&ouml;slkjfdsal&ouml;kdjfal&ouml;ksjfakl&ouml;sjfasl&ouml;kjfas&ouml;lkjfas&ouml;lkjfads&ouml;lkjafdskl&ouml;fjlk&ouml;asdjflk&ouml;sajdfs&ouml;lkjads&ouml;lkjfdaslksafjfkl
 }}
 * Including pipe symbol ("<code>|</code>") (encoded as <code><nowiki>{{!}}</nowiki></code>): {{CodeSelect|code=
 echo test {{!}} xargs echo
@@ -653,12 +653,12 @@ Div being wrapped in GoogleOff with nosnippet=1
 
 == Headline (Template) ==
 
-h2, id auto-gen ↓↓↓
+h2, id auto-gen &darr;&darr;&darr;
 {{Headline|h=2|content=Test Headline : h2, id auto-gen}}
-no h (=h1), id=id-test-headline-2 ↓↓↓
+no h (=h1), id=id-test-headline-2 &darr;&darr;&darr;
 {{Headline|id=id-test-headline-2|content=Test Headline : no h (=h1), id=id-test-headline-2}}
-h3, id=none, addToClass:cs-blue → Code ↓↓↓
-{{Headline|h=3|id=none|addToClass=cs-blue|content=Test Headline : h3, id=none, addToClass:cs-blue → Code}}
+h3, id=none, addToClass:cs-blue &rarr; Code &darr;&darr;&darr;
+{{Headline|h=3|id=none|addToClass=cs-blue|content=Test Headline : h3, id=none, addToClass:cs-blue &rarr; Code}}
 
 == HtmlComment (Widget) ==
 
@@ -941,7 +941,7 @@ Open hidden table
 Below is a pre element which has overwidth
 
 <pre>
-asdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkasdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkjj
+asd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkasd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkjj
 </pre>
 
 Below is a pre element which has overwidth and is hidden
@@ -950,7 +950,7 @@ Below is a pre element which has overwidth and is hidden
 Open hidden overwide pre lement
 <div class="mw-collapsible-content">
 <pre>
-asdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkasdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkjj
+asd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkasd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkjj
 </pre>
 </div>
 </div>
@@ -961,27 +961,27 @@ Below are height tests, for the top scrollbar height breakpoint to be reached (i
 
 Height 150px
 <pre style="height: 200px">
-asdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkasdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkjj
+asd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkasd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkjj
 </pre>
 
 Height 300px
 <pre style="height: 300px">
-asdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkasdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkjj
+asd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkasd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkjj
 </pre>
 
 Height 450px
 <pre style="height: 400px">
-asdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkasdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkjj
+asd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkasd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkjj
 </pre>
 
 Height 600px
 <pre style="height: 500px">
-asdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkasdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkjj
+asd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkasd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkjj
 </pre>
 
 Height 750px
 <pre style="height: 500px">
-asdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkasdölfjasölkafölkasjfölkasjfölkasjfölajöaiojujflaksjflöaksjlköajsvlköjvölkajföljwaeiojföjaflökjlasjdfölasjdflkjj
+asd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkasd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aiojujflaksjfl&ouml;aksjlk&ouml;ajsvlk&ouml;jv&ouml;lkajf&ouml;ljwaeiojf&ouml;jafl&ouml;kjlasjdf&ouml;lasjdflkjj
 </pre>
 
 == Share Tooltip ==

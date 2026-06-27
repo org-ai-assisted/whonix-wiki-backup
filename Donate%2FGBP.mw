@@ -1,7 +1,7 @@
 {{Header}} {{hide_all_banners}} {{title|title=
-Donate GBP £ to {{project_name_long}} using Bank Wire
+Donate GBP &pound; to {{project_name_long}} using Bank Wire
 }} {{#seo:
-|description=Pound Sterling "£" (GBP), UK sort code, Account number, IBAN, SWIFT, CHAPS, BACS, Faster Payments
+|description=Pound Sterling "&pound;" (GBP), UK sort code, Account number, IBAN, SWIFT, CHAPS, BACS, Faster Payments
 |image=GBP_128.png
 }}
 {{ThumbGallery|
@@ -13,7 +13,7 @@ Donate GBP £ to {{project_name_long}} using Bank Wire
 [[File:Swift 128.png|thumb|100px|link=|class=hide-enlarge|SWIFT]]
 }}
 {{intro|hidden=true|
-Pound Sterling "£" (GBP), UK sort code, Account number, IBAN, SWIFT, CHAPS, BACS, Faster Payments
+Pound Sterling "&pound;" (GBP), UK sort code, Account number, IBAN, SWIFT, CHAPS, BACS, Faster Payments
 }}
 
 {{bank_wire}}

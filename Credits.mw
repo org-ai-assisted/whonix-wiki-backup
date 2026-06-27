@@ -70,7 +70,7 @@ There are a number of projects that share security and anonymity goals with {{pr
 * '''[https://tails.boum.org Tails]:''' A live CD / USB distribution which is preconfigured to use Tor safely. <ref>Tails is listed on https://www.torproject.org. The design documents describe the [https://tails.boum.org/contribute/design/Tor_enforcement/ Tor enforcement] mechanisms.</ref>
 ** '''[https://tails.boum.org/contribute/design/ PELD]:''' Tails specification and implementation.
 * '''[https://svn.torproject.org/svn/torvm/trunk/doc/design.html A Tor Virtual Machine Design and Implementation]:''' Tor Project design documents.
-* '''[https://dee.su/ Liberté Linux]:''' A live CD based on hardened Gentoo. <ref>Isolation is not enforced between client applications using Tor, and it has infrequent security releases.</ref>
+* '''[https://dee.su/ Libert&eacute; Linux]:''' A live CD based on hardened Gentoo. <ref>Isolation is not enforced between client applications using Tor, and it has infrequent security releases.</ref>
 * '''[https://theinvisiblethings.blogspot.com/2011/09/playing-with-qubes-networking-for-fun.html {{q_project_name_long}}]:''' This blog post provided the first hints on integrating {{project_name_short}} into Qubes. <ref>Qubes focuses on security through isolation based on virtualization. The actual implementation was left to the user at that time.</ref>
 * '''[https://github.com/Qubes-Community/Contents/blob/master/docs/privacy/torvm.md TorVM] for Qubes:''' ([https://github.com/QubesOS/qubes-app-linux-tor qubes-tor]).
 ** [https://lists.torproject.org/pipermail/tor-talk/2012-October/025960.html tor-talk Review request: TorVM implementation in Qubes OS].
@@ -99,7 +99,7 @@ There are a number of projects that share security and anonymity goals with {{pr
 * '''[https://gitlab.torproject.org/legacy/trac/-/wikis/doc/JanusVM JanusVM].''' <ref>This was deprecated long ago. A few of those reasons listed in the link (not to use some other projects) are equally applicable here.</ref>
 * '''[https://web.archive.org/web/20191119221814/http://www.janusvm.com/tor_vm/ TorVM]:''' From the same authors as JanusVM, this project is also [https://svn.torproject.org/svn/torvm/ deprecated].
 * '''[https://web.archive.org/web/20141006010048/http://tor.hermetix.org/torvm/index.html.en Another TorVM]:''' A contribution by unknown authors, with a site that imitates the official Tor one. <ref>This behavior raises questions about the possible motives of the developers.</ref>
-* '''[https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TransparentProxy Tor Project Transparent Proxy]:''' Now outdated, but it offers: transparent anonymizing traffic for a specific user; local redirection through Tor; an anonymizing middlebox; and local redirection and an anonymizing middlebox. <ref>The configuration closest to {{project_name_short}} is the anonymizing middlebox ({{project_name_short}} is an isolating proxy).</ref> <ref>The guide also notes: ''"See ​{{project_name_short}} for a complete, ready-made VM based solution (alternatively using multiple physical computers) built around the Isolating Proxy and Transparent Proxy Anonymizing Middlebox design."''</ref>
+* '''[https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TransparentProxy Tor Project Transparent Proxy]:''' Now outdated, but it offers: transparent anonymizing traffic for a specific user; local redirection through Tor; an anonymizing middlebox; and local redirection and an anonymizing middlebox. <ref>The configuration closest to {{project_name_short}} is the anonymizing middlebox ({{project_name_short}} is an isolating proxy).</ref> <ref>The guide also notes: ''"See &#8203;{{project_name_short}} for a complete, ready-made VM based solution (alternatively using multiple physical computers) built around the Isolating Proxy and Transparent Proxy Anonymizing Middlebox design."''</ref>
 * '''[https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TransocksifyingTor Transocksifying Tor]:''' This method to use a different firewall with DNT is now outdated, since it was only needed when Tor did not natively support TransPort.
 * '''[https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorVPN TorVPN]:''' The abandoned and unfinished predecessor to TorBOX. <ref>TorBOX was later renamed to {{project_name_short}}.</ref>
 * Old instructions from [https://archive.ph/20140610220929/http://board.gulli.com/thread/993224-tutorial-alle-tcp-ip-verbindung-eines-vmware-guests-automatisch-ueber-tor-leiten board.gulli.com]: Complicated German instructions to utilize TransPort back when it was not natively supported by Tor.
@@ -117,13 +117,13 @@ The {{project_name_short}} website and documentation is enriched by a number of 
 
 == Third Party Permissions ==
 
-Appreciation is expressed to [https://web.archive.org/web/20230329090736/https://anonymous-proxy-servers.net/ JonDonym] and [https://dee.su/ Liberté Linux] for permission to use material from their websites:
+Appreciation is expressed to [https://web.archive.org/web/20230329090736/https://anonymous-proxy-servers.net/ JonDonym] and [https://dee.su/ Libert&eacute; Linux] for permission to use material from their websites:
 
 * '''JonDonym:'''
 ** https://web.archive.org/web/20131225084524/
 ** https://web.archive.org/web/20131225084524/https://anonymous-proxy-servers.net/forum/viewtopic.php?p=31220 <ref>https://archive.ph/PkAs8</ref>
 
-* '''Liberté Linux:'''
+* '''Libert&eacute; Linux:'''
 ** https://dee.su/ ([https://archive.ph/QY0Wg archive.ph]) <ref>
 * broken link: <nowiki>http://forum.dee.su/#Topic/65650000000234021</nowiki>
 * https://archive.ph/6YjSp

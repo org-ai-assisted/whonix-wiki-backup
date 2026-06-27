@@ -77,7 +77,7 @@ Refer to this forum thread: [https://forums.whonix.org/t/hexchat-downloads/9790 
 
 = IRC General =
 
-The Ident Protocol <ref>https://en.wikipedia.org/wiki/Ident_protocol</ref> is automatically blocked because {{project_name_workstation_short}} is firewalled. <ref>The Tor Project [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO/IRC notes]: <blockquote>In both UNIX and Windows systems, the logged in username becomes the default ident. The ident is seen by most clients during channel join and when performing the /​whois command. It is therefore recommended to fake your ident before you connect to any IRC servers.</blockquote></ref>
+The Ident Protocol <ref>https://en.wikipedia.org/wiki/Ident_protocol</ref> is automatically blocked because {{project_name_workstation_short}} is firewalled. <ref>The Tor Project [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO/IRC notes]: <blockquote>In both UNIX and Windows systems, the logged in username becomes the default ident. The ident is seen by most clients during channel join and when performing the /&#8203;whois command. It is therefore recommended to fake your ident before you connect to any IRC servers.</blockquote></ref>
 
 The Tor Project [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TorifyHOWTO/IRC Internet Relay Chat] page contains general IRC safety techniques and other tips. Another useful resource is the [https://www.irchelp.org/security/ IRC Security] page. Key information and advice is provided on:
 <div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">

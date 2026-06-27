@@ -1,7 +1,7 @@
 {{Header}} {{hide_all_banners}} {{title|title=
-Donate EUR € to {{project_name_long}} using Bank Wire
+Donate EUR &euro; to {{project_name_long}} using Bank Wire
 }} {{#seo:
-|description=Euro "€" (EUR), SEPA, IBAN, SWIFT
+|description=Euro "&euro;" (EUR), SEPA, IBAN, SWIFT
 |image=Euro_128.png
 }}
 {{ThumbGallery|
@@ -10,7 +10,7 @@ Donate EUR € to {{project_name_long}} using Bank Wire
 [[File:Swift 128.png|thumb|link=|class=hide-enlarge|SWIFT]]
 }}
 {{intro|hidden=true|
-Euro "€" (EUR), SEPA, IBAN, SWIFT
+Euro "&euro;" (EUR), SEPA, IBAN, SWIFT
 }}
 
 {{bank_wire}}

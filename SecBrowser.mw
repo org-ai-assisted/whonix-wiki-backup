@@ -1,12 +1,12 @@
 {{Header}} __NOINDEX__
 {{Title|title=
-SecBrowser™ has been deprecated!
+SecBrowser&trade; has been deprecated!
 }}
 {{#seo:
-|description=It is recommended to stop using SecBrowser™.
+|description=It is recommended to stop using SecBrowser&trade;.
 |image=Secbrowser31123.png
 }}
-[[File:Secbrowser.png|thumb|125px|SecBrowser™ Icon]]
+[[File:Secbrowser.png|thumb|125px|SecBrowser&trade; Icon]]
 {{archived}}
 {{noindex}}
 {{mbox
@@ -15,7 +15,7 @@ SecBrowser™ has been deprecated!
 '''Deprecated.'''
 }}
 {{intro|
-SecBrowser™ has been deprecated and is now [[unsupported]]. You can explore the [https://mullvad.net/en/browser Mullvad Browser], which follows the same concept.
+SecBrowser&trade; has been deprecated and is now [[unsupported]]. You can explore the [https://mullvad.net/en/browser Mullvad Browser], which follows the same concept.
 }}
 
 Deprecation reasons:
@@ -25,7 +25,7 @@ Deprecation reasons:
 
 = Non-Affiliation with The Tor Project =
 
-SecBrowser™ was a derivative of Tor® Browser, produced independently from the Tor® anonymity software and carries no guarantee from [https://www.torproject.org The Tor® Project] about quality, suitability or anything else.
+SecBrowser&trade; was a derivative of Tor&reg; Browser, produced independently from the Tor&reg; anonymity software and carries no guarantee from [https://www.torproject.org The Tor&reg; Project] about quality, suitability or anything else.
 
 <references />
 {{Footer}}

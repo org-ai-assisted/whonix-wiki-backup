@@ -90,7 +90,7 @@ The community is encouraged not to wait for {{project_name_short}} to fix these 
 = Related Qubes Bugs =
 * [https://github.com/QubesOS/qubes-issues/issues/7013 <code>Denied: whonix.SdwdateStatus</code> error message after DispVM has halted]
 ** https://github.com/QubesOS/updates-status/issues/2824 will fix most if not all <code>Denied: whonix.</code> alike issues
-* [https://github.com/QubesOS/qubes-issues/issues/4167 Qubes doesn’t backup and restore qvm-tags.] Therefore, sdwdate <code>Denied</code> messages can happen.
+* [https://github.com/QubesOS/qubes-issues/issues/4167 Qubes doesn't backup and restore qvm-tags.] Therefore, sdwdate <code>Denied</code> messages can happen.
 * [https://github.com/QubesOS/qubes-issues/issues/7287 Switching qube to Whonix template fails to add <code>anon-vm</code> qvm-tag, resulting in <code>sys-whonix: denied: denied by policy</code>]
 
 = Unexpected autostart of sys-whonix =

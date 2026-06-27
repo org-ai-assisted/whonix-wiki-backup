@@ -67,7 +67,7 @@ All proper end-to-end encrypted (E2EE) messaging systems store private key(s) ex
 </blockquote>
 
 Another consideration is that even when using end-to-end encrypted applications, additional strong security protocols such as [https://en.wikipedia.org/wiki/Forward_secrecy forward secrecy] <ref>
-[https://signal.org/blog/advanced-ratcheting/ Advanced cryptographic ratcheting]:<blockquote>As we’ve discussed previously, “forward secrecy” is one of the critical security properties OTR is designed to provide. In contrast to the PGP protocol model, where messages to a recipient are encrypted with the same public key over and over again, OTR uses ephemeral key exchanges for each session. This is a critical feature of any modern secure protocol, because otherwise a network adversary who records (potentially years of) ciphertext traffic can later decrypt all of it if they manage to later compromise the one key that was used. By contrast, with ephemeral key exchanges, there is no key to compromise in the future (since the keys are only ephemerally in memory for a short time), so any recorded ciphertext should remain private.</blockquote>
+[https://signal.org/blog/advanced-ratcheting/ Advanced cryptographic ratcheting]:<blockquote>As we've discussed previously, "forward secrecy" is one of the critical security properties OTR is designed to provide. In contrast to the PGP protocol model, where messages to a recipient are encrypted with the same public key over and over again, OTR uses ephemeral key exchanges for each session. This is a critical feature of any modern secure protocol, because otherwise a network adversary who records (potentially years of) ciphertext traffic can later decrypt all of it if they manage to later compromise the one key that was used. By contrast, with ephemeral key exchanges, there is no key to compromise in the future (since the keys are only ephemerally in memory for a short time), so any recorded ciphertext should remain private.</blockquote>
 </ref> may not be available for group communication channels, see: [https://eprint.iacr.org/2017/713.pdf More is Less: On the End-to-End Security of Group Chats in Signal, WhatsApp, and Threema].
 
 == Web Interfaces ==
@@ -131,7 +131,7 @@ In 2021, a Freedom of Information request uncovered a FBI training document that
 |
 * Message content limited.
 * Subpoena: can render basic subscriber information.
-* 18 USC §2703(d): can render 25 days of iMessage lookups and from a target number.
+* 18 USC &sect;2703(d): can render 25 days of iMessage lookups and from a target number.
 * Pen Register: no capability.
 * Search Warrant: can render backups of a target device; if target uses iCloud backup, the encryption keys should also be provided with content return can also acquire iMessages from iCloud returns if target has enabled Messages in iCloud.
 |-
@@ -139,16 +139,16 @@ In 2021, a Freedom of Information request uncovered a FBI training document that
 ! Line
 |
 * Message content limited.
-* Suspect’s and/or victim’s registered information (profile image, display name, email address, phone number, LINE ID, date of registration, etc.).
+* Suspect's and/or victim's registered information (profile image, display name, email address, phone number, LINE ID, date of registration, etc.).
 * Information on usage.
-* Maximum of seven days worth of specified users’ text chats (only when E2EE has not been elected and applied and only when receiving an effective warrant; however, video, picture, files, location, phone call audio and other such data will not be disclosed).
+* Maximum of seven days worth of specified users' text chats (only when E2EE has not been elected and applied and only when receiving an effective warrant; however, video, picture, files, location, phone call audio and other such data will not be disclosed).
 |-
 
 ! [[Signal]]
 |
 * No message content.
 * Date and time a user registered.
-* Last date of a user’s connectivity to the service.
+* Last date of a user's connectivity to the service.
 |-
 
 ! [[Telegram]]
@@ -218,7 +218,7 @@ A recommendation if any can be made depends on the threat model, priorities of t
 
 OMEMO encryption has amazing security properties but it's opt-in in all known chat programs, which is a huge usability issue. Meaning users could easily forget to enable it or due to bugs getting disabled. It is also XMPP-specific, therefore there are no instant messengers that are serverless (and thereby hiding the user's social graph) as well as at the same time support OMEMO encryption. OMEMO is built on top of the double-ratchet encryption algorithm however, and there are a variety of messengers that support double-ratchet encryption.
 
-The most secure instant messenger would be serverless with local data storage, peer to peer (p2p) over Tor onions or another metadata protection-resistant onion routing, without a permanent user ID,  with well-audited quantum resistance to double-ratchet end-to-end encryption enabled by default — only [[SimpleX]] and [[Cwtch]] are closest to these criteria.
+The most secure instant messenger would be serverless with local data storage, peer to peer (p2p) over Tor onions or another metadata protection-resistant onion routing, without a permanent user ID,  with well-audited quantum resistance to double-ratchet end-to-end encryption enabled by default -- only [[SimpleX]] and [[Cwtch]] are closest to these criteria.
 
 = Instant Messenger Security Properties Comparison =
 
@@ -454,7 +454,7 @@ Applications discussed in this chapter are listed in order of best usability and
 
 It should be noted that no single application listed here has a superior feature set. Users must make a choice based on personal preferences and their [https://www.kicksecure.com/wiki/Threat_Modeling self-assessed threat model]:
 # [[SimpleX]] has a high level of security and anonymity: post-quantum encryption, does not require a phone number or email for registration, protects against metadata collection, data is stored locally, incognito mode allows for the creation of separate chats with random names, etc.
-# [[Cwtch]] has a high  anonymity and protection against metadata collection: does not require a phone number or email for registration, data is stored locally, all communication is end-to-end encrypted and takes place over Tor (there is no “Cwtch service” or “Cwtch network”). Not undergone an independent security audit at the time of writing.
+# [[Cwtch]] has a high  anonymity and protection against metadata collection: does not require a phone number or email for registration, data is stored locally, all communication is end-to-end encrypted and takes place over Tor (there is no "Cwtch service" or "Cwtch network"). Not undergone an independent security audit at the time of writing.
 # [[#Dino_IM|Dino IM]] provides a good UX, a modern and clean look and OMEMO support. On the downside, it requires a Jabber server which weakens anonymity.
 # [[#Gajim|Gajim]] has more Jabber users, is written in memory-safe python, supports offline messages, and can provide OMEMO encryption. On the downside, it requires a Jabber server which weakens anonymity.
 # [[OnionShare]] provides a serverless (hosted using a Tor onion service), secure, ephemeral and anonymous chat feature. It is particularly useful because it does not require account creation, is encrypted end-to-end and reduces the risk of messages being stored locally.

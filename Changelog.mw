@@ -153,7 +153,7 @@ https://github.com/Whonix/qubes-whonix/commit/5d77f9d93c62997e3d85e892be604ae9f7
 </ref>
 * Drop salt dependency It isn't available in bookworm QubesOS/qubes-issues#7896 <ref>
 https://github.com/Whonix/qubes-whonix/commit/f3bd2aa4ea6e33248274bbb171c36eae618f8716
-</ref> (Thanks to Marek Marczykowski-Górecki!)
+</ref> (Thanks to Marek Marczykowski-G&oacute;recki!)
 [https://github.com/whonix/uwt <code>uwt</code>]:
 * abolish /rw/config parsing (Does not influence Qubes specific /rw/config parsing.) <ref>
 https://github.com/Whonix/uwt/commit/ac4c16c1c35396bcbab45930e6866500e60f5c3d
@@ -334,7 +334,7 @@ https://github.com/Whonix/whonix-welcome-page/commit/5a8bca82b700ef1060bd4fa9fcb
 
 == {{project_name_short}} 16.0.8.2 ==
 [https://github.com/whonix/anon-apps-config <code>anon-apps-config</code>]:
-* pref(“mailnews.start_page.enabled”, false); <ref>
+* pref("mailnews.start_page.enabled", false); <ref>
 https://github.com/Whonix/anon-apps-config/commit/49ecbc1c2a8d9fc20b5784a8c81c06e685449b86
 </ref>
 * Drop everything related to  Enigmail Updated to reflect Tails version as of 2022 <ref>
@@ -1318,7 +1318,7 @@ https://github.com/Kicksecure/xfce-desktop-config-dist/commit/829286e9e0291fefc8
 
 [https://github.com/Kicksecure/debug-misc <code>debug-misc</code>]:
 * <code>dracut</code>. <ref>https://github.com/Kicksecure/debug-misc/commit/eb232484bc4d248d866456c0eb236c17a137cc4c</ref>
-* Removed ‘rhgb’ from GRUB_CMDLINE_LINUX_DEFAULT. <ref>https://github.com/Kicksecure/debug-misc/commit/017c41ed068e5b675f741bc34c3d1f1733a5c8af</ref>
+* Removed 'rhgb' from GRUB_CMDLINE_LINUX_DEFAULT. <ref>https://github.com/Kicksecure/debug-misc/commit/017c41ed068e5b675f741bc34c3d1f1733a5c8af</ref>
 * <code>add_dracutmodules+=" debug "</code> <ref>https://github.com/Kicksecure/debug-misc/commit/915882889918bf7969fa7b9f7bb6f7dfcb5bb554</ref>
 
 [https://github.com/Kicksecure/grub-live <code>grub-live</code>]:
@@ -1397,7 +1397,7 @@ Wiki improvements/enhancements:
 |wikipage=Mobile_Phone_Security
 |text=Mobile Devices Privacy and Security
 }}
-* [[Multiple_Whonix-Gateway#Qubes-Whonix_™|Create {{project_name_gateway_short}} ProxyVMs]]
+* [[Multiple_Whonix-Gateway#Qubes-Whonix_&trade;|Create {{project_name_gateway_short}} ProxyVMs]]
 * [[Social_Engineering|Social Engineering and (Spear) Phishing]]
 * [[Systemcheck|systemcheck]]
 * [[Two-factor_authentication_2FA|Two-factor Authentication (2FA)]]

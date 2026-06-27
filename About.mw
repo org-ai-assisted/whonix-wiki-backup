@@ -164,7 +164,7 @@ https://www.torproject.org/about/overview.html.en
 # '''Journalists who endanger themselves and their families by reporting on organized crime'''. Compartmentalized, anonymous Internet use prevents identity correlation between social media and other logins.
 # '''Political activists under targeted surveillance and attack'''. The usefulness of threatening the ISP in order to analyze a target's Internet use is severely limited. The cost of targeting a {{project_name_short}} user is greatly increased.
 # '''Average computer users in a repressive or censored environment'''. Easy Tor setup and options for advanced configurations means users in repressive countries can fully access the Internet desktop-wide, not just in their browser.
-# '''Average computer users who simply don’t want all or some aspect of their private lives uploaded, saved and analyzed'''. {{project_name_short}} does not silently upload identifying information in the background.
+# '''Average computer users who simply don't want all or some aspect of their private lives uploaded, saved and analyzed'''. {{project_name_short}} does not silently upload identifying information in the background.
 
 = {{project_name_short}} Architecture =
 

@@ -15,7 +15,7 @@ The {{project_name_short}} Windows Installer for Windows is a simple and fast wa
 
 The {{project_name_short}} Windows Installer for Windows is a simple and fast way to set-up {{project_name_short}} on a system running Microsoft Windows.
 
-{{#downloadbutton:text=Download Whonix ™ LXQt
+{{#downloadbutton:text=Download Whonix &trade; LXQt
  |url=/wiki/Windows_Quick_Start
  |os=windows|os=virtualbox
 }}

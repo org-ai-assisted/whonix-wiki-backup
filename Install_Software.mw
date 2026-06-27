@@ -344,7 +344,7 @@ sudo apt dist-upgrade -t bookworm-backports
 == Fasttrack ==
 [https://fasttrack.debian.net Debian Fasttrack]:
 
-<blockquote>Debian Fast Track is a repository that allows making “backports” of packages available to users of the stable distribution, if those packages cannot be maintained in testing and backported in the usual way.</blockquote>
+<blockquote>Debian Fast Track is a repository that allows making "backports" of packages available to users of the stable distribution, if those packages cannot be maintained in testing and backported in the usual way.</blockquote>
 
 This is a far safer alternative than the Debian testing or unstable repositories. However, Debian fasttrack should be used conservatively similarly to [[Install_Software#Backports|Backports]].
 
@@ -766,7 +766,7 @@ Flatpak is a victim of imperfect marketing. Since the Flatpak sandbox is a built
 Flatpak's sandboxing abilities are irrelevant so long as the sandboxing is not worse than software that is manually installed.
 
 === Flatpak Breaking the Native Sandbox of Applications ===
-Flatpak's sandbox, which is mandatory and cannot be disabled, can break application’s native sandboxing. For example, in case of Chromium Flatpak, adjustments were required.
+Flatpak's sandbox, which is mandatory and cannot be disabled, can break application's native sandboxing. For example, in case of Chromium Flatpak, adjustments were required.
 
 {{quotation
 |quote=The Chromium Flatpak has patches on it to utilize Flatpak's support for
@@ -781,19 +781,19 @@ Flatpak's own sandboxing capabilities interfere with other sandboxing initiative
 https://flatpak.org/faq/
 </ref>
 
-See also the discussion [https://discuss.privacyguides.net/t/does-flatpak-weaken-chromium-firefoxs-sandbox/13373 Does Flatpak weaken Chromium/Firefox’s sandbox?]
+See also the discussion [https://discuss.privacyguides.net/t/does-flatpak-weaken-chromium-firefoxs-sandbox/13373 Does Flatpak weaken Chromium/Firefox's sandbox?]
 
 <blockquote>
 Is Flatpak compatible with other desktop isolation frameworks?
 
-In general, unprivileged container systems can’t stack, because anything running inside the sandbox does not have the necessary privileges to set up a sandbox, nor does it have the ability to raise its privileges in any way. For instance, Firejail can never work inside Flatpak, because it is setuid. That being said, using multiple sandboxing frameworks at once does not really make anything more secure, so there is little point in trying to nest things like that.
+In general, unprivileged container systems can't stack, because anything running inside the sandbox does not have the necessary privileges to set up a sandbox, nor does it have the ability to raise its privileges in any way. For instance, Firejail can never work inside Flatpak, because it is setuid. That being said, using multiple sandboxing frameworks at once does not really make anything more secure, so there is little point in trying to nest things like that.
 </blockquote>
 
 In the case of [[sandbox-app-launcher|Sandboxed Application Launcher]], it is not used much at the time of writing. However, that is not a reason against using it. Flatpak's own sandboxing and [[sandbox-app-launcher|Sandboxed Application Launcher]] can be co-installed without issues, but the latter will be unable to sandbox applications installed through Flatpak. <ref>
 [https://forums.whonix.org/t/flatpak-as-a-software-source-flathub-as-a-source-of-software/8500/19 FlatPak as a Software Source / flathub as a source of software].
 </ref>
 
-[https://forum.vivaldi.net/topic/33411/flatpak-support/192 Ruarí (Vivaldi Browser Team) also confirmed this.]
+[https://forum.vivaldi.net/topic/33411/flatpak-support/192 Ruar&iacute; (Vivaldi Browser Team) also confirmed this.]
 
 === Flatpak Criticism ===
 ==== Flathub Promoting non-freedom Software ====
@@ -1041,7 +1041,7 @@ org.chromium.Chromium
 If you encounter an error message similar to the one below...
 
 <pre>
-Looking for matches…
+Looking for matches...
 error: Nothing matches org.getmonero.Monero in remote flathub
 zsh: exit 1     flatpak install flathub org.getmonero.Monero
 </pre>

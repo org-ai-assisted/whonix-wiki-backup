@@ -80,14 +80,14 @@ Many Open Source projects deliberately separate developer discussions from gener
 * '''On Rejecting Unsustainable Contributions:''' Experienced maintainers commonly reject well-meaning contributions if they impose long-term maintenance costs or misalign with project goals.  <ref>
 [https://news.ycombinator.com/item?id=25940195 Hacker News: Discussion on Maintaining Healthy OSS Projects]
 </ref>
-* '''Contribution Filtering and Project Vision:''' Even popular projects routinely reject pull requests that don’t match their architecture, goals, or maintainability expectations. <ref>
+* '''Contribution Filtering and Project Vision:''' Even popular projects routinely reject pull requests that don't match their architecture, goals, or maintainability expectations. <ref>
 [https://opensource.stackexchange.com/questions/15059/what-are-my-options-if-an-open-source-project-rejects-my-changes Open Source StackExchange: On Rejected Contributions]
 </ref>
 
 {{quotation
 |quote=The issue tracker is a tool to help the developers be more productive and efficient in their work. It is not a place for discussion.<br/>
 
-This guideline is important for keeping issues focused on actionable information, which helps the developers to stay focused on their work. When developers come back to an issue to work on it, we do not want them to have to sift through a large number of unnecessary comments before they can get started. In many cases, an issue that gets “too big” essentially becomes more trouble than it’s worth, and no developer will touch it (also see every issue must be about a single, actionable thing). In these cases, we sometimes have to close the issue and open a new one. This is a waste of energy for everyone involved, so we ask that everyone help to avoid repeating this pattern.
+This guideline is important for keeping issues focused on actionable information, which helps the developers to stay focused on their work. When developers come back to an issue to work on it, we do not want them to have to sift through a large number of unnecessary comments before they can get started. In many cases, an issue that gets "too big" essentially becomes more trouble than it's worth, and no developer will touch it (also see every issue must be about a single, actionable thing). In these cases, we sometimes have to close the issue and open a new one. This is a waste of energy for everyone involved, so we ask that everyone help to avoid repeating this pattern.
 |context=Qubes issue tracker FAQ: [https://www.qubes-os.org/doc/issue-tracking/#the-issue-tracker-is-not-a-discussion-forum The issue tracker is not a discussion forum]
 }}
 
@@ -97,13 +97,13 @@ This guideline is important for keeping issues focused on actionable information
 * [https://github.com/systemd/systemd/issues/33349 refuse systemd-tmpfiles --purge invocation without config]
 * [https://github.com/systemd/systemd/issues/33760 Boot hangs due to systemd-networkd-wait-online.service]
 * [https://github.com/systemd/systemd/issues/32028 Reduce dependencies of libsystemd]
-* [https://github.com/systemd/systemd/issues/26312 Many Failures on services when /home symlinked to non-…]
-* [https://github.com/systemd/systemd/issues/18014 Allow disabling systemd-sysv-generator warnings about …]
+* [https://github.com/systemd/systemd/issues/26312 Many Failures on services when /home symlinked to non-...]
+* [https://github.com/systemd/systemd/issues/18014 Allow disabling systemd-sysv-generator warnings about ...]
 * [https://github.com/systemd/systemd/issues/9894 Remove offensive words from code]
-* [https://github.com/systemd/systemd/issues/6237 systemd can’t handle process privilege with username starting with a number]
+* [https://github.com/systemd/systemd/issues/6237 systemd can't handle process privilege with username starting with a number]
 * [https://github.com/systemd/systemd/issues/1741 systemd umounts manual mounts when it has a failed unit for that mount point]
 * [https://github.com/systemd/systemd/issues/2402 Mount efivarfs read-only]
-* [https://github.com/systemd/systemd/issues/1143 PID1 getting stuck printing “Time has been …”]
+* [https://github.com/systemd/systemd/issues/1143 PID1 getting stuck printing "Time has been ..."]
 * [https://github.com/systemd/systemd/issues/14897 docs: Consider building the site with GFM instead of Kramdown]
 * more tickets for similar projects can be found with the following AI search query: {{CodeSelect|code=
 site:https://github.com/systemd/systemd find links to tickets which are open for discussion by collaborators only

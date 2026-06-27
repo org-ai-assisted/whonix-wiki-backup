@@ -27,14 +27,14 @@ There are multiple options to import VirtualBox. <u>Choose one.</u>
 | GUI
 | Use [[VirtualBox|import {{project_name_long}} VMs using VirtualBox's {{gui}}]] (Oracle VirtualBox VM Manager). This is the most common method for most users.
 | Windows, macOS, Linux
-| ★★★★★
+| &#9733;&#9733;&#9733;&#9733;&#9733;
 |-
 
 ! B
 | {{nowrap|Installer}}
 | Use the [[Linux|{{project_name_long}} Linux Installer for VirtualBox]].
 | Linux
-| ★★★☆☆
+| &#9733;&#9733;&#9733;&#9734;&#9734;
 |-
 
 ! C
@@ -48,7 +48,7 @@ Use cases:
 
 Importing VMs via the command line is a standard VirtualBox feature using the <code>vboxmanage</code> command. This method is [[unspecific|unspecific to {{project_name_long}}]].
 | Windows, macOS, Linux
-| ★☆☆☆☆
+| &#9733;&#9734;&#9734;&#9734;&#9734;
 |-
 
 |}
