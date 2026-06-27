@@ -624,41 +624,13 @@ Under the <code>Details</code> view for a VM, a new XML tab appears in the GUI, 
 
 The first step after extracting the archive is to import the supplied XML files. They serve as a description for [https://wiki.archlinux.org/title/libvirt libvirt] and define the properties of the {{project_name_short}} VMs and the networking they should use.
 {{Box|text=
-'''1.''' Add the virtual networks. This step only needs to be done once, not with every upgrade.
-
-If the definition of a {{project_name_short}} network fails because the virtual bridge "virbrX" already exists, edit the <code>{{project_name_short}}_external*.xml</code> and <code>{{project_name_short}}_internal*.xml</code> files and change the name to one that does not exist, for example "virbr3".
-
-{{CodeSelect|code=
-virsh -c qemu:///session net-define {{project_name_short}}_external*.xml
-}}
-
-{{CodeSelect|code=
-virsh -c qemu:///session net-define {{project_name_short}}_internal*.xml
-}}
-
-'''2.''' Activate the virtual networks.
-
-{{CodeSelect|code=
-virsh -c qemu:///session net-autostart {{project_name_short}}-External
-}}
-
-{{CodeSelect|code=
-virsh -c qemu:///session net-start {{project_name_short}}-External
-}}
-
-{{CodeSelect|code=
-virsh -c qemu:///session net-autostart {{project_name_short}}-Internal
-}}
-
-{{CodeSelect|code=
-virsh -c qemu:///session net-start {{project_name_short}}-Internal
-}}
-
-'''3.''' Import the {{project_name_short}} Gateway and Workstation images.
+'''1.''' Import the {{project_name_short}} Gateway image.
 
 {{CodeSelect|code=
 virsh -c qemu:///session define {{project_name_gateway_short}}*.xml
 }}
+
+'''2.''' Import the {{project_name_short}} Workstation images.
 
 {{CodeSelect|code=
 virsh -c qemu:///session define {{project_name_workstation_short}}*.xml
@@ -958,39 +930,39 @@ If you want to remove {{project_name_short}} KVM VMs, the {{project_name_short}}
 '''1.''' Power off the VM you want to shut down. <ref>The command line can also be used to ensure the VM has been shut down.</ref>
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system destroy {{project_name_gateway_short}}
+virsh -c qemu:///session destroy {{project_name_gateway_short}}
 }}
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system destroy {{project_name_workstation_short}}
+virsh -c qemu:///session destroy {{project_name_workstation_short}}
 }}
 
 '''2.''' Remove the KVM VM settings.
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system undefine {{project_name_gateway_short}}
+virsh -c qemu:///session undefine {{project_name_gateway_short}}
 }}
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system undefine {{project_name_workstation_short}}
+virsh -c qemu:///session undefine {{project_name_workstation_short}}
 }}
 
 '''3.''' Shut down the KVM network {{Code2|{{project_name_short}}}}.
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system net-destroy {{project_name_short}}-External
+virsh -c qemu:///session net-destroy {{project_name_short}}-External
 }}
 {{CodeSelect|code=
-sudo virsh -c qemu:///system net-destroy {{project_name_short}}-Internal
+virsh -c qemu:///session net-destroy {{project_name_short}}-Internal
 }}
 
 '''4.''' Remove the KVM network {{Code2|{{project_name_short}}}}.
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system net-undefine {{project_name_short}}-External
+virsh -c qemu:///session net-undefine {{project_name_short}}-External
 }}
 {{CodeSelect|code=
-sudo virsh -c qemu:///system net-undefine {{project_name_short}}-Internal
+virsh -c qemu:///session net-undefine {{project_name_short}}-Internal
 }}
 
 '''5.''' Delete the images.
@@ -998,11 +970,11 @@ sudo virsh -c qemu:///system net-undefine {{project_name_short}}-Internal
 <u>Note:</u> All data will be lost unless it is backed up first. Adjust the paths to the images as appropriate.
 
 {{CodeSelect|code=
-sudo safe-rm /var/lib/libvirt/images/{{project_name_gateway_short}}.qcow2
+safe-rm ~/.local/share/libvirt/images/{{project_name_gateway_short}}.qcow2
 }}
 
 {{CodeSelect|code=
-sudo safe-rm /var/lib/libvirt/images/{{project_name_workstation_short}}.qcow2
+safe-rm ~/.local/share/libvirt/images/{{project_name_workstation_short}}.qcow2
 }}
 }}
 </div>
