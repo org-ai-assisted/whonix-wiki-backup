@@ -1,7 +1,7 @@
 {{Header}}
 {{Title|title=
 Protocol Leak and Fingerprinting Protection
-&lrm;}}
+}}
 {{#seo:
 |description=Protection from IP Leaks, DNS Leaks, Protocol Leaks and Fingerprinting. Analysis of host hardware identifiers visible or hidden inside virtual machines.
 |image=Leakprotection-840835.jpg
@@ -505,7 +505,7 @@ There is also a trade-off between two goals: complete resistance to fingerprinti
 
 When not using virtual machines (VMs),  privacy-invasive software running on the host system has even greater ability to fingerprint users, because it can directly access hardware identifiers such as serial numbers, MAC addresses, or CPU features.
 
-For a related wiki page on identifiers, see: [[Protocol-Leak-Protection_and_Fingerprinting-Protection|Protocol Leak Protection and Fingerprinting Protection&lrm;]].
+For a related wiki page on identifiers, see: [[Protocol-Leak-Protection_and_Fingerprinting-Protection|Protocol Leak Protection and Fingerprinting Protection]].
 
 Discussions:
 

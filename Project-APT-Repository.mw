@@ -190,7 +190,7 @@ cat /etc/apt/sources.list.d/*
 = Further Reading =
 * [[Trust]]
 * [[Debian Packages|{{project_name_short}} Debian package - which ones are safe to remove?]]
-* [[Dev/Build Documentation&rlm;&lrm;|Building/upgrading {{project_name_short}} Debian packages from source code]]
+* [[Dev/Build Documentation|Building/upgrading {{project_name_short}} Debian packages from source code]]
 
 = Footnotes =
 <references />
