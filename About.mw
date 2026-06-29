@@ -1,4 +1,4 @@
-{{#kicksecure_css_page_about:}}<!--
+<!--
 Copyright:
 
    {{project_name_long}} About wiki page Copyright (C) Amnesia <amnesia at boum dot org>
@@ -33,7 +33,7 @@ This wiki page is a fork of the Tails About page, from this exact source <https:
 }} {{#seo:
 |description=Privacy protection. Anonymity online. Anonymous Operating System. {{project_name_short}} routes all Internet traffic through the Tor anonymity network. Security by Isolation. Based on Debian. {{project_name_short}} Architecture.
 |image=Whonix-homepage-main.png
-}}  {{Anchor|overview}} {{documentation_mininav}} {{intro|thumb=Whonix-homepage-main.png|
+}} {{#css:/src-copy/_Page_About.css}} {{Anchor|overview}} {{documentation_mininav}} {{intro|thumb=Whonix-homepage-main.png|
 '''{{project_name_short}} is an anonymous operating system that runs like an app''' and routes all Internet traffic through the Tor anonymity network. It offers privacy protection and anonymity online and is available for all major operating systems.
 
 {{VideoLink
@@ -54,7 +54,7 @@ Technical readers can refer to the [[Dev/Technical_Introduction|{{project_name_s
 <p>
 {{project_name_short}} is a free and open-source desktop {{os}} that is specifically designed for [https://www.whonix.org/#security advanced security and privacy]. It's based on the [https://torproject.org Tor] anonymity network, security-focused Linux Distribution {{Kicksecure_link
 |
-|{{Kicksecure}}
+|Kicksecure
 }}, GNU/Linux and the principle of security by isolation. {{project_name_short}} [[Whonix_against_Real_Attacks|defeats common attacks]] while maintaining usability.
 </p>
 }}
@@ -75,7 +75,8 @@ Technical readers can refer to the [[Dev/Technical_Introduction|{{project_name_s
 }}
 
 <center>
-{{#downloadbutton:text=Download Whonix (FREE)
+{{#widget:Download_Button
+ |text=Download Whonix (FREE)
  |url=/wiki/Download
  |fontsize=22px
 }}
@@ -109,7 +110,8 @@ The former runs Tor processes and acts as a gateway, while the latter runs user 
 }}
 
 <center>
-{{#downloadbutton:text=Download Whonix (FREE)
+{{#widget:Download_Button
+ |text=Download Whonix (FREE)
  |url=/wiki/Download
  |fontsize=22px
 }}
@@ -131,7 +133,7 @@ __TOC__
 [[File:Tor-logo.png|thumb|130px|border|alt=Tor logo|Tor logo]]
 '''{{project_name_short}} is a free and open-source desktop {{os}}''' that is specifically designed for [https://www.whonix.org/#security advanced security and privacy]. It's based on the [https://torproject.org Tor] anonymity network, security-focused Linux Distribution {{Kicksecure_link
 |
-|{{Kicksecure}}
+|Kicksecure
 }}, GNU/Linux and the principle of security by isolation.
 
 '''{{project_name_short}} [[Whonix_against_Real_Attacks|defeats common attacks]] while maintaining usability'''. Online anonymity and censorship circumvention is attainable via fail-safe, automatic and desktop-wide use of the Tor network. This helps to protect from traffic analysis by bouncing communications around a distributed network of relays run by global volunteers. Without advanced, end-to-end, netflow correlation attacks, an adversary watching an Internet connection cannot easily determine the sites visited, and those sites cannot discover the [[Users_of_Whonix|user]]'s physical location. <ref>
@@ -146,7 +148,7 @@ Current practical, low-latency, anonymity designs like Tor fail when the attacke
 
 {{project_name_short}} is [[Reasons for Freedom Software|Freedom Software]] and is based on {{Kicksecure_link
 |
-|{{Kicksecure}}
+|Kicksecure
 }} (security-focused Linux Distribution), Tor <ref>
 https://www.torproject.org/about/overview.html.en
 </ref>, Debian GNU/Linux <ref>
