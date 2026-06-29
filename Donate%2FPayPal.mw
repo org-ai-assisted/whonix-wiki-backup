@@ -15,49 +15,11 @@ Donate to {{project_name_short}} using PayPal. Most currencies. Many payment opt
 <div class="info-box paypal-panel">
 <div class="headline">Donate via [[File:de-pp-logo-200px.png|100px|alt=PayPal|link=]]</div>
 
-<div class="pay-via-paypal-module smooth">
-Javascript is deactivated. We offer two options:
-
-* '''A)''' Please either activate JavaScript, <u>OR</u>
-* '''B)''' use one of the Payment options below.
-** [[#Monthly Donations - no JavaScript|Monthly Donations (non-JS)]]
-** [https://www.paypal.com/paypalme/Whonix OneTime Donation (non-JS)]
-</div>
+<div class="paypal-donate-cta text-align-center">
+'''[https://www.paypal.com/donate/?hosted_button_id=AV279ZA93EKHQ Donate with PayPal]'''
 </div>
 
-<div class="show-for-nojs-only">
-
-= Monthly Donations - no JavaScript =
-{{mbox
-| image   = [[File:Ambox_notice.png|40px|alt=info]]
-| text    =
-
-* <u>JavaScript:</u> The following payment button on this website does <u>not</u> require JavaScript but the PayPal website <u>most likely</u> requires JavaScript which is [[unspecific|unspecific to {{project_name_short}}]].
-* [[File:Iconfinder_tor_386502.png|15px|link=]] <u>Note to users of Tor Browser:</u> If using Tor or Tor Browser, at time of writing PayPal was blocking connections from the Tor network. PayPal likely requires use of a clearnet browser.
-}}
-
-<div class="info-box paypal-nojs-subscription">
-To make a monthly donation by [[File:de-pp-logo-200px.png|70px|link=|alt=PayPal|PayPal]]:
-
-'''1.''' Select an amount.
-
-'''2.''' Select a currency.
-
-'''3.''' Press the subscribe button.
-
-<div class="paypal-nojs-subscription-form">
-{{Pay_by_PayPal_Subscription}}
-</div>
-
-'''4.''' Follow the instructions on the PayPal website.
-</div>
-
-= OneTime Donation - no JavaScript =
-
-<div class="paypalme-nojs-once">
-[https://www.paypal.com/paypalme/Whonix Donate Now]
-</div>
-
+On PayPal's donation page you can choose the amount and a one-time or monthly donation, and pay with a PayPal balance, credit or debit card, or many other payment options. No PayPal account is required for many options.
 </div>
 
 <div class="clear-float"></div>
