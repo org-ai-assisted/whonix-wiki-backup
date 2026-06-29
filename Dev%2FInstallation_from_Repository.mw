@@ -29,11 +29,11 @@ old tickets:
 </ref>
 * {{Kicksecure_wiki
 |wikipage=chroot
-|text=Installing {{Kicksecure}} in a chroot
+|text=Installing Kicksecure in a chroot
 }}
 * {{Kicksecure_wiki
 |wikipage=Debian
-|text={{Kicksecure}} installation for Debian
+|text=Kicksecure installation for Debian
 }}
 }}
 
@@ -65,7 +65,7 @@ Either by looking at the source code how the VM settings are configured or by do
 
 These instructions would be similar to the examples listed on the top of this page, perhaps specifically {{Kicksecure_wiki
 |wikipage=Debian
-|text={{Kicksecure}} installation for Debian
+|text=Kicksecure installation for Debian
 }}.
 
 '''5.''' Done.

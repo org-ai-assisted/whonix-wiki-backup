@@ -20,7 +20,7 @@ Introduction into {{project_name_short}} Technical Design.
 
 {{project_name_short}} consists of two Debian ({{Kicksecure_link
 |
-|{{Kicksecure}}
+|Kicksecure
 }}) based (virtual) machines (VMs), which are connected through an isolated network. 
 
 * A) One machine acts as the client or ''{{project_name_workstation_short}}'', running applications such as a browser; and

@@ -82,7 +82,7 @@ Detailed [[Documentation|documentation]] has been produced by developers and the
 * Whitelist Tor traffic with [[Corridor|corridor]].
 * [[File:Kicksecure-icon-logo.png|30px]] {{Kicksecure_link
 |
-|{{Kicksecure}}
+|Kicksecure
 }} Hardened.
 * [https://www.whonix.org/#security Numerous security and anonymity features].
 * Strong organisational separation: Even the {{project_name_short}} project does not have access to IP connection logs. See [[Why_does_Whonix_use_Tor#Organisational_Separation|Organisational Separation]].

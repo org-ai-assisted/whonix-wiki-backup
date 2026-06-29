@@ -11,7 +11,7 @@ title=System Hardening Checklist
 {{intro|
 {{project_name_short}} comes with [https://www.whonix.org/#security many security features]. {{project_name_short}} is {{Kicksecure_link
 |
-|{{Kicksecure}}
+|Kicksecure
 }} Hardened by default and also provides extensive [[Documentation]] including this System Hardening Checklist. The more you know, the safer you can be.
 
 This page is targeted at users who wish to improve the security of their systems for even greater protection.

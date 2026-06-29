@@ -23,7 +23,7 @@ All user applications, such as [[Tor Browser]], should be launched from {{projec
 
 {{project_name_short}} is based on security-focused Linux Distribution {{Kicksecure_link
 |
-|{{Kicksecure}}
+|Kicksecure
 }}. To learn more about {{project_name_short}}, please see the [[About|Overview]] and [[Features]] pages. <ref>
 [[Dev/Technical_Introduction|Technical Introduction]].
 </ref>

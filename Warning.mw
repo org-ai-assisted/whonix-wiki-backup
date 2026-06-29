@@ -439,7 +439,7 @@ At the time of writing {{project_name_short}} does not offer a Live DVD / USB. T
 * Wipe RAM on shut down.
 ** (When using {{Kicksecure_wiki
 |wikipage=Main_Page
-|text={{Kicksecure}}
+|text=Kicksecure
 }} as a host operating system, consider {{kicksecure_wiki
 |wikipage=Cold_Boot_Attack_Defense
 |text=Cold Boot Attack Defense / Wipe RAM
