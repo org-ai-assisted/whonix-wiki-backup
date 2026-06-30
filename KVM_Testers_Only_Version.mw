@@ -102,20 +102,10 @@ sudo apt install --no-install-recommends qemu-system-ppc libvirt-daemon libvirt-
 |addToClass=info-box
 |content=
 {{CodeSelect|code=
-sudo apt install --no-install-recommends qemu-kvm qemu-system-x86 libvirt-daemon libvirt-clients virt-manager virt-viewer gir1.2-spiceclientgtk-3.0 qemu-system-gui qemu-system-modules-spice passt qemu-utils ovmf swtpm swtpm-tools xz-utils
+sudo apt --no-install-recommends libvirt-daemon-driver-qemu libvirt-daemon-driver-network qemu-system-x86 libvirt-daemon libvirt-clients virt-manager virt-viewer gir1.2-spiceclientgtk-3.0 qemu-system-gui qemu-system-modules-spice passt qemu-utils ovmf swtpm swtpm-tools xz-utils
 }}
 
-Add your user to KVM groups (1 of 2).
-
-{{CodeSelect|code=
-sudo adduser $USER libvirt
-}}
-
-Add your user to KVM groups (2 of 2).
-
-{{CodeSelect|code=
-sudo adduser $USER libvirt-qemu
-}}
+'''Check''' the discussion about how to fix the apparmor issue <ref>https://forums.whonix.org/t/whonix-gateway-connects-to-tor-however-whonix-workstation-does-not/23334/17</ref>
 
 }} <!-- close tab: Ubuntu -->
 
