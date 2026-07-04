@@ -97,4 +97,5 @@ sudoedit /usr/local/etc/torrc.d/50_user.conf
 {{IntroLike|
 EDITORS NOTICE: The start menu entries mentioned on this wiki page all use <code>sudoedit</code> internally. There is no need to specifically instruct the user to use <code>sudoedit</code> for better security.
 }}
-{{Footer}} </noinclude>
+{{Footer}}
+</noinclude>
