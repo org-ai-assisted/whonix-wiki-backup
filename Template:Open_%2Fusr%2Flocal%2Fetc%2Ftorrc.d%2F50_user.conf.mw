@@ -96,7 +96,7 @@ Requires booting into [[sysmaint]] session or {{kicksecure_wiki
 {{Tab
 |title= ===== Terminal Qubes-Whonix =====
 |image=[[File:Utilities-terminal.png|25px]]
-|content= <u>If you are using [[Qubes|{{q_project_name_long}}]] with a terminal</u>, open a terminal in {{project_name_gateway_vm}} and run the following command.
+|content= <u>If you are using [[Qubes|{{q_project_name_long}}]] with a terminal</u>, open a terminal in <code>{{project_name_gateway_vm}}</code> and run the following command.
 
 {{CodeSelect|code=
 sudoedit /usr/local/etc/torrc.d/50_user.conf
