@@ -45,7 +45,9 @@ In Qubes R4, [[Qubes|{{q_project_name_short}}]] {{VersionShort}}'s default Dispo
 
 == Disposable Traffic Stream Isolation ==
 
-Disposables work especially well with {{project_name_gateway_long}}. <ref>Because each VM is assigned a unique, internal IP address.</ref> All Disposable traffic is [[Stream_Isolation|stream-isolated]] from the traffic of other VMs running in parallel.
+Whonix-Workstation Disposables work especially well with {{project_name_gateway_long}}. <ref>
+Because each VM is assigned a unique, internal IP address.
+</ref> All Disposable traffic is [[Stream_Isolation|stream-isolated]] from the traffic of other VMs running in parallel.
 
 = Warnings =
 
