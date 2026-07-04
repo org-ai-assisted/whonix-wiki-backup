@@ -67,7 +67,10 @@ sudoedit /usr/local/etc/torrc.d/50_user.conf
 |image=[[File:Qubes-logo-icon.png|25px]]
 |content=
 
-test
+{{kicksecure_wiki
+|wikipage=unrestricted_admin_mode
+|text=unrestricted admin mode
+}}
 
 {{Tab
 |type=controller
