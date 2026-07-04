@@ -71,11 +71,6 @@ sudoedit /usr/local/etc/torrc.d/50_user.conf
 |type=controller
 |content=
 
-[[sysmaint] session or {{kicksecure_wiki
-|wikipage=unrestricted_admin_mode
-|text=unrestricted admin mode
-}} required.
-
 {{Tab
 |title= ===== Graphical Qubes-Whonix =====
 |image=[[File:Qubes-logo-icon.png|25px]]
