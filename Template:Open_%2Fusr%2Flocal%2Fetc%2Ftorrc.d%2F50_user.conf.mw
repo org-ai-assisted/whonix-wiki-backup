@@ -67,6 +67,8 @@ sudoedit /usr/local/etc/torrc.d/50_user.conf
 |image=[[File:Qubes-logo-icon.png|25px]]
 |content=
 
+test
+
 {{Tab
 |type=controller
 |content=
