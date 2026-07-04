@@ -16,16 +16,16 @@ Ensure the VM has administrative (<code>sudo</code> / [[root|<code>root</code>]]
 |type=controller
 |content=
 
+{{Tab
+|title= ==== Non-Qubes-Whonix ====
+|content=
+
 {{IntroLike|
 Requires booting into [[sysmaint]] session or {{kicksecure_wiki
 |wikipage=unrestricted_admin_mode
 |text=unrestricted admin mode
 }}.
 }}
-
-{{Tab
-|title= ==== Non-Qubes-Whonix ====
-|content=
 
 {{Tab
 |type=controller
