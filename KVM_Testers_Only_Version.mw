@@ -613,14 +613,33 @@ Under the <code>Details</code> view for a VM, a new XML tab appears in the GUI, 
 == Importing {{project_name_short}} VM Templates ==
 
 The first step after extracting the archive is to import the supplied XML files. They serve as a description for [https://wiki.archlinux.org/title/libvirt libvirt] and define the properties of the {{project_name_short}} VMs and the networking they should use.
+
+By default, the username used is <code>user</code>. This can vary from user to user, so if you have a different username and want to change it to the one you are using, run this command for both <code>{{project_name_gateway_short}}.xml</code> and <code>{{project_name_gateway_short}}.xml</code>:
+
 {{Box|text=
-'''1.''' Import the {{project_name_short}} Gateway image.
+'''1.''' Change it for {{project_name_gateway_short}} image.
+
+{{CodeSelect|code=
+sed -i "s{{!}}/home/user/{{!}}$HOME/{{!}}g" {{project_name_gateway_short}}*.xml
+}}
+
+'''2.''' Change it for {{project_name_workstation_short}} images.
+
+{{CodeSelect|code=
+sed -i "s{{!}}/home/user/{{!}}$HOME/{{!}}g" {{project_name_workstation_short}}*.xml
+}}
+}}
+
+Then import the images settings:
+
+{{Box|text=
+'''1.''' Import the {{project_name_gateway_short}} image.
 
 {{CodeSelect|code=
 virsh -c qemu:///session define {{project_name_gateway_short}}*.xml
 }}
 
-'''2.''' Import the {{project_name_short}} Workstation images.
+'''2.''' Import the {{project_name_workstation_short}} Workstation images.
 
 {{CodeSelect|code=
 virsh -c qemu:///session define {{project_name_workstation_short}}*.xml
