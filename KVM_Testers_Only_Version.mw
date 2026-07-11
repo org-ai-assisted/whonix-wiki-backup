@@ -1914,6 +1914,14 @@ https://gymnasmata.wordpress.com/2010/12/02/setting-up-gdb-to-work-with-qemu-kvm
 </ref>
 }}
 
+== EFI ==
+https://forums.whonix.org/t/kvm-virtual-tpm-aka-the-universal-smartcard/8244/10
+
+https://forums.whonix.org/t/uefi-secure-boot-support/7943/7
+
+== Secure Boot ==
+See above.
+
 == Unsafe Features ==
 
 The features below have serious security implications and should not be used. This applies to all hypervisors in general.
