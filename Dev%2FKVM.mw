@@ -676,8 +676,9 @@ sudo chmod ug+x /mnt/shared
 1. Use tar to decompress the archive:
 <pre>tar -xvf Kicksecure*.libvirt.xz</pre>
 
-2. Create connection and import Kicksecure:
+2. Create connection (only necessary on first install
 <pre>virt-manager -c qemu:///session</pre>
+and import Kicksecure:
 <pre>virsh -c qemu:///session define Kicksecure*.xml</pre>
 
 3. Moving the Kicksecure ™ Image File
