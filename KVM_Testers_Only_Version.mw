@@ -313,15 +313,7 @@ If another distribution is in use, refer to the distribution's manual.
 
 == Restart libvirtd ==
 
-<u>Note</u>: Restarting libvirtd is required after:
-* KVM is installed.
-* Users are added to groups.
-
-{{CodeSelect|code=
-sudo systemctl restart libvirtd
-}}
-
-It may be necessary to reboot the computer on some systems.
+<u>Note</u>: It may be necessary to reboot the computer on some systems.
 
 == Build from Scratch ==
 
