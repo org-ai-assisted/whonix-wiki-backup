@@ -804,6 +804,8 @@ Images:
 
 After that you can first start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
 
+----
+
 If the virt-manager always going to show <code>qemu:///system</code> whenever you start the virt-manager later, then to solve this run:
 
 {{CodeSelect|code=
