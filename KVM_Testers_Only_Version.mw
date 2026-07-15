@@ -86,13 +86,13 @@ sudo apt update
 For '''Debian {{Stable project version based on Debian codename}}+''' on Intel / AMD, install:
 
 {{CodeSelect|code=
-sudo apt install --no-install-recommends qemu-system-x86 libvirt-daemon libvirt-clients virt-manager gir1.2-spiceclientgtk-3.0 qemu-system-gui qemu-system-modules-spice passt qemu-utils ovmf swtpm swtpm-tools safe-rm xz-utils
+sudo apt install --no-install-recommends qemu-system-x86 qemu-system-gui qemu-system-modules-spice qemu-utils libvirt-daemon libvirt-daemon-driver-qemu libvirt-daemon-driver-storage libvirt-clients virt-manager gir1.2-spiceclientgtk-3.0 passt ovmf swtpm swtpm-tools safe-rm xz-utils
 }}
 
 For '''Debian {{Stable project version based on Debian codename}}+''' on PowerPC, install:
 
 {{CodeSelect|code=
-sudo apt install --no-install-recommends qemu-system-ppc libvirt-daemon libvirt-clients virt-manager gir1.2-spiceclientgtk-3.0 qemu-system-gui qemu-system-modules-spice passt qemu-utils ovmf swtpm swtpm-tools safe-rm xz-utils
+sudo apt install --no-install-recommends qemu-system-ppc qemu-system-gui qemu-system-modules-spice qemu-utils libvirt-daemon-system libvirt-daemon-driver-qemu libvirt-daemon-driver-storage libvirt-clients virt-manager gir1.2-spiceclientgtk-3.0 passt swtpm swtpm-tools safe-rm xz-utils
 }}
 }} <!-- close tab: Debian -->
 
@@ -102,7 +102,7 @@ sudo apt install --no-install-recommends qemu-system-ppc libvirt-daemon libvirt-
 |addToClass=info-box
 |content=
 {{CodeSelect|code=
-sudo apt --no-install-recommends libvirt-daemon-driver-qemu libvirt-daemon-driver-network qemu-system-x86 libvirt-daemon libvirt-clients virt-manager virt-viewer gir1.2-spiceclientgtk-3.0 qemu-system-gui qemu-system-modules-spice passt qemu-utils ovmf swtpm swtpm-tools xz-utils
+sudo apt install --no-install-recommends qemu-system-x86 qemu-system-gui qemu-system-modules-spice qemu-utils libvirt-daemon libvirt-daemon-driver-qemu libvirt-daemon-driver-storage libvirt-daemon-driver-network libvirt-clients virt-manager virt-viewer gir1.2-spiceclientgtk-3.0 passt ovmf swtpm swtpm-tools safe-rm xz-utils
 }}
 
 '''Check''' the discussion about how to fix the apparmor issue <ref>https://forums.whonix.org/t/whonix-gateway-connects-to-tor-however-whonix-workstation-does-not/23334/17</ref>
