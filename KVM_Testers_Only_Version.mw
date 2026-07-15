@@ -810,6 +810,8 @@ Images:
 
 [[File:enable-qemu-session-4.png|500px]]
 
+After that you can first start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
+
 If the virt-manager always going to show <code>qemu:///system</code> whenever you start the virt-manager later, then to solve this run:
 
 {{CodeSelect|code=
@@ -820,8 +822,6 @@ source ~/.zshrc
 }}
 
 (If someone is using Bash instead of Zsh, change <code>.zshrc</code> to <code>.bashrc</code>, This tells your entire user profile including the GUI to always target your local user session by default).
-
-After that you can first start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
 
 === Using Whonix-Gateway with LXQt Desktop vs CLI Mode ===
 
