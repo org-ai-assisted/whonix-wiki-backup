@@ -794,7 +794,7 @@ safe-rm -r WHONIX*
 
 == Start ==
 
-=== Virt-Manager GUI default is <code>qemu:///system</code> not <code>qemu:///session</code> ===
+=== Virtual Machine Manager (Virt-Manager) GUI default is <code>qemu:///system</code> not <code>qemu:///session</code> ===
 
 If WS and GW not shown in the default opening of Virt-Manager, Then this is because it assumes your VMs on default <code>qemu:///system</code>, so you need to change that to <code>qemu:///session</code>:
 
@@ -810,7 +810,7 @@ Images:
 
 [[File:enable-qemu-session-4.png|500px]]
 
-If the virt-manager (Virtual Machine Manager) always going to show <code>qemu:///system</code> whenever you start the virt-manager later, then to solve this run:
+If the virt-manager always going to show <code>qemu:///system</code> whenever you start the virt-manager later, then to solve this run:
 
 {{CodeSelect|code=
 echo "export LIBVIRT_DEFAULT_URI='qemu:///session'" >> ~/.zshrc
