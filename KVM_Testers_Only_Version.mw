@@ -694,7 +694,7 @@ max_processes = 0
 max_files = 0
 </pre>
 
-* Save and exit {{Keypress|Ctrl_x|y|Enter}}.
+* Save and exit {{Keypress|Ctrl|x}} then {{Keypress|y}} then {{Keypress|Enter}}.
 
 * Restart virt-manager if it's running so the changes can take effect, then start it (and VMs) normally afterward.
 
