@@ -696,20 +696,7 @@ max_files = 0
 
 * Save and exit {{Keypress|Ctrl_x|y|Enter}}.
 
-* Stop libvirt if its running (so the changes take effect):
-
-{{CodeSelect|code=
-systemctl --user stop libvirtd.service 2>/dev/null
-}}
-{{CodeSelect|code=
-systemctl --user stop virtqemud.service 2>/dev/null
-}}
-{{CodeSelect|code=
-pkill -9 -f libvirtd
-}}
-{{CodeSelect|code=
-pkill -9 -f virtqemud
-}}
+* Restart virt-manager if it's running so the changes can take effect, then start it (and VMs) normally afterward.
 
 * Done
 
