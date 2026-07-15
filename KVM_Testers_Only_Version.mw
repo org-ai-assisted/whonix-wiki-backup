@@ -796,11 +796,21 @@ safe-rm -r WHONIX*
 
 === Virt-Manager GUI default is <code>qemu:///system</code> not <code>qemu:///session</code> ===
 
-If WS and GW not shown in the default opening of Virt-Manager, Then this is because it assumes your VMs on normal QEMU/KVM or qemu:///system, so you need to change that to QEMU/KVM user session:
+If WS and GW not shown in the default opening of Virt-Manager, Then this is because it assumes your VMs on default <code>qemu:///system</code>, so you need to change that to <code>qemu:///session</code>:
 
-Go to <code>virt-manager</code> &rarr; <code>File</code> &rarr; <code>Add Connection</code> &rarr; Switch Hypervisor from <code>QEMU/KVM</code> to <code>QEMU/KVM user session</code> &rarr; Connect
+Go to <code>Virtual Machine Manager</code> &rarr; <code>File</code> &rarr; <code>Add Connection...</code> &rarr; Switch Hypervisor from <code>QEMU/KVM</code> to <code>QEMU/KVM user session</code> &rarr; Tick <code>Autoconnect</code> &rarr; <code>Connect</code>.
 
-If the virt-manager always going to show <code>qemu:///system</code> whenever you start the virt-manager, then to solve this run:
+Images:
+
+[[File:enable-qemu-session-1.png|500px]]
+
+[[File:enable-qemu-session-2.png|500px]]
+
+[[File:enable-qemu-session-3.png|500px]]
+
+[[File:enable-qemu-session-4.png|500px]]
+
+If the virt-manager (Virtual Machine Manager) always going to show <code>qemu:///system</code> whenever you start the virt-manager later, then to solve this run:
 
 {{CodeSelect|code=
 echo "export LIBVIRT_DEFAULT_URI='qemu:///session'" >> ~/.zshrc
@@ -811,7 +821,7 @@ source ~/.zshrc
 
 (If someone is using Bash instead of Zsh, change <code>.zshrc</code> to <code>.bashrc</code>, This tells your entire user profile including the GUI to always target your local user session by default).
 
-After that first start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
+After that you can first start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
 
 === Using Whonix-Gateway with LXQt Desktop vs CLI Mode ===
 
