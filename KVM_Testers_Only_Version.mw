@@ -701,14 +701,14 @@ max_files = 0
 * Done
 
 == Image File Installation ==
-The XML files are configured to use newly created user level path <code>~/.local/share/libvirt/images</code> instead of the default storage location of <code>/var/lib/libvirt/images</code>. The image files can be moved or copied, depending on storage constraints.
+The XML files are configured to use newly created user level path <code>~/.local/share/images</code> instead of the default storage location of <code>/var/lib/libvirt/images</code>. The image files can be moved or copied, depending on storage constraints.
 
 <u>Notes:</u>
 
 * The directory must be created before copying or moving the images. To create the path:
 
 {{CodeSelect|code=
-mkdir -p ~/.local/share/libvirt/images
+mkdir -p ~/.local/share/images
 }}
 
 * The following steps move or copy the images so the virtual machines can boot.
@@ -725,11 +725,11 @@ Either move <u>or</u> copy.
 Move the image files.
 
 {{CodeSelect|code=
-mv {{project_name_gateway_short}}*.qcow2 ~/.local/share/libvirt/images/{{project_name_gateway_short}}.qcow2
+mv {{project_name_gateway_short}}*.qcow2 ~/.local/share/images/{{project_name_gateway_short}}.qcow2
 }}
 
 {{CodeSelect|code=
-mv {{project_name_workstation_short}}*.qcow2 ~/.local/share/libvirt/images/{{project_name_workstation_short}}.qcow2
+mv {{project_name_workstation_short}}*.qcow2 ~/.local/share/images/{{project_name_workstation_short}}.qcow2
 }}
 }}
 {{Tab
@@ -743,11 +743,11 @@ Copy the image files. {{Anchor|sparse files}}
 }}, meaning they expand as data is written rather than allocating their entire size (100GB) outright. Sparse files require special commands when they are copied to ensure they retain this property; otherwise, they will occupy the full disk space.
 
 {{CodeSelect|code=
-cp --sparse=always {{project_name_gateway_short}}*.qcow2 ~/.local/share/libvirt/images/{{project_name_gateway_short}}.qcow2
+cp --sparse=always {{project_name_gateway_short}}*.qcow2 ~/.local/share/images/{{project_name_gateway_short}}.qcow2
 }}
 
 {{CodeSelect|code=
-cp --sparse=always {{project_name_workstation_short}}*.qcow2 ~/.local/share/libvirt/images/{{project_name_workstation_short}}.qcow2
+cp --sparse=always {{project_name_workstation_short}}*.qcow2 ~/.local/share/images/{{project_name_workstation_short}}.qcow2
 }}<!-- close CodeSelect -->
 }}<!-- close tab -->
 }}<!-- close controller -->
