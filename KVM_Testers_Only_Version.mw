@@ -952,6 +952,10 @@ If another distribution is in use, refer to the distribution's manual.
 
 }} <!-- close Controller: Everything -->
 
+* Restart libvirtd
+
+<u>Note</u>: It may be necessary to reboot the computer on some systems.
+
 == Fullscreen Mode ==
 
 * To enter fullscreen mode, click:
