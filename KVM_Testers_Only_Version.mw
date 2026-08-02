@@ -2017,6 +2017,57 @@ For more information on settings, please refer to the [https://libvirt.org/forma
 
 = Troubleshooting =
 
+== Storage pool is not running ==
+
+The common/default behavior is that the <code>default</code> storage pool should be running and set to autostart, but if that is not the case:
+
+<pre>
+Error starting domain: unsupported configuration: storage pool 'default' containing volume 'Whonix-Gateway.qcow2' is not active
+
+Traceback (most recent call last):
+  File "/usr/share/virt-manager/virtManager/asyncjob.py", line 71, in cb_wrapper
+    callback(asyncjob, *args, **kwargs)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/share/virt-manager/virtManager/asyncjob.py", line 107, in tmpcb
+    callback(*args, **kwargs)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/share/virt-manager/virtManager/object/libvirtobject.py", line 57, in newfn
+    ret = fn(self, *args, **kwargs)
+  File "/usr/share/virt-manager/virtManager/object/domain.py", line 1384, in startup
+    self._backend.create()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3/dist-packages/libvirt.py", line 1390, in create
+    raise libvirtError('virDomainCreate() failed')
+libvirt.libvirtError: unsupported configuration: storage pool 'default' containing volume 'Whonix-Gateway.qcow2' is not active
+</pre>
+
+Then here is how to start <code>default</code>and enable autostart:
+
+{{CodeSelect|code=
+virsh pool-start default && virsh pool-autostart default
+}}
+
+* Check the pool info:
+
+{{CodeSelect|code=
+virsh pool-info default
+}}
+
+Should give:
+
+<pre>
+Name:           default
+UUID:           xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+State:          running
+Persistent:     yes
+Autostart:      yes
+Capacity:       xx.xx GiB
+Allocation:     xx.xx GiB
+Available:      xx.xx GiB
+</pre>
+
+* Done
+
 == vhost-vsock device ==
 
 If you get this error when trying to run WS:
