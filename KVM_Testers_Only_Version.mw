@@ -232,10 +232,6 @@ Then a more recent version of libvirt and KVM is likely needed.
 
 Readers are welcome to add detailed instructions for other distributions here!
 
-== Restart libvirtd ==
-
-<u>Note</u>: It may be necessary to reboot the computer on some systems.
-
 == Build from Scratch ==
 
 Advanced users are encouraged to [[Dev/Build_Documentation|build]] {{project_name_short}} images for high security assurance.
