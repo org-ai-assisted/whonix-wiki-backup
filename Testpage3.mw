@@ -1,12 +1,16 @@
 //#REDIRECT [[Testpage4]]
 // sorry
 
+nowseo
+
  {{#seo:
   |title=MW-TITLE-91D4</title><img id="mw-seo-title-html" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
   onload="document.documentElement.dataset.mwSeoTitleJs='executed'"><title>
   |description=MW-DESCRIPTION-91D4"><img id="mw-seo-description-html" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///
   ywAAAAAAQABAAACAUwAOw==" onload="document.documentElement.dataset.mwSeoDescriptionJs='executed'"><meta name="mw-audit-repair" content="
   }}
+
+nowcss
 
   {{#css:
   #mw-seo-probe {
