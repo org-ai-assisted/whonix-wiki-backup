@@ -40,3 +40,11 @@ test_3_start
 VISIBLE-PAGE-CONTENT
 
 test_3_end
+
+{{#seo:
+  |title=MW-TITLE-'"><img src=x onerror=alert(58031)>
+  |description=MW-DESCRIPTION-'"><img src=x onerror=alert(58032)>
+  |keywords=MW-KEYWORDS-'"><img src=x onerror=alert(58033)>
+  }}
+
+test_4_end
