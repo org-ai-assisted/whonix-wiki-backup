@@ -13,4 +13,20 @@ test_1_start
   }}
  
 
-test_2_end
+test_1_end
+
+test_2_strt
+  {{#css:
+  body::before {
+    content: "MW-CSS-CANARY";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    padding: 8px;
+    background: yellow;
+    color: black;
+  }
+  }}
+  
+  test_2_end
