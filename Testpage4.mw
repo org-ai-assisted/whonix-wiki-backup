@@ -2,4 +2,11 @@
 test
 [[File:Kicksecure-promo.jpg|link=#abc]]
 
-.
+
+test
+
+  {{#seo:
+  |title=MW-SEO-TITLE-'"><&-END
+  |description=MW-SEO-DESC-'"><&-END
+  |keywords=MW-SEO-KEY-'"><&-END
+  }}
