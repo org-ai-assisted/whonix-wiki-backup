@@ -28,14 +28,15 @@ test_2_start
     color: black;
   }
   }}
-  
-  test_2_end
-  test_3_start
-    {{#seo:
+
+test_2_end
+test_3_start
+
+{{#seo:
   |title=MW SEO AUDIT TITLE
   |description=MW SEO AUDIT DESCRIPTION
   }}
 
-  VISIBLE-PAGE-CONTENT
-  
-  test_3_end
+VISIBLE-PAGE-CONTENT
+
+test_3_end
