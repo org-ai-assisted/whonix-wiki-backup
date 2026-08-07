@@ -15,7 +15,7 @@ test_1_start
 
 test_1_end
 
-test_2_strt
+test_2_start
   {{#css:
   body::before {
     content: "MW-CSS-CANARY";
@@ -30,3 +30,12 @@ test_2_strt
   }}
   
   test_2_end
+  test_3_start
+    {{#seo:
+  |title=MW SEO AUDIT TITLE
+  |description=MW SEO AUDIT DESCRIPTION
+  }}
+
+  VISIBLE-PAGE-CONTENT
+  
+  test_3_end
