@@ -47,4 +47,11 @@ test_3_end
   |keywords=MW-KEYWORDS-'"><img src=x onerror=alert(58033)>
   }}
 
+test_4_alt
+
+{{#seo:
+  |title=MW-SEO-TITLE-12345
+  |description=MW-SEO-DESCRIPTION-12345
+  }}
+
 test_4_end
