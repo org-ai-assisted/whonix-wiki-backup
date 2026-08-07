@@ -3,10 +3,12 @@ test
 [[File:Kicksecure-promo.jpg|link=#abc]]
 
 
-test
+test_1_start
 
   {{#seo:
   |title=MW-SEO-TITLE-'"><&-END
   |description=MW-SEO-DESC-'"><&-END
   |keywords=MW-SEO-KEY-'"><&-END
   }}
+  
+  test_2_end
