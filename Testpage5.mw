@@ -15,14 +15,3 @@
 ®
 
 {{Footer}}
-
-
-BEFORE-WIKISEO-12345
-
-{{#seo:
-  |title=MW-TITLE-'"><img src=x onerror=alert(58031)>
-  |description=MW-DESCRIPTION-'"><img src=x onerror=alert(58032)>
-  |keywords=MW-KEYWORDS-'"><img src=x onerror=alert(58033)>
-  }}
-
-AFTER-WIKISEO-12345
