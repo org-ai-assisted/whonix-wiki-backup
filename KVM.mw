@@ -86,13 +86,13 @@ sudo apt update
 For '''Debian {{Stable project version based on Debian codename}}+''' on Intel / AMD, install:
 
 {{CodeSelect|code=
-sudo apt install --no-install-recommends qemu-system-x86 libvirt-daemon-system libvirt-clients virt-manager gir1.2-spiceclientgtk-3.0 qemu-system-gui qemu-system-modules-spice dnsmasq-base qemu-utils ovmf swtpm swtpm-tools safe-rm xz-utils
+sudo apt install --no-install-recommends qemu-system-x86 qemu-system-gui qemu-system-modules-spice qemu-utils libvirt-daemon libvirt-daemon-driver-qemu libvirt-daemon-driver-storage libvirt-clients virt-manager gir1.2-spiceclientgtk-3.0 passt ovmf swtpm swtpm-tools safe-rm xz-utils
 }}
 
 For '''Debian {{Stable project version based on Debian codename}}+''' on PowerPC, install:
 
 {{CodeSelect|code=
-sudo apt install --no-install-recommends qemu-system-ppc libvirt-daemon-system libvirt-clients virt-manager gir1.2-spiceclientgtk-3.0 qemu-system-gui qemu-system-modules-spice dnsmasq-base qemu-utils ovmf swtpm swtpm-tools safe-rm xz-utils
+sudo apt install --no-install-recommends qemu-system-ppc qemu-system-gui qemu-system-modules-spice qemu-utils libvirt-daemon-system libvirt-daemon-driver-qemu libvirt-daemon-driver-storage libvirt-clients virt-manager gir1.2-spiceclientgtk-3.0 passt swtpm swtpm-tools safe-rm xz-utils
 }}
 }} <!-- close tab: Debian -->
 
@@ -102,20 +102,10 @@ sudo apt install --no-install-recommends qemu-system-ppc libvirt-daemon-system l
 |addToClass=info-box
 |content=
 {{CodeSelect|code=
-sudo apt install --no-install-recommends qemu-system-x86 libvirt-daemon-system libvirt-clients virt-manager gir1.2-spiceclientgtk-3.0 qemu-system-gui qemu-system-modules-spice dnsmasq-base qemu-utils ovmf swtpm swtpm-tools safe-rm xz-utils
+sudo apt install --no-install-recommends qemu-system-x86 qemu-system-gui qemu-system-modules-spice qemu-utils libvirt-daemon libvirt-daemon-driver-qemu libvirt-daemon-driver-storage libvirt-daemon-driver-network libvirt-clients virt-manager virt-viewer gir1.2-spiceclientgtk-3.0 passt ovmf swtpm swtpm-tools safe-rm xz-utils
 }}
 
-Add your user to KVM groups (1 of 2).
-
-{{CodeSelect|code=
-sudo adduser $USER libvirt
-}}
-
-Add your user to KVM groups (2 of 2).
-
-{{CodeSelect|code=
-sudo adduser $USER libvirt-qemu
-}}
+'''Check''' the discussion about how to fix the apparmor issue <ref>https://forums.whonix.org/t/whonix-gateway-connects-to-tor-however-whonix-workstation-does-not/23334/17</ref>
 
 }} <!-- close tab: Ubuntu -->
 
@@ -124,15 +114,9 @@ sudo adduser $USER libvirt-qemu
 |image=[[File:Archlinux_logo.png|25px]]
 |addToClass=info-box
 |content=
-TODO: Is it possible to install only dnsmasq-base without the dnsmasq systemd unit, or does Arch Linux keep the systemd unit disabled by default?
-
-CRITIQUES:
-
-* <code>safe-rm</code> is not an Arch Linux package. <code>tar</code> should pull in <code>xz</code> if required. <code>safe-rm</code> has limited value.
-* <code>bridge-utils</code> is deprecated and removed from extra in Arch linux. Advised is to replace it with <code>iproute2</code> package.
 
 {{CodeSelect|code=
-sudo pacman -Syu qemu libvirt virt-manager qemu-full dnsmasq bridge-utils safe-rm xz
+sudo pacman -Syu --needed qemu-system-x86 qemu-desktop qemu-img qemu-tools libvirt virt-manager virt-viewer spice-gtk passt edk2-ovmf swtpm xz
 }}
 
 {{CodeSelect|code=
@@ -159,13 +143,7 @@ egrep -E '^flags.*(vmx{{!}}svm)' /proc/cpuinfo
 To install mandatory and default packages in the virtualization group, run:
 
 {{CodeSelect|code=
-sudo dnf install @virtualization xz-utils
-}}
-
-Alternatively, to install mandatory, default, and optional packages, run:
-
-{{CodeSelect|code=
-sudo dnf group install --with-optional virtualization xz-utils
+sudo dnf install --setopt=install_weak_deps=False qemu-kvm qemu-system-x86 qemu-ui-gtk qemu-ui-spice-core qemu-ui-spice-app libvirt-daemon libvirt-daemon-kvm libvirt-daemon-config-network libvirt-client virt-manager virt-viewer spice-gtk3 spice-gtk-tools qemu-img qemu-tools passt passt-selinux edk2-ovmf swtpm swtpm-tools xz
 }}
 
 After installing packages, start the libvirtd service.
@@ -253,119 +231,6 @@ Then a more recent version of libvirt and KVM is likely needed.
 }} <!-- close Controller: Everything -->
 
 Readers are welcome to add detailed instructions for other distributions here!
-
-== Addgroup ==
-
-In order to manage virtual machines as a regular (non-root) user, that user must be added to the <code>libvirt</code> and <code>kvm</code> groups.
-
-{{Tab
-|type=controller
-|content=
-{{Tab
-|title= === Debian (based) / Ubuntu ===
-|image=[[File:Logo-debian.png|25px]]
-|addToClass=info-box
-|content=
-The following commands work in Debian and assume the simple scenario where KVM is used by the currently logged-in user. For older Ubuntu versions, note that group names vary and ''libvirt'' may be called ''libvirtd'' instead. For Ubuntu 20.04, ''libvirt'' works.
-
-{{CodeSelect|inline=true|code=
-sudo adduser "$(whoami)" libvirt
-}}
-
-{{CodeSelect|inline=true|code=
-sudo adduser "$(whoami)" kvm
-}}
-
-<ref>
-By default, Debian does not use <code>sudo</code>, so groups can be added using <code>usermod</code>. If your user is <code>foo</code>, the following commands will work.
-
-{{CodeSelect|code=
-usermod -a -G libvirt foo
-}}
-
-And:
-
-{{CodeSelect|code=
-usermod -a -G kvm foo
-}}
-</ref>
-}} <!-- close tab: Debian (based) / Ubuntu -->
-
-{{Tab
-|title= === Fedora ===
-|image=[[File:Fedora-logo.png|25px]]
-|addToClass=info-box
-|content=
-{{CodeSelect|code=
-sudo usermod -a -G libvirt <username>
-}}
-
-{{CodeSelect|code=
-sudo usermod -a -G kvm <username>
-}}
-
-Replace <username> with the actual username. You must log out and log back in for changes to take effect.
-}} <!-- close tab: Fedora -->
-
-{{Tab
-|title= === Arch Linux ===
-|image=[[File:Archlinux_logo.png|25px]]
-|addToClass=info-box
-|content=
-{{CodeSelect|inline=true|code=
-sudo gpasswd -a $USER libvirt
-}}
-
-{{CodeSelect|code=
-sudo gpasswd -a $USER kvm
-}}
-
-See also [https://wiki.archlinux.org/title/libvirt Arch Linux libvirt wiki page].
-}} <!-- close tab: Arch Linux -->
-
-{{Tab
-|title= === Other Distributions ===
-|image=[[File:Gnu_operating_system.png|25px]]
-|addToClass=info-box
-|content=
-If another distribution is in use, refer to the distribution's manual.
-}} <!-- close tab: Other Distributions -->
-
-}} <!-- close Controller: Everything -->
-
-== Restart libvirtd ==
-
-<u>Note</u>: Restarting libvirtd is required after:
-* KVM is installed.
-* Users are added to groups.
-
-{{CodeSelect|code=
-sudo systemctl restart libvirtd
-}}
-
-It may be necessary to reboot the computer on some systems.
-
-== Network Start ==
-
-{{mbox
-| type    = notice
-| image   = [[File:Ambox_notice.png|40px|alt=Info]]
-| text    = These steps are unrelated to {{project_name_short}}, but are helpful when running other VMs.
-}}
-
-Ensure KVM's / QEMU's default networking is enabled and has started. <ref>
-https://forums.whonix.org/t/kvm-networking-broken/644
-</ref> <ref>
-https://wiki.debian.org/KVM#Troubleshooting
-</ref>
-
-{{CodeSelect|code=
-sudo virsh -c qemu:///system net-autostart default
-}}
-
-{{CodeSelect|code=
-sudo virsh -c qemu:///system net-start default
-}}
 
 == Build from Scratch ==
 
@@ -657,57 +522,105 @@ Under the <code>Details</code> view for a VM, a new XML tab appears in the GUI, 
 == Importing {{project_name_short}} VM Templates ==
 
 The first step after extracting the archive is to import the supplied XML files. They serve as a description for [https://wiki.archlinux.org/title/libvirt libvirt] and define the properties of the {{project_name_short}} VMs and the networking they should use.
+
+Import the images settings:
+
 {{Box|text=
-'''1.''' Add the virtual networks. This step only needs to be done once, not with every upgrade.
-
-If the definition of a {{project_name_short}} network fails because the virtual bridge "virbrX" already exists, edit the <code>{{project_name_short}}_external*.xml</code> and <code>{{project_name_short}}_internal*.xml</code> files and change the name to one that does not exist, for example "virbr3" (all existing bridge adapters can be listed with <code>sudo brctl show</code>).
+'''1.''' Import the {{project_name_gateway_short}} image.
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system net-define {{project_name_short}}_external*.xml
+virsh -c qemu:///session define {{project_name_gateway_short}}*.xml
 }}
+
+'''2.''' Import the {{project_name_workstation_short}} image.
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system net-define {{project_name_short}}_internal*.xml
+virsh -c qemu:///session define {{project_name_workstation_short}}*.xml
+}}
 }}
 
-'''2.''' Activate the virtual networks.
+== Tell libvirt to stop trying to adjust resources limits and force libvirt to skip it ==
+
+Libvirt tries to set the VM process maximum core dump file size to "unlimited", but the system will blocks it because unprivileged users not allowed to raise their own hard resource limits (setrlimit).
+
+Since there is no root access to modify system-wide limits, then we need to tell libvirt to stop trying to adjust this limit by forcing libvirt to skip resource limits otherwise you will run into an error like this:
+
+<pre>
+Error starting domain: internal error: Process exited prior to exec: libvirt:  error : cannot limit core file size of process 7077 to 18446744073709551615: Operation not permitted
+
+Traceback (most recent call last):
+
+  File "/usr/share/virt-manager/virtManager/asyncjob.py", line 71, in cb_wrapper
+
+    callback(asyncjob, *args, **kwargs)
+
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/share/virt-manager/virtManager/asyncjob.py", line 107, in tmpcb
+
+    callback(*args, **kwargs)
+
+    ~~~~~~~~^^^^^^^^^^^^^^^^^
+
+  File "/usr/share/virt-manager/virtManager/object/libvirtobject.py", line 57, in newfn
+
+    ret = fn(self, *args, **kwargs)
+
+  File "/usr/share/virt-manager/virtManager/object/domain.py", line 1384, in startup
+
+    self._backend.create()
+
+    ~~~~~~~~~~~~~~~~~~~~^^
+
+  File "/usr/lib/python3/dist-packages/libvirt.py", line 1390, in create
+
+    raise libvirtError('virDomainCreate() failed')
+
+libvirt.libvirtError: internal error: Process exited prior to exec: libvirt:  error : cannot limit core file size of process 7077 to 18446744073709551615: Operation not permitted
+</pre>
+
+The giant number 18446744073709551615 represents RLIM_INFINITY (unlimited).
+
+So we need to override the memory/core limits for QEMU inside user configuration directory:
+
+* Create new directory:
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system net-autostart {{project_name_short}}-External
+mkdir -p ~/.config/libvirt/
 }}
+
+* Make and edit new file:
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system net-start {{project_name_short}}-External
+nano ~/.config/libvirt/qemu.conf
 }}
 
-{{CodeSelect|code=
-sudo virsh -c qemu:///system net-autostart {{project_name_short}}-Internal
-}}
+* Copy and Paste:
 
-{{CodeSelect|code=
-sudo virsh -c qemu:///system net-start {{project_name_short}}-Internal
-}}
+<pre>
+max_core = 0
+max_processes = 0
+max_files = 0
+</pre>
 
-'''3.''' Import the {{project_name_short}} Gateway and Workstation images.
+* Save and exit {{Keypress|Ctrl|x}} then {{Keypress|y}} then {{Keypress|Enter}}.
 
-{{CodeSelect|code=
-sudo virsh -c qemu:///system define {{project_name_gateway_short}}*.xml
-}}
+* Restart virt-manager if it's running so the changes can take effect, then start it (and VMs) normally afterward.
 
-{{CodeSelect|code=
-sudo virsh -c qemu:///system define {{project_name_workstation_short}}*.xml
-}}
-}}
+* Done
 
 == Image File Installation ==
-The XML files are configured to use the default storage location of <code>/var/lib/libvirt/images</code>. The image files can be moved or copied, depending on storage constraints.
+The XML files are configured to use newly created user level path <code>~/.local/share/images</code> instead of the default storage location of <code>/var/lib/libvirt/images</code>. The image files can be moved or copied, depending on storage constraints.
 
 <u>Notes:</u>
 
-* <u>SELinux:</u> Changing the default location may cause SELinux conflicts, which can prevent the virtual machines from booting.
-* <u>Administrative rights:</u> Administrative rights (<code>sudo</code>) are required because the copy or move operation targets a privileged system location.
+* The directory must be created before copying or moving the images. To create the path <ref>Another less practical and not guaranteed method could be used by running <code>virt-manager -c qemu:///session</code>. This will open virt-manager, triggering the default storage path, and the user will see the {{project_name_short}} images there. However, if the user tries to run any of them, they will not work because the images have not yet been transferred to the storage path (so it has a practical issue if the user is not aware of this). Also, there is no guarantee that it will work in every case on every distribution.</ref>:
 
-The following steps move or copy the images so the virtual machines can boot.
+{{CodeSelect|code=
+mkdir -p ~/.local/share/images
+}}
+
+* The following steps move or copy the images so the virtual machines can boot.
 
 Either move <u>or</u> copy.
 {{Tab
@@ -721,11 +634,11 @@ Either move <u>or</u> copy.
 Move the image files.
 
 {{CodeSelect|code=
-sudo mv {{project_name_gateway_short}}*.qcow2 /var/lib/libvirt/images/{{project_name_gateway_short}}.qcow2
+mv {{project_name_gateway_short}}*.qcow2 ~/.local/share/images/{{project_name_gateway_short}}.qcow2
 }}
 
 {{CodeSelect|code=
-sudo mv {{project_name_workstation_short}}*.qcow2 /var/lib/libvirt/images/{{project_name_workstation_short}}.qcow2
+mv {{project_name_workstation_short}}*.qcow2 ~/.local/share/images/{{project_name_workstation_short}}.qcow2
 }}
 }}
 {{Tab
@@ -739,11 +652,11 @@ Copy the image files. {{Anchor|sparse files}}
 }}, meaning they expand as data is written rather than allocating their entire size (100GB) outright. Sparse files require special commands when they are copied to ensure they retain this property; otherwise, they will occupy the full disk space.
 
 {{CodeSelect|code=
-sudo cp --sparse=always {{project_name_gateway_short}}*.qcow2 /var/lib/libvirt/images/{{project_name_gateway_short}}.qcow2
+cp --sparse=always {{project_name_gateway_short}}*.qcow2 ~/.local/share/images/{{project_name_gateway_short}}.qcow2
 }}
 
 {{CodeSelect|code=
-sudo cp --sparse=always {{project_name_workstation_short}}*.qcow2 /var/lib/libvirt/images/{{project_name_workstation_short}}.qcow2
+cp --sparse=always {{project_name_workstation_short}}*.qcow2 ~/.local/share/images/{{project_name_workstation_short}}.qcow2
 }}<!-- close CodeSelect -->
 }}<!-- close tab -->
 }}<!-- close controller -->
@@ -790,7 +703,36 @@ safe-rm -r WHONIX*
 
 == Start ==
 
-If Virtual Machine Manager is familiar, there is nothing special about starting {{project_name_short}} VMs compared to other VMs. First start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
+=== Virtual Machine Manager (Virt-Manager) GUI default is <code>qemu:///system</code> not <code>qemu:///session</code> ===
+
+If WS and GW not shown in the default opening of Virt-Manager, Then this is because it assumes your VMs on default <code>qemu:///system</code>, so you need to change that to <code>qemu:///session</code>:
+
+Go to <code>Virtual Machine Manager</code> &rarr; <code>File</code> &rarr; <code>Add Connection...</code> &rarr; Switch Hypervisor from <code>QEMU/KVM</code> to <code>QEMU/KVM user session</code> &rarr; Tick <code>Autoconnect</code> &rarr; <code>Connect</code>.
+
+Images:
+
+[[File:enable-qemu-session-1.png|500px]]
+
+[[File:enable-qemu-session-2.png|500px]]
+
+[[File:enable-qemu-session-3.png|500px]]
+
+[[File:enable-qemu-session-4.png|500px]]
+
+After that you can first start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
+
+----
+
+If the virt-manager always going to show <code>qemu:///system</code> whenever you start the virt-manager later, then to solve this run:
+
+{{CodeSelect|code=
+echo "export LIBVIRT_DEFAULT_URI='qemu:///session'" >> ~/.zshrc
+}}
+{{CodeSelect|code=
+source ~/.zshrc
+}}
+
+(If someone is using Bash instead of Zsh, change <code>.zshrc</code> to <code>.bashrc</code>, This tells your entire user profile including the GUI to always target your local user session by default).
 
 === Using Whonix-Gateway with LXQt Desktop vs CLI Mode ===
 
@@ -800,11 +742,11 @@ To start the desktop environment, the Whonix-Gateway virtual machine must be ass
 
 Start Virtual Machine Manager:
 
-<code>Start Menu</code> &rarr; <code>Applications</code> &rarr; <code>System</code> &rarr; <code>Virtual Machine Manager</code>
+<code>Start Menu</code> &rarr; <code>System Tools</code> &rarr; <code>Virtual Machine Manager</code>
 
 Start {{project_name_gateway_short}}:
 
-<code>click on {{project_name_gateway_short}}</code> &rarr; <code>click open</code> &rarr; <code>click the play symbol</code>
+<code>click on {{project_name_gateway_short}}</code> &rarr; <code>click Open</code> &rarr; <code>click the play symbol</code>
 
 Repeat the same steps for {{project_name_workstation_short}}.
 
@@ -886,54 +828,36 @@ If you want to remove {{project_name_short}} KVM VMs, the {{project_name_short}}
 
 <div class="mw-collapsible-content">
 {{Box|text=
-'''1.''' Power off the VM you want to shut down. <ref>The command line can also be used to ensure the VM has been shut down.</ref>
+'''1.''' Power off the VM you want to remove.
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system destroy {{project_name_gateway_short}}
+virsh -c qemu:///session destroy {{project_name_gateway_short}}
 }}
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system destroy {{project_name_workstation_short}}
+virsh -c qemu:///session destroy {{project_name_workstation_short}}
 }}
 
 '''2.''' Remove the KVM VM settings.
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system undefine {{project_name_gateway_short}}
+virsh -c qemu:///session undefine {{project_name_gateway_short}}
 }}
 
 {{CodeSelect|code=
-sudo virsh -c qemu:///system undefine {{project_name_workstation_short}}
+virsh -c qemu:///session undefine {{project_name_workstation_short}}
 }}
 
-'''3.''' Shut down the KVM network {{Code2|{{project_name_short}}}}.
-
-{{CodeSelect|code=
-sudo virsh -c qemu:///system net-destroy {{project_name_short}}-External
-}}
-{{CodeSelect|code=
-sudo virsh -c qemu:///system net-destroy {{project_name_short}}-Internal
-}}
-
-'''4.''' Remove the KVM network {{Code2|{{project_name_short}}}}.
-
-{{CodeSelect|code=
-sudo virsh -c qemu:///system net-undefine {{project_name_short}}-External
-}}
-{{CodeSelect|code=
-sudo virsh -c qemu:///system net-undefine {{project_name_short}}-Internal
-}}
-
-'''5.''' Delete the images.
+'''3.''' Delete the images.
 
 <u>Note:</u> All data will be lost unless it is backed up first. Adjust the paths to the images as appropriate.
 
 {{CodeSelect|code=
-sudo safe-rm /var/lib/libvirt/images/{{project_name_gateway_short}}.qcow2
+safe-rm ~/.local/share/images/{{project_name_gateway_short}}.qcow2
 }}
 
 {{CodeSelect|code=
-sudo safe-rm /var/lib/libvirt/images/{{project_name_workstation_short}}.qcow2
+safe-rm ~/.local/share/images/{{project_name_workstation_short}}.qcow2
 }}
 }}
 </div>
@@ -948,6 +872,90 @@ It is strongly recommended to uninstall older {{project_name_short}} versions an
 # [[#Download_and_Extract|Install]] the new images.
 
 = Optional =
+
+== Addgroup ==
+
+If you want to add your user to the <code>libvirt</code> and <code>kvm</code> groups, here is how it's done:
+
+{{Tab
+|type=controller
+|content=
+{{Tab
+|title= === Debian (based) / Ubuntu ===
+|image=[[File:Logo-debian.png|25px]]
+|addToClass=info-box
+|content=
+The following commands work in Debian and assume the simple scenario where KVM is used by the currently logged-in user. For older Ubuntu versions, note that group names vary and ''libvirt'' may be called ''libvirtd'' instead. For Ubuntu 20.04, ''libvirt'' works.
+
+{{CodeSelect|inline=true|code=
+sudo adduser "$(whoami)" libvirt
+}}
+
+{{CodeSelect|inline=true|code=
+sudo adduser "$(whoami)" kvm
+}}
+
+<ref>
+By default, Debian does not use <code>sudo</code>, so groups can be added using <code>usermod</code>. If your user is <code>foo</code>, the following commands will work.
+
+{{CodeSelect|code=
+usermod -a -G libvirt foo
+}}
+
+And:
+
+{{CodeSelect|code=
+usermod -a -G kvm foo
+}}
+</ref>
+}} <!-- close tab: Debian (based) / Ubuntu -->
+
+{{Tab
+|title= === Fedora ===
+|image=[[File:Fedora-logo.png|25px]]
+|addToClass=info-box
+|content=
+{{CodeSelect|code=
+sudo usermod -a -G libvirt <username>
+}}
+
+{{CodeSelect|code=
+sudo usermod -a -G kvm <username>
+}}
+
+Replace <username> with the actual username. You must log out and log back in for changes to take effect.
+}} <!-- close tab: Fedora -->
+
+{{Tab
+|title= === Arch Linux ===
+|image=[[File:Archlinux_logo.png|25px]]
+|addToClass=info-box
+|content=
+{{CodeSelect|inline=true|code=
+sudo gpasswd -a $USER libvirt
+}}
+
+{{CodeSelect|code=
+sudo gpasswd -a $USER kvm
+}}
+
+See also [https://wiki.archlinux.org/title/libvirt Arch Linux libvirt wiki page].
+}} <!-- close tab: Arch Linux -->
+
+{{Tab
+|title= === Other Distributions ===
+|image=[[File:Gnu_operating_system.png|25px]]
+|addToClass=info-box
+|content=
+If another distribution is in use, refer to the distribution's manual.
+}} <!-- close tab: Other Distributions -->
+
+}} <!-- close Controller: Everything -->
+
+* Restart libvirtd
+
+<u>Note</u>: It may be necessary to reboot the computer on some systems.
+
 == Fullscreen Mode ==
 
 * To enter fullscreen mode, click:
@@ -1864,6 +1872,14 @@ https://gymnasmata.wordpress.com/2010/12/02/setting-up-gdb-to-work-with-qemu-kvm
 </ref>
 }}
 
+== EFI ==
+https://forums.whonix.org/t/kvm-virtual-tpm-aka-the-universal-smartcard/8244/10
+
+https://forums.whonix.org/t/uefi-secure-boot-support/7943/7
+
+== Secure Boot ==
+See above.
+
 == Unsafe Features ==
 
 The features below have serious security implications and should not be used. This applies to all hypervisors in general.
@@ -2001,6 +2017,102 @@ https://docs.openstack.org/security-guide/compute/hardening-the-virtualization-l
 For more information on settings, please refer to the [https://libvirt.org/formatdomain.html Libvirt manual].
 
 = Troubleshooting =
+
+== Storage pool is not running ==
+
+The common/default behavior is that the <code>default</code> storage pool should be running and set to autostart, but if that is not the case:
+
+<pre>
+Error starting domain: unsupported configuration: storage pool 'default' containing volume 'Whonix-Gateway.qcow2' is not active
+
+Traceback (most recent call last):
+  File "/usr/share/virt-manager/virtManager/asyncjob.py", line 71, in cb_wrapper
+    callback(asyncjob, *args, **kwargs)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/share/virt-manager/virtManager/asyncjob.py", line 107, in tmpcb
+    callback(*args, **kwargs)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/share/virt-manager/virtManager/object/libvirtobject.py", line 57, in newfn
+    ret = fn(self, *args, **kwargs)
+  File "/usr/share/virt-manager/virtManager/object/domain.py", line 1384, in startup
+    self._backend.create()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3/dist-packages/libvirt.py", line 1390, in create
+    raise libvirtError('virDomainCreate() failed')
+libvirt.libvirtError: unsupported configuration: storage pool 'default' containing volume 'Whonix-Gateway.qcow2' is not active
+</pre>
+
+Then here is how to start <code>default</code>and enable autostart:
+
+{{CodeSelect|code=
+virsh pool-start default && virsh pool-autostart default
+}}
+
+* Check the pool info:
+
+{{CodeSelect|code=
+virsh pool-info default
+}}
+
+Should give:
+
+<pre>
+Name:           default
+UUID:           xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+State:          running
+Persistent:     yes
+Autostart:      yes
+Capacity:       xx.xx GiB
+Allocation:     xx.xx GiB
+Available:      xx.xx GiB
+</pre>
+
+* Done
+
+== vhost-vsock device ==
+
+If you get this error when trying to run WS:
+
+<pre>
+Error starting domain: unsupported configuration: unable to open vhost-vsock device
+
+Traceback (most recent call last):
+
+  File "/usr/share/virt-manager/virtManager/asyncjob.py", line 71, in cb_wrapper
+
+    callback(asyncjob, *args, **kwargs)
+
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/share/virt-manager/virtManager/asyncjob.py", line 107, in tmpcb
+
+    callback(*args, **kwargs)
+
+    ~~~~~~~~^^^^^^^^^^^^^^^^^
+
+  File "/usr/share/virt-manager/virtManager/object/libvirtobject.py", line 57, in newfn
+
+    ret = fn(self, *args, **kwargs)
+
+  File "/usr/share/virt-manager/virtManager/object/domain.py", line 1384, in startup
+
+    self._backend.create()
+
+    ~~~~~~~~~~~~~~~~~~~~^^
+
+  File "/usr/lib/python3/dist-packages/libvirt.py", line 1390, in create
+
+    raise libvirtError('virDomainCreate() failed')
+
+libvirt.libvirtError: unsupported configuration: unable to open vhost-vsock device
+</pre>
+
+Go to <code>virt-manager</code> &rarr; Press on <code>Whonix-Workstation</code> &rarr; Then click on <code>Open</code> from the top bar &rarr; Press on the <code>light bulb</code> (Virtual hardware details) &rarr; Right-Click on <code>VirtiO VSOCK</code> then remove it.
+
+WS will start normally.
+
+Note: We don't include a vsock virtual device (this is not to be confused with vhostuser). Vsock by default is a host guest communication channel that could be harnessed by qemu-guest-agent. It cannot be used for inter guest communication unless the vsock-bridge (a tool by its author) is used to connect two VMs vsockets.
+
 == Videos ==
 Enabling [[KVM#3D_Graphics_Acceleration|3D Graphics Acceleration]] may not be required for watching videos (e.g. [[YouTube]]).
 
