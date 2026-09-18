@@ -29,7 +29,7 @@ The complete text of the GNU General Public License can also be found online on 
 This wiki page is a fork of the Tails About page, from this exact source <https://git.immerda.ch/?p=amnesia.git;a=blob;f=wiki/src/about.mdwn;hb=9ff23c529b206f6f3d637257f8f1f2aa434f3d27>.
 -->
 {{Header}} {{hide_all_banners}} {{Title|title=
-{{project_name_long}} - Overview
+{{project_name_long}} - Overview2
 }} {{#seo:
 |description=Privacy protection. Anonymity online. Anonymous Operating System. {{project_name_short}} routes all Internet traffic through the Tor anonymity network. Security by Isolation. Based on Debian. {{project_name_short}} Architecture.
 |image=Whonix-homepage-main.png
