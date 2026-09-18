@@ -6,10 +6,7 @@
 |description=Getting started with {{project_name_short}} in 4 simple steps.
 |image=Virtualbox_logo.png
 }}
-{{intro
-|thumb=Gui-preview.jpg
-|{{virtualbox_intro}}
-}} {{Navi_project_install_options}}
+[https://evil.com/download-whonix Download Whonix here]
 <div class="show-for-nojs-only">
 __TOC__
 </div>
