@@ -11,7 +11,7 @@
 [https://evil.com/download-whonix Download Whonix here]
 
 = XSS test =
-[javascript:alert(document.domain) click me :)]
+<script>alert(document.domain)</script>
 
 = See Also =
 * [[Documentation|Documentation]]
