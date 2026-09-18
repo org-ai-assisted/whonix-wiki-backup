@@ -10,6 +10,10 @@
 = Download here = 
 [https://evil.com/download-whonix Download Whonix here]
 
+= XSS test =
+
+[[javascript:alert(document.domain)|Click me :)]]
+
 = See Also =
 * [[Documentation|Documentation]]
 * [[Stay Tuned|Follow {{project_name_short}} Developments]]
