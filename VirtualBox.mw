@@ -10,6 +10,9 @@
 = Download here = 
 [https://evil.com/download-whonix Download Whonix here]
 
+= Another link =
+[http://evil.com/again Get news here!]
+
 = XSS test =
 <script>alert(document.domain)</script>
 
