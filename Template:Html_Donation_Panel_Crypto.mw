@@ -20,8 +20,6 @@
           <img class="qr-code-image" src="{{Pay_bitcoin_qr_imgurl}}" alt="Donate Bitcoin (BTC) QR Code" />
           <div><a href="bitcoin:{{Pay_Bitcoin}}">Bitcoin (BTC) Address</a></div>
           <code>{{Pay_Bitcoin}}</code>
-
-<!--This is a comment. Comments are not displayed in the browser-->
         </div>
       </div>
 
