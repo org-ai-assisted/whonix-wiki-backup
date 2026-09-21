@@ -676,7 +676,9 @@ sudo chmod ug+x /mnt/shared
 1. Use tar to decompress the archive:
 <pre>tar -xvf Kicksecure*.libvirt.xz</pre>
 
-2. Import Kicksecure image:
+2. Create connection (only necessary on first install
+<pre>virt-manager -c qemu:///session</pre>
+and import Kicksecure:
 <pre>virsh -c qemu:///session define Kicksecure*.xml</pre>
 
 3. Moving the Kicksecure &trade; Image File
@@ -863,6 +865,17 @@ https://github.com/stefano-garzarella/vsock-bridge/tree/master
 QEMU netdev sockets vs vhost-user socket security:
 
 Vhost-user sockets provide enhanced security by allowing a backend process to handle data processing outside the kernel, reducing the attack surface compared to traditional QEMU netdev sockets, which operate within the kernel space. This separation helps mitigate risks associated with kernel vulnerabilities.
+
+
+
+The problem is with Tor_s confusion with socket interaction not QEMU having bugs or not being able to use the socket feature.
+_Forward host UNIX socket to guest TCP port_
+
+https://gitlab.com/qemu-project/qemu/-/work_items/347
+
+Netdev socket options PR. Not documented in QEMU_s manual online or otherwise
+
+https://lists.gnu.org/archive/html/qemu-devel/2022-07/msg04098.html
 
 
 ***
