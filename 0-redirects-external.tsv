@@ -1,0 +1,195 @@
+# Consolidated EXTERNAL redirects (replaces per-page {{#externalredirect:}} stubs).
+# Format: <source page title><TAB><absolute https/http URL>. One per line.
+# Lines starting with '#' and blank lines are ignored. Sorted by source.
+# Editable by content maintainers; the static generator reads this at build.
+Moved:AEM	https://www.kicksecure.com/wiki/AEM
+Moved:APT Pinning	https://www.kicksecure.com/wiki/Dev/APT_Pinning
+Moved:APT Repository	https://www.kicksecure.com/wiki/Dev/APT_Repository
+Moved:About Computer (In)Security	https://www.kicksecure.com/wiki/Dev/About_Computer_Insecurity
+Moved:About Debian Packaging	https://www.kicksecure.com/wiki/Dev/About_Debian_Packaging
+Moved:About Infrastructure	https://www.kicksecure.com/wiki/Dev/About_Infrastructure
+Moved:Account and Mobile Security	https://www.kicksecure.com/wiki/Mobile_Phone_Security
+Moved:Advanced Host Security	https://www.kicksecure.com/wiki/Advanced_Host_Security
+Moved:Advertising	https://www.kicksecure.com/wiki/Dev/advertising
+Moved:Affiliate	https://www.kicksecure.com/wiki/Dev/Affiliate
+Moved:Air Gapped OpenPGP Key	https://www.kicksecure.com/wiki/Air_Gapped_OpenPGP_Key
+Moved:Anondate	https://www.kicksecure.com/wiki/Anondate
+Moved:Anti-Forensics Precautions	https://www.kicksecure.com/wiki/Anti-Forensics_Precautions
+Moved:AppArmor	https://www.kicksecure.com/wiki/AppArmor
+Moved:Apparmor-profile-everything	https://www.kicksecure.com/wiki/Apparmor-profile-everything
+Moved:Apt-file	https://www.kicksecure.com/wiki/apt-file
+Moved:Astra Linux	https://www.kicksecure.com/wiki/Dev/Astra_Linux
+Moved:Automatic Updates	https://www.kicksecure.com/wiki/Dev/Automatic_Updates
+Moved:Avoid nonfreedom software	https://www.kicksecure.com/wiki/Avoid_nonfreedom_software
+Moved:Backup VMs	https://www.kicksecure.com/wiki/Backup_VMs
+Moved:Bash	https://www.kicksecure.com/wiki/Dev/bash
+Moved:Basic Host Security	https://www.kicksecure.com/wiki/Essential_Host_Security
+Moved:Boot Clock Randomization	https://www.kicksecure.com/wiki/Boot_Clock_Randomization
+Moved:Boot modes	https://www.kicksecure.com/wiki/Dev/user-sysmaint-split
+Moved:Coding style	https://www.kicksecure.com/wiki/Dev/coding_style
+Moved:Cold Boot Attack Defense	https://www.kicksecure.com/wiki/Cold_Boot_Attack_Defense
+Moved:Command-not-found	https://www.kicksecure.com/wiki/Command-not-found
+Moved:Computer Security Introduction	https://www.kicksecure.com/wiki/Computer_Security_Introduction
+Moved:Configuration Files	https://www.kicksecure.com/wiki/Configuration_Files
+Moved:Core Dumps	https://www.kicksecure.com/wiki/Core_Dumps
+Moved:Cryptocurrency Security Threats	https://www.kicksecure.com/wiki/Cryptocurrency_Security_Threats
+Moved:Curl bash pipe	https://www.kicksecure.com/wiki/Dev/curl_bash_pipe
+Moved:Debian Tips	https://www.kicksecure.com/wiki/Debian_Tips
+Moved:Debug-misc	https://www.kicksecure.com/wiki/Debug-misc
+Moved:Dev CSS	https://www.kicksecure.com/wiki/Dev/CSS
+Moved:Dev cloud	https://www.kicksecure.com/wiki/Dev/confidential_computing
+Moved:Dev mediawiki	https://www.kicksecure.com/wiki/Dev/mediawiki
+Moved:Dev sdwdate	https://www.kicksecure.com/wiki/Dev/sdwdate
+Moved:Dev website	https://www.kicksecure.com/wiki/Dev/website
+Moved:Dev wiki	https://www.kicksecure.com/wiki/Dev/wiki
+Moved:Dev-Ledger Hardware Wallet	https://www.kicksecure.com/wiki/Dev/Ledger_Hardware_Wallet
+Moved:Dev/Build Documentation/monero-gui	https://www.kicksecure.com/wiki/Dev/Build_Documentation/monero-gui
+Moved:Dev/Chromium	https://www.kicksecure.com/wiki/Dev/Chromium
+Moved:Dev/Expected Build Warnings	https://www.kicksecure.com/wiki/Dev/Expected_Build_Warnings
+Moved:Dev/Kicksecure Default Browser	https://www.kicksecure.com/wiki/Dev/Default_Browser
+Moved:Dev/Linux Installer	https://www.kicksecure.com/wiki/Dev/Linux_Installer
+Moved:Dev/SSL Certificate Pinning	https://www.kicksecure.com/wiki/Dev/SSL_Certificate_Pinning
+Moved:Dev/Virtualbox	https://www.kicksecure.com/wiki/Dev/VirtualBox
+Moved:Dev/systemcheck	https://www.kicksecure.com/wiki/Dev/systemcheck
+Moved:Developer Portal	https://www.kicksecure.com/wiki/Dev/Developer_Portal
+Moved:Disable TCP and ICMP Timestamps	https://www.kicksecure.com/wiki/Disable_TCP_and_ICMP_Timestamps
+Moved:Documentation Markup Format Converters	https://www.kicksecure.com/wiki/Dev/Documentation_Markup_Format_Converters
+Moved:Download Security	https://www.kicksecure.com/wiki/Download_Security
+Moved:Edge	https://www.kicksecure.com/wiki/Edge
+Moved:Encrypted Images	https://www.kicksecure.com/wiki/Encrypted_Images
+Moved:Entropy	https://www.kicksecure.com/wiki/Dev/Entropy
+Moved:External Redirects Documentation	https://www.kicksecure.com/wiki/Dev/Documentation_Guidelines
+Moved:Factory Reset	https://www.kicksecure.com/wiki/Factory_Reset
+Moved:Firejail	https://www.kicksecure.com/wiki/Dev/Firejail
+Moved:Firewall Refactoring	https://www.kicksecure.com/wiki/Dev/Firewall_Refactoring
+Moved:Firmware Security and Updates	https://www.kicksecure.com/wiki/Firmware_Security_and_Updates
+Moved:Forum Best Practices	https://www.kicksecure.com/wiki/Forum_Best_Practices
+Moved:Full Disk Encryption	https://www.kicksecure.com/wiki/Full_Disk_Encryption
+Moved:Git	https://www.kicksecure.com/wiki/Dev/git
+Moved:Google Chrome Repository Insecurity	https://www.kicksecure.com/wiki/Google_Chrome_Repository_Insecurity
+Moved:Grow Virtual Harddisk	https://www.kicksecure.com/wiki/Grow_Virtual_Harddisk
+Moved:Grsecurity	https://www.kicksecure.com/wiki/Dev/grsecurity
+Moved:Grub	https://www.kicksecure.com/wiki/Grub
+Moved:Grub-live	https://www.kicksecure.com/wiki/Grub-live
+Moved:Hardened Malloc	https://www.kicksecure.com/wiki/Hardened_Malloc
+Moved:Hardened Malloc Kicksecure	https://www.kicksecure.com/wiki/Hardened_Malloc_Kicksecure
+Moved:Hardened Malloc/Manual Installation	https://www.kicksecure.com/wiki/Hardened_Malloc/Manual_Installation
+Moved:Hardened-kernel	https://www.kicksecure.com/wiki/Hardened-kernel
+Moved:Hardware Threat Minimization	https://www.kicksecure.com/wiki/Hardware_Threat_Minimization
+Moved:Hardware Wallet Security	https://www.kicksecure.com/wiki/Hardware_Wallet_Security
+Moved:Host Firewall Basics	https://www.kicksecure.com/wiki/Host_Firewall_Basics
+Moved:Host Live Mode	https://www.kicksecure.com/wiki/Host_Live_Mode
+Moved:Immutable Disk Method on VirtualBox	https://www.kicksecure.com/wiki/VM_Live_Mode/Immutable_Disk_Method_on_VirtualBox
+Moved:Install Software	https://www.kicksecure.com/wiki/Install_Software
+Moved:Installation of Debian based Linux distributions in a folder chroot	https://www.kicksecure.com/wiki/Installation_of_Debian_based_Linux_distributions_in_a_folder_chroot
+Moved:Keepassxc	https://www.kicksecure.com/wiki/Keepassxc
+Moved:Kernel	https://www.kicksecure.com/wiki/Kernel
+Moved:Keyboard Layout	https://www.kicksecure.com/wiki/Keyboard_Layout
+Moved:Keyboard layout	https://www.kicksecure.com/wiki/Keyboard_Layout
+Moved:Kicksecure	https://www.kicksecure.com
+Moved:Kicksecure-Qubes Security	https://www.kicksecure.com/wiki/Kicksecure-Qubes_Security
+Moved:Kicksecure/About	https://www.kicksecure.com/wiki/About
+Moved:Kicksecure/CLI	https://www.kicksecure.com/wiki/VirtualBox
+Moved:Kicksecure/Debian	https://www.kicksecure.com/wiki/Debian
+Moved:Kicksecure/Download	https://www.kicksecure.com/wiki/Download
+Moved:Kicksecure/KVM	https://www.kicksecure.com/wiki/KVM
+Moved:Kicksecure/VirtualBox	https://www.kicksecure.com/wiki/VirtualBox
+Moved:Kicksecure/XFCE	https://www.kicksecure.com/wiki/VirtualBox
+Moved:Kicksecure/chroot	https://www.kicksecure.com/wiki/Chroot
+Moved:Ledger Hardware Wallet	https://www.kicksecure.com/wiki/Ledger_Hardware_Wallet
+Moved:Ledger Live Installation with Verification	https://www.kicksecure.com/wiki/Ledger_Live_Installation_with_Verification
+Moved:Licensing	https://www.kicksecure.com/wiki/Dev/Licensing
+Moved:Limitations on Free Speech on Website and Chat	https://www.kicksecure.com/wiki/Limitations_on_Free_Speech_on_Website_and_Chat
+Moved:Linux Kernel Runtime Guard LKRG	https://www.kicksecure.com/wiki/Linux_Kernel_Runtime_Guard_LKRG
+Moved:Linux Kernel Runtime Guard LKRG Qubes	https://www.kicksecure.com/wiki/Linux_Kernel_Runtime_Guard_LKRG/Qubes
+Moved:Linux Kernel Runtime Guard LKRG/Build Debian Package from Source Code	https://www.kicksecure.com/wiki/Linux_Kernel_Runtime_Guard_LKRG/Build_Debian_Package_from_Source_Code
+Moved:Linux Kernel Runtime Guard LKRG/Build Debian Package from Source Code/Easy	https://www.kicksecure.com/wiki/Linux_Kernel_Runtime_Guard_LKRG/Build_Debian_Package_from_Source_Code/Easy
+Moved:Linux User Experience versus Commercial Operating Systems	https://www.kicksecure.com/wiki/Linux_User_Experience_versus_Commercial_Operating_Systems
+Moved:Login spoofing	https://www.kicksecure.com/wiki/Login_spoofing
+Moved:Maintenance	https://www.kicksecure.com/wiki/Dev/Maintenance
+Moved:Malware and Firmware Trojans	https://www.kicksecure.com/wiki/Malware_and_Firmware_Trojans
+Moved:Mental Model	https://www.kicksecure.com/wiki/Mental_Model
+Moved:Miscellaneous Threats to User Freedom	https://www.kicksecure.com/wiki/Miscellaneous_Threats_to_User_Freedom
+Moved:Mobile	https://www.kicksecure.com/wiki/Mobile_Operating_System_Comparison
+Moved:Mobile Phone Security	https://www.kicksecure.com/wiki/Mobile_Phone_Security
+Moved:Nested Virtualization	https://www.kicksecure.com/wiki/Nested_Virtualization
+Moved:Non Anonymous NAT Traversal	https://www.kicksecure.com/wiki/Non_Anonymous_Onion_Encryption_and_NAT_Traversal
+Moved:Non Anonymous Onion Encryption and NAT Traversal	https://www.kicksecure.com/wiki/Non_Anonymous_Onion_Encryption_and_NAT_Traversal
+Moved:Nonfree	https://www.kicksecure.com/wiki/Dev/nonfree
+Moved:One Time Pad	https://www.kicksecure.com/wiki/One_Time_Pad
+Moved:Open-source Hardware	https://www.kicksecure.com/wiki/Open-source_Hardware
+Moved:OpenPGP	https://www.kicksecure.com/wiki/OpenPGP
+Moved:OpenPGP Certified	https://www.kicksecure.com/wiki/OpenPGP_Certified
+Moved:OpenPGP Signed Website	https://www.kicksecure.com/wiki/Dev/OpenPGP_Signed_Website
+Moved:Operating System Hardening	https://www.kicksecure.com/wiki/Operating_System_Hardening
+Moved:Operating System Software and Updates	https://www.kicksecure.com/wiki/Operating_System_Software_and_Updates
+Moved:Orca	https://www.kicksecure.com/wiki/Orca
+Moved:Out-of-band Management Technology	https://www.kicksecure.com/wiki/Out-of-band_Management_Technology
+Moved:Owncloud	https://www.kicksecure.com/wiki/Owncloud
+Moved:PQCrypto	https://www.kicksecure.com/wiki/PQCrypto
+Moved:Password Manager	https://www.kicksecure.com/wiki/Dev/Password_Manager
+Moved:Passwords	https://www.kicksecure.com/wiki/Passwords
+Moved:Permanent Takedown Attack Defender	https://www.kicksecure.com/wiki/Dev/Permanent_Takedown_Attack_Defender
+Moved:Point Release	https://www.kicksecure.com/wiki/Point_Release
+Moved:Privacy Policy Technical Details	https://www.kicksecure.com/wiki/Privacy_Policy_Technical_Details
+Moved:Processor Microcode Updates	https://www.kicksecure.com/wiki/Template:Processor_Microcode_Updates
+Moved:Project-news	https://www.kicksecure.com/wiki/Dev/project-news
+Moved:Protection Against Physical Attacks	https://www.kicksecure.com/wiki/Protection_Against_Physical_Attacks
+Moved:Qubes upgrade dom0	https://www.kicksecure.com/wiki/Template:Qubes_upgrade_dom0
+Moved:RAM Adjusted Desktop Starter	https://www.kicksecure.com/wiki/RAM_Adjusted_Desktop_Starter
+Moved:RAM Wipe	https://www.kicksecure.com/wiki/Dev/RAM_Wipe
+Moved:Raw Disk Backup	https://www.kicksecure.com/wiki/Raw_Disk_Backup
+Moved:Recovery	https://www.kicksecure.com/wiki/Recovery
+Moved:Relationship With Upstream	https://www.kicksecure.com/wiki/Dev/Relationship_With_Upstream
+Moved:Remount-secure	https://www.kicksecure.com/wiki/Dev/remount-secure
+Moved:Ro-mode-init	https://www.kicksecure.com/wiki/VM_Live_Mode/ro-mode-init
+Moved:Root	https://www.kicksecure.com/wiki/Root
+Moved:Router and Local Area Network Security	https://www.kicksecure.com/wiki/Router_and_Local_Area_Network_Security
+Moved:SSH	https://www.kicksecure.com/wiki/SSH
+Moved:SSL	https://www.kicksecure.com/wiki/SSL
+Moved:SUID Disabler and Permission Hardener	https://www.kicksecure.com/wiki/SUID_Disabler_and_Permission_Hardener
+Moved:Sandbox-app-launcher	https://www.kicksecure.com/wiki/Sandbox-app-launcher
+Moved:Sdwdate	https://www.kicksecure.com/wiki/Sdwdate
+Moved:Sdwdate-gui	https://www.kicksecure.com/wiki/Sdwdate-gui
+Moved:Secure Downloads	https://www.kicksecure.com/wiki/Secure_Downloads
+Moved:Security Roadmap	https://www.kicksecure.com/wiki/Security_Roadmap
+Moved:Security-misc	https://www.kicksecure.com/wiki/Security-misc
+Moved:Server Security Guide	https://www.kicksecure.com/wiki/Server_Security_Guide
+Moved:Signify	https://www.kicksecure.com/wiki/Signify
+Moved:Social Engineering	https://www.kicksecure.com/wiki/Social_Engineering
+Moved:Software	https://www.kicksecure.com/wiki/Software
+Moved:Software Signature Verification Usability Issues and Proposed Solutions	https://www.kicksecure.com/wiki/Software_Signature_Verification_Usability_Issues_and_Proposed_Solutions
+Moved:Sparse files	https://www.kicksecure.com/wiki/Sparse_files
+Moved:Special Keys	https://www.kicksecure.com/wiki/Dev/Special_Keys
+Moved:Spectre Meltdown	https://www.kicksecure.com/wiki/Spectre_Meltdown
+Moved:Split GPG	https://www.kicksecure.com/wiki/Dev/Split_GPG
+Moved:Stable Version User Experience	https://www.kicksecure.com/wiki/Stable_Version_User_Experience
+Moved:Stateless	https://www.kicksecure.com/wiki/Dev/Stateless
+Moved:Strong Linux User Account Isolation	https://www.kicksecure.com/wiki/Dev/Strong_Linux_User_Account_Isolation
+Moved:Swap-file-creator	https://www.kicksecure.com/wiki/Swap-file-creator
+Moved:SysRq	https://www.kicksecure.com/wiki/SysRq
+Moved:System Audit	https://www.kicksecure.com/wiki/System_Audit
+Moved:System Configuration and Access	https://www.kicksecure.com/wiki/System_Configuration_and_Access
+Moved:Systemcheck	https://www.kicksecure.com/wiki/Systemcheck
+Moved:Systemcheck Hardening	https://www.kicksecure.com/wiki/Systemcheck_Hardening
+Moved:Test	https://www.kicksecure.com/wiki/Test
+Moved:Tor Versioning	https://www.kicksecure.com/wiki/Tor_Versioning
+Moved:Trezor Hardware Wallet	https://www.kicksecure.com/wiki/Trezor_Hardware_Wallet
+Moved:Tuning	https://www.kicksecure.com/wiki/Tuning
+Moved:Two-factor authentication 2FA	https://www.kicksecure.com/wiki/Two-factor_authentication_2FA
+Moved:Update	https://www.kicksecure.com/wiki/Operating_System_Software_and_Updates
+Moved:VM Live Mode	https://www.kicksecure.com/wiki/VM_Live_Mode
+Moved:VM Live Mode/Read Only Mode Hard Drive	https://www.kicksecure.com/wiki/VM_Live_Mode/Read_Only_Mode_Hard_Drive
+Moved:Verified Boot	https://www.kicksecure.com/wiki/Verified_Boot
+Moved:Verifying Software Signatures	https://www.kicksecure.com/wiki/Verifying_Software_Signatures
+Moved:Versioning Format Conventions	https://www.kicksecure.com/wiki/Dev/Versioning_Format_Conventions
+Moved:VirtualBox/Guest Additions	https://www.kicksecure.com/wiki/VirtualBox/Guest_Additions
+Moved:VirtualBox/Higher Screen Resolution without installing VirtualBox Guest Additions	https://www.kicksecure.com/wiki/VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions
+Moved:VirtualBox/Other Versions	https://www.kicksecure.com/wiki/VirtualBox/Other_Versions
+Moved:VirtualBox/Troubleshooting	https://www.kicksecure.com/wiki/VirtualBox/Troubleshooting
+Moved:Virtualization Platform Security	https://www.kicksecure.com/wiki/Virtualization_Platform_Security
+Moved:VirusForget	https://www.kicksecure.com/wiki/Dev/VirusForget
+Moved:Warrant Canary Draft	https://www.kicksecure.com/wiki/Dev/Warrant_Canary_Draft
+Moved:Website Tests	https://www.kicksecure.com/wiki/Website_Tests
+Moved:Windows Hosts	https://www.kicksecure.com/wiki/Windows_Hosts
+Moved:Yubikey	https://www.kicksecure.com/wiki/Dev/yubikey
