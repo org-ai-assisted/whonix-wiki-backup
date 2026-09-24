@@ -597,15 +597,15 @@ nano ~/.config/libvirt/qemu.conf
 
 * Copy and Paste:
 
-<pre>
+{{CodeSelect|code=
 max_core = 0
 max_processes = 0
 max_files = 0
-</pre>
+}}
 
 * Save and exit {{Keypress|Ctrl|x}} then {{Keypress|y}} then {{Keypress|Enter}}.
 
-* Restart virt-manager if it's running so the changes can take effect, then start it (and VMs) normally afterward.
+* Reboot your system so the changes can take effect.
 
 * Done
 
