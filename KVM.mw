@@ -1204,6 +1204,15 @@ To add more vCPUs, increase the number between the opening and closing <code>vcp
 If preserving CPU pinning while increasing the core count is desired, pin the vCPUs to different numbered ones compared to other sensitive VMs. Map them in a 1:1 ratio to avoid overcommitting cores, which can lead to performance problems.
 
 == 3D Graphics Acceleration ==
+
+{{mbox
+| type    = notice
+| icon    = fa-solid fa-exclamation-triangle cs-yellow
+| text    = {{styledText|<u>Not Working:</u> The current stable version of Debian + LXQt is not capable of making this feature work, and there is no immediate solution to it. Please follow the [https://forums.whonix.org/t/how-to-enable-3d-acceleration-in-kvm/16501/25 "How to enable 3d acceleration in KVM?"] topic for further information.
+|fontSize=17px
+}}
+}}
+
 Having video issues? See [[KVM#Videos|Videos]] instead.
 
 {{mbox
