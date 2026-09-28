@@ -1196,9 +1196,9 @@ tar -Sczvf whonix.tar.gz <multiple file names separated by spaces>
 
 Follow these steps to make Nvidia available to the Whonix-Workstation VM:
 
-* [https://www.kicksecure.com/wiki/KVM#Inserting_dGPU_(e.g_Nvidia)_directly_to_VM Inserting dGPU (e.g Nvidia) directly to VM]
+'''1''' [https://www.kicksecure.com/wiki/KVM#Inserting_dGPU_(e.g_Nvidia)_directly_to_VM Inserting dGPU (e.g Nvidia) directly to VM]
 
-* After that, either [https://en.wikipedia.org/wiki/Nouveau_(software) nouveau] is going to use Nvidia card (available by default), or, if you want to install the Nvidia driver, check it out [https://www.kicksecure.com/wiki/Nvidia#NVIDIA_Non-Freedom_Software_Proprietary_Driver here] (Dont forget the [https://www.kicksecure.com/wiki/Nvidia#nvidia-smi_and_other_NVIDIA_management_tools_don't_work_(by_default_in_user_session) whitelist Nvidia] step to make Nvidia available on the user side inside Whonix-Workstation VM).
+'''2''' After that, either [https://en.wikipedia.org/wiki/Nouveau_(software) nouveau] is going to use Nvidia card (available by default), or, if you want to install the Nvidia driver, check it out [https://www.kicksecure.com/wiki/Nvidia#NVIDIA_Non-Freedom_Software_Proprietary_Driver here] (Dont forget the [https://www.kicksecure.com/wiki/Nvidia#nvidia-smi_and_other_NVIDIA_management_tools_don't_work_(by_default_in_user_session) whitelist Nvidia] step to make Nvidia available on the user side inside Whonix-Workstation VM).
 
 Note: This adds extra attack surface (and using the proprietary driver adds even more), so use it with caution.
 
