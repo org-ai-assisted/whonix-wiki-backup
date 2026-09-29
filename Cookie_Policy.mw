@@ -43,63 +43,6 @@ These cookies help our Sites work and are essential to enable you to move around
 
 Here are a few examples:
 
-==== wiki ====
-
-{| class="wikitable"
-|+ wiki - Functionality Cookies
-|-
-
-! '''Name'''
-! '''Expires'''
-! '''Category'''
-! '''What does it do?'''
-|-
-
-! wikiUserID, wikiUserName, wikiToken
-| 365 days if the user chooses 'Keep me logged in'; otherwise 30 days.
-| Functionality
-| Helps identify you to the wiki, and keeps you logged in.
-|-
-
-! UseDC, UseCDNCache
-| 365 days
-| Functionality
-| Helps with load balancing on our servers, makes sure all contributors see a uniform chronology of wiki edits.
-|-
-
-! wiki_session, wikimwuser-sessionId
-| When the user exits the browser
-| Functionality
-| Manage sessions. Provides functionality such as logging in to our wiki.
-|-
-
-! wikiPostEditRevision
-| 20 minutes
-| Functionality
-| Allows editing. This uses a temporary cookie for each revision ID so that separate saves will never interfere with each other.
-|-
-
-|}
-
-==== phabricator ====
-
-{| class="wikitable"
-|+ phabricator - Functionality Cookies
-|-
-
-! '''Name'''
-! '''Expires'''
-! '''Category'''
-! '''What does it do?'''
-|-
-! phusr, phsid
-| 5 years
-| Functionality
-| Helps identify you to the issue tracker, and keeps you logged in.
-|-
-
-|}
-
 ==== discourse forums ====
 
 {| class="wikitable"
@@ -179,77 +122,6 @@ Here are a few examples:
 
 |}
 
-=== Preferences ===
-These cookies store your preferences so they can be remembered the next time you use our Sites, for a more customized experience. These cookies are useful for recognizing and maintaining your language preference, remembering changes you have made to text size, fonts, and other display preferences, so we can provide you with the look and feel that you want, and more.
-
-Here are a few examples:
-
-{| class="wikitable"
-|+ wiki - Preferences Cookies
-|-
-
-! '''Name'''
-! '''Expires'''
-! '''Category'''
-! '''What does it do?'''
-|-
-
-! stopMobileRedirect
-| 30 days
-| Preferences
-| Tells us not to redirect to the mobile site if you don't like that.
-|-
-
-! uls-preferences
-| Local Storage, not a cookie
-| Preferences
-| Allows you to set preferences for the Universal Language Selector functionality.
-|-
-
-! hidewatchlistmessage-[watchlistMessageId]
-| 28 days
-| Preferences
-| Allows a user to hide a watchlist message.
-|-
-
-! userFontSize
-| Local Storage, not a cookie
-| Preferences
-| Keeps track of your preferred font size on the mobile site.
-|-
-
-! preferredEditor
-| Local Storage, not a cookie
-| Preferences
-| Keeps track of your preferred editor on the mobile site.
-|-
-
-! wikicookiewarning_dismissed
-| 30 days
-| Preferences
-| Remembers that you have acknowledged our top banner.
-|-
-
-! flyInBannerIdDismissed
-| 365 days
-| Preferences
-| A fly-in-notification will appear on some pages after some time. If the notification is dismissed, this cookie will be filled with the ID of the banner so this specific banner will not be shown again.
-|-
-
-! nocache
-| 365 days
-| Preferences
-| Disables server-side cache. Requests the most recent version. Only set on request via manual click: super menu -> <code>Debug Helper</code> -> <code>Activate nocache (true) server cookie for my browser</code>.
-|-
-
-! ctbc_hide-sitenotice-banner-01
-| 365 days
-| Preferences
-| Disables banner.
-|-
-
-|}
-
 === Performance and Analysis ===
 These cookies count the number of visitors and collect information about how you use our Sites. This allows us to better understand your user experience on our Sites and helps us improve them for you and other users. For instance, by making sure users are finding what they need easily. Other examples include:
 
@@ -297,6 +169,9 @@ This Cookies Policy for {{name-short}} is based on:
 
 == Where can I find more information? ==
 Please read through our [[Privacy Policy]] for more information. If you have any further questions, contact {{name-email}}.
+
+== See also ==
+[[Special:BrowserStorage|Browser Storage]] -- view or clear the data this site keeps in your browser. (Informational only; not part of this agreement.)
 
 {{Footer}}
 [[Category:MultiWiki]]

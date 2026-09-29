@@ -396,7 +396,7 @@ systemcheck_skip_functions+=" check_tor_trans_port "
 systemcheck_skip_functions+=" check_stream_isolation "
 systemcheck_skip_functions+=" download_whonix_news "
 
-## {{ Alternative to disabling check_tor_trans_port.
+## <nowiki>{{</nowiki> Alternative to disabling check_tor_trans_port.
 
 ## Make the Tor TransPort test work by simulating the Tor SocksPort test succeeded.
 #CHECK_TOR_RESULT_SOCKS_PORT=0
@@ -404,14 +404,14 @@ systemcheck_skip_functions+=" download_whonix_news "
 ## Do not warn if Tor was not detected. (Will be the VPN.)
 #SYSTEMCHECK_NO_EXIT_ON_TRANS_PORT_DETECTION_FAILURE=1
 
-## }}
+## <nowiki>}}</nowiki>
 
-## {{ Alternative to download_whonix_news.
+## <nowiki>{{</nowiki> Alternative to download_whonix_news.
 
 ## Download news through system default.
 #CURL_PROXY_WHONIX_NEWS="--fail"
 
-## }}
+## <nowiki>}}</nowiki>
 }}
 
 '''3.''' Save the file.

@@ -1,4 +1,4 @@
-{{#kicksecure_css_page_documentation:}}{{Header}} {{hide_all_banners}}
+{{Header}} {{hide_all_banners}}
 {{Title|title=
 {{project_name_long}} Documentation
 }} {{#seo:
@@ -849,4 +849,7 @@ Not using strict-list-columns because the list is too long to be broken.
 </div>
 </div>
 }}
+
+See also: [[Special:BrowserStorage|Browser Storage]] -- view or clear the data this site keeps in your browser.
+
 {{Footer}}
