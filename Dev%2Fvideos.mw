@@ -1,4 +1,4 @@
-{{#kicksecure_css_page_dev_videos:}}{{Header}}
+{{Header}}
 {{#seo:
 |description=Video Drafts for {{project_name_long}}
 }}

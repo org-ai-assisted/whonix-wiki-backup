@@ -28,44 +28,44 @@ Bisq is the project that Haveno was forked from. It is a P2P DEX with a built-in
 == Links ==
 === RetoSwap Links ===
 
-RetoSwap official website:  
+RetoSwap official website:
 https://retoswap.com/
 
-RetoSwap official X/Twitter account:  
+RetoSwap official X/Twitter account:
 https://x.com/RetoSwap/
 
-RetoSwap GitHub project homepage:  
+RetoSwap GitHub project homepage:
 https://github.com/retoaccess1/haveno-reto
 
-RetoSwap GitHub project releases page (downloads available here):  
+RetoSwap GitHub project releases page (downloads available here):
 https://github.com/retoaccess1/haveno-reto/releases/
 
-RetoSwap old homepage (redirects to retoswap.com):  
+RetoSwap old homepage (redirects to retoswap.com):
 https://haveno-reto.com
 
 === Haveno (Haveno DEX) Links ===
 
-Haveno official website:  
+Haveno official website:
 https://haveno.exchange/
 
-Haveno official FAQ:  
+Haveno official FAQ:
 https://haveno.exchange/faq/
 
-Haveno GitHub project homepage:  
+Haveno GitHub project homepage:
 https://github.com/haveno-dex/haveno
 
-Haveno GitHub project issues page (issues with RetoSwap can generally be reported there):  
+Haveno GitHub project issues page (issues with RetoSwap can generally be reported there):
 https://github.com/haveno-dex/haveno/issues
 
 === Other Guides ===
 
-boldsucks's Haveno Documentation:  
+boldsucks's Haveno Documentation:
 https://boldsuck.codeberg.page/haveno-docs/
 
-boldsucks's guide to setting up RetoSwap on {{project_name_short}}:  
+boldsucks's guide to setting up RetoSwap on {{project_name_short}}:
 https://boldsuck.codeberg.page/haveno-reto-docs/tor-config/DirectBindTor/#whonix
 
-RetoSwap official redirect (Github mirror):  
+RetoSwap official redirect (Github mirror):
 https://docs.retoswap.com/tor-config/DirectBindTor/#whonix
 
 = Installation =
@@ -118,7 +118,9 @@ DAA2 4D87 8B8D 36C9 0120  A897 CA02 DAC1 2DAE 2D0F
 
 The key carries only the unverified user ID <code>reto</code> and can be retrieved from the public keyservers (for example <code>keys.openpgp.org</code> or <code>keyserver.ubuntu.com</code>).
 
-{{Warning|1=
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px|alt=Warning]]
+| text    =
 '''The release signing key cannot be authenticated to a named maintainer.''' The project does not publish this key fingerprint through any channel independent of the GitHub releases themselves: the <code>desktop/package/</code> directory in the source repository ships only the legacy Bisq maintainer keys (Christoph Atteneder, Chris Beams, Manfred Karrer), none of which sign RetoSwap builds; the website, documentation, release notes and this wiki do not list the fingerprint; the release git tag is unsigned; and the repository commits are GitHub web-flow signatures, not signatures by this key.
 
 Verifying a download against this key therefore only confirms that successive releases were signed by the same anonymous key (trust on first use). It does '''not''' establish that the key belongs to the legitimate developer. Treat RetoSwap as effectively unsigned for the purpose of author-identity verification.
@@ -133,7 +135,7 @@ Right-click on the downloaded .zip (e.g., <code>/home/user/.tb/tor-browser/Brows
 Open the newly extracted folder (e.g., <code>/home/user/.tb/tor-browser/Browser/Downloads/haveno-linux-deb/</code>) and in a terminal window type (with a trailing space):
 
 {{CodeSelect|code=
-sudo dpkg -i 
+sudo dpkg -i
 }}
 
 Then, drag the .deb installer from the folder into the terminal to complete the file path (e.g., for RetoSwap v1.0.18, it should read:

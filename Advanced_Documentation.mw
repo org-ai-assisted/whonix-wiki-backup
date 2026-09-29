@@ -1,4 +1,4 @@
-{{#kicksecure_css_page_advanced_documentation:}}{{Header}} {{hide_all_banners}} {{title|
+{{Header}} {{hide_all_banners}} {{title|
 title={{project_name_long}} Advanced Documentation
 }} {{#seo:
 |description=Covering a wide spectrum of topics including file transfers, security configurations, platform support, and more. Ideal for advanced users aiming to leverage the full potential of {{project_name_long}}.

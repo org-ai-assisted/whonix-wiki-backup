@@ -1,6 +1,6 @@
 <noinclude>
 {{header}}
-</noinclude>{{VirtualBox_CSS}} __NOTOC__ {{introLike|thumb=Gui-preview.jpg|
+</noinclude>__NOTOC__ {{introLike|thumb=Gui-preview.jpg|
 Please follow these steps to install {{project_name_short}} {{{flavor}}} for VirtualBox.
 }} {{javascript-looks-better-with-javascript}} {{Anchor|Landing}}
 {{Box|text=

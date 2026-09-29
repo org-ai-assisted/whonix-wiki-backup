@@ -1,4 +1,4 @@
-{{#kicksecure_css_page_donate:}}{{Header}} {{hide_all_banners}} {{Title|title=
+{{Header}} {{hide_all_banners}} {{Title|title=
 Donating to {{project_name_long}} }}
 {{#seo:
 |description=PayPal, Bitcoin (BTC), Monero (XMR), Ethereum (ETH) or Token, Credit Card, Bank Wire, Others
