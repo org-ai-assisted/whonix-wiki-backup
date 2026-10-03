@@ -756,9 +756,9 @@ $ cryfs-unmount "/home/user/.local/share/images"
 
 '''6.''' Move the Whonix images into the mounted CryFS filesystem.
 
-{{CodeSelect|code=
+<pre>
 mv -iv -- "$HOME/.local/share/images.before-cryfs"/Whonix-{Gateway,Workstation}.qcow2 "$HOME/.local/share/images/"
-}}
+</pre>
 
 The destination <code>$HOME/.local/share/images</code> is the decrypted CryFS mount point. Files written to this location are encrypted by CryFS and stored inside the encrypted vault at <code>$HOME/.local/share/whonix-cryfs</code>.
 
