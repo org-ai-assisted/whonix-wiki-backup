@@ -667,6 +667,146 @@ Use <code>qemu-img</code> to interact with KVM disk images. This tool can resize
 
 Refer to the [https://linux.die.net/man/1/qemu-img qemu-img manual] for instructions.
 
+== Cleanup ==
+After importing {{project_name_short}}, it is recommended to delete the archives ({{Code2|.libvirt.xz}} files) and the temporarily extracted folders, or move them into a custom location. This helps avoid conflicts and confusion if a new version of {{project_name_short}} is later downloaded.
+
+To delete the archives and temporary folders, run:
+
+<u>Note:</u> This may not work on some Linux distributions where <code>safe-rm</code> is unavailable. In that case, use <code>trash-put</code> (if the <code>trash-cli</code> package is available) or <code>rm</code> (always available) instead.
+
+{{CodeSelect|code=
+safe-rm {{project_name_short}}*
+}}
+
+{{CodeSelect|code=
+safe-rm -r WHONIX*
+}}
+
+== Start ==
+
+=== Virtual Machine Manager (Virt-Manager) GUI default is <code>qemu:///system</code> not <code>qemu:///session</code> ===
+
+If WS and GW not shown in the default opening of Virt-Manager, Then this is because it assumes your VMs on default <code>qemu:///system</code>, so you need to change that to <code>qemu:///session</code>:
+
+Go to <code>Virtual Machine Manager</code> &rarr; <code>File</code> &rarr; <code>Add Connection...</code> &rarr; Switch Hypervisor from <code>QEMU/KVM</code> to <code>QEMU/KVM user session</code> &rarr; Tick <code>Autoconnect</code> &rarr; <code>Connect</code>.
+
+Images:
+
+[[File:enable-qemu-session-1.png|500px]]
+
+[[File:enable-qemu-session-2.png|500px]]
+
+[[File:enable-qemu-session-3.png|500px]]
+
+[[File:enable-qemu-session-4.png|500px]]
+
+After that you can first start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
+
+----
+
+If the virt-manager always going to show <code>qemu:///system</code> whenever you start the virt-manager later, then to solve this run:
+
+{{CodeSelect|code=
+echo "export LIBVIRT_DEFAULT_URI='qemu:///session'" >> ~/.zshrc
+}}
+{{CodeSelect|code=
+source ~/.zshrc
+}}
+
+(If someone is using Bash instead of Zsh, change <code>.zshrc</code> to <code>.bashrc</code>, This tells your entire user profile including the GUI to always target your local user session by default).
+
+=== Using Whonix-Gateway with LXQt Desktop vs CLI Mode ===
+
+To start the desktop environment, the Whonix-Gateway virtual machine must be assigned at least 768 MB of RAM. Otherwise, it will only boot in CLI mode. To disable startup of the included desktop environment regardless of RAM allocation, configure the [[RAM_Adjusted_Desktop_Starter|RAM Adjusted Desktop Starter package settings]].
+
+=== Graphical User Interface (GUI) ===
+
+Start Virtual Machine Manager:
+
+<code>Start Menu</code> &rarr; <code>System Tools</code> &rarr; <code>Virtual Machine Manager</code>
+
+Start {{project_name_gateway_short}}:
+
+<code>click on {{project_name_gateway_short}}</code> &rarr; <code>click Open</code> &rarr; <code>click the play symbol</code>
+
+Repeat the same steps for {{project_name_workstation_short}}.
+
+== Adjust Display Resolution ==
+Prerequisite knowledge: [[screen|{{project name short}} screen wiki page]]
+
+Option A: Use scaling instead.
+
+{{quotation
+|quote=Enable display scaling in virt-manager, disable automatic guest resizing, and then grow the window. Rather than increasing the resolution, it will just make everything bigger (and blurrier, but that’s unfortunately mostly unavoidable if you want the VM’s display bigger without the VM knowing that its display is bigger).
+|context=[https://forums.whonix.org/t/font-too-small-can-changing-lead-to-fingerprinting/23167 Font Too Small - Can Changing Lead to Fingerprinting?]
+}}
+
+Option B: Increase stream isolation (fingerprinting risk as documented on the [[screen|{{project name short}} screen wiki page]])
+
+<code>Start Menu</code> &rarr; <code>Preferences</code> &rarr; <code>Displays</code> <ref>
+https://forums.whonix.org/t/no-auto-resize-with-qxl-driver/7145/3
+</ref>
+
+<u>Alternatively:</u>
+
+<code>GUI Console</code> &rarr; <code>View</code> &rarr; <code>Scale Display</code> &rarr; <code>Check: Always + Auto resize VM with window</code>.
+
+== After Installing ==
+
+{{Post_Install_Advice}}
+
+== Uninstall ==
+
+<div class="toccolours mw-collapsible mw-collapsed">
+If you want to remove {{project_name_short}} KVM VMs, the {{project_name_short}} network, and {{project_name_short}} images, click Expand on the right.
+
+<div class="mw-collapsible-content">
+{{Box|text=
+'''1.''' Power off the VM you want to remove.
+
+{{CodeSelect|code=
+virsh -c qemu:///session destroy {{project_name_gateway_short}}
+}}
+
+{{CodeSelect|code=
+virsh -c qemu:///session destroy {{project_name_workstation_short}}
+}}
+
+'''2.''' Remove the KVM VM settings.
+
+{{CodeSelect|code=
+virsh -c qemu:///session undefine {{project_name_gateway_short}}
+}}
+
+{{CodeSelect|code=
+virsh -c qemu:///session undefine {{project_name_workstation_short}}
+}}
+
+'''3.''' Delete the images.
+
+<u>Note:</u> All data will be lost unless it is backed up first. Adjust the paths to the images as appropriate.
+
+{{CodeSelect|code=
+safe-rm ~/.local/share/images/{{project_name_gateway_short}}.qcow2
+}}
+
+{{CodeSelect|code=
+safe-rm ~/.local/share/images/{{project_name_workstation_short}}.qcow2
+}}
+}}
+</div>
+</div>
+
+= KVM Upgrade Instructions =
+
+It is strongly recommended to uninstall older {{project_name_short}} versions and always use the stable release. Note that {{project_name_short}} also supports in-place APT upgrades.
+
+# Move your data out of the VM using shared folders.
+# Perform the [[#Cleanup|Cleanup]] steps.
+# [[#Download_and_Extract|Install]] the new images.
+
+= Optional =
+
 == Encrypted Storage Directory ==
 
 It is possible to encrypt the directory where the Whonix virtual machine images are stored.
@@ -823,192 +963,6 @@ Once mounted successfully, the Whonix images will again be available under <code
 
 Yes. The encrypted CryFS vault can be moved to an external USB drive or another storage location, while keeping the decrypted mount point at its original location.
 
-== Cleanup ==
-After importing {{project_name_short}}, it is recommended to delete the archives ({{Code2|.libvirt.xz}} files) and the temporarily extracted folders, or move them into a custom location. This helps avoid conflicts and confusion if a new version of {{project_name_short}} is later downloaded.
-
-To delete the archives and temporary folders, run:
-
-<u>Note:</u> This may not work on some Linux distributions where <code>safe-rm</code> is unavailable. In that case, use <code>trash-put</code> (if the <code>trash-cli</code> package is available) or <code>rm</code> (always available) instead.
-
-{{CodeSelect|code=
-safe-rm {{project_name_short}}*
-}}
-
-{{CodeSelect|code=
-safe-rm -r WHONIX*
-}}
-
-== Start ==
-
-=== Virtual Machine Manager (Virt-Manager) GUI default is <code>qemu:///system</code> not <code>qemu:///session</code> ===
-
-If WS and GW not shown in the default opening of Virt-Manager, Then this is because it assumes your VMs on default <code>qemu:///system</code>, so you need to change that to <code>qemu:///session</code>:
-
-Go to <code>Virtual Machine Manager</code> &rarr; <code>File</code> &rarr; <code>Add Connection...</code> &rarr; Switch Hypervisor from <code>QEMU/KVM</code> to <code>QEMU/KVM user session</code> &rarr; Tick <code>Autoconnect</code> &rarr; <code>Connect</code>.
-
-Images:
-
-[[File:enable-qemu-session-1.png|500px]]
-
-[[File:enable-qemu-session-2.png|500px]]
-
-[[File:enable-qemu-session-3.png|500px]]
-
-[[File:enable-qemu-session-4.png|500px]]
-
-After that you can first start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
-
-----
-
-If the virt-manager always going to show <code>qemu:///system</code> whenever you start the virt-manager later, then to solve this run:
-
-{{CodeSelect|code=
-echo "export LIBVIRT_DEFAULT_URI='qemu:///session'" >> ~/.zshrc
-}}
-{{CodeSelect|code=
-source ~/.zshrc
-}}
-
-(If someone is using Bash instead of Zsh, change <code>.zshrc</code> to <code>.bashrc</code>, This tells your entire user profile including the GUI to always target your local user session by default).
-
-=== Using Whonix-Gateway with LXQt Desktop vs CLI Mode ===
-
-To start the desktop environment, the Whonix-Gateway virtual machine must be assigned at least 768 MB of RAM. Otherwise, it will only boot in CLI mode. To disable startup of the included desktop environment regardless of RAM allocation, configure the [[RAM_Adjusted_Desktop_Starter|RAM Adjusted Desktop Starter package settings]].
-
-=== Graphical User Interface (GUI) ===
-
-Start Virtual Machine Manager:
-
-<code>Start Menu</code> &rarr; <code>System Tools</code> &rarr; <code>Virtual Machine Manager</code>
-
-Start {{project_name_gateway_short}}:
-
-<code>click on {{project_name_gateway_short}}</code> &rarr; <code>click Open</code> &rarr; <code>click the play symbol</code>
-
-Repeat the same steps for {{project_name_workstation_short}}.
-
-=== Command Line Interface (CLI) ===
-The following instructions were re-tested in September 2024.
-
-{{mbox
-| image   = [[File:Ambox_warning_pn.svg.png|40px]]
-| text    =
-'''Warning:''' If the guest may be compromised, do NOT follow this procedure! The guest will be able to write arbitrary ANSI sequences to the host's terminal emulator, which may exploit security vulnerabilities in the terminal and allow a VM escape.
-}}
-
-'''1.''' Open a terminal inside the VM that should be accessed through CLI.
-
-This is required to set up the serial console VM settings.
-
-'''2.''' Install the package:
-
-{{Install Package|
-package=serial-console-enable
-}}
-
-'''3.''' Shut down the VM.
-
-'''4.''' Open a terminal on the host.
-
-'''5.''' To start {{project_name_gateway_short}}, run:
-
-{{CodeSelect|code=
-sudo virsh start {{project_name_gateway_short}}
-}}
-
-To start {{project_name_workstation_short}}, run:
-
-{{CodeSelect|code=
-sudo virsh start {{project_name_workstation_short}}
-}}
-
-'''6.''' To interact with {{project_name_workstation_short}} via serial console, run:
-
-{{CodeSelect|code=
-sudo virsh console {{project_name_workstation_short}}
-}}
-
-'''7.''' To exit the console session, press <code>Ctrl + ]</code> (Control and closing square bracket). This will return you to your host terminal while leaving the VM running.
-
-'''8.''' Done.
-
-Forum discussion: https://forums.whonix.org/t/how-do-i-enter-the-whonix-shell-from-cli/7271
-
-== Adjust Display Resolution ==
-Prerequisite knowledge: [[screen|{{project name short}} screen wiki page]]
-
-Option A: Use scaling instead.
-
-{{quotation
-|quote=Enable display scaling in virt-manager, disable automatic guest resizing, and then grow the window. Rather than increasing the resolution, it will just make everything bigger (and blurrier, but that’s unfortunately mostly unavoidable if you want the VM’s display bigger without the VM knowing that its display is bigger).
-|context=[https://forums.whonix.org/t/font-too-small-can-changing-lead-to-fingerprinting/23167 Font Too Small - Can Changing Lead to Fingerprinting?]
-}}
-
-Option B: Increase stream isolation (fingerprinting risk as documented on the [[screen|{{project name short}} screen wiki page]])
-
-<code>Start Menu</code> &rarr; <code>Preferences</code> &rarr; <code>Displays</code> <ref>
-https://forums.whonix.org/t/no-auto-resize-with-qxl-driver/7145/3
-</ref>
-
-<u>Alternatively:</u>
-
-<code>GUI Console</code> &rarr; <code>View</code> &rarr; <code>Scale Display</code> &rarr; <code>Check: Always + Auto resize VM with window</code>.
-
-== After Installing ==
-
-{{Post_Install_Advice}}
-
-== Uninstall ==
-
-<div class="toccolours mw-collapsible mw-collapsed">
-If you want to remove {{project_name_short}} KVM VMs, the {{project_name_short}} network, and {{project_name_short}} images, click Expand on the right.
-
-<div class="mw-collapsible-content">
-{{Box|text=
-'''1.''' Power off the VM you want to remove.
-
-{{CodeSelect|code=
-virsh -c qemu:///session destroy {{project_name_gateway_short}}
-}}
-
-{{CodeSelect|code=
-virsh -c qemu:///session destroy {{project_name_workstation_short}}
-}}
-
-'''2.''' Remove the KVM VM settings.
-
-{{CodeSelect|code=
-virsh -c qemu:///session undefine {{project_name_gateway_short}}
-}}
-
-{{CodeSelect|code=
-virsh -c qemu:///session undefine {{project_name_workstation_short}}
-}}
-
-'''3.''' Delete the images.
-
-<u>Note:</u> All data will be lost unless it is backed up first. Adjust the paths to the images as appropriate.
-
-{{CodeSelect|code=
-safe-rm ~/.local/share/images/{{project_name_gateway_short}}.qcow2
-}}
-
-{{CodeSelect|code=
-safe-rm ~/.local/share/images/{{project_name_workstation_short}}.qcow2
-}}
-}}
-</div>
-</div>
-
-= KVM Upgrade Instructions =
-
-It is strongly recommended to uninstall older {{project_name_short}} versions and always use the stable release. Note that {{project_name_short}} also supports in-place APT upgrades.
-
-# Move your data out of the VM using shared folders.
-# Perform the [[#Cleanup|Cleanup]] steps.
-# [[#Download_and_Extract|Install]] the new images.
-
-= Optional =
 
 == Addgroup ==
 
@@ -1102,6 +1056,53 @@ If another distribution is in use, refer to the distribution's manual.
 * To exit fullscreen mode, move your mouse to the top middle of the screen and click:
 
 [[File:exitfullscreenkvm.png|600px]]
+
+== Command Line Interface (CLI) ==
+The following instructions were re-tested in September 2024.
+
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px]]
+| text    =
+'''Warning:''' If the guest may be compromised, do NOT follow this procedure! The guest will be able to write arbitrary ANSI sequences to the host's terminal emulator, which may exploit security vulnerabilities in the terminal and allow a VM escape.
+}}
+
+'''1.''' Open a terminal inside the VM that should be accessed through CLI.
+
+This is required to set up the serial console VM settings.
+
+'''2.''' Install the package:
+
+{{Install Package|
+package=serial-console-enable
+}}
+
+'''3.''' Shut down the VM.
+
+'''4.''' Open a terminal on the host.
+
+'''5.''' To start {{project_name_gateway_short}}, run:
+
+{{CodeSelect|code=
+sudo virsh start {{project_name_gateway_short}}
+}}
+
+To start {{project_name_workstation_short}}, run:
+
+{{CodeSelect|code=
+sudo virsh start {{project_name_workstation_short}}
+}}
+
+'''6.''' To interact with {{project_name_workstation_short}} via serial console, run:
+
+{{CodeSelect|code=
+sudo virsh console {{project_name_workstation_short}}
+}}
+
+'''7.''' To exit the console session, press <code>Ctrl + ]</code> (Control and closing square bracket). This will return you to your host terminal while leaving the VM running.
+
+'''8.''' Done.
+
+Forum discussion: https://forums.whonix.org/t/how-do-i-enter-the-whonix-shell-from-cli/7271
 
 == Multiple {{project_name_gateway_short}} ==
 
