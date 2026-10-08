@@ -2162,7 +2162,7 @@ Other security enhancements:
 * Checked broken discourse email replies. <ref>https://forums.whonix.org/t/discourse-reply-by-e-mail-broken/9650/3</ref>
 * Investigated uploaded images not presenting after creating a topic. <ref>https://forums.whonix.org/t/uploaded-images-doesnt-show-up-after-creating-topic/5623</ref>
 * Documented [[Website_Tests|Testing the {{project_name_short}} server]] with test websites such as hardenize.com / securityheaders.com / Mozilla Observatory / SSL Labs / hstspreload.org.
-* Improved documentation chapter [[Trust#Trusting_Whonix|Trusting the {{project_name_short}} Website]].
+* Improved documentation chapter [[Trust#Trusting_the_Whonix_Website|Trusting the {{project_name_short}} Website]].
 * Considered [[Dev/About_Infrastructure#drop-www_vs_yes-www|drop-www vs yes-www]].
 * Considered [[Dev/About_Infrastructure#Hide_Server_IP|Hide Server IP]].
 * Set up a dedicated server for Kicksecure, with dedicated domain kicksecure.com, homepage, wiki and soon forums. <ref>This website is not yet public; a significant effort is required to rewrite the wiki for Kicksecure.</ref>
