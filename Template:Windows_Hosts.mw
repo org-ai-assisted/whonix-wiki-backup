@@ -621,7 +621,7 @@ On the Windows platform, a common way to install additional software is to searc
 https://www.chip.de/downloads/Firefox-64-Bit_85086969.html
 </ref> then until recently, the download would have taken place over an insecure, plain HTTP connection.<ref>
 In 2019, <code>chip.de</code> began enforcing HTTPS across its entire website.
-</ref> In such cases, it is trivial for ISP-level adversaries, Wi-Fi providers, and others to perform [[Warning#Man-in-the-middle_attacks|man-in-the-middle attacks]] and inject malware into the download. Even when HTTPS is used, it only provides a very basic form of authentication.
+</ref> In such cases, it is trivial for ISP-level adversaries, Wi-Fi providers, and others to perform [[Warning#Man-in-the-middle_Attacks|man-in-the-middle attacks]] and inject malware into the download. Even when HTTPS is used, it only provides a very basic form of authentication.
 
 To keep a system secure and free of malware, it is strongly recommended to [[Warning#Always_Verify_Signatures|always verify software signatures]]. However, this is very difficult - if not impossible - for most Windows users. Typically, Windows programs do not include software signature files (OpenPGP / gpg signatures) as is common in the GNU/Linux world.
 

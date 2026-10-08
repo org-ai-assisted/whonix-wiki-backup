@@ -104,7 +104,7 @@ If using multiple {{q_project_name_short}} VMs, the user should make sure to hav
 * '''B)''' Qubes dom0 [[Multiple_Qubes-Whonix_Templates#UpdatesProxy_Settings|UpdatesProxy]]
 * '''C)''' Qubes dom0 [[#sdwdate-gui_qrexec_settings|sdwdate-gui qrexec settings]].
 
-On the [[Multiple Qubes-Whonix Templates]] wiki page take special note of the warning box in the [[Multiple_Qubes-Whonix_Templates#UpdatesProxy|UpdatesProxy]] chapter.
+On the [[Multiple Qubes-Whonix Templates]] wiki page take special note of the warning box in the [[Multiple_Qubes-Whonix_Templates#UpdatesProxy_Settings|UpdatesProxy]] chapter.
 
 Related:
 

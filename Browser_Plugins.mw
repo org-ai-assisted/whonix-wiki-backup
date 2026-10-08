@@ -33,7 +33,7 @@ IP leaks are not easily possible; see [[Comparison_with_Others#Attacks|Attack on
 The primary browser plugins concerns are:
 
 # <u>Non-Free Software</u>: -- see the warning box above.
-# <u>Linkability</u>: browser plugin use can be probably correlated to the same [[Tips_on_Remaining_Anonymous#Do_not_confuse_Anonymity_with_Pseudonymity|pseudonym]]. <ref name=compare>For an overview about Flash Tracking Techniques and why {{project_name_short}} users are much better off than users who run Tor and proxifiers and/or custom firewall rules, see: [[Comparison_with_Others#Flash_.2F_Browser_Plugin_security|Flash / Browser Plugin Security]].</ref>
+# <u>Linkability</u>: browser plugin use can be probably correlated to the same [[Tips_on_Remaining_Anonymous#Do_not_confuse_Anonymity_with_Pseudonymity|pseudonym]]. <ref name=compare>For an overview about Flash Tracking Techniques and why {{project_name_short}} users are much better off than users who run Tor and proxifiers and/or custom firewall rules, see: [[Comparison_with_Others#Flash_/_Browser_Plugin_Security|Flash / Browser Plugin Security]].</ref>
 # <u>Fingerprinting</u>: browser plugins most probably leak a lot of information about the (virtual) operating system ({{project_name_workstation_long}}).
 # <u>Security</u>: some plugins have a history of remote exploits. In more precise terms, the risk of a virtual operating system being infected by trojan horses or other malware is higher.
 

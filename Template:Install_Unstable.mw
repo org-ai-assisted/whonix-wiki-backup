@@ -1,6 +1,6 @@
 {{mbox
 | image   = [[File:Ambox_warning_pn.svg.png|40px]]
-| text    = Prior to installing [https://packages.debian.org/{{Debian_Codename_Unstable}}/{{{package}}} <code>{{{package}}}</code>] from Debian <code>unstable</code> read [[Install_Software#Install_from_Debian_unstable|Install software from Debian unstable]] to understand the risks involved and circumvention options. Mixing packages from Debian <code>stable</code> with later release packages like Debian <code>unstable</code> can lead to [[Install_Software#Dependency_Hell|instability]]. <ref>Due to these risks, it is recommended to utilize [[Multiple Whonix-Workstation|Multiple {{project_name_workstation_long}}]] before installing the package.</ref>
+| text    = Prior to installing [https://packages.debian.org/{{Debian_Codename_Unstable}}/{{{package}}} <code>{{{package}}}</code>] from Debian <code>unstable</code> read [[Install_Software#Install_from_Debian_Unstable|Install software from Debian unstable]] to understand the risks involved and circumvention options. Mixing packages from Debian <code>stable</code> with later release packages like Debian <code>unstable</code> can lead to [[Install_Software#Dependency_Hell|instability]]. <ref>Due to these risks, it is recommended to utilize [[Multiple Whonix-Workstation|Multiple {{project_name_workstation_long}}]] before installing the package.</ref>
 }}
 {{Box|text=
 '''1.''' {{Open_a__product_ws_terminal}}

@@ -25,7 +25,7 @@ Generic Answer:
 * See [[Whonix against Real Attacks]] for a list of many past anonymity attacks where {{project_name_long}} kept its users safe.
 * See [[Dev/Technical_Introduction#multiple_security_layers|{{project_name_short}} uses multiple security layers]] for reasons why leaks are highly unlikely.
 * See this page [[Dev/Leak Tests|Leak Tests]] for testing for IP/DNS leaks generally.
-* Chapter [[#Application Specific Leak Tests|Application Specific Leak Tests]].
+* Chapter [[#Application-Specific_Leak_Tests|Application Specific Leak Tests]].
 * See [[Security Reviews and Feedback]] for a list of notable reviews and feedback about the security of {{project_name_short}}.
 * Consider using [[corridor]], a Tor traffic whitelisting gateway.
 * See {{kicksecure_wiki

@@ -413,7 +413,7 @@ This step is optional.
 {{Box|text=
 Inside {{project_name_workstation_short}} ([[Qubes|{{q_project_name_short}}]]: App Qube <code>{{project_name_workstation_vm}}</code>).
 
-'''1.''' Apply instructions [[#Add a Electrum-LTC Start Menu Entry|Add a Electrum-LTC Start Menu Entry]] first.
+'''1.''' Apply instructions [[#Add_a_Electrum-LTC_using_Local_ElectrumX_Start_Menu_Entry|Add a Electrum-LTC Start Menu Entry]] first.
 
 '''2.''' Create folder <code>~/.config/autostart</code>.
 

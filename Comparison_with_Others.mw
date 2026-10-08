@@ -574,7 +574,7 @@ Having TLS (SSL) supported mirrors may seem like an oxymoron. The common practic
 |-
 
 ! <!-- feature --> Server not under control of hosting provider <ref>
-It would be safer if the download server was fully controlled by the developers and not by a third-party hosting provider. Unfortunately, this is not the norm. Self-hosting is expensive, requires high-bandwidth internet (consumer-grade connections are insufficient), and demands physical security. Even The Tor Project does not host its servers in developers' homes. This is further discussed in [[Trust#Trusting_the_{{project_name_short}}_Website|Trusting the {{project_name_short}} Website]].
+It would be safer if the download server was fully controlled by the developers and not by a third-party hosting provider. Unfortunately, this is not the norm. Self-hosting is expensive, requires high-bandwidth internet (consumer-grade connections are insufficient), and demands physical security. Even The Tor Project does not host its servers in developers' homes. This is further discussed in [[Trust#Trusting_{{project_name_short}}|Trusting the {{project_name_short}} Website]].
 </ref>
 | <!-- {{project_name_short}} --> {{No}}
 | <!-- Tails --> {{No}}

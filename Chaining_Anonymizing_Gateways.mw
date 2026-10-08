@@ -36,7 +36,7 @@ This [[Dev/Inspiration|Inspiration]] resource may also be useful.
 user -> VPN -> Tor -> Internet
 }}
 
-For instructions, see [[Tunnels/Connecting_to_a_VPN_before_Tor|here]]. To learn more details about this configuration, refer to this [[Tunnels/Introduction#Connecting_to_a_tunnel-link_.28proxy.2FVPN.2FSSH.29_before_Tor|entry]].
+For instructions, see [[Tunnels/Connecting_to_a_VPN_before_Tor|here]]. To learn more details about this configuration, refer to this [[Tunnels/Introduction#Connecting_to_a_Tunnel-link_(Proxy/VPN/SSH)_before_Tor|entry]].
 
 == Post-Tor-VPN ==
 
@@ -47,7 +47,7 @@ For instructions, see [[Tunnels/Connecting_to_a_VPN_before_Tor|here]]. To learn 
 user -> Tor -> VPN -> Internet
 }}
 
-For instructions, see [[Tunnels/Connecting_to_Tor_before_a_VPN|here]]. To learn more details about this configuration, refer to this [[Tunnels/Introduction#Connecting_to_Tor_before_a_tunnel-link_.28proxy.2FVPN.2FSSH.29|entry]].
+For instructions, see [[Tunnels/Connecting_to_Tor_before_a_VPN|here]]. To learn more details about this configuration, refer to this [[Tunnels/Introduction#Connecting_to_Tor_before_a_Tunnel-link_(Proxy/VPN/SSH)|entry]].
 
 == Pre- and Post-Tor-VPN ==
 
@@ -69,7 +69,7 @@ user -> VPN -> Tor -> VPN -> Internet
 user -> Tor -> Proxy -> Internet
 }}
 
-For instructions, see [[Tunnels/Connecting_to_Tor_before_a_proxy|here]]. To learn more details about this configuration, refer to this [[Tunnels/Introduction#Connecting_to_Tor_before_a_tunnel-link_.28proxy.2FVPN.2FSSH.29|entry]].
+For instructions, see [[Tunnels/Connecting_to_Tor_before_a_proxy|here]]. To learn more details about this configuration, refer to this [[Tunnels/Introduction#Connecting_to_Tor_before_a_Tunnel-link_(Proxy/VPN/SSH)|entry]].
 
 == Other Connection Schemes ==
 

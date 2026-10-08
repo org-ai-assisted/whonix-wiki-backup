@@ -96,7 +96,7 @@ For advanced users seeking detailed information on topics ranging from file tran
 ** [[Dev/Virtualization_Platform#Other_Virtualization_Platforms|{{project_name_short}} on Unsupported Virtualization Platforms]]
 ** [[File:Vmware.jpeg|20px|link=VMware]] [[VMware|{{project_name_short}} for VMware]]
 ** [[Dev/Build_Documentation/Physical_Isolation|{{project_name_short}} with a Physically-Isolated Gateway]]
-** [[File:Piraspberryicon.png|20px]] [[Dev/Build_Documentation/Physical_Isolation#Experimental:_On_the_Raspberry_Pi_3_B_.28RPI3.29|{{project_name_gateway_short}} on the Raspberry Pi 3 B (RPI3)]]
+** [[File:Piraspberryicon.png|20px]] [[Dev/Build_Documentation/Physical_Isolation#Experimental:_On_the_Raspberry_Pi_3_B_(RPI3)|{{project_name_gateway_short}} on the Raspberry Pi 3 B (RPI3)]]
 </div>
 </div>
 

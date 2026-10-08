@@ -81,7 +81,7 @@ Both the real Tor control connection and onion-grater close the connection if co
 If Tor authentication fails, this is logged and onion-grater closes the client connection.
 
 == Talking to the real Tor Controller ==
-If, instead of connecting to onion-grater, you want to talk directly with the Tor Controller, it should be done on the {{project_name_gateway_short}} using the host <code>127.0.0.1</code>. See [[Tor_Controller#Talking_to_the_real_Tor_Controller|Talking to the real Tor Controller]] for more information.
+If, instead of connecting to onion-grater, you want to talk directly with the Tor Controller, it should be done on the {{project_name_gateway_short}} using the host <code>127.0.0.1</code>. See [[Tor_Controller#Talking_to_the_Real_Tor_Controller|Talking to the real Tor Controller]] for more information.
 
 = How to do onion-grater profiles =
 As an exercise, try building a profile for an application already supported by {{project_name_short}}. If you have trouble, you can always learn from the examples available at <code>/usr/share/doc/onion-grater-merger/examples</code> in your {{project_name_gateway_short}}.

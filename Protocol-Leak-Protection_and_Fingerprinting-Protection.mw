@@ -460,7 +460,7 @@ Disadvantages if a shared MAC Addresses would be used by all {{project_name_work
 
 Advantages if a shared MAC Addresses would be used by all {{project_name_workstation_short}}:
 
-* It may be easier to develop [[Connections between Gateway and Workstation#ARP_spoofing_defense|ARP spoofing defense]] to implement authenticated connections between {{project_name_gateway_short}} and {{project_name_workstation_short}}. (This is only useful when using [[Multiple Whonix-Workstation|Multiple {{project_name_workstation_short}}]].) To understand the context, please read [[Connections between Gateway and Workstation]].
+* It may be easier to develop [[Connections between Gateway and Workstation#ARP_Spoofing_Defense|ARP spoofing defense]] to implement authenticated connections between {{project_name_gateway_short}} and {{project_name_workstation_short}}. (This is only useful when using [[Multiple Whonix-Workstation|Multiple {{project_name_workstation_short}}]].) To understand the context, please read [[Connections between Gateway and Workstation]].
 * In some cases, applications gather the MAC address and send it to a remote server (proprietary license checks use the MAC for hardware fingerprinting). In this case a shared MAC address might be better for privacy. It however might also break the proprietary license check as this expects different MAC addresses for different customers of the proprietary software. See also [[VM Fingerprinting]].
 * There might be an advantages of sharing MAC addresses among all {{project_name_short}} versions. That would be useful in the event an application leaks the MAC address or if {{project_name_workstation_short}} was compromised. On the other hand, this would identify the user as a {{project_name_short}} user.
 </ref>

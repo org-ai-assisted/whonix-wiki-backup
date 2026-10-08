@@ -31,7 +31,7 @@ By using an onion service, the server has no way to log originating IP addresses
 
 The <code>{{project_clearnet}}</code> website privacy policy is different; see:
 * [[Privacy_Policy#IP_Addresses_and_IP_Addresses_Logging_Policy|IP Addresses and IP Addresses Logging Policy]]
-* [[Trust#Trusting the {{project_name_short}} Website|Trusting the {{project_name_short}} Website]]
+* [[Trust#Trusting {{project_name_short}}|Trusting the {{project_name_short}} Website]]
 </ref>
 * count only once within a 24-hour period
 * provide an option to [[#Disable {{project_name_short}} User Count|disable user counts]]

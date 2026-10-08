@@ -1326,7 +1326,7 @@ You may be interested to read:
 }}
 
 = Tails =
-Possible in theory. [[Unsupported]]. Discouraged as it would lead to Tor over Tor See [[Tips_on_Remaining_Anonymous#Refrain_from_.22Tor_over_Tor.22_Scenarios|Refrain from "Tor over Tor" Scenarios]].
+Possible in theory. [[Unsupported]]. Discouraged as it would lead to Tor over Tor See [[Tips_on_Remaining_Anonymous#Refrain_from_Tor_over_Tor_Scenarios|Refrain from "Tor over Tor" Scenarios]].
 
 = Security Comparison: {{project_name_short}}-Download-Workstation vs. {{project_name_customworkstation_short}} =
 

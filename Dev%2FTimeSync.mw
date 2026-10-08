@@ -303,7 +303,7 @@ Cons:
 * Does not distribute trust. <ref>As {{Code2|sdwdate}} does.</ref> <ref>https://github.com/ioerror/tlsdate/issues/112</ref> <ref>https://github.com/ioerror/tlsdate/issues/143#issuecomment-57053323</ref> The single time source can send wrong time replies by error or malicious intent.
 * Does not support hooks for user notifications about state of network time synchronization. &rarr; Users should not use the internet in {{project_name_workstation_short}} before network time synchronization has finished, and timesync informs users about this. &rarr; Implementing notifications would be difficult or require patching tlsdate.
 * Produces clock jumps, which confuses various applications. Does not gradually adjust as {{Code2|sdwdate}} does with [https://github.com/Whonix/Whonix/issues/169 Slow Clock Adjuster]. <ref>[https://github.com/{{project_name_short}}/sdwdate/blob/master/usr/src/sdwdate/sclockadj.c sclockadj]</ref>
-* Cannot connect to (most) Tor onion services, because most of those do not support SSL. <ref>Because in most cases, there is little need to combine Tor onion services with SSL. [[Onion_Services#Notes_about_End-to-end_security_of_Onion_Services|connections to Tor onion services are Tor-to-Tor encrypted by default ("not exactly end-to-end")]].</ref> <ref>https://github.com/ioerror/tlsdate/issues/157</ref>
+* Cannot connect to (most) Tor onion services, because most of those do not support SSL. <ref>Because in most cases, there is little need to combine Tor onion services with SSL. [[Onion_Services#Notes_about_End-to-end_Security_of_Onion_Services|connections to Tor onion services are Tor-to-Tor encrypted by default ("not exactly end-to-end")]].</ref> <ref>https://github.com/ioerror/tlsdate/issues/157</ref>
 * Minor: {{Code2|command line parser doesn't fail closed on extraneous / unknown command line parameters}} <ref>https://github.com/ioerror/tlsdate/issues/158</ref> - not that important in the absence of bugs, but safer behavior for {{Code2|tlsdate}} would be to fail closed on extraneous / unknown command line parameters.
 * Likely denial of service issue: https://github.com/ioerror/tlsdate/issues/149
 
@@ -459,7 +459,7 @@ Originally posted in [https://phabricator.whonix.org/T151 sdwdate Tor Consensus 
 ** In a situation where the clock is that much off that Tor cannot establish circuits, setting time using anondate and restarting Tor are required:
 *** As per [[Comparison with Others#Fingerprint]], quoted from the [https://tails.boum.org/contribute/design/Time_syncing/#index5h1 Tails Design about Time syncing]: "Our initial time guess based on the Tor consensus is probably easier to fingerprint, though: a fresh Tor is started, and restarted again right after the consensus has been downloaded."
 ** Might not matter. See also [[Fingerprint#ISP_or_Local_Network_Administrators|Network Fingerprint]].
-*** Related: [[Comparison with Others#Network Time related]]
+*** Related: [[Comparison with Others#Network_Time-related]]
 * <s>Hidden services can only be accessed if the clock is no more than 30 minutes slow or fast. <ref>https://gitlab.torproject.org/legacy/trac/-/issues/3582#comment:3</ref></s>
 * [https://gitlab.tails.boum.org/tails/tails/-/issues/5774 Tails ticket: Robust time syncing] Quote: <blockquote>Currently we use tordate to set the initial clock. It is very messy and error prone, so we desperately need a robust replacement.</blockquote>
 * Vulnerable to ISP level man-in-the-middle attacks:
@@ -876,7 +876,7 @@ qvm-run --pass-io {{project_name_gateway_vm}} "date -u" ; date -u
 * https://docs.google.com/a/chromium.org/document/d/1ylaCHabUIHoKRJQWhBxqQ5Vck270fX7XCWBdiJofHbU/edit
 
 == Comparison with Others ==
-[[Comparison with Others#Network Time related|Network Time related]]
+[[Comparison with Others#Network_Time-related|Network Time related]]
 
 == Tickets ==
 === Qubes ===

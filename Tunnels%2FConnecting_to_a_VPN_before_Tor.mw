@@ -26,7 +26,7 @@ Platform specific.
 ** '''A)''' a [[#Separate VPN-Gateway]] <u>and/or</u>
 ** '''B)''' could also install the VPN software [[#Inside {{project_name_gateway_short}}]].
 * [[Non-Qubes-Whonix|{{non_q_project_name_short}}]] users could install the VPN software
-** '''A)''' [[#On the Host OS (host operating system, outside of any VMs)]] <u>and/or</u>
+** '''A)''' [[#On_the_Host]] <u>and/or</u>
 ** '''B)''' [[#Inside {{project_name_gateway_short}}]].
 
 What's the difference of installing a VPN on the host OS versus installing on {{project_name_gateway_short}}?
