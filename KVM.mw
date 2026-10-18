@@ -610,14 +610,14 @@ max_files = 0
 * Done
 
 == Image File Installation ==
-The XML files are configured to use newly created user level path <code>~/.local/share/images</code> instead of the default storage location of <code>/var/lib/libvirt/images</code>. The image files can be moved or copied, depending on storage constraints.
+The XML files are configured to use newly created user level path <code>~/.local/share/libvirt/images</code> instead of the default storage location of <code>/var/lib/libvirt/images</code>. The image files can be moved or copied, depending on storage constraints.
 
 <u>Notes:</u>
 
 * The directory must be created before copying or moving the images. To create the path <ref>Another less practical and not guaranteed method could be used by running <code>virt-manager -c qemu:///session</code>. This will open virt-manager, triggering the default storage path, and the user will see the {{project_name_short}} images there. However, if the user tries to run any of them, they will not work because the images have not yet been transferred to the storage path (so it has a practical issue if the user is not aware of this). Also, there is no guarantee that it will work in every case on every distribution.</ref>:
 
 {{CodeSelect|code=
-mkdir -p ~/.local/share/images
+mkdir -p ~/.local/share/libvirt/images
 }}
 
 * The following steps move or copy the images so the virtual machines can boot.
@@ -634,11 +634,11 @@ Either move <u>or</u> copy.
 Move the image files.
 
 {{CodeSelect|code=
-mv {{project_name_gateway_short}}*.qcow2 ~/.local/share/images/{{project_name_gateway_short}}.qcow2
+mv {{project_name_gateway_short}}*.qcow2 ~/.local/share/libvirt/images/{{project_name_gateway_short}}.qcow2
 }}
 
 {{CodeSelect|code=
-mv {{project_name_workstation_short}}*.qcow2 ~/.local/share/images/{{project_name_workstation_short}}.qcow2
+mv {{project_name_workstation_short}}*.qcow2 ~/.local/share/libvirt/images/{{project_name_workstation_short}}.qcow2
 }}
 }}
 {{Tab
@@ -652,11 +652,11 @@ Copy the image files. {{Anchor|sparse files}}
 }}, meaning they expand as data is written rather than allocating their entire size (100GB) outright. Sparse files require special commands when they are copied to ensure they retain this property; otherwise, they will occupy the full disk space.
 
 {{CodeSelect|code=
-cp --sparse=always {{project_name_gateway_short}}*.qcow2 ~/.local/share/images/{{project_name_gateway_short}}.qcow2
+cp --sparse=always {{project_name_gateway_short}}*.qcow2 ~/.local/share/libvirt/images/{{project_name_gateway_short}}.qcow2
 }}
 
 {{CodeSelect|code=
-cp --sparse=always {{project_name_workstation_short}}*.qcow2 ~/.local/share/images/{{project_name_workstation_short}}.qcow2
+cp --sparse=always {{project_name_workstation_short}}*.qcow2 ~/.local/share/libvirt/images/{{project_name_workstation_short}}.qcow2
 }}<!-- close CodeSelect -->
 }}<!-- close tab -->
 }}<!-- close controller -->
@@ -787,11 +787,11 @@ virsh -c qemu:///session undefine {{project_name_workstation_short}}
 <u>Note:</u> All data will be lost unless it is backed up first. Adjust the paths to the images as appropriate.
 
 {{CodeSelect|code=
-safe-rm ~/.local/share/images/{{project_name_gateway_short}}.qcow2
+safe-rm ~/.local/share/libvirt/images/{{project_name_gateway_short}}.qcow2
 }}
 
 {{CodeSelect|code=
-safe-rm ~/.local/share/images/{{project_name_workstation_short}}.qcow2
+safe-rm ~/.local/share/libvirt/images/{{project_name_workstation_short}}.qcow2
 }}
 }}
 </div>
@@ -824,20 +824,20 @@ sudo apt install cryfs
 '''2.''' Check which virtual machine images are currently stored in the directory that will be encrypted.
 
 {{CodeSelect|code=
-ls "$HOME/.local/share/images"
+ls "$HOME/.local/share/libvirt/images"
 }}
 
 If only Whonix Gateway and Whonix Workstation are installed, the expected output should look similar to:
 
 <pre>
-[user ~]% ls "$HOME/.local/share/images"                                      
+[user ~]% ls "$HOME/.local/share/libvirt/images"                                      
 Whonix-Gateway.qcow2  Whonix-Workstation.qcow2
 </pre>
 
 '''3.''' Move the existing image directory aside so that the original path can be used as an empty CryFS mount point (Selecting a directory that already contains VM images does not automatically encrypt those images. The images must later be moved or copied into the mounted CryFS filesystem so that CryFS can encrypt them).
 
 {{CodeSelect|code=
-mv -T -- "$HOME/.local/share/images/" "$HOME/.local/share/images.before-cryfs"
+mv -T -- "$HOME/.local/share/libvirt/images/" "$HOME/.local/share/libvirt/images.before-cryfs"
 }}
 
 '''4.''' Create the directories that will be used for the CryFS encrypted vault and decrypted mount point.
@@ -845,7 +845,7 @@ mv -T -- "$HOME/.local/share/images/" "$HOME/.local/share/images.before-cryfs"
 Create the decrypted mount point (This is the default path that KVM is using for the Whonix images):
 
 {{CodeSelect|code=
-mkdir -m 700 -- "$HOME/.local/share/images"
+mkdir -m 700 -- "$HOME/.local/share/libvirt/images"
 }}
 
 Create the encrypted CryFS vault directory (This directory will contain the encrypted data):
@@ -857,7 +857,7 @@ mkdir -m 700 -- "$HOME/.local/share/whonix-cryfs"
 '''5.''' Create and mount the CryFS encrypted vault.
 
 {{CodeSelect|code=
-cryfs "$HOME/.local/share/whonix-cryfs" "$HOME/.local/share/images"
+cryfs "$HOME/.local/share/whonix-cryfs" "$HOME/.local/share/libvirt/images"
 }}
 
 CryFS will ask whether to use the default settings. For a straightforward setup, select <code>y</code> unless you specifically want to customize the encryption settings:
@@ -889,7 +889,7 @@ Filesystem configuration:
 ----------------------------------------------------
 
 Mounting filesystem. To unmount, call:
-$ cryfs-unmount "/home/user/.local/share/images"
+$ cryfs-unmount "/home/user/.local/share/libvirt/images"
 </pre>
 
 '''Note''': The exact CryFS version, filesystem format version... may differ from the example above.
@@ -897,20 +897,20 @@ $ cryfs-unmount "/home/user/.local/share/images"
 '''6.''' Move the Whonix images into the mounted CryFS filesystem.
 
 <pre>
-mv -iv -- "$HOME/.local/share/images.before-cryfs"/Whonix-{Gateway,Workstation}.qcow2 "$HOME/.local/share/images/"
+mv -iv -- "$HOME/.local/share/libvirt/images.before-cryfs"/Whonix-{Gateway,Workstation}.qcow2 "$HOME/.local/share/libvirt/images/"
 </pre>
 
-The destination <code>$HOME/.local/share/images</code> is the decrypted CryFS mount point. Files written to this location are encrypted by CryFS and stored inside the encrypted vault at <code>$HOME/.local/share/whonix-cryfs</code>.
+The destination <code>$HOME/.local/share/libvirt/images</code> is the decrypted CryFS mount point. Files written to this location are encrypted by CryFS and stored inside the encrypted vault at <code>$HOME/.local/share/whonix-cryfs</code>.
 
 '''Note''': If you prefer to keep the original images as a backup until the encrypted copies have been verified, use <code>cp</code> instead of <code>mv</code>.
 
 Example output:
 
 <pre>
-[user ~]% mv -iv -- /home/user/.local/share/images.before-cryfs/Whonix-{Gateway,Workstation}.qcow2 /home/user/.local/share/images/
-copied '/home/user/.local/share/images.before-cryfs/Whonix-Gateway.qcow2' -> '/home/user/.local/share/images/Whonix-Gateway.qcow2'
+[user ~]% mv -iv -- /home/user/.local/share/libvirt/images.before-cryfs/Whonix-{Gateway,Workstation}.qcow2 /home/user/.local/share/libvirt/images/
+copied '/home/user/.local/share/libvirt/images.before-cryfs/Whonix-Gateway.qcow2' -> '/home/user/.local/share/libvirt/images/Whonix-Gateway.qcow2'
 
-removed '/home/user/.local/share/images.before-cryfs/Whonix-Gateway.qcow2'
+removed '/home/user/.local/share/libvirt/images.before-cryfs/Whonix-Gateway.qcow2'
 </pre>
 
 The same process will then be performed for <code>Whonix-Workstation.qcow2</code>.
@@ -922,21 +922,21 @@ The same process will then be performed for <code>Whonix-Workstation.qcow2</code
 To lock the vault, unmount the decrypted CryFS filesystem:
 
 {{CodeSelect|code=
-cryfs-unmount "$HOME/.local/share/images"
+cryfs-unmount "$HOME/.local/share/libvirt/images"
 }}
 
-After unmounting, the Whonix images will no longer be accessible through <code>$HOME/.local/share/images</code>. The encrypted data remains stored in the CryFS vault.
+After unmounting, the Whonix images will no longer be accessible through <code>$HOME/.local/share/libvirt/images</code>. The encrypted data remains stored in the CryFS vault.
 
 To unlock the vault again, mount it with:
 
 {{CodeSelect|code=
-cryfs "$HOME/.local/share/whonix-cryfs" "$HOME/.local/share/images"
+cryfs "$HOME/.local/share/whonix-cryfs" "$HOME/.local/share/libvirt/images"
 }}
 
 CryFS will ask for the password that was created earlier:
 
 <pre>
-[user ~]% cryfs "$HOME/.local/share/whonix-cryfs" "$HOME/.local/share/images"
+[user ~]% cryfs "$HOME/.local/share/whonix-cryfs" "$HOME/.local/share/libvirt/images"
 CryFS Version 0.11.4
 
 Password: 
@@ -954,10 +954,10 @@ Filesystem configuration:
 ----------------------------------------------------
 
 Mounting filesystem. To unmount, call:
-$ cryfs-unmount "/home/user/.local/share/images"
+$ cryfs-unmount "/home/user/.local/share/libvirt/images"
 </pre>
 
-Once mounted successfully, the Whonix images will again be available under <code>$HOME/.local/share/images</code> and can be used by QEMU/KVM.
+Once mounted successfully, the Whonix images will again be available under <code>$HOME/.local/share/libvirt/images</code> and can be used by QEMU/KVM.
 
 '''8.''' Is it possible to store the encrypted CryFS vault on an external USB drive?
 
