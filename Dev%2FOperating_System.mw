@@ -99,7 +99,8 @@ Mac OS X cannot be used for legal reasons. Even if that were not an issue, it is
 The Fedora Project does not sign our package repositories (yet), even though this has been requested a lot of times. One of the main reasons for this is that DNF/YUM repodata has no "ValidUntil" or sortalike attribute. Additionally, librepo - which DNF uses to download and verify repodata - regards expired GPG signatures as fully valid. This means that there is no way at all to mark repository data as valid for a limited amount of time.
 
 As such, while it can protect against modification of the repository data, it does not protect against attackers (or outdated mirrors) shipping ancient repositories with known-vulnerable software.
-|context=Fedora Magazine: [https://fedoramagazine.org/fedora-secures-package-delivery/ How Fedora Secures Package Delivery]
+|author=Fedora Magazine
+|source=[https://fedoramagazine.org/fedora-secures-package-delivery/ How Fedora Secures Package Delivery]
 }}
 
 * https://github.com/QubesOS/qubes-issues/issues/1919#issuecomment-691545936
@@ -120,7 +121,8 @@ Transparent to the Fedora Project, perhaps, but not to end users. A central buil
 Given that Red Hat is a US-based company, and thus subject to secret court orders from the US government, can we be sure that Red Hat has not been compelled to insert compile-time backdoors?
 
 "Red Hat has never intentionally inserted a back door in our products, and we have never received a court order to do so," Wonderlick told Ars.
-|context=Ars Technica: [https://arstechnica.com/information-technology/2016/12/how-to-make-linux-more-trustworthy/ How to make Linux more trustworthy - Reproducible builds are a good step, but Red Hat and Ubuntu don't want to join in.]
+|author=Ars Technica
+|source=[https://arstechnica.com/information-technology/2016/12/how-to-make-linux-more-trustworthy/ How to make Linux more trustworthy - Reproducible builds are a good step, but Red Hat and Ubuntu don't want to join in.]
 }}
 
 This situation has improved. Reproducible builds are now a goal.
@@ -575,7 +577,7 @@ Regular upgrades on a rolling distribution help prevent attacks by fixing known 
 
 {{quotation
 |quote=However, as security researcher Sharp Security highlighted in a blog post, the team fixed a notable flaw without adequately informing the users about it and without assigning a CVE to the problem.
-|context=https://www.bleepingcomputer.com/news/security/qbittorrent-fixes-flaw-exposing-users-to-mitm-attacks-for-14-years/
+|source=https://www.bleepingcomputer.com/news/security/qbittorrent-fixes-flaw-exposing-users-to-mitm-attacks-for-14-years/
 }}
 
 See also {{kicksecure_wiki
@@ -682,7 +684,7 @@ For a prolonged amount of time.
 * 104 security issues in sid high
 * 104 security issues in buster high
 * 104 security issues in bullseye
-|context=[https://web.archive.org/web/20201022174657/https://tracker.debian.org/pkg/chromium Quote archived link at time of writing in 2020]
+|source=[https://web.archive.org/web/20201022174657/https://tracker.debian.org/pkg/chromium Quote archived link at time of writing in 2020]
 }}
 
 === Debian - packages security issues which are exploited in-the-wild ===
@@ -698,7 +700,8 @@ Patch Google Chrome with the latest updates - if you don't, you're vulnerable to
 Criminals are targeting users of Chrome with outdated installations, CISA said in an advisory note urging folk to update their browsers immediately.
 
 "Google has released Chrome version 86.0.4240.183 for Windows, Mac, and Linux addressing multiple vulnerabilities, including vulnerability '''CVE-2020-16009'''. Exploit code for this vulnerability exists in the wild," said the agency in a statement.
-|context=The Register: [https://www.theregister.com/2020/11/04/google_chrome_critical_updates/ If you're an update laggard, buck up: Chrome zero-days are being exploited in the wild]
+|author=The Register
+|source=[https://www.theregister.com/2020/11/04/google_chrome_critical_updates/ If you're an update laggard, buck up: Chrome zero-days are being exploited in the wild]
 }}
 
 Debian affected by '''CVE-2020-16009''' at time of writing, see archived link [https://web.archive.org/web/20201109070427/https://security-tracker.debian.org/tracker/CVE-2020-16009 '''CVE-2020-16009'''].
@@ -851,7 +854,7 @@ Corporations can quickly act against the interests of the Freedom Software commu
 {{quotation
 |quote=
 Novell basically conceded that its implementation of Linux violated Microsoft patents and agreed its customers needed patent-enforcement protection.
-|context=https://www.zdnet.com/article/microsoft-and-novell-at-two-was-the-patent-pact-worth-it/
+|source=https://www.zdnet.com/article/microsoft-and-novell-at-two-was-the-patent-pact-worth-it/
 }}
 
 * https://en.wikipedia.org/wiki/Stephen_Elop - keywords: Microsoft, Nokia, bankrupt

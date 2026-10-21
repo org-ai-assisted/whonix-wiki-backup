@@ -1349,7 +1349,7 @@ sudo mv /boot/efi/EFI/BOOT/grub.cfg /boot/efi/EFI/BOOT/BOOTX64.cfg
 = Debugging =
 {{quotation
 |quote=Livehack: <code>systemd.journald.forward_to_console=1 systemd.journald.max_level_console=debug</code> to <code>kernelopts</code>, then look into <code>/var/log/xen/console/guest-*</code>
-|context=https://github.com/QubesOS/qubes-issues/issues/10769#issuecomment-4049800646
+|source=https://github.com/QubesOS/qubes-issues/issues/10769#issuecomment-4049800646
 }}
 
 = See Also =

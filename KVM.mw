@@ -52,7 +52,7 @@ https://forums.virtualbox.org/viewtopic.php?f=7&t=89395
 </ref>
 
 VirtualBox also contains significant functionality that is only available as a proprietary extension, such as USB / PCI passthrough and RDP connectivity. Based on Oracle's unfriendly track record with the FOSS community in the past -- examples include OpenSolaris and OpenOffice -- it would be unsurprising if users were charged for these restricted features in the future, or if the project was abandoned due to insufficient monetization.
-|context=Statement by [[Contribute#Contributor|contributor]] [https://forums.whonix.org/u/hulahoop HulaHoop].
+|author=Statement by [[Contribute#Contributor|contributor]] [https://forums.whonix.org/u/hulahoop HulaHoop].
 }}
 
 For the opposite viewpoint, see [[Dev/VirtualBox#Why_use_VirtualBox_over_KVM?|Why use VirtualBox over KVM?]]
@@ -804,7 +804,7 @@ Option A: Use scaling instead.
 
 {{quotation
 |quote=Enable display scaling in virt-manager, disable automatic guest resizing, and then grow the window. Rather than increasing the resolution, it will just make everything bigger (and blurrier, but that's unfortunately mostly unavoidable if you want the VM's display bigger without the VM knowing that its display is bigger).
-|context=[https://forums.whonix.org/t/font-too-small-can-changing-lead-to-fingerprinting/23167 Font Too Small - Can Changing Lead to Fingerprinting?]
+|source=[https://forums.whonix.org/t/font-too-small-can-changing-lead-to-fingerprinting/23167 Font Too Small - Can Changing Lead to Fingerprinting?]
 }}
 
 Option B: Increase stream isolation (fingerprinting risk as documented on the [[screen|{{project name short}} screen wiki page]])

@@ -157,7 +157,7 @@ Wireguard was invented after this documentation was written. Whonix developer Pa
 TCP Mode<br />
 
 WireGuard explicitly does not support tunneling over TCP, due to the classically terrible network performance of tunneling TCP-over-TCP. Rather, transforming WireGuard's UDP packets into TCP is the job of an upper layer of obfuscation (see previous point), and can be accomplished by projects like udptunnel and udp2raw.
-|context=[https://www.wireguard.com/known-limitations/ Known limitations - Wireguard]
+|source=[https://www.wireguard.com/known-limitations/ Known limitations - Wireguard]
 }}
 
 A dedicated virtual machine is recommended for this activity; see [[Multiple Whonix-Workstation|Multiple {{project_name_workstation_short}}]].

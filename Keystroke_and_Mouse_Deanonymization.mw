@@ -36,7 +36,7 @@ obfuscated, both techniques that render the code very hard
 to analyze by humans, reducing the number of scripts that can be studied because of time constraints.
 
 [...]
-|context=[https://upcommons.upc.edu/bitstream/handle/2117/400222/Detecting_and_Analyizing_Mouse_Tracking_in_the_Wild.pdf Detecting and Analyzing Mouse Tracking in the Wild]
+|source=[https://upcommons.upc.edu/bitstream/handle/2117/400222/Detecting_and_Analyizing_Mouse_Tracking_in_the_Wild.pdf Detecting and Analyzing Mouse Tracking in the Wild]
 }}
 
 https://ieeexplore.ieee.org/document/10190681/
@@ -48,7 +48,9 @@ https://ieeexplore.ieee.org/document/10190681/
 mouse tracking has very practical applications for webmasters, and in particular for search engines. Dr. Ioannis Aparakis from Telefonica Research and co-author of both publications, clarifies: "When you search for something at Google or Bing, your mouse movements are sending a tiny signal to the search engine indicating if you are interested or not in the content you have been shown. As mouse tracking may have privacy issues, we investigated the possibility of recording only a small part of the whole movement trajectory and see if we can still infer how people make choices in web search."
 
 [...]
-|context=University of Luxembourg, Faculty of Science, Technology and Medicine (FSTM) University / Central Administration and Rectorate, [https://www.uni.lu/en/news/mouse-movements-reveal-your-behaviour/ Mouse movements reveal your behaviour]
+|author=University of Luxembourg
+|role=Faculty of Science, Technology and Medicine (FSTM) University / Central Administration and Rectorate
+|source=[https://www.uni.lu/en/news/mouse-movements-reveal-your-behaviour/ Mouse movements reveal your behaviour]
 }}
 </ref> 
 
@@ -58,7 +60,7 @@ Several companies offer mouse tracking and behavioral analytics tools designed t
 |quote=Trusted by 210,000+ digital experience frontrunners worldwide<br/>
 
 Vodafone; Philips; TUI Cruises; Verizon; Scotts
-|context={{ExtLink
+|author={{ExtLink
 |https://mouseflow.com/
 |https://web.archive.org/web/20250408184041/https://mouseflow.com/
 |https://archive.is/0CfNZ
@@ -396,7 +398,7 @@ sudo journalctl -u kloak {{!}} cat
 Looked into what would be necessary to make kloak work over xrdp. Sadly this does not seem possible, as xrdp acts as its own X server (to my awareness) and thus intercepting and delaying keystrokes would require kloak to somehow intercept the keystrokes at the layer between the X server and the applications. I looked ways of doing this but failed to find them - there are ways of logging keystrokes at the X server level, but my research failed to find a way to block keystrokes or otherwise keep them from being delivered to applications for the purpose of delaying them. This issue affects any use of kloak over a remote desktop session - unless the remote desktop application creates uinput devices on the remote machine and then feeds user input into them, kloak will not be able to intercept them.
 
 Recommendation - xrdp users should run kloak on the client machine to obfuscate their typing patterns on the client. This will then naturally obfuscate them on the remote machine as well.
-|context=ArrayBolt3
+|author=ArrayBolt3
 }}
 
 === Stop Kloak ===

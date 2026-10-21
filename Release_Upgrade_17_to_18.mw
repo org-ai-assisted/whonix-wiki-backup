@@ -97,7 +97,7 @@ Install the <code>qubes-dist-upgrade</code> tool. This is the in-place upgrade t
 {{CodeSelect|code=
 sudo qubes-dom0-update -y qubes-dist-upgrade
 }}
-|context=[https://doc.qubes-os.org/en/latest/user/downloading-installing-upgrading/upgrade/4_3.html How to upgrade to Qubes 4.3]
+|source=[https://doc.qubes-os.org/en/latest/user/downloading-installing-upgrading/upgrade/4_3.html How to upgrade to Qubes 4.3]
 }}
 
 {{quotation
@@ -107,7 +107,7 @@ Change your templates to use the 4.3 repositories instead of the 4.2 ones. You d
 {{CodeSelect|code=
 sudo qubes-dist-upgrade --releasever=4.3 --template-standalone-upgrade
 }}
-|context=[https://doc.qubes-os.org/en/latest/user/downloading-installing-upgrading/upgrade/4_3.html How to upgrade to Qubes 4.3]
+|source=[https://doc.qubes-os.org/en/latest/user/downloading-installing-upgrading/upgrade/4_3.html How to upgrade to Qubes 4.3]
 }}
 
 <u>Note on terminology:</u> The option name <code>--template-standalone-upgrade</code> is unfortunately easy to misread because Qubes uses "Standalone" as a VM type name. Here, "standalone" in the option name refers to the fact that this '''stage can be run by itself''' (as a standalone step). It is '''not''' an instruction to "upgrade Standalones only". This step upgrades '''TemplateVMs''' <u>and</u> also any '''Standalone''' Qubes (VM type) that are applicable. <ref>

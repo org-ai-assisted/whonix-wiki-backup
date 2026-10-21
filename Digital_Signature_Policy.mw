@@ -60,7 +60,8 @@ Such signing keys would only be used to satisfy Windows code signing requirement
 {{quotation
 |quote=
 {{Always verify signatures reminder}}
-|context=[[Template:Always verify signatures reminder]] used on the following wiki pages: [[Special:WhatLinksHere/Template:Always verify signatures reminder]]
+|author=[[Template:Always verify signatures reminder]] used on the following wiki pages
+|source=[[Special:WhatLinksHere/Template:Always verify signatures reminder]]
 }}
 
 * <u>Unsigned software documentation policy:</u> If documented software does not provide digital signatures, then [[Template:Unsigned_software]] must always be used.
@@ -68,7 +69,8 @@ Such signing keys would only be used to satisfy Windows code signing requirement
 {{quotation
 |quote=
 {{Unsigned_software}}
-|context=[[Template:Unsigned_software]] used on the following wiki pages: [[Special:WhatLinksHere/Template:Unsigned_software]]
+|author=[[Template:Unsigned_software]] used on the following wiki pages
+|source=[[Special:WhatLinksHere/Template:Unsigned_software]]
 }}
 
 = {{project_name_short}} Website =

@@ -771,7 +771,7 @@ Flatpak's sandbox, which is mandatory and cannot be disabled, can break applicat
 {{quotation
 |quote=The Chromium Flatpak has patches on it to utilize Flatpak's support for
 nested sandboxing.
-|context=https://github.com/flatpak/flatpak/issues/4032
+|source=https://github.com/flatpak/flatpak/issues/4032
 }}
 
 Flatpak's own sandboxing capabilities interfere with other sandboxing initiatives like [[sandbox-app-launcher|Sandboxed Application Launcher]] and {{kicksecure_wiki
@@ -801,7 +801,7 @@ In the case of [[sandbox-app-launcher|Sandboxed Application Launcher]], it is no
 {{quotation
 |quote=Oh, also, even if I have that, flathub lists proprietary apps right next to free software apps without any distinction. That is very bad. The search and listing functionality do not allow me to find only free software apps. l read the little license field, and if you are a new user, how are you going to know that a little unexplained license acronym like "MIT" or "GPL-3.0" means it is free software? It is sending the message, the license is a small unimportant detail, things that are way more important are: it's functionality category, the editor's choice, it's "popularity", because you can find apps through that, but not if it has a free license.
 Also, the license information is much worse. In debian based distros, I can easily see the license of every dependency. There is more complete licensing info in /usr/share/doc/PACKAGE/copyright. And I know that someone has put some time and effort into checking them.
-|context=[https://lwn.net/Articles/900479/ LWN Comment]
+|source=[https://lwn.net/Articles/900479/ LWN Comment]
 }}
 
 Flathub could mitigate this by now showing non-freedom software by default and only for users who opt-in. Such functionality is however not planned according to the knowledge of the author.

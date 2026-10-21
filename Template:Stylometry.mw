@@ -53,5 +53,5 @@ I have tested local freeware <ref>
 </ref> models such as DeepSeek R1, Facebook's LLaMA, and various distilled models on fast consumer hardware with the latest gaming GPU. In my testing, the quality and performance were not sufficient for practical use. The better models, for which the quality might be usable, were too slow. A reply to "hi" took 30 minutes. Distilled ("simplified, faster") models did not produce acceptable output quality for my use cases, including typo / grammar review and code review.
 
 It might be feasible with an NVIDIA H100 for an approximately $38K USD purchase, or at $2.40/hr when rented in a data center. Renting in a data center raises privacy and security concerns. The data center could log / tamper with all inputs and outputs. I have not tried that yet.
-|context=[https://forum.qubes-os.org/t/how-much-do-we-gotta-worry-about-this-linux-age-verification-bs/39788/114 forum post by a Whonix developer]
+|source=[https://forum.qubes-os.org/t/how-much-do-we-gotta-worry-about-this-linux-age-verification-bs/39788/114 forum post by a Whonix developer]
 }}

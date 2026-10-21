@@ -315,7 +315,9 @@ quote='''Tor circuit and HTTP connection linkability'''
 
 '''Implementation Status:''' The isolation functionality is provided by a Torbutton component that [https://gitweb.torproject.org/torbutton.git/tree/src/components/domain-isolator.js sets the SOCKS username and password for each request]. The Tor client has logic to prevent connections with different SOCKS usernames and passwords from using the same Tor circuit. Firefox has existing logic to ensure that connections with SOCKS proxies do not re-use existing HTTP Keep-Alive connections unless the proxy settings match. [https://bugzilla.mozilla.org/show_bug.cgi?id=1200802 We extended this logic] to cover SOCKS username and password authentication, providing us with HTTP Keep-Alive unlinkability.
 While the vast majority of web requests adheres to the circuit and connection unlinkability requirement there are still corner cases we [https://gitweb.torproject.org/tor-browser.git/commit/?h=tor-browser-52.5.2esr-7.0-2&id=8661822237c56d543d5c9117c8a4708c402a110f need to treat separately] or that [https://bugs.torproject.org/22343 lack a fix altogether].
-|context=upstream, The Tor Project: [https://www.torproject.org/projects/torbrowser/design/ The Design and Implementation of the Tor Browser (DRAFT)]
+|author=upstream
+|role=The Tor Project
+|source=[https://www.torproject.org/projects/torbrowser/design/ The Design and Implementation of the Tor Browser (DRAFT)]
 }}
 
 * <u>Upstream is the source of truth:</u> Tor Browser is developed by upstream, [https://www.torproject.org The Tor Project], which is an independent entity. For up-to-date information, refer to upstream, Tor Browser.

@@ -150,12 +150,12 @@ https://lists.torproject.org/pipermail/tor-talk/2011-December/022369.html
 
 {{quotation
 |quote=Don't torrent over Tor
-|context=https://support.torproject.org/tor-browser/security/using-tb-safely/
+|source=https://support.torproject.org/tor-browser/security/using-tb-safely/
 }}
 
 {{quotation
 |quote=you also slow down the entire Tor network for everyone else.
-|context=https://support.torproject.org/tor-browser/security/using-tb-safely/
+|source=https://support.torproject.org/tor-browser/security/using-tb-safely/
 }}
 
 == Torrent Client Fingerprinting ==

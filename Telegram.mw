@@ -91,7 +91,8 @@ Telegram collects information about the operating system, sends it to the server
 
 {{quotation
 |quote=Device : Telegram Desktop, 4.6.5 Snap, Desktop, Linux Qubes X11 glibc 2.35
-|context=Telegram, service notifications <ref>
+|author=Telegram
+|role=service notifications <ref>
 https://forum.qubes-os.org/t/telegram-desktop-identifying-qubes-in-standalonevm/17906
 </ref>
 }}

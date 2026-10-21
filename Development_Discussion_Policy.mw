@@ -49,7 +49,7 @@ Medical analogy: To research and contribute to improved heart surgery procedures
 
 {{quotation
 |quote=Non-technical users lack foundations. They cannot inspect architecture, threat models, or source code.
-|context=[[System Audit]] wiki page.
+|source=[[System Audit]] wiki page.
 }}
 
 These decisions are not made arbitrarily. They exist to:
@@ -88,12 +88,13 @@ Many Open Source projects deliberately separate developer discussions from gener
 |quote=The issue tracker is a tool to help the developers be more productive and efficient in their work. It is not a place for discussion.<br/>
 
 This guideline is important for keeping issues focused on actionable information, which helps the developers to stay focused on their work. When developers come back to an issue to work on it, we do not want them to have to sift through a large number of unnecessary comments before they can get started. In many cases, an issue that gets "too big" essentially becomes more trouble than it's worth, and no developer will touch it (also see every issue must be about a single, actionable thing). In these cases, we sometimes have to close the issue and open a new one. This is a waste of energy for everyone involved, so we ask that everyone help to avoid repeating this pattern.
-|context=Qubes issue tracker FAQ: [https://www.qubes-os.org/doc/issue-tracking/#the-issue-tracker-is-not-a-discussion-forum The issue tracker is not a discussion forum]
+|author=Qubes issue tracker FAQ
+|source=[https://www.qubes-os.org/doc/issue-tracking/#the-issue-tracker-is-not-a-discussion-forum The issue tracker is not a discussion forum]
 }}
 
 {{quotation
 |quote=This conversation has been locked and limited to collaborators.
-|context=https://github.com/systemd/systemd systemd] [https://github.com/systemd/systemd/issues issue tracker] <ref>
+|author=https://github.com/systemd/systemd systemd] [https://github.com/systemd/systemd/issues issue tracker] <ref>
 * [https://github.com/systemd/systemd/issues/33349 refuse systemd-tmpfiles --purge invocation without config]
 * [https://github.com/systemd/systemd/issues/33760 Boot hangs due to systemd-networkd-wait-online.service]
 * [https://github.com/systemd/systemd/issues/32028 Reduce dependencies of libsystemd]
@@ -104,7 +105,8 @@ This guideline is important for keeping issues focused on actionable information
 * [https://github.com/systemd/systemd/issues/1741 systemd umounts manual mounts when it has a failed unit for that mount point]
 * [https://github.com/systemd/systemd/issues/2402 Mount efivarfs read-only]
 * [https://github.com/systemd/systemd/issues/1143 PID1 getting stuck printing "Time has been ..."]
-* [https://github.com/systemd/systemd/issues/14897 docs: Consider building the site with GFM instead of Kramdown]
+* [https://github.com/systemd/systemd/issues/14897 docs
+|source=Consider building the site with GFM instead of Kramdown]
 * more tickets for similar projects can be found with the following AI search query: {{CodeSelect|code=
 site:https://github.com/systemd/systemd find links to tickets which are open for discussion by collaborators only
 }}

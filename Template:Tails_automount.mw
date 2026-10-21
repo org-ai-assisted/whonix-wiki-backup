@@ -9,13 +9,13 @@
 <pre>
 automount = true
 </pre>
-|context=https://gitlab.tails.boum.org/tails/tails/-/blob/master/config/chroot_local-includes/etc/dconf/db/local.d/00_Tails_defaults#L24
+|source=https://gitlab.tails.boum.org/tails/tails/-/blob/master/config/chroot_local-includes/etc/dconf/db/local.d/00_Tails_defaults#L24
 }}
 
 {{quotation
 |quote=
 Removable drives auto-mounting is disabled in Tails 0.7 and newer.
-|context=https://tails.boum.org/contribute/design/#index39h3
+|source=https://tails.boum.org/contribute/design/#index39h3
 }}
 
 * https://gitlab.tails.boum.org/tails/tails/-/blob/master/config/chroot_local-includes/etc/dconf/db/local.d/00_Tails_defaults

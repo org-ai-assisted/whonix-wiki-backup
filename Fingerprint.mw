@@ -177,20 +177,20 @@ Passive Operating System identification relies on the fact that each OS's IP imp
 Previously, excellent papers on this topic have been published by both Lance Spitzner and Toby Miller. Both of these papers are excellent; however, they present slightly varied techniques. Currently, there exist two automated tools for doing such analysis: Siphon (which doesn't appear to have been updated in a while) and p0f (which was recently updated). Of these two tools, p0f relies mainly on a combination of IP fields and TCP SYN packet options, while Siphon uses mainly IP-level information such as TTL and Don't Fragment bit. Automating analysis is quite easy with p0f. P0F even detects some not so OS-dependent nuances such as Nmap scans, as follows:
 
 [...]
-|context=[https://www.csd.uoc.gr/~gvasil/old2009/old/stuff/papers/Passive%20Network%20Traffic%20Analysis.pdf Passive Network Traffic Analysis: Understanding a Network Through Passive Monitoring]
+|source=[https://www.csd.uoc.gr/~gvasil/old2009/old/stuff/papers/Passive%20Network%20Traffic%20Analysis.pdf Passive Network Traffic Analysis: Understanding a Network Through Passive Monitoring]
 }}
 
 See also [https://www.sciencedirect.com/topics/computer-science/passive-fingerprinting Passive Fingerprinting].
 
 {{quotation
 |quote=The OS fingerprinting result can be used for tethering detection.
-|context=[https://conferences2.sigcomm.org/imc/2014/papers/p173.pdf OS Fingerprinting and Tethering Detection in Mobile Networks]
+|source=[https://conferences2.sigcomm.org/imc/2014/papers/p173.pdf OS Fingerprinting and Tethering Detection in Mobile Networks]
 }}
 
 {{quotation
 |quote=
 Boot Time: Machine boot time can be inferred from TCP timestamp values in packets sent from that machine. Most OS implementations use a random number as the starting value of TCP timestamps after booting. Hence the estimated boot time is not the real one. However, the value can still quite uniquely identify a machine because different machines have distinct boot times and distinct initial TCP timestamp values [39].
-|context=[https://conferences2.sigcomm.org/imc/2014/papers/p173.pdf OS Fingerprinting and Tethering Detection in Mobile Networks]
+|source=[https://conferences2.sigcomm.org/imc/2014/papers/p173.pdf OS Fingerprinting and Tethering Detection in Mobile Networks]
 }}
 
 (Therefore it is a good idea that Kicksecure's security-misc disables TCP timestamps.)
