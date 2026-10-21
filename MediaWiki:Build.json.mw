@@ -49,9 +49,7 @@
 		"MediaWiki:Header.js",
 		"MediaWiki:Pages.js",
 		"// ===== LocalWiki elements =====",
-		"MediaWiki:LocalPages.js",
-		"// Below depends on: Sitenotice_EndOfYear.js",
-		"// not in use currently: MediaWiki:Sitenotice_EndOfYear_LocalWiki.js"
+		"MediaWiki:LocalPages.js"
 	],
 	"wikicss": [
 		"// ===== MultiWiki elements =====",
