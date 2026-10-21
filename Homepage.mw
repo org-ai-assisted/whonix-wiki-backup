@@ -17,7 +17,9 @@ As handy as an app - delivering maximum anonymity and security.
 
 {{#sloganpills:item=Tor,Anonymity via Tor|item=Whonix-Workstation,Isolated by Design|item=Comparison with Others,Hardened Debian Linux}}
 
-{{#downloadbutton:url=/wiki/Download|text=Download Now}} Learn: [[About|What Is Whonix?]]
+{{#downloadbutton:url=/wiki/Download|text=Download Now}}
+
+Learn: [[About|What Is Whonix?]]
 
 Whonix gives your desktop:
 * '''Maximum privacy and anonymity''' on the Internet
