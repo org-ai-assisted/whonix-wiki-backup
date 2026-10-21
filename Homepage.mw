@@ -1,15 +1,8 @@
 <!--
-WIKI EDITORS NOTE
-
-To edit, see the following pages instead:
-
-https://www.whonix.org/wiki/Widget:Page_Homepage
-
-https://www.whonix.org/wiki/MediaWiki:Page_Homepage.css
-
-Documentation:
-
-https://www.whonix.org/wiki/Dev/mediawiki#Homepage_(/wiki/Homepage)
+Whonix homepage source. The page BODY below is the homepage content
+(authored here, served by mw-static-generator as a normal page). Production's
+Widget:Page_Homepage is not reproduced -- edits land here until cutover.
+ASCII only.
 -->{{Header}} {{Title|title=
 {{project_name_short}} - Superior Internet Privacy
 }} {{#seo:
@@ -17,5 +10,136 @@ https://www.whonix.org/wiki/Dev/mediawiki#Homepage_(/wiki/Homepage)
 |description={{project_name_long}} can anonymize everything you do online! It runs like an App, is a Free, Open Source and {{Kicksecure}} hardened Linux distribution.
 |image=Whonix-homepage-main-preview.jpg
 }}
-{{#pagehomepage:}}   {{hide_all_banners}}
+   {{hide_all_banners}}
+{{hide_all_banners}}
+'''Superior Internet Privacy with Whonix'''
+
+As handy as an app - delivering maximum anonymity and security.
+
+[[Download|Download Now]] - Learn: [[About|What Is Whonix?]]
+
+Whonix gives your desktop:
+* '''Maximum privacy and anonymity''' on the Internet
+* '''Greater reliability and security''' than any other tool on the market!
+
+<span id="download"></span>
+== Download, Install, Run - [[Reasons for Freedom Software|100% FREE]] ==
+Whonix runs like an app inside your operating system, keeping you safe and anonymous. Whonix is available for:
+* [[VirtualBox|Windows]]
+* [[Linux]]
+* [[MacOS|macOS]]
+* [[Qubes]]
+* [[KVM]]
+* [[Whonix on USB|On USB]]
+* [[Whonix-Host|ISO (Coming Soon)]]
+
+<span id="vpn"></span>
+== Is Whonix '''safer''' than VPNs? ==
+{| class="wikitable comparison-vpn"
+|-
+! Feature !! Whonix !! VPNs
+|-
+| Hidden IP address (basic) <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Your IP address acts as a global unique identifier which is linked to your real identity. Any website or server you are connecting to knows your IP address. Most Internet Service Providers (ISPs) keep a log of IP addresses assigned to you and when you used them. The IP address reveals your approximate physical location to any destination you connect to.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span>
+|-
+| Hidden Identity <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Even if your IP is hidden, trackers can use "Fingerprinting" techniques to identify you. Hiding your identity is harder than just hiding your IP! Whonix protects from browser fingerprinting, and website traffic fingerprinting.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || <span class="cmp-no"><i class="fa-solid fa-xmark" aria-hidden="true"></i> No</span>
+|-
+| No Logging <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Whonix cannot log user IP addresses or activity. This is due to a fundamental architecture design decision to keep maximum user privacy. Most VPNs have a policy of not storing any user data. But if they were forced to do so, they could start storing user data easily.</span></span> || By Design || By Policy
+|-
+| Leak Shield <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Even if a connection is tunneled, it can be hijacked inside the browser. One leaky connection already compromises the user's anonymity. Whonix has a watertight leak shield. Some VPN providers also have a fail-closed mechanism, however the quality varies very much and fails against malware.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || Limited
+|-
+| Server Relays avg. <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>The servers used for tunneling MUST NOT know the user. This is only possible if there are multiple and independent servers as relays on a strict need-to-know basis and onion-layered encryption. Some VPN providers provide double VPN but it's still the same provider and lacks distributed trust by design.</span></span> || 3 || 1
+|-
+| Virus / Malware Protection <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>A malware (virus) free system is crucial because a lot of malware steals the user's data and identity. Whonix is based on Kicksecure, a hardened, well documented Linux so the user is already safer. Some VPN subscriptions contain anti-malware scanners but their capability is limited. A better approach is to prevent any malware from entering the system through security hardening and knowledge.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || Some
+|-
+| Keyboard Typing Cloak <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Trackers can identify their targets by their keyboard typing style. Whonix prevents this kind of attack.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || <span class="cmp-no"><i class="fa-solid fa-xmark" aria-hidden="true"></i> No</span>
+|-
+| Timestamp Attack Protection <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Trackers can identify their targets by minimal divergence from the standard time in the network requests called time attacks. Whonix prevents this kind of attack.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || <span class="cmp-no"><i class="fa-solid fa-xmark" aria-hidden="true"></i> No</span>
+|-
+| App Stream Isolation <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>In Whonix distinct pre-installed applications are routed through different network paths for maximum security.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || <span class="cmp-no"><i class="fa-solid fa-xmark" aria-hidden="true"></i> No</span>
+|-
+| Open Source / Freedom <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Whonix has a full dedication to Open Source and Freedom Software. Only some VPNs have open source elements and even less are fully Open Source.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || Some
+|-
+| Pricing || FREE or Donation || $5 - $20 per month
+|}
+
+[[Download|Download Whonix now!]] - Learn More: [[Whonix versus VPNs]]
+
+<span id="press"></span>
+== Trusted by Security Experts ==
+* "For the even more paranoid, there is a lesser-known Tor-enabled OS called Whonix" -- [https://www.wired.com/2014/06/be-anonymous-online Wired] ([https://web.archive.org/web/20140617105809/https://www.wired.com/2014/06/be-anonymous-online archived])
+* "I use Qubes and a Whonix gateway literally everyday." -- [[Edward Snowden on Whonix|Edward Snowden]]
+* "Whonix adds a layer of anonymity to your business tasks." -- [https://web.archive.org/web/20210826075611/https://www.techrepublic.com/blog/smb-technologist/whonix-adds-a-layer-of-anonymity-to-your-business-tasks/ TechRepublic]
+* "Whonix is about as anonymous as an OS can get before it all becomes too inconvenient for normal use." -- [https://www.theguardian.com/technology/2015/mar/06/tips-tricks-anonymous-privacy The Guardian] ([https://web.archive.org/web/20150311120654/https://www.theguardian.com/technology/2015/mar/06/tips-tricks-anonymous-privacy archived])
+* "All of our staff are aware that, for anything privacy critical, Whonix is our go-to solution. Anybody who takes privacy seriously should have a Whonix VM at least." -- [https://evolution-host.com/ Evolution Host]
+* "Whonix, an operating system you can run in a virtual machine to maximize your online anonymity; it's ideal for maintaining a secret identity." -- [https://theintercept.com/2015/09/16/getting-hacked-doesnt-bad/ The Intercept] ([https://web.archive.org/web/20200704100018if_/https://theintercept.com/2015/09/16/getting-hacked-doesnt-bad/ archived])
+* "Das linux-basierte Betriebssystem Whonix setzt von Anfang an auf Sicherheit." -- [https://www.chip.de/news/Whonix-bringt-Linux-Sicherheit-auf-Windows_151415693.html CHIP] ([https://web.archive.org/web/2019*/https://www.chip.de/news/Whonix-bringt-Linux-Sicherheit-auf-Windows_151415693.html archived])
+* "Whonix protects user anonymity by routing internet connections through Tor's network." -- [https://www.hostingadvice.com/blog/whonix-os-is-preserving-internet-anonymity/ HostingAdvice.com]
+* "Tarnkappe - Mit Whonix anonym im Internet surfen" -- [https://www.heise.de/select/ct/2019/15/1563112584099766 c't] ([https://web.archive.org/web/20200321060503/https://www.heise.de/select/ct/2019/15/1563112584099766 archived])
+* "Viele Webseiten verfolgen ihre Besucher mit ausgekluegelten Trackingmechanismen. Whonix macht Schluss damit, ohne dass man Browser-Einstellungen aendern muss." -- [https://www.heise.de/ratgeber/Mit-Whonix-anonym-im-Internet-surfen-4460100.html Heise Online] ([https://web.archive.org/web/20200321060403/https://www.heise.de/ratgeber/Mit-Whonix-anonym-im-Internet-surfen-4460100.html archived])
+* "The Internet was not designed with anonymity in mind, but things have changed. Anonymity has become a necessary and legitimate objective in many applications." -- [https://cybersecurity.att.com/blogs/security-essentials/how-does-whonix-make-kali-linux-anonymous-how-to-prevent-it AT&T] ([https://web.archive.org/web/20200301165306/https://cybersecurity.att.com/blogs/security-essentials/how-does-whonix-make-kali-linux-anonymous-how-to-prevent-it archived])
+* "This split design allows the user to remain completely anonymous and mitigates the risk of DNS leaks, which reveal private information such as your web browsing history." -- [https://linuxsecurity.com/features/features/7-best-linux-distros-for-security-and-privacy-in-2020 LinuxSecurity.com] ([https://web.archive.org/web/20200701181129/https://linuxsecurity.com/features/features/7-best-linux-distros-for-security-and-privacy-in-2020 archived])
+
+<span id="explain"></span>
+== Watertight Privacy Architecture ==
+Whonix handles all your activity in a virtual machine, forcing all Internet traffic through the [[Why does Whonix use Tor|Tor network]], providing [[Reliable IP Hiding|reliable IP hiding]] and the strongest protection for your [[Data Collection Techniques#IP Address|IP address]].
+
+<span id="security"></span>
+== Fully Featured with Advanced Security Components ==
+* [[About#Full Spectrum Anti-Tracking Protection|Elite Spy Defense]] -- Hiding your identity is harder than just hiding your IP. Whonix provides full spectrum anti-tracking protection.
+* [[Why does Whonix use Tor|Maximum Anonymity]] -- Whonix provides maximum anonymity by design, using the best privacy technologies and research.
+* [[History|12 Years of Success]] -- For over 12 years we have successfully protected our users from everyday trackers and even from high level attacks. And we're just getting started!
+* [https://www.kicksecure.com/ Cyber Security Best Practices] -- You can't be anonymous without being secure. The security hardened operating system Kicksecure is the core of Whonix.
+* [[About#Whonix Architecture|Bulletproof IP protection]] -- Whonix has powerful protection measures against trackers, malware and many more attack vectors trying to get your IP address.
+* [[Keystroke and Mouse Deanonymization|Cloaking your typing style]] -- Your typing behavior can be used to identify you. Whonix prevents this with a cloak for your keystrokes.
+* [[Dev/TimeSync|Timing Fingerprinting Defense]] -- Sophisticated attackers can identify you by the milliseconds that your system clock deviates from standard time. Whonix enhances user anonymity by preventing timing-based fingerprinting through Boot Clock Randomization and secure network time synchronization with sdwdate.
+* [[Keystroke and Mouse Deanonymization#Mouse Fingerprinting|Mouse Movement Anonymization]] -- Websites can covertly track mouse movements to identify users. Whonix has built-in systems to re-anonymize your mouse movements.
+* [[Why does Whonix use Tor#Organisational Separation|Not even WE know]] -- Whonix has a strong organisational separation which means: Even we do not have access to IP connection logs!
+* [[Why does Whonix use Tor|The Everything Tor OS]] -- All traffic is routed through the Tor anonymity network. No exceptions. Whonix is the "All Tor Operating System".
+* [[Protocol-Leak-Protection and Fingerprinting-Protection|Virtualizer friendly]] -- Since Whonix runs in a virtualizer it provides an abstraction layer from the host operating system. This hides hardware serial numbers and prevents host file leaks.
+* [[Hosting Location Hidden Services|Anonymous Web Server]] -- Anonymously hosting a web server such as nginx is extremely difficult. With Whonix it's possible to host an IP hidden server, even for clearnet access!
+* [[Tor Browser]] -- Tor Browser is optimized for anonymity, provides protection from browser fingerprinting. And millions of daily users help you blend in with the crowd. Anonymity loves company.
+* [[Forcing .onion on Project|Onion Website for Improved Anonymity]] -- Our website offers an onion service option to better protect user anonymity by bypassing traditional DNS and reducing reliance on standard TLS infrastructure.
+* [[Why does Whonix use Tor|Stream Isolation]] -- Distinct applications are isolated and routed through different paths in the network.
+* [https://github.com/Whonix/anon-apps-config Strong Anonymity, privacy and security settings] -- Well researched and tested privacy and security settings improve your anonymity against known attacks.
+* [[Documentation|Comprehensive Anonymity Documentation and Guides]] -- Anonymity thrives on awareness: Whonix provides detailed documentation to help users protect their identities and privacy and minimize online traces.
+* [https://forums.whonix.org Vibrant Community] -- Our vibrant Whonix community features forums, contributors and RSS.
+* [https://github.com/Kicksecure/tirdad CPU Fingerprinting Resistance (TCP ISN Randomization)] -- Without TCP ISN randomization, patterns in outgoing traffic can reveal unique characteristics of a system's CPU, compromising user anonymity. Tirdad helps maintain system anonymity by masking these signals.
+* [[Hosting Location Hidden Services|Hosting Location Hidden Servers]] -- Whonix is the safest way to host Location Hidden Services / Onion Services.
+* [[Tor-ctrl-observer|Tor Connection Destination Viewer (tor-ctrl-observer)]] -- tor-ctrl-observer shows connection information of applications using Tor.
+
+== Applications that are reviewed and pre-configured in Whonix ==
+* [[Tor Browser]]
+* [[OnionShare]]
+* [[Encrypted Email with Thunderbird and Enigmail|Thunderbird]]
+* [[Passwords|KeePassXC]]
+* [[Software#Media Player|VLC]]
+* [[Software#Terminal|Terminal]]
+* [[Electrum]]
+* [[Bitcoin]]
+* [[Monero]]
+
+<span id="values"></span>
+== Freedom Values ==
+* [https://github.com/Whonix Open Source] -- We respect user rights to review, scrutinize, modify, and redistribute Whonix. This improves security and privacy for everyone.
+* [[Reasons for Freedom Software|Freedom Software]] -- Whonix is Freedom Software and contains software developed by the Free Software Foundation and the GNU Project.
+* [[What we do|Research and Implementation Project]] -- Whonix is an actively maintained research project making constant improvements; no shortcomings are ever hidden from users.
+* [[Reasons for Freedom Software|Fully Auditable]] -- Whonix is independently verifiable by security experts and software developers around the world. This improves security and privacy for everyone.
+* [[Deep scan ready|Deep Scan Ready]] -- Whonix supports offline inspection so you can verify storage and boot components from a clean external environment, without trusting the running system.
+* [[Reasons for Freedom Software#No Intentional User Freedom Restrictions|Complete respect for privacy and user freedom]] -- Whonix respects data privacy principles. We don't make advertising deals or collect sensitive personal data.
+
+<span id="upcoming"></span>
+== Upcoming Security Enhancements ==
+* [[Sandbox-app-launcher|sandbox-app-launcher]] -- sandbox-app-launcher is an application launcher that can start each application inside its own restrictive sandbox. Each application runs as its own user, in a bubblewrap sandbox and confined by AppArmor.
+* [[Apparmor-profile-everything|Full system Mandatory Access Control (MAC)]] -- Full system Mandatory Access Control (MAC) policy - "AppArmor for everything".
+* [https://forums.whonix.org/t/untrusted-root-does-it-make-sense-to-try-to-improve-security-by-restricting-root/7998 Untrusted Root User] -- Restrict root to reduce the impact of compromise.
+* [[Dev/VirusForget|Deactivate malware after reboot]] -- Deactivate malware after reboot from non-root compromise.
+* [https://github.com/Kicksecure/hardened-kernel Hardened Linux Kernel] -- Hardened Linux Kernel.
+* [https://forums.whonix.org/t/use-codecrypt-to-sign-whonix-releases/7844/2 Post-quantum resistance] -- Post-quantum resistant signing of releases.
+* [https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707 Mount Options Hardening] -- Mount Options Hardening.
+* [https://forums.whonix.org/t/multiple-boot-modes-for-better-security-persistent-root-persistent-noroot-live-root-live-noroot/7708 Multiple boot modes] -- Multiple boot modes for better security (user, live, secureadmin and superadmin).
+
+<span id="contribute"></span>
+== Join the team! ==
+'''Your help is very welcome!''' As a patron, as a multiplier or even as a contributor!
+* [[Contribute]]
 {{Footer}}
