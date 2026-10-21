@@ -357,7 +357,7 @@ You can follow the Whonix forum thread related to this guide:
 Snowflake is: <ref>
 https://gitlab.torproject.org/legacy/trac/-/wikis/doc/Snowflake
 </ref>
-<blockquote>...a [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/PluggableTransports pluggable transport] that proxies traffic through temporary proxies using &#8203;[https://webrtc.org/ WebRTC], a peer-to-peer protocol with built-in NAT punching. It aims to work kind of like flash proxy, but without flash proxy's problems with NAT.</blockquote>
+<blockquote>...a [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/PluggableTransports pluggable transport] that proxies traffic through temporary proxies using [https://webrtc.org/ WebRTC], a peer-to-peer protocol with built-in NAT punching. It aims to work kind of like flash proxy, but without flash proxy's problems with NAT.</blockquote>
 
 === Setup Snowflake ===
 
