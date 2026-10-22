@@ -1,4 +1,13 @@
-<noinclude>{{Header}}</noinclude>{{#if: {{#ifeq:{{{version_type}}}|testers|{{#ifeq:{{VersionTesters}}|{{VersionNew}}|1}}}}|There's currently no testers version available.|<div class="download-wrapper">
+<noinclude>
+{{Header}}
+</noinclude>
+{{#if:
+<!-- no distinct testers version (VersionTesters == VersionNew) -> collapse the testers tab -->
+{{#ifeq: {{{version_type}}} | testers
+| {{#ifeq: {{VersionTesters}} | {{VersionNew}} | 1 }}<!-- close inner #ifeq: testers==stable -->
+}}<!-- close outer #ifeq: version_type==testers -->
+| There's currently no testers version available.
+| <div class="download-wrapper">
 {{#downloadbutton:text=Download {{{project_name}}} {{{flavor}}} ({{{os_name}}}) ({{{version_type}}}) (FREE!)
  |url=/download/{{{after_slash}}}/{{{version}}}/{{{project_name}}}-{{{flavor}}}-{{{version}}}.{{{extension}}}
  |os={{{os_keyword}}}
@@ -75,7 +84,9 @@
 
 </div>
 </div>
-</div>}}<noinclude>
+</div><!-- close div.download-wrapper -->
+}}<!-- close #if: collapse testers tab when testers == stable -->
+<noinclude>
 [[Category:MultiWiki]]
 <references />
 {{Footer}}
