@@ -13,38 +13,41 @@ Detecting {{project_name_short}} version number using API.
 = API Stability =
 There is no API version number and not even non-binding guarantees about API stability are being made.
 
-For example for the VirtualBox stable version number {{project_name_short}}, [[Template:VersionNew]] was used earlier anyhow prior any request for any API functions has been made. Making that version information available through an easy to parse way is pretty simple thanks to mediawiki index.php already built-in function action=raw.
+For example the {{project_name_short}} stable version number comes from [[Template:VersionNew]], which existed anyhow prior to any API request.
 
 = API Completeness =
-Other information might be already available (since the wiki or forum software has these features anyhow). Please ask in forums.
+Other information might already be available (since the wiki or forum software has these features anyhow). Please ask in forums.
 
-= VirtualBox Stable Version Number =
+= API v2 =
+Recommended. Clean endpoints that return the bare value only, with nothing to strip:
+
+* stable version number: <code>/wiki/api/version-stable</code>
+* testers version number: <code>/wiki/api/version-testers</code>
+* onion domain: <code>/wiki/api/www-onion</code>
+* clearnet domain: <code>/wiki/api/www-clearnet</code>
+
+= API v1 =
+Legacy. MediaWiki <code>action=raw</code> endpoints. Their result has a trailing <code><nowiki><noinclude>[[Category:MultiWiki]]</noinclude></nowiki></code> which must be searched and replaced with nothing; API v2 above avoids this.
+
+== VirtualBox Stable Version Number ==
 * https://www.{{project_clearnet}}/w/index.php?title=Template:VersionNew&stable=0&action=raw
 * http://www.{{project_onion}}/w/index.php?title=Template:VersionNew&stable=0&action=raw
 
-= VirtualBox Testers-Only Version Number =
+== VirtualBox Testers-Only Version Number ==
 * https://www.{{project_clearnet}}/w/index.php?title=Template:VersionTesters&stable=0&action=raw
 * http://www.{{project_onion}}/w/index.php?title=Template:VersionTesters&stable=0&action=raw
 
-= KVM Stable Version Number =
+== KVM Stable Version Number ==
 * https://www.{{project_clearnet}}/w/index.php?title=Template:Version_KVM&stable=0&action=raw
 * http://www.{{project_onion}}/w/index.php?title=Template:Version_KVM&stable=0&action=raw
 
-= Onion-Location =
-The onion domain for <code>{{project_clearnet}}</code> can be found here:
+== Onion-Location ==
+The onion domain for <code>{{project_clearnet}}</code>:
+* https://www.{{project_clearnet}}/w/index.php?title=Template:Project_onion&action=raw
+* http://www.{{project_onion}}/w/index.php?title=Template:Project_onion&action=raw
 
-{{ExtLink
-|text=raw
-|1=https://www.{{project_clearnet}}/w/index.php?title=Template:Project_onion&action=raw
-|2=http://www.{{project_onion}}/w/index.php?title=Template:Project_onion&action=raw
-}}
-
-= API Issues =
-You need to search the following string and replace it with nothing (<code>""</code>).
-
-<pre>
-<noinclude>[[Category:MultiWiki]]</noinclude>
-</pre>
+= Note =
+This is not a real (dynamic) API. The API v2 endpoints are plain static files generated at build time from the wiki version templates; they change only when the website is rebuilt.
 
 {{Footer}}
 [[Category:Documentation]]
