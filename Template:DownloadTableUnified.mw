@@ -1,5 +1,4 @@
-<noinclude>{{Header}}</noinclude>
-<div class="download-wrapper">
+<noinclude>{{Header}}</noinclude>{{#if: {{#ifeq:{{{version_type}}}|testers|{{#ifeq:{{VersionTesters}}|{{VersionNew}}|1}}}}|There's currently no testers version available.|<div class="download-wrapper">
 {{#downloadbutton:text=Download {{{project_name}}} {{{flavor}}} ({{{os_name}}}) ({{{version_type}}}) (FREE!)
  |url=/download/{{{after_slash}}}/{{{version}}}/{{{project_name}}}-{{{flavor}}}-{{{version}}}.{{{extension}}}
  |os={{{os_keyword}}}
@@ -76,7 +75,7 @@
 
 </div>
 </div>
-</div><noinclude>
+</div>}}<noinclude>
 [[Category:MultiWiki]]
 <references />
 {{Footer}}
