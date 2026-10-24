@@ -44,7 +44,7 @@ The following table summarizes known (speculative) Tor attacks and the specific 
 |-
 ! P2P Information Leakage
 | Client
-| '''Note:''' this vector does not affect Whonix; see [[File_Sharing#Please_limit.21|here]]. Connections to peer-to-peer systems are exploited to retrieve the IP address of the client. For example, adversaries can retrieve the IP address of clients connecting over Tor with the BitTorrent protocol when they communicate with the torrent tracker. <ref>Torrent trackers retrieve information about peers who can share the requested resource, that is, IP address and listening port.</ref> While tracker lists can be retrieved anonymously over Tor, the actual P2P connection is not -- meaning a MitM attack on this connection can redirect to a list that includes the IP address of a malicious torrent peer. This means the IP address of the client that originated the tracker request (over Tor) can be retrieved.
+| '''Note:''' this vector does not affect Whonix; see [[File_Sharing#Recommendations|here]]. Connections to peer-to-peer systems are exploited to retrieve the IP address of the client. For example, adversaries can retrieve the IP address of clients connecting over Tor with the BitTorrent protocol when they communicate with the torrent tracker. <ref>Torrent trackers retrieve information about peers who can share the requested resource, that is, IP address and listening port.</ref> While tracker lists can be retrieved anonymously over Tor, the actual P2P connection is not -- meaning a MitM attack on this connection can redirect to a list that includes the IP address of a malicious torrent peer. This means the IP address of the client that originated the tracker request (over Tor) can be retrieved.
 |-
 ! Plug-in based Attacks
 | Client

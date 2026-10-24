@@ -24,7 +24,7 @@ Architecture specific packages in {{project_name_short}}. "Special packages". So
 = Incomplete Ports of {{project_name_short}} =
 == Raspberry Pi - RPi ==
 [[File:raspberry-pi-logo.svg|thumb|50px]]
-* [https://forums.whonix.org/t/whonix-for-arm64-raspberry-pi-rpi-duplicate-forum-topic/1788 Whonix for <code>arm64</code> / Raspberry Pi ( RPi )] ([[Dev/Build_Documentation/Physical_Isolation#How_To_Install_Whonix-Gateway_on_the_Raspberry_Pi_3_B_.28RPI3.29|wiki]]) ([[unsupported]]) See also [[Raspberry_Pi|Raspberry Pi (RPi)]].
+* [https://forums.whonix.org/t/whonix-for-arm64-raspberry-pi-rpi-duplicate-forum-topic/1788 Whonix for <code>arm64</code> / Raspberry Pi ( RPi )] ([[Dev/Build_Documentation/Physical_Isolation#Raspberry Pi|wiki]]) ([[unsupported]]) See also [[Raspberry_Pi|Raspberry Pi (RPi)]].
 
 == Apple Silicon ==
 [[File:Apple-mx-logo.jpg|thumb|50px]]

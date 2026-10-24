@@ -2397,7 +2397,7 @@ Verify that the 'libvirtd' daemon is running.
 Libvirt URI is: qemu:///system
 </pre>
 
-Make sure you have [[KVM#Addgroup|added the groups]] and [[KVM#Reboot|rebooted]].
+Make sure you have [[KVM#Addgroup|added the groups]] and [[KVM#Reboot Checklist|rebooted]].
 
 == Unable to open a connection to the libvirt management daemon ==
 
@@ -2540,7 +2540,7 @@ sudo adduser "$(whoami)" kvm
 then it will fail because <code>$(whoami)</code> will expand to <code>root</code>, not your regular account name. This means the required groups will not be added to your user account.
 </ref>
 
-If these groups are missing, ensure you have [[KVM#Addgroup|added groups]] and then [[KVM#Reboot|rebooted]] the system.
+If these groups are missing, ensure you have [[KVM#Addgroup|added groups]] and then [[KVM#Reboot Checklist|rebooted]] the system.
 
 == Sound ==
 No audio inside VM? Try unmuting and increasing the volume.

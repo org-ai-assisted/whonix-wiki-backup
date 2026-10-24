@@ -25,7 +25,7 @@ The following points are not listed by priority, only for reference. '''These ar
 # Must be Freedom Software / Open Source.
 # Must not pose a major security risk.
 # Must not perform network activity when the application is not in use.
-# Installing or modifying the application must not overshadow discussions about {{project_name_short}} with controversies related to that application. (Example: [[FAQ#Does_{{project_name_short}}_Modify_Tor.3F|No Tor modifications.]])
+# Installing or modifying the application must not overshadow discussions about {{project_name_short}} with controversies related to that application. (Example: [[Tor#Does {{project_name_short}} Modify Tor?|No Tor modifications.]])
 # Its default inclusion in {{project_name_short}} must not cause serious issues with The Tor Project.
 
 === Less important, hopefully mostly objective, requirements: ===

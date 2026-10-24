@@ -86,7 +86,7 @@ Compatibility, it looks like everyone supports it: https://www.w3schools.com/tag
 
 No javascript required.
 
-{{project_name_short}} can run on top of many host operating systems (Windows, Linux, Mac, Qubes and more). {{project_name_short}} [[Pre_Install_Advice#Which_host_operating_system_do_you_recommend.3F|recommends]] Debian Wheezy. ([[#TODO|More Options]])
+{{project_name_short}} can run on top of many host operating systems (Windows, Linux, Mac, Qubes and more). {{project_name_short}} [[Pre_Install_Advice|recommends]] Debian Wheezy. ([[#TODO|More Options]])
 
 <pre>
 <html>
