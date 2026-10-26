@@ -44,7 +44,7 @@ Whonix gives your desktop:
 
 <span id="vpn"></span>
 == Is Whonix '''safer''' than VPNs? ==
-{| class="wikitable comparison-vpn"
+{| class="wikitable comparison-table"
 |-
 ! Feature !! Whonix !! VPNs
 |-
