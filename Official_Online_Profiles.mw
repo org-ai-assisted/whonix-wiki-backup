@@ -27,7 +27,7 @@ If users can safely share {{project_name_short}} information or positive experie
 ** [https://t.me/s/{{project_name_short}} {{project_name_short}} Telegram News Channel]
 ** [https://t.me/{{project_name_short}}_Chat_No_Media {{project_name_short}} Project Chat (everyone, limited)] ([[Project_Chat|inactive, read-only]])
 ** [https://t.me/{{project_name_short}}_Chat {{project_name_short}} Project Chat (posting links and screenshots allowed)] ([[Project_Chat|inactive, read-only]])
-* [[File:Matrix_logo.svg.png|50px|link=https://matrix.to/#/#{{project_name_short}}:{{project_matrix_server}}]] [https://matrix.to/#/#{{project_name_short}}:{{project_matrix_server}} {{project_name_short}} Matrix Channel] ([[Project_Chat|inactive, read-only]])
+* [[File:Matrix_logo.svg.png|50px|link=https://matrix.to/#/%23{{project_name_short}}:{{project_matrix_server}}]] [https://matrix.to/#/%23{{project_name_short}}:{{project_matrix_server}} {{project_name_short}} Matrix Channel] ([[Project_Chat|inactive, read-only]])
 ** See [[Project Chat]] for reasons.
 
 == Social Media Accounts == 

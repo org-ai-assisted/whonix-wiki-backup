@@ -696,7 +696,7 @@ Flatpak or the Flathub.org web interface currently does not show if Flatpaks are
 |-
 | [https://flathub.org/apps/details/com.vscodium.codium <code>{{nowrap|VSCodium}}</code>] || {{nowrap|<code>VSCodium</code>}} || <code>by {{nowrap|Peter}} {{nowrap|Squicciarini}}</code> || medium (missing unverified mark) || Third-party || [https://github.com/flathub/com.vscodium.codium/blob/master/com.vscodium.codium.yaml link] || Non-Official || Freedom || Binary
 |-
-| [https://flathub.org/apps/details/org.mozilla.firefox <code>{{nowrap|Firefox}}] || {{nowrap|<code>Mozilla</code>}} || <code>by {{nowrap|Mozilla}}</code> || none (verified mark) || Mozilla || [https://hg.mozilla.org/mozilla-central/file/tip/taskcluster/docker/firefox-flatpak/runme.sh link] || Official || Freedom || Binary
+| [https://flathub.org/apps/details/org.mozilla.firefox <code>{{nowrap|Firefox}}</code>] || {{nowrap|<code>Mozilla</code>}} || <code>by {{nowrap|Mozilla}}</code> || none (verified mark) || Mozilla || [https://hg.mozilla.org/mozilla-central/file/tip/taskcluster/docker/firefox-flatpak/runme.sh link] || Official || Freedom || Binary
 |}
 
 <div class="toccolours mw-collapsible mw-collapsed">

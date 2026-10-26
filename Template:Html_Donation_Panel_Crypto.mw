@@ -95,7 +95,7 @@
         </div>
 
         <div class="expand">
-          <img class="qr-code-image" src="{{Pay_ethereum_qr_imgurl}}" />
+          <img class="qr-code-image" src="{{Pay_ethereum_qr_imgurl}}" alt="Donate Ethereum (ETH) QR Code" />
           <div><a href="ethereum:{{Pay_Ethereum}}">Address for all Ethereum (ETH) ERC-20 tokens, e.g. USDC | USDT | DAI and more</a></div>
           <code>{{Pay_Ethereum}}</code>
         </div>
