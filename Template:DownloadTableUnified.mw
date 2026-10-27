@@ -18,7 +18,7 @@
 <div class="toccolours mw-collapsible mw-collapsed" data-expandtext="Learn More" data-collapsetext="Show Less">
 <u>Optional:</u> Digital signature verification.
 <div class="mw-collapsible-content">
-<big>Version (<u>{{{version_type}}}</u>): <span style="color: green">{{{version}}}</span></big>
+'''Version (<u>{{{version_type}}}</u>): <span style="color: green">{{{version}}}</span>'''
 
 <u>Only experienced users:</u> This step is only useful and recommended for very experienced users. All other users please skip this step.
 

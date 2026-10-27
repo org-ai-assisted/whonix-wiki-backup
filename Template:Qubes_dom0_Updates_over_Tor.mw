@@ -16,4 +16,4 @@ qubes-prefs updatevm sys-firewall
 }}
 </ref>
 
-* <code>Qubes Manager</code> &rarr; <code><u>S</u>ystem</code> &rarr; <code><u>G</u>lobal Settings</code> &rarr; <code>Dom0 UpdateVM:</code> <code>sys-firewall</code></code> &rarr; <code>OK</code>
+* <code>Qubes Manager</code> &rarr; <code><u>S</u>ystem</code> &rarr; <code><u>G</u>lobal Settings</code> &rarr; <code>Dom0 UpdateVM:</code> <code>sys-firewall</code> &rarr; <code>OK</code>

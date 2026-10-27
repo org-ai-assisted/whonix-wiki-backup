@@ -19,46 +19,46 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 First, let us quickly consider all the possible threats we could face. We can categorize threats against computer systems into five categories:
 
-; 1. '''Non-technical/non-computer-based and legal attacks'''
-:* Examples include:
-::* "Rubber hose cryptanalysis"
-::* Mandatory key disclosure
-::* Subpoenas
-::* Real detective work/espionage (done by real humans, not bots)
-::* Bugs
-::* Surveillance cameras
+* '''1. Non-technical/non-computer-based and legal attacks'''
+** Examples include:
+*** "Rubber hose cryptanalysis"
+*** Mandatory key disclosure
+*** Subpoenas
+*** Real detective work/espionage (done by real humans, not bots)
+*** Bugs
+*** Surveillance cameras
 
-; 2. '''Hardware attacks through physical access'''
-:* Examples include:
-::* RAM and hard disk forensics
-::* Keyloggers
-::* TEMPEST
-::* Evil Maid attacks
+* '''2. Hardware attacks through physical access'''
+** Examples include:
+*** RAM and hard disk forensics
+*** Keyloggers
+*** TEMPEST
+*** Evil Maid attacks
 
-; 3. '''Backdoors'''
-:* Intentional weaknesses or additional hidden "functionality" inserted into your system by a manufacturer, vendor, or distributor (hardware or software), allowing remote access<sup>1</sup>.
-:* These can be introduced anywhere from:
-::* Design/source code
-::* Manufacturing/compilation
-::* Distribution
-;;* Learn more about {{kicksecure_wiki
+* '''3. Backdoors'''
+** Intentional weaknesses or additional hidden "functionality" inserted into your system by a manufacturer, vendor, or distributor (hardware or software), allowing remote access<sup>1</sup>.
+** These can be introduced anywhere from:
+*** Design/source code
+*** Manufacturing/compilation
+*** Distribution
+*** Learn more about {{kicksecure_wiki
 |wikipage=Malware_and_Firmware_Trojans#Backdoors
 |text=Backdoors
 }}.
 
-; 4. '''Vulnerabilities'''
-:* Coding or hardware design errors that can be exploited to gain remote access.<ref>Used in the broadest sense, vulnerabilities can manifest as remote code execution, privilege escalation, DoS, etc. Essentially, they all allow remote parties to send your system instructions that diverge from the established security policy.</ref>
-:* In practice, vulnerabilities and backdoors can appear identical; only their methods of creation differ.
+* '''4. Vulnerabilities'''
+** Coding or hardware design errors that can be exploited to gain remote access.<ref>Used in the broadest sense, vulnerabilities can manifest as remote code execution, privilege escalation, DoS, etc. Essentially, they all allow remote parties to send your system instructions that diverge from the established security policy.</ref>
+** In practice, vulnerabilities and backdoors can appear identical; only their methods of creation differ.
 
-; 5. '''Design flaws'''
-:* Even in a system free of backdoors and errors, with perfect physical and legal protection (which does not exist in reality), achieving perfect security may still be elusive.
-:* This is particularly true for anonymity systems.
-::* While perfect cryptographic design exists (the one-time pad), anonymity is not binary.
-::* You are not simply anonymous or not; you possess some non-zero but imperfect degree of anonymity.
-::* Your anonymity hinges on blending in with others.
-::* Anonymity networks necessitate trust and a sizable, diverse user base.
-::* A perfectly secure system would not rely on trust in others or on such external factors.
-::* Every complex (yet still usable) system design (all computer systems are complex) involves trade-offs. That is why the majority employ imperfect cryptography instead of the one-time pad...
+* '''5. Design flaws'''
+** Even in a system free of backdoors and errors, with perfect physical and legal protection (which does not exist in reality), achieving perfect security may still be elusive.
+** This is particularly true for anonymity systems.
+*** While perfect cryptographic design exists (the one-time pad), anonymity is not binary.
+*** You are not simply anonymous or not; you possess some non-zero but imperfect degree of anonymity.
+*** Your anonymity hinges on blending in with others.
+*** Anonymity networks necessitate trust and a sizable, diverse user base.
+*** A perfectly secure system would not rely on trust in others or on such external factors.
+*** Every complex (yet still usable) system design (all computer systems are complex) involves trade-offs. That is why the majority employ imperfect cryptography instead of the one-time pad...
 
 Lastly, it is worth noting that the bug mentioned in [https://gitlab.torproject.org/legacy/trac/-/issues/5928 Research: IP discovery through Tor behind isolated network] seems to primarily concern determining the IP address a Tor client uses to connect to the Internet. It does not touch upon other types of information leakage.
 

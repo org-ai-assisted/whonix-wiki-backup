@@ -245,6 +245,7 @@ objdump -d hello
 }}
 
 '''5.''' Exercise for the reader: disassemble <code>hello</code> and re-assemble.
+}}
 </ref> <ref>
 The [https://en.wikipedia.org/wiki/GNU_Hello GNU Hello] program source file [https://git.savannah.gnu.org/cgit/hello.git/tree/src/hello.c <code>hello.c</code>] at the time of writing contains <code>170</code> lines. The <code>objdump -d /usr/bin/hello</code> on Debian buster has <code>2757</code> lines.
 
@@ -259,7 +260,6 @@ objdump -d /usr/bin/hello | wc -l
 <pre>
 2757
 </pre>
-}}
 </ref> <ref>
 For example, consider how difficult it was to reverse engineer Skype: [https://web.archive.org/web/20230330171636/https://www.oklabs.net/skype-reverse-engineering-the-long-journey/ Skype Reverse Engineering : The (long) journey ;)..]
 </ref> <ref>

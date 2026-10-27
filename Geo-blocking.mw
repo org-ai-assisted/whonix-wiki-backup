@@ -110,7 +110,7 @@ https://gitlab.torproject.org/legacy/trac/-/wikis/org/doc/ListOfServicesBlocking
 |-
 
 ! Archive.is
-| {{Nowrap|<code><nowiki>https://archive.ph/?run=1&url=</nowiki><b><u><URL></u></code>}}
+| {{Nowrap|<code><nowiki>https://archive.ph/?run=1&url=</nowiki><b><u><URL></u></b></code>}}
 | Ideal for news sites, doesn't require JS
 | No
 | No

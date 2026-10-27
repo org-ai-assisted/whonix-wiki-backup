@@ -882,7 +882,7 @@ This issue is [[unspecific|unspecific to {{project_name_short}}]].
 |image=[[File:Kicksecure-logo-icon.svg]]
 |title={{Headline|h=3|content=A : {{non_q_project_name_long}}}} ===
 |content=
-<div>{{project_name_workstation_short}}</code></div>
+<div>{{project_name_workstation_short}}</div>
 
 (Not required. Enabled by default.)
 

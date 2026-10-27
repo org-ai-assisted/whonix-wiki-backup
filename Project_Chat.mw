@@ -7,7 +7,7 @@
 |image=1024px-Telegram_2019_Logo.svg.png
 }}
 [[File:1024px-Telegram_2019_Logo.svg.png|Telegram Logo|200px|thumb|link=https://t.me/{{project_name_short}}_Chat_No_Media]]
-[[File:Matrix_logo.svg.png|Matrix Logo|200px|thumb|link=https://matrix.to/#/#{{project_name_short}}:{{project_matrix_server}}]]
+[[File:Matrix_logo.svg.png|Matrix Logo|200px|thumb|link=https://matrix.to/#/%23{{project_name_short}}:{{project_matrix_server}}]]
 <!--* [[File:1024px-Telegram_2019_Logo.svg.png|50px|link=https://t.me/{{project_name_short}}_Important_News]] https://t.me/{{project_name_short}}_Important_News-->
 
 = Inactive =
@@ -112,7 +112,7 @@ Join the [https://t.me/{{project_name_short}} {{project_name_short}} Project Cha
 
 = {{project_name_short}} Matrix Chat =
 * Currently [[#Inactive|inactive, read-only]].
-* [[File:Matrix_logo.svg.png|50px|link=https://matrix.to/#/#{{project_name_short}}:{{project_matrix_server}}]] [https://matrix.to/#/#{{project_name_short}}:{{project_matrix_server}} {{project_name_short}} Matrix Channel]
+* [[File:Matrix_logo.svg.png|50px|link=https://matrix.to/#/%23{{project_name_short}}:{{project_matrix_server}}]] [https://matrix.to/#/%23{{project_name_short}}:{{project_matrix_server}} {{project_name_short}} Matrix Channel]
 
 = Admins =
 The personal opinions of moderators or contributors to the {{project_name_short}} project do not represent the project as a whole.

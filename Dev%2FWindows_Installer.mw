@@ -342,7 +342,7 @@ Starting <code>msiexec /i "C:\Users\user\AppData\Local\Whonix-LXQt-18.0.8.3\Whon
 === Thread Blocking Due to <code>Sleep</code> and <code>Application.ProcessMessages</code> ===
 In <code>WhonixUtils.pas</code>, <code>Execute</code> uses <code>Sleep</code> and <code>Application.ProcessMessages</code> in a loop, which can lead to a blocking UI:
 
-<pre lang="pascal">
+<pre>
 repeat
   Sleep(100);
   Application.ProcessMessages;
@@ -366,7 +366,7 @@ There are several places where dynamically allocated resources may not be freed 
 '''Solution:'''
 Use try-finally blocks to ensure that resources are properly freed:
 
-<pre lang="pascal">
+<pre>
 ResourceStream := TResourceStream.Create(HInstance, 'LICENSE', RT_RCDATA);
 try
   MemoLicense.Lines.LoadFromStream(ResourceStream);

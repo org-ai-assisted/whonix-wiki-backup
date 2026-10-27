@@ -122,8 +122,8 @@ Disposables are created in one of two ways:
 {{CodeSelect|code=
 qvm-open-in-dvm
 }}
-</pre><code>Edit/View in Disposable</code>. From the GUI context-menu (domU).
-<code>File</code> &rarr; <code>Actions</code> &rarr; <code>Edit/View in Disposable</code></pre>
+<code>Edit/View in Disposable</code>. From the GUI context-menu (domU).
+<code>File</code> &rarr; <code>Actions</code> &rarr; <code>Edit/View in Disposable</code>
 </ref>
 * The reason is because Disposables inherit their NetVMs from the calling VM, or the calling VM's <code>dispvm_netvm</code> setting (if different). The <code>dispvm_netvm</code> setting can be configured per VM via: <code>dom0</code> &rarr; <code>Qube Manager</code> &rarr; <code>VM Settings</code> &rarr; <code>Advanced</code> &rarr; <code>NetVM for Disposable</code> <ref>On the command line (dom0), run. {{CodeSelect|code=qvm-prefs -s vmname dispvm_netvm {{project_name_gateway_vm}}}}
 </ref>

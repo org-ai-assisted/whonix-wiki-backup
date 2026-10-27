@@ -297,9 +297,9 @@ SSH: <span style="background:{{Yellow}}">If the SSH supports Remote Port Forward
 ! [[Tunnel_UDP_over_Tor|Tunnel UDP over Tor]]
 | {{No}}
 | {{No}}
-| Proxy: [[Tunnel_UDP_over_Tor#SOCKS5_Proxy_Method|<span style="background:#FF9090">No]]<br />
-VPN: [[Tunnel_UDP_over_Tor#VPN_Method|<span style="background:{{Yellow}}">If supported by the VPN, yes]]<br />
-SSH: [[Tunnel_UDP_over_Tor#SSH_Method|<span style="background:{{Yellow}}">Undocumented]]
+| Proxy: [[Tunnel_UDP_over_Tor#SOCKS5_Proxy_Method|<span style="background:#FF9090">No</span>]]<br />
+VPN: [[Tunnel_UDP_over_Tor#VPN_Method|<span style="background:{{Yellow}}">If supported by the VPN, yes</span>]]<br />
+SSH: [[Tunnel_UDP_over_Tor#SSH_Method|<span style="background:{{Yellow}}">Undocumented</span>]]
 |-
 
 |}

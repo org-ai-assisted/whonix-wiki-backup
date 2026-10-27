@@ -180,7 +180,7 @@ Examine the <code>/etc/apt/sources.list</code> file. It should not include the {
 cat /etc/apt/sources.list
 }}
 
-Next examine the </code>/etc/apt/sources.list.d/</code> folder as well.
+Next examine the <code>/etc/apt/sources.list.d/</code> folder as well.
 
 {{CodeSelect|code=
 cat /etc/apt/sources.list.d/*

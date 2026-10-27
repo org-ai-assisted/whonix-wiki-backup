@@ -437,8 +437,6 @@ udisks --show-info /dev/cdrom
 {| class="wikitable"
 |+ MAC address
 |-
-
-|-
 ! '''Category'''
 ! '''Description'''
 |-

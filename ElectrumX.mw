@@ -110,7 +110,7 @@ package=git python3-aiohttp python3-plyvel electrum
 {{IconSet|h1|1}} Install the [[PyLRU|Install PyLRU]]. <ref>
 Not available from packages.debian.org at time of writing.
 
-https:/packages.debian.org/pylru
+https://packages.debian.org/pylru
 </ref>
 
 {{IconSet|h1|2}} Install [[Bitcoin Core]].

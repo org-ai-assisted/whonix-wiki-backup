@@ -780,7 +780,7 @@ In other words, run apt normally. Run apt without <code>torsocks</code>.
 Because <code>apt</code> config file.
 <code>/etc/apt/apt.conf.d/01qubes-proxy</code> will already have http proxy
 settings for qrexec based Qubes updates proxy.
-<code>Acquire::http::Proxy "http://127.0.0.1:8082/";</code>
+<code><nowiki>Acquire::http::Proxy "http://127.0.0.1:8082/";</nowiki></code>
 === /etc/qubes/protected-files.d/qubes-whonix.conf ===
 
 * [https://github.com/Whonix/qubes-whonix/blob/master/etc/qubes/protected-files.d/qubes-whonix.conf /etc/qubes/protected-files.d/qubes-whonix.conf]
