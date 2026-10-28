@@ -79,7 +79,7 @@ In Virtual Machine Manager: <code>Highlight VM</code> &rarr; <code>Open</code> &
 
 {{IconSet|h1|2}} '''Set up a different external network:'''
 
-The {{project_name_gateway_short}} lacks a DHCP client for security hardening reasons and so cannot be attached to the same external network without conflicting with other {{project_name_gateway_short}}s' traffic. 
+The {{project_name_gateway_short}} lacks a DHCP client for security hardening reasons and so cannot be attached to the same external network without conflicting with other {{project_name_gateway_short}}s' traffic.
 
 {{CodeSelect|code=
 sudo virsh net-dumpxml Whonix-External > Whonix-External2.xml
@@ -207,13 +207,13 @@ To edit the VM virtual NIC settings: <br />
 
 Now, you need to change the network settings inside the Whonix-Gateway2 machine. While you could modify the <code>30_non-qubes-whonix</code> file, it is better to avoid editing official Whonix files, as they may be overwritten during updates. Instead, create a new <code>50_custom-whonix</code> file, which will partially override the settings in <code>30_non-qubes-whonix</code>.
 
-* Boot the Whonix-Gateway2 VM from KVM and create a new file: 
+* Boot the Whonix-Gateway2 VM from KVM and create a new file:
 
 {{CodeSelect|code=
 sudo nano /etc/network/interfaces.d/50_custom-whonix
 }} <!-- close: CodeSelect -->
 
-* Then copy and paste: 
+* Then copy and paste:
 
 <pre>
 # Custom Whonix Gateway overrides (loaded after 30_non-qubes-whonix)
@@ -233,7 +233,7 @@ y
 CTRL-M
 </pre>
 
-* Restart network interface (or whole machine): 
+* Restart network interface (or whole machine):
 
 {{CodeSelect|code=
 sudo ifdown eth0 && sudo ifup eth0

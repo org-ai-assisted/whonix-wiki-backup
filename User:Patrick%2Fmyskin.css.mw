@@ -1,6 +1,6 @@
 /* License: GPLv2 or later (same as Myskin) */
 /* Please contact Samat Jain <http://samat.org/> if you've questions */
- 
+
 body
 {
   background-color: white;
@@ -8,27 +8,27 @@ body
   padding: 1ex;
   max-width: 50em;
 }
- 
+
 p
 {
   line-height: 1em !important;
 }
- 
+
 #bodyContent
 {
   margin-left: 2%;
 }
- 
+
 #bodyContent > h2
 {
   margin-left: -2%;
 }
- 
+
 #bodyContent > h3
 {
   margin-left: -2%;
 }
- 
+
 #siteSub
 {
   font-weight: normal;
@@ -40,22 +40,22 @@ p
   margin-bottom: 1ex;
   text-align: center;
 }
- 
+
 #content
 {
   margin-top: 2.25em;
 }
- 
+
 table
 {
   clear: both;
 }
- 
+
 h1, h2, h3
 {
   margin: 0;
 }
- 
+
 h1
 {
   font-size: 2.0em;
@@ -64,7 +64,7 @@ h1
   padding: 1ex 1ex 0.5ex;
   letter-spacing: -0.1ex;
 }
- 
+
 h2
 {
   font-size: 1.3em;
@@ -72,16 +72,16 @@ h2
   letter-spacing: -0.1ex;
   padding-bottom: 0.2em;
 }
- 
+
 h1, h2, h3, h4, h5, h6 {
   text-shadow:0 0 1px #666677;
 }
- 
+
 h3, h4, h5, h6
 {
   font-size: 1.1em;
 }
- 
+
 #p-search
 {
   position: fixed;
@@ -90,27 +90,27 @@ h3, h4, h5, h6
   width: 50%;
   padding: 0.2em;
 }
- 
+
 #p-cactions h5, #p-search h5 { display: none; }
- 
+
 input[type="submit"]
 {
   border: 1px outset #369;
   background-color: #369;
   color: white;
 }
- 
+
 input[type="text"],
 textarea
 {
   border: 1px inset grey;
 }
- 
+
 textarea
 {
   padding-left: 0.1em;
 }
- 
+
 a:link,
 a:visited,
 a:hover
@@ -118,39 +118,39 @@ a:hover
 /*  font-weight: bold;*/
   text-decoration: underline;
 }
- 
+
 a:link
 {
   color: #369;
 }
- 
+
 a:visited
 {
   color: #636;
 }
- 
+
 a.new:link,
 a.new:visited
 {
   color: #739900;
 }
- 
+
 a:hover,
 a.new:hover
 {
   color: #CC0000;
 }
- 
+
 h2
 {
   border-bottom: 1px solid #cccccc;
 }
- 
+
 #jump-to-nav
 {
   display: none;
 }
- 
+
 #toc
 {
   float: right;
@@ -159,20 +159,20 @@ h2
   padding: 0.5em;
   margin: 0.5em;
 }
- 
+
 #catlinks
 {
   background-color: #eeeeee;
   padding: 0.1em 0.75em 0.1em 0.75em;
   margin: 1em 0 0.5em 0;
 }
- 
+
 .portlet
 {
   width: 32%;
   float: left;
 }
- 
+
 .portlet h5
 {
   margin: 0;
@@ -180,18 +180,18 @@ h2
   padding-bottom: 0.5ex;
   border-bottom: 1px solid silver;
 }
- 
+
 #footer
 {
   clear: both;
 }
- 
+
 .printfooter {
   border-top: 1px solid black;
   padding-top: 1em;
   margin-top: 1em;
 }
- 
+
 #p-cactions
 {
   position: fixed;
@@ -205,7 +205,7 @@ h2
   z-index: 3;
   font-size: smaller;
 }
- 
+
 #p-cactions ul
 {
   display: block;
@@ -213,12 +213,12 @@ h2
   padding: 0;
   text-align: right;
 }
- 
+
 #p-cactions li
 {
   display: inline;
 }
- 
+
 #p-cactions li a
 {
   display: inline;
@@ -228,108 +228,108 @@ h2
   text-decoration: none;
   color: MenuText;
 }
- 
+
 #p-cactions li.selected a
 {
   background-color: white;
   border-bottom: 1px solid white;
 }
- 
+
 #p-cactions li a:hover
 {
   background-color: ButtonHighlight;
 }
- 
+
 img
 {
   border: none;
 }
- 
- 
+
+
 div.thumb
 {
   border: 1px solid #dddddd;
   padding: 0.5em;
   background-color: white;
 }
- 
+
 .tright
 {
   margin: 0.25em 0 0.5em 0.5em;
   float: right;
 }
- 
+
 .tleft
 {
   margin: 0.25em 0.5em 0.5em 0;
 }
- 
+
 #f-poweredbyico,
 #f-copyrightico
 {
   display: none;
 }
- 
+
 pre
 {
   background-color: #f7f7f7;
   padding: 0.2em;
   border: 1px solid #eeeeee;
 }
- 
+
 td.diff-otitle { background:#cccccc; }
 td.diff-ntitle { background:#cccccc; }
- 
+
 td.diff-addedline
 {
   background:#ccffcc;
 }
- 
+
 td.diff-deletedline
 {
   background:#ffffaa;
 }
- 
+
 td.diff-context
 {
   background:#eeeeee;
   font-size: 0.9em;
 }
- 
+
 span.diffchange
 {
   color: red;
   font-weight: bold;
 }
- 
+
 #p-lang
 {
   width: auto;
   clear: both;
 }
- 
+
 #p-lang ul
 {
   padding-left: 0;
 }
- 
+
 #p-lang li
 {
   list-style-type: none;
   display: inline;
 }
- 
+
 #footer
 {
   font-size: 0.9em;
 }
- 
+
 .editsection
 {
   float: right;
   font-size: smaller;
 }
- 
+
 table.navbox,
 table.wikitable
 {

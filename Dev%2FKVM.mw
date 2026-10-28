@@ -76,7 +76,7 @@ https://github.com/canokeys/canokey-qemu/issues/6#issuecomment-4643349090
 <domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
 </pre>
 
-* One will run into Apparmor issues when using QEMU commands since they are treated as arbitrary and not whitelisted by default libvirt 
+* One will run into Apparmor issues when using QEMU commands since they are treated as arbitrary and not whitelisted by default libvirt
 <ref>https://www.libvirt.org/kbase/qemu-passthrough-security.html</ref>
 
 == VirtIO Bluetooth ==
@@ -304,17 +304,17 @@ No output means the test has passed. If the test fails, the TPM may need to be e
 
 https://rainygarden.net/articles/LUKS_and_Clevis.html
 
-'''Update:''' 
+'''Update:'''
 
 As of 2026 GPG's TPM support is widely reported to be broken.
 
 Also note that pcscd and scdaemon conflict with each other and one must choose either one to work with it to interface with a TPM not both. GnuPG's native process is scdaemon
 
-'''Update:''' 
+'''Update:'''
 
 * GPG 2.3 now supports TPM2 https://www.gnupg.org/blog/20210315-using-tpm-with-gnupg-2.3.html
 
-* OpenSSH has added TPM2 support and can import existing keys as of 1.7.0-rc0<ref>https://github.com/tpm2-software/tpm2-pkcs11/releases/tag/1.7.0-rc0</ref> 
+* OpenSSH has added TPM2 support and can import existing keys as of 1.7.0-rc0<ref>https://github.com/tpm2-software/tpm2-pkcs11/releases/tag/1.7.0-rc0</ref>
 https://blog.ledger.com/ssh-with-tpm/
 
 The upstream TPM2 project is looking at consolidating the multiple code projects out there into an upstream implementation superseding the projects below.
@@ -531,7 +531,7 @@ HulaHoop: Output makes sense. Needs to be updated because of recent config chang
 
 See [https://travis-ci.org/github/{{project_name_short}}/{{project_name_short}}-libvirt CI log] for output of running against other xml files.
 
-- Tested the same command on Debian+KVM+GW,WS,Kicksecure and the output is: 
+- Tested the same command on Debian+KVM+GW,WS,Kicksecure and the output is:
 
 === Whonix-Gateway ===
 
@@ -711,17 +711,17 @@ https://libvirt.org/formatdomain.html#userspace-connection-using-passt
   </interface>
 </pre>
 
-  
+
 Must remove:
- 
+
 <pre>
   <blkiotune>
     <weight>250</weight>
   </blkiotune>
 </pre>
-  
-  
- 
+
+
+
 * All network XMLs currently shipped are deprecated and superfluous under this new paradigm
 
 * Editing the settings:
@@ -777,7 +777,7 @@ XML
   </blkiotune>
 </pre>
 
-  
+
 * Change GW network to:
 <pre>
   <interface type='user'>
@@ -808,7 +808,7 @@ XML
 === MISC Notes ===
 
 
-*Tunnel types vs vhost-user for internal networking: While vhost-user is theoretically safer, any attempt to use it caused the VMs it was added to to silently stall and die so a direct tunnel was selected. UDP tunnels were of choice because someone documented how restarting the "server" TCP tunnel VM would kill the connection and would force the need for restarting the client tunnel VM (Whonix-Workstation) too to restore connectivity. 
+*Tunnel types vs vhost-user for internal networking: While vhost-user is theoretically safer, any attempt to use it caused the VMs it was added to to silently stall and die so a direct tunnel was selected. UDP tunnels were of choice because someone documented how restarting the "server" TCP tunnel VM would kill the connection and would force the need for restarting the client tunnel VM (Whonix-Workstation) too to restore connectivity.
 https://linuxsimba.github.io/qemu-tunnel-types
 
 The virtio NIC has to be explicitly specified to avoid emulated ones
@@ -845,7 +845,7 @@ https://jamielinux.com/docs/libvirt-networking-handbook/custom-nat-based-network
 UPDATE: A speed test running in WS Tor Browser gave pretty identical results. I'd prefer going for user in his case since I'm iffy about using shared memory for anything, it could very well be coded with security in mind, but still any bugs can be pretty bad.
 
 
-* VSock sockets are not shared nor connectable to each other by KVM (circa 2026) and need host side sorcery with socat to route packets between them. Unsure how the security situation would compare between this setup and just using natively supported tunnels. Socat would need to be compared with peer apps on security merits and further host side confinement for it would be needed. 
+* VSock sockets are not shared nor connectable to each other by KVM (circa 2026) and need host side sorcery with socat to route packets between them. Unsure how the security situation would compare between this setup and just using natively supported tunnels. Socat would need to be compared with peer apps on security merits and further host side confinement for it would be needed.
 UPDATE: There's vsock-bridge authored by the dev behind vsock for this purpose
 
 https://lencerf.github.io/post/2023-05-28-virtio-vhost-vsock/
@@ -854,14 +854,14 @@ https://stefano-garzarella.github.io/posts/2019-11-08-kvmforum-2019-vsock/
 https://github.com/stefano-garzarella/vsock-bridge/tree/master
 
 
-  
+
   https://libvirt.org/formatdomain.html#multicast-tunnel
   https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sub-sub-section-libvirt-dom-xml-devices-network-interfaces-multicast-tunnel
-  
+
   https://libvirt.org/formatdomain.html#vhost-user-connection
   https://github.com/yangye-huaizhou/secure-vhost
 
-  
+
 QEMU netdev sockets vs vhost-user socket security:
 
 Vhost-user sockets provide enhanced security by allowing a backend process to handle data processing outside the kernel, reducing the attack surface compared to traditional QEMU netdev sockets, which operate within the kernel space. This separation helps mitigate risks associated with kernel vulnerabilities.
@@ -962,7 +962,7 @@ Setting up qemu-bridge-helper
 
 Create the file /etc/qemu/bridge.conf with the content:
 
-sudo mkdir -p /etc/qemu 
+sudo mkdir -p /etc/qemu
 sudo touch /etc/qemu/bridge.conf
 sudo nano /etc/qemu/bridge.conf
 

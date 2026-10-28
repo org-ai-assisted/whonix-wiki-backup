@@ -11,7 +11,7 @@ BitMessage email alternative. Asynchronous, decentralized, encrypted communicati
 | image   = [[File:Ambox_warning_pn.svg.png|40px]]
 | text    =
 '''Warning:'''
-* Bitmessage still relies on Python 2 (end-of-life since 2020). While efforts to port it to Python 3 exist, some build scripts still uses Python 2. 
+* Bitmessage still relies on Python 2 (end-of-life since 2020). While efforts to port it to Python 3 exist, some build scripts still uses Python 2.
 * Do your own research before using it
 }}
 = Introduction =

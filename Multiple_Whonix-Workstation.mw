@@ -242,7 +242,7 @@ Create an additional App Qube based on the {{project_name_workstation_short}} Te
 
 Make sure the new {{project_name_workstation_short}} App Qube is using a {{project_name_gateway_short}} (such as for example the default <code>{{project_name_gateway_vm}}</code>) as its [https://www.qubes-os.org/doc/glossary/#net-qube <code>net qube</code>].
 
-If creating a new App Qube is unfamiliar, follow these step-by-step instructions: 
+If creating a new App Qube is unfamiliar, follow these step-by-step instructions:
 
 {{box|text=
 '''Figure:''' ''App Qube Creation using Qubes VM Manager (QVMM)''
@@ -294,7 +294,7 @@ qvm-tags anon-whonix-2 add anon-vm sdwdate-gui-client
 }} <!-- close: CodeSelect -->
 
 {{IconSet|h2|11}} '''Done.'''
-}} <!-- close: box --> 
+}} <!-- close: box -->
 
 {{IconSet|h1|3}} '''Choose the gateway scenario:'''
 

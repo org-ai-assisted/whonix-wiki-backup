@@ -170,7 +170,7 @@ Two options. Choose either option '''A)''' <u>or</u> '''B)'''.
 * '''B)''' [[Tor#Manual_Bridge_Configuration|Manual Bridge Configuration]] - advanced users.
 
 {{Box|text=
-'''Warning:''' The Anon Connection Wizard GUI frontend utilizes a strict internal keyword whitelist for custom bridge verification. Attempting to paste a bridge line featuring newer or experimental transports (such as <code>webtunnel</code>) into the GUI input box will trigger a false validation block stating: 
+'''Warning:''' The Anon Connection Wizard GUI frontend utilizes a strict internal keyword whitelist for custom bridge verification. Attempting to paste a bridge line featuring newer or experimental transports (such as <code>webtunnel</code>) into the GUI input box will trigger a false validation block stating:
 <code>Custom bridge list is blank or invalid</code>
 
 If you are using an unwhitelisted transport protocol, you must bypass the GUI entirely and configure the bridges manually within the configuration files as detailed in the sections below.
