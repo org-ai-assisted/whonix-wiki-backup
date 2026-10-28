@@ -1,7 +1,0 @@
-<noinclude>__NOINDEX__</noinclude>
-
-<div class="donation-panel">{{#donationpanel:Html_Donation_Panel_Crypto={{Html_Donation_Panel_Crypto}} }}
-<div class="info">{{Donate_Legal_Disclaimer}}</div>
-</div><noinclude>
-[[Category:MultiWiki]]
-</noinclude>
