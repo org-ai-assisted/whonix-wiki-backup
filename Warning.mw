@@ -309,7 +309,7 @@ Instead of taking a direct route from source to destination, communications usin
 '''Figure:''' <i>How Tor Works</i> <ref>
 Source: [https://2019.www.torproject.org/about/overview.html.en#overview Tor: Overview] License: [https://creativecommons.org/licenses/by/3.0/us/ Creative Commons Attribution 3.0 United States License]
 </ref>
-[[File:Htw2.png|frame|none|alt=| A Tor connection usually goes through 3 relays with the last one establishing the actual connection to the destination server]]
+[[File:Htw2.png|frame|none|alt=Diagram of how Tor works: a connection through three relays| A Tor connection usually goes through 3 relays with the last one establishing the actual connection to the destination server]]
 
 The last relay on the three-hop circuit is called the Tor exit relay. It is the critical relay that establishes the actual connection to the destination server. By design, Tor does not encrypt the traffic between a Tor exit relay and the final destination. This means <i>any exit relay is in a position to capture any traffic passing through it.</i> To protect against snooping by the Tor exit relay, end-to-end encryption should always be used. <ref>
 For example, a HTTPS or onion service (<i>.onion</i>) connection.
