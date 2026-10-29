@@ -66,7 +66,7 @@ Whonix gives your desktop:
 |-
 | App Stream Isolation <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>In Whonix distinct pre-installed applications are routed through different network paths for maximum security.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || <span class="cmp-no"><i class="fa-solid fa-xmark" aria-hidden="true"></i> No</span>
 |-
-| Open Source / Freedom <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Whonix has a full dedication to <a href="/wiki/Reasons_for_Freedom_Software" title="Reasons_for_Freedom_Software">Open Source and Freedom Software</a>. Only some VPNs have open source elements and even less are fully Open Source.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || Some
+| Open Source / Freedom <span class="info-tooltip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Whonix has a full dedication to <a href="/wiki/Reasons_for_Freedom_Software" title="Reasons_for_Freedom_Software">Open Source and Freedom Software</a>. Only some VPNs have Open Source elements and even less are fully Open Source.</span></span> || <span class="cmp-yes"><i class="fa-solid fa-check" aria-hidden="true"></i> Yes</span> || Some
 |-
 | Pricing || FREE or Donation || $5 - $20 per month
 |}
