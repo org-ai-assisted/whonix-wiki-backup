@@ -72,9 +72,11 @@ intro=Whonix gives your desktop
 | colspan="3" | {{#cmpmore:end}}
 |-
 | Pricing || FREE or Donation || $5 - $20 per month
+|-
+|  || {{#ctabutton:url=/wiki/Download|text=Download Whonix now!}} ||
 |}
 
-[[Download|Download Whonix now!]] - Learn More: [[Whonix versus VPNs]]
+{{#learnmore:url=/wiki/Whonix_versus_VPNs|text=Whonix versus VPNs}}
 
 <span id="press"></span>
 == Trusted by Security Experts ==
