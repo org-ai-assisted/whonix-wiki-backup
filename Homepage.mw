@@ -23,9 +23,11 @@ As handy as an app - delivering maximum anonymity and security.
 
 Learn: [[About|What Is Whonix?]]
 
-Whonix gives your desktop:
-* '''Maximum privacy and anonymity''' on the Internet
-* '''Greater reliability and security''' than any other tool on the market!
+{{#checklist:
+intro=Whonix gives your desktop
+|item=<b>Maximum privacy and anonymity</b> on the Internet
+|item=<b>Greater reliability and security</b> than any other tool on the market!
+}}
 
 <span id="download"></span>
 == Download, Install, Run - [[Reasons for Freedom Software|100% FREE]] ==
@@ -97,7 +99,7 @@ Whonix handles all your activity in a virtual machine, forcing all Internet traf
 == Fully Featured with Advanced Security Components ==
 * [[About#Full Spectrum Anti-Tracking Protection|Elite Spy Defense]] -- Hiding your identity is harder than just hiding your IP. Whonix provides full spectrum anti-tracking protection.
 * [[Why does Whonix use Tor|Maximum Anonymity]] -- Whonix provides maximum anonymity by design, using the best privacy technologies and research.
-* [[History|12 Years of Success]] -- For over 12 years we have successfully protected our users from everyday trackers and even from high level attacks. And we're just getting started!
+* [[History|{{#projectageyears}} Years of Success]] -- For over {{#projectageyears}} years we have successfully protected our users from everyday trackers and even from high level attacks. And we're just getting started!
 * [https://www.kicksecure.com/ Cyber Security Best Practices] -- You can't be anonymous without being secure. The security hardened operating system Kicksecure is the core of Whonix.
 * [[About#Whonix Architecture|Bulletproof IP protection]] -- Whonix has powerful protection measures against trackers, malware and many more attack vectors trying to get your IP address.
 * [[Keystroke and Mouse Deanonymization|Cloaking your typing style]] -- Your typing behavior can be used to identify you. Whonix prevents this with a cloak for your keystrokes.
