@@ -95,7 +95,7 @@ intro=Whonix gives your desktop
 
 <span id="explain"></span>
 == Watertight Privacy Architecture ==
-Whonix handles all your activity in a virtual machine, forcing all Internet traffic through the [[Why does Whonix use Tor|Tor network]], providing [[Reliable IP Hiding|reliable IP hiding]] and the strongest protection for your [[Data Collection Techniques#IP Address|IP address]].
+{{#darkband}}Whonix handles all your activity in a virtual machine, forcing all Internet traffic through the [[Why does Whonix use Tor|Tor network]], providing [[Reliable IP Hiding|reliable IP hiding]] and the strongest protection for your [[Data Collection Techniques#IP Address|IP address]].
 
 <span id="security"></span>
 == Fully Featured with Advanced Security Components ==
@@ -143,6 +143,7 @@ Whonix handles all your activity in a virtual machine, forcing all Internet traf
 
 <span id="upcoming"></span>
 == Upcoming Security Enhancements ==
+{{#darkband}}
 * [[Sandbox-app-launcher|sandbox-app-launcher]] -- sandbox-app-launcher is an application launcher that can start each application inside its own restrictive sandbox. Each application runs as its own user, in a bubblewrap sandbox and confined by AppArmor.
 * [[Apparmor-profile-everything|Full system Mandatory Access Control (MAC)]] -- Full system Mandatory Access Control (MAC) policy - "AppArmor for everything".
 * [https://forums.whonix.org/t/untrusted-root-does-it-make-sense-to-try-to-improve-security-by-restricting-root/7998 Untrusted Root User] -- Restrict root to reduce the impact of compromise.
