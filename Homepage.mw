@@ -11,6 +11,7 @@ ASCII only.
 |image=Whonix-homepage-main-preview.jpg
 }}
 {{hide_all_banners}}
+__NOTOC__
 {{IntroLike|
 As handy as an app - delivering maximum anonymity and security.
 }}
@@ -25,7 +26,7 @@ intro=Whonix gives your desktop
 
 [[File:Whonix_overview_by_p41NpkH3.mp4|934px|poster=Hero-image-v2.jpg]]
 
-Learn: [[About|What Is Whonix?]]
+{{Align|middle|<span class="hero-learn">Learn [[About|What Is Whonix?]]</span>}}
 
 <span id="download"></span>
 == Download, Install, Run - [[Reasons for Freedom Software|100% FREE]] ==
