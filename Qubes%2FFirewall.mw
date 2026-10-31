@@ -70,7 +70,7 @@ To set up a bridge firewall:
 * There are two types of traffic.
 * '''1)''' '''<u>Socksified traffic:</u>'''
 ** <u>Firewall versus Stream Isolation:</u> Stream isolated applications cannot be firewalled without DPI (deep package inspection). See {{kicksecure_wiki
-|wikpage=Socks_firewalling
+|wikipage=Socks_firewalling
 |text=SOCKS Firewalling
 }} for a detailed technical explanation.
 ** related: [[Tor_Browser/Advanced_Users#Tor_Browser_Filtering|Tor Browser Filtering]]
