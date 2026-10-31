@@ -21,7 +21,7 @@ intro=Whonix gives your desktop
 |item=<b>Greater reliability and security</b> than any other tool on the market!
 }}
 
-{{#downloadbutton:url=/wiki/Download|text=Download Now}}
+{{Align|middle|{{DownloadButton|url=/wiki/Download|text=Download Now}}}}
 
 [[File:Whonix_overview_by_p41NpkH3.mp4|934px|poster=Hero-image-v2.jpg]]
 
