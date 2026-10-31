@@ -80,29 +80,34 @@ intro=Whonix gives your desktop
 
 <span id="press"></span>
 == Trusted by Security Experts ==
-* "For the even more paranoid, there is a lesser-known Tor-enabled OS called Whonix" -- [https://www.wired.com/2014/06/be-anonymous-online Wired] ([https://web.archive.org/web/20140617105809/https://www.wired.com/2014/06/be-anonymous-online archived])
-* "I use Qubes and a Whonix gateway literally everyday." -- [[Edward Snowden on Whonix|Edward Snowden]]
-* "Whonix adds a layer of anonymity to your business tasks." -- [https://web.archive.org/web/20210826075611/https://www.techrepublic.com/blog/smb-technologist/whonix-adds-a-layer-of-anonymity-to-your-business-tasks/ TechRepublic]
-* "Whonix is about as anonymous as an OS can get before it all becomes too inconvenient for normal use." -- [https://www.theguardian.com/technology/2015/mar/06/tips-tricks-anonymous-privacy The Guardian] ([https://web.archive.org/web/20150311120654/https://www.theguardian.com/technology/2015/mar/06/tips-tricks-anonymous-privacy archived])
-* "All of our staff are aware that, for anything privacy critical, Whonix is our go-to solution. Anybody who takes privacy seriously should have a Whonix VM at least." -- [https://evolution-host.com/ Evolution Host]
-* "Whonix, an operating system you can run in a virtual machine to maximize your online anonymity; it's ideal for maintaining a secret identity." -- [https://theintercept.com/2015/09/16/getting-hacked-doesnt-bad/ The Intercept] ([https://web.archive.org/web/20200704100018if_/https://theintercept.com/2015/09/16/getting-hacked-doesnt-bad/ archived])
-* "Das linux-basierte Betriebssystem Whonix setzt von Anfang an auf Sicherheit." -- [https://www.chip.de/news/Whonix-bringt-Linux-Sicherheit-auf-Windows_151415693.html CHIP] ([https://web.archive.org/web/2019*/https://www.chip.de/news/Whonix-bringt-Linux-Sicherheit-auf-Windows_151415693.html archived])
-* "Whonix protects user anonymity by routing internet connections through Tor's network." -- [https://www.hostingadvice.com/blog/whonix-os-is-preserving-internet-anonymity/ HostingAdvice.com]
-* "Tarnkappe - Mit Whonix anonym im Internet surfen" -- [https://www.heise.de/select/ct/2019/15/1563112584099766 c't] ([https://web.archive.org/web/20200321060503/https://www.heise.de/select/ct/2019/15/1563112584099766 archived])
-* "Viele Webseiten verfolgen ihre Besucher mit ausgekluegelten Trackingmechanismen. Whonix macht Schluss damit, ohne dass man Browser-Einstellungen aendern muss." -- [https://www.heise.de/ratgeber/Mit-Whonix-anonym-im-Internet-surfen-4460100.html Heise Online] ([https://web.archive.org/web/20200321060403/https://www.heise.de/ratgeber/Mit-Whonix-anonym-im-Internet-surfen-4460100.html archived])
-* "The Internet was not designed with anonymity in mind, but things have changed. Anonymity has become a necessary and legitimate objective in many applications." -- [https://cybersecurity.att.com/blogs/security-essentials/how-does-whonix-make-kali-linux-anonymous-how-to-prevent-it AT&T] ([https://web.archive.org/web/20200301165306/https://cybersecurity.att.com/blogs/security-essentials/how-does-whonix-make-kali-linux-anonymous-how-to-prevent-it archived])
-* "This split design allows the user to remain completely anonymous and mitigates the risk of DNS leaks, which reveal private information such as your web browsing history." -- [https://linuxsecurity.com/features/features/7-best-linux-distros-for-security-and-privacy-in-2020 LinuxSecurity.com] ([https://web.archive.org/web/20200701181129/https://linuxsecurity.com/features/features/7-best-linux-distros-for-security-and-privacy-in-2020 archived])
+{{#endorsementgrid:items=
+{{#endorsement:logo=Wired-magazine-logo.png|name=Wired|source=https://www.wired.com/2014/06/be-anonymous-online|archive=https://web.archive.org/web/20140617105809/https://www.wired.com/2014/06/be-anonymous-online|text="For the even more paranoid, there is a lesser-known Tor-enabled OS called Whonix"}}
+{{#endorsement:logo=Edward_Snowden.jpg|name=Edward Snowden|source=/wiki/Edward_Snowden_on_Whonix|text="I use Qubes and a Whonix gateway literally everyday."}}
+{{#endorsement:logo=TechRepublic-ConvertImage.png|name=TechRepublic|source=https://www.techrepublic.com/blog/smb-technologist/whonix-adds-a-layer-of-anonymity-to-your-business-tasks/|archive=https://web.archive.org/web/20210826075611/https://www.techrepublic.com/blog/smb-technologist/whonix-adds-a-layer-of-anonymity-to-your-business-tasks/|text="Whonix adds a layer of anonymity to your business tasks."}}
+{{#endorsement:logo=The_Guardian_2018.svg|name=The Guardian|source=https://www.theguardian.com/technology/2015/mar/06/tips-tricks-anonymous-privacy|archive=https://web.archive.org/web/20150311120654/https://www.theguardian.com/technology/2015/mar/06/tips-tricks-anonymous-privacy|text="Whonix is about as anonymous as an OS can get before it all becomes too inconvenient for normal use."}}
+{{#endorsement:logo=Evolution-host_logo_text_large.png|name=Evolution Host|source=https://evolution-host.com/|text="All of our staff are aware that, for anything privacy critical, Whonix is our go-to solution. Anybody who takes privacy seriously should have a Whonix VM at least."}}
+{{#endorsement:logo=The_Intercept_logo.svg|name=The Intercept|source=https://theintercept.com/2015/09/16/getting-hacked-doesnt-bad/|archive=https://web.archive.org/web/20200704100018if_/https://theintercept.com/2015/09/16/getting-hacked-doesnt-bad/|text="Whonix, an operating system you can run in a virtual machine to maximize your online anonymity; it's ideal for maintaining a secret identity."}}
+{{#endorsement:name=CHIP|source=https://www.chip.de/news/Whonix-bringt-Linux-Sicherheit-auf-Windows_151415693.html|archive=https://web.archive.org/web/2019/https://www.chip.de/news/Whonix-bringt-Linux-Sicherheit-auf-Windows_151415693.html|text="Das linux-basierte Betriebssystem Whonix setzt von Anfang an auf Sicherheit."}}
+{{#endorsement:name=HostingAdvice.com|source=https://www.hostingadvice.com/blog/whonix-os-is-preserving-internet-anonymity/|text="Whonix protects user anonymity by routing internet connections through Tor's network."}}
+{{#endorsement:name=c't|source=https://www.heise.de/select/ct/2019/15/1563112584099766|archive=https://web.archive.org/web/20200321060503/https://www.heise.de/select/ct/2019/15/1563112584099766|text="Tarnkappe - Mit Whonix anonym im Internet surfen"}}
+{{#endorsement:name=Heise Online|source=https://www.heise.de/ratgeber/Mit-Whonix-anonym-im-Internet-surfen-4460100.html|archive=https://web.archive.org/web/20200321060403/https://www.heise.de/ratgeber/Mit-Whonix-anonym-im-Internet-surfen-4460100.html|text="Viele Webseiten verfolgen ihre Besucher mit ausgekluegelten Trackingmechanismen. Whonix macht Schluss damit, ohne dass man Browser-Einstellungen aendern muss."}}
+{{#endorsement:name=AT&T|source=https://cybersecurity.att.com/blogs/security-essentials/how-does-whonix-make-kali-linux-anonymous-how-to-prevent-it|archive=https://web.archive.org/web/20200301165306/https://cybersecurity.att.com/blogs/security-essentials/how-does-whonix-make-kali-linux-anonymous-how-to-prevent-it|text="The Internet was not designed with anonymity in mind, but things have changed. Anonymity has become a necessary and legitimate objective in many applications."}}
+{{#endorsement:name=LinuxSecurity.com|source=https://linuxsecurity.com/features/features/7-best-linux-distros-for-security-and-privacy-in-2020|archive=https://web.archive.org/web/20200701181129/https://linuxsecurity.com/features/features/7-best-linux-distros-for-security-and-privacy-in-2020|text="This split design allows the user to remain completely anonymous and mitigates the risk of DNS leaks, which reveal private information such as your web browsing history."}}
+}}
 
 <span id="explain"></span>
 == Watertight Privacy Architecture ==
-{{#darkband}}Whonix handles all your activity in a virtual machine, forcing all Internet traffic through the [[Why does Whonix use Tor|Tor network]], providing [[Reliable IP Hiding|reliable IP hiding]] and the strongest protection for your [[Data Collection Techniques#IP Address|IP address]].
+{{#darkband}}
+[[File:Whonix-concept-illustration.png|720px|center|link=|alt=Whonix architecture - applications run inside a virtual machine, with all Internet traffic forced through the Tor network]]
+
+Whonix handles all your activity in a virtual machine, forcing all Internet traffic through the [[Why does Whonix use Tor|Tor network]], providing [[Reliable IP Hiding|reliable IP hiding]] and the strongest protection for your [[Data Collection Techniques#IP Address|IP address]].
 
 <span id="security"></span>
 == Fully Featured with Advanced Security Components ==
 * [[About#Full Spectrum Anti-Tracking Protection|Elite Spy Defense]] -- Hiding your identity is harder than just hiding your IP. Whonix provides full spectrum anti-tracking protection.
 * [[Why does Whonix use Tor|Maximum Anonymity]] -- Whonix provides maximum anonymity by design, using the best privacy technologies and research.
 * [[History|{{#projectageyears}} Years of Success]] -- For over {{#projectageyears}} years we have successfully protected our users from everyday trackers and even from high level attacks. And we're just getting started!
-* [https://www.kicksecure.com/ Cyber Security Best Practices] -- You can't be anonymous without being secure. The security hardened operating system Kicksecure is the core of Whonix.
+* {{kicksecure_link||Cyber Security Best Practices}} -- You can't be anonymous without being secure. The security hardened operating system Kicksecure is the core of Whonix.
 * [[About#Whonix Architecture|Bulletproof IP protection]] -- Whonix has powerful protection measures against trackers, malware and many more attack vectors trying to get your IP address.
 * [[Keystroke and Mouse Deanonymization|Cloaking your typing style]] -- Your typing behavior can be used to identify you. Whonix prevents this with a cloak for your keystrokes.
 * [[Dev/TimeSync|Timing Fingerprinting Defense]] -- Sophisticated attackers can identify you by the milliseconds that your system clock deviates from standard time. Whonix enhances user anonymity by preventing timing-based fingerprinting through Boot Clock Randomization and secure network time synchronization with sdwdate.
@@ -144,14 +149,13 @@ intro=Whonix gives your desktop
 <span id="upcoming"></span>
 == Upcoming Security Enhancements ==
 {{#darkband}}
-* [[Sandbox-app-launcher|sandbox-app-launcher]] -- sandbox-app-launcher is an application launcher that can start each application inside its own restrictive sandbox. Each application runs as its own user, in a bubblewrap sandbox and confined by AppArmor.
-* [[Apparmor-profile-everything|Full system Mandatory Access Control (MAC)]] -- Full system Mandatory Access Control (MAC) policy - "AppArmor for everything".
+* {{kicksecure_wiki|wikipage=Vm-app-manager|text=vm-app-manager}} -- Virtualization-powered application sandbox that runs each application inside its own hardened virtual machine for strong isolation.
+* {{kicksecure_wiki|wikipage=Apparmor-profile-everything|text=Full system Mandatory Access Control (MAC)}} -- Full system Mandatory Access Control (MAC) policy - "AppArmor for everything".
 * [https://forums.whonix.org/t/untrusted-root-does-it-make-sense-to-try-to-improve-security-by-restricting-root/7998 Untrusted Root User] -- Restrict root to reduce the impact of compromise.
-* [[Dev/VirusForget|Deactivate malware after reboot]] -- Deactivate malware after reboot from non-root compromise.
+* {{kicksecure_wiki|wikipage=Dev/VirusForget|text=Deactivate malware after reboot}} -- Deactivate malware after reboot from non-root compromise.
 * [https://github.com/Kicksecure/hardened-kernel Hardened Linux Kernel] -- Hardened Linux Kernel.
 * [https://forums.whonix.org/t/use-codecrypt-to-sign-whonix-releases/7844/2 Post-quantum resistance] -- Post-quantum resistant signing of releases.
-* [https://forums.whonix.org/t/re-mount-home-and-other-with-noexec-and-nosuid-among-other-useful-mount-options-for-better-security/7707 Mount Options Hardening] -- Mount Options Hardening.
-* [https://forums.whonix.org/t/multiple-boot-modes-for-better-security-persistent-root-persistent-noroot-live-root-live-noroot/7708 Multiple boot modes] -- Multiple boot modes for better security (user, live, secureadmin and superadmin).
+* {{kicksecure_wiki|wikipage=Noexec|text=Mount Options Hardening}} -- Mount options hardening (noexec, nosuid among other options).
 
 <span id="contribute"></span>
 == Join the team! ==
