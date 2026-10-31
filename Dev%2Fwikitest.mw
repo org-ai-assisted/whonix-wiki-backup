@@ -444,7 +444,7 @@ Malicious Editor attack / editor mistake test: redirect URL is external - Click 
 
 {{#downloadbutton:text=Malicious / mistake redirect test
 |url=/keys/derivative.asc
-|redirectUrl=https://www.malicious-website.com
+|redirectUrl=https://www.example.com
 }}
 
 == Expand Button different labels ==
