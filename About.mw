@@ -366,7 +366,7 @@ Each {{project_name_short}} release is based on a particular version of Debian:
 ! <u>{{project_name_short}} version</u> !! ''Debian Version'' !! ''Debian Codename'' !! Supported
 |-
 
-| {{project_name_short}} <code><u>17</u></code> || ''<code>12</code>'' || [https://www.debian.org/releases/bookworm/ <code>bookworm</code>] || Being deprecated.
+| {{project_name_short}} <code><u>17</u></code> || ''<code>12</code>'' || [https://www.debian.org/releases/bookworm/ <code>bookworm</code>] || Deprecated.
 |-
 
 | {{project_name_short}} <code><u>18</u></code> || ''<code>13</code>'' || [https://www.debian.org/releases/trixie/ <code>{{Stable project version based on Debian codename}}</code>] || {{Yes}}
