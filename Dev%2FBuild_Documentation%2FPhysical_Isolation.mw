@@ -795,7 +795,7 @@ grep -r VMONLY* *
 It is recommended to create a log of the build process by redirecting all the output to a log file. Be aware that by doing so no build progress will appear on the screen -- instead a text log file will be created in the home folder.
 
 <pre>
-./derivative-maker --flavor whonix-gateway-lxqt --target root --build --freshness current >> ~/log-phyiso 2>&1
+./derivative-maker --flavor whonix-gateway-lxqt --target root --build --freshness current --arch amd64 >> ~/log-phyiso 2>&1
 </pre>
 
 To optionally watch the progress, open a second [[Desktop#Virtual_Consoles|virtual console]] and type.
@@ -807,7 +807,7 @@ tail -f ~/log-phyiso
 Use the following command to avoid creating a log of the build process; the build progress will then appear on screen. Note this is <u>unrecommended</u> because if anything goes wrong during the build, it is harder to pinpoint the exact error without a log file.
 
 <pre>
-./derivative-maker --flavor whonix-gateway --target root --build --freshness current
+./derivative-maker --flavor whonix-gateway --target root --build --freshness current --arch amd64
 </pre>
 
 === Final Steps ===

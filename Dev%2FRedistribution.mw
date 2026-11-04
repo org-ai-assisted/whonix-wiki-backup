@@ -127,13 +127,13 @@ export dist_build_redistributable=true
 '''2.''' Build {{project_name_gateway_long}}. For example {{project_name_gateway_long}} with LXQt for VirtualBox.
 
 {{CodeSelect|code=
-./derivative-maker --target virtualbox --flavor whonix-gateway-lxqt --freshness current
+./derivative-maker --target virtualbox --flavor whonix-gateway-lxqt --freshness current --arch amd64
 }}
 
 '''3.''' Build {{project_name_workstation_long}}. For example {{project_name_workstation_long}} with LXQt for VirtualBox.
 
 {{CodeSelect|code=
-./derivative-maker --target virtualbox --flavor whonix-workstation-lxqt --freshness current
+./derivative-maker --target virtualbox --flavor whonix-workstation-lxqt --freshness current --arch amd64
 }}
 
 == Post Building ==
