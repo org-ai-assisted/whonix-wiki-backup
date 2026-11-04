@@ -428,14 +428,14 @@ export DERIVATIVE_APT_REPOSITORY_OPTS
 | VirtualBox
 | Intel / AMD64 (stable)
 | {{CodeSelect|code=
-~/derivative-maker/derivative-maker --arch amd64 --flavor {{project_name_short_lowercase}}-gateway-lxqt --target virtualbox --repo true
+~/derivative-maker/derivative-maker --arch amd64 --flavor {{project_name_short_lowercase}}-gateway-lxqt --target virtualbox --repo true --freshness current
 }}
 |-
 
 | VirtualBox
 | ARM64 (Mac <code>M#</code>, testers-only)
 | {{CodeSelect|code=
-~/derivative-maker/derivative-maker --arch arm64 --flavor {{project_name_short_lowercase}}-gateway-lxqt --target virtualbox --repo true
+~/derivative-maker/derivative-maker --arch arm64 --flavor {{project_name_short_lowercase}}-gateway-lxqt --target virtualbox --repo true --freshness current
 }}
 |}
 
@@ -450,14 +450,14 @@ export DERIVATIVE_APT_REPOSITORY_OPTS
 | VirtualBox
 | Intel / AMD64 (stable)
 | {{CodeSelect|code=
-~/derivative-maker/derivative-maker --arch amd64 --flavor {{project_name_short_lowercase}}-workstation-lxqt --target virtualbox --repo true
+~/derivative-maker/derivative-maker --arch amd64 --flavor {{project_name_short_lowercase}}-workstation-lxqt --target virtualbox --repo true --freshness current
 }}
 |-
 
 | VirtualBox
 | ARM64 (Mac <code>M#</code>, testers-only)
 | {{CodeSelect|code=
-~/derivative-maker/derivative-maker --arch arm64 --flavor {{project_name_short_lowercase}}-workstation-lxqt --target virtualbox --repo true
+~/derivative-maker/derivative-maker --arch arm64 --flavor {{project_name_short_lowercase}}-workstation-lxqt --target virtualbox --repo true --freshness current
 }}
 |}
 

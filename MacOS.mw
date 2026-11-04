@@ -71,10 +71,10 @@ Build environment.
 Build commands.
 
 * {{CodeSelect|code=
-~/derivative-maker/derivative-maker --flavor whonix-gateway-lxqt --target virtualbox --arch arm64 --repo true
+~/derivative-maker/derivative-maker --flavor whonix-gateway-lxqt --target virtualbox --arch arm64 --repo true --freshness current
 }}
 * {{CodeSelect|code=
-~/derivative-maker/derivative-maker --flavor whonix-workstation-lxqt --target virtualbox --arch arm64 --repo true
+~/derivative-maker/derivative-maker --flavor whonix-workstation-lxqt --target virtualbox --arch arm64 --repo true --freshness current
 }}
 
 }}<!-- close tab: VirtualBox -->
@@ -175,10 +175,10 @@ Follow the [[Dev/Build_Documentation/images|build documentation here]] and be su
 Build commands should look similar to:
 
 * {{CodeSelect|code=
-~/derivative-maker/derivative-maker --flavor whonix-gateway-lxqt --target utm --arch arm64 --tb open --repo true --vmsize 15G
+~/derivative-maker/derivative-maker --flavor whonix-gateway-lxqt --target utm --arch arm64 --tb open --repo true --vmsize 15G --freshness current
 }}
 * {{CodeSelect|code=
-~/derivative-maker/derivative-maker --flavor whonix-workstation-lxqt --target utm --arch arm64 --tb open --repo true --vmsize 25G
+~/derivative-maker/derivative-maker --flavor whonix-workstation-lxqt --target utm --arch arm64 --tb open --repo true --vmsize 25G --freshness current
 }}
 }}
 
