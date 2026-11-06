@@ -104,9 +104,6 @@ sudo apt install --no-install-recommends qemu-system-ppc qemu-system-gui qemu-sy
 {{CodeSelect|code=
 sudo apt install --no-install-recommends qemu-system-x86 qemu-system-gui qemu-system-modules-spice qemu-utils libvirt-daemon libvirt-daemon-driver-qemu libvirt-daemon-driver-storage libvirt-daemon-driver-network libvirt-clients virt-manager virt-viewer gir1.2-spiceclientgtk-3.0 passt ovmf swtpm swtpm-tools safe-rm xz-utils
 }}
-
-'''Check''' the discussion about how to fix the apparmor issue <ref>https://forums.whonix.org/t/whonix-gateway-connects-to-tor-however-whonix-workstation-does-not/23334/17</ref>
-
 }} <!-- close tab: Ubuntu -->
 
 {{Tab
@@ -608,6 +605,65 @@ max_files = 0
 * Reboot your system so the changes can take effect.
 
 * Done
+
+== Loosen AppArmor restrictions on passt ==
+{{mbox
+| type    = notice
+| image   = [[File:Ambox_notice.png|40px|alt=Info]]
+| text    = <u>Host OS-specific notice:</u> These steps are only known to be necessary on hosts running Ubuntu 26.04 LTS and higher. Skip this section if you are using a different host OS such as Debian or Kicksecure, or if you are using an older version of Ubuntu.
+}}
+
+{{mbox
+| image   = [[File:Ambox_warning_pn.svg.png|40px]]
+| text    =
+'''Warning:''' These instructions may slightly reduce the security of the host OS.
+}}
+
+Whonix-KVM uses <code>passt</code> to provide networking services to Whonix VMs. Due to a difficult-to-fix AppArmor configuration bug, <code>passt</code> does not function properly on Ubuntu hosts, and will deny Internet access to Whonix by default. <ref>https://forums.whonix.org/t/whonix-gateway-connects-to-tor-however-whonix-workstation-does-not/23334/17</ref> To fix this:
+
+{{Box|text=
+'''1.''' Open a terminal on the host.
+
+'''2.''' Run:
+
+{{CodeSelect|code=
+sudo nano /etc/apparmor.d/usr.bin.passt
+}}
+
+'''3.''' Press and hold <code>Ctrl+K</code> until the file is empty.
+
+'''4.''' Paste the following text into the file:
+
+<pre>
+# This profile allows everything and only exists to give the
+# application a name instead of having the label "unconfined"
+
+abi <abi/5.0>,
+includes <tunables/global>
+
+profile passt /usr/bin/passt{,.avx2} flags=(unconfined) {
+  userns,
+  @{exec_path} mr, 
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/usr.bin.passt>
+}
+</pre>
+}}
+
+'''5.''' Save the file with <code>Ctrl+S</code>.
+
+'''6.''' Close the file with <code>Ctrl+X</code>.
+
+'''7.''' Reload AppArmor configuration by running:
+
+{{CodeSelect|code=
+sudo systemctl restart apparmor.service
+}}
+
+'''8.''' Done.
+
+The process of loosening AppArmor restrictions on <code>passt</code> is now complete.
 
 == Image File Installation ==
 The XML files are configured to use newly created user level path <code>~/.local/share/libvirt/images</code> instead of the default storage location of <code>/var/lib/libvirt/images</code>. The image files can be moved or copied, depending on storage constraints.
