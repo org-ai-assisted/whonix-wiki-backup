@@ -103,10 +103,10 @@ For the best possible security, users can choose to run {{project_name_short}} v
 
 Refer to the Qubes documentation for further information:
 
-* [https://www.qubes-os.org/doc/system-requirements/ Qubes System Requirements] ([http://{{QubesOS_onion}}/doc/system-requirements/ .onion])
-* [https://www.qubes-os.org/doc/certified-hardware/ Qubes Certified Hardware] ([http://{{QubesOS_onion}}/doc/certified-hardware/ .onion])
+* [https://www.qubes-os.org/doc/system-requirements/ Qubes System Requirements] ([{{QubesOS_onion}}/doc/system-requirements/ .onion])
+* [https://www.qubes-os.org/doc/certified-hardware/ Qubes Certified Hardware] ([{{QubesOS_onion}}/doc/certified-hardware/ .onion])
 * [https://forum.qubes-os.org/t/community-recommended-computers/5560 Qubes OS Forum: Community recommended computers]
-* [https://www.qubes-os.org/hcl/ Qubes Hardware Compatibility List (HCL)] ([http://{{QubesOS_onion}}/hcl/ .onion])
+* [https://www.qubes-os.org/hcl/ Qubes Hardware Compatibility List (HCL)] ([{{QubesOS_onion}}/hcl/ .onion])
 
 = Architecture Support =
 {{architecture_mininav}}
