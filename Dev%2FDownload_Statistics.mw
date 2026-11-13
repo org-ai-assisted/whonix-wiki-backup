@@ -67,7 +67,7 @@ The snapshotted url at time of writing is:<br />
 
 = 2013|07 =
 == TBB's Influence on Download Statistics ==
-Windows might have fewer downloaders than any statistic says, because TBB for Linux and MacOS claims, that it is Windows, which muddles the statistic.
+Windows might have fewer downloaders than any statistic says, because TBB for Linux and macOS claims, that it is Windows, which muddles the statistic.
 
 == What does "Anonymous Proxy" in sourceforge.net statistics mean? ==
 Sourceforge support, ctsai-sf on freenode in #sourceforge said, they use GeoIP for country detection and browser agent for operating system and browser. GeoIP, according to its website <ref>

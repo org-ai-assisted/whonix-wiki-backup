@@ -5,7 +5,7 @@ Please follow these steps to install {{project_name_short}} {{{flavor_case_sensi
 }} {{javascript-looks-better-with-javascript}} {{Anchor|Landing}}
 {{Box|text=
 == {{IconSet|h1|1}} Download {{project_name_short}} {{{flavor_case_sensitive}}} ==
-{{project_name_short}} {{{flavor_case_sensitive}}} is available for Windows, MacOS and Linux.
+{{project_name_short}} {{{flavor_case_sensitive}}} is available for Windows, macOS and Linux.
 
 {{Tab
 |type=controller

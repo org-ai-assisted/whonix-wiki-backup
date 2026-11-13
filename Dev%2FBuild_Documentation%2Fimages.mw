@@ -298,7 +298,7 @@ Multiple build targets can also be selected simultaneously.
 
 | '''D)'''
 | UTM with QEMU <ref>
-* [[MacOS#M1]]
+* [[MacOS#M1|macOS]]
 * https://forums.whonix.org/t/whonix-on-mac-m1-arm/11310
 </ref>
 | Developers only, <code>--arch <u>arm64</u></code>.

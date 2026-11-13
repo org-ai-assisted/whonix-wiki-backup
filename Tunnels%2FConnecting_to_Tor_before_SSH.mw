@@ -29,7 +29,7 @@ Note that even though SSH supports SOCKS5, SSH is still not able to forward UDP 
 
 Another possible, untested method may be [https://github.com/apenwarr/sshuttle sshuttle] ([https://sshuttle.readthedocs.io/en/stable/ stable documentation]). <ref><blockquote>As far as I know, sshuttle is the only program that solves the following common case:
 
-* Your client machine (or router) is Linux, MacOS, FreeBSD, OpenBSD or pfSense.
+* Your client machine (or router) is Linux, macOS, FreeBSD, OpenBSD or pfSense.
 * You have access to a remote network via ssh.
 * You don't necessarily have admin access on the remote network.
 * The remote network has no VPN, or only stupid/complex VPN protocols (IPsec, PPTP, etc). Or maybe you are the admin and you just got frustrated with the awful state of VPN tools.
