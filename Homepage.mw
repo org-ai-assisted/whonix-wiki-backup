@@ -99,7 +99,7 @@ intro=Whonix gives your desktop
 {{#darkband}}
 [[File:Whonix-concept-illustration.png|720px|center|link=|alt=Whonix architecture - applications run inside a virtual machine, with all Internet traffic forced through the Tor network]]
 
-Whonix handles all your activity in a virtual machine, forcing all Internet traffic through the [[Why does Whonix use Tor|Tor network]], providing [[Reliable IP Hiding|reliable IP hiding]] and the strongest protection for your [[Data Collection Techniques#IP Address|IP address]].
+{{Align|middle|Whonix handles all your activity in a virtual machine, forcing all Internet traffic through the [[Why does Whonix use Tor|Tor network]], providing [[Reliable IP Hiding|reliable IP hiding]] and the strongest protection for your [[Data Collection Techniques#IP Address|IP address]].}}
 
 <span id="security"></span>
 == Fully Featured with Advanced Security Components ==
@@ -148,6 +148,7 @@ Whonix handles all your activity in a virtual machine, forcing all Internet traf
 <span id="upcoming"></span>
 == Upcoming Security Enhancements ==
 {{#darkband}}
+{{Align|middle|
 * {{kicksecure_wiki|wikipage=Vm-app-manager|text=vm-app-manager}} -- Virtualization-powered application sandbox that runs each application inside its own hardened virtual machine for strong isolation.
 * {{kicksecure_wiki|wikipage=Apparmor-profile-everything|text=Full system Mandatory Access Control (MAC)}} -- Full system Mandatory Access Control (MAC) policy - "AppArmor for everything".
 * [https://forums.whonix.org/t/untrusted-root-does-it-make-sense-to-try-to-improve-security-by-restricting-root/7998 Untrusted Root User] -- Restrict root to reduce the impact of compromise.
@@ -155,6 +156,7 @@ Whonix handles all your activity in a virtual machine, forcing all Internet traf
 * [https://github.com/Kicksecure/hardened-kernel Hardened Linux Kernel] -- Hardened Linux Kernel.
 * [https://forums.whonix.org/t/use-codecrypt-to-sign-whonix-releases/7844/2 Post-quantum resistance] -- Post-quantum resistant signing of releases.
 * {{kicksecure_wiki|wikipage=Noexec|text=Mount Options Hardening}} -- Mount options hardening (noexec, nosuid among other options).
+}}
 
 <span id="contribute"></span>
 == Join the team! ==
