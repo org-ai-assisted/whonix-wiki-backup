@@ -125,10 +125,12 @@ __TOC__
 
 = Introduction =
 
-[[File:Whonix-logo-rectangle.png|thumb|130px|border|alt={{project_name_short}} rectangular logo|[[Dev/Logo|{{project_name_short}} rectangular logo]]]]
-[[File:Kicksecure-seal.png|thumb|130px|border|alt=Kicksecure seal|Kicksecure Hardened]]
-[[File:Debian.png|thumb|130px|border|alt=Debian logo|Debian logo]]
-[[File:Tor-logo.png|thumb|130px|border|alt=Tor logo|Tor logo]]
+{{ThumbGallery|mode=logos|
+[[File:Whonix-logo-standard.svg|thumb|130px|alt={{project_name_short}} logo|[[Dev/Logo|{{project_name_short}} logo]]]]
+[[File:Kicksecure-seal.png|thumb|130px|alt=Kicksecure seal|Kicksecure Hardened]]
+[[File:Debian.png|thumb|130px|alt=Debian logo|Debian logo]]
+[[File:Tor-logo.png|thumb|130px|alt=Tor logo|Tor logo]]
+}}
 '''{{project_name_short}} is a free and open-source desktop {{os}}''' that is specifically designed for [https://www.whonix.org/#security advanced security and privacy]. It's based on the [https://torproject.org Tor] anonymity network, security-focused Linux Distribution {{Kicksecure_link
 |
 |Kicksecure
