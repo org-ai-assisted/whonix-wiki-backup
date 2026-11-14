@@ -4,9 +4,7 @@ Bug Reports, Software Development and Feature Requests
 }}
 {{#seo:
 |description=How to Report (Security) Bugs in the {{project_name_long}} Operating System. Software development cycle, patches, and responsiveness to feedback and feature requests.
-|image=Ladybug-156624-640.png
 }}
-[[File:Ladybug-156624-640.png|250px|thumb]]
 {{intro|
 How to Report (Security) Bugs in the {{project_name_short}} Operating System. Software development cycle, patches, and responsiveness to feedback and feature requests.
 }}

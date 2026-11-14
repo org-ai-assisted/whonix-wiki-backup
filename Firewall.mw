@@ -1,9 +1,7 @@
 {{Header}}
 {{#seo:
 |description=General information about the {{project_name_short}} firewall.
-|image=Firewall146529640.png
 }}
-[[File:Firewall146529640.png|thumb|200px]]
 {{intro|
 General information about the {{project_name_short}} firewall.
 

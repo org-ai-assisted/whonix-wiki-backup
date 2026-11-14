@@ -4,10 +4,8 @@ Install Additional Software Safely
 }}
 {{#seo:
 |description=Installing additional software on {{project_name_short}}. Security considerations.
-|image=Software-871026-640.jpg
 }}
 {{release_mininav}}
-[[File:Software-871026-640.jpg|thumb|200px]]
 {{intro|
 This wiki page provides guidance on how to install additional software on the {{project_name_long}} operating system using security best practices,
 }}

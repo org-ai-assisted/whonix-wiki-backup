@@ -1,9 +1,7 @@
 {{Header}}
 {{#seo:
 |description=The journey of {{project_name_long}} from TorBOX to aos to {{project_name_long}}.
-|image=Pen-1035081640.jpg
 }}
-[[File:Pen-1035081640.jpg|thumb|The pen, a metaphor for the journey of {{project_name_long}}'s development.]]
 {{intro|A chronicle of the evolution of {{project_name_short}} from its inception as TorBOX, through its transition to aos, and ultimately to the establishment of {{project_name_short}}.}}
 
 = Brief {{project_name_short}} History =

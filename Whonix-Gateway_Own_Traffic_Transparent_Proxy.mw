@@ -4,9 +4,7 @@
 }}
 {{#seo:
 |description=Getting Transparent Proxying working for traffic originating from {{project_name_gateway_short}} itself.
-|image=Traffic-332857640.jpg
 }}
-[[File:Traffic-332857640.jpg|thumb]]
 {{intro|
 Getting Transparent Proxying working for traffic originating from {{project_name_gateway_short}} itself.
 }}

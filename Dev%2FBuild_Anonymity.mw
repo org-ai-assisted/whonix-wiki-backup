@@ -4,9 +4,7 @@ Build Anonymity
 }}
 {{#seo:
 |description=Staying anonymous while building {{project_name_long}} from source code.
-|image=Building-1089861640.jpg
 }}
-[[File:Building-1089861640.jpg|thumb]]
 {{intro|
 Staying anonymous while building {{project_name_short}} from source code.
 }}

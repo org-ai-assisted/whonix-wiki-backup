@@ -4,10 +4,8 @@ Design Documentation
 }}
 {{#seo:
 |description=Technical Design and Conception of the {{project_name_short}} Anonymous Operating System.
-|image=Magic-cube-378543640.jpg
 }}
 {{tech_intro_mininav}}
-[[File:Magic-cube-378543640.jpg|thumb]]
 {{intro|
 Technical Design and Conception of the {{project_name_long}} Anonymous Operating System.
 }}

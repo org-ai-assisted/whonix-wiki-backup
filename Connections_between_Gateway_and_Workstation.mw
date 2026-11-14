@@ -1,13 +1,11 @@
 {{Header}}
 {{#seo:
 |description=Authenticated / Encrypted Connections between {{project_name_gateway_long}} and {{project_name_workstation_long}}, ARP spoofing defense, SSH, OpenVPN, Using additional (isolated) network interfaces. Remote {{project_name_gateway_long}}.
-|image=Binary-503583640.jpg
 }}
 {{Title|title=
 Connections between {{project_name_gateway_short}} and {{project_name_workstation_short}}
 }}
 {{complex_networking_mininav}}
-[[File:Binary-503583640.jpg|thumb|200px]]
 {{intro|
 Authenticated / Encrypted Connections between {{project_name_gateway_short}} and {{project_name_workstation_short}}, ARP spoofing defense, SSH, OpenVPN, Using additional (isolated) network interfaces. Remote {{project_name_gateway_short}}.
 }}

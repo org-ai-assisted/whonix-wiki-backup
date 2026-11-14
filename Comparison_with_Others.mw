@@ -4,10 +4,8 @@ Anonymity Operating System Comparison - {{project_name_short}} vs Tails vs Tor B
 }}
 {{#seo:
 |description=Comparison of {{project_name_long}}, Tails, Tor Browser Bundle, QubesOS TorVM and corridor. About anonymity, privacy, security, circumvention, attacks, fingerprinting, usability, features, etc.
-|image=Balance-154516-640.png
 }}
 {{tech_intro_mininav}}
-[[File:Balance-154516-640.png|thumb]]
 {{intro|
 This page contains a detailed comparison of {{project_name_short}}, Tails, Tor Browser, Qubes OS TorVM and corridor.
 }}

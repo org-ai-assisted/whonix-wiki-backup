@@ -29,10 +29,8 @@ The Introduction chapter of this website is forked from the Tails trust page, fr
 Placing Trust in {{project_name_short}}
 }} {{#seo:
 |description=Is {{project_name_short}} trustworthy? Is there a backdoor in {{project_name_short}}? How does {{project_name_short}} protect itself from backdoors?
-|image=Candle-335965-640.jpg
 }}
 {{audit_mininav}}
-[[File:Candle-335965-640.jpg|thumb|200px]]
 {{intro|
 Is {{project_name_short}} trustworthy? Is there a backdoor in {{project_name_short}}? How does {{project_name_short}} protect itself from backdoors?
 }}

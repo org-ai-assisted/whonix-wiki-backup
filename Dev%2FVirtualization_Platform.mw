@@ -4,13 +4,11 @@
 {{Header}}
 {{#seo:
 |description=Development Notes about existing Virtualizers Support by {{project_name_short}} as well as ports to new Virtualizers. VirtualBox, QEMU, KVM, VMware, etc.
-|image=Background-1126047640.jpg
 }}
 {{ports_mininav}}
 {{intro|
 Development Notes about existing Virtualizers Support by {{project_name_short}} as well as ports to new Virtualizers. VirtualBox, QEMU, KVM, VMware, etc.
 }}
-[[File:Background-1126047640.jpg|thumb]]
 = Introduction =
 {{project_name_short}} is officially supported on the following platforms:
 

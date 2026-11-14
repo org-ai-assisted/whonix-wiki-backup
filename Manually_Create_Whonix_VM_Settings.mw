@@ -1,9 +1,7 @@
 {{Header}}
 {{#seo:
 |description=Only got a backup of .vdi virtual machine hard disk files? Want to restore them? That's what this page is for.
-|image=Grinder-961034640.jpg
 }}
-[[File:Grinder-961034640.jpg|thumb]]
 {{intro|
 * Only got a backup of <code>.vdi</code> virtual machine hard disk files? Want to restore them? That's what this page is for.
 * Want to create a backup of {{project_name_long}}? See [[Backup VMs|Backup {{project_name_long}} VMs]] instead.

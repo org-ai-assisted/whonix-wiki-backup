@@ -2,9 +2,7 @@
 {{Header}}
 {{#seo:
 |description=Security by Isolation. Using {{project_name_long}} with Physical Isolation on Bare Metal for Better Security.
-|image=Digital-art-191226640.jpg
 }}
-[[File:Digital-art-191226640.jpg|thumb]]
 {{intro|
 Security by Isolation. Using {{project_name_short}} with Physical Isolation on Bare Metal for Better Security.
 }}

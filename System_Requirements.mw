@@ -4,13 +4,11 @@
 }}
 {{#seo:
 |description=System Requirements for {{project_name_long}}
-|image=Banner-904887-640.jpg
 }}
 <div class="mininav">
 * [[System Requirements|System Requirements]]
 * [[RAM|RAM System Requirements and Advice for Systems with Low RAM]]
 </div>
-[[File:Banner-904887-640.jpg|thumb]]
 {{intro|
 System Requirements for {{project_name_short}}
 }}

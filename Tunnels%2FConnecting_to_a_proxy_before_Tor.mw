@@ -4,9 +4,7 @@ title=Connecting to a Proxy before Tor
 }}
 {{#seo:
 |description=Instructions on how to connect to a proxy before Tor. (User &rarr; proxy &rarr; Tor &rarr; Internet)
-|image=Lightning-199651640.jpg
 }}
-[[File:Lightning-199651640.jpg|thumb|350px]]
 {{intro|
 Instructions on how to connect to a proxy before Tor.
 

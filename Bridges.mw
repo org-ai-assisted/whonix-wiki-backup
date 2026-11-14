@@ -34,7 +34,6 @@ Configure (Private) (Obfuscated) Tor Bridges
 }}
 {{#seo:
 |description=Censorship Circumvention. Get around network bans. Using {{project_name_short}} with (private) (obfuscated) bridges. Useful in case your Internet Service Provider (ISP) bans or throttles connections to the Tor public network.
-|image=Black-and-white-50272-640.jpg
 }}
 <div class="mininav">
 * [[Network_Obstacle|Network Obstacle]]

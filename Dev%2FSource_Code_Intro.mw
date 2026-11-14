@@ -1,7 +1,6 @@
 {{Header}}
 {{#seo:
 |description=Introduction into {{project_name_short}} source code.
-|image=Accept-47587640.png
 }}
 {{title|title=
 {{project_name_short}} Source Code Introduction

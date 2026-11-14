@@ -1,7 +1,6 @@
 {{Header}}
 {{#seo:
 |description=Instructions on how to set up a {{project_name_long}} Download Mirror
-|image=Hosting-13348640.jpg
 }}
 {{title|title=
 Hosting a {{project_name_short}} Mirror
@@ -9,7 +8,6 @@ Hosting a {{project_name_short}} Mirror
 {{intro|
 Instructions on how to set up a {{project_name_short}} Download Mirror
 }}
-[[File:Hosting-13348640.jpg|thumb]]
 = New Mirrors =
 Currently not looking for mirrors.
 

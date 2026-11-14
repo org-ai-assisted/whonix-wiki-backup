@@ -1,9 +1,7 @@
 {{Header}} __NOINDEX__
 {{#seo:
 |description=grsecurity installation instructions
-|image=Padlocks-597815640.jpg
 }}
-[[File:Padlocks-597815640.jpg|thumb]]
 {{archived}}
 = Grsecurity + Pax =
 

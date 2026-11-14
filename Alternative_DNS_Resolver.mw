@@ -4,9 +4,7 @@ Alternative DNS Resolver
 }}
 {{#seo:
 |description=Authenticated/Encrypted DNS over Tor, DNSSEC over Tor, DNSCrypt by OpenDNS, httpsdnsd by JonDos
-|image=Connect-20333640.jpg
 }}
-[[File:Connect-20333640.jpg|thumb|200px]]
 {{intro|
 Authenticated/Encrypted DNS over Tor, DNSSEC over Tor, DNSCrypt by OpenDNS, httpsdnsd by JonDos
 }}

@@ -1,9 +1,7 @@
 {{Header}}
 {{#seo:
 |description=Anonymously host any server with {{project_name_long}} and Tor onion services
-|image=Fly-agaric808110640.jpg
 }}
-[[File:Fly-agaric808110640.jpg|thumb]]
 <div class="mininav">
 * [[Onion Services]]
 * [[Hosting Location Hidden Services]]

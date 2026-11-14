@@ -4,9 +4,7 @@ Verify {{project_name_long}} Virtual Machine Images in Windows
 }}
 {{#seo:
 |description=Instructions for OpenPGP Verification of {{project_name_short}} Images using Windows
-|image=Approved-29149640.png
 }}
-[[File:Approved-29149640.png|250px|thumbnail]]
 {{intro|
 Instructions for OpenPGP Verification of {{project_name_short}} Images using Windows
 }}

@@ -4,9 +4,7 @@ title=Combining Tunnels with Tor
 }}
 {{#seo:
 |description=Information on and how-to combine Tor with tunnels such as VPN, SSH, or proxies. Covers whether this makes Tor more or less secure. (User &rarr; Tor &rarr; proxy/VPN/SSH &rarr; Internet) (User &rarr; proxy/VPN/SSH &rarr; Tor &rarr; Internet)
-|image=Beyond-1087922640.jpg
 }}
-[[File:Beyond-1087922640.jpg|thumb]]
 {{intro|
 Information on and how-to combine Tor with tunnels such as VPN, SSH, or proxies. Covers whether this makes Tor more or less secure. (User &rarr; Tor &rarr; proxy/VPN/SSH &rarr; Internet) (User &rarr; proxy/VPN/SSH &rarr; Tor &rarr; Internet)
 }}
