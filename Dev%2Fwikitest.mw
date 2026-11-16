@@ -883,7 +883,7 @@ Below is a mininav with the class for 2 lines and with the special dark look cla
 Mininav with info paragraph
 
 <div class="mininav">
-This navigation is special
+Example Navigation Title
 * [[About]]
 * [[FAQ]]
 </div>
@@ -891,7 +891,7 @@ This navigation is special
 Mininav with info paragraph and mn-dark
 
 <div class="mininav mn-dark">
-This navigation is special
+Example Navigation Title
 * [[About]]
 * [[FAQ]]
 </div>

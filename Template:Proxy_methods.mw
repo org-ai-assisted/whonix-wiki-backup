@@ -2,6 +2,7 @@ There are 3 different ways to configure an additional proxy.
 
 '''<code>User</code> &rarr; <code>Tor</code> &rarr; <code>Proxy</code> &rarr; <code>Internet</code>'''
 <div class="mininav">
+Proxy Connection Methods
 * [[Tunnels/Connecting to Tor before a proxy/Proxy Settings Method|Proxy Settings Method]]
 * [[Tunnels/Connecting to Tor before a proxy/Proxyfier Method|Proxyfier Method]]
 * [[Tunnels/Connecting to Tor before a proxy/Transparent Proxying Method|Transparent Proxying Method]]

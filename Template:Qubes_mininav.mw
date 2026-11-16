@@ -1,4 +1,5 @@
 <div class="mininav">
+Qubes-{{project_name_short}}
 * [[Qubes|Qubes-Whonix: Introduction]]
 * [[Qubes/Install|Installation]]
 * [[Qubes/Reinstall|Re-Installation]]

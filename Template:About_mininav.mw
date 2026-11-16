@@ -1,4 +1,5 @@
 <div class="mininav">
+About {{project_name_short}}
 * [[What we do|Project Activities]]
 * [[Reasons_for_Freedom_Software|Why Freedom Software / Open Source]]
 * [[Contributors|Contributors]]

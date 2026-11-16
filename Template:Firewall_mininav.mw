@@ -1,4 +1,5 @@
 <div class="mininav">
+Firewall
 * [[Host_Firewall|Host (or <code>dom0</code>) Firewall]]
 * [[Whonix-Gateway Firewall]]
 * [[Whonix-Workstation Firewall]]

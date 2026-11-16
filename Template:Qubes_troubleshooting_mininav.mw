@@ -1,4 +1,5 @@
 <div class="mininav">
+Qubes-{{project_name_short}} Troubleshooting
 * [[Troubleshooting#Connectivity Troubleshooting|Connectivity Troubleshooting]]
 * [[Troubleshooting#General Troubleshooting|General Troubleshooting]]
 * [[Qubes/Troubleshooting|{{q_project_name_long}} Tor Connectivity and sdwdate Troubleshooting]]
