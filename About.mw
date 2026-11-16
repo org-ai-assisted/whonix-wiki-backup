@@ -52,10 +52,7 @@ Technical readers can refer to the [[Dev/Technical_Introduction|{{project_name_s
 |text=
 <h2>Superior Internet Privacy</h2>
 <p>
-{{project_name_short}} is a free and open-source desktop {{os}} that is specifically designed for [https://www.whonix.org/#security advanced security and privacy]. It's based on the [https://torproject.org Tor] anonymity network, security-focused Linux Distribution {{Kicksecure_link
-|
-|Kicksecure
-}}, GNU/Linux and the principle of security by isolation. {{project_name_short}} [[Whonix_against_Real_Attacks|defeats common attacks]] while maintaining usability.
+{{project_name_short}} is a free and open-source desktop {{os}} that is specifically designed for [https://www.whonix.org/#security advanced security and privacy]. It's based on the [https://torproject.org Tor] anonymity network, security-focused Linux Distribution [https://www.kicksecure.com/ Kicksecure], GNU/Linux and the principle of security by isolation. {{project_name_short}} [[Whonix_against_Real_Attacks|defeats common attacks]] while maintaining usability.
 </p>
 }}
 
@@ -125,10 +122,7 @@ __TOC__
 
 = Introduction =
 
-'''{{project_name_short}} is a free and open-source desktop {{os}}''' that is specifically designed for [https://www.whonix.org/#security advanced security and privacy]. It's based on the [https://torproject.org Tor] anonymity network, security-focused Linux Distribution {{Kicksecure_link
-|
-|Kicksecure
-}}, GNU/Linux and the principle of security by isolation.
+'''{{project_name_short}} is a free and open-source desktop {{os}}''' that is specifically designed for [https://www.whonix.org/#security advanced security and privacy]. It's based on the [https://torproject.org Tor] anonymity network, security-focused Linux Distribution [https://www.kicksecure.com/ Kicksecure], GNU/Linux and the principle of security by isolation.
 
 '''{{project_name_short}} [[Whonix_against_Real_Attacks|defeats common attacks]] while maintaining usability'''. Online anonymity and censorship circumvention is attainable via fail-safe, automatic and desktop-wide use of the Tor network. This helps to protect from traffic analysis by bouncing communications around a distributed network of relays run by global volunteers. Without advanced, end-to-end, netflow correlation attacks, an adversary watching an Internet connection cannot easily determine the sites visited, and those sites cannot discover the [[Users_of_Whonix|user]]'s physical location. <ref>
 Current practical, low-latency, anonymity designs like Tor fail when the attacker can see both ends of the communication channel (traffic going into and out of the Tor network). [https://blog.torproject.org/one-cell-enough-break-tors-anonymity/ If you can see both flows], simple statistics based on data volume and timing can determine whether they match up.
@@ -140,10 +134,7 @@ Current practical, low-latency, anonymity designs like Tor fail when the attacke
 
 '''By helping [[Users_of_Whonix|users]] run applications anonymously {{project_name_short}} aims to preserve privacy and anonymity'''. A [[Tor Browser|web browser]], [[Software#Office_Suite|office suite]], and [[Software|other relevant applications]] come pre-configured with security in mind. Internet traffic by {{project_name_short}} is all routed through the Tor anonymity network.
 
-{{project_name_short}} is [[Reasons for Freedom Software|Freedom Software]] and is based on {{Kicksecure_link
-|
-|Kicksecure
-}} (security-focused Linux Distribution), Tor <ref>
+{{project_name_short}} is [[Reasons for Freedom Software|Freedom Software]] and is based on [https://www.kicksecure.com/ Kicksecure] (security-focused Linux Distribution), Tor <ref>
 https://www.torproject.org/about/overview.html.en
 </ref>, Debian GNU/Linux <ref>
 [https://en.wikipedia.org/wiki/Debian Debian Wikipedia]

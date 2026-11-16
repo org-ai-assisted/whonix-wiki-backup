@@ -78,10 +78,7 @@ Detailed [[Documentation|documentation]] has been produced by developers and the
 * [[Stream Isolation]] prevents identity correlation through circuit sharing.
 * [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TransparentProxy Transparent Proxy].
 * Whitelist Tor traffic with [[Corridor|corridor]].
-* [[File:Kicksecure-icon-logo.png|30px]] {{Kicksecure_link
-|
-|Kicksecure
-}} Hardened.
+* [[File:Kicksecure-icon-logo.png|30px]] [https://www.kicksecure.com/ Kicksecure] Hardened.
 * [https://www.whonix.org/#security Numerous security and anonymity features].
 * Strong organisational separation: Even the {{project_name_short}} project does not have access to IP connection logs. See [[Why_does_Whonix_use_Tor#Organisational_Separation|Organisational Separation]].
 * [[Keystroke_and_Mouse_Deanonymization|Keyboard keystrokes and mouse movements, clicks]] can be used to track users. To reduce behavioral tracking, {{project_name_short}} comes with [[Keystroke_and_Mouse_Deanonymization#Defenses|defenses]] by default, including [[Keystroke_and_Mouse_Deanonymization#Mouse_Fingerprinting|mouse movement anonymization]].

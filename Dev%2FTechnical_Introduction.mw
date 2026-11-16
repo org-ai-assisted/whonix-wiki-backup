@@ -18,10 +18,7 @@ Introduction into {{project_name_short}} Technical Design.
 
 {{project_name_short}} aims to be safer than Tor alone. The primary goal is that no one can find out the user's IP, location, or de-anonymize the user.
 
-{{project_name_short}} consists of two Debian ({{Kicksecure_link
-|
-|Kicksecure
-}}) based (virtual) machines (VMs), which are connected through an isolated network.
+{{project_name_short}} consists of two Debian ([https://www.kicksecure.com/ Kicksecure]) based (virtual) machines (VMs), which are connected through an isolated network.
 
 * A) One machine acts as the client or ''{{project_name_workstation_short}}'', running applications such as a browser; and
 * B) the other as a proxy or ''{{project_name_gateway_short}}'', which runs Tor and routes all {{project_name_workstation_long}} traffic through Tor.

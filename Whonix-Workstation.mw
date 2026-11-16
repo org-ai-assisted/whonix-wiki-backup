@@ -21,10 +21,7 @@ What is {{project_name_workstation_long}}?
 
 All user applications, such as [[Tor Browser]], should be launched from {{project_name_workstation_short}} to ensure they utilize the Tor network, as only Tor connections are permitted. {{project_name_workstation_short}} also provides [[Stream Isolation|stream isolation]] for many pre-installed or custom-installed applications, such as Hexchat and Thunderbird, using a dedicated Tor <code>SocksPort</code> to prevent identity correlation that may otherwise occur. {{project_name_workstation_short}} is already pre-configured for use with {{project_name_gateway_short}}.
 
-{{project_name_short}} is based on security-focused Linux Distribution {{Kicksecure_link
-|
-|Kicksecure
-}}. To learn more about {{project_name_short}}, please see the [[About|Overview]] and [[Features]] pages. <ref>
+{{project_name_short}} is based on security-focused Linux Distribution [https://www.kicksecure.com/ Kicksecure]. To learn more about {{project_name_short}}, please see the [[About|Overview]] and [[Features]] pages. <ref>
 [[Dev/Technical_Introduction|Technical Introduction]].
 </ref>
 

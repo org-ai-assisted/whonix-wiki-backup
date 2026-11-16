@@ -899,7 +899,7 @@ That said, if general instructions were found describing how to achieve this on 
 {{mbox
 | type    = notice
 | image   = [[File:Ambox_notice.png|40px|alt=Info]]
-| text    = Tor is an anonymizer developed by The Tor Project. [[Tor Browser]] is a web browser {{tpo_link||developed by the Tor Project}} which is optimized for privacy. Please do not confuse {{Code2|Tor}} with {{Code2|Tor Browser}} when conversing about {{project_name_short}} topics.
+| text    = Tor is an anonymizer developed by The Tor Project. [[Tor Browser]] is a web browser [https://www.torproject.org/ developed by the Tor Project] which is optimized for privacy. Please do not confuse {{Code2|Tor}} with {{Code2|Tor Browser}} when conversing about {{project_name_short}} topics.
 
 For differences of Tor Browser by Tor Project compared to Tor Browser in {{project_name_short}} see [[Tor_Browser#Whonix_Tor_Browser_Differences|{{project_name_short}} Tor Browser Differences]].
 }}

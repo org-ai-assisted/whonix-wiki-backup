@@ -62,7 +62,7 @@ The Subgraph OS sandbox framework is known as Oz, which is unique to the platfor
 This sensitive information could be used by attackers to deanonymize the user, <ref>
 To be fair, when this bug was reported Subgraph OS was still in Alpha status.
 </ref> but {{project_name_short}} defeats this attack and others like it. Since {{project_name_workstation_short}} (<code>{{project_name_workstation_vm}}</code>) is isolated from the host and {{project_name_gateway_long}} (<code>{{project_name_gateway_vm}}</code>), even if a malicious <code>.desktop</code> script is executed, no information can be gathered about the external IP address, hardware serials or sensitive data outside of {{project_name_workstation_short}} (<code>{{project_name_workstation_vm}}</code>). <ref>All data inside {{project_name_workstation_short}} (<code>{{project_name_workstation_vm}}</code>) would be available to the attacker and aid deanonymization.</ref> Once Subgraph developers were informed of the vulnerability, the Nautilus package was patched on the platform. <ref name=patched>
-{{Twitter_link|subgraph/status/852000407253594114|https://twitter.com/subgraph/status/852000407253594114}}
+[https://x.com/subgraph/status/852000407253594114 https://twitter.com/subgraph/status/852000407253594114]
 </ref>
 
 == P2P (2011) ==

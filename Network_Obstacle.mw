@@ -24,11 +24,7 @@ This page describes potential solutions for and the organizational background on
 |text=here
 }}.
 
-The {{tpo_link
-|subdomain=support
-|about/what-is-tor/
-|Tor
-}} software is used to establish anonymized external connections, but the {{project_name_short}} project does not maintain Tor. [[Tor#Does_Whonix_Modify_Tor.3F|The Tor package itself is also <u>not</u> modified by {{project_name_short}}.]]
+The [https://support.torproject.org/about/what-is-tor/ Tor] software is used to establish anonymized external connections, but the {{project_name_short}} project does not maintain Tor. [[Tor#Does_Whonix_Modify_Tor.3F|The Tor package itself is also <u>not</u> modified by {{project_name_short}}.]]
 
 Further, the [[Why does Whonix use Tor|reliance]] of the {{project_name_short}} platform on [[Tor]] does not imply developers are experts about the Tor software or censorship circumvention [[Bridges]].
 
@@ -48,7 +44,7 @@ In conclusion, if connectivity issues are experienced with {{project_name_short}
 | image   = [[File:Ambox_notice.png|40px|alt=Info]]
 | text    = Tip.
 
-It is recommended to always have the latest {{tpo_link|download/|<u>T</u>or <u>B</u>rowser <u>B</u>undle (TBB)}} installed outside of {{project_name_short}}.
+It is recommended to always have the latest [https://www.torproject.org/download/ <u>T</u>or <u>B</u>rowser <u>B</u>undle (TBB)] installed outside of {{project_name_short}}.
 
 * [[Non-Qubes-Whonix|{{non_q_project_name_short}}]] users: It is recommended to always have TBB installed on the host operating system (OS) or on Debian (preferably) (inside a VM).
 * [[Qubes|{{q_project_name_long}}]] users: It is recommended to always have TBB installed in an App Qube based on a non-{{project_name_short}} Template, i.e. in a Template that is different from {{project_name_short}}.

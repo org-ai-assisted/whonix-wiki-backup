@@ -763,10 +763,7 @@ Not using strict-list-columns because the list is too long to be broken.
 |wikipage=Live_Mode
 |text=Boot an existing Debian Host into Live Mode
 }}
-* [[File:Kicksecure-icon-logo.png|30px]] {{Kicksecure_link
-|
-|Security Hardened Linux Distribution {{Kicksecure}} (based on Debian)
-}}
+* [[File:Kicksecure-icon-logo.png|30px]] [https://www.kicksecure.com/ Security Hardened Linux Distribution {{Kicksecure}} (based on Debian)]
 * [[Edward_Snowden_on_Whonix|Edward Snowden on Whonix]]
 <div></div>
 * Feature Requests
