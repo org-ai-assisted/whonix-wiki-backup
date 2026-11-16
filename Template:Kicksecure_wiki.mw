@@ -1,4 +1,4 @@
-[[File:Kicksecure-wiki-link-icon.png|class=link-icon|link=|alt=]] {{ExtLink
+[[File:Kicksecure-wiki-link-icon.png|class=link-icon|link=|alt=Kicksecure wiki]] {{ExtLink
 |text={{{text|missing-text-variable}}}
-|1=https://www.kicksecure.com/wiki/{{#replace:{{{wikipage|missing-wikipage-variable}}}| |_}}
+|1={{#onionize:https://www.kicksecure.com/wiki/{{#replace:{{{wikipage|missing-wikipage-variable}}}| |_}}}}
 }}
