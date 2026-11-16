@@ -28,6 +28,16 @@ intro=Whonix gives your desktop
 
 {{Align|middle|<span class="hero-learn">Learn [[About|What Is Whonix?]]</span>}}
 
+<div class="built-on-label">Built on free software</div>
+{{ThumbGallery|mode=logos|
+[[File:Kicksecure-seal.png|thumb|120px|alt=Kicksecure seal|Kicksecure]]
+[[File:Debian.png|thumb|120px|alt=Debian logo|Debian]]
+[[File:Tor-logo.png|thumb|120px|alt=Tor logo|Tor]]
+[[File:Linuxkerneltux.png|thumb|120px|alt=Linux kernel logo|Linux]]
+[[File:Heckert_gnu.big.png|thumb|120px|alt=GNU logo|GNU]]
+[[File:Osi_standard_logo_0.png|thumb|120px|alt=OSI logo|OSI]]
+}}
+
 <span id="download"></span>
 == Download, Install, Run - [[Reasons for Freedom Software|100% FREE]] ==
 {{#downloadgrid:intro=Whonix runs like an app inside your operating system, keeping you safe and anonymous. Whonix is available for:|items=
