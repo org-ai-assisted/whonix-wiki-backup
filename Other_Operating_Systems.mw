@@ -88,7 +88,7 @@ Save.
 
 Start Tor Browser.
 
-The following links for removing and changing proxy settings do not apply one-to-one for Windows! [[#Remove Proxy Settings|Removal]] of proxy settings is best avoided, while [[#Change Proxy Settings|changing]] proxy settings is a better choice.
+The following links for removing and changing proxy settings do not apply one-to-one for Windows! [[Tor_Browser/Advanced_Users#Remove Proxy Settings|Removal]] of proxy settings is best avoided, while [[Tor_Browser/Advanced_Users#Change Proxy Settings|changing]] proxy settings is a better choice.
 
 How this is accomplished on Windows is currently undocumented, but user contributions to finish these instructions are most welcome.
 
