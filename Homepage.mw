@@ -30,8 +30,8 @@ intro=Whonix gives your desktop
 
 <div class="built-on-label">Built on Free Software</div>
 {{ThumbGallery|mode=logos|
-[[File:Kicksecure-seal.png|thumb|120px|alt=Kicksecure seal|link=https://www.kicksecure.com|Kicksecure]]
-[[File:Debian.png|thumb|120px|alt=Debian logo|link=About#Based on Debian|Debian]]
+[[File:Kicksecure-seal.png|thumb|120px|alt=Kicksecure seal|link=Based on Kicksecure|Kicksecure]]
+[[File:Debian.png|thumb|120px|alt=Debian logo|link=Based on Debian|Debian]]
 [[File:Tor-logo.png|thumb|120px|alt=Tor logo|link=Why does Whonix use Tor|Tor]]
 [[File:Linuxkerneltux.png|thumb|120px|alt=Linux kernel logo|link=Kernel|Linux]]
 [[File:Heckert_gnu.big.png|thumb|120px|alt=GNU logo|link=Reasons for Freedom Software|GNU]]
