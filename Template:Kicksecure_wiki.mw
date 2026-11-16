@@ -1,4 +1,4 @@
-[[File:Kicksecure-wiki-link-icon.png|class=kicksecure-wiki-link-icon|link={{#onionize:https://www.kicksecure.com/wiki/{{#replace:{{{wikipage|missing-wikipage-variable}}}| |_}}}}|alt=Kicksecure logo|{{project_name_short}} is based on {{kicksecure}}. Therefore see the following instructions in the {{kicksecure}} wiki.]] {{ExtLink
+[[File:Kicksecure-wiki-link-icon.png|class=link-icon|link=|alt=]] {{ExtLink
 |text={{{text|missing-text-variable}}}
 |1=https://www.kicksecure.com/wiki/{{#replace:{{{wikipage|missing-wikipage-variable}}}| |_}}
 }}
