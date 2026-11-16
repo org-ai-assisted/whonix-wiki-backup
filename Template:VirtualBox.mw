@@ -82,7 +82,7 @@ For {{project_name_short}} VirtualBox import instructions, please press the lear
 <div class="mw-collapsible-content">
 '''Follow these steps to import {{project_name_short}} into VirtualBox. Click images to enlarge'''
 
-<gallery widths="300px" heights="215px">
+<gallery widths="300px" heights="215px" class="gallery-steps">
 OpenVirtualbox1.png|{{IconSet|h2|1}} '''Start VirtualBox'''
 Select_Import2.png|{{IconSet|h2|2}} '''Click on <u>File</u> then choose <u>Import Appliance...</u>'''
 Select_whonix_ova_image3.png|{{IconSet|h2|3}} '''Navigate and select {{project_name_short}} image and press <u>next</u>'''
