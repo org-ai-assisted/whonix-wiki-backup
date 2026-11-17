@@ -620,26 +620,18 @@ File:Debian.png|thumb|100px|Debian logo
 File:Linuxkerneltux.png|thumb|100px|Linux logo
 </gallery>
 
-== Github_link Template ==
+== Github links ==
 
-# <code><nowiki>{{Github_link|repo=tirdad}}</nowiki></code>
-#* Expected: gituser set to {{project_name_short}}, auto text set to "Kicksecure GitHub tirdad repository"
-#* Result: {{Github_link|repo=tirdad}}
-# <code><nowiki>{{Github_link}}</nowiki></code>
-#* Expected: gituser set to {{project_name_short}}, no repo, text set to "{{project_name_short}} GitHub"
-#* Result: {{Github_link}}
-# <code><nowiki>{{Github_link|gituser=debian|repo=apt}}</nowiki></code>
-#* Expected: gituser set to debian, auto text set to "debian GitHub apt repository"
-#* Result: {{Github_link|gituser=debian|repo=apt}}
-# <code><nowiki>{{Github_link|gituser=debian|repo=apt|path=/tree/main/test}}</nowiki></code>
-#* Expected: gituser set to debian, auto text set to "debian GitHub apt repository subpath"
-#* Result: {{Github_link|gituser=debian|repo=apt|path=/tree/main/test}}
-# <code><nowiki>{{Github_link|repo=tirdad|text=Check out our tirdad repo!}}</nowiki></code>
-#* Expected: gituser set to {{project_name_short}}, text set to "Check out our tirdad repo!"
-#* Result: {{Github_link|repo=tirdad|text=Check out our tirdad repo!}}
-# <code><nowiki>{{Github_link|path=/?q=apparmor&type=all&language=&sort=}}</nowiki></code>
-#* Expected: gituser set to {{project_name_short}}, auto text set to "{{project_name_short}} GitHub subpath"
-#* Result: {{Github_link|path=/?q=apparmor&type=all&language=&sort=}}
+Plain github.com links are auto-upgraded (owner/repo pill); a labeled external link stays labeled.
+
+# https://github.com/Kicksecure/tirdad
+#* Result: repo pill linking to the tirdad repository
+# https://github.com/debian/apt
+#* Result: repo pill linking to debian's apt repository
+# https://github.com/debian/apt/tree/main/test
+#* Result: repo pill plus subpath link
+# [https://github.com/Kicksecure/tirdad Check out our tirdad repo!]
+#* Result: labeled link (no pill)
 
 == GoogleOff (Template) ==
 
@@ -1439,15 +1431,11 @@ Non-responsive behavior (stays right and keeps size)
 
 <div class="vspacer-10"></div>
 
-== VideoLink ==
+== Videos ==
 
 Video should be available on all 3 given platforms (click icons)
 
-{{VideoLink|videoid=6nHufztdkUI|text=Test video}}
-
-Video style subtle
-
-{{VideoLink|style=subtle|videoid=6nHufztdkUI|text=Test video}}
+[https://www.youtube.com/watch?v=6nHufztdkUI Test video]
 
 == Vspacer template ==
 
