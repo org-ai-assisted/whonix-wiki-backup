@@ -97,7 +97,7 @@ Source Code
 * torbrowser: added --clearnet option. Uses torproject.org clearnet domain instead of torprojects Tor onion service (hs). Useful in case the hs
 * Tor Browser Update and Start script: Will no longer show a browser error when whonixcheck (rawdog) hasn't fetched {{project_name_short}} News blog already. Wil
 * {{project_name_short}} torbrowser Start and Update script now reads /etc/systemcheck.d/30_torbrowser_default which can contain the language setting
-* torbrowser: updated forum link to [[Special:AWCforum]]
+* torbrowser: updated forum link
 
 Source Code
 
