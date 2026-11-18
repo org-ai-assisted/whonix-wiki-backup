@@ -323,7 +323,7 @@ sudo systemctl restart lightdm
 
 '''4.''' Check lightdm log.
 
-[[#Check Systemd Journal Log of Current Boot|Check Systemd Journal Log of Current Boot]] for lightdm.
+[[Troubleshooting#Check Systemd Journal Log of Current Boot|Check Systemd Journal Log of Current Boot]] for lightdm.
 
 For convenient reading of the log, it can be dumped to file. For example, the following command would write the log to file <code>~/lightdm-log</code>.
 
@@ -336,7 +336,7 @@ sudo journalctl -b -u lightdm > ~/lightdm-log
 
 Alternatively it is possible to reboot, but first you need to [[#Enable Persistent Systemd Journal Log|Enable Persistent Systemd Journal Log]].
 
-[[#Check Systemd Journal Log of Previous Boot|Check Systemd Journal Log of Previous Boot]]
+[[Troubleshooting#Check Systemd Journal Log of Previous Boot|Check Systemd Journal Log of Previous Boot]]
 
 {{CodeSelect|code=
 sudo journalctl -b -1 -u lightdm
