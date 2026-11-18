@@ -50,7 +50,7 @@ Requirements:
 
 Build limitations:
 
-* needs Debian bookworm or above because of minihttps://www.whonix.org/w/index.php?title=Dev/Windows_Installer&stable=0mal wixl and lazarus version
+* needs Debian bookworm or above because of minimal wixl and lazarus version
 
 = flow chart =
 (1) Whonix-Starter:

@@ -933,7 +933,7 @@ Since most distributions have it, this is considered minimum criteria. If not av
 | <!-- openSUSE --> Higher
 | <!-- GNU Guix --> Higher
 | <!-- Gentoo --> Lower. Unreliable. <ref>
-* Initially anonymously contributed: https://www.whonix.org/w/index.php?title=Dev%2FOperating_System&diff=104399&oldid=104274
+* Initially anonymously contributed (production revision 104274).
 * Not a priority for {{project_name_short}}.
 </ref>
 |-

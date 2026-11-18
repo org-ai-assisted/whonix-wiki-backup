@@ -1289,7 +1289,7 @@ If you deactive Javascript (NOJS) then the above link will send you directly to 
 
 In the TOC you will not find the notoc tabs as headlines because they are done with Template:Headline. However the functionality stays the same. And it also works for Nojs.
 
-Look in the TOC above. There is no Tab Test 11 or Tab Test 12 or 14 mentioned. But this link works : https://www.kicksecure.com/wiki/Dev/wikitest?stable=0#tab-test-14-notoc
+Look in the TOC above. There is no Tab Test 11 or Tab Test 12 or 14 mentioned. But this link works : [[Dev/wikitest#tab-test-14-notoc]]
 
 {{Tab
 |type=controller
@@ -1703,7 +1703,6 @@ current year
 * <code>SERVERNAME</code>: <code>{{SERVERNAME}}</code>
 * <code>fullurl:page_name</code>: <code>{{fullurl:page_name}}</code>
 * <code>canonicalurl:FULLPAGENAME</code>: {{canonicalurl:{{FULLPAGENAME}}}}
-* [{{canonicalurl:{{FULLPAGENAME}}|action=history&feed=atom}} atom feed]
 * <code>FULLPAGENAME</code>: {{FULLPAGENAME}}
 * <code>NAMESPACE</code>: {{NAMESPACE}}
 

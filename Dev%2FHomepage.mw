@@ -273,8 +273,8 @@ https://www.whonix.org/wiki/Dev/Homepage/17.03.2015
 = CodeSelect JavaScript Speed Issue =
 
 * [https://phabricator.whonix.org/T420 CodeSelect template / widget unusably slow on big pages]
-* https://www.whonix.org/w/index.php?title=KVM&oldid=18211 -- <nowiki>https://gtmetrix.com/reports/www.whonix.org/yJv9ZEO2</nowiki> -- 3,4 s
-* https://www.whonix.org/w/index.php?title=KVM&oldid=18786 -- <nowiki>https://gtmetrix.com/reports/www.whonix.org/tvZ0qzS5</nowiki> -- 30,6 s
+* KVM revision 18211 -- <nowiki>https://gtmetrix.com/reports/www.whonix.org/yJv9ZEO2</nowiki> -- 3,4 s
+* KVM revision 18786 -- <nowiki>https://gtmetrix.com/reports/www.whonix.org/tvZ0qzS5</nowiki> -- 30,6 s
 
 = 14.12.2021 =
 <u>To first content (readable text!) visible in video.</u>

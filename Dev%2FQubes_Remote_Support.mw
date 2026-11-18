@@ -273,7 +273,7 @@ Previously functional socat method.
 sudo socat TCP-LISTEN:22,fork EXEC:"qrexec-client-vm dom0 local.ssh"
 </pre>
 
-Last tested, functional version of this page using <code>socat</code>: https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&oldid=58559
+Last tested, functional version of this page using <code>socat</code>: https://web.archive.org/web/20250721005953/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&oldid=58559
 </ref> <ref>
 <pre>
 user@host:~$ qvm-connect-tcp
@@ -696,11 +696,11 @@ cutoff is 60 seconds.
 = Proof of Concept Documentation =
 Moved to [[Remote_Administration#Qubes_-_SSH_or_VNC_into_Qubes_dom0]].
 
-(Latest version on this page was https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&oldid=60584#Proof_of_Concept_Documentation].)
+(Latest version on this page was https://web.archive.org/web/20250721005948/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&oldid=60584#Proof_of_Concept_Documentation .)
 
 = Archive =
-* Proof of concept, tested, functional version of this page using <code>socat</code> and unauthenticated Tor onion services: https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&oldid=58559
-* Proof of concept, tested, functional version of this page using <code>qvm-connect-tcp</code>and unauthenticated Tor onion services: https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&oldid=58610
+* Proof of concept, tested, functional version of this page using <code>socat</code> and unauthenticated Tor onion services: https://web.archive.org/web/20250721005953/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&oldid=58559
+* Proof of concept, tested, functional version of this page using <code>qvm-connect-tcp</code>and unauthenticated Tor onion services: https://web.archive.org/web/20250721005944/https://www.whonix.org/w/index.php?title=Dev/Qubes_Remote_Support&oldid=58610
 
 = Footnotes =
 <references />
