@@ -6,7 +6,7 @@ Bisq: The P2P Exchange Network
 |description=How to use Bisq - The P2P Exchange Network - in {{project_name_long}}
 |image=Bisq123123.jpg
 }}
-[[File:Bisqlogo.png|Bisq Logo|thumb]]
+[[File:Bisqlogo.png|Bisq Logo|thumb|alt=]]
 {{intro|
 How to use Bisq - The P2P Exchange Network - in {{project_name_short}}
 }}
@@ -288,11 +288,11 @@ Start Bisq.
 
 '''Figure:''' ''Bisq Launch in {{project_name_short}}''
 
-[[File:Bisq.png|border]]
+[[File:Bisq.png|border|alt=Bisq startup screen in a Whonix window: synchronizing with Bitcoin Mainnet using Tor at 29 percent, hidden service published.]]
 
 '''Figure:''' ''Bisq Client'' <ref>https://docs.bisq.network/getting-started.html</ref>
 
-[[File:Bisqclient.png|border]]
+[[File:Bisqclient.png|border|alt=Bisq client Market tab showing the USD offer book with a depth chart and lists of offers to sell and buy BTC.]]
 
 After version 1.9.8, the use of DAO became mandatory for everyone and the line <code>--daoActivated=false</code> now gives an error.
 

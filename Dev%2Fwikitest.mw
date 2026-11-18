@@ -850,9 +850,9 @@ This is a mininav with one standard field, one field with an image icon, one fie
 
 <div class="mininav">
 * [[Download]]
-* [[File:Tux.png|50px|link=]] [[Verify the images using Linux|Linux using gpg]]
-* [[File:Windows_logo_-_2012.svg.png|5px|link=]] [[Verify_the_images_using_Windows|Windows using Gpg4win]]
-* [[File:rsz_osx.png|50px]] [[Verify_the_images_using_macOS|macOS using GPGTools]]
+* [[File:Tux.png|50px|link=|alt=]] [[Verify the images using Linux|Linux using gpg]]
+* [[File:Windows_logo_-_2012.svg.png|5px|link=|alt=]] [[Verify_the_images_using_Windows|Windows using Gpg4win]]
+* [[File:rsz_osx.png|50px|alt=Stylized X icon representing macOS]] [[Verify_the_images_using_macOS|macOS using GPGTools]]
 </div>
 
 Below is a mininav with the class for 2 lines and with the special dark look class mn-dark, wrapped in an info box
@@ -1086,7 +1086,7 @@ The second tab is selected (active)
 {{Tab
 |addToClass=info-box
 |title= === Number 3 ===
-|image=[[File:Logo-linux-500x500.png|25px]]
+|image=[[File:Logo-linux-500x500.png|25px|alt=]]
 |content=test3
 }}
 {{Tab
@@ -1129,7 +1129,7 @@ All link tabs below (not Title 01 and Title 02) should be actual links for js us
 {{Tab
 |title= === Title 02 ===
 |content=Title 02
-|image=[[File:Sdebian-logo.svg]]
+|image=[[File:Sdebian-logo.svg|alt=]]
 }}
 {{Tab
 |title= === Link Type 1 ===
@@ -1166,7 +1166,7 @@ The following controllers will switch in unison. In case of link-tabs (tabs whic
 |active=true
 |title= ====Section 1====
 |type=section
-|image=[[File:Logo-linux-500x500.png|25px]]
+|image=[[File:Logo-linux-500x500.png|25px|alt=]]
 |addToClass=special-look
 |content=Section 1 content
 }}
@@ -1215,7 +1215,7 @@ TODO: description
 |active=true
 |title= ====Section 1====
 |type=section
-|image=[[File:Logo-linux-500x500.png|25px]]
+|image=[[File:Logo-linux-500x500.png|25px|alt=]]
 |addToClass=special-look
 |content=Section 1 content
 }}
@@ -1388,9 +1388,9 @@ overlength table : Expand button should be to the right of the table which is al
 Below a thumb gallery with 3 thumb images. Normal mode, so it only changes to gallery mode below 540px screen width
 
 {{ThumbGallery|
-[[File:Kicksecure-basic-logo.png|thumb|100px|[[Dev/Logo|Kicksecure logo]]]]
-[[File:Debian.png|thumb|100px|Debian logo]]
-[[File:Linuxkerneltux.png|thumb|100px|Linux logo]]
+[[File:Kicksecure-basic-logo.png|thumb|100px|[[Dev/Logo|Kicksecure logo]]|alt=]]
+[[File:Debian.png|thumb|100px|Debian logo|alt=]]
+[[File:Linuxkerneltux.png|thumb|100px|Linux logo|alt=]]
 }}
 
 <div class="vspacer-10"></div>
@@ -1398,9 +1398,9 @@ Below a thumb gallery with 3 thumb images. Normal mode, so it only changes to ga
 Below a thumb gallery with 3 thumb images. mode=gallery. It should be a nice padded gallery on all sizes
 
 {{ThumbGallery|mode=gallery|
-[[File:Kicksecure-basic-logo.png|thumb|100px|[[Dev/Logo|Kicksecure logo]]]]
-[[File:Debian.png|thumb|100px|Debian logo]]
-[[File:Linuxkerneltux.png|thumb|100px|Linux logo]]
+[[File:Kicksecure-basic-logo.png|thumb|100px|[[Dev/Logo|Kicksecure logo]]|alt=]]
+[[File:Debian.png|thumb|100px|Debian logo|alt=]]
+[[File:Linuxkerneltux.png|thumb|100px|Linux logo|alt=]]
 }}
 
 Below a thumb gallery with 3 thumb images. mode=gallery justify right. It should be a nice padded gallery on all sizes. It should be justified right
@@ -1408,9 +1408,9 @@ Below a thumb gallery with 3 thumb images. mode=gallery justify right. It should
 <div class="vspacer-10"></div>
 
 {{ThumbGallery|mode=gallery|justify=right|
-[[File:Kicksecure-basic-logo.png|thumb|100px|[[Dev/Logo|Kicksecure logo]]]]
-[[File:Debian.png|thumb|100px|Debian logo]]
-[[File:Linuxkerneltux.png|thumb|100px|Linux logo]]
+[[File:Kicksecure-basic-logo.png|thumb|100px|[[Dev/Logo|Kicksecure logo]]|alt=]]
+[[File:Debian.png|thumb|100px|Debian logo|alt=]]
+[[File:Linuxkerneltux.png|thumb|100px|Linux logo|alt=]]
 }}
 
 <div class="vspacer-10"></div>
@@ -1419,14 +1419,14 @@ Below a thumb gallery with 3 thumb images. mode=gallery justify right. It should
 
 Standard behavior (jumps left and changes size when very small screen)
 
-[[File:Faq-463379640.jpg|thumb]]
+[[File:Faq-463379640.jpg|thumb|alt=]]
 
 <div class="vspacer-10"></div>
 
 Non-responsive behavior (stays right and keeps size)
 
 <div class="thumb-not-responsive">
-[[File:Faq-463379640.jpg|thumb]]
+[[File:Faq-463379640.jpg|thumb|alt=]]
 </div>
 
 <div class="vspacer-10"></div>
@@ -1542,15 +1542,15 @@ Some other text
 
 Original file
 
-[[File:Swift 128.png|thumb|100px|SWIFT]]
+[[File:Swift 128.png|thumb|100px|SWIFT|alt=]]
 
 File:Swift 128.png|thumb|100px|link=|SWIFT, wrapped in div.thumb-hide-enlarge
 
-<div class="thumb-hide-enlarge">[[File:Swift 128.png|thumb|100px|link=|SWIFT]]</div>
+<div class="thumb-hide-enlarge">[[File:Swift 128.png|thumb|100px|link=|SWIFT|alt=]]</div>
 
 File:Swift 128.png|thumb|100px|link=|class=hide-enlarge|SWIF
 
-[[File:Swift 128.png|thumb|100px|link=|class=hide-enlarge|SWIFT]]
+[[File:Swift 128.png|thumb|100px|link=|class=hide-enlarge|SWIFT|alt=]]
 
 <div class="vspacer-10"></div>
 

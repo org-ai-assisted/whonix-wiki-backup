@@ -7,7 +7,7 @@ Reliable IP Hiding - with {{project_name_long}} - The All Tor Operating System
 |image={{project_name_short}}-concept-detailed.jpg
 }}
 {{audit_mininav}}
-[[File:{{project_name_short}}-concept-detailed.jpg|thumb|{{project_name_short}} Architecture]]
+[[File:{{project_name_short}}-concept-detailed.jpg|thumb|{{project_name_short}} Architecture|alt=Detailed diagram of the Whonix architecture]]
 {{intro|
 {{project_name_short}} is The Everything Tor OS
 }}

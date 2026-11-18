@@ -10,7 +10,7 @@
 * [[System Requirements|System Requirements]]
 * [[RAM|RAM System Requirements and Advice for Systems with Low RAM]]
 </div>
-[[File:Lowram13241324.png|thumb|200px|Low RAM]]
+[[File:Lowram13241324.png|thumb|200px|Low RAM|alt=]]
 {{intro|
 How much RAM does {{project_name_short}} need? 8 GB of RAM would be ideal for best usability and performance when running {{project_name_short}}. However, {{project_name_short}} can also be used with a lot less RAM. 4 GB of RAM is enough.
 
@@ -38,18 +38,18 @@ Users with 4 GB of RAM or less can temporarily assign 512 MB of RAM to {{project
 {{Tab
 |active=true
 |title= == GUI ==
-|image=[[File:Clipart-gui.svg]]
+|image=[[File:Clipart-gui.svg|alt=]]
 |content=
-[[File:Gui-preview.jpg|{{project_name_short}} LXQt in VirtualBox|thumb|240px]]
+[[File:Gui-preview.jpg|{{project_name_short}} LXQt in VirtualBox|thumb|240px|alt=Oracle VirtualBox window titled Kicksecure-LXQt running, showing a purple-to-blue LXQt desktop with Computer, Trash and user home icons.]]
 * {{project_name_short}} LXQt:
 ** {{project_name_gateway_short}} LXQt - 1280 MB RAM and 128 MB VRAM.
 ** {{project_name_workstation_short}} LXQt - 2048 MB RAM and 128 MB VRAM.
 }}
 {{Tab
 |title= == CLI ==
-|image=[[File:Utilities-terminal.png|50px]]
+|image=[[File:Utilities-terminal.png|50px|alt=]]
 |content=
-[[File:Cli-preview.jpg|{{project_name_short}} CLI in VirtualBox|thumb|240px]]
+[[File:Cli-preview.jpg|{{project_name_short}} CLI in VirtualBox|thumb|240px|alt=VirtualBox window running Kicksecure-CLI showing the welcome text with the default username and password.]]
 
 * {{project_name_short}} CLI:
 ** {{project_name_gateway_short}} CLI - 512 MB RAM and 16 MB VRAM.

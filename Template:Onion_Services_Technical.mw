@@ -16,4 +16,4 @@ Use of <i>.onion</i> addresses leads to a 6 relay arrangement: 3 picked by the u
 
 '''Figure:''' ''Alice (User) and Bob (Onion Service) Successful Connection'' <ref>https://2019.www.torproject.org/images/tor-onion-services-6.png</ref>
 
-[[File:Tor_Onion_Service_Connection_Success.png|600px]]
+[[File:Tor_Onion_Service_Connection_Success.png|600px|alt=Tor diagram, Hidden Services step 6: Alice connects through a rendezvous point in the Tor cloud to Bob, who uses introduction points, and they proceed over normal Tor circuits]]

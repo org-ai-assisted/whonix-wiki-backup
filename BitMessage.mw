@@ -3,7 +3,7 @@
 |description=BitMessage email alternative. Asynchronous, decentralized, encrypted communication.
 |image=Bitmessage.png
 }}
-[[File:Bitmessagelogo.png|thumb|Bitmessage Logo|border]]
+[[File:Bitmessagelogo.png|thumb|Bitmessage Logo|border|alt=]]
 {{intro|
 BitMessage email alternative. Asynchronous, decentralized, encrypted communication.
 }}
@@ -117,7 +117,7 @@ When finished, the output should appear similar to the following screenshot.
 
 '''Figure:''' ''GPG Key Importation''
 
-[[File:Bitmessage_import_gpg_key.png]]
+[[File:Bitmessage_import_gpg_key.png|alt=Terminal running gpg --recv-keys; output highlights the Peter Surda public key imported.]]
 
 '''2.''' Verify the public key fingerprint.
 
@@ -129,7 +129,7 @@ At the time of writing, the output will appear like the following screenshot.
 
 '''Figure:''' ''GPG Key Verification''
 
-[[ File:Bitmessage_verify_gpg_fingerprint.png]]
+[[ File:Bitmessage_verify_gpg_fingerprint.png|alt=Terminal running gpg --fingerprint, showing the key fingerprint and Peter Surda user IDs.]]
 
 '''3.''' Verify the git tag(s).
 
@@ -143,7 +143,7 @@ When the tag has been verified the output should show a "Good signature" similar
 
 '''Figure:''' ''Successful Verification''
 
-[[File:Bitmessage_verify_git_tag.png]]
+[[File:Bitmessage_verify_git_tag.png|alt=Terminal running git tag --verify v0.6.3; output highlights Good signature from Peter Surda.]]
 
 {{GnuPG-Warning}}
 
@@ -183,7 +183,7 @@ When BitMessage starts for the first time, this prompt will appear: <i>"Bitmessa
 
 '''Figure:''' ''BitMessage Network Settings''
 
-[[File:Bitmessage_enable_networking.png]]
+[[File:Bitmessage_enable_networking.png|alt=Bitmessage startup dialog with Let me configure special network settings first selected.]]
 
 Make the following changes:
 * Proxy type: <code>SOCKS5</code>
@@ -194,7 +194,7 @@ Press <<i>OK</i>> and the application should be fully functional.
 
 '''Figure:''' ''SOCKS5 Proxy Configuration''
 
-[[File:Bitmessage_configure_networking.png]]
+[[File:Bitmessage_configure_networking.png|alt=Bitmessage Settings Network Settings tab: SOCKS5 proxy at 127.0.0.1 port 9050, listening port 8444.]]
 
 == Upgrade BitMessage ==
 To upgrade BitMessage run the following command.

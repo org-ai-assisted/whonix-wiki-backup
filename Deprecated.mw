@@ -6,7 +6,7 @@ Outdated, Deprecated, Archived {{project_name_long}} Documentation.
 |description=Most users can safely ignore this page.
 |image=Deprec.jpg
 }}
-[[File:Deprec.jpg|thumb]]
+[[File:Deprec.jpg|thumb|alt=]]
 {{intro|
 Most users can safely ignore this page.
 }}
@@ -163,7 +163,7 @@ In past forum discussions, users were confused by some false values that were re
 
 '''Figure:''' ''ip-check.info Test in {{project_name_short}}''
 
-[[File:Ipcheckinfo.png|border]]
+[[File:Ipcheckinfo.png|border|alt=JonDonym IP check page in Tor Browser showing a Tor exit IP in Germany and a table of browser attribute ratings, with User-Agent rated bad]]
 
 = One VM {{project_name_short}} Configuration =
 

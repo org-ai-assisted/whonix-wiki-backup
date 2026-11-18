@@ -10,7 +10,7 @@ yt-dlp YouTube Video Downloader in {{project_name_long}}
 * [[YouTube|Watching YouTube Videos in {{project_name_short}}]]
 * [[yt-dlp|Downloading YouTube Videos in {{project_name_short}}]]
 </div>
-[[File:Yt-dlp.svg|thumb|<code>yt-dlp</code> logo]]
+[[File:Yt-dlp.svg|thumb|<code>yt-dlp</code> logo|alt=]]
 {{intro|
 <code>yt-dlp</code> is a command-line program to download videos from YouTube.com and a few more sites.
 
@@ -48,7 +48,7 @@ First identify the relevant YouTube video URL in Tor Browser, then right-click t
 
 '''Figure:''' ''Example YouTube Video to Download''
 
-[[File:Whyhatewindows10.png]]
+[[File:Whyhatewindows10.png|alt=Tor Browser showing YouTube search results for why hate windows 10, with a video by ThioJoe]]
 
 Next, open a terminal. To download the relevant YouTube video, run.
 
@@ -62,7 +62,7 @@ Finally, open VLC Media Player and select the relevant file to play: <code><u>M<
 
 '''Figure:''' ''VLC Media Player''
 
-[[File:Youtubedownloadinvlc.png]]
+[[File:Youtubedownloadinvlc.png|alt=VLC media player in anon-whonix-youtubedl playing a downloaded video that shows a Windows diagnostic data settings page]]
 
 [https://github.com/ytdl-org/youtube-dl/blob/master/README.md Extensive documentation] is available describing a host of possible options, including:
 <div style="column-count:3;-moz-column-count:3;-webkit-column-count:3">

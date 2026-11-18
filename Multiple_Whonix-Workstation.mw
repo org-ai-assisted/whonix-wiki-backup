@@ -124,7 +124,7 @@ Platform specific. Select your platform.
 {{Tab
 |title= == {{non_q_project_name_short}} ==
 |type=section
-|image=[[File:Whonix-logo-standard.svg|25px]]
+|image=[[File:Whonix-logo-standard.svg|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -145,7 +145,7 @@ Make a copy of a clean {{project_name_workstation_short}} VM, so you start from 
 
 * <u>VirtualBox</u>: In VirtualBox Manager, [https://dirkstrauss.com/clone-virtualbox-vm/ clone] a clean {{project_name_workstation_short}}.
 
-[[File:Virtualbox_Clone_Mac_Change1.png|800px]]
+[[File:Virtualbox_Clone_Mac_Change1.png|800px|alt=VirtualBox context menu on the powered-off Whonix-Workstation-LXQt VM with a red arrow pointing at the Clone menu entry.]]
 
 * <u>KVM</u>: In Virtual Machine Manager, clone a clean {{project_name_workstation_short}}: <code>Highlight {{project_name_workstation_short}}</code> &rarr; <code>Open</code> &rarr; <code>Virtual Machine</code> &rarr; <code>Clone</code>
 
@@ -159,7 +159,7 @@ This avoids two VMs having the same network identity, which can cause network co
 | text    = '''Note:''' A new MAC address is necessary if an additional [[VirtualBox]] VM is imported.
 }} <!-- close: mbox -->
 
-[[File:Virtualbox_Clone_Mac_Change2.png|800px]]
+[[File:Virtualbox_Clone_Mac_Change2.png|800px|alt=VirtualBox Clone Virtual Machine dialog with the MAC Address Policy list open and a red arrow at Generate new MAC addresses for all network adapters.]]
 
 * <u>KVM</u>: To change the internal network in KVM, see: [[KVM#Creating_Multiple_Internal_Networks|Creating Multiple Internal Networks]].
 
@@ -229,7 +229,7 @@ The additional {{project_name_workstation_short}} VM should now have a unique MA
 
 {{Tab
 |title= == {{q_project_name_short}} ==
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 {{IconSet|h1|1}} '''Create a new App Qube:'''
@@ -245,7 +245,7 @@ If creating a new App Qube is unfamiliar, follow these step-by-step instructions
 {{box|text=
 '''Figure:''' ''App Qube Creation using Qubes VM Manager (QVMM)''
 
-[[File:Create_Qubes-Whonix-Workstation_AppVM.png|App Qube Creation using Qubes VM Manager (QVMM)]]
+[[File:Create_Qubes-Whonix-Workstation_AppVM.png|App Qube Creation using Qubes VM Manager (QVMM)|alt=Qubes Create New Qube dialog: name anon-whonix, template whonix-workstation-18, network connection set to Tor/Whonix sys-whonix]]
 
 {{IconSet|h2|1}} '''Create Qubes-{{project_name_workstation_short}} App Qube:'''
 
@@ -399,7 +399,7 @@ Platform-specific. Select your platform.
 {{Tab
 |title= == {{non_q_project_name_short}} ==
 |type=section
-|image=[[File:Whonix-logo-standard.svg|25px]]
+|image=[[File:Whonix-logo-standard.svg|25px|alt=]]
 |addToClass=info-box
 |content=
 [[Non-Qubes-Whonix|{{non_q_project_name_short}}]]: See: [[Connections between Gateway and Workstation|Connections between {{project_name_gateway_short}} and {{project_name_workstation_short}}]].
@@ -408,7 +408,7 @@ Platform-specific. Select your platform.
 {{Tab
 |title= == {{q_project_name_short}} ==
 |type=section
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 [[Qubes|{{q_project_name_short}}]]: This step can be skipped. <ref name=qubes-isolated>

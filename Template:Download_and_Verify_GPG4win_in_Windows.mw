@@ -11,13 +11,13 @@
 
 '''Figure:''' ''Installation Path''
 
-[[File:SDK1.jpg|800px]]
+[[File:SDK1.jpg|800px|alt=Windows SDK installer Specify Location step, install to this computer selected with path C:\Program Files (x86)\Windows Kits\10]]
 
 '''3.''' There's no need to enable Microsoft Insights collection, so select "No" and then click "Next".
 
 '''Figure:''' ''Windows Kits Privacy''
 
-[[File:SDK2.jpg|800px]]
+[[File:SDK2.jpg|800px|alt=Windows Kits Privacy step in the SDK installer with the No option selected for sending insights to Microsoft]]
 
 '''4.''' Install the necessary SDK package.
 
@@ -25,13 +25,13 @@ The Windows SDK installer provides a number of different packages that can be in
 
 '''Figure:''' ''Select SignTools Package''
 
-[[File:SDK3.jpg|800px]]
+[[File:SDK3.jpg|800px|alt=Windows SDK installer feature list with only Windows SDK Signing Tools for Desktop Apps checked and an Install button]]
 
 '''5.''' Once the installation is complete, close the installer.
 
 '''Figure:''' ''Installation completed''
 
-[[File:SDK4.jpg|800px]]
+[[File:SDK4.jpg|800px|alt=Windows SDK installer final Welcome screen with a Close button]]
 
 }}
 
@@ -59,7 +59,7 @@ Notes:
 
 <code>& "C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\signtool.exe" verify /pa "C:\Users\[username]\Downloads\gpg4win-[version number].exe"</code>.
 
-[[File:SDK5-2.jpg]]
+[[File:SDK5-2.jpg|alt=PowerShell running signtool verify on gpg4win-4.3.1.exe, reporting Successfully verified]]
 
 {{mbox
 | image   = [[File:Ambox_warning_pn.svg.png|40px]]

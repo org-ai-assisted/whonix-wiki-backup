@@ -6,7 +6,7 @@ Release Upgrade {{project_name_long}} 16 to {{project_name_long}} 17
 |description=How to Release Upgrade from {{project_name_short}} 16 to {{project_name_short}} 17
 |image=Upgrade.jpg
 }}
-[[File:Upgrade.jpg|thumb]]
+[[File:Upgrade.jpg|thumb|alt=]]
 {{intro|
 How to Release Upgrade from {{project_name_short}} 16 to {{project_name_short}} 17
 }}

@@ -90,7 +90,7 @@ https://forums.whonix.org/t/workstation11-doesnt-mount-hdds/1313
 Help fixing this bug is welcome! ([https://phabricator.whonix.org/T139 ticket])
 
 == Network Manager Systray Unmanaged Devices ==
-[[File:network_manger_question_mark.png|30px]]
+[[File:network_manger_question_mark.png|30px|alt=]]
 Short answer: Unmanaged devices are unrelated to {{project_name_short}} functioning and should not concern the user.<br />
 Long answer: <ref> {{project_name_short}} does not use network manager to manage either eth0 or eth1.
 

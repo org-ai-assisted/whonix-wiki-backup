@@ -7,7 +7,7 @@ Multiple {{project_name_gateway_long}}
 |image=Multiplegateways131231.jpg
 }}
 {{multiple-vms-mininav}}
-[[File:Multiplegateways131231.jpg|thumb]]
+[[File:Multiplegateways131231.jpg|thumb|alt=]]
 {{intro|
 Compartmentalization. Managing multiple {{project_name_gateway_short}}.
 }}
@@ -34,7 +34,7 @@ Platform specific. Select your virtualizer below.
 
 {{Tab
 |title= == VirtualBox ==
-|image=[[File:Virtualbox_logo.png|25px]]
+|image=[[File:Virtualbox_logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -42,7 +42,7 @@ In VirtualBox Manager, it is necessary to change the name of the internal networ
 
 {{IconSet|h1|1}} '''Learn the default internal network name:'''
 
-[[File:whonix-vbox-internal.png|900px]]
+[[File:whonix-vbox-internal.png|900px|alt=VirtualBox settings for Whonix-Gateway: Network, Adapter 2 attached to Internal Network named Whonix, highlighted in red]]
 
 The default internal network name is <code>{{project_name_short}}</code>.
 
@@ -64,7 +64,7 @@ For the second, third, or n<sup>th</sup> multiple {{project_name_gateway_short}}
 
 {{Tab
 |title= == KVM ==
-|image=[[File:Kvm-new-logo.png|25px]]
+|image=[[File:Kvm-new-logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -141,7 +141,7 @@ Attach the Gateway and Workstation VM NICs to the new network.
 To edit the VM virtual NIC settings: <br />
 <code>Highlight VM</code> &rarr; <code>Open</code> &rarr; <code>Settings (light bulb)</code> &rarr; <code>NIC virtual hardware</code> &rarr; Set Network Source to: <code>Virtual network 'Whonix-External2' : NAT</code>
 
-[[File:gateway2-1.png|600px]]
+[[File:gateway2-1.png|600px|alt=virt-manager for Whonix-Gateway2 on QEMU/KVM: NIC 68:c5:11 uses virtual network Whonix-External2 (NAT) with a virtio device model]]
 
 * Note: <code>virbr1</code> is assigned to the <u>Whonix-External</u> network (default {{project_name_gateway_short}} external NAT NIC). Therefore, the network name was changed to <code>External2</code> and the bridge name to <code>virbr4</code>.
 
@@ -199,7 +199,7 @@ virsh -c qemu:///system net-start Whonix-Internal2
 To edit the VM virtual NIC settings: <br />
 <code>Highlight VM</code> &rarr; <code>Open</code> &rarr; <code>Settings (light bulb)</code> &rarr; <code>NIC virtual hardware</code> &rarr; Set Network Source to: <code>Virtual network 'Whonix-Internal2' : Isolated network</code>
 
-[[File:gateway2-2.png|600px]]
+[[File:gateway2-2.png|600px|alt=virt-manager for Whonix-Gateway2 on QEMU/KVM: NIC 1a:09:96 uses virtual network Whonix-Internal2 (isolated network) with a virtio device model]]
 
 * Note: The network is exclusively internal and does not communicate with the host in any way.
 
@@ -252,7 +252,7 @@ It is recommended to [[KVM#A)_With_an_Editor|edit]] the cloned workstation's con
 
 {{Tab
 |title= == {{q_project_name_long}} ==
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -276,13 +276,13 @@ To create a [[{{project_name_gateway_short}}|{{project_name_gateway_short}}]] Pr
 '''Figure:''' ''Qubes Manager: Create New Qube - Step 1''
 <br />
 
-[[File:Createproxyvm.png]]
+[[File:Createproxyvm.png|alt=Qubes Create New Qube dialog: name sys-whonix, purple label, template whonix-gateway-18, network sys-firewall, list of applications]]
 
 <br />
 '''Figure:''' ''Qubes Manager: Create New Qube - Step 2''
 <br />
 
-[[File:Createproxyvm2.png]]
+[[File:Createproxyvm2.png|alt=Qubes Create New Qube advanced options with Provides network access to other qubes checked, and Whonix-Gateway application shortcuts listed]]
 
 </ref>
 # Open a dom0 terminal.

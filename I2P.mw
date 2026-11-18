@@ -6,7 +6,7 @@ Invisible Internet Project (I2P)
 |description=I2P over Tor. Tunneling the I2P Anonymizing Network over the Tor Anonymizing Network. Connection Schema: Tor &rarr; I2P &rarr; Destination.
 |image=I2Pmainlogo.svg.png
 }}
-[[File:I2Pmainlogo.svg.png|I2P Logo|thumb]]
+[[File:I2Pmainlogo.svg.png|I2P Logo|thumb|alt=]]
 {{intro|
 I2P over Tor. Tunneling the I2P Anonymizing Network over the Tor Anonymizing Network. Connection Schema:<br />
 <code>Tor</code> &rarr; <code>I2P</code> &rarr; <code>Destination</code>
@@ -288,41 +288,41 @@ The process of installing I2P has been completed.
 i2prouter start
 }}
 
-[[File:i2p.png|400px]]
+[[File:i2p.png|400px|alt=Terminal showing the i2prouter start command starting the I2P service and reporting a running PID]]
 
 3. A popup going to ask you to open [http://127.0.0.1:7657 I2P Console] in Tor Browser, Press on Yes
 
-[[File:i2p1.png|400px]]
+[[File:i2p1.png|400px|alt=Dialog asking to confirm opening http://127.0.0.1:7657/ in x-www-browser]]
 
 4. A setup wizard will show up. Complete it and then proceed to the I2P Console.
 
 5. Go to Settings by either going to [http://127.0.0.1:7657/config  I2P Console config]
 
-[[File:i2p2.png|480px]]
+[[File:i2p2.png|480px|alt=I2P Router Console configuration page at 127.0.0.1:7657/config with the Bandwidth tab selected]]
 
 '''OR'''
 
 Press on <code>Settings</code>
 
-[[File:i2p2s.png|400px]]
+[[File:i2p2s.png|400px|alt=I2P router console sidebar with an arrow pointing to the Settings link]]
 
 6. Press on <code>Network</code>
 
-[[File:i2p3.png|480px]]
+[[File:i2p3.png|480px|alt=I2P router console Configuration page at /confignet with an arrow pointing to the Network tab]]
 
 7. Change the network settings according to the images below (click on <code>Save Changes</code> once you finished)
 
-[[File:i2p4.png|450px]]
+[[File:i2p4.png|450px|alt=I2P network settings with UPnP disabled, UPnP IP detection disabled and Prefer IPv4 over IPv6 highlighted]]
 
-[[File:i2p5.png|450px]]
+[[File:i2p5.png|450px|alt=I2P network settings with UDP completely disabled and inbound TCP set to Disable inbound (Firewalled), highlighted, ports blacked out]]
 
 8. Go to <code>Reseeding</code>
 
-[[File:i2p6.png|480px]]
+[[File:i2p6.png|480px|alt=I2P router console at /configreseed with an arrow pointing to the Reseeding tab]]
 
 9. Change the reseeding settings according to the image below (click on <code>Save Changes</code> once you have finished)
 
-[[File:i2p7.png|450px]]
+[[File:i2p7.png|450px|alt=I2P Reseeding Configuration page with a list of reseed URLs and the SOCKS 5 proxy type selected]]
 
 10. It is preferable to restart I2P from the Qterminal using the following command
 
@@ -351,7 +351,7 @@ i2prouter restart
 
 '''Figure:''' ''I2P Browsing in {{project_name_short}}''
 
-[[File:I2Pbrowsing.png]]
+[[File:I2Pbrowsing.png|alt=Tor Browser on anon-whonix-I2P showing the stats.i2p page with I2P router tunnel build and router version graphs]]
 
 = Services =
 
@@ -397,33 +397,33 @@ HexChat-like client users can create a new network with the server 127.0.0.1/666
 ** Go to Settings &rarr; Preferences
 ** Then Network setup &rarr; Proxy Server then follow the image instruction then press ok
 
-[[File:HexchatI2P1.png|400px]]
+[[File:HexchatI2P1.png|400px|alt=HexChat Settings menu open with Preferences highlighted]]
 
-[[File:HexchatI2P2.png|400px]]
+[[File:HexchatI2P2.png|400px|alt=HexChat Preferences Network setup page with the Proxy Server section highlighted: hostname 127.0.0.1, port 6668, type Disabled, proxy for IRC server only]]
 
 * Back to hexchat press on Hexchat &rarr; Network list
 
-[[File:HexchatI2P3.png|400px]]
+[[File:HexchatI2P3.png|400px|alt=HexChat HexChat menu open with Network List highlighted, plus New, Load Plugin or Script, Detach, Close and Quit]]
 
 * Press on Add button and name it anything you like e.g I2P then hit Enter
 
-[[File:HexchatI2P4.png|400px]]
+[[File:HexchatI2P4.png|400px|alt=HexChat network list dialog with nick name fields, a network named OFTC, and the Add button highlighted]]
 
 * Press on I2P then press on Edit... button
 
-[[File:HexchatI2P5.png|400px]]
+[[File:HexchatI2P5.png|400px|alt=HexChat network list with the I2P network selected and the Edit button highlighted]]
 
 * Double click the top field to change it or press on it then press on Edit button then change the value to <code>127.0.0.1/6668</code> then hit Enter and press on close
 
-[[File:HexchatI2P6.png|400px]]
+[[File:HexchatI2P6.png|400px|alt=HexChat I2P network settings listing server 127.0.0.1/6668, with the Close button highlighted]]
 
 * Make sure I2P is the one highlighted then press on Connect button
 
-[[File:HexchatI2P7.png|400px]]
+[[File:HexchatI2P7.png|400px|alt=HexChat network list with I2P selected and the Connect button highlighted]]
 
 * Wait for couple of minutes then here you go
 
-[[File:HexchatI2P8.png|400px]]
+[[File:HexchatI2P8.png|400px|alt=HexChat window connected to Irc2P, showing the server MOTD and a NickServ message about registering the nickname]]
 
 == I2P-Bote ==
 {{Template:I2P-Bote}}

@@ -57,7 +57,7 @@ With these factors in mind, the reader can now make an informed decision about t
 {{Anchor|canary}}
 
 == {{project_name_short}} Warrant Canary ==
-[[File:Forestcanary.jpg|thumb|Canary|250px]]
+[[File:Forestcanary.jpg|thumb|Canary|250px|alt=Yellow-green forest canary perched on a branch]]
 
 The {{project_name_short}} [https://en.wikipedia.org/wiki/Warrant_canary warrant canary] is intended to provide a mean of communication to users in the event {{project_name_short}} is served with a secret subpoena, despite legal prohibitions on revealing its existence. For any canary in force, once the signature of the canary file is verified with OpenPGP and/or signify, this confirms that no warrants have been served on the {{project_name_short}} project.
 

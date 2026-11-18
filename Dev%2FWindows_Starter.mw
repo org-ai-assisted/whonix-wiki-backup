@@ -7,7 +7,7 @@
 |image=Whonix_User_Interface_start.png
 }}
 {{windows_installer_mininav}}
-[[File:Whonix_User_Interface_start.png|thumb|Whonix Starter]]
+[[File:Whonix_User_Interface_start.png|thumb|Whonix Starter|alt=Whonix Starter window on Windows with a large Start Whonix button above an Advanced button.]]
 {{intro|
 The {{project_name_short}} Starter for Microsoft Windows. Screenshots. Rationale. Build documentation. Source code. Whonix.exe
 }}
@@ -20,15 +20,15 @@ To make using {{project_name_short}} after the installation as convenient as pos
 = Screenshots =
 '''Figure:''' ''Whonix desktop starter''
 
-[[File:Whonix_desktop_starter.png]]
+[[File:Whonix_desktop_starter.png|alt=Windows desktop shortcut icon: a padlock with an eye, labeled Whonix]]
 
 '''Figure:''' ''Whonix Starter''
 
-[[File:Whonix_User_Interface_start.png]]
+[[File:Whonix_User_Interface_start.png|alt=Whonix Starter window on Windows with a large Start Whonix button above an Advanced button.]]
 
 '''Figure:''' ''Stop Whonix''
 
-[[File:Whonix_User_Interface_stop.png]]
+[[File:Whonix_User_Interface_stop.png|alt=Whonix Starter window on Windows with a large Stop Whonix button above an Advanced button.]]
 
 = Building {{project_name_short}} Starter =
 https://github.com/Whonix/Whonix-Starter

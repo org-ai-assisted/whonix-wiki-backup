@@ -21,7 +21,7 @@ The connection scheme is <code>Monero Wallet</code> &rarr; <code>Qubes RPC</code
 
 '''Figure:''' ''Monerod isolation setup'' (Contributed by MarkTheCoder.)''
 
-[[File:Monerod isolation setup.png|1000x500px|thumb|center]]
+[[File:Monerod isolation setup.png|1000x500px|thumb|center|alt=Diagram: monero-wallet-ws VM (wallet, port 18081, socat, qrexec-client-vm) linked via Qubes RPC and Xen transport to monerod-ws VM (daemon), which connects to sys-whonix]]
 
 [[Root#Inappropriate_Use_of_Root_Rights|Inappropriate Use of Root Rights]] should be avoided. Instructions on this wiki page have been carefully crafted with when to use <code>sudo</code> and when not to use it in mind. The user should not use <code>sudo</code> unless instructed to do so in the documentation. <ref>
 The <code>systemctl --user</code> command must be run as a normal, non-root user without <code>sudo</code> because these are <code>systemd</code> <u>user</u> units and <u>not</u> <code>systemd</code> <u>system</u> units.

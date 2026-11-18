@@ -14,7 +14,7 @@ Please follow these steps to install {{project_name_short}} {{{flavor_case_sensi
 {{Tab
 |active=true
 |title= == stable {{{flavor_case_sensitive}}} ==
-|image=[[File:Rg1024_brick_tile.png]]
+|image=[[File:Rg1024_brick_tile.png|alt=]]
 |content=
 
 {{DownloadTableUnified
@@ -37,7 +37,7 @@ Please follow these steps to install {{project_name_short}} {{{flavor_case_sensi
 
 {{Tab
 |title= == testers {{{flavor_case_sensitive}}} ==
-|image=[[File:Cornues.png]]
+|image=[[File:Cornues.png|alt=]]
 |content=
 
 {{DownloadTableUnified

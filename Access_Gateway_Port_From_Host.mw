@@ -7,7 +7,7 @@ title=Access {{project_name_gateway_long}} Ports from the Host
 |image=Accessgateway.jpg
 }}
 {{complex_networking_mininav}}
-[[File:Accessgateway.jpg|thumb]]
+[[File:Accessgateway.jpg|thumb|alt=]]
 {{intro|
 Access {{project_name_gateway_short}} Port From Host (Esoteric Documentation)
 }}

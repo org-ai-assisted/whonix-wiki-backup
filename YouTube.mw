@@ -10,28 +10,28 @@ Watching YouTube Videos in {{project_name_long}}
 * [[YouTube|Watching YouTube Videos in {{project_name_short}}]]
 * [[yt-dlp|Downloading YouTube Videos in {{project_name_short}}]]
 </div>
-[[File:Youtubelogo.png|thumb]]
+[[File:Youtubelogo.png|thumb|alt=]]
 {{intro|
 YouTube videos can be watched using Tor Browser, streaming, MPV or VLC Media Player, other alternatives such as Invidious. Alternatively, downloading may also be possible. This page also discusses troubleshooting YouTube performance and other issues.
 }}
 = Introduction =
-To watch [[File:Youtubelogo.png|30px]] YouTube videos anonymously, users have three options:
+To watch [[File:Youtubelogo.png|30px|alt=]] YouTube videos anonymously, users have three options:
 
-# Watching videos directly in [[File:Torbrowser_icon.png|30px|Tor Browser Icon]] [[Tor Browser]] via the YouTube or [[#Invidious|Invidious]] websites.
-# Downloading videos -- for example via the [[File:Youtubedllogo.png|30px|yt-dlp logo]] [[yt-dlp]] command line downloader, [[#Invidious|Invidious]] or YouTube video download sites -- and then watching them in [[File:2000px-VLC_Icon.svg.png|30px|VLC Media Player Icon]] VLC Media Player (pre-installed).
-# Using the YouTube URL to watch videos directly in [[File:Mpvlogo.png|30px|MPV logo]] MPV or VLC Media Player via the network streaming option.
+# Watching videos directly in [[File:Torbrowser_icon.png|30px|Tor Browser Icon|alt=]] [[Tor Browser]] via the YouTube or [[#Invidious|Invidious]] websites.
+# Downloading videos -- for example via the [[File:Youtubedllogo.png|30px|yt-dlp logo|alt=]] [[yt-dlp]] command line downloader, [[#Invidious|Invidious]] or YouTube video download sites -- and then watching them in [[File:2000px-VLC_Icon.svg.png|30px|VLC Media Player Icon|alt=]] VLC Media Player (pre-installed).
+# Using the YouTube URL to watch videos directly in [[File:Mpvlogo.png|30px|MPV logo|alt=]] MPV or VLC Media Player via the network streaming option.
 
 = Tor Browser =
-[[File:Torbrowser_icon.png|thumb|100px|Tor Browser Icon]]
+[[File:Torbrowser_icon.png|thumb|100px|Tor Browser Icon|alt=]]
 == YouTube Website ==
 
-[[File:Watchingyoutube.jpg|100px|thumb]]
+[[File:Watchingyoutube.jpg|100px|thumb|alt=]]
 
 To watch videos directly on the YouTube website, use [[Tor Browser]].
 
 '''Figure:''' ''YouTube in {{project_name_short}} Tor Browser''
 
-[[File:Youtubeinqubeswhonix.png|780px]]
+[[File:Youtubeinqubeswhonix.png|780px|alt=Tor Browser showing YouTube search results for qubes whonix, listing Qubes OS videos]]
 
 It is common to experience "buffering issues" (interrupted video playback) because [[Why is Tor slow|Tor is slow]]. A simple workaround is to pause the video when it first starts so it can "buffer". This allows enough of the upcoming video playback to load in advance for an uninterrupted viewing experience. Alternatively the videos can be downloaded instead and watched in a media application like VLC Media Player, rather than relying upon an online internet connection with the YouTube website. To stream videos: <br />
 * <code>Set the Tor Browser [[Tor_Browser#Security_Slider|security slider]] to the "Safer" setting</code> &rarr; <code>click the "script blocked" icon</code> &rarr; <code>temporarily allow JavaScript for youtube.com</code> <ref>It is normally unnecessary to allow JavaScript for other domains.</ref>
@@ -46,13 +46,13 @@ Invidious is more lightweight than YouTube itself and comes with many additional
 
 '''Figure:''' ''Invidious in {{project_name_short}} Tor Browser''
 
-[[File:Invidiousexample.png]]
+[[File:Invidiousexample.png|alt=Tor Browser showing an Invidious onion page for the video Whonix for newbies, with the player paused at 3:12 of 22:37]]
 
 = Media Player Streaming =
 == MPV ==
-[[File:Mpvlogo.png|thumb|MPV Icon]]
+[[File:Mpvlogo.png|thumb|MPV Icon|alt=]]
 === Installation ===
-The [[File:Mpvlogo.png|30px|MPV Icon]] MPV video player can be installed to stream videos from Youtube or Invidious without enabling JavaScript.
+The [[File:Mpvlogo.png|30px|MPV Icon|alt=]] MPV video player can be installed to stream videos from Youtube or Invidious without enabling JavaScript.
 
 {{Install Package|package=
 mpv
@@ -66,9 +66,9 @@ mpv your URL
 }}
 
 == VLC Media Player ==
-[[File:2000px-VLC_Icon.svg.png|thumb|100px|VLC Media Player Icon]]
+[[File:2000px-VLC_Icon.svg.png|thumb|100px|VLC Media Player Icon|alt=]]
 
-A simpler option is to use a [[Software#Media_Player|media player]], [[File:2000px-VLC_Icon.svg.png|30px|VLC Media Player Icon]] [[Software#VLC|VLC Media Player]] which comes pre-installed in {{project_name_short}}:
+A simpler option is to use a [[Software#Media_Player|media player]], [[File:2000px-VLC_Icon.svg.png|30px|VLC Media Player Icon|alt=]] [[Software#VLC|VLC Media Player]] which comes pre-installed in {{project_name_short}}:
 
 # Locate and copy the relevant video URL.
 # Launch VLC Media Player.
@@ -76,21 +76,21 @@ A simpler option is to use a [[Software#Media_Player|media player]], [[File:2000
 
 '''Figure:''' ''YouTube Streaming in VLC Media Player''
 
-[[File:Vlcnetworkstream.png]]
+[[File:Vlcnetworkstream.png|alt=VLC media player in a Whonix disposable VM playing a Switched to Linux video titled Whonix 15 Released, showing the Whonix homepage and the presenter.]]
 
 = Troubleshooting =
 
 == General Issues ==
-[[File:Troubleshooting-114197640.jpg|thumb|100px|link=Troubleshooting]]
+[[File:Troubleshooting-114197640.jpg|thumb|100px|link=Troubleshooting|alt=]]
 
 # "Forget" about {{project_name_short}} for a moment and imagine you had never heard of the platform. Test this using the virtualizer software (such as VirtualBox, KVM or Qubes) without {{project_name_short}} being involved first.
 # Try a VM other than {{project_name_short}} such as Debian <code>{{Stable project version based on Debian codename}}</code>.
 # If the issue persists, this means the root issue is not caused by {{project_name_short}}. Therefore it is recommended to attempt to resolve the issue as per the [[Self_Support_First_Policy|Self Support First Policy]].
 
 == VirtualBox ==
-[[File:Virtualbox_logo.png|thumb|30px|link=VirtualBox|VirtualBox Logo]]
+[[File:Virtualbox_logo.png|thumb|30px|link=VirtualBox|VirtualBox Logo|alt=]]
 
-[[File:Virtualbox_logo.png|30px|link=VirtualBox|VirtualBox logo]] VirtualBox users should note that video performance might be slow. For a possible solution, see: {{kicksecure_wiki
+[[File:Virtualbox_logo.png|30px|link=VirtualBox|VirtualBox logo|alt=]] VirtualBox users should note that video performance might be slow. For a possible solution, see: {{kicksecure_wiki
 |wikipage=VirtualBox/Troubleshooting#Slow_Video_Playback
 |text=VirtualBox, Troubleshooting: Slow Video Playback
 }}.
@@ -101,7 +101,7 @@ A simpler option is to use a [[Software#Media_Player|media player]], [[File:2000
 See [[KVM#Videos|KVM, Troubleshooting: Videos]].
 
 = See Also =
-* [[File:Youtubedllogo.png|30px|yt-dlp logo]] [[yt-dlp|Downloading YouTube Videos in {{project_name_short}} using the <code>yt-dlp</code> command line downloader]]
+* [[File:Youtubedllogo.png|30px|yt-dlp logo|alt=]] [[yt-dlp|Downloading YouTube Videos in {{project_name_short}} using the <code>yt-dlp</code> command line downloader]]
 
 = Footnotes =
 <references />

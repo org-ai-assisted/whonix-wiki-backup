@@ -4,7 +4,7 @@
 |image=Main_page.png
 }}
 {{tor_mininav}}
-[[File:main_page.png|Anon Connection Wizard|thumb]]
+[[File:main_page.png|Anon Connection Wizard|thumb|alt=Anon Connection Wizard first page offering Connect, Configure (bridges or proxy settings, selected) or Disable Tor, with Back, Next and Cancel buttons]]
 {{intro|
 Tor Connection Wizard - Graphical User Interface for Censorship Circumvention
 }}
@@ -22,27 +22,27 @@ The following screenshots provide a visual impression of Anon Connection Wizard.
 
 '''Figure:''' ''Main torrc Configuration Page''
 
-[[File:main_page.png]]
+[[File:main_page.png|alt=Anon Connection Wizard first page offering Connect, Configure (bridges or proxy settings, selected) or Disable Tor, with Back, Next and Cancel buttons]]
 
 '''Figure:''' ''Default Bridge Page''
 
-[[File:bridge_page_default.png]]
+[[File:bridge_page_default.png|alt=Anon Connection Wizard Tor Bridges Configuration with Connect with provided bridges selected and transport type obfs4 recommended.]]
 
 '''Figure:''' ''Custom Bridge Page''
 
-[[File:bridge_page_custom.png]]
+[[File:bridge_page_custom.png|alt=Anon Connection Wizard Tor Bridges Configuration with Enter custom bridges selected and three obfs4 bridge lines entered.]]
 
 '''Figure:''' ''Local Proxy Configuration Page''
 
-[[File:proxy.png]]
+[[File:proxy.png|alt=Anon Connection Wizard Local Proxy Configuration screen with Use proxy checked, proxy type HTTP/HTTPS, and empty address, port, username and password fields]]
 
 '''Figure:''' ''Summary Configuration Page''
 
-[[File:torrc_page.png]]
+[[File:torrc_page.png|alt=Anon Connection Wizard Summary page: Tor will be enabled, custom obfs4 bridges, Socks5 proxy 127.0.0.1 port 8964]]
 
 '''Figure:''' ''Tor Network Bootstrapping Page''
 
-[[File:connecting.png]]
+[[File:connecting.png|alt=Anon Connection Wizard bootstrapping Tor, phase Connecting to the Tor network, progress bar at 80 percent]]
 
 == Anon Connection Wizard vs Tor Launcher ==
 Anon Connection Wizard shares several similar functions with the current Tor-launcher, but the latter is considered to be "upstream" <ref>Upstream refers to the originator of the component being discussed.</ref> of the former. As a consequence, Anon Connection Wizard developers are trying to maintain code compatibility with the latest version of Tor-launcher and collaborate closely in Tor Launcher's design and development process.

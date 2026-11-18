@@ -11,25 +11,25 @@ https://gitlab.torproject.org/legacy/trac/-/wikis/doc/meek
 
 = Older: Thats what the tor-launcher addon looks like as in TBB 3.0alpha2 =
 
-[[File:1_Tor Network Settings_created by adrelanos.png]]
+[[File:1_Tor Network Settings_created by adrelanos.png|alt=Tor Network Settings dialog with Connect and Configure buttons for choosing a direct or censored connection]]
 
-[[File:2_Tor Status_created by adrelanos.png]]
+[[File:2_Tor Status_created by adrelanos.png|alt=Tor Status dialog Connecting to the Tor network, loading networkstatus consensus, with a progress bar and Cancel button]]
 
-[[File:3_Tor Status_created by adrelanos.png]]
+[[File:3_Tor Status_created by adrelanos.png|alt=Tor Status dialog Connecting to the Tor network with an empty progress bar and Open Settings and Quit buttons]]
 
-[[File:4_Tor Network Settings_created by adrelanos.png]]
+[[File:4_Tor Network Settings_created by adrelanos.png|alt=Tor Network Settings dialog asking whether the computer needs a proxy, with No selected]]
 
-[[File:5_Tor Network Settings_created by adrelanos.png]]
+[[File:5_Tor Network Settings_created by adrelanos.png|alt=Tor Browser Bundle Tor Network Settings asking if the connection is behind a firewall allowing only certain ports, Yes selected]]
 
-[[File:6_Tor Network Settings_created by adrelanos.png]]
+[[File:6_Tor Network Settings_created by adrelanos.png|alt=Tor Browser Bundle Tor Network Settings proxy form with proxy type, address, port, username and password fields]]
 
-[[File:9_Tor Network Settings_created by adrelanos.png]]
+[[File:9_Tor Network Settings_created by adrelanos.png|alt=Tor Browser Bundle Tor Network Settings asking for allowed firewall ports, prefilled with 80,443]]
 
-[[File:10_Tor Network Settings_created by adrelanos.png]]
+[[File:10_Tor Network Settings_created by adrelanos.png|alt=Tor Network Settings dialog with an empty address:port text box for entering bridge relays]]
 
-[[File:11_Tor Network Settings_created by adrelanos.png]]
+[[File:11_Tor Network Settings_created by adrelanos.png|alt=Bridge Relay Help dialog explaining how to obtain bridges from bridges.torproject.org or by email]]
 
-[[File:12_About Tor - Tor Browser_created by adrelanos.png]]
+[[File:12_About Tor - Tor Browser_created by adrelanos.png|alt=Tor Browser showing the about:tor page with the message that the browser is configured to use Tor]]
 
 {{Footer}}
 

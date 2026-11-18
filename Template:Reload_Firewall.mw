@@ -8,7 +8,7 @@ Select your platform.
 
 {{Tab
 |title= ==== Graphical {{project_name_gateway_short}} ====
-|image=[[File:Logo_box.png|25px]]
+|image=[[File:Logo_box.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -18,7 +18,7 @@ Select your platform.
 
 {{Tab
 |title= ==== Terminal {{project_name_gateway_short}} ====
-|image=[[File:Utilities-terminal.png|25px]]
+|image=[[File:Utilities-terminal.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -30,7 +30,7 @@ sudo whonix_firewall
 
 {{Tab
 |title= ==== [[Qubes|{{q_project_name_short}}]] ====
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 

@@ -289,7 +289,7 @@ sudo systemctl enable socks-before-tor
 |linkid=os-nonqubes
 |active=true
 |addToClass=info-box
-|image=[[File:Kicksecure-icon-logo.svg]]
+|image=[[File:Kicksecure-icon-logo.svg|alt=]]
 |title= {{Headline|h=2|content={{non_q_project_name_short}}}}
 |content=
 
@@ -311,7 +311,7 @@ sudo journalctl -fu socks-before-tor
 |type=section
 |linkid=os-qubes-template
 |addToClass=info-box
-|image=[[File:Qubes-logo-blue.png]]
+|image=[[File:Qubes-logo-blue.png|alt=]]
 |title= {{Headline|h=2|content={{q_project_name_short}}}}
 |content=
 

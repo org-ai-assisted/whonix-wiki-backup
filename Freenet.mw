@@ -3,7 +3,7 @@
 |description=Freenet over Tor. Tunneling Freenet through Tor. Connection Schema: User &rarr; Tor &rarr; Freenet &rarr; Destination
 |image=Freenet-bunny-with-name-flying.png
 }}
-[[File:Freenet-bunny-with-name-flying.png|thumb|256px|Freenet Icon]]
+[[File:Freenet-bunny-with-name-flying.png|thumb|256px|Freenet Icon|alt=]]
 {{intro|
 Freenet over Tor. Tunneling Freenet through Tor. Connection Schema:<br />
 <code>User</code> &rarr; <code>Tor</code> &rarr; <code>Freenet</code> &rarr; <code>Destination</code>
@@ -205,7 +205,7 @@ In mid-2021 one functional Freenet gateway is accessible. The [https://web.archi
 
 '''Figure:''' ''Freenet Inproxy in {{project_name_short}}''
 
-[[File:Freenet.png|border]]
+[[File:Freenet.png|border|alt=Tor Browser showing the Freenet homepage on an onion address: What is Freenet, Download, and features Secret Identity, Browse Websites, Forums, Platform]]
 
 == Freenet SSH Workaround ==
 

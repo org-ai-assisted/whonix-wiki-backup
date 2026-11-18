@@ -9,7 +9,7 @@ Verify Tor Browser in Microsoft Windows
 {{intro|
 This page documents how to the Tor Browser digital software signatures for users of Microsoft Windows.
 }}
-[[File:Verifywindows.jpg|thumb|400px]]
+[[File:Verifywindows.jpg|thumb|400px|alt=]]
 {{Community_Support|scope=page}}
 = Introduction =
 [https://gnupg.org/ GnuPG] is a complete and free implementation of [[OpenPGP]] that allows users to encrypt and sign data and communications. [https://www.gpg4win.org/ Gpg4win] is a graphical front end for GnuPG that is used for file and email encryption in Windows. The verification process for Tor Browser installer begins with securely downloading and verifying the <code>gpg4win</code> package. Once completed users can use GPG from the command-line to verify the Tor Browser installer.
@@ -118,19 +118,19 @@ Navigate to the folder <code>torbrowser-install-win64-8.5.4_en-US</code> was dow
 
 '''Figure:''' ''Start Tor Browser Installer for Windows''
 
-[[File:start_Tor_Browser_windows_installer.png]]
+[[File:start_Tor_Browser_windows_installer.png|alt=Windows File Explorer folder with the Tor Browser installer file torbrowser-install-win64-8.5.4_en-US highlighted]]
 
 '''Figure:''' ''Select Language''
 
-[[File:Tor_Browser_select_language.png]]
+[[File:Tor_Browser_select_language.png|alt=Installer Language dialog with English selected and OK button highlighted]]
 
 '''Figure:''' ''Choose Installation Location''
 
-[[File:choose_Tor_Browser_install_location.png]]
+[[File:choose_Tor_Browser_install_location.png|alt=Tor Browser Setup Choose Install Location page with destination folder on the Desktop highlighted and the Install button highlighted.]]
 
 '''Figure:''' ''Tor Browser Installing''
 
-[[File:Tor_Browser_installing.png]]
+[[File:Tor_Browser_installing.png|alt=Tor Browser Setup installer showing extraction progress at 83 percent]]
 
 '''2.''' Complete Tor Browser setup.
 
@@ -138,7 +138,7 @@ Once Tor Browser has been installed a popup window will ask if a Start Menu and 
 
 '''Figure:''' ''Tor Browser Installation Complete''
 
-[[File:complete_TorBrowser_setup.png]]
+[[File:complete_TorBrowser_setup.png|alt=Tor Browser Setup on Windows showing the Completing Tor Browser Setup page with Run Tor Browser checked and Finish highlighted]]
 
 '''3.''' Network Connections
 
@@ -146,11 +146,11 @@ When Tor Browser starts for the first time it asks for "Tor Network Settings" to
 
 '''Figure:''' ''Configure Network Connection''
 
-[[File:Tor_Browser_connect_to_tor.png]]
+[[File:Tor_Browser_connect_to_tor.png|alt=Tor Browser Connect to Tor window on Windows with the Connect button highlighted next to Configure]]
 
 '''Figure:''' ''Connecting to Tor Network''
 
-[[File:Tor_Browser_connecting_Tor_network.png]]
+[[File:Tor_Browser_connecting_Tor_network.png|alt=Windows Tor Browser dialog Establishing a Connection with a progress bar at Loading relay information]]
 
 '''&rarr; Done!'''
 }}

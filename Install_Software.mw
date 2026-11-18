@@ -41,7 +41,7 @@ Platform specific. Select your platform.
 |content=
 {{Tab
 |title= == {{project_name_short}} ==
-|image=[[File:Whonix-logo-standard.svg|25px]]
+|image=[[File:Whonix-logo-standard.svg|25px|alt=]]
 |addToClass=info-box
 |active=true
 |content=
@@ -52,7 +52,7 @@ Platform specific. Select your platform.
 
 {{Tab
 |title= == [[Qubes|{{q_project_name_short}}]] ==
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -168,8 +168,8 @@ As an illustration, installation of a newer version of Electrum would require:
 == Enable Debian Backports Repository ==
 <u>Operating System Specific Notes</u>:
 
-* [[File:Kicksecure-basic-logo.png|25px|link=]] {{project_name_short}} VM users: Should skip this step! Debian APT backports repository is already default in {{project_name_short}} version <code>16</code> and above.
-* [[File:Debian.png|15px|link=]] Debian: The following instructions are for Debian host operating system or Debian VM users.
+* [[File:Kicksecure-basic-logo.png|25px|link=|alt=]] {{project_name_short}} VM users: Should skip this step! Debian APT backports repository is already default in {{project_name_short}} version <code>16</code> and above.
+* [[File:Debian.png|15px|link=|alt=]] Debian: The following instructions are for Debian host operating system or Debian VM users.
 
 '''1.''' Boot the virtual machine. (Qubes: <code>debian-{{Stable project version based on Debian version short}}</code> Template).
 
@@ -230,8 +230,8 @@ sudo rm /etc/apt/sources.list.d/backports.sources
 == Enable Debian Fasttrack Repository ==
 <u>Operating System Specific Notes</u>:
 
-* [[File:Kicksecure-basic-logo.png|25px|link=]] {{project_name_short}} VM users: Should skip this step! Debian APT fasttrack repository is already default in {{project_name_short}} version <code>16</code> and above.
-* [[File:Debian.png|15px|link=]] Debian: The following instructions are for Debian host operating system or Debian VM users.
+* [[File:Kicksecure-basic-logo.png|25px|link=|alt=]] {{project_name_short}} VM users: Should skip this step! Debian APT fasttrack repository is already default in {{project_name_short}} version <code>16</code> and above.
+* [[File:Debian.png|15px|link=|alt=]] Debian: The following instructions are for Debian host operating system or Debian VM users.
 
 '''1.''' Boot the Debian VM. (Qubes: <code>debian-{{Stable project version based on Debian version short}}</code>) Template.
 
@@ -655,7 +655,7 @@ Official Flatpaks are clearly identified by a blue verified checkmark, but the a
 
 '''Figure:''' Firefox Flatpak showing the blue verified checkmark
 
-[[File:Firefox-verified-flatpak.png]]
+[[File:Firefox-verified-flatpak.png|alt=Flatpak store listing for Firefox by Mozilla with a blue Verified badge]]
 
 A security concern was identified with the Mullvad Browser Flatpak, as reported in [https://github.com/flathub/net.mullvad.MullvadBrowser/issues/16 this issue]. Although it appeared as an official Mullvad Browser Flatpak, it was, in fact, unofficial and impersonating the official version. The appearance of this Flatpak can be viewed in the [https://web.archive.org/web/20230502081811/https://flathub.org/apps/net.mullvad.MullvadBrowser archived webpage].
 
@@ -877,7 +877,7 @@ This issue is [[unspecific|unspecific to {{project_name_short}}]].
 |type=section
 |linkid=os-nonqubes
 |active=true
-|image=[[File:Kicksecure-logo-icon.svg]]
+|image=[[File:Kicksecure-logo-icon.svg|alt=]]
 |title={{Headline|h=3|content=A : {{non_q_project_name_long}}}} ===
 |content=
 <div>{{project_name_workstation_short}}</div>
@@ -891,7 +891,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 {{Tab
 |type=section
 |linkid=os-qubes-template
-|image=[[File:Qubes-logo-blue.png]]
+|image=[[File:Qubes-logo-blue.png|alt=]]
 |title={{Headline|h=3|content=B : {{q_project_name_long}} Template}} ===
 |content=
 <div>{{q_project_name_short}} Template (<code>{{project_name_workstation_template}}</code>)</div>
@@ -905,7 +905,7 @@ http_proxy=http://127.0.0.1:8082 https_proxy=$http_proxy flatpak remote-add --if
 {{Tab
 |type=section
 |linkid=os-qubes-appqube
-|image=[[File:Qubes-logo-blue.png]]
+|image=[[File:Qubes-logo-blue.png|alt=]]
 |title={{Headline|h=3|content=C : {{q_project_name_short}} App Qube}}
 |content=
 <div>{{q_project_name_short}} App Qube (<code>{{project_name_workstation_vm}}</code>)</div>

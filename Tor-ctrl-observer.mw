@@ -7,7 +7,7 @@ tor-ctrl-observer - Tor Connection Destination Viewer
 |image=TorControl12312.png
 }}
 {{tor_mininav}}
-[[File:TorControl12312.png|thumb]]
+[[File:TorControl12312.png|thumb|alt=]]
 {{intro|
 Ever wanted to know which information is sent by an application? tor-ctrl-observer shows connection information of applications using Tor.
 }}

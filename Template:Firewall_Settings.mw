@@ -10,7 +10,7 @@ Select your platform.
 
 {{Tab
 |title= ==== Graphical {{project_name_gateway_short}} ====
-|image=[[File:Logo_box.png|25px]]
+|image=[[File:Logo_box.png|25px|alt=]]
 |addToClass=info-box
 |content=
 <code>Start Menu</code> &rarr; <code>Applications</code> &rarr; <code>Settings</code> &rarr; <code>User Firewall Settings</code>
@@ -19,7 +19,7 @@ Select your platform.
 
 {{Tab
 |title= ==== Terminal {{project_name_gateway_short}} ====
-|image=[[File:Utilities-terminal.png|25x]]
+|image=[[File:Utilities-terminal.png|25x|alt=]]
 |addToClass=info-box
 |content=
 In {{project_name_gateway_short}}, open the whonix_firewall configuration file in an editor.
@@ -31,7 +31,7 @@ sudoedit /usr/local/etc/whonix_firewall.d/50_user.conf
 
 {{Tab
 |title= ==== [[Qubes|{{q_project_name_short}}]] ====
-|image=[[File:Qubes-logo-icon.png|25x]]
+|image=[[File:Qubes-logo-icon.png|25x|alt=]]
 |addToClass=info-box
 |content=
 <code>Qubes App Launcher (blue/grey "Q")</code> &rarr; <code>{{project_name_gateway_short}} App Qube (commonly called {{Code2|{{project_name_gateway_vm}}}})</code> &rarr; <code>User Firewall Settings</code>

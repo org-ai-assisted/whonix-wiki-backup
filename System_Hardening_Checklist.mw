@@ -6,8 +6,8 @@ title=System Hardening Checklist
 |description=Security hardening instructions for {{project_name_long}} and {{q_project_name_long}}. Improving Linux, Windows and macOS host computer security and networking configurations. Safe Tor, Tor Browser and other online activities.
 |image=Hardening-13423213.jpg
 }}
-[[File:Kicksecure-seal.png|thumb|200px]]
-[[File:Hardening-13423213.jpg|thumb]]
+[[File:Kicksecure-seal.png|thumb|200px|alt=Square yellow and blue badge reading Hardened by Kicksecure]]
+[[File:Hardening-13423213.jpg|thumb|alt=]]
 {{intro|
 {{project_name_short}} comes with [https://www.whonix.org/#security many security features]. {{project_name_short}} is [https://www.kicksecure.com/ Kicksecure] Hardened by default and also provides extensive [[Documentation]] including this System Hardening Checklist. The more you know, the safer you can be.
 

@@ -28,7 +28,7 @@ Platform specific. Select your platform.
 
 {{Tab
 |title= == [[Non-Qubes-Whonix|{{non_q_project_name_short}}]] LXQt ==
-|image=[[File:Whonix-logo-standard.svg|25px]]
+|image=[[File:Whonix-logo-standard.svg|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -40,7 +40,7 @@ Platform specific. Select your platform.
 
 {{Tab
 |title= == [[Qubes|{{q_project_name_short}}]] ==
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -79,7 +79,7 @@ Platform specific. Select your platform.
 
 {{Tab
 |title= == [[Non-Qubes-Whonix|{{non_q_project_name_short}}]] LXQt ==
-|image=[[File:Whonix-logo-standard.svg|25px]]
+|image=[[File:Whonix-logo-standard.svg|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -95,7 +95,7 @@ sudo apt install whonix-workstation-vm-gui-lxqt
 
 {{Tab
 |title= == [[Qubes|{{q_project_name_short}}]] ==
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 

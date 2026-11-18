@@ -7,7 +7,7 @@ Leak Tests
 |image=Leaktest.jpg
 }}
 {{audit_mininav}}
-[[File:Leaktest.jpg|350px|thumb]]
+[[File:Leaktest.jpg|350px|thumb|alt=]]
 {{intro|
 Major leak tests for IP/DNS Leaks. How to check if this application is leaking? How likely is that application to be leaking? Unsuitable Tests: Location Detection, Operating System Detection.
 }}

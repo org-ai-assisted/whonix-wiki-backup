@@ -37,7 +37,7 @@ title=Tor Browser Essentials
 |image=Torbrowser.png
 }}
 {{browser_mininav}}
-[[File:Torbrowser_icon.png|thumb|50px|Tor Browser Icon]]
+[[File:Torbrowser_icon.png|thumb|50px|Tor Browser Icon|alt=]]
 {{#iconbulletlist:addClass=minimal margin-bottom-20
 
 |fontSize=17px
@@ -54,11 +54,11 @@ __TOC__
 
 = Introduction =
 
-[[File:tor_browser_youtube.jpeg|250px|thumb]]
+[[File:tor_browser_youtube.jpeg|250px|thumb|alt=Tor Browser in Whonix showing the YouTube home page, signed out, with an Apple ad and trending videos]]
 
-[[File:tor_browser_duckduckgo2.png|250px|thumb]]
+[[File:tor_browser_duckduckgo2.png|250px|thumb|alt=Tor Browser in a Whonix-Workstation VirtualBox window showing the DuckDuckGo home page with an empty search box]]
 
-[[File:tor_browser_how_tor_works.png|250px|thumb]]
+[[File:tor_browser_how_tor_works.png|250px|thumb|alt=Tor Browser showing torproject.org overview page with How Tor Works diagrams of Alice, Tor nodes, Jane, Bob and Dave]]
 
 {{mbox
 | image   = [[File:Ambox_warning_pn.svg.png|40px]]
@@ -136,7 +136,7 @@ As an example, the screenshot below captures the browser appearance when visitin
 
 '''Figure:''' ''A Secure Connection to www.whonix.org''
 
-[[File:tbbbbbb.png|600px]]
+[[File:tbbbbbb.png|600px|alt=Whonix website in a browser with the site information popup open, showing a secure connection to www.whonix.org and no special permissions granted]]
 
 Take note of the small, left-hand area of the address bar. Indicators of an encrypted connection are: <code>www.whonix.org</code> is highlighted with a padlock and "<span style="color:#008000">Secure Connection</span>" in green writing, and the URL begins with ''https://'' instead of ''http://''.
 
@@ -146,7 +146,7 @@ Nowadays, when visiting a website that does not support encryption (HTTP<code>S<
 
 '''Figure:''' ''Tor Browser HTTPS-Only Mode Alert - Warning when visiting an unencrypted (HTTP only) website''
 
-[[File:Httpsonlymodewarningforhttpwebsit.png|700px]]
+[[File:Httpsonlymodewarningforhttpwebsit.png|700px|alt=Tor Browser HTTPS-Only Mode alert reading Secure Connection Not Available, with Continue to HTTP Site and Go Back buttons]]
 
 === HTTP / HTTPS Connections with and without Tor ===
 
@@ -158,7 +158,7 @@ The following figures from EFF provide an overview of HTTP / HTTPS connections w
 
 {{Box|text=
 
-[[File:tor-with-https.png|800px]]
+[[File:tor-with-https.png|800px|alt=Diagram of a Tor connection using HTTPS: the Tor relays, NSA and ISP see only site.com and Tor, while the site-side parties see user, password and data]]
 
 }}
 
@@ -166,7 +166,7 @@ The following figures from EFF provide an overview of HTTP / HTTPS connections w
 
 {{Box|text=
 
-[[File:tor-without-https.png|800px]]
+[[File:tor-without-https.png|800px|alt=Diagram of a Tor connection without HTTPS: the exit-side ISP, NSA and eavesdroppers can see site.com, user, password and data]]
 
 }}
 
@@ -174,7 +174,7 @@ The following figures from EFF provide an overview of HTTP / HTTPS connections w
 
 {{Box|text=
 
-[[File:without-tor-with-https.png|800px]]
+[[File:without-tor-with-https.png|800px|alt=Diagram of connection with HTTPS but no Tor: observers see only the site, while the destination site still sees user, password and data]]
 
 }}
 
@@ -182,7 +182,7 @@ The following figures from EFF provide an overview of HTTP / HTTPS connections w
 
 {{Box|text=
 
-[[File:without-tor-https.png|800px]]
+[[File:without-tor-https.png|800px|alt=Diagram of connection without Tor or HTTPS: hacker, ISP, NSA, sysadmin and police can all see site, user, password, data and location]]
 
 }}
 
@@ -222,7 +222,7 @@ Any default add-ons that are installed in Tor Browser should not be removed or d
 
 == NoScript ==
 
-[[File:noscript.png|NoScript logo|thumb]]
+[[File:noscript.png|NoScript logo|thumb|alt=]]
 
 NoScript is a free, open-source extension that comes bundled with Tor Browser and other Mozilla-based web browsers. NoScript can provide significant protection with the correct configuration: <ref name=no_script>https://en.wikipedia.org/wiki/NoScript</ref>
 
@@ -378,7 +378,7 @@ In Tor Browser, these features are managed within the browser itself, as it is a
 It is recommended to learn more about [[Fingerprint|Fingerprinting]] and [[Data Collection Techniques]] to better understand potential threats. Advanced users can also review detailed information about the former Torbutton design and its various functions [[Tor_Browser/Advanced_Users#Torbutton_Design|here]].
 
 == New Identity Function ==
-[[File:Newidentityicon.png|thumb|New Identity Broom Symbol]]
+[[File:Newidentityicon.png|thumb|New Identity Broom Symbol|alt=]]
 
 There are two ways to get a new identity in Tor Browser. Choose one.
 
@@ -398,7 +398,7 @@ There are two ways to access the New Identity button. Choose one.
 
 '''Figure:''' ''New Identity in Tor Browser''
 
-[[File:NewToridentitypointingtoit.png|800px]]
+[[File:NewToridentitypointingtoit.png|800px|alt=Tor Browser on check.torproject.org with an arrow pointing to the New Identity broom icon in the toolbar.]]
 
 {{mbox
 | image   = [[File:Ambox_notice.png|40px|alt=Whonix / {{kicksecure}} default admin password is: changeme]]
@@ -431,7 +431,7 @@ To use this function: <code>Left-click the Hamburger Icon</code> &rarr; <code>Se
 
 '''Figure:''' ''New Tor Circuit Button in Tor Browser''
 
-[[File:NewTorCircuitHamburger.png|400px]]
+[[File:NewTorCircuitHamburger.png|400px|alt=Tor Browser hamburger menu with the New Tor circuit for this site entry highlighted.]]
 
 Advanced users who want to learn more about this function should refer to the [[Tor_Browser/Advanced_Users#New_Tor_Circuit_Design|New Tor Circuit Design]] entry.
 
@@ -455,7 +455,7 @@ To use this feature: <code>Click Security Level button (taskbar 'shield')</code>
 
 '''Figure:''' ''Tor Browser Security Slider''
 
-[[File:Torsecurityslider.png|border]]
+[[File:Torsecurityslider.png|border|alt=Tor Browser Preferences Privacy and Security page with Security Level set to Safest, with Standard and Safer options listed]]
 
 To learn more about the exact effect of each setting level, refer to the [[Tor_Browser/Advanced_Users#Security_Slider_Design|Security Slider design]] entry. For information on related Tor plans for redesigning browser security controls, see [https://gitweb.torproject.org/tor-browser-spec.git/tree/proposals/101-security-controls-redesign.txt here].
 
@@ -544,7 +544,7 @@ If Tor Browser successfully launches and connects to the Tor network, [https://c
 
 '''Figure:''' ''Successful Tor Network Check in {{project_name_short}}''
 
-[[File:Checktorproject.png|border]]
+[[File:Checktorproject.png|border|alt=Tor Browser on check.torproject.org showing Congratulations, this browser is configured to use Tor.]]
 
 == File Downloads ==
 === Warnings ===
@@ -611,7 +611,7 @@ For those who regularly download Internet files, Tor Browser's default download 
 
 '''Figure:''' ''Default Tor Browser Download Folder''
 
-[[File:tbbd.png]]
+[[File:tbbd.png|alt=Tor Browser save dialog for serveimage.jpeg with the save folder path home, user, .tb, tor-browser, Browser, Downloads highlighted by an arrow]]
 
 To make things simpler, the following steps change Tor Browser preferences so files are saved directly inside <code>/home/user/Downloads</code>.
 
@@ -626,13 +626,13 @@ Choose one of the following three methods:
 
 '''Figure:''' ''Tor Browser Preferences''
 
-[[File:tbbd6.png]]
+[[File:tbbd6.png|alt=Tor Browser menu with Preferences highlighted (step 1) and the General page where Always ask me where to save files is selected (step 2)]]
 
 '''2.''' Select the <code>Sa<u>v</u>e files to</code> download option.
 
 '''Figure:''' ''Custom Download Path Option''
 
-[[File:tbbd8.png]]
+[[File:tbbd8.png|alt=Tor Browser General preferences with Always ask me where to save files selected and the default download path /home/user/Downloads highlighted]]
 
 '''3.''' Change the default download folder location.
 
@@ -640,7 +640,7 @@ It is recommended to set <code>/home/user/Downloads</code> as the custom path.
 
 '''Figure:''' ''Set the Custom Download Path''
 
-[[File:tbbd7.png]]
+[[File:tbbd7.png|alt=Tor Browser General preferences: Save files to selected (1), Browse button (2) and a folder chooser to pick the Downloads folder (steps 3 to 5)]]
 
 }}
 User files will now be downloaded to the <code>/home/user/Downloads</code> folder. Navigate to this folder using either [[Software#File Manager|file manager]] or [[Software#Terminal|terminal]].
@@ -659,7 +659,7 @@ To show hidden files:
 
 '''Figure:''' ''Hidden Files in Thunar''
 
-[[File:tbbd2.png]]
+[[File:tbbd2.png|alt=File manager View menu open with step 1 on View and step 2 on Show Hidden Files; a terminal is visible below]]
 
 '''3.''' Navigate to the downloaded files.
 
@@ -667,19 +667,19 @@ To show hidden files:
 
 '''Figure:''' ''Hidden Tor Browser Folder''
 
-[[File:tbbd3.png]]
+[[File:tbbd3.png|alt=File manager home folder with hidden files shown; a red circle and arrow mark the .tb folder]]
 
 Use the following path: <code>tor-browser</code> &rarr; <code>Browser</code> &rarr; <code>Downloads</code>
 
 '''Figure:''' ''Default Tor Browser Download Folder''
 
-[[File:tbbd4.png]]
+[[File:tbbd4.png|alt=File manager at Home, .tb, tor-browser, Browser with the Downloads folder circled]]
 
 Now it is possible to review the downloaded files.
 
 '''Figure:''' ''Downloaded Files''
 
-[[File:tbbd5.png]]
+[[File:tbbd5.png|alt=File manager showing the Downloads folder containing the downloaded file serveimage.jpeg, 358.4 KiB]]
 
 }}
 </div>
@@ -701,7 +701,7 @@ These options should never be combined for the same onion service.
 * https://blog.torproject.org/new-release-tor-browser-95
 </ref>
 
-[[File:Client-auth.png|border|800]]
+[[File:Client-auth.png|border|800|alt=Tor Browser prompt for an onion address asking for a private key, with a Remember this key checkbox and Cancel and Done buttons]]
 
 Before Tor Browser Onion Client Authorization in {{project_name_short}} can be used, in other words, before private keys can be pasted into Tor Browser's Onion Client Authorization popup, an additional configuration step must be applied on {{project_name_gateway_short}}.
 
@@ -987,7 +987,7 @@ Select your platform.
 |type=section
 |linkid=non-qubes
 |addToClass=info-box
-|image=[[File:Whonix-logo-icon.svg|25px]]
+|image=[[File:Whonix-logo-icon.svg|25px|alt=]]
 |title= {{Headline|h=5|content=Non-Qubes-Whonix}}
 |content=
 <u>If you are using a [[Non-Qubes-Whonix]] system</u>, complete the following steps <u>inside {{project_name_workstation_short}}</u>.
@@ -999,7 +999,7 @@ Select your platform.
 |type=section
 |linkid=qubes
 |addToClass=info-box
-|image=[[File:Qubes-logo-blue.png|25px]]
+|image=[[File:Qubes-logo-blue.png|25px|alt=]]
 |title= {{Headline|h=5|content=Qubes-Whonix}}
 |content=
 Qube type selection.
@@ -1011,7 +1011,7 @@ Qube type selection.
 |type=section
 |linkid=qubes-new
 |addToClass=info-box
-|image=[[File:Qubes-logo-blue.png|25px]]
+|image=[[File:Qubes-logo-blue.png|25px|alt=]]
 |title= {{Headline|h=5|content=New App Qubes and Disposables}}
 |content=
 <u>If you are using [[Qubes|{{q_project_name_short}}]]</u>, to ensure that <u>new</u> App Qubes and [[Qubes/Disposables|Disposables]] are created with a copy of the latest Tor Browser version, complete the following steps:
@@ -1023,7 +1023,7 @@ Qube type selection.
 |type=section
 |linkid=qubes-existing
 |addToClass=info-box
-|image=[[File:Qubes-logo-blue.png]]
+|image=[[File:Qubes-logo-blue.png|alt=]]
 |title= {{Headline|h=5|content=Existing App Qubes}}
 |content=
 <u>If you are using [[Qubes|{{q_project_name_short}}]]</u>, to re-install the latest Tor Browser version in <u>existing</u> {{project_name_workstation_short}} App Qubes, complete the following steps:
@@ -1037,7 +1037,7 @@ Qube type selection.
 |type=section
 |linkid=terminal
 |addToClass=info-box
-|image=[[File:Utilities-terminal.png]]
+|image=[[File:Utilities-terminal.png|alt=]]
 |title= {{Headline|h=5|content=Terminal}}
 |content=
 <u>If you are using a terminal</u>, complete the following steps:
@@ -1055,7 +1055,7 @@ The downloader will show it is checking for updates.
 
 '''Figure:''' ''Checking for Updates''
 
-[[File:Tor Browser Downloader({{project_name_short}}) checking for updates.png|400px|Tor Browser Downloader ({{project_name_short}}) checking for updates.]]
+[[File:Tor Browser Downloader({{project_name_short}}) checking for updates.png|400px|Tor Browser Downloader ({{project_name_short}}) checking for updates.|alt=Tor Browser Downloader window checking for updates]]
 
 '''4.''' Selected the preferred Tor Browser version when prompted.
 
@@ -1063,13 +1063,13 @@ Select the Tor Browser version and confirm installation. Take heed of the warnin
 
 '''Figure:''' ''Download Confirmation''
 
-[[File:torbrowserdownloader.png|Tor Browser Downloader ({{project_name_short}}) Download Confirmation]]
+[[File:torbrowserdownloader.png|Tor Browser Downloader ({{project_name_short}}) Download Confirmation|alt=Tor Browser Downloader dialog in anon-whonix listing online versions 7.5.5, 7.5.6, 8.0a8, 8.0a9 with a warning and No and Yes buttons]]
 
 After agreeing to the download process, a progress indicator will be displayed by the downloader. This process can be lengthy depending on the speed of the Tor network connection.
 
 '''Figure:''' ''Downloading Tor Browser''
 
-[[File:Tor Browser Downloader({{project_name_short}}) downloading.png|400px|Tor Browser Downloader ({{project_name_short}}) Downloading Tor Browser.]]
+[[File:Tor Browser Downloader({{project_name_short}}) downloading.png|400px|Tor Browser Downloader ({{project_name_short}}) Downloading Tor Browser.|alt=Tor Browser Downloader window downloading Tor Browser]]
 
 '''5.''' Check the Tor Browser signature was correctly verified.
 
@@ -1077,7 +1077,7 @@ Once the download has finished, the downloader will provide verification (or not
 
 '''Figure:''' ''Tor Browser Installation Confirmation''
 
-[[File:torbrowserdownloader2.png|Tor Browser Downloader ({{project_name_short}}) Installation Confirmation.]]
+[[File:torbrowserdownloader2.png|Tor Browser Downloader ({{project_name_short}}) Installation Confirmation.|alt=Tor Browser Downloader installation confirmation showing signature dates, gpg report with key fingerprints, and No and Yes buttons]]
 
 '''6.''' Confirm installation of Tor Browser.
 
@@ -1085,7 +1085,7 @@ If the installation process is confirmed, the downloader will extract Tor Browse
 
 '''Figure:''' ''Extracting Tor Browser''
 
-[[File:Tor Browser Downloader({{project_name_short}}) Extracting.png|400px|Tor Browser Downloader ({{project_name_short}}) Extracting.]]
+[[File:Tor Browser Downloader({{project_name_short}}) Extracting.png|400px|Tor Browser Downloader ({{project_name_short}}) Extracting.|alt=Tor Browser Downloader window during the extracting stage]]
 
 '''7.''' ''Optional:'' Launch Tor Browser.
 
@@ -1093,7 +1093,7 @@ In the final step, the downloader will prompt whether the upgraded Tor Browser s
 
 '''Figure:''' ''Finalized Tor Browser Installation''
 
-[[File:Tor Browser Downloader({{project_name_short}})FInished2.png|600px|Tor Browser Downloader ({{project_name_short}}) Finished Installing Tor Browser.]]
+[[File:Tor Browser Downloader({{project_name_short}})FInished2.png|600px|Tor Browser Downloader ({{project_name_short}}) Finished Installing Tor Browser.|alt=Tor Browser Downloader window reporting the download finished]]
 
 <font size=-3>(Also available as [https://www.whonix.org/w/images/f/f2/Tor_Browser_Update_Check_005.png CLI version].)</font>
 
@@ -1139,7 +1139,7 @@ By the time the Installation Confirmation Notification is visible, the verificat
 
 '''Figure:''' ''Tor Browser Installation Confirmation''
 
-[[File:torbrowserdownloader2.png|torbrowser-updater_signature_verification_screen.]]
+[[File:torbrowserdownloader2.png|torbrowser-updater_signature_verification_screen.|alt=Tor Browser Downloader installation confirmation showing signature dates, gpg report with key fingerprints, and No and Yes buttons]]
 
 <ref>[[OpenPGP#Common_Misconceptions|GnuPG (OpenPGP) common misconceptions]].</ref>
 <ref>The name of the file is stored in the hash file and verified to match the downloaded file name and hash.</ref>
@@ -1262,7 +1262,7 @@ update-torbrowser --alpha --input gui
 === Tor Browser Downloader (by {{project_name_short}} developers) Issues downloading Tor Browser ===
 '''Figure:''' ''Tor Browser Downloader (by {{project_name_short}} developers) failed to download Tor Browser''
 
-[[File:tb_failed_to_install.png]]
+[[File:tb_failed_to_install.png|alt=Terminal output of the Tor Browser downloader: download stopped at 91 percent with an error, possible reasons and recommendations listed]]
 
 Possible reasons:
 
@@ -1300,7 +1300,7 @@ https://blog.torproject.org/tor-browser-50-released
 
 '''Figure:''' ''Tor Browser Update Notification''
 
-[[File:TBBupdater.png|600px]]
+[[File:TBBupdater.png|600px|alt=Whonix welcome page in Tor Browser with red arrows pointing to the yellow warning icon in the toolbar and the green update arrow on the menu button]]
 
 Using Tor Browser Internal Updater automatically makes use of its built-in [[Verifying Software Signatures|software signatures verification]] feature. <ref>
 The internal updater process involves several automatic steps ([https://blog.torproject.org/new-release-tor-browser-951/#comment-288479 source]):
@@ -1629,7 +1629,7 @@ Related: [[Tor_Browser/Advanced_Users#Custom_Homepage|Setting up a Tor Browser C
 === Your connection to Tor is not being managed by Tor Browser ===
 '''Figure:''' ''Tor Browser "Your connection to Tor is not being managed by Tor Browser" Message''
 
-[[File:Your_connection_to_Tor_is_not_being_managed_by_Tor_Browser.png]]
+[[File:Your_connection_to_Tor_is_not_being_managed_by_Tor_Browser.png|alt=Tor Browser start page with a notice that the connection to Tor is not being managed by Tor Browser, and a Test your connection link]]
 
 There is a related Tor Browser upstream bug: [https://forums.whonix.org/t/local-browser-homepage-for-tor-browser-in-whonix/347/117 Environment variable `TOR_DEFAULT_HOMEPAGE` is no longer honored when Tor Browser is restarted using its new identity button]
 
@@ -1649,7 +1649,7 @@ Sometimes the following error message appears when no Tor Browser window is open
 
 '''Figure:''' ''Running Tor Browser Instance''
 
-[[File:Tor browser already running.png]]
+[[File:Tor browser already running.png|alt=Close Tor Browser warning dialog saying Tor Browser is already running but not responding]]
 
 <blockquote>Tor Browser is already running, but is not responding. To use Tor Browser, you must first close the existing Tor Browser process, restart your device, or use a different profile.</blockquote>
 

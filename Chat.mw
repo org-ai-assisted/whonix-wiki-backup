@@ -459,7 +459,7 @@ It should be noted that no single application listed here has a superior feature
 
 = SimpleX =
 {{Anchor|SimpleX Chat}}
-[[File:SimpleX_Logo_Small.png|border|SimpleX logo]]
+[[File:SimpleX_Logo_Small.png|border|SimpleX logo|alt=]]
 
 See [[SimpleX]].
 
@@ -468,7 +468,7 @@ See [[SimpleX]].
 See [[Cwtch]].
 
 = Dino IM =
-[[File:Dinologo.png|border]]
+[[File:Dinologo.png|border|alt=]]
 
 == Overview ==
 
@@ -490,7 +490,7 @@ Both types of keys are stored in <code>~/.local/share/dino/omemo.db</code> (a SQ
 
 = Gajim =
 
-[[File:Gajimlogo.png|border]]
+[[File:Gajimlogo.png|border|alt=]]
 
 == Overview ==
 
@@ -513,7 +513,7 @@ In 2021, audio/video is reportedly not functional in Gajim. Further, OTR support
 
 '''Figure:''' ''Gajim Client in {{project_name_short}}''
 
-[[File:Gajim.png|1600px]]
+[[File:Gajim.png|1600px|alt=Gajim XMPP client Plugins window with the OMEMO plugin selected and enabled, PGP plugin unchecked, and a Gajim account list behind it]]
 
 == Installation ==
 
@@ -580,7 +580,7 @@ Gajim cannot be installed by default in {{project_name_short}} yet, as there is 
 
 = OnionShare =
 
-[[File:OnionShare_logo.png|128px|border|OnionShare logo]]
+[[File:OnionShare_logo.png|128px|border|OnionShare logo|alt=]]
 
 See [[OnionShare]].
 
@@ -664,7 +664,7 @@ element-desktop
 
 == Quaternion ==
 
-[[File:quaternion.png|128px|border]]
+[[File:quaternion.png|128px|border|alt=]]
 
 === Overview ===
 
@@ -686,7 +686,7 @@ https://matrix.org/bridges/
 
 == Nheko Reborn ==
 
-[[File:Nhekologo.png|128px|border]]
+[[File:Nhekologo.png|128px|border|alt=]]
 
 === Overview ===
 

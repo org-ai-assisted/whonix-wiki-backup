@@ -72,9 +72,9 @@ This documentation is a crash course in anonymity and security on the Internet. 
 * [[Desktop|Platform-specific Desktop Tips]]
 <div></div>
 * [[Post Install Advice|Post-installation Security Advice]]
-** [[File:Kvm-new-logo.png|30px|link=KVM]] [[KVM#Start|KVM]]
-** [[File:qubes-logo-blue.png|15px|link=Qubes]] [[Qubes|Qubes]]
-** [[File:Virtualbox_logo.png|15px|link=VirtualBox]] [[VirtualBox|VirtualBox]]
+** [[File:Kvm-new-logo.png|30px|link=KVM|alt=]] [[KVM#Start|KVM]]
+** [[File:qubes-logo-blue.png|15px|link=Qubes|alt=]] [[Qubes|Qubes]]
+** [[File:Virtualbox_logo.png|15px|link=VirtualBox|alt=]] [[VirtualBox|VirtualBox]]
 * [[Project-APT-Repository|{{project_name_short}} APT Repository]]
 </div>
 </div>
@@ -106,7 +106,7 @@ This documentation is a crash course in anonymity and security on the Internet. 
 |wikipage=Unicode
 |text=Invisible Malicious Unicode Risks
 }}
-* [[File:2000px-AppArmor logo.svg.png|20px|link=AppArmor]] {{kicksecure_wiki
+* [[File:2000px-AppArmor logo.svg.png|20px|link=AppArmor|alt=]] {{kicksecure_wiki
 |wikipage=AppArmor
 |text=AppArmor
 }}
@@ -232,7 +232,7 @@ This documentation is a crash course in anonymity and security on the Internet. 
 |wikipage=Cold_Boot_Attack_Defense
 |text=Cold Boot Attack Defense
 }}
-* [[File:logo-linux-500x500.png|15px]] Kernels
+* [[File:logo-linux-500x500.png|15px|alt=]] Kernels
 ** {{kicksecure_wiki
 |wikipage=Kernel
 |text=Install Newer Kernels
@@ -261,7 +261,7 @@ This documentation is a crash course in anonymity and security on the Internet. 
 |wikipage=Protection_Against_Physical_Attacks
 |text=Protection against Physical Attacks
 }}
-* [[File:qubes-logo-blue.png|15px|link=Qubes]] [[Qubes/Disposables|Qubes Disposables]]
+* [[File:qubes-logo-blue.png|15px|link=Qubes|alt=]] [[Qubes/Disposables|Qubes Disposables]]
 * {{kicksecure_wiki
 |wikipage=Sandbox-app-launcher
 |text=Sandboxed Application Launcher
@@ -283,7 +283,7 @@ This documentation is a crash course in anonymity and security on the Internet. 
 |wikipage=Systemcheck_Hardening
 |text=systemcheck Hardening
 }}
-* [[File:Iconfinder_tor_386502.svg|20px|link=Tor]] [[Tor]]
+* [[File:Iconfinder_tor_386502.svg|20px|link=Tor|alt=]] [[Tor]]
 ** [[Tor_Entry_Guards|Tor Entry Guards]]
 ** [[Tunnel_UDP_over_Tor|Tunnel UDP over Tor]]
 ** [[Tor-ctrl-observer|tor-ctrl-observer - Tor Connection Destination Viewer]]
@@ -412,20 +412,20 @@ This documentation is a crash course in anonymity and security on the Internet. 
 * [[Surfing_Posting_Blogging|Surfing, Posting and Blogging]]
 * [[Keystroke_and_Mouse_Deanonymization|Keystroke and Mouse Deanonymization]]
 * [[Stylometry|Stylometry]]
-* [[File:Mat2icon.png|20px|link=Metadata]] [[Metadata|Metadata]]
+* [[File:Mat2icon.png|20px|link=Metadata|alt=]] [[Metadata|Metadata]]
 * [[Geo-blocking]]
 <div></div>
-* [[File:Torbrowser_icon.png|15px|link=Tor Browser]] Tor Browser
+* [[File:Torbrowser_icon.png|15px|link=Tor Browser|alt=]] Tor Browser
 ** [[Tor Browser|Essentials]]
 ** [[Tor_Browser/Advanced_Users|Advanced Topics]]
 ** [[Install Tor Browser Outside of Whonix|Non-{{project_name_short}} Tor Browser]]
 ** [[Tor_Browser#Unsafe_Tor_Browser_Habits|Unsafe Tor Browser Habits]]
-** [[File:Logo-windows-500x500.png|15px|link=]] [[Verify_Tor_Browser_in_Windows|Verify Tor Browser in Microsoft Windows]]
+** [[File:Logo-windows-500x500.png|15px|link=|alt=]] [[Verify_Tor_Browser_in_Windows|Verify Tor Browser in Microsoft Windows]]
 <div></div>
 * [[Other Browsers]]
-* [[File:Youtubelogo.png|30px]] YouTube
-** [[File:Watchingyoutube.jpg|30px]] [[YouTube|Watching YouTube Videos]]
-** [[File:Youtubedllogo.png|30px]] [[yt-dlp|yt-dlp: Downloading YouTube Videos]]
+* [[File:Youtubelogo.png|30px|alt=]] YouTube
+** [[File:Watchingyoutube.jpg|30px|alt=]] [[YouTube|Watching YouTube Videos]]
+** [[File:Youtubedllogo.png|30px|alt=]] [[yt-dlp|yt-dlp: Downloading YouTube Videos]]
 </div>
 </div>
 
@@ -433,24 +433,24 @@ This documentation is a crash course in anonymity and security on the Internet. 
 <p>Anonymous Email, Chat and Communications</p>
 <div class="use-3-columns strict-list-columns mw-collapsible-content">
 * [[E-Mail|Email Overview]]
-** [[File:Thunderbird256.png|15px]] [[Encrypted_Email_with_Thunderbird|Encrypted Email with Thunderbird]]
+** [[File:Thunderbird256.png|15px|alt=]] [[Encrypted_Email_with_Thunderbird|Encrypted Email with Thunderbird]]
 * [[E-Mail#Email_Alternatives|Email Alternatives]]
-** [[File:Bitmessagelogo.png|20px]] [[BitMessage|BitMessage]]
+** [[File:Bitmessagelogo.png|20px|alt=]] [[BitMessage|BitMessage]]
 <div></div>
 * [[Chat|Instant Messenger Chat]]
 ** [[Chat#General Safety Advice|General Safety Advice]]
 ** [[SimpleX|Simplex]]
 ** [[Cwtch|Cwtch]]
-** [[File:DeltaChat_Logo_Small.png|15px]] [[DeltaChat|Delta Chat]]
-** [[File:Dinologo.png|15px]] [[Chat#Dino_IM|Dino]]
-** [[File:Gajimlogo.png|15px]] [[Chat#Gajim|Gajim]]
-** [[File:Signal.png|15px]] [[Signal|Signal]]
-** [[File:1024px-Telegram_2019_Logo.svg.png|20px]] [[Telegram|Telegram]]
+** [[File:DeltaChat_Logo_Small.png|15px|alt=]] [[DeltaChat|Delta Chat]]
+** [[File:Dinologo.png|15px|alt=]] [[Chat#Dino_IM|Dino]]
+** [[File:Gajimlogo.png|15px|alt=]] [[Chat#Gajim|Gajim]]
+** [[File:Signal.png|15px|alt=]] [[Signal|Signal]]
+** [[File:1024px-Telegram_2019_Logo.svg.png|20px|alt=]] [[Telegram|Telegram]]
 <div></div>
 * [[VoIP|Phone Calls and VoIP]]
 ** [[VoIP#Asterisk_VoIP_Server_over_OpenVPN_in_Tor_Hidden_Service|Asterisk VoIP Server]]
-** [[File:Mumblelogo.png|15px]] [[VoIP#Mumble|Mumble]]
-** [[File:Wickrlogo.png|30px]] [[Wickr|Wickr Me]]
+** [[File:Mumblelogo.png|15px|alt=]] [[VoIP#Mumble|Mumble]]
+** [[File:Wickrlogo.png|30px|alt=]] [[Wickr|Wickr Me]]
 * [[One_Time_Pad|Physical One-time Pad]]
 </div>
 </div>
@@ -463,8 +463,8 @@ WIKI EDITORS COMMENT:
 Not using strict-list-columns because the list is too long to be broken.
 -->
 * [[Money|Anonymous Money and Payments]]
-** [[File:Bisqlogo.png|15px]] [[Bisq|Bisq: Decentralized Bitcoin Exchange]]
-** [[File:BC Logo .png|15px]] [[Bitcoin|Bitcoin (BTC)]]
+** [[File:Bisqlogo.png|15px|alt=]] [[Bisq|Bisq: Decentralized Bitcoin Exchange]]
+** [[File:BC Logo .png|15px|alt=]] [[Bitcoin|Bitcoin (BTC)]]
 *** [[Bitcoin_Core|Bitcoin Core]]
 ** {{kicksecure_wiki
 |wikipage=Hardware_Wallet_Security
@@ -474,26 +474,26 @@ Not using strict-list-columns because the list is too long to be broken.
 |wikipage=Cryptocurrency_Security_Threats
 |text=Cryptocurrency Security Threats
 }}
-** [[File:Electrum-appimage.png|15px]] [[Electrum|Electrum]]
+** [[File:Electrum-appimage.png|15px|alt=]] [[Electrum|Electrum]]
 *** [[ElectrumX|How-to: Use ElectrumX Personal Server in {{project_name_short}}]]
-** [[File:Ethereumlogo.png|25px]] [[Ethereum|Ethereum (ETH)]]
+** [[File:Ethereumlogo.png|25px|alt=]] [[Ethereum|Ethereum (ETH)]]
 ** {{kicksecure_wiki
 |wikipage=Ledger_Hardware_Wallet
 |text=Ledger Hardware Wallet
 }}
-** [[File:Monero-symbol-1280.png|15px]] [[Monero|Monero (XMR)]]
+** [[File:Monero-symbol-1280.png|15px|alt=]] [[Monero|Monero (XMR)]]
 *** [[Monero_Wallet_Isolation|How-to: Use Monero with Wallet Isolation in {{q_project_name_short}}]]
 *** [[UnstoppableSwap]]
 * [[File Sharing|Filesharing and Torrenting]]
-** [[File:OnionShare_logo.png|15px]] [[OnionShare|OnionShare]]
+** [[File:OnionShare_logo.png|15px|alt=]] [[OnionShare|OnionShare]]
 * [[Remote Administration|Remote Administration]]
 ** {{kicksecure_wiki
 |wikipage=SSH
 |text=Secure Shell (SSH)
 }}
-** [[File:Remminalogo.png|15px]] [[Remote_Administration#Remmina|Remmina: Virtual Network Computing (VNC)]]
-* [[File:RSSlogo.png|15px]] [[rss|RSS Reader and Website / Blog Updates Notification]]
-* [[File:YaCylogo.png|25px]] [[YaCy|YaCy Decentralized Search Engine]]
+** [[File:Remminalogo.png|15px|alt=]] [[Remote_Administration#Remmina|Remmina: Virtual Network Computing (VNC)]]
+* [[File:RSSlogo.png|15px|alt=]] [[rss|RSS Reader and Website / Blog Updates Notification]]
+* [[File:YaCylogo.png|25px|alt=]] [[YaCy|YaCy Decentralized Search Engine]]
 </div>
 </div>
 
@@ -501,9 +501,9 @@ Not using strict-list-columns because the list is too long to be broken.
 <p>Anonymous Internet Connections and Hosting</p>
 <div class="use-3-columns strict-list-columns mw-collapsible-content">
 * [[Other Anonymizing Networks|Combine other Anonymizing Services with Tor]]
-** [[File:Freenet-bunny-with-name-flying.png|20px]] [[Freenet|Freenet]]
-** [[File:I2Pmainlogo.svg.png|30px]] [[I2P|I2P]]
-** [[File:Zeronetlogo.png|15px]] [[ZeroNet|ZeroNet: Censorship-resistant Network]]
+** [[File:Freenet-bunny-with-name-flying.png|20px|alt=]] [[Freenet|Freenet]]
+** [[File:I2Pmainlogo.svg.png|30px|alt=]] [[I2P|I2P]]
+** [[File:Zeronetlogo.png|15px|alt=]] [[ZeroNet|ZeroNet: Censorship-resistant Network]]
 * {{kicksecure_wiki
 |wikipage=Gemini
 |text=Gemini (protocol) / Geminispace
@@ -559,7 +559,7 @@ Not using strict-list-columns because the list is too long to be broken.
 |wikipage=Software#Audio.2C_Image_and_Video
 |text=Audio, Image and Video
 }}
-** [[File:2000px-VLC_Icon.svg.png|15px|VLC Media Player Icon]] {{kicksecure_wiki
+** [[File:2000px-VLC_Icon.svg.png|15px|VLC Media Player Icon|alt=]] {{kicksecure_wiki
 |wikipage=Software#Audio.2C_Image_and_Video
 |text=VLC Media Player
 }}
@@ -599,7 +599,7 @@ Not using strict-list-columns because the list is too long to be broken.
 ** [[Tunnels/Introduction|Combining Tunnels with Tor]]
 ** [[Chaining_Anonymizing_Gateways|Possible Configurations]]
 * [[Tunnels/Examples|Free VPN Tunnel Setup Examples]]
-* [[File:Lanternlogo.png|15px|Lantern Icon]] [[Lantern|Lantern]]
+* [[File:Lanternlogo.png|15px|Lantern Icon|alt=]] [[Lantern|Lantern]]
 * [[Whonix_versus_VPNs|{{project_name_short}} vs. VPN Comparison]]
 * [[Whonix_versus_Proxies|Tor vs. Proxies, Proxy Chains]]
 <div></div>
@@ -618,7 +618,7 @@ Not using strict-list-columns because the list is too long to be broken.
 <div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
 <p>{{non_q_project_name_short}} Only</p>
 <div class="use-3-columns strict-list-columns mw-collapsible-content">
-* {{non_q_project_name_short}} includes [[File:Kvm-new-logo.png|30px|link=KVM]] [[KVM]], [[File:Virtualbox_logo.png|15px|link=VirtualBox]] [[VirtualBox]] and [[Dev/Build_Documentation/Physical_Isolation|Physical Isolation]]
+* {{non_q_project_name_short}} includes [[File:Kvm-new-logo.png|30px|link=KVM|alt=]] [[KVM]], [[File:Virtualbox_logo.png|15px|link=VirtualBox|alt=]] [[VirtualBox]] and [[Dev/Build_Documentation/Physical_Isolation|Physical Isolation]]
 * [[Signing Key|Download the {{project_name_short}} Signing Key]]
 * {{kicksecure_wiki
 |wikipage=RAM_Adjusted_Desktop_Starter
@@ -626,11 +626,11 @@ Not using strict-list-columns because the list is too long to be broken.
 }}
 <div></div>
 * [[Verify the images|Verify {{project_name_short}} Images]]
-** [[File:logo-linux-500x500.png|15px|link=]] [[Verify_the_images_using_Linux|Verify Whonix Images using Linux]]
-** [[File:logo-apple-500x500.png|15px]] [[Verify_the_images_using_macOS|Verify Whonix Images using macOS]]
-** [[File:Logo-windows-500x500.png|15px|link=]] [[Verify_the_images_using_Windows|Verify Whonix Images using Windows]]
+** [[File:logo-linux-500x500.png|15px|link=|alt=]] [[Verify_the_images_using_Linux|Verify Whonix Images using Linux]]
+** [[File:logo-apple-500x500.png|15px|alt=]] [[Verify_the_images_using_macOS|Verify Whonix Images using macOS]]
+** [[File:Logo-windows-500x500.png|15px|link=|alt=]] [[Verify_the_images_using_Windows|Verify Whonix Images using Windows]]
 <div></div>
-* [[File:Virtualbox_logo.png|15px|link=VirtualBox]] VirtualBox-specific
+* [[File:Virtualbox_logo.png|15px|link=VirtualBox|alt=]] VirtualBox-specific
 ** {{kicksecure_wiki
 |wikipage=VirtualBox/Higher_Screen_Resolution_without_installing_VirtualBox_Guest_Additions
 |text=Higher Screen Resolution without VirtualBox Guest Additions
@@ -662,7 +662,7 @@ Not using strict-list-columns because the list is too long to be broken.
 <div class="toccolours mw-collapsible mw-collapsed" style="max-width:100%;">
 <p>{{q_project_name_short}} Only</p>
 <div class="use-3-columns strict-list-columns mw-collapsible-content">
-* [[File:Qubes-logo-icon.png|15px|link=]] [[File:{{project_name_short}}-logo-text.svg|15px|link=]] [[Qubes|{{q_project_name_short}} Overview]]
+* [[File:Qubes-logo-icon.png|15px|link=|alt=]] [[File:{{project_name_short}}-logo-text.svg|15px|link=|alt=]] [[Qubes|{{q_project_name_short}} Overview]]
 ** [[Qubes/Why_use_Qubes_over_other_Virtualizers|Why use Qubes over other Virtualizers?]]
 <div></div>
 * {{q_project_name_short}} App Qube / Template Operations
@@ -763,7 +763,7 @@ Not using strict-list-columns because the list is too long to be broken.
 |wikipage=Live_Mode
 |text=Boot an existing Debian Host into Live Mode
 }}
-* [[File:Kicksecure-icon-logo.png|30px]] [https://www.kicksecure.com/ Security Hardened Linux Distribution {{Kicksecure}} (based on Debian)]
+* [[File:Kicksecure-icon-logo.png|30px|alt=]] [https://www.kicksecure.com/ Security Hardened Linux Distribution {{Kicksecure}} (based on Debian)]
 * [[Edward_Snowden_on_Whonix|Edward Snowden on Whonix]]
 <div></div>
 * Feature Requests

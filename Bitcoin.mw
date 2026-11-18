@@ -7,11 +7,11 @@ Bitcoin
 |image=Bitcoin234234234.jpg
 }}
 {{bitcoin_mininav}}
-[[File:120px-Bitcoin.png|200px]]
+[[File:120px-Bitcoin.png|200px|alt=Bitcoin accepted here badge with orange Bitcoin symbol]]
 {{intro|
 Bitcoin: experimental, decentralized digital currency. Anonymous payments. Anonymous BTC.
 }}
-[[File:BC_Logo_.png|thumb|Bitcoin Logo|200px]]
+[[File:BC_Logo_.png|thumb|Bitcoin Logo|200px|alt=]]
 = Introduction =
 
 Bitcoin is: <ref>https://en.wikipedia.org/wiki/Bitcoin</ref> <blockquote>... an experimental, decentralized digital currency that enables instant payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network.</blockquote>
@@ -48,7 +48,7 @@ Do not confuse the Bitcoin client with the actual wallet. The wallet is the coll
 For a comprehensive list of Open Source clients, see [https://en.bitcoin.it/wiki/Clients#Table here].
 
 == Bitcoin Core ==
-[[File:Bitcoin-core.png|thumb|Bitcoin Core Logo]]
+[[File:Bitcoin-core.png|thumb|Bitcoin Core Logo|alt=]]
 See [[Bitcoin Core]].
 
 == Electrum ==

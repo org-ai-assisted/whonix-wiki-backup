@@ -6,7 +6,7 @@
 {{intro|
 {{project_name_short}} Release Notes, Changelog
 }}
-[[File:Oldstablewhonix.jpg|thumb]]
+[[File:Oldstablewhonix.jpg|thumb|alt=]]
 = Additional Changes =
 Since {{project_name_short}} is based on {{kicksecure}}, maintained by the same contributors, the reader should also take notice of the {{kicksecure_wiki
 |wikipage=Changelog

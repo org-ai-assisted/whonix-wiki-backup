@@ -6,7 +6,7 @@ Onionizing Repositories
 |description=The guide explains how to configure Tor onion services for APT repositories to enhance security and privacy, but it may cause system updates to fail due to unreliability. The configuration provides protection against targeted and man-in-the-middle attacks, and prevents tracking of installed programs.
 |image=Onionrepository23234.jpg
 }} <!-- close #seo -->
-[[File:Onionrepository23234.jpg|thumb]]
+[[File:Onionrepository23234.jpg|thumb|alt=]]
 {{intro|
 The guide explains how to configure experimental Tor onion services for APT repositories. The configuration provides additional security and privacy benefits, such as protection against targeted attacks, man-in-the-middle attacks, and preventing tracking of installed programs, but it may cause system updates to fail due to unreliability.
 }} <!-- close intro -->
@@ -34,7 +34,7 @@ Select your platform.
 |type=section
 |linkid=hosts-nonqubes
 |addToClass=info-box
-|image=[[File:{{project_name_short}}-logo-icon.svg|25px]]
+|image=[[File:{{project_name_short}}-logo-icon.svg|25px|alt=]]
 |title= == {{non_q_project_name_short}} VMs ==
 |content=
 * <u>What to change:</u> {{non_q_project_name_short}} {{VMs}} can be onionized by editing both the Debian <ref name=Debian_onions /> and {{project_name_short}} repository configuration files so they point to the corresponding onion mirrors.
@@ -137,7 +137,7 @@ upgrade-nonroot
 |type=section
 |linkid=hosts-qubes
 |addToClass=info-box
-|image=[[File:Qubes-logo-blue.png|25px]]
+|image=[[File:Qubes-logo-blue.png|25px|alt=]]
 |title= == {{q_project_name_short}} Hosts ==
 |content=
 * <u>What to change:</u> Qubes <code>dom0</code> and VMs can be onionized by editing the repository configuration files so they point to the corresponding onion mirrors. <ref>
@@ -400,7 +400,7 @@ upgrade-nonroot
 |type=section
 |linkid=hosts-debian
 |addToClass=info-box
-|image=[[File:Debian.png|25px]]
+|image=[[File:Debian.png|25px|alt=]]
 |title= == Debian Hosts ==
 |content=
 * <u>What to change:</u> Debian hosts and VMs can be onionized by editing the Debian <ref name=Debian_onions /> <ref>
@@ -422,7 +422,7 @@ Also edit {{project_name_short}} <code>sources.list</code> if you are using [[Pa
 |type=section
 |linkid=hosts-kicksecure
 |addToClass=info-box
-|image=[[File:Kicksecure-icon-logo.svg|25px]]
+|image=[[File:Kicksecure-icon-logo.svg|25px|alt=]]
 |title= == Kicksecure Hosts ==
 |content=
 If your host operating system is Kicksecure, follow the Kicksecure documentation (separate project / separate wiki):

@@ -6,7 +6,7 @@ Remailers: Send Emails without Registration
 |description=Anonymous Mail/Messages. Remailer over Tor. Tunnelling remailer through Tor. Connection Schema: user &rarr; Tor &rarr; remailer &rarr; recipient
 |image=Remailer.png
 }}
-[[File:Remailer.png|thumb]]
+[[File:Remailer.png|thumb|alt=]]
 {{intro|
 Anonymous Mail/Messages. Remailer over Tor. Tunnelling remailer through Tor. Connection Schema:<br/>
 <code>user</code> &rarr; <code>Tor</code> &rarr; <code>remailer</code> &rarr; <code>recipient</code>

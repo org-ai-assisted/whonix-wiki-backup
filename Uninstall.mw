@@ -6,7 +6,7 @@ Uninstall {{project_name_short}}
 |description=Guide on how to uninstall {{project_name_short}}
 |image=Qubesunintall123123.png
 }}
-[[File:Qubesunintall123123.png|thumb|200px]]
+[[File:Qubesunintall123123.png|thumb|200px|alt=]]
 <div class="mininav">
 * [[Uninstall|Uninstall {{non_q_project_name_short}}]]
 * [[Qubes/Uninstall|Uninstall {{q_project_name_short}}]]
@@ -38,7 +38,7 @@ Select your platform.
 |content=
 {{Tab
 |title= == VirtualBox ==
-|image=[[File:Virtualbox_logo.png|25px]]
+|image=[[File:Virtualbox_logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 Start Oracle VM VirtualBox Manager.
@@ -47,7 +47,7 @@ Start Oracle VM VirtualBox Manager.
 
 <u>Note:</u> Screenshots might look slightly different.
 
-[[File:Whonix_Oracle_VM_VirtualBox_Manager.png|400px|Whonix in Oracle VM VirtualBox Manager]]
+[[File:Whonix_Oracle_VM_VirtualBox_Manager.png|400px|Whonix in Oracle VM VirtualBox Manager|alt=German-language VirtualBox Manager listing Whonix-Gateway-XFCE and Whonix-Workstation-XFCE, plus copies, all powered off, with Gateway details shown.]]
 
 Right-click on a VM name.
 
@@ -55,13 +55,13 @@ Right-click on a VM name.
 
 <u>Note:</u> VM names will look different than in the screenshot.
 
-[[File:Virtualbox_delete_vm.jpeg|400px|VirtualBox delete VM]]
+[[File:Virtualbox_delete_vm.jpeg|400px|VirtualBox delete VM|alt=VirtualBox Manager on macOS with the context menu of the win10 VM open and a red arrow pointing at the Remove entry.]]
 
 }} <!-- close tab: Virtualbox Remove the VMs  -->
 
 {{Tab
 |title= == KVM ==
-|image=[[File:Kvm-new-logo.png|25px]]
+|image=[[File:Kvm-new-logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -71,7 +71,7 @@ Right-click on a VM name.
 
 {{Tab
 |title= == Qubes ==
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -92,7 +92,7 @@ The method for this varies based on your host operating system. It is [[unspecif
 |content=
 {{Tab
 |title= == VirtualBox ==
-|image=[[File:Virtualbox_logo.png|25px]]
+|image=[[File:Virtualbox_logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 Uninstall VirtualBox.
@@ -117,7 +117,7 @@ sudo groupdel vboxsf
 
 {{Tab
 |title= == KVM ==
-|image=[[File:Kvm-new-logo.png|25px]]
+|image=[[File:Kvm-new-logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -127,7 +127,7 @@ sudo groupdel vboxsf
 
 {{Tab
 |title= == Qubes ==
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -145,7 +145,7 @@ Optional.
 |content=
 {{Tab
 |title= == VirtualBox ==
-|image=[[File:Virtualbox_logo.png|25px]]
+|image=[[File:Virtualbox_logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -161,7 +161,7 @@ Optional.
 
 {{Tab
 |title= == KVM ==
-|image=[[File:Kvm-new-logo.png|25px]]
+|image=[[File:Kvm-new-logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -170,7 +170,7 @@ Optional.
 
 {{Tab
 |title= == Qubes ==
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -188,7 +188,7 @@ Optional.
 |content=
 {{Tab
 |title= == VirtualBox ==
-|image=[[File:Virtualbox_logo.png|25px]]
+|image=[[File:Virtualbox_logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -201,7 +201,7 @@ Only applicable if the user has used [[Linux|{{project_name_short}} for Linux In
 
 {{Tab
 |title= == KVM ==
-|image=[[File:Kvm-new-logo.png|25px]]
+|image=[[File:Kvm-new-logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -211,7 +211,7 @@ Only applicable if the user has used [[Linux|{{project_name_short}} for Linux In
 
 {{Tab
 |title= == Qubes ==
-|image=[[File:Qubes-logo-icon.png|25px]]
+|image=[[File:Qubes-logo-icon.png|25px|alt=]]
 |addToClass=info-box
 |content=
 

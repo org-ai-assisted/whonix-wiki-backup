@@ -14,7 +14,7 @@ ExoneraTor is a website hosted by The Tor Project that tells you whether a given
 
 '''Figure:''' ''ExoneraTor: Tor Relay Check''
 
-[[File:ExoneraTor.png|border]]
+[[File:ExoneraTor.png|border|alt=Tor Browser showing ExoneraTor at metrics.torproject.org: IP 109.238.11.185 on 2020-06-12, result positive, table of hourly relay entries named Nolas]]
 
 = See Also =
 * [[Tor]]

@@ -8,8 +8,8 @@ Anbox - Run Android Applications and Games
 }}
 {{archived}} __NOINDEX__
 https://anbox.io/ redirects to https://github.com/anbox which says it is deprecated.
-[[File:anbox_apps_short.png|thumb|800px|center]]
-[[File:Androidosicon.png|Android OS Icon|150px|thumb]]
+[[File:anbox_apps_short.png|thumb|800px|center|alt=Anbox Application Manager window showing a grid of Android app icons such as AFWall+, F-Droid, Firefox, orWall, VLC and Settings]]
+[[File:Androidosicon.png|Android OS Icon|150px|thumb|alt=]]
 {{intro|
 Anbox allows Android applications and mobile games to run inside {{project_name_short}}.
 }}

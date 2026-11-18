@@ -30,19 +30,19 @@ For advanced users seeking detailed information on topics ranging from file tran
 <h4>Miscellaneous</h4>
 <div class="use-3-columns mw-collapsible-content">
 * Alternative Networks / OSes
-** [[File:Androidosicon.png|20px|link=Anbox]] [[Anbox|Android Applications and Games]]
-** [[File:Gnunet.png|20px|link=GNUnet]] [[GNUnet|GNUnet]]
+** [[File:Androidosicon.png|20px|link=Anbox|alt=]] [[Anbox|Android Applications and Games]]
+** [[File:Gnunet.png|20px|link=GNUnet|alt=]] [[GNUnet|GNUnet]]
 ** [[Usenet|Usenet Applications]]
 ** [[Other_Anonymizing_Networks|Other Anonymizing Networks]]
 * Applications
-** [[File:Chromiumicon.png|25px]] [[Chromium]]
-** [[File:GoogleChromeicon.png|25px]] [[Chrome]]
+** [[File:Chromiumicon.png|25px|alt=]] [[Chromium]]
+** [[File:GoogleChromeicon.png|25px|alt=]] [[Chrome]]
 * Configuration Activities
 ** {{kicksecure_wiki
 |wikipage=Configuration_Files
 |text=Configuration Files and Drop-In Folders
 }}
-** [[File:Grub_logo.png|25px|link=GNUnet]] {{kicksecure_wiki
+** [[File:Grub_logo.png|25px|link=GNUnet|alt=]] {{kicksecure_wiki
 |wikipage=Grub
 |text=Grub
 }}
@@ -90,13 +90,13 @@ For advanced users seeking detailed information on topics ranging from file tran
 <h4>Platform Support</h4>
 <div class="use-3-columns mw-collapsible-content">
 * {{project_name_short}}
-** [[File:Kvm-new-logo.png|30px|link=KVM]] [[KVM|{{project_name_short}} for KVM]]
-** [[File:Qemulogo.svg.png|30px|link=QEMU]] [[QEMU|{{project_name_short}} for QEMU]]
-** [[File:qubes-logo-blue.png|15px|link=Qubes]] [[Qubes|{{project_name_short}} for Qubes OS]]
+** [[File:Kvm-new-logo.png|30px|link=KVM|alt=]] [[KVM|{{project_name_short}} for KVM]]
+** [[File:Qemulogo.svg.png|30px|link=QEMU|alt=]] [[QEMU|{{project_name_short}} for QEMU]]
+** [[File:qubes-logo-blue.png|15px|link=Qubes|alt=]] [[Qubes|{{project_name_short}} for Qubes OS]]
 ** [[Dev/Virtualization_Platform#Other_Virtualization_Platforms|{{project_name_short}} on Unsupported Virtualization Platforms]]
-** [[File:Vmware.jpeg|20px|link=VMware]] [[VMware|{{project_name_short}} for VMware]]
+** [[File:Vmware.jpeg|20px|link=VMware|alt=]] [[VMware|{{project_name_short}} for VMware]]
 ** [[Dev/Build_Documentation/Physical_Isolation|{{project_name_short}} with a Physically-Isolated Gateway]]
-** [[File:Piraspberryicon.png|20px]] [[Dev/Build_Documentation/Physical_Isolation#Experimental:_On_the_Raspberry_Pi_3_B_(RPI3)|{{project_name_gateway_short}} on the Raspberry Pi 3 B (RPI3)]]
+** [[File:Piraspberryicon.png|20px|alt=]] [[Dev/Build_Documentation/Physical_Isolation#Experimental:_On_the_Raspberry_Pi_3_B_(RPI3)|{{project_name_gateway_short}} on the Raspberry Pi 3 B (RPI3)]]
 </div>
 </div>
 
@@ -146,14 +146,14 @@ For advanced users seeking detailed information on topics ranging from file tran
 |http://eweiibe6tdjsdprb4px6rqrzzcsi22m4koia44kc5pcjr7nec2rlxyad.onion/tpo/applications/tor-browser/-/issues
 }}
 * Protect against Identity Correlation via Circuit Sharing: see [[Stream Isolation|Stream Isolation]]
-* [[File:Iconfinder_tor_386502.svg|20px|link=Tor]] [[Tor|Tor]]
+* [[File:Iconfinder_tor_386502.svg|20px|link=Tor|alt=]] [[Tor|Tor]]
 ** [[Tor#Blacklist_Outgoing_Connections_to_Select_Domains|Blacklist Outgoing Connections to Select Domains]]
 ** [[Tor_Entry_Guards#Configure_Non-Persistent_Entry_Guards|Non-Persistent Entry Guards]]
 ** [[Speculative_Tor_Attacks|Speculative Tor Attacks]]
 ** [[Torify Host Operating System]]
 * [[PPTP|Tor Gateway Connections on the Local Network with a PPTP VPN]]
 * [[Tunnel UDP over Tor|Transport UDP Tunnels over Tor with a VPN]]
-* [[File:Vanguard.png|20px|link=Vanguards]] [[Vanguards|Vanguards]]
+* [[File:Vanguard.png|20px|link=Vanguards|alt=]] [[Vanguards|Vanguards]]
 </div>
 </div>
 

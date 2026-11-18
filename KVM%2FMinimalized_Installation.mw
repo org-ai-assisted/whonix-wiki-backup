@@ -1,6 +1,6 @@
 {{Header}}
 
-[[File:0.png|1200px]]
+[[File:0.png|1200px|alt=]]
 
 This page is for minimalized guide written by community members.
 
@@ -69,29 +69,29 @@ sudo mv Whonix-Workstation*.qcow2 /var/lib/libvirt/images/Whonix-Workstation.qco
 
 <code>Start Menu</code> &rarr; <code>Applications</code> &rarr; <code>System</code> &rarr; <code>Virtual Machine Manager</code>
 
-[[File:13.jpg|468px]]
-[[File:14.jpg|468px]]
+[[File:13.jpg|468px|alt=KDE application menu with the System entry highlighted by a red box]]
+[[File:14.jpg|468px|alt=KDE System menu with Virtual Machine Manager highlighted by a red box]]
 
 <code>{{project_name_gateway_short}}</code> &rarr; <code>Open</code> &rarr; <code>Play symbol</code>
 
-[[File:15.jpg|468px]]
-[[File:16 good.jpg|468px]]
+[[File:15.jpg|468px|alt=Virtual Machine Manager listing Whonix-Gateway and Whonix-Workstation as shut off, with the Open button highlighted]]
+[[File:16 good.jpg|468px|alt=Whonix-Gateway Virtual Machine window reading Guest not running, with the play button highlighted]]
 
 <big>To take snapshots, please follow the instructions below</big>:
 
 <code>Manage VM snapshots</code> &rarr; <code>Create new snapshot</code> &rarr; <code>Type Name & Description</code> &rarr; <code>Finish</code>
 
-[[File:snapshot22.png|1200px]]
-[[File:snapshot23.png|1200px]]
-[[File:snapshot244.png|1200px]]
-[[File:4.png|1200px]]
-[[File:5.png|1200px]]
+[[File:snapshot22.png|1200px|alt=Whonix-Gateway virtual machine window with the snapshot manager button in the toolbar highlighted by a red box]]
+[[File:snapshot23.png|1200px|alt=Virtual machine snapshot panel reading No snapshot selected, with a red callout pointing to the add button at bottom left]]
+[[File:snapshot244.png|1200px|alt=Virt-manager Create snapshot dialog with name and description fields highlighted and an arrow pointing to the Finish button]]
+[[File:4.png|1200px|alt=Whonix-Gateway VirtualBox window showing a Creating snapshot dialog with a Processing progress bar]]
+[[File:5.png|1200px|alt=Whonix-Gateway snapshot manager with snapshot nameitasyouwant selected and a red arrow pointing at it]]
 
 <big>To start the snapshot, please follow the instructions below</big>:-
 
 <code>Right click on snapshot</code> &rarr; <code>Start snapshot</code> &rarr; <code>Yes</code>
 
-[[File:7.png|1200px]]
+[[File:7.png|1200px|alt=VirtualBox dialog asking to confirm running snapshot nameitasyouwant, discarding disk changes, with No and Yes buttons]]
 
 {{Footer}}
 

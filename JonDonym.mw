@@ -6,7 +6,7 @@ Combining {{project_name_long}} with JonDonym
 |description=Combining {{project_name_short}} with JonDonym. JonDonym over Tor. Connecting to Tor before JonDonym (User &rarr; Tor &rarr; JonDonym &rarr; Internet ) OR Connecting to JonDonym before Tor (User &rarr; JonDonym &rarr; Tor &rarr; Internet ).
 |image=Logo.png
 }}
-[[File:Logo.png|JonDonym Logo|thumb]]
+[[File:Logo.png|JonDonym Logo|thumb|alt=]]
 {{archived}}
 {{intro|
 Combining {{project_name_short}} with JonDonym. JonDonym over Tor. Connecting to Tor before JonDonym (User &rarr; Tor &rarr; JonDonym &rarr; Internet ) OR Connecting to JonDonym before Tor (User &rarr; JonDonym &rarr; Tor &rarr; Internet ).
@@ -447,11 +447,11 @@ This was just a development idea with some limited progress. Interested readers 
 
 '''Figure:''' ''Java Anon Proxy (JonDonym) Client Software in {{project_name_short}}''
 
-[[File:JonDo.png]]
+[[File:JonDo.png|alt=JonDo JAP client window connected to the SpeedPartner-Cyrax service, with Anonymity set to On and a 100 kbit/s speed shown]]
 
 '''Figure:''' ''JonDonym Client Software Settings''
 
-[[File:JonDosettings.png]]
+[[File:JonDosettings.png|alt=JonDo settings dialog on the Anonymity page listing mix cascades, with SpeedPartner-Cyrax selected and its mix details shown]]
 
 = License =
 

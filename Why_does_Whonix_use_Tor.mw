@@ -39,9 +39,9 @@ Why does {{project_name_long}} use Tor?
 {{tor_mininav}}
 {{other_networks_mininav}}
 <!--[[File:Whonix-4x-tor.jpg|thumb|Tor uses {{hops}} servers thanks to [[vanguards]].]]-->
-[[File:Onion_diagram.svg.png|thumb|[[#Onion-Layered Encryption|Tor Onion Encryption Layers Diagram]] ([[#onion_diagram_license|license]])]]
-[[File:Tor-logo.png|thumb|Tor logo]]
-[[File:Osi standard logo 0.png|thumb|Tor is Open Source / Freedom Software.]]
+[[File:Onion_diagram.svg.png|thumb|[[#Onion-Layered Encryption|Tor Onion Encryption Layers Diagram]] ([[#onion_diagram_license|license]])|alt=Diagram of onion routing: a message wrapped in nested encryption layers with keys for Router A, B and C, travelling from source to destination.]]
+[[File:Tor-logo.png|thumb|Tor logo|alt=]]
+[[File:Osi standard logo 0.png|thumb|Tor is Open Source / Freedom Software.|alt=]]
 {{#iconbulletlist:addClass=minimal margin-bottom-20
 
 |fontSize=17px
@@ -64,7 +64,7 @@ Tor does that by replacing the user's real IP address with an IP of a Tor exit r
 == Multiple Server Hops ==
 [[File:Whonix_connection_design_vanguards.jpg|thumb|
 Nowadays Tor uses {{hops}} servers. (Because of [[vanguards]].)
-]]
+|alt=Diagram: Your Computer connects through four numbered servers to a website, with a Vanguard emblem between servers 1 and 3.]]
 
 Number of servers between the user and the destination:
 
@@ -310,7 +310,7 @@ The message and IP address for the destination server (such as for example a web
 
 '''Figure:''' ''Tor Onion Encryption Layers Diagram ([[#onion_diagram_license|license]])''
 
-[[File:Onion_diagram.svg.png|border|400px|Tor Onion Encryption Layers Diagram ([[#onion_diagram_license|license]])]]
+[[File:Onion_diagram.svg.png|border|400px|Tor Onion Encryption Layers Diagram ([[#onion_diagram_license|license]])|alt=Diagram of onion routing: a message wrapped in nested encryption layers with keys for Router A, B and C, travelling from source to destination.]]
 
 '''1.''' The communication between the locally running Tor client and the user's machine with the first Tor relay is encrypted.
 

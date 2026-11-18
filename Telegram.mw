@@ -7,7 +7,7 @@
 Send Telegram Messages over Tor with {{project_name_short}}
 }}
 {{chat_mininav}}
-[[File:1024px-Telegram_2019_Logo.svg.png|Telegram Logo|200px|thumb]]
+[[File:1024px-Telegram_2019_Logo.svg.png|Telegram Logo|200px|thumb|alt=]]
 {{intro|
 Use Telegram over the Tor network with {{project_name_short}}.
 }}
@@ -184,7 +184,7 @@ telegram-desktop
 A false (random) phone number was utilized for this image.
 </ref>
 
-[[File:Telegramphoneregistration.png]]
+[[File:Telegramphoneregistration.png|alt=Telegram Desktop window titled anon-whonix-telegram asking for the activation code sent to a phone number, with a Next button]]
 
 For a basic Telegram user guide refer to this official [https://telegram-store.com/blog/telegram-guide/ blog entry].
 

@@ -6,7 +6,7 @@ Verify {{project_name_long}} Images Software Signatures
 |description=Download image verification instructions for {{non_q_project_name_short}} with OpenPGP and Signify.
 |image=Verifywhoniximages.png
 }}
-[[File:Verifywhoniximages.png|250px|thumb]]
+[[File:Verifywhoniximages.png|250px|thumb|alt=]]
 {{intro|
 Download image verification instructions for {{non_q_project_name_short}} with OpenPGP and Signify.
 }}
@@ -14,19 +14,19 @@ Download image verification instructions for {{non_q_project_name_short}} with O
 __FORCETOC__
 = OpenPGP Signature =
 == Qubes ==
-[[File:qubes-logo-blue.png|15px|link=Qubes]] [[Qubes|{{q_project_name_long}}]] templates are automatically verified when <code>qubes-dom0-update</code> [[Qubes/Install|downloads and installs them]]; manual user verification is unnecessary.
+[[File:qubes-logo-blue.png|15px|link=Qubes|alt=]] [[Qubes|{{q_project_name_long}}]] templates are automatically verified when <code>qubes-dom0-update</code> [[Qubes/Install|downloads and installs them]]; manual user verification is unnecessary.
 
 == VirtualBox ==
-[[File:Virtualbox_logo.png|15px|link=VirtualBox]] Steps to verify the virtual machine images depend on the operating system in use:
+[[File:Virtualbox_logo.png|15px|link=VirtualBox|alt=]] Steps to verify the virtual machine images depend on the operating system in use:
 
-* [[File:logo-linux-500x500.png|15px|link=]] [[Verify_the_images_using_Linux|Linux]]
-* [[File:Logo-windows-500x500.png|15px|link=]] [[Verify_the_images_using_Windows|Windows using Gpg4win]]
-* [[File:logo-apple-500x500.png|15px]] [[Verify_the_images_using_macOS|macOS using GPGTools]]
+* [[File:logo-linux-500x500.png|15px|link=|alt=]] [[Verify_the_images_using_Linux|Linux]]
+* [[File:Logo-windows-500x500.png|15px|link=|alt=]] [[Verify_the_images_using_Windows|Windows using Gpg4win]]
+* [[File:logo-apple-500x500.png|15px|alt=]] [[Verify_the_images_using_macOS|macOS using GPGTools]]
 
 Also see: [[VirtualBox/Appliance is not signed|VirtualBox <code>Appliance is not signed</code> Error Message]].
 
 == KVM ==
-[[File:Kvm-new-logo.png|30px|link=KVM]] Refer to the KVM [[File:logo-linux-500x500.png|15px|link=]] [[Verify_the_images_using_Linux|Linux on the Command Line]] instructions.
+[[File:Kvm-new-logo.png|30px|link=KVM|alt=]] Refer to the KVM [[File:logo-linux-500x500.png|15px|link=|alt=]] [[Verify_the_images_using_Linux|Linux on the Command Line]] instructions.
 
 == Windows Installer ==
 The [[Dev/Windows Installer|{{project_name_short}} Windows Installer]] is currently unavailable. ([[Verify_the_images_using_Windows|Verify the {{project_name_short}} Windows Installer]])

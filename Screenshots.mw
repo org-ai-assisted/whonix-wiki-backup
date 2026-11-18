@@ -6,7 +6,7 @@ Screenshots of Common {{project_name_long}} Activities
 |description=Collection of screenshots demonstrating the user interface and features of Whonix.
 |image=Gui-preview.jpg
 }}
-[[File:Gui-preview.jpg|thumb]]
+[[File:Gui-preview.jpg|thumb|alt=Oracle VirtualBox window titled Kicksecure-LXQt running, showing a purple-to-blue LXQt desktop with Computer, Trash and user home icons.]]
 <div class="mininav">
 * [[Art Gallery]]
 * [[Screenshots]]
@@ -19,7 +19,7 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''{{project_name_short}} OS Design Overview'' <ref>Picture Creator: Originally contributed by CJ, modified by [mailto:adrelanos@whonix.org Patrick Schleizer]. License: [https://creativecommons.org/publicdomain/zero/1.0/ CC0 1.0 Universal (CC0 1.0) '''Public Domain''' Dedication]</ref>
 
-[[File:{{project_name_short}} concept refined.jpg|border]]
+[[File:{{project_name_short}} concept refined.jpg|border|alt=Diagram of the Whonix architecture concept]]
 
 == Stream Isolation ==
 
@@ -33,50 +33,50 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''Bisq Launch in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:Bisq.png|border]]
+[[File:Bisq.png|border|alt=Bisq startup screen in a Whonix window: synchronizing with Bitcoin Mainnet using Tor at 29 percent, hidden service published.]]
 
 '''Figure:''' ''Bisq Client'' <ref>https://docs.bisq.network/getting-started.html</ref>
 
-[[File:Bisqclient.png|border]]
+[[File:Bisqclient.png|border|alt=Bisq client Market tab showing the USD offer book with a depth chart and lists of offers to sell and buy BTC.]]
 
 == Electrum ==
 
 '''Figure:''' ''Connect to Server'' <ref name=0brand>Screenshot Creator: 0brand.</ref>
 
-[[File:Electrum_select_server_manually.png|border]]
+[[File:Electrum_select_server_manually.png|border|alt=Electrum Install Wizard asking how to connect to a server, with Select server manually chosen over Auto connect]]
 
 '''Figure:''' ''Select Server'' <ref name=0brand />
 
-[[File:Electrum_select_server_automatically.png|border]]
+[[File:Electrum_select_server_automatically.png|border|alt=Electrum Network dialog, Server tab, with Select server automatically checked and a list of server peers on port 50002]]
 
 '''Figure:''' ''SOCKS5 Proxy Configuration'' <ref name=0brand />
 
-[[File:Electrum_use_proxy_socks5_.png|border]]
+[[File:Electrum_use_proxy_socks5_.png|border|alt=Electrum install wizard Proxy tab with Use proxy checked, SOCKS5 proxy at 10.152.152.10 port 9111]]
 
 == Monero ==
 
 '''Figure:''' ''Monero GUI'' <ref name=torjunkie />
 
-[[File:Monerogui.png|border]]
+[[File:Monerogui.png|border|alt=Monero GUI wallet settings page in a disposable qube, with buttons to close wallet, create view-only wallet, show seed and keys, change password; daemon synchronized]]
 
 = Default Desktop Environment =
 == {{project_name_short}} VirtualBox ==
 === {{project_name_gateway_long}} Xfce ===
 '''Figure:''' ''{{project_name_gateway_short}} Xfce VM running in virtualizer VirtualBox (real screenshot)''
 
-[[File:Whonix-Gateway-Xfce.png|border|{{project_name_gateway_short}} Xfce VM running in virtualizer VirtualBox (real screenshot)]]
+[[File:Whonix-Gateway-Xfce.png|border|{{project_name_gateway_short}} Xfce VM running in virtualizer VirtualBox (real screenshot)|alt=VirtualBox window of Whonix-Gateway-Xfce showing an empty gray desktop with a top panel]]
 
 === {{project_name_workstation_long}} Xfce ===
 '''Figure:''' ''{{project_name_workstation_short}} Xfce VM running in virtualizer VirtualBox (real screenshot)''
 
-[[File:Whonix-Workstation-Xfce.png|border|{{project_name_workstation_short}} Xfce VM running in virtualizer VirtualBox (real screenshot)]]
+[[File:Whonix-Workstation-Xfce.png|border|{{project_name_workstation_short}} Xfce VM running in virtualizer VirtualBox (real screenshot)|alt=VirtualBox window of Whonix-Workstation-Xfce showing a blue desktop with Trash, File System and Home icons]]
 
 {{Anchor|{{non_q_project_name_short}}}}
 == {{q_project_name_long}} ==
 
 '''Figure:''' ''[[Qubes|{{q_project_name_short}}]] Xfce Workstation'' <ref name=torjunkie>Screenshot Creator: torjunkie.</ref>
 
-[[File:QubesWhonixDesktop.png|border|[[Qubes|{{q_project_name_short}}]] Xfce Workstation']]
+[[File:QubesWhonixDesktop.png|border|[[Qubes|{{q_project_name_short}}]] Xfce Workstation'|alt=Tor Browser in an anon-whonix qube showing the Whonix website, over a Qubes desktop background]]
 
 = Encrypted Communications =
 
@@ -84,21 +84,21 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''BitMessage Network Settings'' <ref name=0brand />
 
-[[File:Bitmessage_enable_networking.png|border]]
+[[File:Bitmessage_enable_networking.png|border|alt=Bitmessage startup dialog with Let me configure special network settings first selected.]]
 
 '''Figure:''' ''SOCKS5 Proxy Configuration'' <ref name=0brand />
 
-[[File:Bitmessage_configure_networking.png|border]]
+[[File:Bitmessage_configure_networking.png|border|alt=Bitmessage Settings Network Settings tab: SOCKS5 proxy at 127.0.0.1 port 9050, listening port 8444.]]
 
 == Encrypted Email ==
 
 '''Figure:''' ''Sending Encrypted Email'' <ref name=tempest>Screenshot Creator: tempest.</ref>
 
-[[File:Tempest_screenshot_85.png|border]]
+[[File:Tempest_screenshot_85.png|border|alt=Email composer to anonguide at vfemail.net, subject Test Key, with an Enigmail dialog asking to send a signed encrypted message and a Send Message button]]
 
 '''Figure:''' ''Successful Email Decryption'' <ref name=tempest />
 
-[[File:Tempest_screenshot_95.png|border]]
+[[File:Tempest_screenshot_95.png|border|alt=Received email from AnonGuide with an Enigmail banner saying part of the message is signed and encrypted, showing the decrypted text and GPG key fingerprint]]
 
 = General {{project_name_short}} Tools =
 
@@ -106,35 +106,35 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''OnionShare Main Window'' <ref name=torjunkie />
 
-[[File:Onionsharehomepage.png|border]]
+[[File:Onionsharehomepage.png|border|alt=OnionShare home screen in Whonix with four tiles: Share Files, Receive Files, Host a Website and Chat Anonymously.]]
 
 '''Figure:''' ''Secret Onion URL for Downloaders'' <ref name=torjunkie />
 
-[[File:Sharefiletwo.png|border]]
+[[File:Sharefiletwo.png|border|alt=OnionShare Share tab while sharing, showing the onion address, hidden private key, copy buttons and a Stop sharing button]]
 
 == Reload Firewall ==
 
 '''Figure:''' ''Firewall Reload Terminal'' <ref name=0brand />
 
-[[File:{{project_name_short}} reload firewall GUI.png|border]]
+[[File:{{project_name_short}} reload firewall GUI.png|border|alt=Graphical dialog for reloading the Whonix firewall]]
 
 == Reload Tor ==
 
 '''Figure:''' ''Tor Reload Terminal'' <ref name=0brand />
 
-[[File:Reload_Tor_GUI.png|border]]
+[[File:Reload_Tor_GUI.png|border|alt=Konsole in sys-whonix running sudo service tor@default reload and status, showing the Tor service active (running)]]
 
 == scurl: SSL Command Line Downloader ==
 
 '''Figure:''' ''scurl Command in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:Scurltorbrowser.png|border]]
+[[File:Scurltorbrowser.png|border|alt=Terminal running scurl-download for the Tor Browser 15.0.3 Linux tar.xz archive, progress at 64 percent]]
 
 == Qterminal ==
 
 '''Figure:''' ''Qterminal in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:Xfceterminal.png|border]]
+[[File:Xfceterminal.png|border|alt=Xfce terminal showing the Whonix copyright and license banner and a uwt stream isolation notice at the user@host prompt]]
 
 = Instant Messenger / Chat =
 
@@ -142,37 +142,37 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''Gajim Client in {{project_name_short}}'' <ref name=nurmagoz>Screenshot Creator: nurmagoz.</ref>
 
-[[File:Gajim.png|1600px|border]]
+[[File:Gajim.png|1600px|border|alt=Gajim XMPP client Plugins window with the OMEMO plugin selected and enabled, PGP plugin unchecked, and a Gajim account list behind it]]
 
 == HexChat ==
 
 '''Figure:''' ''HexChat IRC Client Window in {{project_name_short}}'' <ref name=nurmagoz />
 
-[[File:hexchat.png|border]]
+[[File:hexchat.png|border|alt=HexChat window connected to freenode in the #gentoo channel, with a chat log, channel list on the left and user list on the right]]
 
 == Mumble ==
 
 '''Figure:''' ''Mumble Client in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:Mumbleclient.png|border]]
+[[File:Mumbleclient.png|border|alt=Mumble client window in anon-whonix-mumble connected to local server 127.0.0.1, log showing certificate warnings and Murmur welcome message, user WhonixFan in Root]]
 
 == qTox ==
 
 '''Figure:''' ''qTox Client in {{project_name_short}}'' <ref name=nurmagoz />
 
-[[File:qtox.png|1600px|border]]
+[[File:qtox.png|1600px|border|alt=qTox Add Friends screen with Tox ID and message fields and a Send friend request button, in an Xfce desktop]]
 
 == Signal ==
 
 '''Figure:''' ''Signal Desktop in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:Signaldesktop.png|border]]
+[[File:Signaldesktop.png|border|alt=Signal Desktop window titled Link your phone to Signal Desktop, showing a QR code and Android and iOS linking steps]]
 
 == Wickr Me ==
 
 '''Figure:''' ''Wicker Me in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:Wickrme.png|border]]
+[[File:Wickrme.png|border|alt=Wickr Me app window titled anon-whonix-wickr, showing a welcome screen with empty Rooms and Direct Messages lists]]
 
 = Other Anonymizing Services =
 
@@ -180,25 +180,25 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''Freenet Inproxy in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:Freenet.png|border]]
+[[File:Freenet.png|border|alt=Tor Browser showing the Freenet homepage on an onion address: What is Freenet, Download, and features Secret Identity, Browse Websites, Forums, Platform]]
 
 == I2P ==
 
 '''Figure:''' ''I2P Browsing in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:I2Pbrowsing.png|border]]
+[[File:I2Pbrowsing.png|border|alt=Tor Browser on anon-whonix-I2P showing the stats.i2p page with I2P router tunnel build and router version graphs]]
 
 == JonDonym ==
 
 '''Figure:''' ''JonDonym Client Software in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:JonDo.png|border]]
+[[File:JonDo.png|border|alt=JonDo JAP client window connected to the SpeedPartner-Cyrax service, with Anonymity set to On and a 100 kbit/s speed shown]]
 
 == ZeroNet ==
 
 '''Figure:''' ''ZeroNet Homepage in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:Zeronethomepage.png|border]]
+[[File:Zeronethomepage.png|border|alt=Tor Browser showing the ZeroHello page of ZeroNet with a site list sidebar, status pills, and a Welcome to ZeroNet banner]]
 
 = sdwdate =
 
@@ -206,21 +206,21 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''sdwdate Command Line Interface'' <ref name=torjunkie />
 
-[[File:sdwdate.png|border]]
+[[File:sdwdate.png|border|alt=Konsole terminal on anon-whonix showing sdwdate output: onion URL pools queried, time differences, and the clock adjusted successfully]]
 
 == sdwdate GUI ==
 
 '''Figure:''' ''sdwdate GUI '' <ref name=nurmagoz />
 
-[[File:sdwdate1.png|470px|border]]
+[[File:sdwdate1.png|470px|border|alt=Tray tooltip reading Time Synchronisation Monitor, Right-click for menu, beside the clock and sdwdate icon]]
 
 '''Figure:''' ''sdwdate GUI Control Panel'' <ref name=nurmagoz />
 
-[[File:sdwdate2.png|470px|border]]
+[[File:sdwdate2.png|470px|border|alt=Tray menu with Show Tor status, Tor control panel, Show sdwdate status, Open sdwdate's log, Restart sdwdate, Stop sdwdate and Exit]]
 
 '''Figure:''' ''sdwdate GUI Successful Check'' <ref name=nurmagoz />
 
-[[File:sdwdate3.png|470px|border]]
+[[File:sdwdate3.png|470px|border|alt=Time Synchronization Monitor window: Last message from sdwdate, Success. Sleeping for 169.15 minutes, with a Close button]]
 
 = systemcheck =
 
@@ -250,49 +250,49 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''Panopticlick v3 Test in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:Panopticlickv3.png|border]]
+[[File:Panopticlickv3.png|border|alt=Panopticlick results in Tor Browser: 5.8 bits of identifying information, with a table of browser characteristics and their bits of identifying information.]]
 
 == Tor Browser Appearance ==
 
 '''Figure:''' ''Successful Tor Network Check'' <ref name=torjunkie />
 
-[[File:Checktorproject.png|border]]
+[[File:Checktorproject.png|border|alt=Tor Browser on check.torproject.org showing Congratulations, this browser is configured to use Tor.]]
 
 '''Figure:''' ''Secure Connection to www.whonix.org'' <ref name=nurmagoz />
 
-[[File:HTTPS-website-example.png|border]]
+[[File:HTTPS-website-example.png|border|alt=Tor Browser on https://www.whonix.org with the site identity popup showing a secure connection; page headline Stay anonymous with Whonix]]
 
 == Tor Browser Downloader ==
 
 '''Figure:''' ''Checking for Updates'' <ref name=nurmagoz />
 
-[[File:Tor Browser Downloader({{project_name_short}}) checking for updates.png|Tor Browser Downloader ({{project_name_short}}) checking for updates.|border]]
+[[File:Tor Browser Downloader({{project_name_short}}) checking for updates.png|Tor Browser Downloader ({{project_name_short}}) checking for updates.|border|alt=Tor Browser Downloader window checking for updates]]
 
 '''Figure:''' ''Download Confirmation'' <ref name=torjunkie />
 
-[[File:torbrowserdownloader.png|border]]
+[[File:torbrowserdownloader.png|border|alt=Tor Browser Downloader dialog in anon-whonix listing online versions 7.5.5, 7.5.6, 8.0a8, 8.0a9 with a warning and No and Yes buttons]]
 
 '''Figure:''' ''Downloading Tor Browser'' <ref name=nurmagoz />
 
-[[File:Tor Browser Downloader({{project_name_short}}) downloading.png|Tor Browser Downloader ({{project_name_short}}) Downloading Tor Browser|border]]
+[[File:Tor Browser Downloader({{project_name_short}}) downloading.png|Tor Browser Downloader ({{project_name_short}}) Downloading Tor Browser|border|alt=Tor Browser Downloader window downloading Tor Browser]]
 
 '''Figure:''' ''Tor Browser Installation Confirmation'' <ref name=torjunkie />
 
-[[File:torbrowserdownloader2.png|border]]
+[[File:torbrowserdownloader2.png|border|alt=Tor Browser Downloader installation confirmation showing signature dates, gpg report with key fingerprints, and No and Yes buttons]]
 
 '''Figure:''' ''Extracting Tor Browser'' <ref name=nurmagoz />
 
-[[File:Tor Browser Downloader({{project_name_short}}) Extracting.png|Tor Browser Downloader ({{project_name_short}}) Extracting|border]]
+[[File:Tor Browser Downloader({{project_name_short}}) Extracting.png|Tor Browser Downloader ({{project_name_short}}) Extracting|border|alt=Tor Browser Downloader window during the extracting stage]]
 
 '''Figure:''' ''Finalized Tor Browser Installation'' <ref name=nurmagoz />
 
-[[File:Tor Browser Downloader({{project_name_short}})FInished2.png|Tor Browser Downloader ({{project_name_short}}) Finished Installing Tor Browser|border]]
+[[File:Tor Browser Downloader({{project_name_short}})FInished2.png|Tor Browser Downloader ({{project_name_short}}) Finished Installing Tor Browser|border|alt=Tor Browser Downloader window reporting the download finished]]
 
 == YaCy Decentralized Search Engine ==
 
 '''Figure:''' ''YaCy in {{project_name_short}}'' <ref name=torjunkie />
 
-[[File:YacyinWhonix.png|border]]
+[[File:YacyinWhonix.png|border|alt=YaCy search page in Tor Browser in Whonix, with results for the query Whonix from 28 peers]]
 
 = Tor Connections =
 
@@ -300,27 +300,27 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''Main torrc Configuration Page'' <ref name=iry>Screenshot Creator: iry.</ref>
 
-[[File:main_page.png|border]]
+[[File:main_page.png|border|alt=Anon Connection Wizard first page offering Connect, Configure (bridges or proxy settings, selected) or Disable Tor, with Back, Next and Cancel buttons]]
 
 '''Figure:''' ''Default Bridge Page'' <ref name=iry />
 
-[[File:bridge_page_default.png|border]]
+[[File:bridge_page_default.png|border|alt=Anon Connection Wizard Tor Bridges Configuration with Connect with provided bridges selected and transport type obfs4 recommended.]]
 
 '''Figure:''' ''Custom Bridge Page'' <ref name=iry />
 
-[[File:bridge_page_custom.png|border]]
+[[File:bridge_page_custom.png|border|alt=Anon Connection Wizard Tor Bridges Configuration with Enter custom bridges selected and three obfs4 bridge lines entered.]]
 
 '''Figure:''' ''Local Proxy Configuration Page'' <ref name=iry />
 
-[[File:proxy.png|border]]
+[[File:proxy.png|border|alt=Anon Connection Wizard Local Proxy Configuration screen with Use proxy checked, proxy type HTTP/HTTPS, and empty address, port, username and password fields]]
 
 '''Figure:''' ''Summary Configuration Page'' <ref name=iry />
 
-[[File:torrc_page.png|border]]
+[[File:torrc_page.png|border|alt=Anon Connection Wizard Summary page: Tor will be enabled, custom obfs4 bridges, Socks5 proxy 127.0.0.1 port 8964]]
 
 '''Figure:''' ''Tor Network Bootstrapping Page'' <ref name=iry />
 
-[[File:connecting.png|border]]
+[[File:connecting.png|border|alt=Anon Connection Wizard bootstrapping Tor, phase Connecting to the Tor network, progress bar at 80 percent]]
 
 == Nyx Tor Controller ==
 
@@ -336,19 +336,19 @@ Collection of screenshots demonstrating the user interface and features of {{pro
 
 '''Figure:''' ''Tor Controller GUI Control Panel'' <ref name=troubadour>Screenshot Creator: troubadour.</ref>
 
-[[File:torcontrollergui1.png|Tor Controller GUI Control Panel|border]]
+[[File:torcontrollergui1.png|Tor Controller GUI Control Panel|border|alt=Tor Controller GUI Control tab showing Tor status Connected to the Tor network with Restart, Stop and Configure buttons]]
 
 '''Figure:''' ''Tor Controller GUI Control Panel User Configuration'' <ref name=troubadour />
 
-[[File:torcontrollergui2.png|Tor Controller GUI Control Panel|border]]
+[[File:torcontrollergui2.png|Tor Controller GUI Control Panel|border|alt=Tor Controller GUI Control tab showing Tor is not running, with obfs4 bridge and SOCKS5 proxy settings]]
 
 '''Figure:''' ''Tor Controller GUI Utilities'' <ref name=troubadour />
 
-[[File:torcontrollergui3.png|Tor Controller GUI Utilities|border]]
+[[File:torcontrollergui3.png|Tor Controller GUI Utilities|border|alt=Tor Controller GUI Utilities tab with Onion Circuits and New Identity buttons]]
 
 '''Figure:''' ''Tor Controller GUI Logs'' <ref name=troubadour />
 
-[[File:torcontrollergui4.png|Tor Controller GUI Logs|border]]
+[[File:torcontrollergui4.png|Tor Controller GUI Logs|border|alt=Tor Controller GUI Logs tab showing the Tor log with bootstrap notices and highlighted proxy warnings]]
 
 = Videos =
 
@@ -359,34 +359,34 @@ Only installation help videos are currently available; see [[Videos]].
 === {{project_name_gateway_short}} CLI ===
 '''Figure:''' ''{{project_name_gateway_short}} CLI VM running in virtualizer VirtualBox (real screenshot)''
 
-[[File:Whonix-Gateway-CLI.png|border|{{project_name_gateway_short}} CLI VM running in virtualizer VirtualBox (real screenshot)]]
+[[File:Whonix-Gateway-CLI.png|border|{{project_name_gateway_short}} CLI VM running in virtualizer VirtualBox (real screenshot)|alt=VirtualBox window of Whonix-Gateway-CLI showing the welcome text, default login details and a host login prompt]]
 
 === {{project_name_workstation_short}} CLI ===
 '''Figure:''' ''{{project_name_workstation_short}} CLI VM running in virtualizer VirtualBox (real screenshot)''
 
-[[File:Whonix-Workstation-CLI.png|border|{{project_name_workstation_short}} CLI VM running in virtualizer VirtualBox (real screenshot)]]
+[[File:Whonix-Workstation-CLI.png|border|{{project_name_workstation_short}} CLI VM running in virtualizer VirtualBox (real screenshot)|alt=VirtualBox window of Whonix-Workstation-CLI showing the welcome text, default login details and a host login prompt]]
 
 === setup-dist CLI application ===
 
 '''Figure:''' ''setup-dist CLI''
 
-[[File:Cli2.png|800px|{{project_name_gateway_short}} CLI|border]]
+[[File:Cli2.png|800px|{{project_name_gateway_short}} CLI|border|alt=whonixsetup Connection Wizard text dialog listing four options: enable Tor, disable Tor, censored network, proxy or firewall]]
 
 = VM Live Mode =
 
 '''Figure:''' ''Live Mode Boot''
 
-[[File:live_boot.png|Live Mode Boot|800px|border]]
+[[File:live_boot.png|Live Mode Boot|800px|border|alt=GNU GRUB boot menu with the Live-mode GNU/Linux entry selected among the normal and advanced boot options]]
 
 = {{project_name_short}} Repository Wizard =
 
 '''Figure:''' ''Wizard Repository Selection'' <ref name=0brand />
 
-[[File:{{project_name_short}}_Repository_Wizard_select_repo.png|border]]
+[[File:{{project_name_short}}_Repository_Wizard_select_repo.png|border|alt=Repository Wizard step for selecting the software repository]]
 
 '''Figure:''' ''Wizard Auto-update Configuration'' <ref name=0brand />
 
-[[File:{{project_name_short}}_Repository_Wizard_install_updates.png|border]]
+[[File:{{project_name_short}}_Repository_Wizard_install_updates.png|border|alt=Repository Wizard step offering to install updates]]
 
 = Custom Builds =
 
@@ -396,7 +396,7 @@ Only installation help videos are currently available; see [[Videos]].
 
 '''Figure:''' ''KDE {{project_name_gateway_short}}''
 
-[[File:screen3.png|border]]
+[[File:screen3.png|border|alt=Whonix-Gateway KDE desktop with icons for Arm, Tor Examples, firewall settings, Konsole, Reload Tor, Stop Tor, Timesync and WhonixCheck]]
 
 ===  On LXDE ===
 

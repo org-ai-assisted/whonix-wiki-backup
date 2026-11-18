@@ -37,13 +37,13 @@ permission denied: pkexec
 
 '''Image:''' ''Whonix-Workstation - sysmaint Boot Option in [[grub|GRUB]] boot menu''
 
-[[File:whonix-workstation-grub-sysmaint-boot-option.png|400px|Whonix-Workstation GRUB Boot Menu - Sysmaint Boot option]]
+[[File:whonix-workstation-grub-sysmaint-boot-option.png|400px|Whonix-Workstation GRUB Boot Menu - Sysmaint Boot option|alt=Whonix-Workstation GRUB boot menu with the Persistent Mode SYSMAINT Session entry highlighted in red]]
 
 [[Qubes-Whonix]]:
 
 '''Image:''' ''Whonix-Workstation - sysmaint Boot Option in Qubes VM Manager (QVMM)''
 
-[[File:Whonix-workstation-persistent-mode-sysmaint-session-qubes.png|400px|Whonix-Workstation Qubes VM Manager - Sysmaint Boot option]]
+[[File:Whonix-workstation-persistent-mode-sysmaint-session-qubes.png|400px|Whonix-Workstation Qubes VM Manager - Sysmaint Boot option|alt=Qubes settings for whonix-workstation-18, Advanced tab, with the Boot mode dropdown listing Persistent Mode SYSMAINT, UNRESTRICTED and USER sessions]]
 
 = Version Overview =
 {| class="wikitable"

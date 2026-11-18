@@ -9,7 +9,7 @@ Platform specific. Select your platform.
 |content=
 {{Tab
 |title= = <u>{{non_q_project_name_short}}</u> =
-|image=[[File:{{project_name_short}}-logo-icon.svg]]
+|image=[[File:{{project_name_short}}-logo-icon.svg|alt=]]
 |addToClass=info-box
 |content=
 <code>Start Menu</code> &rarr; <code>Applications</code> &rarr; <code>Settings</code> &rarr; <code>Restart Tor
@@ -19,7 +19,7 @@ Platform specific. Select your platform.
 
 {{Tab
 |title= = <u>[[Qubes|{{q_project_name_short}}]]</u> =
-|image=[[File:Qubes-logo-icon.png]]
+|image=[[File:Qubes-logo-icon.png|alt=]]
 |addToClass=info-box
 |content=
 <code>Qubes App Launcher (blue/grey "Q")</code> &rarr; <code>{{project_name_gateway_long}} ProxyVM (commonly named '{{project_name_gateway_vm}}')</code> &rarr; <code>Restart Tor</code>
@@ -28,7 +28,7 @@ Platform specific. Select your platform.
 
 {{Tab
 |title= = <u>Terminal</u> =
-|image=[[File:Utilities-terminal.png]]
+|image=[[File:Utilities-terminal.png|alt=]]
 |addToClass=info-box
 |content=
 Restart Tor.

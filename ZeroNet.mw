@@ -6,7 +6,7 @@ ZeroNet: Decentralized Censorship-resistant Network
 |description=Combining {{project_name_long}} with ZeroNet. ZeroNet over Tor. Connecting to Tor before ZeroNet (User &rarr; Tor &rarr; ZeroNet &rarr; Internet).
 |image=Zeronetlogo.png
 }}
-[[File:Zeronetlogo.png|200px||thumb|ZeroNet Logo]]
+[[File:Zeronetlogo.png|200px||thumb|ZeroNet Logo|alt=]]
 {{Contributor|
 |status=unmaintained
 |about=About this {{Code2|{{PAGENAME}}}} Page
@@ -200,7 +200,7 @@ The process is now complete and ZeroNet should be fully functional in {{project_
 
 '''Figure:''' ''ZeroNet Homepage in {{project_name_short}}''
 
-[[File:Zeronethomepage.png|border]]
+[[File:Zeronethomepage.png|border|alt=Tor Browser showing the ZeroHello page of ZeroNet with a site list sidebar, status pills, and a Welcome to ZeroNet banner]]
 
 = Popular ZeroNet Sites =
 

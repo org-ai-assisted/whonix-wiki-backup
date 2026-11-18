@@ -7,7 +7,7 @@ VirtualBox - Green Turtle Issue
 |image=Green-turtle-icon-on-VirtualBox-Windows-11.jpg
 }}
 {{troubleshooting_mininav}}
-[[File:Green-turtle-icon-on-VirtualBox-Windows-11.jpg|400px|thumb|VirtualBox Green Turtle Indicator]]
+[[File:Green-turtle-icon-on-VirtualBox-Windows-11.jpg|400px|thumb|VirtualBox Green Turtle Indicator|alt=VirtualBox VM window status bar with a red arrow pointing to the green turtle icon]]
 {{intro|
 Fix VirtualBox green turtle icon issue on Windows hosts caused by Hyper-V and VBS. Learn how to improve VM performance and stability with step-by-step instructions.
 }}

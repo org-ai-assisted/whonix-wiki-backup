@@ -7,7 +7,7 @@ How-to: Use Wickr Me in {{project_name_long}}
 |image=Wickr12312312.png
 }}
 {{chat_mininav}}
-[[File:Wickrlogo.png|Wickr Logo|thumb]]
+[[File:Wickrlogo.png|Wickr Logo|thumb|alt=]]
 {{intro|
 Using Wickr Me in {{project_name_short}} over the Tor anonymity network.
 }}
@@ -167,7 +167,7 @@ If you haven't rebooted since installing snap, wickrme might not be in your PATH
 
 '''Figure:''' ''Wicker Me in {{project_name_short}}''
 
-[[File:Wickrme.png|border]]
+[[File:Wickrme.png|border|alt=Wickr Me app window titled anon-whonix-wickr, showing a welcome screen with empty Rooms and Direct Messages lists]]
 
 = Troubleshooting =
 

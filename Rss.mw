@@ -5,7 +5,7 @@ title=RSS: Really Simple Syndication
 {{#seo:
 |description={{project_name_long}} RSS Reader Documentation.
 }}
-[[File:RSSlogo.png|RSS Logo|thumb]]
+[[File:RSSlogo.png|RSS Logo|thumb|alt=]]
 {{intro|
 {{project_name_short}} RSS Reader Documentation.
 }}

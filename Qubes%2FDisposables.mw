@@ -6,7 +6,7 @@ Qubes Disposables
 |description=How to use Disposables in {{q_project_name_long}}.
 |image=Qubesdisposable123123123.png
 }}
-[[File:Qubesdisposable123123123.png|190px|thumb]]
+[[File:Qubesdisposable123123123.png|190px|thumb|alt=]]
 {{intro|
 How to use Disposables in {{q_project_name_short}}.
 }}
@@ -464,7 +464,7 @@ After launch, ''always'' first [[#Warnings|check the Tor Browser version]]!
 
 '''Figure:''' ''Tor Browser in {{q_project_name_short}} Disposable''
 
-[[File:QubesDispVM.png|border]]
+[[File:QubesDispVM.png|border|alt=Tor Browser in a disposable qube showing the Qubes OS How to use disposables page with a diagram of disposables opening untrusted links and attachments]]
 
 == Start Terminal Emulator in a Disposable ==
 

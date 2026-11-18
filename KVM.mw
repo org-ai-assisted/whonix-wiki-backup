@@ -71,7 +71,7 @@ Choose your host operating system.
 |content=
 {{Tab
 |title= === Debian ===
-|image=[[File:Logo-debian.png|25px]]
+|image=[[File:Logo-debian.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -98,7 +98,7 @@ sudo apt install --no-install-recommends qemu-system-ppc qemu-system-gui qemu-sy
 
 {{Tab
 |title= === Ubuntu ===
-|image=[[File:Logo-ubuntusvg.png|25px]]
+|image=[[File:Logo-ubuntusvg.png|25px|alt=]]
 |addToClass=info-box
 |content=
 {{CodeSelect|code=
@@ -111,7 +111,7 @@ sudo apt install --no-install-recommends qemu-system-x86 qemu-system-gui qemu-sy
 
 {{Tab
 |title= === Arch Linux ===
-|image=[[File:Archlinux_logo.png|25px]]
+|image=[[File:Archlinux_logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -127,7 +127,7 @@ sudo systemctl enable libvirtd
 
 {{Tab
 |title= === Fedora ===
-|image=[[File:Fedora-logo.png|25px]]
+|image=[[File:Fedora-logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 '''Check System Requirements'''
@@ -200,7 +200,7 @@ You must log out and log back in to apply the changes.
 
 {{Tab
 |title= === Other Distributions ===
-|image=[[File:Gnu_operating_system.png|25px]]
+|image=[[File:Gnu_operating_system.png|25px|alt=]]
 |addToClass=info-box
 |content=
 
@@ -280,7 +280,7 @@ For simplicity, the {{project_name_short}} images should be downloaded and store
     {{Tab
     |active=true
     |title= === stable LXQt ===
-    |image=[[File:Rg1024_brick_tile.png]]
+    |image=[[File:Rg1024_brick_tile.png|alt=]]
     |content=
         {{DownloadTableUnified
             |project_name={{project_name_short}}
@@ -296,7 +296,7 @@ For simplicity, the {{project_name_short}} images should be downloaded and store
 
     {{Tab
     |title= === testers LXQt ===
-    |image=[[File:Cornues.png]]
+    |image=[[File:Cornues.png|alt=]]
     |content=
         {{DownloadTableUnified
             |project_name={{project_name_short}}
@@ -327,7 +327,7 @@ For simplicity, the {{project_name_short}} images should be downloaded and store
     {{Tab
     |active=true
     |title= === stable CLI ===
-    |image=[[File:Rg1024_brick_tile.png]]
+    |image=[[File:Rg1024_brick_tile.png|alt=]]
     |content=
         {{DownloadTableUnified
             |project_name={{project_name_short}}
@@ -342,7 +342,7 @@ For simplicity, the {{project_name_short}} images should be downloaded and store
 
     {{Tab
     |title= === testers CLI ===
-    |image=[[File:Cornues.png]]
+    |image=[[File:Cornues.png|alt=]]
     |content=
         {{DownloadTableUnified
             |project_name={{project_name_short}}
@@ -692,13 +692,13 @@ Go to <code>Virtual Machine Manager</code> &rarr; <code>File</code> &rarr; <code
 
 Images:
 
-[[File:enable-qemu-session-1.png|500px]]
+[[File:enable-qemu-session-1.png|500px|alt=Virtual Machine Manager window with the File menu highlighted]]
 
-[[File:enable-qemu-session-2.png|500px]]
+[[File:enable-qemu-session-2.png|500px|alt=Virtual Machine Manager File menu with Add Connection highlighted]]
 
-[[File:enable-qemu-session-3.png|500px]]
+[[File:enable-qemu-session-3.png|500px|alt=Add Connection dialog with the Hypervisor dropdown open and QEMU/KVM user session highlighted]]
 
-[[File:enable-qemu-session-4.png|500px]]
+[[File:enable-qemu-session-4.png|500px|alt=Add Connection dialog with QEMU/KVM user session selected, Autoconnect checked, and generated URI qemu:///session]]
 
 After that you can first start {{project_name_gateway_long}}, then start {{project_name_workstation_long}}.
 
@@ -973,7 +973,7 @@ If you want to add your user to the <code>libvirt</code> and <code>kvm</code> gr
 |content=
 {{Tab
 |title= === Debian (based) / Ubuntu ===
-|image=[[File:Logo-debian.png|25px]]
+|image=[[File:Logo-debian.png|25px|alt=]]
 |addToClass=info-box
 |content=
 The following commands work in Debian and assume the simple scenario where KVM is used by the currently logged-in user. For older Ubuntu versions, note that group names vary and ''libvirt'' may be called ''libvirtd'' instead. For Ubuntu 20.04, ''libvirt'' works.
@@ -1003,7 +1003,7 @@ usermod -a -G kvm foo
 
 {{Tab
 |title= === Fedora ===
-|image=[[File:Fedora-logo.png|25px]]
+|image=[[File:Fedora-logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 {{CodeSelect|code=
@@ -1019,7 +1019,7 @@ Replace <username> with the actual username. You must log out and log back in fo
 
 {{Tab
 |title= === Arch Linux ===
-|image=[[File:Archlinux_logo.png|25px]]
+|image=[[File:Archlinux_logo.png|25px|alt=]]
 |addToClass=info-box
 |content=
 {{CodeSelect|inline=true|code=
@@ -1035,7 +1035,7 @@ See also [https://wiki.archlinux.org/title/libvirt Arch Linux libvirt wiki page]
 
 {{Tab
 |title= === Other Distributions ===
-|image=[[File:Gnu_operating_system.png|25px]]
+|image=[[File:Gnu_operating_system.png|25px|alt=]]
 |addToClass=info-box
 |content=
 If another distribution is in use, refer to the distribution's manual.
@@ -1051,11 +1051,11 @@ If another distribution is in use, refer to the distribution's manual.
 
 * To enter fullscreen mode, click:
 
-[[File:enterfullscreenkvm.png|600px]]
+[[File:enterfullscreenkvm.png|600px|alt=Virtual Machine Manager window of Whonix-Workstation on QEMU/KVM with a red arrow pointing to the fullscreen toolbar button]]
 
 * To exit fullscreen mode, move your mouse to the top middle of the screen and click:
 
-[[File:exitfullscreenkvm.png|600px]]
+[[File:exitfullscreenkvm.png|600px|alt=Top bar of a Whonix LXQt desktop in KVM; a red arrow points to the exit-fullscreen button at the right of the panel]]
 
 == Command Line Interface (CLI) ==
 The following instructions were re-tested in September 2024.
@@ -1338,7 +1338,7 @@ Follow these steps to make Nvidia available to the Whonix-Workstation VM:
 
 '''2.''' After that, either [https://en.wikipedia.org/wiki/Nouveau_(software) nouveau] is going to use Nvidia card (available by default), or, if you want to install the Nvidia driver, check it out [https://www.kicksecure.com/wiki/Nvidia#NVIDIA_Non-Freedom_Software_Proprietary_Driver here] (Dont forget the [https://www.kicksecure.com/wiki/Nvidia#nvidia-smi_and_other_NVIDIA_management_tools_don't_work_(by_default_in_user_session) whitelist Nvidia] step to make Nvidia available on the user side inside Whonix-Workstation VM).
 
-[[File:Whonix-GPU.png|600px]]
+[[File:Whonix-GPU.png|600px|alt=Whonix-Workstation in virt-manager (QEMU/KVM) running nvidia-smi in a terminal, listing an NVIDIA GeForce RTX 4060 GPU]]
 
 '''Note''': This adds extra attack surface (and using the proprietary driver adds even more), so use it with caution.
 

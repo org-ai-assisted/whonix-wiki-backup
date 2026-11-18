@@ -56,7 +56,7 @@ For detailed instructions on how to use Monero, please refer to the [https://web
 
 '''Figure:''' ''Monero GUI in {{project_name_short}}''
 
-[[File:Monerogui.png|border]]
+[[File:Monerogui.png|border|alt=Monero GUI wallet settings page in a disposable qube, with buttons to close wallet, create view-only wallet, show seed and keys, change password; daemon synchronized]]
 
 == Start Monero CLI ==
 Alternatively, you could also use Monero on the command line.

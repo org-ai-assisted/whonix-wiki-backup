@@ -10,7 +10,7 @@
 * [[Art Gallery]]
 * [[Screenshots]]
 </div>
-[[File:Whonix-logo-standard-old-refinement-2021.png|thumb|{{project_name_short}} old Logo Refinement 2021|border]]
+[[File:Whonix-logo-standard-old-refinement-2021.png|thumb|{{project_name_short}} old Logo Refinement 2021|border|alt=]]
 {{intro|
 Community contributed {{project_name_short}} artwork.
 }}
@@ -85,30 +85,30 @@ File:Whonix_silhouette.jpg|Whonix silhouette logo. Created with AI (Flux Schnell
 
 '''Figure:''' ''{{project_name_short}} banner''
 
-[[File:Whonix-facebook-banner.jpg|border]]
+[[File:Whonix-facebook-banner.jpg|border|alt=]]
 
 '''Figure:''' ''{{project_name_short}} {{project_age_years}} years celebration banner''
 
-[[File:Banner-11-years.jpg|border]]
+[[File:Banner-11-years.jpg|border|alt=Banner: 11 years of superior privacy brought to you by Whonix]]
 
 '''Figure:''' ''{{project_name_short}} {{project_name_short}} Anonymity Tips banner''
 
-[[File:Banner-did-you-know-tips.jpg|{{project_name_short}} Anonymity Tips|border]]
+[[File:Banner-did-you-know-tips.jpg|{{project_name_short}} Anonymity Tips|border|alt=Banner: did you know? We have a free guide with 100s of anonymity tips, shown beside a Whonix site screenshot and a hooded figure]]
 
 '''Figure:''' ''{{project_name_short}} Live Mode''
 
-[[File:Banner-live-mode.jpg|{{project_name_short}} Live Mode|border]]
+[[File:Banner-live-mode.jpg|{{project_name_short}} Live Mode|border|alt=Banner: Whonix offers persistent mode (desktop) and live mode (boot menu entry Whonix Live-mode GNU/Linux). Learn more.]]
 
 '''Figure:''' ''{{project_name_short}} Developers Wanted''
 
-[[File:Banner-we-want-you.jpg|{{project_name_short}} Developers Wanted|border]]
+[[File:Banner-we-want-you.jpg|{{project_name_short}} Developers Wanted|border|alt=Banner with a pointing hand and the Whonix mascot: we want you as developer contributor.]]
 
 = Illustrative Images =
 == Technical Illustrations ==
 
 '''Figure:''' ''{{project_name_short}} Concept Detailed Technical Illustration''
 
-[[File:Whonix-concept-detailed.jpg|500px|border|{{project_name_short}}Concept Detailed Technical Illustration]]
+[[File:Whonix-concept-detailed.jpg|500px|border|{{project_name_short}}Concept Detailed Technical Illustration|alt=Diagram: apps in the isolated Whonix-Workstation reach the Internet only through Whonix-Gateway as an anonymous connection; a direct connection is trackable]]
 
 '''Figure:''' ''[https://knowledgesharingtech.com/install-whonix-on-windows-10-step-by-step/ {{project_name_short}} connecting to internet through Tor] by [https://knowledgesharingtech.com/about-me/ Eloy]
 
@@ -116,288 +116,288 @@ File:Whonix_silhouette.jpg|Whonix silhouette logo. Created with AI (Flux Schnell
 
 '''Figure:''' ''{{project_name_short}} Concept Illustration''
 
-[[File:Whonix-concept-illustration.png|500px|border|{{project_name_short}}Concept Illustration]]
+[[File:Whonix-concept-illustration.png|500px|border|{{project_name_short}}Concept Illustration|alt=Diagram: on your computer, Whonix traffic is anonymous while a direct connection is not anonymous]]
 
 '''Figure:''' ''{{project_name_short}} Operating System Design''
 
-[[File:Whonix_concept_refined.jpg|500px|border|Whonix concept refined]]
+[[File:Whonix_concept_refined.jpg|500px|border|Whonix concept refined|alt=Diagram: isolated Whonix-Workstation connects to Whonix-Gateway, which sends torified traffic to the Internet; the host connection is non-torified.]]
 
 '''Figure:''' ''Isolated Routes''
 
-[[File:Stream-isolation-promo.jpg|500px|border|Isolated Routes]]
+[[File:Stream-isolation-promo.jpg|500px|border|Isolated Routes|alt=Diagram: a laptop sends Thunderbird, Tor Browser and another app over three separate four-hop routes to the web]]
 
 '''Figure:''' ''{{project_name_short}} Stream Isolation''
 
-[[File:Stream_isolation.1.0.jpg|500px|border]]
+[[File:Stream_isolation.1.0.jpg|500px|border|alt=Diagram: Workstation apps with SocksPort setup take separate Tor circuits; apps without it share the TransPort circuit, allowing identity correlation]]
 
 '''Figure:''' ''{{project_name_short}} Stream Isolation Remodeled''
 
-[[File:WhonixStreamIsolation.jpg|500px|border|{{project_name_short}}Stream Isolation Remodeled]]
+[[File:WhonixStreamIsolation.jpg|500px|border|{{project_name_short}}Stream Isolation Remodeled|alt=Diagram: apps with SocksPort use separate Tor circuits via four relays, while apps without it share one TransPort circuit, causing identity correlation]]
 
 '''Figure:''' ''{{project_name_short}} Connection With Vanguard Logo''
 
-[[File:Whonix_connection_design_vanguards.jpg|500px|border|Whonix Connection With Vanguard Logo]]
+[[File:Whonix_connection_design_vanguards.jpg|500px|border|Whonix Connection With Vanguard Logo|alt=Diagram: Your Computer connects through four numbered servers to a website, with a Vanguard emblem between servers 1 and 3.]]
 
 '''Figure:''' ''{{project_name_short}} Whonix Connection Without Vanguard Logo''
 
-[[File:Whonix_connection_design_simple.jpg|500px|border|Whonix Connection Without Vanguard Logo]]
+[[File:Whonix_connection_design_simple.jpg|500px|border|Whonix Connection Without Vanguard Logo|alt=Diagram: Your Computer connects through four servers in sequence, numbered 1 to 4, to a website.]]
 
 '''Figure:''' ''{{project_name_short}} Whonix vs VPN Logos In The Middle''
 
-[[File:Whonix_vs_VPNs.jpg|500px|border|{{project_name_short}}Whonix vs VPN Logos In The Middle]]
+[[File:Whonix_vs_VPNs.jpg|500px|border|{{project_name_short}}Whonix vs VPN Logos In The Middle|alt=Comparison: with Whonix, traffic goes through four servers before reaching a website; with a VPN, through a single server]]
 
 '''Figure:''' ''{{project_name_short}} Whonix vs VPN Logos On The Left''
 
-[[File:WhonixvsVPNontheleft.jpg|500px|border|{{project_name_short}}Whonix vs VPN Logos On The Left]]
+[[File:WhonixvsVPNontheleft.jpg|500px|border|{{project_name_short}}Whonix vs VPN Logos On The Left|alt=Diagram: Whonix sends traffic from your computer through four relays to a website, while a VPN uses one server]]
 
 '''Figure:''' ''{{project_name_short}} Whonix Connection technical''
 
-[[File:Whonix-4x-tor.jpg|500px|border|{{project_name_short}}Whonix Connection technical]]
+[[File:Whonix-4x-tor.jpg|500px|border|{{project_name_short}}Whonix Connection technical|alt=Diagram: your computer connects through four numbered servers in a chain to a website, protecting your IP]]
 
 '''Figure:''' ''{{project_name_short}} Whonix vs VPN technical|{{project_name_short}} Whonix vs VPN technical''
 
-[[File:Whonix-vs-vpn.jpg|500px|border]]
+[[File:Whonix-vs-vpn.jpg|500px|border|alt=Diagram: Whonix routes your computer through four relays to a website, while a VPN uses a single server]]
 
 == Conceptual Illustrations ==
 '''Figure:''' ''{{project_name_short}} Homepage Main by Hans''
 
-[[File:Whonix-homepage-main.png|500px|border]]
+[[File:Whonix-homepage-main.png|500px|border|alt=Laptop showing a Whonix window with the text With Whonix You're secure and anonymous Everywhere, for Windows, macOS, Linux and more]]
 
 '''Figure:''' ''{{project_name_short}} Principle Overview by @p41NpkH3'' <ref>
 * broken link: <nowiki>https://twitter.com/p41NpkH3</nowiki>
 * broken link: <nowiki>https://twitter.com/p41NpkH3/status/1499489832783036428</nowiki>
 </ref>
 
-[[File:Whonix_overview_by_p41NpkH3.gif|border]]
+[[File:Whonix_overview_by_p41NpkH3.gif|border|alt=Animation of a laptop screen booting, showing the Whonix padlock logo and the text Booting.]]
 
 [[File:Whonix_overview_by_p41NpkH3.mp4|border]]
 
 '''Figure:''' ''[https://web.archive.org/web/20220304120851/https://twitter.com/glennsorrentino/status/1499502070910623747 {{project_name_short}} Principle Overview] by [https://glennsorrentino.com/ glenn sorrentino]
 '
 
-[[File:Whonix_overview_by_glennsorrentino.jpeg|500px|border]]
+[[File:Whonix_overview_by_glennsorrentino.jpeg|500px|border|alt=Sketch of a laptop with four colored desktop areas and a window showing the Whonix padlock logo]]
 
 '''Figure:''' ''[https://knowledgesharingtech.com/install-whonix-on-windows-10-step-by-step/ {{project_name_short}} on windows 10] by [https://knowledgesharingtech.com/about-me/ Eloy]
 
-[[File:install_whonix_windows10.png|500px|border]]
+[[File:install_whonix_windows10.png|500px|border|alt=Title image reading Install Whonix on Windows 10, with the Whonix logo, Windows logo and a hooded mask figure]]
 
 '''Figure:''' ''{{project_name_short}} Principle Overview''
 
-[[File:Whonix-principle-overview.jpg|500px|border]]
+[[File:Whonix-principle-overview.jpg|500px|border|alt=Whonix loading terminal window running on Windows, macOS and Linux desktops]]
 
 '''Figure:''' ''{{project_name_short}} Principle Overview Notebook''
 
-[[File:Whonix-principle-overview-laptop.png|500px|border]]
+[[File:Whonix-principle-overview-laptop.png|500px|border|alt=Laptop screen split in four, showing Whonix loading windows on Windows, macOS and Linux desktops]]
 
 '''Figure:''' ''{{project_name_short}} Principle Homepage Preview''
 
-[[File:Page-homepage-preview.jpg|500px|border]]
+[[File:Page-homepage-preview.jpg|500px|border|alt=Whonix homepage preview: logo, tagline The most watertight privacy operating system in the world, and a laptop showing Whonix boot windows on several desktops.]]
 
 = Features Screenshots =
 
 '''Figure:''' ''Elite Spy Defense''
 
-[[File:Elite_Spy_Defense_1.png|400px|border]]
+[[File:Elite_Spy_Defense_1.png|400px|border|alt=]]
 
-[[File:Elite_Spy_Defense_2.png|400px|border]]
+[[File:Elite_Spy_Defense_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Maximum Anonymity''
 
-[[File:Maximum_Anonymity_1.png|400px|border]]
+[[File:Maximum_Anonymity_1.png|400px|border|alt=Card with a hooded figure holding a paper showing a hat-and-sunglasses icon; text says Whonix provides maximum anonymity by design]]
 
-[[File:Maximum_Anonymity_2.png|400px|border]]
+[[File:Maximum_Anonymity_2.png|400px|border|alt=Card with a How Tor Works diagram: Alice's client routes through encrypted Tor relay links to Bob; text says Whonix uses Tor for anonymity]]
 
 '''Figure:''' ''10 Years of Success''
 
-[[File:10_Years_of_Success_1.png|400px|border]]
+[[File:10_Years_of_Success_1.png|400px|border|alt=]]
 
-[[File:10_Years_of_Success_2.png|400px|border]]
+[[File:10_Years_of_Success_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Cyber Security Best Practices''
 
-[[File:Cyber_Security_Best_Practices_1.png|400px|border]]
+[[File:Cyber_Security_Best_Practices_1.png|400px|border|alt=]]
 
-[[File:Cyber_Security_Best_Practices_2.png|400px|border]]
+[[File:Cyber_Security_Best_Practices_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Bulletproof IP Protection''
 
-[[File:Bulletproof_IP_Protection_1.png|400px|border]]
+[[File:Bulletproof_IP_Protection_1.png|400px|border|alt=Card with a man stopping bullets with his hand: Whonix protects against trackers, malware and other attacks to get your IP address.]]
 
-[[File:Bulletproof_IP_Protection_2.png|400px|border]]
+[[File:Bulletproof_IP_Protection_2.png|400px|border|alt=Whonix Anonymity Architecture diagram: Workstation connects only through Whonix-Gateway to the Internet; direct connections are blocked.]]
 
 '''Figure:''' ''Cloaking your typing style''
 
-[[File:Cloaking_your_typing_style_1.png|400px|border]]
+[[File:Cloaking_your_typing_style_1.png|400px|border|alt=]]
 
-[[File:Cloaking_your_typing_style_2.png|400px|border]]
+[[File:Cloaking_your_typing_style_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Time Attack Protection''
 
-[[File:Time_Attack_Protection_1.png|400px|border]]
+[[File:Time_Attack_Protection_1.png|400px|border|alt=Stopwatch photo above the heading Time Attack Protection, saying Whonix prevents clock-deviation identification]]
 
-[[File:Time_Attack_Protection_2.png|400px|border]]
+[[File:Time_Attack_Protection_2.png|400px|border|alt=Close-up photo of a silver stopwatch against a blue background]]
 
 '''Figure:''' ''Not even WE know''
 
-[[File:Not_even_WE_know_1.png|400px|border]]
+[[File:Not_even_WE_know_1.png|400px|border|alt=Card reading Not even WE know: Whonix has strong organisational separation, so even the project has no access to IP connection logs.]]
 
-[[File:Not_even_WE_know_2.png|400px|border]]
+[[File:Not_even_WE_know_2.png|400px|border|alt=Illustration of a man lying down looking puzzled under a question mark, with envelopes flying; text says even Whonix has no access to IP connection logs.]]
 
 '''Figure:''' ''The Everything Tor OS''
 
-[[File:The_Everything_Tor_OS_1.png|400px|border]]
+[[File:The_Everything_Tor_OS_1.png|400px|border|alt=]]
 
-[[File:The_Everything_Tor_OS_2.png|400px|border]]
+[[File:The_Everything_Tor_OS_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Virtualizer friendly''
 
-[[File:Virtualizer_Friendly_1.png|400px|border]]
+[[File:Virtualizer_Friendly_1.png|400px|border|alt=Card showing the VirtualBox and KVM logos titled Virtualizer friendly: a virtualizer hides hardware serial numbers and prevents host file leaks.]]
 
-[[File:Virtualizer_Friendly_1.png|400px|border]]
+[[File:Virtualizer_Friendly_1.png|400px|border|alt=Card showing the VirtualBox and KVM logos titled Virtualizer friendly: a virtualizer hides hardware serial numbers and prevents host file leaks.]]
 
 '''Figure:''' ''Anonymous Web Server''
 
-[[File:Anonymous_Web_Server_1.png|400px|border]]
+[[File:Anonymous_Web_Server_1.png|400px|border|alt=Server tower with a padlock and hooded spy icon, with text on anonymously hosting a web server with Whonix]]
 
-[[File:Anonymous_Web_Server_1.png|400px|border]]
+[[File:Anonymous_Web_Server_1.png|400px|border|alt=Server tower with a padlock and hooded spy icon, with text on anonymously hosting a web server with Whonix]]
 
 '''Figure:''' ''Kernel Self Protection Settings''
 
-[[File:Kernel_Self_Protection_Settings_1.png|400px|border]]
+[[File:Kernel_Self_Protection_Settings_1.png|400px|border|alt=Card with a green armored penguin mascot on a blue circuit background: Kernel Self Protection Settings, Whonix uses strong kernel hardening per KSPP]]
 
-[[File:Kernel_Self_Protection_Settings_2.png|400px|border]]
+[[File:Kernel_Self_Protection_Settings_2.png|400px|border|alt=Green armored penguin mascot on a blue circuit background; text says Whonix is based on Kicksecure, a security-hardened Linux distribution]]
 
 '''Figure:''' ''Tor Browser''
 
-[[File:Tor_Browser_1.png|400px|border]]
+[[File:Tor_Browser_1.png|400px|border|alt=Tor Browser download page with the slogan Defend yourself and platform download buttons, above the heading Tor Browser]]
 
-[[File:Tor_Browser_2.png|400px|border]]
+[[File:Tor_Browser_2.png|400px|border|alt=Tor Browser download page with the slogan Defend yourself and download buttons for Windows, OS X, Linux and Android]]
 
 '''Figure:''' ''Live Mode''
 
-[[File:Live_Mode_1.png|400px|border]]
+[[File:Live_Mode_1.png|400px|border|alt=Card showing a GRUB boot menu with Whonix Live-mode GNU/Linux selected; text says Live Mode erases all data after the session]]
 
-[[File:Live_Mode_2.png|400px|border]]
+[[File:Live_Mode_2.png|400px|border|alt=GNU GRUB boot menu with the entry Whonix Live-mode GNU/Linux selected]]
 
 '''Figure:''' ''Based on Linux''
 
-[[File:Based_on_Linux_1.png|400px|border]]
+[[File:Based_on_Linux_1.png|400px|border|alt=Card with a muscular arm, Whonix padlock logo and Tux penguin: Whonix is based on Kicksecure, which is based on Linux.]]
 
-[[File:Based_on_Linux_2.png|400px|border]]
+[[File:Based_on_Linux_2.png|400px|border|alt=Muscular arm flexing beside the Whonix padlock logo and Tux penguin: Linux is reliable and secure; Whonix builds on it.]]
 
 '''Figure:''' ''Onion Website Option''
 
-[[File:Onion_Website_Option_1.png|400px|border]]
+[[File:Onion_Website_Option_1.png|400px|border|alt=Card reading Onion Website Option: the website offers an onion version for higher connection security between user and server.]]
 
-[[File:Onion_Website_Option_2.png|400px|border]]
+[[File:Onion_Website_Option_2.png|400px|border|alt=Tor onion logo beside the words Encrypted, Secure, Effective in a browser window.]]
 
 '''Figure:''' ''Advanced Firewall''
 
-[[File:Advanced_Firewall_1.png|400px|border]]
+[[File:Advanced_Firewall_1.png|400px|border|alt=Brick wall in flames firewall icon with text: our firewall is configured for anonymous and secure Internet use]]
 
-[[File:Advanced_Firewall_2.png|400px|border]]
+[[File:Advanced_Firewall_2.png|400px|border|alt=Brick wall in flames firewall icon with text: firewall configured for anonymous and secure Tor use]]
 
 '''Figure:''' ''Android App Support''
 
-[[File:Android_App_Support_1.png|400px|border]]
+[[File:Android_App_Support_1.png|400px|border|alt=Anbox Application Manager grid of Android apps, with text on running Android apps using Anbox or Whonix-Custom-Workstation]]
 
-[[File:Android_App_Support_2.png|400px|border]]
+[[File:Android_App_Support_2.png|400px|border|alt=Anbox Application Manager grid of Android apps such as F-Droid, Files and Plumble, with caption on Anbox and Android x86]]
 
 '''Figure:''' ''Virus Protection''
 
-[[File:Virus_Protection_1.png|400px|border]]
+[[File:Virus_Protection_1.png|400px|border|alt=Card with a red shield bearing a white cross titled Virus Protection: Whonix adds hardening and user education against virus attacks.]]
 
-[[File:Virus_Protection_2.png|400px|border]]
+[[File:Virus_Protection_2.png|400px|border|alt=Red shield with a white cross above the text: Whonix provides additional security hardening measures and user education for better protection from viruses.]]
 
 '''Figure:''' ''Brute Force Defense''
 
-[[File:Brute_Force_Defense_1.png|400px|border]]
+[[File:Brute_Force_Defense_1.png|400px|border|alt=Card with arrow-pierced backdrop: Whonix protects Linux user accounts against brute force attacks using pam tally2.]]
 
-[[File:Brute_Force_Defense_2.png|400px|border]]
+[[File:Brute_Force_Defense_2.png|400px|border|alt=Arrows embedded in a surface: Whonix provides additional security hardening and user education against viruses.]]
 
 '''Figure:''' ''Risk Minimization''
 
-[[File:Risk_Minimization_1.png|400px|border]]
+[[File:Risk_Minimization_1.png|400px|border|alt=AppArmor shield emblem above text: Risk Minimization, AppArmor profiles restrict the capabilities of high-risk applications]]
 
-[[File:Risk_Minimization_2.png|400px|border]]
+[[File:Risk_Minimization_2.png|400px|border|alt=AppArmor shield emblem with text: profiles restrict the capabilities of commonly used, high-risk applications such as Tor Browser]]
 
 '''Figure:''' ''Discovery/Traffic Analysis Attack Protection''
 
-[[File:Dicovery-Traffic_Analysis_Attack_Protection_1.png|400px|border]]
+[[File:Dicovery-Traffic_Analysis_Attack_Protection_1.png|400px|border|alt=]]
 
-[[File:Dicovery-Traffic_Analysis_Attack_Protection_2.png|400px|border]]
+[[File:Dicovery-Traffic_Analysis_Attack_Protection_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Strong Linux Account Separation''
 
-[[File:Strong_Linux_Account_Separation_1.png|400px|border]]
+[[File:Strong_Linux_Account_Separation_1.png|400px|border|alt=]]
 
-[[File:Strong_Linux_Account_Separation_2.png|400px|border]]
+[[File:Strong_Linux_Account_Separation_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Strong Anonymity, privacy and security settings''
 
-[[File:Strong_Anonymity,_privacy_and_security_settings_1.png|400px|border]]
+[[File:Strong_Anonymity,_privacy_and_security_settings_1.png|400px|border|alt=Wrench and screwdriver icon above text: Strong Anonymity, privacy and security settings improve your anonymity against known attacks]]
 
-[[File:Strong_Anonymity,_privacy_and_security_settings_2.png|400px|border]]
+[[File:Strong_Anonymity,_privacy_and_security_settings_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Extensive Documentation''
 
-[[File:Extensive_Documentation_1.png|400px|border]]
+[[File:Extensive_Documentation_1.png|400px|border|alt=]]
 
-[[File:Extensive_Documentation_2.png|400px|border]]
+[[File:Extensive_Documentation_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Vibrant Community''
 
-[[File:Vibrant_Community_1.png|400px|border]]
+[[File:Vibrant_Community_1.png|400px|border|alt=Card with a speech-bubble logo titled Vibrant Community: Whonix community features forums, contributors and RSS.]]
 
-[[File:Vibrant_Community_2.png|400px|border]]
+[[File:Vibrant_Community_2.png|400px|border|alt=Colorful speech-bubble logo above the text: Our vibrant Whonix community features Forums, Contributors and RSS.]]
 
 '''Figure:''' ''Console Lockdown''
 
-[[File:Console_Lockdown_1.png|400px|border]]
+[[File:Console_Lockdown_1.png|400px|border|alt=]]
 
-[[File:Console_Lockdown_2.png|400px|border]]
+[[File:Console_Lockdown_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Swap File Creator''
 
-[[File:Swap_File_Creator_1.png|400px|border]]
+[[File:Swap_File_Creator_1.png|400px|border|alt=]]
 
-[[File:Swap_File_Creator_2.png|400px|border]]
+[[File:Swap_File_Creator_2.png|400px|border|alt=]]
 
 '''Figure:''' ''CPU Information Leak Protection (TCP ISN)''
 
-[[File:CPU_Information_Leak_Protection_(TCP_ISN)_1.png|400px|border]]
+[[File:CPU_Information_Leak_Protection_(TCP_ISN)_1.png|400px|border|alt=Card with a laptop and a tap dripping DATA: Tirdad kernel module prevents de-anonymization of Tor onion services.]]
 
-[[File:CPU_Information_Leak_Protection_(TCP_ISN)_2.png|400px|border]]
+[[File:CPU_Information_Leak_Protection_(TCP_ISN)_2.png|400px|border|alt=Illustration of a laptop with a tap leaking DATA letters, representing CPU information leaks via TCP ISN.]]
 
 '''Figure:''' ''Hosting Location Hidden Services''
 
-[[File:Hosting_Location_Hidden_Services_1.png|400px|border]]
+[[File:Hosting_Location_Hidden_Services_1.png|400px|border|alt=]]
 
-[[File:Hosting_Location_Hidden_Services_2.png|400px|border]]
+[[File:Hosting_Location_Hidden_Services_2.png|400px|border|alt=]]
 
 '''Figure:''' ''Tor Connection Destination Viewer (tor-ctrl-observer)''
 
-[[File:Tor_Connection_Destination_Viewer_(tor-ctrl-observer)_1.png|400px|border]]
+[[File:Tor_Connection_Destination_Viewer_(tor-ctrl-observer)_1.png|400px|border|alt=Card for Tor Connection Destination Viewer, tor-ctrl-observer, with a brass spyglass icon and a short description]]
 
-[[File:Tor_Connection_Destination_Viewer_(tor-ctrl-observer)_2.png|400px|border]]
+[[File:Tor_Connection_Destination_Viewer_(tor-ctrl-observer)_2.png|400px|border|alt=Brass spyglass icon; tor-ctrl-observer shows connection information of applications using Tor]]
 
 '''Figure:''' ''Warrant Canary''
 
-[[File:Warrant_Canary_1.png|400px|border]]
+[[File:Warrant_Canary_1.png|400px|border|alt=Card with a green parrot titled Warrant Canary: a canary confirms that no warrants have ever been served on the Whonix project.]]
 
-[[File:Warrant_Canary_2.png|400px|border]]
+[[File:Warrant_Canary_2.png|400px|border|alt=Green parrot perched on a branch above the text: A canary confirms that no warrants have ever been served on the Whonix project.]]
 
 '''Figure:''' ''Based on Debian''
 
-[[File:Based_on_Debian_1.png|400px|border]]
+[[File:Based_on_Debian_1.png|400px|border|alt=Card with Debian swirl logo: Whonix is based on Debian, one of the most reliable Linux distributions.]]
 
-[[File:Based_on_Debian_2.png|400px|border]]
+[[File:Based_on_Debian_2.png|400px|border|alt=Debian swirl logo with text: Whonix is a collection of configuration files and scripts, not a stripped down Debian.]]
 
 '''Figure:''' ''Digitally Signed releases''
 
-[[File:Digitally_Signed_releases_1.png|400px|border]]
+[[File:Digitally_Signed_releases_1.png|400px|border|alt=]]
 
-[[File:Digitally_Signed_releases_2.png|400px|border]]
+[[File:Digitally_Signed_releases_2.png|400px|border|alt=]]
 
 = Memes =
 
@@ -413,7 +413,7 @@ File:brain_levels_with_whonix_meme.png|[https://forum.qubes-os.org/t/memes-about
 
 * [https://www.youtube.com/watch?v=sRJTHWgbMvc What is Whonix? - Your Internet Privacy Super Tool]
 
-[[File:Whonix-explainer-title.jpg|border]]
+[[File:Whonix-explainer-title.jpg|border|alt=Cartoon of a sunglasses-wearing man spraying robots with a can, titled Whonix Internet Privacy Super Tool]]
 
 = See Also =
 * [[Dev/Logo|{{project_name_short}} Logo]]

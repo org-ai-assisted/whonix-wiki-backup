@@ -6,11 +6,11 @@ Vanguards - Tor Anonymity Improvement
 |description=Protects against Tor guard discovery and related traffic analysis attacks.
 |image=Vanguard.png
 }}
-[[File:Vanguard.png|thumb|250px|vanguards logo]]
+[[File:Vanguard.png|thumb|250px|vanguards logo|alt=]]
 {{intro|
 Protects against Tor guard discovery and related traffic analysis attacks.
 }}
-[[File:Whonix_connection_design_vanguards.jpg|thumb|250px|Tor is using 4 Tor relays thanks to vanguards.]]
+[[File:Whonix_connection_design_vanguards.jpg|thumb|250px|Tor is using 4 Tor relays thanks to vanguards.|alt=Diagram: Your Computer connects through four numbered servers to a website, with a Vanguard emblem between servers 1 and 3.]]
 = Update =
 '''Update:''' '''Due to upstream bugs discussed in https://forums.whonix.org/t/connections-drop-on-tor-0-4-8-9/17702 unfortunately vanguards has been disabled by default.'''
 

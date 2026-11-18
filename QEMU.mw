@@ -6,7 +6,7 @@ QEMU
 |description=Using {{project_name_long}} with QEMU instead of VirtualBox
 |image=Qemulogo.svg.png
 }}
-[[File:Qemulogo.svg.png|thumb|QEMU logo]]
+[[File:Qemulogo.svg.png|thumb|QEMU logo|alt=]]
 {{intro|
 Using {{project_name_short}} with QEMU instead of VirtualBox
 }}

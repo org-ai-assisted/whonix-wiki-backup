@@ -4,7 +4,7 @@
 |description=Anonymous IRC Chat. HexChat (previously called XChat) over the Tor Anonymity Network.
 |image=Hexchaticon.png
 }}
-[[File:Hexchaticon.png|HexChat Logo|thumb]]
+[[File:Hexchaticon.png|HexChat Logo|thumb|alt=]]
 {{intro|
 Anonymous IRC Chat. HexChat (previously called XChat) over the Tor Anonymity Network.
 }}
@@ -69,7 +69,7 @@ The following example Chat (IRC client) screenshot shows the /whois output for u
 
 '''Figure:''' ''IRC /whois Output''
 
-[[File:chaos22.png|800px|HexChat (IRC Client), showing /whois of oneself.]]
+[[File:chaos22.png|800px|HexChat (IRC Client), showing /whois of oneself.|alt=HexChat connected to the whonix channel showing a WHOIS result for the user's own nickname.]]
 
 == Disabling Hardening and File Transfers ==
 
@@ -118,7 +118,7 @@ To follow the associated {{project_name_short}} development ticket, see: [https:
 = Screenshots =
 
 '''Figure:''' ''HexChat IRC Client Chat Window''
-[[File:hexchat.png|800px]]
+[[File:hexchat.png|800px|alt=HexChat window connected to freenode in the #gentoo channel, with a chat log, channel list on the left and user list on the right]]
 
 = See Also =
 * [[Chat]]

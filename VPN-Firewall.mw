@@ -6,7 +6,7 @@ title=VPN-Firewall: Enforce use of a VPN
 |description=Instructions on how to use VPN-Firewall. A Fail Closed Mechanism for VPNs. Prevent leaks when using VPNs. Force all connections through VPNs. Prevents shared VPN/Tor server leak bug.
 |image=Vpnfirewall1234322134.jpg
 }}
-[[File:Vpnfirewall1234322134.jpg|thumb|350px]]
+[[File:Vpnfirewall1234322134.jpg|thumb|350px|alt=]]
 {{intro|
 Instructions on how to use VPN-Firewall. A Fail Closed Mechanism for VPNs. Prevent leaks when using VPNs. Force all connections through VPNs. Prevents shared VPN/Tor server leak bug.
 }}

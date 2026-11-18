@@ -6,7 +6,7 @@
 |description={{project_name_short}} stable / testers / developers APT Repository. How to change from one suite to another? How to disable {{project_name_short}} APT Repository?
 |image=Whonix_Repository_Wizard_install_updates.png
 }}
-[[File:Whonix_Repository_Wizard_install_updates.png|Graphical {{project_name_short}} Derivative Repository Tool (GUI)|thumb]]
+[[File:Whonix_Repository_Wizard_install_updates.png|Graphical {{project_name_short}} Derivative Repository Tool (GUI)|thumb|alt=Wizard page asking whether to automatically install Whonix team updates, with Yes selected and Back disabled]]
 {{intro|
 {{project_name_short}} stable / testers / developers APT Repository. How to change from one suite to another? How to disable {{project_name_short}} APT Repository?
 }}
@@ -38,11 +38,11 @@ If you are using [[Qubes|{{q_project_name_short}}]], please press Expand on the 
 
 '''Figure:''' ''Wizard Repository Selection''
 
-[[File:Whonix_Repository_Wizard_select_repo.png|border]]
+[[File:Whonix_Repository_Wizard_select_repo.png|border|alt=Wizard page for choosing a repository, with Whonix Stable Repository selected out of four options]]
 
 '''Figure:''' ''Wizard Auto-update Configuration''
 
-[[File:Whonix_Repository_Wizard_install_updates.png|border]]
+[[File:Whonix_Repository_Wizard_install_updates.png|border|alt=Wizard page asking whether to automatically install Whonix team updates, with Yes selected and Back disabled]]
 </div>
 </div>
 
@@ -55,11 +55,11 @@ If you are using [[About|{{project_name_short}}]], please press Expand on the ri
 
 '''Figure:''' ''Start Menu''
 
-[[File:whonixrepoxfce1.png|600px]]
+[[File:whonixrepoxfce1.png|600px|alt=Start menu open to System, with Whonix Repository highlighted; red numbers 1 to 3 mark the menu button, System category and entry]]
 
 '''Figure:''' ''super user password''
 
-[[File:whonixrepoxfce2.png|600px]]
+[[File:whonixrepoxfce2.png|600px|alt=LXQt sudo password dialog for /usr/bin/whonix-repository-wizard, with a red arrow pointing at the empty password field]]
 
 </div>
 </div>
@@ -68,11 +68,11 @@ Afterwards, the following window will appear.
 
 '''Figure:''' ''Auto-update Configuration''
 
-[[File:whonixrepoxfce3.png|600px]]
+[[File:whonixrepoxfce3.png|600px|alt=Whonix Repository Wizard asking whether to automatically install updates, with Yes selected]]
 
 '''Figure:''' ''Repository Selection''
 
-[[File:whonixrepoxfce4.png|600px]]
+[[File:whonixrepoxfce4.png|600px|alt=Whonix Repository Wizard asking which repository to receive updates from, with Whonix Stable Repository selected]]
 
 == Command Line Interface ==
 
@@ -88,11 +88,11 @@ sudo repository-dist
 
 '''Figure:''' ''Launch Terminal''
 
-[[File:whonixrepocli.png|600px]]
+[[File:whonixrepocli.png|600px|alt=Desktop taskbar with a red arrow pointing to the terminal launcher icon]]
 
 '''Figure:''' ''Run repository-dist''
 
-[[File:whonixrepocli2.png|600px]]
+[[File:whonixrepocli2.png|600px|alt=Terminal showing the Whonix welcome banner, with the command sudo whonix_repository entered and a sudo password prompt waiting]]
 
 Choose one of the following repositories based on personal preferences.
 

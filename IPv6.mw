@@ -64,7 +64,7 @@ Platform specific. Select your virtualizer.
 |content=
 {{Tab
 |title= == VirtualBox ==
-|image=[[File:Virtualbox_logo.png|25px]]
+|image=[[File:Virtualbox_logo.png|25px|alt=]]
 |addToClass=info-box
 |active=false
 |content=
@@ -76,7 +76,7 @@ Platform specific. Select your virtualizer.
 
 {{Tab
 |title= == KVM ==
-|image=[[File:Kvm-new-logo.png|25px]]
+|image=[[File:Kvm-new-logo.png|25px|alt=]]
 |addToClass=info-box
 |active=false
 |content=
@@ -155,7 +155,7 @@ IPv6 autoconfiguration should now work in libvirt.
 
 {{Tab
 |title= == Qubes OS ==
-|image=[[File:Qubes-logo-blue.png|25px]]
+|image=[[File:Qubes-logo-blue.png|25px|alt=]]
 |addToClass=info-box
 |active=false
 |content=

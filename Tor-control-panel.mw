@@ -7,18 +7,18 @@ Tor Control Panel
 |image=Tor-control-panel-control.png
 }}
 {{tor_mininav}}
-[[File:tor-control-panel-control.png|Tor Control Panel|thumb]]
+[[File:tor-control-panel-control.png|Tor Control Panel|thumb|alt=Tor Control Panel Control tab with green Tor status Connected to the Tor network, bridges and proxy None, Restart, Stop, Configure buttons]]
 {{intro|
 Tor start, stop, control, logs, utilities
 }}
 = Screenshots =
-[[File:tor-control-panel-control.png|400px]]
+[[File:tor-control-panel-control.png|400px|alt=Tor Control Panel Control tab with green Tor status Connected to the Tor network, bridges and proxy None, Restart, Stop, Configure buttons]]
 
-[[File:tor-control-panel-log.png|400px]]
+[[File:tor-control-panel-log.png|400px|alt=Tor Control Panel Logs tab showing Tor log notices about SocksPort, bootstrapping to 100 percent and highlighted proxy warnings]]
 
-[[File:tor-control-panel-tor-stopped.png|400px]]
+[[File:tor-control-panel-tor-stopped.png|400px|alt=Tor Control Panel with red status Tor is not running and bridge type obfs4 and SOCKS5 proxy configuration fields]]
 
-[[File:tor-control-panel-utilities.png|400px]]
+[[File:tor-control-panel-utilities.png|400px|alt=Tor Control Panel Utilities tab with Onion Circuits and New Identity buttons and a Use with care warning]]
 
 = Issues =
 * https://forums.whonix.org/t/tor-circuit-switched-off/8286/3

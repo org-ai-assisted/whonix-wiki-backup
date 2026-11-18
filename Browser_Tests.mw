@@ -4,7 +4,7 @@
 |image=Testschecklist.png
 }}
 {{browser_mininav}}
-[[File:Testschecklist.png|thumb|200px]]
+[[File:Testschecklist.png|thumb|200px|alt=]]
 {{intro|
 check.torproject.org says "Sorry. You are not using Tor."? On false positives. And browser fingerprinting. How unique are you? On Browser Tests and Browser Security. Notes on sites such as ip-check.info and whoer.net.
 }}
@@ -32,7 +32,7 @@ Browser fingerprinting defenses are imperfect and most probably always will be. 
 
 '''Figure:''' ''AmIUnique Test in {{project_name_long}}''
 
-[[File:Amiunique.png|border]]
+[[File:Amiunique.png|border|alt=Tor Browser on amiunique.org showing fingerprint results: Windows, Firefox version 68, No JS, en, with HTTP header attribute similarity ratios]]
 
 == cpuid visualiser ==
 The cpuid visualiser is not a browser test. As its website [https://cpuid.apps.poly.nomial.co.uk/ <code>cpuid.apps.poly.nomial.co.uk</code>] correctly states, it is a CPUID visualizer. It does not claim that it can detect the CPUID from the user's computer. This is further evidenced by the website writing <code>sample cpuid data</code>. The functionality of the cpuid visualiser is for a user to voluntarily, locally gather their CPU binary register data and paste it into the cpuid visualiser so it can be decoded and visualized.
@@ -76,7 +76,7 @@ Please test on different computers with different CPUs and check if the detected
 
 '''Figure:''' ''Doileak.com Test in {{project_name_short}}''
 
-[[File:Doileak.png|border]]
+[[File:Doileak.png|border|alt=Tor Browser showing doileak.com test results: request IP, detected operating systems, browser Firefox, timezone, DNS and IPv6 request source checks]]
 
 == Fingerprint Central ==
 
@@ -86,7 +86,7 @@ https://lists.torproject.org/pipermail/tor-dev/2016-July/011233.html
 
 '''Figure:''' ''Fingerprint Central Test in {{project_name_short}}''
 
-[[File:Fpcentral.png|border]]
+[[File:Fpcentral.png|border|alt=Tor Browser showing FP Central My Fingerprint results page, listing HTTP headers such as a Windows Firefox 68 user agent, and JavaScript test values]]
 
 {{Anchor|FingerprintJS}}
 == Fingerprint.com ==
@@ -126,7 +126,7 @@ The [https://fingerprint.com/demo/ Fingerprint.com Demo] (formerly FingerprintJS
 
 '''Figure:''' ''Fingerprint.com <code>visitorID</code> Demo in {{project_name_short}}''
 
-[[File:TBfingerprint1.png|600px|border]]
+[[File:TBfingerprint1.png|600px|border|alt=Fingerprint Pro demo page in a browser showing a visitorID starting MnynFd9, IP 80.82.78.8, incognito Yes, with the ID label highlighted]]
 
 Using [[Tor Browser]]'s [[Tor_Browser#New_Identity_Function|new identity function]] results in a different browser fingerprint. Fingerprint.com will detect a different <code>visitorID</code>. The same applies after restarting Tor Browser.
 
@@ -134,7 +134,7 @@ Fortunately, fingerprint.com is unable to assign the same <code>visitorID</code>
 
 '''Figure:''' ''Different Fingerprint.com <code>visitorID</code> after browser restart''
 
-[[File:TBfingerprint2.png|600px|border]]
+[[File:TBfingerprint2.png|600px|border|alt=Same Fingerprint Pro demo page showing a different visitorID starting fIDoxM, IP 91.211.89.107, with the ID label highlighted]]
 
 When opening the fingerprint.com demo in multiple browser tabs in the same browser, fingerprint.com detects the same <code>visitorID</code>. This is because Tor Browser only attempts to provide a different identity in different browser tabs for different top level domain names.
 
@@ -158,7 +158,7 @@ To learn more about [https://coveryourtracks.eff.org/ EFF's Cover Your Tracks te
 
 '''Figure:''' ''Cover Your Tracks (previously Panopticlick) v3 Test in {{project_name_short}}''
 
-[[File:Panopticlickv3.png|border]]
+[[File:Panopticlickv3.png|border|alt=Panopticlick results in Tor Browser: 5.8 bits of identifying information, with a table of browser characteristics and their bits of identifying information.]]
 
 == schemeflood.com ==
 {{stub}}
@@ -198,7 +198,7 @@ Users are requested not to post any "Sorry. You are not using Tor." questions in
 
 '''Figure:''' ''Successful Tor Network Check in {{project_name_short}}''
 
-[[File:Checktorproject.png|border]]
+[[File:Checktorproject.png|border|alt=Tor Browser on check.torproject.org showing Congratulations, this browser is configured to use Tor.]]
 
 == WebCPU ==
 [https://github.com/darionco/WebCPU WebCPU]. See [https://darionco.github.io/WebCPU/ WebCPU (live demo)].
@@ -211,7 +211,7 @@ Fingerprinting Tor Browser using WebCPU is probably not possible. The WebCPU tes
 
 '''Figure:''' ''WhatIsMyBrowser.com Test in {{project_name_short}}''
 
-[[File:Whatismybrowser.png|border]]
+[[File:Whatismybrowser.png|border|alt=Tor Browser on whatismybrowser.com reporting Firefox 68 on Windows 10, out of date, with JavaScript not enabled.]]
 
 == Whoer.net ==
 
@@ -219,7 +219,7 @@ https://whoer.net/ -- This is another site relying on common fingerprinting meth
 
 '''Figure:''' ''Whoer.net Test in {{project_name_short}}''
 
-[[File:Whoernet.png|border]]
+[[File:Whoernet.png|border|alt=Tor Browser on whoer.net showing a Tor exit IP address, OS Win10.0, Browser Firefox 68.0, Proxy No, Anonymizer No and Blacklist Yes.]]
 
 = Benchmarks =
 * https://web.archive.org/web/20220512115604/https://www.matthew-x83.com/online/cpu-benchmark.php

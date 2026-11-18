@@ -6,12 +6,12 @@ Installation of {{project_name_long}} on a USB
 |description=Yes, {{project_name_short}} can be installed on a USB. Here's how.
 |image=Whonix-download-usb.jpg
 }}
-[[File:Whonix-download-usb.jpg|thumb]] {{live}}
+[[File:Whonix-download-usb.jpg|thumb|alt=]] {{live}}
 {{intro|
 '''{{project_name_short}} can be used as a plug-and-play operating system on a USB data stick'''. This is particularly useful for users looking for a portable '''persistent''' <u>or</u> '''live''' operating system.
 }}
 = How-to: Install Whonix on USB =
-[[File:logo-usb-500x500.png|45px|link=]] Yes, {{project_name_short}} can be used on a USB.
+[[File:logo-usb-500x500.png|45px|link=|alt=]] Yes, {{project_name_short}} can be used on a USB.
 
 '''1.''' Select a host operating system.
 
@@ -23,7 +23,7 @@ Installation of {{project_name_long}} on a USB
 |type=section
 |addToClass=info-box
 |title= == Using Kicksecure on USB ==
-|image=[[File:Kicksecure-logo-icon.svg]]
+|image=[[File:Kicksecure-logo-icon.svg|alt=]]
 |content=
 {{ExtLink
 |https://www.kicksecure.com
@@ -65,7 +65,7 @@ Optional: Kicksecure also comes with the <code>grub-live</code> software package
 |type=section
 |addToClass=info-box
 |title= == Using Other Operating Systems on USB ==
-|image=[[File:Any12312.png]]
+|image=[[File:Any12312.png|alt=]]
 |content=
 '''2.''' [[Host Operating System Selection|Select a suitable host operating system]].
 

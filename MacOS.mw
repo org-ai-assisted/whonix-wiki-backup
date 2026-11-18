@@ -6,7 +6,7 @@
 |description={{project_name_short}} for Apple macOS on Intel-based MacBook and Apple Silicon.
 |image=Logo-apple-500x500.png
 }}
-[[File:Logo-apple-500x500.png|thumb|link=|class=hide-enlarge|100px|macOS]]
+[[File:Logo-apple-500x500.png|thumb|link=|class=hide-enlarge|100px|macOS|alt=]]
 {{intro|
 {{project_name_short}} for '''Apple macOS''' on '''Intel-based MacBook''' and '''Apple Silicon.'''
 
@@ -19,10 +19,10 @@
 
 {{Tab
 |title= = Intel-based MacBook =
-|image=[[File:Apple-with-intel-logo.jpg]]
+|image=[[File:Apple-with-intel-logo.jpg|alt=]]
 |content=
 {{anchor|{{project_name_short}} on Intel-based MacBook}}
-[[File:Apple-with-intel-logo.jpg|thumb|100px]]
+[[File:Apple-with-intel-logo.jpg|thumb|100px|alt=]]
 {{IntroLike|
 For Mac computers with an <u>Intel</u> processor, {{project_name_short}} can be run inside VirtualBox.
 
@@ -32,10 +32,10 @@ Follow the documentation on the '''[[VirtualBox]]''' wiki page.
 
 {{Tab
 |title= = Apple Silicon =
-|image=[[File:Apple-mx-logo.jpg]]
+|image=[[File:Apple-mx-logo.jpg|alt=]]
 |content=
 {{Anchor|M1}}{{Anchor|M2}}{{Anchor|{{project_name_short}} on Apple Silicon}}
-[[File:Apple-mx-logo.jpg|thumb|100px]]
+[[File:Apple-mx-logo.jpg|thumb|100px|alt=]]
 '''For Mac <u>M1</u>, <u>M2</u>, <u>M3</u>, <u>M4</u>, ...'''
 
 {{IntroLike|
@@ -60,7 +60,7 @@ Virtualizer specific. Select the virtualizer.
 
 {{Tab
 |title= = VirtualBox =
-|image=[[File:Virtualbox logo.png|25px]]
+|image=[[File:Virtualbox logo.png|25px|alt=]]
 |content=
 Build environment.
 
@@ -220,10 +220,10 @@ The process of building and important {{project_name_short}} UTM has been comple
 
 {{Tab
 |title= = non-Apple Hardware Hackintosh =
-|image=[[File:Hackintosh-logo.svg]]
+|image=[[File:Hackintosh-logo.svg|alt=]]
 |content=
 {{anchor|{{project_name_short}} on non-Apple Hardware Hackintosh}}
-[[File:Hackintosh-logo.svg|thumb|100px]]
+[[File:Hackintosh-logo.svg|thumb|100px|alt=]]
 {{Community_Support|scope=chapter}}
 
 Virtualization on <code>osx86</code> aka "Hackintosh" machines with unmodified "vanilla" kernels works well, but some additional BIOS/UEFI settings need to be confirmed to ensure system stability. As of November 2018 [https://en.wikipedia.org/wiki/VT-d Intel VT-d] is not recommended, although some systems may function if it is enabled. Later BIOS revisions from American Megatrends Inc. (AMI) seem to have improved support compared to earlier releases.

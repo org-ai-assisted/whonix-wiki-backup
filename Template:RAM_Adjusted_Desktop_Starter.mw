@@ -1,4 +1,4 @@
-[[File:RAM Adjusted Desktop Starter created by adrelanos.png|400px|thumb|RAM Adjusted Desktop Starter will not start the desktop environment. The terminal-based {{project_name_gateway_long}} can be used instead.]]
+[[File:RAM Adjusted Desktop Starter created by adrelanos.png|400px|thumb|RAM Adjusted Desktop Starter will not start the desktop environment. The terminal-based {{project_name_gateway_long}} can be used instead.|alt=VirtualBox console of Whonix-Gateway with the highlighted RAM Adjusted Desktop Starter message saying the desktop is not started due to only 121 MB RAM]]
 
 By default, {{project_name_gateway_short}} VMs are configured with 1280 MB of virtual RAM. This can be reduced on systems with limited available resources.
 

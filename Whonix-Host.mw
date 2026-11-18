@@ -11,7 +11,7 @@ Whonix-Host Operating System Live ISO, Whonix-Host Installer
 * [[USB Installation]]
 * [[Live Mode]].
 </div>
-[[File:Cd-rom-icon.png|thumb]]
+[[File:Cd-rom-icon.png|thumb|alt=]]
 {{Intro|
 Whonix-Host will be a '''complete Operating System''' provided by {{project_name_long}} developers. '''More developers still wanted!''' Not available for users yet. Users should [[Download|install Whonix]] instead, it's available for most major operating systems.
 }}
@@ -110,31 +110,31 @@ Older screenshots:
 
 '''Figure:''' ''Whonix-Host GRUB bootloader (EFI mode)''
 
-[[File:Whonix-Host GRUB bootloader (EFI mode).png|Whonix-Host GRUB bootloader (EFI mode)|500px]]
+[[File:Whonix-Host GRUB bootloader (EFI mode).png|Whonix-Host GRUB bootloader (EFI mode)|500px|alt=GNU GRUB menu with a single highlighted entry, Whonix-Host Live]]
 
 '''Figure:''' ''Whonix-Host Calamares Installer - Welcome module''
 
-[[File:Whonix-Host Calamares Installer - Greeter.png|Whonix-Host Calamares Installer - Welcome module|500px]]
+[[File:Whonix-Host Calamares Installer - Greeter.png|Whonix-Host Calamares Installer - Welcome module|500px|alt=Calamares installer welcome page for Whonix-Host GNU/Linux 15 with a language selector and Next button]]
 
 '''Figure:''' ''Whonix-Host Calamares Installer - Partitions Module''
 
-[[File:Whonix-Host Calamares Installer - Partitions Module.png|Whonix-Host Calamares Installer - Partitions Module|500px]]
+[[File:Whonix-Host Calamares Installer - Partitions Module.png|Whonix-Host Calamares Installer - Partitions Module|500px|alt=Calamares partitions page with Erase disk selected, Encrypt system checked and a disk usage bar]]
 
 '''Figure:''' ''Whonix-Host Calamares Installer - Summary Module''
 
-[[File:Whonix-Host Calamares Installer - Summary Module.png|Whonix-Host Calamares Installer - Summary Module|500px]]
+[[File:Whonix-Host Calamares Installer - Summary Module.png|Whonix-Host Calamares Installer - Summary Module|500px|alt=Calamares summary page listing the planned partitions on /dev/vda: LUKS partitions, ext4 system and boot loader]]
 
 '''Figure:''' ''Whonix-Host Calamares Installer - Installation in Progress''
 
-[[File:Whonix-Host Calamares Installer - Installation in Progress.png|Whonix-Host Calamares Installer - Installation in Progress|500px]]
+[[File:Whonix-Host Calamares Installer - Installation in Progress.png|Whonix-Host Calamares Installer - Installation in Progress|500px|alt=Calamares installer progress page at 46 percent, installing filesystems]]
 
 '''Figure:''' ''Whonix-Host Calamares Installer - Installation Complete''
 
-[[File:Whonix-Host Calamares Installer - Installation Complete.png|Whonix-Host Calamares Installer - Installation Complete|500px]]
+[[File:Whonix-Host Calamares Installer - Installation Complete.png|Whonix-Host Calamares Installer - Installation Complete|500px|alt=Calamares installer All done page with a Restart now checkbox and a Done button]]
 
 '''Figure:''' ''Whonix-Host Installed - GRUB bootloader''
 
-[[File:Whonix-Host Installed - GRUB booatloader.png|Whonix-Host Installed - GRUB bootloader|500px]]
+[[File:Whonix-Host Installed - GRUB booatloader.png|Whonix-Host Installed - GRUB bootloader|500px|alt=GNU GRUB menu with entries Whonix GNU/Linux, Advanced options and a LIVE mode USER entry]]
 
 = Comparison of different Whonix-Host Boot Modes =
 

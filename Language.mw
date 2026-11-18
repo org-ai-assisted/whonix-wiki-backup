@@ -6,7 +6,7 @@ Change the System or Tor Browser Language
 |description=How to change the User Interface Language for your Operating System and Tor Browser.
 |image=Language.png
 }}
-[[File:Language.png|thumb]]
+[[File:Language.png|thumb|alt=Word cloud of greetings in many languages, such as Hello, Bonjour, Ciao and Hola]]
 {{intro|
 How to change the User Interface Language for your Operating System and Tor Browser.
 }}
@@ -61,7 +61,7 @@ A window will prompt for the preferred locale(s) to be made available. Select th
 This is required for the changes to take effect.
 
 '''Figure:''' ''Japanese Locale in {{project_name_short}}''
-[[File:Whonix-terminal-japanese.png]]
+[[File:Whonix-terminal-japanese.png|alt=Terminal with its Actions menu open, showing Japanese menu labels and keyboard shortcuts]]
 }}
 
 == Fonts ==
@@ -90,7 +90,7 @@ fonts-noto-cjk
 
 '''Figure:''' ''Japanese Font Installation in {{project_name_short}}''
 
-[[File:Anonwhonixjapanesefont.png]]
+[[File:Anonwhonixjapanesefont.png|alt=Kicksecure terminal installing packages with Japanese-language output and correctly rendered Japanese fonts]]
 
 == Input Method ==
 
@@ -170,7 +170,7 @@ Input method configuration is now complete.
 
 '''Figure:''' ''Japanese Input in {{project_name_short}}''
 
-[[File:Whonix-japanese-input-featherpad.png]]
+[[File:Whonix-japanese-input-featherpad.png|alt=Whonix desktop with FeatherPad text editor containing Japanese text and an input method candidate popup of hiragana suggestions]]
 }}
 
 = Tor Browser =
@@ -186,11 +186,11 @@ Using <u>one</u> of the methods below is sufficient to change the language in [[
 
 '''Figure:''' ''Tor Browser Language Selection''
 
-[[File:Torbrowserlanguageselection.png]]
+[[File:Torbrowserlanguageselection.png|alt=Firefox Language Settings dialog listing English (United States) with Move Up, Move Down, Remove, Add, Cancel and OK buttons]]
 
 '''Figure:''' ''Japanese Tor Browser in {{project_name_short}}''
 
-[[File:Japanesetorbrowser.png]]
+[[File:Japanesetorbrowser.png|alt=Tor Browser settings page displayed in Japanese, with the language set to Japanese (ja)]]
 
 <!-- arraybolt3: This method is broken as of 2025-12-19 on Whonix-Workstation 18. The steps can be completed but the browser starts in English at the end.
 == Config File Method ==

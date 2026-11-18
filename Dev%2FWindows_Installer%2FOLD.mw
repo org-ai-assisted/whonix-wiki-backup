@@ -6,7 +6,7 @@ OLD {{project_name_short}} Windows Installer
 |description=The {{project_name_long}}-Windows-Installer for Windows is a simple and fast way to set-up {{project_name_long}} on a system running Microsoft Windows. Screenshots. Rationale. Build documentation. Source code. whonix-installer.exe
 |image=Whonix_installer_wizard.png
 }}
-[[File:Whonix_installer_wizard.png|thumb]]
+[[File:Whonix_installer_wizard.png|thumb|alt=Windows setup wizard Ready to Install page for Whonix 15.0.0.3.3 with the Install button highlighted]]
 {{intro|
 The {{project_name_short}} Windows Installer for Windows is a simple and fast way to set-up {{project_name_short}} on a system running Microsoft Windows. Screenshots. Rationale. Build documentation. Source code. whonix-installer.exe
 }}
@@ -26,23 +26,23 @@ The {{project_name_short}} Windows Installer was developed with a focus on provi
 = Screenshots =
 '''Figure:''' ''Run {{project_name_short}} Installer''
 
-[[File:Install_Whonix.gif]]
+[[File:Install_Whonix.gif|alt=File explorer folder Donate_to_Whonix containing the whonix-installer file]]
 
 '''Figure:''' ''Install Whonix''
 
-[[File:Whonix_installer_wizard.png]]
+[[File:Whonix_installer_wizard.png|alt=Windows setup wizard Ready to Install page for Whonix 15.0.0.3.3 with the Install button highlighted]]
 
 '''Figure:''' ''License Agreement''
 
-[[File:Whonix_windows_installer_license_agreement.png]]
+[[File:Whonix_windows_installer_license_agreement.png|alt=Windows setup wizard License Agreement page, with I accept the agreement selected and Next highlighted]]
 
 '''Figure:''' ''Extracting Files''
 
-[[File:Installing_whonix.png]]
+[[File:Installing_whonix.png|alt=Whonix 15.0.0.3.3 Windows setup wizard showing a progress bar while extracting whonix.ova]]
 
 '''Figure:''' ''Complete {{project_name_short}} Installation''
 
-[[File:Whonix_setup_wizard_complete.png]]
+[[File:Whonix_setup_wizard_complete.png|alt=Windows setup wizard Completing the Whonix Setup Wizard page with Run Whonix.exe checked and Finish highlighted]]
 
 = Building from source =
 
@@ -89,14 +89,14 @@ Download the 7-zip compressed archive file and extract it.
 
 <br>
 
-[[File:windows_installer_7zSD-sfx.png]]
+[[File:windows_installer_7zSD-sfx.png|alt=7-Zip 9.20 download table for Windows with the 7z Extra package row highlighted in red]]
 <br>
 
 <code>7za.exe</code>
 Download the <code>.7z</code> compressed archive file under <code>7-Zip 16.04 Extra</code> and extract it.
 
 <br>
-[[File:windows_installer_7za-exe.png]]
+[[File:windows_installer_7za-exe.png|alt=7-Zip 16.04 download table for Windows with the 7z Extra standalone console version row highlighted in red]]
 
 = Forum Discussion =
 https://forums.whonix.org/t/testing-whonix-installer-for-windows/2987/210

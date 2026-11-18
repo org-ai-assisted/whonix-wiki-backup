@@ -11,7 +11,7 @@ What is {{project_name_gateway_long}}?
 * [[Whonix-Workstation|What is {{project_name_workstation_short}}?]]
 * [[Comparison of Whonix-Gateway and Whonix-Workstation]]
 </div>
-[[File:Gui-preview.jpg|thumb|Whonix-Gateway LXQt VM running in the [[VirtualBox]] virtualizer (illustrative image)]]
+[[File:Gui-preview.jpg|thumb|Whonix-Gateway LXQt VM running in the [[VirtualBox]] virtualizer (illustrative image)|alt=Oracle VirtualBox window titled Kicksecure-LXQt running, showing a purple-to-blue LXQt desktop with Computer, Trash and user home icons.]]
 {{intro|
 The {{project_name_gateway_short}} is a software component that runs Tor, which moves data across multiple servers called Tor relays to keep users anonymous on the Internet, and it connects any virtual machine properly to the Internet using Tor only, while user applications should be run inside the {{project_name_workstation_short}}.
 }}
@@ -34,13 +34,13 @@ Apart from Tor configuration (for specific use cases only mentioned in the [[Doc
 
 '''Figure:''' ''{{project_name_short}} Operating System Design''
 
-[[File:{{project_name_short}}-concept-detailed.jpg|500px|border]]
+[[File:{{project_name_short}}-concept-detailed.jpg|500px|border|alt=Detailed diagram of the Whonix architecture]]
 
 {{project_name_short}} is based on the security-focused Linux distribution [https://www.kicksecure.com/ Kicksecure]. To learn more about {{project_name_short}}, see [[About|Overview]] and [[Features]].
 
 '''Figure:''' ''{{project_name_gateway_short}} LXQt VM running in the virtualizer VirtualBox (real screenshot)''
 
-[[File:Whonix-Gateway-LXQt.png|{{project_name_gateway_short}} LXQt VM running in the virtualizer VirtualBox (real screenshot)]]
+[[File:Whonix-Gateway-LXQt.png|{{project_name_gateway_short}} LXQt VM running in the virtualizer VirtualBox (real screenshot)|alt=VirtualBox window of Whonix-Gateway-LXQt showing an empty gray desktop with Computer, Trash and user icons]]
 
 = See Also =
 <div style="column-count:2;-moz-column-count:2;-webkit-column-count:2">

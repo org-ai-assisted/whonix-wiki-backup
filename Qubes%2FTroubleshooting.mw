@@ -7,7 +7,7 @@
 |image=Torconnectivitytroubleshoot.png
 }}
 {{qubes_troubleshooting_mininav}}
-[[File:Torconnectivitytroubleshoot.png|thumb]]
+[[File:Torconnectivitytroubleshoot.png|thumb|alt=]]
 {{intro|
 Troubleshooting Tor, Network and sdwdate Issues with {{project_name_short}}
 }}

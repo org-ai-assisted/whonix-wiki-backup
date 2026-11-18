@@ -62,31 +62,31 @@ Double "click" <code>{{project_name_short}}-LXQt-{{VersionNew}}.exe</code>
 
 '''Figure:''' ''{{project_name_short}} Windows Installer''
 
-[[File:{{project_name_short}}_windows_installer.png]]
+[[File:{{project_name_short}}_windows_installer.png|alt=Whonix Windows installer wizard]]
 
 {{IconSet|h2|2}} '''Start Installation'''
 
 '''Figure:''' ''Install {{project_name_short}}''
 
-[[File:{{project_name_short}}_installer_wizard.png]]
+[[File:{{project_name_short}}_installer_wizard.png|alt=Whonix Windows installer wizard]]
 
 {{IconSet|h2|3}} '''Accept License Agreement'''
 
 '''Figure:''' ''License agreement''
 
-[[File:{{project_name_short}}_windows_installer_license_agreement.png]]
+[[File:{{project_name_short}}_windows_installer_license_agreement.png|alt=Whonix Windows installer, license agreement step]]
 
 {{IconSet|h2|4}} '''Wait for File Extraction'''
 
 '''Figure:''' ''Extracting files''
 
-[[File:Installing_whonix.png]]
+[[File:Installing_whonix.png|alt=Whonix 15.0.0.3.3 Windows setup wizard showing a progress bar while extracting whonix.ova]]
 
 {{IconSet|h2|5}} '''Finalized Installation'''
 
 '''Figure:''' ''{{project_name_short}} installation complete''
 
-[[File:{{project_name_short}}_setup_wizard_complete.png]]
+[[File:{{project_name_short}}_setup_wizard_complete.png|alt=Whonix setup wizard, completion step]]
 
 {{IconSet|h2|6}} '''Done.'''
 
@@ -104,11 +104,11 @@ Double "click" <code>{{project_name_short}}-LXQt-{{VersionNew}}.exe</code>
 
 '''Figure:''' ''{{project_name_short}} desktop starter''
 
-[[File:{{project_name_short}}_desktop_starter.png]]
+[[File:{{project_name_short}}_desktop_starter.png|alt=]]
 
 '''Figure:''' ''{{project_name_short}} Windows Starter''
 
-[[File:{{project_name_short}}_User_Interface_start.png]]
+[[File:{{project_name_short}}_User_Interface_start.png|alt=Whonix user interface, start action]]
 
 This will start both {{VMs}}, [[Whonix-Gateway]] and [[Whonix-Workstation]].
 
@@ -126,7 +126,7 @@ Optional: Advanced Start.
 
 '''Figure:''' ''Start {{project_name_short}} VM''
 
-[[File:Virtualbox_user_interface.png]]
+[[File:Virtualbox_user_interface.png|alt=VirtualBox Manager listing powered-off Whonix-Gateway-XFCE and Whonix-Workstation-XFCE, with the Start button outlined in red.]]
 
 {{IconSet|h2|3}} '''DONE.'''
 </div>
@@ -141,7 +141,7 @@ Shutdown {{project_name_short}}.
 
 '''Figure:''' ''Stop {{project_name_short}} using {{project_name_short}} Windows Starter''
 
-[[File:{{project_name_short}}_User_Interface_stop.png]]
+[[File:{{project_name_short}}_User_Interface_stop.png|alt=Whonix user interface, stop action]]
 </div>
 </div>
 }}
@@ -234,7 +234,7 @@ Whonix-LXQt.exe --debug
 
 '''Figure:''' ''Whonix Windows Installer in Debug Mode''
 
-[[File:Bildschirmfoto vom 2024-10-13 17-42-16.png|startup in debug mode]]
+[[File:Bildschirmfoto vom 2024-10-13 17-42-16.png|startup in debug mode|alt=Windows command prompt launching the Whonix installer with --debug, next to the Whonix Installer DEBUG MODE license agreement page.]]
 
 {{Footer}}
 [[Category:Documentation]]

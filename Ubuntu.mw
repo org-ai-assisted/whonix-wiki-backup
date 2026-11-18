@@ -6,9 +6,9 @@ title={{project_name_long}} for Ubuntu
 |description={{project_name_short}} for Ubuntu
 |image=Logo-ubuntusvg.png
 }}
-[[File:Logo-ubuntusvg.png|thumb|50px|Ubuntu logo|link=VirtualBox]]
+[[File:Logo-ubuntusvg.png|thumb|50px|Ubuntu logo|link=VirtualBox|alt=]]
 {{intro|
-{{project_name_short}} [[File:{{project_name_short}}_old_logo.png|25px]] for '''Ubuntu''' [[File:Logo-ubuntusvg.png|25px]] inside VirtualBox [[File:Virtualbox_logo.png|25px]].
+{{project_name_short}} [[File:{{project_name_short}}_old_logo.png|25px|alt=]] for '''Ubuntu''' [[File:Logo-ubuntusvg.png|25px|alt=]] inside VirtualBox [[File:Virtualbox_logo.png|25px|alt=]].
 }}
 
 <u>'''Go to [[VirtualBox]].'''</u>

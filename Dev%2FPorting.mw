@@ -23,21 +23,21 @@ Architecture specific packages in {{project_name_short}}. "Special packages". So
 
 = Incomplete Ports of {{project_name_short}} =
 == Raspberry Pi - RPi ==
-[[File:raspberry-pi-logo.svg|thumb|50px]]
+[[File:raspberry-pi-logo.svg|thumb|50px|alt=]]
 * [https://forums.whonix.org/t/whonix-for-arm64-raspberry-pi-rpi-duplicate-forum-topic/1788 Whonix for <code>arm64</code> / Raspberry Pi ( RPi )] ([[Dev/Build_Documentation/Physical_Isolation#Raspberry Pi|wiki]]) ([[unsupported]]) See also [[Raspberry_Pi|Raspberry Pi (RPi)]].
 
 == Apple Silicon ==
-[[File:Apple-mx-logo.jpg|thumb|50px]]
+[[File:Apple-mx-logo.jpg|thumb|50px|alt=]]
 * Whonix on <code>Mac</code> <code>M1</code> (<code>ARM</code>) based: [[MacOS#M1|project status]] / [https://forums.whonix.org/t/whonix-on-mac-m1-arm/11310 forum discussion]
 
 = Existing Ports of {{kicksecure}} =
 == ppc64el ==
-[[File:Ppc64-logo.svg|thumb|50px]]
+[[File:Ppc64-logo.svg|thumb|50px|alt=]]
 
 * <code>ppc64el</code> {{kicksecure}} functional, created using distro-morphing on a test server for {{project_name_short}} developer Patrick. See also [[PPC64|PPC64]].
 
 == ARM64 ==
-[[File:Arm64-logo.svg|thumb|50px]]
+[[File:Arm64-logo.svg|thumb|50px|alt=]]
 
 * Distro-morphing should generate viable images for KVM on <code>arm64</code>. See also [[ARM64|ARM64]].
 

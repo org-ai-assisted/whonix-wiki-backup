@@ -41,7 +41,7 @@ Use either option A) <u>or</u> B) <u>or</u> C).
 
 When trying to run the installer on Windows, the User Access Control dialog will show the publisher. (If you have disabled User Access Control use a different method).
 
-[[File:gpg4win-UAC-window.png|400px]]
+[[File:gpg4win-UAC-window.png|400px|alt=Windows User Account Control prompt asking whether to allow the Gpg4win app, verified publisher g10 Code GmbH, with Yes and No buttons]]
 
 '''B)''' <u>Using SignTool to verify Gpg4win</u>:
 
@@ -90,7 +90,7 @@ curl --tlsv1.3 --proto =https --max-time 180 --output derivative.asc {{project_c
 
 Store the key in <code>\Downloads\</code> folder as <code>derivative.asc</code>
 
-[[File:gpg-windows-import-keys.jpg]]
+[[File:gpg-windows-import-keys.jpg|alt=Windows PowerShell running gpg to show and import the derivative.asc signing key of Patrick Schleizer; one key imported, no ultimately trusted keys found]]
 
 '''2.''' Open Windows Powershell then Change to the <code>\Downloads\</code> directory.
 
@@ -213,7 +213,7 @@ gpg --verify-options show-notations --verify Whonix-LXQt-*.ova.asc Whonix-LXQt-*
 
 If the Virtual Machine image is correct the output will tell you that the signature is good.
 
-[[File:verify-whonix-windows-images.jpg]]
+[[File:verify-whonix-windows-images.jpg|alt=Windows PowerShell running gpg --verify on Whonix image files; output shows a good signature from Patrick Schleizer with an untrusted-key warning and fingerprints.]]
 
 {{GnuPG-Success}}
 
@@ -243,7 +243,7 @@ To help users confirm that the file name has not been tampered with, beginning w
 
 '''Figure:''' ''Root Certificate Error''
 
-[[File:signtool_error_root_certificate_not_trusted.png]]
+[[File:signtool_error_root_certificate_not_trusted.png|alt=Signtool error: a certificate chain processed but terminated in a root certificate not trusted by the trust provider]]
 
 This error message occurs if the <code>/pa</code> switch is not used with SignTool. This is because the default SignTool verify <code>some_file.exe</code> command uses the Windows Driver Verification Policy. <ref> See stackoverflow for further information: [https://stackoverflow.com/questions/11230091/whys-my-root-certificate-not-trusted Why's My Root Certificate Not Trusted?]</ref> In order for the file to verify properly the <code>/pa</code> switch must be used so SignTool uses the Default Authentication Verification Policy.
 

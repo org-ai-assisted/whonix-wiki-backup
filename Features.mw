@@ -9,7 +9,7 @@ Features, Advantages, Use Cases - {{project_name_long}}
 {{project_name_short}} Feature List. {{project_name_short}} has a lot of features and advantages. This page gives an overview.
 }}
 = {{project_name_short}} Features =
-[[File:Whonix-logo-rectangle.png|thumb|100px|[[Dev/Logo|{{project_name_short}} rectangular logo]]]]
+[[File:Whonix-logo-rectangle.png|thumb|100px|[[Dev/Logo|{{project_name_short}} rectangular logo]]|alt=]]
 {{project_name_short}} is an operating system focused on [https://www.whonix.org/#security anonymity and security]. It hides the user's IP address / location and uses the [[Why_does_Whonix_use_Tor|Tor network]] to anonymize data traffic. This means the contacted server, network eavesdroppers and operators of the Tor network cannot easily determine which sites are visited or the user's physical location. <ref>
 Without advanced, end-to-end, netflow correlation attacks which rely on statistical analysis of data volume and timing.
 </ref>
@@ -78,7 +78,7 @@ Detailed [[Documentation|documentation]] has been produced by developers and the
 * [[Stream Isolation]] prevents identity correlation through circuit sharing.
 * [https://gitlab.torproject.org/legacy/trac/-/wikis/doc/TransparentProxy Transparent Proxy].
 * Whitelist Tor traffic with [[Corridor|corridor]].
-* [[File:Kicksecure-icon-logo.png|30px]] [https://www.kicksecure.com/ Kicksecure] Hardened.
+* [[File:Kicksecure-icon-logo.png|30px|alt=]] [https://www.kicksecure.com/ Kicksecure] Hardened.
 * [https://www.whonix.org/#security Numerous security and anonymity features].
 * Strong organisational separation: Even the {{project_name_short}} project does not have access to IP connection logs. See [[Why_does_Whonix_use_Tor#Organisational_Separation|Organisational Separation]].
 * [[Keystroke_and_Mouse_Deanonymization|Keyboard keystrokes and mouse movements, clicks]] can be used to track users. To reduce behavioral tracking, {{project_name_short}} comes with [[Keystroke_and_Mouse_Deanonymization#Defenses|defenses]] by default, including [[Keystroke_and_Mouse_Deanonymization#Mouse_Fingerprinting|mouse movement anonymization]].

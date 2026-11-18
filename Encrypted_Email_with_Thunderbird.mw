@@ -4,7 +4,7 @@ Encrypted Email with Thunderbird
 }} {{#seo:
 |description=Encrypted Anonymous Email with Thunderbird
 |image=Encryptedemail.jpg
-}}[[File:Thunderbird256.png|thumb|128px|Mozilla Thunderbird Icon|link=Encrypted_Email_with_Thunderbird]]
+}}[[File:Thunderbird256.png|thumb|128px|Mozilla Thunderbird Icon|link=Encrypted_Email_with_Thunderbird|alt=]]
 {{intro|
 Encrypted Anonymous Email with Thunderbird
 }}
@@ -167,13 +167,13 @@ At the time of writing, <code>danwin1210.de</code> is one of the few free and re
 
 '''Figure:''' ''Email Registration''
 
-[[File:Thunderbird1.png|600px]]
+[[File:Thunderbird1.png|600px|alt=Email and XMPP provider registration form with username, password fields, privacy policy checkbox, captcha and a highlighted Register button]]
 
 '''2.''' Confirm successful creation of the anonymous account.
 
 '''Figure:''' ''Account Confirmation''
 
-[[File:Thunderbird2.png|600px]]
+[[File:Thunderbird2.png|600px|alt=Mail provider page "E-Mail and XMPP - Register" showing the message "Successfully created new mailbox!"]]
 
 '''3.''' Close Tor Browser
 
@@ -190,7 +190,7 @@ Since the email account is created, Tor Browser can be closed.
 
 '''Figure:''' ''Thunderbird Email Client ({{non_q_project_name_short}})''
 
-[[File:Tempestupdate5.png]]
+[[File:Tempestupdate5.png|alt=Desktop application menu with Thunderbird highlighted among KeePassXC, Web Browser, Terminal Emulator, CoyIM, HexChat and File Manager]]
 
 '''2.''' Set up the Email Account.
 
@@ -209,7 +209,7 @@ The first window that will appear upon running Thunderbird for the first time wi
 
 '''Figure:''' ''Email Account Set Up''
 
-[[File:Thunderbird3.png|600px]]
+[[File:Thunderbird3.png|600px|alt=Thunderbird Set Up Your Existing Email Address form with name, onion email address and password filled in and Configure manually highlighted]]
 
 '''3.''' Configure Email Incoming (POP3) and Outgoing (SMTP) Connection.
 
@@ -227,13 +227,13 @@ You need to configure Thunderbird to connect to the hidden server (onion service
 
 '''Figure:''' ''Thunderbird Server Configuration''
 
-[[File:Thunderbird4.png|600px]]
+[[File:Thunderbird4.png|600px|alt=Thunderbird manual account configuration: POP3 incoming on port 995 and outgoing on port 465 with SSL/TLS, Done button highlighted]]
 
 * Press on "Confirm Security Exception" its safe to confirm it because this is self-signed certificate
 
 '''Figure:''' ''Confirm Self-Signed TLS/SSL inside Thunderbird''
 
-[[File:Thunderbird5.png|600px]]
+[[File:Thunderbird5.png|600px|alt=Thunderbird security exception dialog for a wrong-site certificate with Confirm Security Exception highlighted]]
 
 Your account is now successfully connected with thunderbird.
 }}
@@ -246,62 +246,62 @@ There are two methods for creating an OpenPGP key pair and revocation certificat
 
 * After successfully linked your account with thunderbird click on "End-to-end encryption".
 
-[[File:Thunderbird6.png|600px]]
+[[File:Thunderbird6.png|600px|alt=Thunderbird "Account successfully created" page with the End-to-end encryption link highlighted]]
 
 * If you missed that, you can press on your email then "End-to-end encryption" option will show up.
 
-[[File:Thunderbird6-1.png|600px]]
+[[File:Thunderbird6-1.png|600px|alt=Thunderbird home page with the onion account selected and the End-to-end Encryption link highlighted]]
 
 * Press on "Add Key..." Option.
 
-[[File:Thunderbird7.png|600px]]
+[[File:Thunderbird7.png|600px|alt=End-To-End Encryption settings stating no personal OpenPGP key exists, with the Add Key button highlighted]]
 
 * Since we are creating new fresh keys, choose "Create a new OpenPGP Key" then press "Continue".
 
-[[File:Thunderbird8.png|600px]]
+[[File:Thunderbird8.png|600px|alt=Add OpenPGP key dialog with Create a new OpenPGP Key selected and Continue highlighted]]
 
 * For better usability we gonna choose "Key does not expire" option, though you can later change that to whatever suits you.
 * We are going to choose the most common key type and size options which are RSA with 4096 (Other option provided by thunderbird is ECC).
 
-[[File:Thunderbird9.png|600px]]
+[[File:Thunderbird9.png|600px|alt=Generate OpenPGP Key dialog with key does not expire, RSA type, 4096 size chosen and Generate key highlighted]]
 
 * Make sure to read the info message then press on "Confirm".
 
-[[File:Thunderbird10.png|500px]]
+[[File:Thunderbird10.png|500px|alt=Thunderbird dialog warning that key generation may take several minutes, asking to confirm generating a public and secret key for an onion address, with Cancel and Confirm]]
 
 * After waiting for short time your keys are now successfully created for your account.
 
-[[File:Thunderbird11.png|600px]]
+[[File:Thunderbird11.png|600px|alt=Thunderbird End-To-End Encryption settings showing a green message that the OpenPGP key was created successfully and the new key selected]]
 
 * Scroll down in the same page then choose "Enable encryption for new messages" (This will require to have recipient OpenPGP key otherwise messages wont be encrypted).
 * "Sign unencrypted messages" and "Attach my public key when adding an OpenPGP digital signature" are for better authenticity and usability but they are left to the user to decide.
 * Make sure these options are ticked "Encrypt the subject of OpenPGP messages" and "Store draft messages in encrypted format"
 
-[[File:Thunderbird12.png|600px]]
+[[File:Thunderbird12.png|600px|alt=Thunderbird End-To-End Encryption settings with Enable encryption for new messages, Sign unencrypted messages and Attach my public key options highlighted]]
 
 == Export and Store your Keys ==
 {{Box|text=
 '''1.''' Go to "End-to-end encryption".
 
-[[File:Thunderbird6-1.png|500px]]
+[[File:Thunderbird6-1.png|500px|alt=Thunderbird home page with the onion account selected and the End-to-end Encryption link highlighted]]
 
 '''2.''' Then press on "OpenPGP Key Manager".
 
-[[File:Thunderbird13.png|600px]]
+[[File:Thunderbird13.png|600px|alt=Thunderbird End-To-End Encryption page for the account with the OpenPGP Key Manager button highlighted by an arrow]]
 
 '''3.''' Then press on your email (highlight it) if there is more than one email then "File".
 
-[[File:Thunderbird14.png|600px]]
+[[File:Thunderbird14.png|600px|alt=OpenPGP Key Manager window listing one key, with the File menu highlighted]]
 
 '''4.''' Then Export your Public and Secret Keys for backup as your public key used by the recipients to encrypt messages and secret key used for decrypting messages (Make sure to save them in a secure place, otherwise anybody can decrypt and read your encrypted emails if your secret key lost).
 
-[[File:Thunderbird15.png|600px]]
+[[File:Thunderbird15.png|600px|alt=OpenPGP Key Manager File menu open with Export Public Key(s) To File and Backup Secret Key(s) To File highlighted]]
 
 '''5.'''  At the moment thunderbird doesn't give UI way to export your revoke key <ref>https://bugzilla.mozilla.org/show_bug.cgi?id=1657901</ref> <ref>https://bugzilla.mozilla.org/show_bug.cgi?id=1722825</ref>, But you can revoke your key from "OpenPGP Key Manager" (Read the warning message, don't proceed unless you really want to get rid/change of your current key).
 
-[[File:Thunderbird16.png|600px]]
+[[File:Thunderbird16.png|600px|alt=OpenPGP Key Manager context menu on a key with Revoke Key selected, alongside Export Keys, Send Public Key by Email, Delete and Key Properties]]
 
-[[File:Thunderbird17.png|600px]]
+[[File:Thunderbird17.png|600px|alt=Thunderbird confirmation dialog about to revoke an OpenPGP key, warning that it cannot be used to sign afterwards, with Cancel and Revoke Key buttons]]
 
 }}
 
@@ -322,7 +322,7 @@ As encryption tool you can use [https://packages.debian.org/stable/zulucrypt-gui
 
 '''1.''' Go to your "Account Settings"
 
-[[File:Thunderbird18.png|600px]]
+[[File:Thunderbird18.png|600px|alt=Thunderbird home page with the onion mail account selected in the folder pane and the Account Settings button highlighted]]
 
 '''2.''' Click on "Copies & Folders" in the left column. Each option to change is highlighted in red in the figure below:
 
@@ -334,9 +334,9 @@ As encryption tool you can use [https://packages.debian.org/stable/zulucrypt-gui
 
 '''Figure:''' ''Folder Configuration''
 
-[[File:Thunderbird19.png|600px]]
+[[File:Thunderbird19.png|600px|alt=Account Settings, Copies and Folders: Sent and Archives folders set to Local Folders instead of the mail server]]
 
-[[File:Thunderbird20.png|600px]]
+[[File:Thunderbird20.png|600px|alt=Copies and Folders settings with Archives, Drafts and Templates set to Local Folders and the save confirmation dialog option checked]]
 
 '''3.''' ('''Optional''') Empty Thunderbird trash on exit.
 
@@ -344,7 +344,7 @@ Click on "Local Folders" in the left column. Then, check the box next to "Empty 
 
 '''Figure:''' ''Empty Local Folders''
 
-[[File:Thunderbird21.png|600px]]
+[[File:Thunderbird21.png|600px|alt=Local Folders account settings with the Empty Trash on Exit option checked]]
 
 }}
 
@@ -358,7 +358,7 @@ Click on "Local Folders" in the left column. Then, check the box next to "Empty 
 
 '''Figure:''' ''Thunderbird Menu Bar''
 
-[[File:Thunderbird22.png|600px]]
+[[File:Thunderbird22.png|600px|alt=Thunderbird toolbar menu with the Menu Bar checkbox, currently unchecked, highlighted]]
 
 '''2.''' Access Thunderbird Settings.
 
@@ -367,7 +367,7 @@ Click on "Local Folders" in the left column. Then, check the box next to "Empty 
 
 '''Figure:''' ''Thunderbird Preferences''
 
-[[File:Thunderbird23.png|600px]]
+[[File:Thunderbird23.png|600px|alt=Thunderbird Edit menu open with the Settings entry highlighted, and the settings gear icon at the bottom left]]
 
 '''3.''' Disable the return receipt function.
 
@@ -376,9 +376,9 @@ Click on "Local Folders" in the left column. Then, check the box next to "Empty 
 
 '''Figure:''' ''Disable Return Receipts''
 
-[[File:Thunderbird24.png|600px]]
+[[File:Thunderbird24.png|600px|alt=Thunderbird Preferences, General, Reading and Display section with the Return Receipts button highlighted]]
 
-[[File:Thunderbird25.png|600px]]
+[[File:Thunderbird25.png|600px|alt=Return Receipts dialog with Never send a return receipt selected and OK highlighted]]
 
 '''4.''' (Optional) Receive confirmation mail when message sent to the recipient
 
@@ -387,11 +387,11 @@ Click on "Local Folders" in the left column. Then, check the box next to "Empty 
 * Double click on it to turn it from <code>false</code> to <code>true</code>
 * You will receive "Successful Mail Delivery Report" after sending successful message.
 
-[[File:Thunderbirddsn.png|600px]]
+[[File:Thunderbirddsn.png|600px|alt=Thunderbird Preferences, General page with the Config Editor button highlighted at the bottom]]
 
-[[File:Thunderbirddsn2.png|600px]]
+[[File:Thunderbirddsn2.png|600px|alt=Config Editor search for mail.dsn.always_request_on showing the value true]]
 
-[[File:Thunderbirddsn3.png|600px]]
+[[File:Thunderbirddsn3.png|600px|alt=Inbox entry with subject Successful Mail Delivery Report from Mail Delivery System]]
 
 '''5.''' Send and receive plain text messages.
 
@@ -401,9 +401,9 @@ Click on "Local Folders" in the left column. Then, check the box next to "Empty 
 
 '''Figure:''' ''Plain Text Messages''
 
-[[File:Thunderbird25-1.png|600px]]
+[[File:Thunderbird25-1.png|600px|alt=Thunderbird Composition settings with the Sending Format option Only Plain Text selected]]
 
-[[File:Thunderbird25-2.png|600px]]
+[[File:Thunderbird25-2.png|600px|alt=Thunderbird View menu, Message Body As submenu with Plain Text checked]]
 
 '''6.''' Disable website history and Sites cookies.
 
@@ -411,7 +411,7 @@ Click on "Local Folders" in the left column. Then, check the box next to "Empty 
 
 '''Figure:''' ''Modify Privacy Settings''
 
-[[File:Thunderbird26.png|600px]]
+[[File:Thunderbird26.png|600px|alt=Privacy and Security preferences with remote content, remembering visited sites and accepting cookies all unchecked]]
 }}
 
 == Import Public Keys (From File) ==
@@ -431,31 +431,31 @@ Import GPG public key of an intended email recipient keys into Thunderbird:
 
 * Go to "End-to-end encryption"
 
-[[File:Thunderbird6-1.png|600px]]
+[[File:Thunderbird6-1.png|600px|alt=Thunderbird home page with the onion account selected and the End-to-end Encryption link highlighted]]
 
 * Then press on "OpenPGP Key Manager"
 
-[[File:Thunderbird13.png|600px]]
+[[File:Thunderbird13.png|600px|alt=Thunderbird End-To-End Encryption page for the account with the OpenPGP Key Manager button highlighted by an arrow]]
 
 * Go to "File" then choose "Import Public Key(s) From File"
 
-[[File:Thunderbird27.png|600px]]
+[[File:Thunderbird27.png|600px|alt=OpenPGP Key Manager File menu with Import Public Key(s) From File highlighted]]
 
 * Go to the path that where the public key is located and double-click it
 
-[[File:Thunderbird28.png|600px]]
+[[File:Thunderbird28.png|600px|alt=File chooser showing a single public key file ending in public.asc selected for import]]
 
 * It will show you key fingerprint, if you can verify/sure that the person with this fingerprint match what you have added then press on "Accepted (unverified)" otherwise use the default "Not Accepted (Undecided)"
 
-[[File:Thunderbird29.png|600px]]
+[[File:Thunderbird29.png|600px|alt=Dialog "Import the following keys?" with Not accepted (undecided) selected and OK button]]
 
 * Key is now imported successfully, if you want to change the acceptance level press on "View Details and and manage key acceptance"
 
-[[File:Thunderbird30.png|600px]]
+[[File:Thunderbird30.png|600px|alt=Small key details box showing a 4096-bit key with its fingerprint and a link to manage key acceptance]]
 
 * See which option do you prefer to choose for the added keys
 
-[[File:Thunderbird30-1.png|600px]]
+[[File:Thunderbird30-1.png|600px|alt=Key properties dialog with the option "Yes, but I have not verified that it is the correct key" selected]]
 }}
 
 = Compose and Send Encrypted Email =
@@ -465,7 +465,7 @@ Import GPG public key of an intended email recipient keys into Thunderbird:
 
 * Press on "Write"
 
-[[File:Thunderbird31-1.png|600px]]
+[[File:Thunderbird31-1.png|600px|alt=Thunderbird inbox with the Write button highlighted and the tooltip Create a new message]]
 
 {{mbox
 | type    = notice
@@ -482,9 +482,9 @@ Import GPG public key of an intended email recipient keys into Thunderbird:
 ** Tick "My OpenPGP Public Key" from "Attachment".
 * When the message is ready, click the "Send" button (preferable to just send small message without details for testing purposes as a beginner).
 
-[[File:Thunderbird31.png|600px]]
+[[File:Thunderbird31.png|600px|alt=Compose window OpenPGP menu with Encrypt, Encrypt Subject and Digitally Sign checked, and the Encrypt button highlighted]]
 
-[[File:Thunderbird31-2.png|600px]]
+[[File:Thunderbird31-2.png|600px|alt=Thunderbird compose window with the Attach menu open and My OpenPGP Public Key checked]]
 
 '''3.''' How the message will look like on recipient side.
 
@@ -492,18 +492,18 @@ Import GPG public key of an intended email recipient keys into Thunderbird:
 * OpenPGP with green tick and padlock mean the message encrypted.
 * @danwin1210.de mean the message sent over clearnet.
 
-[[File:Thunderbird32-1.png|600px]]
+[[File:Thunderbird32-1.png|600px|alt=Thunderbird with Get Messages button and Inbox of the onion account highlighted]]
 
-[[File:Thunderbird32.png|600px]]
+[[File:Thunderbird32.png|600px|alt=Received message Test123 showing an OpenPGP indicator and an attached OpenPGP public key file]]
 
 '''4.''' Recipient importing key attached by email.
 
 * Right-Click on the attachment then choose "Import OpenPGP Key"
 * Then check steps explained in [[Encrypted_Email_with_Thunderbird#Import_Public_Keys_(From_File)|Import Public Keys]].
 
-[[File:Thunderbird33.png|600px]]
+[[File:Thunderbird33.png|600px|alt=Message attachment context menu with Import OpenPGP Key highlighted]]
 
-[[File:Thunderbird34.png|600px]]
+[[File:Thunderbird34.png|600px|alt=Dialog "Import the following keys?" listing the onion address key with Not accepted (undecided) selected]]
 
 }}
 

@@ -6,13 +6,13 @@ title=Bitcoin How-to: Use ElectrumX Personal Server in {{project_name_long}}
 |description=Higher Security and Privacy through using a Self-Hosted, Fully Validating Bitcoin Node (ElectrumX + Bitcoin Core)
 |image=Electrumx123123.jpg
 }}
-[[File:Electrumx123123.jpg|thumb]]
+[[File:Electrumx123123.jpg|thumb|alt=]]
 {{intro|
 Higher Security and Privacy through using a Self-Hosted, Fully Validating Bitcoin Node (ElectrumX + Bitcoin Core)
 }}
-[[File:Electrum-appimage.png|thumb|Electrum Logo]]
-[[File:BC Logo .png|thumb|Bitcoin Logo|128px]]
-[[File:Bitcoin-core.png|thumb|Bitcoin Core Logo]]
+[[File:Electrum-appimage.png|thumb|Electrum Logo|alt=]]
+[[File:BC Logo .png|thumb|Bitcoin Logo|128px|alt=]]
+[[File:Bitcoin-core.png|thumb|Bitcoin Core Logo|alt=]]
 
 = Introduction =
 Using electrum with its default, public servers (which are hosted by third parties) has various security and privacy disadvantages mentioned in [[electrum]] chapter [[Electrum#Warnings|warnings]]. These issues can be resolved by using one's own, self-hosted, local electrum server. ElectrumX is an electrum server, which is documented on this wiki page. Under the assumption of a non-compromised system, the advantages include:

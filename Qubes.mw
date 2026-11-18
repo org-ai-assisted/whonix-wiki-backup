@@ -6,8 +6,8 @@
 }}
 {{qubes_mininav}}
 {{ThumbGallery|
-[[File:Qubes-logo-icon.png|Qubes Logo|150px|thumb]]
-[[File:{{project_name_short}}-logo-standard.svg|Whonix Logo|122px|thumb]]
+[[File:Qubes-logo-icon.png|Qubes Logo|150px|thumb|alt=]]
+[[File:{{project_name_short}}-logo-standard.svg|Whonix Logo|122px|thumb|alt=]]
 }}
 {{intro
 |thumb=Qubes-logo-icon.png
@@ -33,7 +33,7 @@ For a more in-depth consideration of {{q_project_name_short}} advantages, see: [
 
 '''Figure:''' ''Qubes OS Design'' <ref>https://www.qubes-os.org/intro/</ref>
 
-[[File:Qubesosoverviewv2.png|border]]
+[[File:Qubesosoverviewv2.png|border|alt=Qubes OS architecture diagram: Xen, AdminVM, GuiVM, TemplateVMs, AppVMs, and sys-usb, sys-net, sys-firewall and sys-whonix VMs with trust levels]]
 
 = Guides =
 == Common Tasks ==
