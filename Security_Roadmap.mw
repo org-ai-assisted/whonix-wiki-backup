@@ -15,11 +15,7 @@ Future {{project_name_short}} Security Enhancements
 {{mbox
 | type    = notice
 | image   = [[File:Ambox_notice.png|40px|alt=Info]]
-| text    = <u>'''See {{ExtLink
-|text=Upcoming Security Enhancements on the {{project_name_short}} Homepage
-|https://www.{{project_clearnet}}/#upcoming
-|http://www.{{project_onion}}/#upcoming
-}}.'''</u>
+| text    = <u>'''See [[Homepage#upcoming|Upcoming Security Enhancements on the {{project_name_short}} Homepage]].'''</u>
 }}
 
 {{stub}}
