@@ -236,7 +236,7 @@ This is a volunteer position.
 
 === Audit Documentation Changes ===
 
-Keep abreast of our [[Special:RecentChanges|wiki changes]] ([https://www.{{project_clearnet}}/w/index.php?title=Special:RecentChanges&feed=rss rss] [[File:Feed-icon.jpeg|12px|alt={{project_name_short}} wiki recent changes rss|link=https://www.{{project_clearnet}}/w/index.php?title=Special:RecentChanges&feed=rss]]).
+Keep abreast of our [[Special:RecentChanges|wiki changes]] (rss [[File:Feed-icon.jpeg|12px|alt={{project_name_short}} wiki recent changes rss feed|link=/feed.xml]]).
 
 === Audit {{project_name_short}} ===
 Audit {{project_name_short}} security.
