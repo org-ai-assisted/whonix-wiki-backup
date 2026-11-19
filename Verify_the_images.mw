@@ -38,6 +38,7 @@ The [[Dev/Windows Installer|{{project_name_short}} Windows Installer]] is curren
 {{Box|text=
 '''1.''' [[#Download_the_signify_Key|Download the signify Key]] and save it as <code>keyname.pub</code>.
 
+{{Anchor|Download the signify Key}}
 {{signing_key_main_signify}}
 
 '''2.''' Install <code>signify-openbsd</code>.

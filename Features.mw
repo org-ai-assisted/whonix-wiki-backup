@@ -148,6 +148,7 @@ This tunnels chapter and the tunnels subchapters are for advanced users who have
 * Tunnel [[I2P]] through Tor.
 * Tunnel [[ZeroNet]] through Tor.
 
+{{Anchor|Tunnel Support}}
 === General Tunnel Support: TOR, SSH, VPN, Proxy ===
 
 Various tunneling permutations are possible and functional in {{project_name_short}}. Connections can be routed through a VPN, SSH, or proxy before Tor, after Tor, or both.
