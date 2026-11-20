@@ -217,11 +217,11 @@ def}}
 
 456}}
 
-==== Broken ====
+==== Bullet Point Quotations ====
 '''Bullet Point Quotation with 2 Lines, Context and Image Test
 '''
 
-Same as above but below a bullet point. '''NOTE''': This does not work as expected but it is acceptable right now because this is caused by a bug in MediaWiki that has been reported.
+Same as above but below a bullet point. '''NOTE''': This now renders correctly under the static site generator (the former MediaWiki bullet-nesting bug no longer applies).
 
 <pre>
 * bullet point with colon: {{Quotation
@@ -234,14 +234,14 @@ abc
 def}}
 </pre>
 
-'''Bullet Point Multiple Lines Quotation Test''' (currently broken)
+'''Bullet Point Multiple Lines Quotation Test'''
 
 * 1 {{Quotation|quote=
 Same as above but below a list item.
 
 Without an image.
 
-'''NOTE''': This does not work as expected but it is acceptable right now because this is caused by a bug in MediaWiki that has been reported
+'''NOTE''': This now renders correctly under the static site generator (the former MediaWiki bullet-nesting bug no longer applies)
 }}
 
 == CodeSelect ==
@@ -614,16 +614,49 @@ File:Linuxkerneltux.png|thumb|100px|Linux logo
 
 == Github links ==
 
-Plain github.com links are auto-upgraded (owner/repo pill); a labeled external link stays labeled.
+'''1. Basis / Repos / User'''
+# Direct user URL: https://github.com/Kicksecure
+# Direct user URL with trailing slash: https://github.com/Kicksecure/
+# Direct repo URL: https://github.com/Kicksecure/desktop-config-dist
+# Direct repo URL with trailing slash: https://github.com/Kicksecure/desktop-config-dist/
+# Repo URL with anchor: https://github.com/Kicksecure/desktop-config-dist#readme
 
-# https://github.com/Kicksecure/tirdad
-#* Result: repo pill linking to the tirdad repository
-# https://github.com/debian/apt
-#* Result: repo pill linking to debian's apt repository
-# https://github.com/debian/apt/tree/main/test
-#* Result: repo pill plus subpath link
-# [https://github.com/Kicksecure/tirdad Check out our tirdad repo!]
-#* Result: labeled link (no pill)
+'''2. Files / Paths'''
+# Blob file url input: https://github.com/Kicksecure/desktop-config-dist/blob/master/usr/share/desktop-config-dist/kanshi-config-template
+# Blob file url input with trailing slash: https://github.com/Kicksecure/desktop-config-dist/blob/master/usr/share/desktop-config-dist/kanshi-config-template/
+# Raw file url input, expected output like for blob input: https://github.com/Kicksecure/desktop-config-dist/raw/master/usr/share/desktop-config-dist/kanshi-config-template
+# Directory as tree (no raw link): https://github.com/Kicksecure/desktop-config-dist/tree/master/usr/share/desktop-config-dist
+# Tree view (no raw link): https://github.com/Kicksecure/desktop-config-dist/tree/master/usr/share
+
+'''3. Commits'''
+# Commit (short hash): https://github.com/Kicksecure/security-misc/commit/d44d9ca
+# Commit (long hash): https://github.com/Kicksecure/security-misc/commit/d44d9caac299a35d22d2240c2cfd42cefec22850
+# Commit with fragment: https://github.com/Kicksecure/security-misc/commit/d44d9caac299a35d22d2240c2cfd42cefec22850#diff-a54ff182c7e8acf56acfd6e4b9c3ff41e2c41a31c9b211b2deb9df75d9a478f9
+
+'''4. Pull Requests'''
+# Pull request: https://github.com/Kicksecure/security-misc/pull/358
+# Pull request with trailing slash: https://github.com/Kicksecure/security-misc/pull/358/
+# Pull request with comment: https://github.com/Kicksecure/security-misc/pull/358#issuecomment-4232578070
+# Pull request with review https://github.com/Kicksecure/security-misc/pull/358#pullrequestreview-4059903310
+# Pull request with review comment: https://github.com/Kicksecure/security-misc/pull/358#discussion_r3037441710
+
+'''5. Issues'''
+# Issue: https://github.com/Kicksecure/security-misc/issues/354
+# Issue with trailing slash: https://github.com/Kicksecure/security-misc/issues/354/
+# Issue with comment: https://github.com/Kicksecure/security-misc/issues/354#issuecomment-4150943225
+
+'''6. Releases / Tags'''
+# Release tag: https://github.com/Kicksecure/security-misc/releases/tag/52.6-1
+# Complex tag name: https://github.com/Kicksecure/security-misc/releases/tag/52.6-1-not-existent.but_complex
+
+'''7. Edge cases'''
+# Invalid host domain: https://www.kicksecure.com
+# Just word input: this is not a link
+# Missing protocol schema: https://github.com/Kicksecure
+# Just github.com: https://github.com
+# Just github.com with trailing slash: https://github.com/
+# Invalid host (not github.com): https://gitlab.com/Kicksecure/desktop-config-dist
+# Github subdomain (theoretical): https://example.github.com/Kicksecure/repo
 
 == GoogleOff (Template) ==
 
