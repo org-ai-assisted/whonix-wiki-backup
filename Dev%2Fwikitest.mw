@@ -1137,7 +1137,7 @@ All link tabs below (not Title 01 and Title 02) should be actual links for js us
 }}
 {{Tab
 |title= === Link Type 2 ===
-|content=[[Testpage2]]
+|content=[[Documentation]]
 }}
 {{Tab
 |title= === Link Type 3 ===
@@ -1149,7 +1149,7 @@ All link tabs below (not Title 01 and Title 02) should be actual links for js us
 }}
 {{Tab
 |title= === Link Type 5 ===
-|content=[[Testpage2|The Testpage 2]]
+|content=[[Documentation|The Documentation Page]]
 }}
 }}
 
