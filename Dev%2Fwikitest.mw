@@ -221,7 +221,7 @@ def}}
 '''Bullet Point Quotation with 2 Lines, Context and Image Test
 '''
 
-Same as above but below a bullet point. '''NOTE''': This does not work as expected but it acceptable right now because this is caused by a bug in MediaWiki that has been reported.
+Same as above but below a bullet point. '''NOTE''': This does not work as expected but it is acceptable right now because this is caused by a bug in MediaWiki that has been reported.
 
 <pre>
 * bullet point with colon: {{Quotation
@@ -241,7 +241,7 @@ Same as above but below a list item.
 
 Without an image.
 
-'''NOTE''': This does not work as expected but it acceptable right now because this is caused by a bug in MediaWiki that has been reported
+'''NOTE''': This does not work as expected but it is acceptable right now because this is caused by a bug in MediaWiki that has been reported
 }}
 
 == CodeSelect ==
@@ -380,14 +380,14 @@ text, addToClass, url, os, targetBlank
  |targetBlank=true
 }}
 
-text, url, os, targetBlank, onion, fontSize
+text, url, os, targetBlank, onion, fontsize
 
 {{#downloadbutton:text=DownloadTest3
  |url=/keys/derivative.asc
  |os=osx|os=debian|os=kvm|os=linux
  |targetBlank=true
  |onion=http://www.w5j6stm77zs6652pgsij4awcjeel3eco7kvipheu6mtr623eyyehj4yd.onion/
- |fontSize=20
+ |fontsize=20px
 }}
 
 Example with text, url, os, onion, addToClass=text-class, fontsize=20px, targetBlank=true, redirectUrl
@@ -760,7 +760,7 @@ no key given
 
 {{Keypress|Ctrl|Alt|Delete}}
 
-3 keys given, no 1 and no 2 as Links
+3 keys given, key 1 and key 2 as Links
 
 {{Keypress|[[Donate|Ctrl]]|[[Donate|Alt]]|Del}}
 
@@ -939,7 +939,7 @@ asd&ouml;lfjas&ouml;lkaf&ouml;lkasjf&ouml;lkasjf&ouml;lkasjf&ouml;laj&ouml;aioju
 
 === Test Heights for top scrollbar height breakpoint ===
 
-Below are height tests, for the top scrollbar height breakpoint to be reached (in relation the the user device). If the element becomes very large (height) relative to the screen then the top scrollbar should be visible See documentation for more info. [[Dev/mediawiki#ScrollAutoWrapper|ScrollAutoWrapper]]
+Below are height tests, for the top scrollbar height breakpoint to be reached (in relation to the user device). If the element becomes very large (height) relative to the screen then the top scrollbar should be visible See documentation for more info. [[Dev/mediawiki#ScrollAutoWrapper|ScrollAutoWrapper]]
 
 Height 150px
 <pre style="height: 200px">
@@ -1705,7 +1705,7 @@ The following are all external links
 # This is an onion main link. One icon link with onion icon and main link expected http://www.dds6qkxpwdeubwucdiaord2xgbbeyds25rbsgr73tbfpqpt4a6vjwsyd.onion/
 # This is an archive.org main link. One icon link with archive.org icon and main link expected https://web.archive.org/web/https://forums.whonix.org/t/flatpak-as-a-software-source-flathub-as-a-source-of-software/8500/61
 # This is an archive.today main link. One icon link with archive.today icon and main link expected https://archive.ph/https://forums.whonix.org/t/flatpak-as-a-software-source-flathub-as-a-source-of-software/8500/61
-# This is normal link. Two icon links expected. One icon link with archive.org logo and web.archiv.org/[main-url], one icon link with archive.today logo and archiv.today/[main-url] expected. https://www.whonix.org/
+# This is normal link. Two icon links expected. One icon link with archive.org logo and web.archive.org/[main-url], one icon link with archive.today logo and archive.today/[main-url] expected. https://www.whonix.org/
 
 = H1 =
 
