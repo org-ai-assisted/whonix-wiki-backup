@@ -257,8 +257,6 @@ Malware	Moved:Malware_and_Firmware_Trojans
 Malware and Firmware Trojans	Moved:Malware_and_Firmware_Trojans
 Manually Downloading Tor Browser	Tor Browser/Manual Download
 Manually Updating Tor Browser	Tor Browser/Manual Download
-MediaWiki:Priority Support	MediaWiki:Plus Support
-MediaWiki:Professional Support	MediaWiki:Premium Support
 Mental Model	Moved:Mental_Model
 Microphone	Moved:Hardware Threat Minimization
 Miscellaneous Threats to User Freedom	Moved:Miscellaneous_Threats_to_User_Freedom
@@ -376,8 +374,6 @@ Template:Firewall Settings Gateway	Template:Firewall Settings
 Template:Header2	Template:Header Dev
 Template:Pre Install Advice	Template:Computer Security Education
 Template:Processor Microcode Updates	Moved:Processor_Microcode_Updates
-Template:Professional Support	Template:Premium Support
-Template:Professional Support Skills	Template:Premium Support Skills
 Template:Systemd-socket-proxyd	Redirect Whonix-Workstation Ports or Unix Domain Socket Files to Whonix-Gateway
 Template:Torify apt traffic	Template:Torify APT traffic
 Template:Torify apt-get traffic	Template:Torify APT traffic
