@@ -83,13 +83,13 @@ For {{project_name_short}} VirtualBox import instructions, please press the lear
 '''Follow these steps to import {{project_name_short}} into VirtualBox. Click images to enlarge'''
 
 <gallery widths="560px" heights="400px" class="gallery-steps">
-OpenVirtualbox1.png|'''Start VirtualBox'''
-Select_Import2.png|'''Click on <u>File</u> then choose <u>Import Appliance...</u>'''
-Select_whonix_ova_image3.png|'''Navigate and select {{project_name_short}} image and press <u>next</u>'''
-click_import4.png|'''Do NOT change anything! Just click on <u>Import</u>'''
-Agree5.png|'''Then press <u>Agree</u>'''
-Wait6.png|'''Wait until {{project_name_short}} <code>.ova</code> has been imported'''
-Start_both_of_them7.png|'''Now start {{virtualbox_vms}}'''
+OpenVirtualbox1.png|{{IconSet|h2|1}} '''Start VirtualBox'''
+Select_Import2.png|{{IconSet|h2|2}} '''Click on <u>File</u> then choose <u>Import Appliance...</u>'''
+Select_whonix_ova_image3.png|{{IconSet|h2|3}} '''Navigate and select {{project_name_short}} image and press <u>next</u>'''
+click_import4.png|{{IconSet|h2|4}} '''Do NOT change anything! Just click on <u>Import</u>'''
+Agree5.png|{{IconSet|h2|5}} '''Then press <u>Agree</u>'''
+Wait6.png|{{IconSet|h2|6}} '''Wait until {{project_name_short}} <code>.ova</code> has been imported'''
+Start_both_of_them7.png|{{IconSet|h2|7}} '''Now start {{virtualbox_vms}}'''
 </gallery>}}
 
 '''Miscellaneous'''
