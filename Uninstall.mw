@@ -14,7 +14,6 @@ Uninstall {{project_name_short}}
 {{intro|
 A step-by-step guide to uninstalling {{project_name_short}}.
 }}
-{{javascript-looks-better-with-javascript}}
 
 <div style="font-size:180%; font-weight:bold; margin-top:1em;">Removing Whonix</div>
 

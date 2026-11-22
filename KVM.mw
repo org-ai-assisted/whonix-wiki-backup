@@ -18,7 +18,6 @@ only!]]
 {{intro|
 Using {{project_name_short}} with KVM (Kernel-based Virtual Machine)
 }}
-{{javascript-looks-better-with-javascript}}
 {{Community_Support|scope=page}}
 = General =
 == What is KVM? ==

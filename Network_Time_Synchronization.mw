@@ -8,7 +8,6 @@
 {{intro|
 A reasonably accurate host clock is required for many general security properties. An inaccurate clock can lead to broken internet connectivity and time related security issues.
 }}
-{{javascript-looks-better-with-javascript}}
 = Introduction =
 {{mbox
 | image   = [[File:Ambox_warning_pn.svg.png|40px]]
