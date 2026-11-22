@@ -15,7 +15,7 @@ The build process of building any of the {{ExtLink
 |text={{{package}}}
 |icons=none
 }} '''package from source code''' while [[Verifying Software Signatures|<u>verifying software signatures</u>]] for better security. '''<u>OR</u>'''
-* '''B)''' [[Dev/Build Documentation/{{{package}}}/easy|<u>Easier instructions</u> click here]].
+* '''B)''' {{#if:{{{package|}}}|[[Dev/Build Documentation/{{{package}}}/easy|<u>Easier instructions</u> click here]].|}}
 
 == Get Build Dependencies ==
 [[Security_Guide#Updates|Update]] your package lists.
