@@ -77,7 +77,7 @@ VPN software normally does not ensure that users have an uniform appearance on t
 
 [[#vpwns|<code>vpwns</code> (research paper)]]:
 
-<blockquote>Other studies have shown passive browser fingerprinting to be effective at correlating user identities. [[https://coveryourtracks.eff.org/ 9]] VPN based systems in which a user shares the same browser with non-anonymous web surfing are nearly certain to transfer at least one cookie or other session identifier via the VPN session, which is enough for such an observer to de-anonymize the user via correlation with their non-VPN identity.</blockquote>
+<blockquote>Other studies have shown passive browser fingerprinting to be effective at correlating user identities. [https://coveryourtracks.eff.org/ 9] VPN based systems in which a user shares the same browser with non-anonymous web surfing are nearly certain to transfer at least one cookie or other session identifier via the VPN session, which is enough for such an observer to de-anonymize the user via correlation with their non-VPN identity.</blockquote>
 
 This can be easily verified by the user using some of the many available [[Browser Tests]]. For example when using the popular [[Browser_Tests#Fingerprint.com|fingerprint.com]], the browser fingerprint will always be the same. The browser fingerprinting can equally be used to track the user similar to an IP address. This is common practice on the internet. The fingerprint.com tracking software alone is used by [[The_World_Wide_Web_And_Your_Privacy#Fingerprint.com|12% of the largest 500 websites use fingerprint.com]].
 
