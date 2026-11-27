@@ -20,19 +20,30 @@ Example:
 </pre>
 {{Footer}}
 [[Category:Templates]]
-</noinclude><includeonly>== Fedora Version for Building Qubes Templates ==
+</noinclude><includeonly>Using <code>qubes-builderv2</code> is mostly [[Unspecific|unspecific to {{project_name_short}}]]. Building Qubes templates is primarily Qubes specific. The steps to build a Qubes Debian template, a Qubes Fedora template, or any other community template are similar. The [[Self_Support_First_Policy|Self Support First Policy]] and [[Reporting_Bugs#Generic_Bug_Reproduction|Generic Bug Reproduction]] apply.
 
-* '''Qubes upstream requirement''': Only Fedora can be used to build Qubes Templates.
+== Build Methods ==
+
+<code>qubes-builderv2</code> supports several build executors. Two are relevant here.
+
+* '''Qubes executor''': Builds inside Qubes OS using a Fedora-based App Qube. This is the method documented step by step below.
+* '''Docker executor''': Builds on any Linux host or virtual machine, for example Debian or Fedora, inside or outside Qubes OS. Upstream recommends Docker as a good default. See the [https://github.com/QubesOS/qubes-builderv2/blob/main/README.md qubes-builderv2 README] for Docker executor setup.
+
+The host operating system does not fundamentally matter for the Docker executor, which works on any Linux host.
+
+== Fedora Version for the Qubes Executor ==
+
+The Fedora version notes below apply only to the '''Qubes executor''' (building inside Qubes OS with a Fedora-based App Qube). They do not apply to the Docker executor.
 * '''Multiple versions exist''': There might be various Fedora Template versions.
 * '''Current version at time of writing''': The Qubes Fedora Template version used at the time of writing this wiki page was <code>{{version-fedora-build-qubes-template}}</code>.
 * '''Check for newer versions''': There might be a newer Qubes Fedora Template version by the time you are reading this. Please check if there is already a newer Fedora Template version.
 * '''No special requirements''': The {{project_name_short}} Qubes template does not have any special Qubes Fedora Template version requirements.
-* '''Follow Qubes upstream recommendations''': The same Qubes Fedora Template version that Qubes upstream uses and/or recommends to build Debian can be used.
+* '''Follow Qubes upstream recommendations''': The same Qubes Fedora Template version that Qubes upstream uses and/or recommends can be used.
 * '''Wiki editors notice''': The version number can be updated by editing [https://www.kicksecure.com/wiki/Template:Version-fedora-build-qubes-template Template:version-fedora-build-qubes-template] on the Kicksecure wiki.
 
 == Setting up qubes-builderv2 ==
 
-It is recommended to use a Fedora-based App Qube for building the {{project_name_short}} template. This is because upstream Qubes uses Fedora-based App Qubes to build Qubes Templates.
+The steps below describe the '''Qubes executor''' method. It uses a Fedora-based App Qube for building the {{project_name_short}} template, following upstream Qubes, which uses Fedora-based App Qubes to build Qubes Templates. To build on another host or outside Qubes OS, use the Docker executor instead (see the [https://github.com/QubesOS/qubes-builderv2/blob/main/README.md qubes-builderv2 README]).
 
 Determine which Fedora template is used for the <code>default-dvm</code> DVM template. For the purposes of this document, we will assume it is <code>fedora-{{version-fedora-build-qubes-template}}-xfce</code>.
 
