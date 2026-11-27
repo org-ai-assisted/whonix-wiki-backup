@@ -179,19 +179,19 @@ Then try to verify the repository's authenticity again. If the signature comes b
 
 1. Create a new file named <code>builder.yml</code> under the <code>qubes-builderv2</code> directory, and fill it with the following contents:
 
-<pre>
+{{CodeSelect|code=
 include:
   - {{{config}}}
 
 use-qubes-repo:
   version: '4.3'
-</pre>
+}}
 
 2. To build the template{{#if:{{{template2|}}}|s|}}, run:
 
 {{CodeSelect|code=
-./qubesbuilder-cli -t {{{template1}}} template fetch prep build{{#if:{{{template2|}}}|
-./qubesbuilder-cli -t {{{template2}}} template fetch prep build|}}
+./qubesbuilder-cli -t {{{template1}}} template fetch prep build
+{{#if:{{{template2|}}}|./qubesbuilder-cli -t {{{template2}}} template fetch prep build|}}
 }}
 
 Because <code>use-qubes-repo</code> is set, the Qubes packages come from the official repositories and the components do not need to be built first. This will download the code needed to build the template{{#if:{{{template2|}}}|s|}} and then build {{#if:{{{template2|}}}|them|it}}. If all goes well, the built template{{#if:{{{template2|}}}|s|}} will be placed in folder:
@@ -208,15 +208,15 @@ To install the manually built template{{#if:{{{template2|}}}|s|}}.
 1. Copy the template RPM file{{#if:{{{template2|}}}|s|}} to dom0:
 
 {{CodeSelect|code=
-qvm-run --pass-io work-qubesos 'cat /home/user/qubes-builderv2/artifacts/templates/rpm/qubes-template-{{{template1}}}...rpm' > qubes-template-{{{template1}}}...rpm{{#if:{{{template2|}}}|
-qvm-run --pass-io work-qubesos 'cat /home/user/qubes-builderv2/artifacts/templates/rpm/qubes-template-{{{template2}}}...rpm' > qubes-template-{{{template2}}}...rpm|}}
+qvm-run --pass-io work-qubesos 'cat /home/user/qubes-builderv2/artifacts/templates/rpm/qubes-template-{{{template1}}}...rpm' > qubes-template-{{{template1}}}...rpm
+{{#if:{{{template2|}}}|qvm-run --pass-io work-qubesos 'cat /home/user/qubes-builderv2/artifacts/templates/rpm/qubes-template-{{{template2}}}...rpm' > qubes-template-{{{template2}}}...rpm|}}
 }}
 
 2. Install the template{{#if:{{{template2|}}}|s|}} with:
 
 {{CodeSelect|code=
-sudo qvm-template install --nogpgcheck ./qubes-template-{{{template1}}}...rpm{{#if:{{{template2|}}}|
-sudo qvm-template install --nogpgcheck ./qubes-template-{{{template2}}}...rpm|}}
+sudo qvm-template install --nogpgcheck ./qubes-template-{{{template1}}}...rpm
+{{#if:{{{template2|}}}|sudo qvm-template install --nogpgcheck ./qubes-template-{{{template2}}}...rpm|}}
 }}
 
 '''WARNING: This action can execute arbitrary code as root on dom0! Only do this if you fully trust the App Qube used to build this template!'''
