@@ -1,0 +1,24 @@
+{{Header}}
+{{title|title=
+{{q_project_name_short}} Template Build Documentation
+}}
+{{#seo:
+|description=Instructions to build the {{q_project_name_long}} Templates from source code using qubes-builderv2.
+}}
+{{intro|
+Instructions to build the {{q_project_name_short}} Templates (<code>{{project_name_gateway_template}}</code> and <code>{{project_name_workstation_template}}</code>) from source code using <code>qubes-builderv2</code>. Most users do not build {{project_name_short}} from source code, but instead [[Download|download {{project_name_short}}]].
+}}
+
+{{Build_Documentation_Qubes_Template
+|config=example-configs/qubes-os-r4.3.yml
+|template1={{project_name_gateway_template}}
+|template2={{project_name_workstation_template}}
+}}
+
+= See Also =
+* [[Qubes|{{q_project_name_long}} User Documentation]]
+* [[Dev/Build_Documentation|{{project_name_short}} Build Documentation]]
+
+{{Footer}}
+[[Category:Documentation]]
+[[Category:Development]]

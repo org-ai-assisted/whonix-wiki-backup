@@ -14,7 +14,7 @@ This page documents how to <u>build {{project_name_short}}</u> VM (<u>V</u>irtua
 |text=derivative-maker
 }}. Most users do not build {{project_name_short}} from source code, but instead [[Download|download {{project_name_short}}]].
 
-For [[Qubes|{{q_project_name_long}}]], see [[Dev/Qubes#Build_{{q_project_name_short}}_Templates|{{q_project_name_long}} Build Documentation]].
+For [[Qubes|{{q_project_name_long}}]], see [[Dev/Build_Documentation/Qubes_Template|{{q_project_name_long}} Template Build Documentation]].
 
 Building from source code has security advantages (see [[Trust]]).
 
