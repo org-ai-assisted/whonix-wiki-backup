@@ -28,7 +28,7 @@ Example:
 * '''Check for newer versions''': There might be a newer Qubes Fedora Template version by the time you are reading this. Please check if there is already a newer Fedora Template version.
 * '''No special requirements''': The {{project_name_short}} Qubes template does not have any special Qubes Fedora Template version requirements.
 * '''Follow Qubes upstream recommendations''': The same Qubes Fedora Template version that Qubes upstream uses and/or recommends to build Debian can be used.
-* '''Wiki editors notice''': The version number can be updated by editing [[Template:version-fedora-build-qubes-template]].
+* '''Wiki editors notice''': The version number can be updated by editing <code>Template:version-fedora-build-qubes-template</code>.
 
 == Setting up qubes-builderv2 ==
 
