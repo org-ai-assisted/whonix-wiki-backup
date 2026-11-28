@@ -1617,10 +1617,12 @@ Advantages of using <code>virtio-9p</code>:
 
 Disadvantages of using <code>virtio-9p</code>:
 
-* <u>Requires world readable permissions:</u> The shared folder must be world-readable for the guest to read its contents.
-* <u>Requires world writable permissions:</u> The shared folder must be world-writable for the guest to write to it.
-* <u>Permissions not preserved:</u> Files written by the guest will not have their ownership and permission info reflected on the host, which may be problematic for some developer use cases.
+* <u>Requires world readable permissions (default <code>passthrough</code> mode):</u> In libvirt's default access mode the shared folder must be world-readable for the guest to read its contents. See the note below on <code>accessmode=mapped</code>, which avoids this.
+* <u>Requires world writable permissions (default <code>passthrough</code> mode):</u> In libvirt's default access mode the shared folder must be world-writable for the guest to write to it. See the note below on <code>accessmode=mapped</code>, which avoids this.
+* <u>Permissions not preserved:</u> Files written by the guest will not have their ownership and permission info reflected on the host as native file permissions, which may be problematic for some developer use cases.
 * <u>Potentially slower:</u> It may be significantly slower than <code>virtiofs</code>.
+
+<u>Note on <code>accessmode=mapped</code> and multi-account access:</u> The command-line example further below uses <code>accessmode=mapped</code>, which stores the guest's ownership and mode bits in host extended attributes (<code>user.virtfs.*</code>), decoupled from the host directory's own permissions. In that mode the shared folder does '''not''' need world-readable or world-writable permissions. A private <code>0700</code> directory in your home is enough for single-account use. To let more than one host account reach the share (for example a separate administrator account alongside your normal one), do '''not''' loosen it to <code>0777</code>; instead give the host directory to a shared group at mode <code>2770</code> (<code>setgid</code>, group read/write/execute, no world access) and add each account to that group. {{project_name_short}}'s own KVM integration does this: it ships the host share owned by group <code>kvmsf</code> at mode <code>2770</code> and mounts it inside the guest at <code>/mnt/shared</code> with <code>nosuid,nodev,noexec</code>.
 
 {{IconSet|h1|3}} '''Shutdown VM'''
 
